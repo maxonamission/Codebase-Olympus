@@ -36,14 +36,61 @@ Lees voor de volledige context:
 - Het examenprogramma kent domeinen A t/m E. Het CE toetst A1, B, C. Het college-examen (staatsexamen) toetst alle domeinen inclusief een mondeling deel.
 - Het pensum wisselt jaarlijks per auteur — dit is een jaarlijks wisselende module bovenop de vaste graph.
 
+## Projectstructuur
+
+```
+src/gymnasium_classica/
+├── models/
+│   ├── graph.py        # KennisKnoop, PrerequisiteEdge, Item, GraphData + enums
+│   ├── user.py         # User, Subscription
+│   └── learner.py      # LearnerModel, KnoopState, SessionRecord, ItemResponse
+├── graph/
+│   ├── loader.py       # JSON → NetworkX DiGraph (load_graph, graph_to_dict)
+│   └── validation.py   # ValidationReport, cycle/orphan/connectivity checks
+└── schemas/
+    └── id_schema.py    # ID-validatie: validate_knoop_id(), parse_knoop_id()
+
+data/
+├── graph/              # Knowledge graph JSON bestanden
+│   └── lat_grammatica_poc.json  # 50 Latijnse grammaticaknopen (PoC)
+└── content/            # Didactische markdown content per knoop
+    └── {KNOOP_ID}.md   # Bijv. LAT-G-MORF-DECL1-INTRO.md
+
+scripts/
+├── validate_graph.py   # CLI: laad graph, print ValidationReport
+└── export_graph_stats.py  # CLI: knooptelling, diepte, statistieken
+
+tests/                  # pytest tests voor alle modules
+```
+
+## ID-schema voor kennisknopen
+
+Formaat: `{TAAL}-{TYPE}-{SEGMENT}[-{SEGMENT}]...` (3-6 segmenten, uppercase ASCII)
+
+- **Taal:** `LAT`, `GRC`, `SHA` (shared)
+- **Type:** `G` (grammatica), `V` (vocabulaire), `C` (cultuur), `I` (integratie)
+- **Segmenten:** typespecifiek, max 8 chars per segment
+- Conceptknopen eindigen op `-INTRO`
+
+Voorbeelden: `LAT-G-MORF-NOM-D1`, `LAT-V-F01-ESSE`, `SHA-C-FIL-STOA`
+
+## Content-architectuur
+
+- **`data/graph/*.json`** — structuurdata: IDs, types, titels, Bloom-niveaus, prerequisites, IRT-params, korte beschrijving (1-2 zinnen)
+- **`data/content/{KNOOP_ID}.md`** — didactische inhoud: paradigma's, uitleg, voorbeeldzinnen, veelgemaakte fouten
+- `content_ref` veld in KennisKnoop verwijst naar het markdown-bestand
+- **Rationale:** graph blijft lean voor in-memory laden, content evolueert onafhankelijk
+
 ## Huidige fase: Fase 0 — Fundament
 
-Focus:
-1. Projectstructuur opzetten (src/, data/, tests/, docs/)
-2. JSON schema's voor KennisKnoop, PrerequisiteEdge, Item (zie ONTWERPKEUZES sectie "Knowledge Graph schema")
-3. Pydantic models die de schema's implementeren
-4. NetworkX-gebaseerde graph loader met validatie (cycle detection, connectivity checks)
-5. Eerste 50 Latijnse grammaticaknopen als proof of concept (`data/graph/lat_grammatica_poc.json`)
+Status: **compleet**. Alle deliverables zijn geïmplementeerd:
+1. ✅ Projectstructuur met src/, data/, tests/, docs/, scripts/
+2. ✅ Pydantic models voor KennisKnoop, PrerequisiteEdge, Item, User, Subscription, LearnerModel
+3. ✅ NetworkX graph loader met validatie (cycle detection, connectivity, orphan detection, topo sort)
+4. ✅ 50 Latijnse grammaticaknopen als PoC (`data/graph/lat_grammatica_poc.json`)
+5. ✅ 109 tests (alle groen)
+
+Volgende fase: **Fase 1 — Knowledge Graph uitbreiden**
 
 ## Niet doen
 

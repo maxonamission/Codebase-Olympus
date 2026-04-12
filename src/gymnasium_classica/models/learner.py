@@ -1,0 +1,55 @@
+"""Pydantic models for the learner model: knowledge state and session history."""
+
+from datetime import datetime
+from enum import StrEnum
+from typing import Optional
+from uuid import UUID
+
+from pydantic import BaseModel, Field
+
+
+class ResponseType(StrEnum):
+    CORRECT = "correct"
+    INCORRECT = "incorrect"
+    SLOW_CORRECT = "slow_correct"
+
+
+class ItemResponse(BaseModel):
+    """A single recorded response to an exercise item."""
+
+    timestamp: datetime
+    item_id: str
+    correct: bool
+    response_time_ms: int = Field(ge=0)
+
+
+class KnoopState(BaseModel):
+    """Per-node mastery state for a learner, combining BKT posterior and SM-2 scheduling."""
+
+    knoop_id: str
+    posterior_mastery: float = Field(ge=0.0, le=1.0, default=0.0)
+    easiness_factor: float = Field(gt=0.0, default=2.5)
+    interval_days: float = Field(ge=0.0, default=0.0)
+    repetitions: int = Field(ge=0, default=0)
+    last_review: Optional[datetime] = None
+    last_response: Optional[ResponseType] = None
+    item_history: list[ItemResponse] = Field(default_factory=list)
+
+
+class SessionRecord(BaseModel):
+    """A record of a single study session."""
+
+    session_id: str
+    started_at: datetime
+    ended_at: Optional[datetime] = None
+    items_reviewed: list[str] = Field(
+        default_factory=list, description="List of item IDs reviewed in this session"
+    )
+
+
+class LearnerModel(BaseModel):
+    """Complete learner model for one user: mastery states and session history."""
+
+    user_id: UUID
+    knoop_states: dict[str, KnoopState] = Field(default_factory=dict)
+    session_history: list[SessionRecord] = Field(default_factory=list)
