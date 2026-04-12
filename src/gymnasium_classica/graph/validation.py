@@ -1,0 +1,174 @@
+"""Validation functions for the knowledge graph."""
+
+from dataclasses import dataclass, field
+from typing import Optional
+
+import networkx as nx
+
+from gymnasium_classica.models.graph import PrerequisiteEdge
+from gymnasium_classica.schemas.id_schema import validate_knoop_id
+
+
+@dataclass
+class ValidationReport:
+    """Result of a full graph validation run."""
+
+    is_valid: bool = True
+    node_count: int = 0
+    edge_count: int = 0
+    root_nodes: list[str] = field(default_factory=list)
+    leaf_nodes: list[str] = field(default_factory=list)
+    cycles: list[list[str]] = field(default_factory=list)
+    orphan_nodes: list[str] = field(default_factory=list)
+    weakly_connected_components: int = 0
+    disconnected_nodes: list[str] = field(default_factory=list)
+    topological_order: Optional[list[str]] = None
+    warnings: list[str] = field(default_factory=list)
+    errors: list[str] = field(default_factory=list)
+
+
+def detect_cycles(graph: nx.DiGraph) -> list[list[str]]:
+    """Return all simple cycles in the graph (empty list if DAG)."""
+    return list(nx.simple_cycles(graph))
+
+
+def find_orphan_nodes(graph: nx.DiGraph) -> list[str]:
+    """Find nodes with no incoming AND no outgoing edges."""
+    return [n for n in graph.nodes if graph.in_degree(n) == 0 and graph.out_degree(n) == 0]
+
+
+def find_root_nodes(graph: nx.DiGraph) -> list[str]:
+    """Find nodes with in-degree 0 (entry points to the learning path)."""
+    return [n for n in graph.nodes if graph.in_degree(n) == 0]
+
+
+def find_leaf_nodes(graph: nx.DiGraph) -> list[str]:
+    """Find nodes with out-degree 0 (terminal nodes)."""
+    return [n for n in graph.nodes if graph.out_degree(n) == 0]
+
+
+def check_connectivity(graph: nx.DiGraph) -> tuple[int, list[str]]:
+    """Check weak connectivity.
+
+    Returns:
+        (number_of_components, nodes_not_in_largest_component)
+    """
+    if graph.number_of_nodes() == 0:
+        return (0, [])
+
+    components = list(nx.weakly_connected_components(graph))
+    num_components = len(components)
+
+    if num_components <= 1:
+        return (num_components, [])
+
+    largest = max(components, key=len)
+    disconnected = []
+    for comp in components:
+        if comp is not largest:
+            disconnected.extend(sorted(comp))
+    return (num_components, disconnected)
+
+
+def topological_sort(graph: nx.DiGraph) -> Optional[list[str]]:
+    """Return a topological ordering, or None if the graph has cycles."""
+    if not nx.is_directed_acyclic_graph(graph):
+        return None
+    return list(nx.topological_sort(graph))
+
+
+def validate_edge_weights(graph: nx.DiGraph) -> list[str]:
+    """Validate that all encompassing_weight values are in [0.0, 1.0].
+
+    Returns a list of error messages for invalid weights.
+    """
+    errors = []
+    for u, v in graph.edges:
+        edge: PrerequisiteEdge = graph.edges[u, v]["edge"]
+        if not (0.0 <= edge.encompassing_weight <= 1.0):
+            errors.append(
+                f"Edge {u} -> {v}: encompassing_weight {edge.encompassing_weight} "
+                f"is outside [0.0, 1.0]"
+            )
+    return errors
+
+
+def validate_node_ids(graph: nx.DiGraph) -> list[str]:
+    """Validate that all node IDs conform to the ID schema.
+
+    Returns a list of error messages for invalid IDs.
+    """
+    errors = []
+    for node_id in graph.nodes:
+        if not validate_knoop_id(node_id):
+            errors.append(f"Invalid node ID: {node_id!r}")
+    return errors
+
+
+def validate_graph(graph: nx.DiGraph) -> ValidationReport:
+    """Run all validation checks on a knowledge graph.
+
+    Checks:
+      1. Cycle detection (graph must be a DAG)
+      2. Orphan detection (nodes with no edges)
+      3. Connectivity analysis
+      4. Topological sort (only if acyclic)
+      5. Root/leaf node identification
+      6. Edge weight validation
+      7. Node ID format validation
+      8. Nodes without items (warning)
+    """
+    report = ValidationReport()
+    report.node_count = graph.number_of_nodes()
+    report.edge_count = graph.number_of_edges()
+
+    # 1. Cycles
+    report.cycles = detect_cycles(graph)
+    if report.cycles:
+        report.is_valid = False
+        for cycle in report.cycles:
+            report.errors.append(f"Cycle detected: {' -> '.join(cycle)}")
+
+    # 2. Orphans
+    report.orphan_nodes = find_orphan_nodes(graph)
+    if report.orphan_nodes:
+        report.warnings.append(
+            f"Orphan nodes (no edges): {', '.join(report.orphan_nodes)}"
+        )
+
+    # 3. Connectivity
+    num_comp, disconnected = check_connectivity(graph)
+    report.weakly_connected_components = num_comp
+    report.disconnected_nodes = disconnected
+    if num_comp > 1:
+        report.warnings.append(
+            f"Graph has {num_comp} weakly connected components. "
+            f"Disconnected nodes: {', '.join(disconnected)}"
+        )
+
+    # 4. Topological sort
+    report.topological_order = topological_sort(graph)
+
+    # 5. Root and leaf nodes
+    report.root_nodes = find_root_nodes(graph)
+    report.leaf_nodes = find_leaf_nodes(graph)
+
+    # 6. Edge weights
+    weight_errors = validate_edge_weights(graph)
+    if weight_errors:
+        report.is_valid = False
+        report.errors.extend(weight_errors)
+
+    # 7. Node IDs
+    id_errors = validate_node_ids(graph)
+    if id_errors:
+        report.is_valid = False
+        report.errors.extend(id_errors)
+
+    # 8. Nodes without items (non-fatal)
+    for node_id in graph.nodes:
+        knoop = graph.nodes[node_id].get("knoop")
+        if knoop and not knoop.items:
+            report.warnings.append(f"Node {node_id} has no items")
+
+    return report
