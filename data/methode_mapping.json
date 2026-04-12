@@ -1,0 +1,114 @@
+{
+  "_comment": "Mapping van schoolmethode + hoofdstuknummer naar knoop-IDs die als 'behandeld' gelden. Wordt gevuld wanneer de knowledge graph compleet is (eind fase 1) en gevalideerd door de externe domeinpartner. Huidige mapping is een PoC op basis van de 50 smoke-test knopen.",
+  "methoden": {
+    "fortuna": {
+      "naam": "Fortuna",
+      "taal": "lat",
+      "hoofdstukken": {
+        "1": {
+          "beschrijving": "Introductie naamvallen, 1e declinatie nominativus/accusativus",
+          "knoop_ids": [
+            "LAT-G-MORF-NAAMVAL-INTRO",
+            "LAT-G-MORF-NUMERUS-INTRO",
+            "LAT-G-MORF-GENUS-INTRO",
+            "LAT-G-SYNT-ZINSDEEL-INTRO",
+            "LAT-G-MORF-DECL-INTRO",
+            "LAT-G-MORF-DECL1-INTRO",
+            "LAT-G-SYNT-NOM-FUNCTIE",
+            "LAT-G-SYNT-ACC-FUNCTIE",
+            "LAT-G-MORF-NOM-D1",
+            "LAT-G-MORF-ACC-D1"
+          ]
+        },
+        "2": {
+          "beschrijving": "1e declinatie compleet, presens 1e conjugatie",
+          "knoop_ids": [
+            "LAT-G-MORF-GEN-D1",
+            "LAT-G-MORF-DAT-D1",
+            "LAT-G-MORF-ABL-D1",
+            "LAT-G-SYNT-GEN-FUNCTIE",
+            "LAT-G-SYNT-DAT-FUNCTIE",
+            "LAT-G-SYNT-ABL-FUNCTIE",
+            "LAT-G-MORF-PERSOON-INTRO",
+            "LAT-G-MORF-TEMPUS-INTRO",
+            "LAT-G-MORF-CONJ-INTRO",
+            "LAT-G-MORF-CONJ1-INTRO",
+            "LAT-G-MORF-PRAES-C1-ACT"
+          ]
+        },
+        "3": {
+          "beschrijving": "2e declinatie, presens 2e conjugatie, esse",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-INTRO",
+            "LAT-G-MORF-NOM-D2",
+            "LAT-G-MORF-GEN-D2",
+            "LAT-G-MORF-DAT-D2",
+            "LAT-G-MORF-ACC-D2",
+            "LAT-G-MORF-ABL-D2",
+            "LAT-G-MORF-VOC-D2",
+            "LAT-G-MORF-CONJ2-INTRO",
+            "LAT-G-MORF-PRAES-C2-ACT",
+            "LAT-G-MORF-PRAES-ESSE"
+          ]
+        },
+        "4": {
+          "beschrijving": "3e/4e conjugatie presens, bijvoeglijke naamwoorden, voorzetsels",
+          "knoop_ids": [
+            "LAT-G-MORF-CONJ3-INTRO",
+            "LAT-G-MORF-CONJ4-INTRO",
+            "LAT-G-MORF-PRAES-C3-ACT",
+            "LAT-G-MORF-PRAES-C4-ACT",
+            "LAT-G-MORF-INF-PRAES-ACT",
+            "LAT-G-MORF-ADJ-D12-INTRO",
+            "LAT-G-MORF-ADJ-D12-VERBG",
+            "LAT-G-SYNT-ADJ-CONGR",
+            "LAT-G-SYNT-PREP-ACC",
+            "LAT-G-SYNT-PREP-ABL"
+          ]
+        },
+        "5": {
+          "beschrijving": "Imperfectum, woordvolgorde, vraagzinnen, 3e declinatie intro",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-INTRO",
+            "LAT-G-MORF-IMPF-C1C2-ACT",
+            "LAT-G-MORF-IMPF-C3C4-ACT",
+            "LAT-G-SYNT-OVEREENK",
+            "LAT-G-SYNT-WRDVLG",
+            "LAT-G-SYNT-ONTK",
+            "LAT-G-SYNT-VRAAGZIN",
+            "LAT-G-MORF-DECL3-INTRO",
+            "LAT-G-MORF-NOM-D3"
+          ]
+        }
+      }
+    },
+    "spqr": {
+      "naam": "SPQR",
+      "taal": "lat",
+      "hoofdstukken": {
+        "1": {
+          "beschrijving": "Naamvallen intro, 1e en 2e declinatie nominativus",
+          "knoop_ids": [
+            "LAT-G-MORF-NAAMVAL-INTRO",
+            "LAT-G-MORF-NUMERUS-INTRO",
+            "LAT-G-MORF-GENUS-INTRO",
+            "LAT-G-SYNT-ZINSDEEL-INTRO",
+            "LAT-G-MORF-DECL-INTRO",
+            "LAT-G-MORF-DECL1-INTRO",
+            "LAT-G-MORF-DECL2-INTRO",
+            "LAT-G-SYNT-NOM-FUNCTIE",
+            "LAT-G-MORF-NOM-D1",
+            "LAT-G-MORF-NOM-D2"
+          ]
+        }
+      }
+    },
+    "pallas": {
+      "naam": "Pallas",
+      "taal": "grc",
+      "hoofdstukken": {
+        "_comment": "Wordt gevuld wanneer de Griekse grammaticaknopen beschikbaar zijn (fase 1b/1c)."
+      }
+    }
+  }
+}
