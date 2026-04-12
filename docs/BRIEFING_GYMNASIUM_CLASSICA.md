@@ -453,21 +453,65 @@ Schat de half-life van elk feit per leerling op basis van features (woord-moeili
 
 ## 6. Roadmap
 
-### Fase 0: Fundament (weken 1-4)
-- [ ] Projectstructuur opzetten (Python project met uv, Git repo)
-- [ ] CvTE-minimumlijsten Latijn en Grieks digitaliseren (als structured data)
-- [ ] Taxonomie van kennisatoom-types formaliseren (JSON schema)
-- [ ] Eerste 50 grammaticaknopen Latijn modelleren met prerequisite-relaties (proof of concept)
+### Fase 0: Fundament (weken 1-4) ✅
 
-### Fase 1: Knowledge Graph (weken 5-16)
-- [ ] Volledige grammatica-DAG Latijn (400-600 knopen) op basis van CvTE-minimumlijst en Fortuna/SPQR-volgorde
-- [ ] Volledige grammatica-DAG Grieks (400-600 knopen) op basis van CvTE-minimumlijst en Pallas-volgorde
-- [ ] Vocabulaire-knopen Latijn (top-500 op frequentie, met semantische clusters)
-- [ ] Vocabulaire-knopen Grieks (top-500 op frequentie)
-- [ ] Cultuurknopen (eerste 100, gedeeld)
-- [ ] Transfer-edges tussen Latijn en Grieks
+- [x] Projectstructuur opzetten (Python project met uv, Git repo)
+- [x] Taxonomie van kennisatoom-types formaliseren (Pydantic models + ID-schema)
+- [x] Eerste 50 grammaticaknopen Latijn modelleren met prerequisite-relaties (smoke test)
+- [x] Graph loader met directory-loading en validatie (cycle detection, connectivity, topo sort)
+- [x] 113 tests (alle groen)
+
+### Fase 1: Knowledge Graph — MVP leerjaar 1 (weken 5-16)
+
+**MVP-scope: leerjaar 1 gymnasium, beide talen (~850 knopen).** Model: scholen als het Vossius die Latijn én Grieks vanaf dag 1 aanbieden. Externe validatie door een klassieke-taleninstituut.
+
+**1a. Latijnse grammatica (~150 knopen)**
+- [x] 50 Latijnse grammaticaknopen als smoke test (decl. 1-2, presens, imperfectum, basissyntaxis)
+- [ ] Declinatie 3 compleet (alle naamvallen sg/pl, m/f vs. neutrum, i-stammen)
+- [ ] Declinaties 4 en 5 (basis)
+- [ ] Pronomina (persoonlijk, bezittelijk, aanwijzend, vragend)
+- [ ] Adjectieven 3e declinatie, trappen van vergelijking (basis)
+- [ ] Perfectum systeem (ind. act., 4 conjugaties + esse)
+- [ ] Passief presens (ind., 4 conjugaties)
+- [ ] Imperativus, deelwoorden (PPP/PPA herkenning)
+- [ ] Syntaxis: AcI, relatieve bijzin, bijwoordelijke bepalingen, voegwoorden
+
+**1b. Grieks alfabet — onboarding-subgraph (~40 knopen)**
+- [ ] Letterherkenning (groepen naar visuele/fonetische gelijkenis)
+- [ ] Fonologie: klinkers, medeklinkers, diftongen
+- [ ] Diakritiek: spiritus asper/lenis, accenttekens, iota subscriptum
+- [ ] Leesvaardigheid: syllaben → woorden → korte zinnen
+- [ ] Prerequisite-gate: blokkeert alle GRC-grammaticaknopen
+
+**1c. Griekse grammatica (~100 knopen)**
+- [ ] O-declinatie (2e) en a-declinatie (1e), incl. subtypes
+- [ ] 3e declinatie basis (consonantstammen)
+- [ ] Lidwoord (ὁ, ἡ, τό) — prominent in Grieks
+- [ ] Presens ind. act. (thematische -ω verba + εἰμί)
+- [ ] Imperfectum (augment + persoonsuitgangen)
+- [ ] Medium-passief presens (typisch Grieks)
+- [ ] Pronomina, adjectieven, imperativus, infinitief, participia intro
+- [ ] Syntaxis: woordvolgorde, ontkenning, voorzetsels
+
+**1d. Vocabulaire (~500 knopen, individueel per woord)**
+- [ ] Latijns vocabulaire (~300 woorden, frequentiebanden F01-F06)
+- [ ] Grieks vocabulaire (~200 woorden, frequentiebanden F01-F04)
+- [ ] Prerequisite-edges naar relevante grammaticaknopen (declinatie/conjugatie)
+
+**1e. Gedeelde cultuurknopen (~70 knopen, SHA-C-\*)**
+- [ ] Mythologie (~15): Olympische goden, Trojaanse oorlog, Odysseus, Herakles
+- [ ] Geschiedenis (~15): stichting Rome, poleis, Atheense democratie, Perzische oorlogen
+- [ ] Maatschappij (~12): dagelijks leven, slavernij, onderwijs, familia Romana
+- [ ] Kunst, literatuur, religie, filosofie intro (~25)
+
+**1f. Transfer-edges (~100 edges)**
+- [ ] LAT→GRC transfer-edges tussen isomorfe concepten (naamvallen, werkwoordstijden, syntaxis)
+- [ ] Encompassing weights 0.2-0.4 (transfer faciliteert, vereist niet)
+
+**1g. Kwaliteitscontrole**
+- [ ] Encompassing weights instellen per edge
 - [ ] Graph-kwaliteitscontrole: cycle detection, orphan detection, topologische analyse
-- [ ] Encompassing weights instellen (arbeidsintensief maar essentieel)
+- [ ] Externe validatie door klassieke-taleninstituut
 
 ### Fase 2: Learner Model + Scheduling (weken 17-24)
 - [ ] BKT-implementatie per knoop

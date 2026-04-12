@@ -94,6 +94,94 @@ class TestLoadGraphFromFile:
         assert g.number_of_nodes() == 5
 
 
+class TestLoadGraphFromDirectory:
+    """Tests for load_graph() from a directory of JSON files."""
+
+    def test_load_single_file_in_directory(self, tmp_path, sample_graph_data):
+        graph_dir = tmp_path / "graph"
+        graph_dir.mkdir()
+        (graph_dir / "base.json").write_text(json.dumps(sample_graph_data), encoding="utf-8")
+        g = load_graph(graph_dir)
+        assert g.number_of_nodes() == 5
+        assert g.number_of_edges() == 4
+
+    def test_load_multiple_files_merged(self, tmp_path):
+        """Two files with separate nodes + cross-file edge."""
+        graph_dir = tmp_path / "graph"
+        graph_dir.mkdir()
+
+        file_a = {
+            "knopen": [
+                {
+                    "id": "LAT-G-MORF-NOM-D1",
+                    "type": "G", "taal": "lat",
+                    "titel_nl": "Knoop A",
+                    "beschrijving": "Test A.",
+                    "bloom_niveau": "kennis", "fase": "onderbouw_1",
+                    "toetsbaar": True, "items": [],
+                },
+            ],
+            "edges": [],
+        }
+        file_b = {
+            "knopen": [
+                {
+                    "id": "GRC-G-MORF-NOM-D1",
+                    "type": "G", "taal": "grc",
+                    "titel_nl": "Knoop B",
+                    "beschrijving": "Test B.",
+                    "bloom_niveau": "kennis", "fase": "onderbouw_1",
+                    "toetsbaar": True, "items": [],
+                },
+            ],
+            "edges": [
+                {
+                    "source_id": "LAT-G-MORF-NOM-D1",
+                    "target_id": "GRC-G-MORF-NOM-D1",
+                    "type": "transfer",
+                    "encompassing_weight": 0.3,
+                },
+            ],
+        }
+
+        (graph_dir / "a_latin.json").write_text(json.dumps(file_a), encoding="utf-8")
+        (graph_dir / "b_greek.json").write_text(json.dumps(file_b), encoding="utf-8")
+
+        g = load_graph(graph_dir)
+        assert g.number_of_nodes() == 2
+        assert g.number_of_edges() == 1
+        # Cross-file edge resolved correctly
+        assert g.has_edge("LAT-G-MORF-NOM-D1", "GRC-G-MORF-NOM-D1")
+
+    def test_empty_directory_raises(self, tmp_path):
+        empty_dir = tmp_path / "empty"
+        empty_dir.mkdir()
+        with pytest.raises(FileNotFoundError, match="No .json files"):
+            load_graph(empty_dir)
+
+    def test_duplicate_ids_across_files_rejected(self, tmp_path):
+        graph_dir = tmp_path / "graph"
+        graph_dir.mkdir()
+
+        node = {
+            "knopen": [{
+                "id": "LAT-G-MORF-NOM-D1",
+                "type": "G", "taal": "lat",
+                "titel_nl": "Same ID",
+                "beschrijving": "Test.",
+                "bloom_niveau": "kennis", "fase": "onderbouw_1",
+                "toetsbaar": True, "items": [],
+            }],
+            "edges": [],
+        }
+
+        (graph_dir / "a.json").write_text(json.dumps(node), encoding="utf-8")
+        (graph_dir / "b.json").write_text(json.dumps(node), encoding="utf-8")
+
+        with pytest.raises(ValueError, match="Duplicate knoop ID"):
+            load_graph(graph_dir)
+
+
 class TestRoundTrip:
     """Tests for graph_to_dict() round-trip serialization."""
 
