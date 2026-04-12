@@ -9,10 +9,13 @@ from gymnasium_classica.models.graph import GraphData, KennisKnoop, Prerequisite
 
 
 def load_graph(path: Path) -> nx.DiGraph:
-    """Load a knowledge graph from a JSON file.
+    """Load a knowledge graph from a JSON file or a directory of JSON files.
 
-    The JSON file must contain keys "knopen" (list of nodes) and "edges"
-    (list of prerequisite edges).
+    When *path* is a file, it must contain keys "knopen" and "edges".
+    When *path* is a directory, all ``*.json`` files in it are loaded and
+    merged into a single graph.  Nodes are collected first from all files,
+    then edges — so cross-file edges (e.g. transfer edges in a separate
+    file referencing nodes defined elsewhere) are resolved correctly.
 
     Returns:
         A NetworkX DiGraph where each node stores a KennisKnoop instance
@@ -21,13 +24,33 @@ def load_graph(path: Path) -> nx.DiGraph:
 
     Raises:
         FileNotFoundError: if *path* does not exist.
-        json.JSONDecodeError: if the file is not valid JSON.
+        json.JSONDecodeError: if any file is not valid JSON.
         pydantic.ValidationError: if any node or edge fails schema validation.
         ValueError: if an edge references a non-existent node or duplicate IDs exist.
     """
+    if path.is_dir():
+        return _load_graph_directory(path)
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
     return load_graph_from_dict(data)
+
+
+def _load_graph_directory(directory: Path) -> nx.DiGraph:
+    """Load and merge all JSON graph files in *directory*."""
+    json_files = sorted(directory.glob("*.json"))
+    if not json_files:
+        raise FileNotFoundError(f"No .json files found in {directory}")
+
+    all_knopen: list[dict] = []
+    all_edges: list[dict] = []
+
+    for file_path in json_files:
+        with open(file_path, encoding="utf-8") as f:
+            data = json.load(f)
+        all_knopen.extend(data.get("knopen", []))
+        all_edges.extend(data.get("edges", []))
+
+    return load_graph_from_dict({"knopen": all_knopen, "edges": all_edges})
 
 
 def load_graph_from_dict(data: dict) -> nx.DiGraph:

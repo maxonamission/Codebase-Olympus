@@ -14,6 +14,14 @@ class ResponseType(StrEnum):
     SLOW_CORRECT = "slow_correct"
 
 
+class MasterySource(StrEnum):
+    """How the current posterior mastery was established."""
+
+    DIAGNOSTIC = "diagnostic"  # Set during intake placement test
+    PRACTICE = "practice"  # Updated through regular exercises
+    REVIEW = "review"  # Updated through fallback / conditional-completion review
+
+
 class ItemResponse(BaseModel):
     """A single recorded response to an exercise item."""
 
@@ -33,6 +41,7 @@ class KnoopState(BaseModel):
     repetitions: int = Field(ge=0, default=0)
     last_review: Optional[datetime] = None
     last_response: Optional[ResponseType] = None
+    source: MasterySource = MasterySource.PRACTICE
     item_history: list[ItemResponse] = Field(default_factory=list)
 
 
@@ -53,3 +62,8 @@ class LearnerModel(BaseModel):
     user_id: UUID
     knoop_states: dict[str, KnoopState] = Field(default_factory=dict)
     session_history: list[SessionRecord] = Field(default_factory=list)
+    intake_completed: bool = False
+    intake_method: Optional[str] = Field(
+        default=None,
+        description="School method used during intake, e.g. 'fortuna', 'pallas'.",
+    )

@@ -1,0 +1,17 @@
+{
+  "clusters": [
+    {"label": "familie", "beschrijving": "Familierelaties en huishouden: pater, mater, filius, filia, dominus, servus, uxor."},
+    {"label": "oorlog", "beschrijving": "Oorlog en militaire zaken: bellum, dux, miles, gladius, scutum, castra, hostis."},
+    {"label": "lichaam", "beschrijving": "Lichaamsdelen en fysieke eigenschappen: corpus, caput, manus, oculus, vox."},
+    {"label": "politiek", "beschrijving": "Politiek, bestuur en recht: rex, consul, senatus, lex, civis, populus, imperium."},
+    {"label": "religie", "beschrijving": "Religie, goden en ritueel: deus, templum, sacerdos, sacrificium, oraculum."},
+    {"label": "natuur", "beschrijving": "Natuur, landschap en weer: terra, aqua, mare, mons, flumen, sol, silva."},
+    {"label": "emotie", "beschrijving": "Emoties en mentale toestanden: amor, ira, timor, gaudium, dolor, animus."},
+    {"label": "beweging", "beschrijving": "Beweging, richting en reizen: via, iter, navis, equus, venire, ire, fugere."},
+    {"label": "communicatie", "beschrijving": "Communicatie, spreken en schrijven: littera, verbum, nuntius, dicere, scribere."},
+    {"label": "tijd", "beschrijving": "Tijd, duur en leeftijd: dies, nox, annus, hora, tempus, aetas, semper."},
+    {"label": "gebouwen", "beschrijving": "Gebouwen, ruimte en stad: urbs, domus, forum, porta, murus, villa."},
+    {"label": "voedsel", "beschrijving": "Voedsel, drinken en maaltijd: cibus, vinum, panis, aqua, cena, convivium."},
+    {"label": "onderwijs", "beschrijving": "Onderwijs, kennis en kunst: magister, discipulus, liber, ludus, ars, studium."}
+  ]
+}

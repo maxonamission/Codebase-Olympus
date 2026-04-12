@@ -51,10 +51,16 @@ src/gymnasium_classica/
     └── id_schema.py    # ID-validatie: validate_knoop_id(), parse_knoop_id()
 
 data/
-├── graph/              # Knowledge graph JSON bestanden
-│   └── lat_grammatica_poc.json  # 50 Latijnse grammaticaknopen (PoC)
-└── content/            # Didactische markdown content per knoop
-    └── {KNOOP_ID}.md   # Bijv. LAT-G-MORF-DECL1-INTRO.md
+├── graph/                              # Knowledge graph JSON bestanden
+│   ├── lat_grammatica_poc.json         # 50 Latijnse grammaticaknopen (smoke test)
+│   ├── lat_grammatica_leerjaar1.json   # Extra Latijnse grammatica (~100 knopen)
+│   ├── grc_alfabet.json                # Grieks alfabet onboarding (~40 knopen)
+│   ├── grc_grammatica_leerjaar1.json   # Griekse grammatica (~100 knopen)
+│   ├── lat_vocabulaire_leerjaar1.json  # Latijns vocabulaire (~300 knopen)
+│   ├── grc_vocabulaire_leerjaar1.json  # Grieks vocabulaire (~200 knopen)
+│   └── sha_cultuur_leerjaar1.json      # Gedeelde cultuurknopen (~70 knopen)
+└── content/                            # Didactische markdown content per knoop
+    └── {KNOOP_ID}.md                   # Bijv. LAT-G-MORF-DECL1-INTRO.md
 
 scripts/
 ├── validate_graph.py   # CLI: laad graph, print ValidationReport
@@ -81,16 +87,34 @@ Voorbeelden: `LAT-G-MORF-NOM-D1`, `LAT-V-F01-ESSE`, `SHA-C-FIL-STOA`
 - `content_ref` veld in KennisKnoop verwijst naar het markdown-bestand
 - **Rationale:** graph blijft lean voor in-memory laden, content evolueert onafhankelijk
 
-## Huidige fase: Fase 0 — Fundament
+## Huidige fase: Fase 0/1 — Fundament + Knowledge Graph MVP
 
-Status: **compleet**. Alle deliverables zijn geïmplementeerd:
+### Fase 0 — Fundament (compleet)
 1. ✅ Projectstructuur met src/, data/, tests/, docs/, scripts/
 2. ✅ Pydantic models voor KennisKnoop, PrerequisiteEdge, Item, User, Subscription, LearnerModel
-3. ✅ NetworkX graph loader met validatie (cycle detection, connectivity, orphan detection, topo sort)
-4. ✅ 50 Latijnse grammaticaknopen als PoC (`data/graph/lat_grammatica_poc.json`)
-5. ✅ 109 tests (alle groen)
+3. ✅ NetworkX graph loader met validatie + directory-loading (meerdere JSON bestanden)
+4. ✅ 50 Latijnse grammaticaknopen als smoke test (`data/graph/lat_grammatica_poc.json`)
+5. ✅ 113 tests (alle groen)
 
-Volgende fase: **Fase 1 — Knowledge Graph uitbreiden**
+### Fase 1 — MVP Knowledge Graph (in uitvoering)
+
+**Scope: leerjaar 1 gymnasium, beide talen.** Model: scholen als het Vossius die Latijn én Grieks vanaf dag 1 aanbieden. Externe validatie door een klassieke-taleninstituut.
+
+**Doelomvang: ~850 knopen, ~1500-2000 edges**
+
+| Component | Knopen | Status |
+|-----------|--------|--------|
+| Latijnse grammatica (decl. 1-5, conj. 1-4, perf., passief, syntax) | ~150 | 50 PoC ✅, ~100 uit te breiden |
+| Grieks alfabet onboarding-subgraph | ~40 | Te bouwen |
+| Griekse grammatica (o-/a-/3e decl., presens/impf., medium, syntax) | ~100 | Te bouwen |
+| Latijns vocabulaire (frequentiegestuurd, individuele woorden) | ~300 | Te bouwen |
+| Grieks vocabulaire (frequentiegestuurd, individuele woorden) | ~200 | Te bouwen |
+| Gedeelde cultuurknopen (SHA-C-*, mythologie/geschiedenis/maatschappij) | ~70 | Te bouwen |
+| Transfer-edges (LAT↔GRC isomorfe concepten) | ~100 edges | Te bouwen |
+
+**Graph-bestanden:** `data/graph/` bevat meerdere JSON-bestanden per domein. De loader combineert ze automatisch (`load_graph(directory_path)`). Cross-file edges (bijv. transfer-edges naar knopen in andere bestanden) worden correct opgelost.
+
+**Grieks alfabet:** subgraph `GRC-G-FONL-ALFA-*`, prerequisite voor alle GRC-grammaticaknopen. Drie fasen: letterherkenning → fonologie/diakritiek → leesvaardigheid. Blokkeert alle Griekse stof tot volledige beheersing.
 
 ## Niet doen
 
