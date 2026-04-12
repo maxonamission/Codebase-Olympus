@@ -3,6 +3,8 @@
 from enum import StrEnum
 from typing import Optional, Union
 
+import re
+
 from pydantic import BaseModel, Field, field_validator
 
 from gymnasium_classica.schemas.id_schema import validate_knoop_id
@@ -103,7 +105,27 @@ class KennisKnoop(BaseModel):
         default=None,
         description="Path to markdown content file in data/content/, e.g. LAT-G-MORF-NOM-D1.md",
     )
+    semantisch_cluster: Optional[str] = Field(
+        default=None,
+        description=(
+            "Semantic cluster label for vocabulary nodes (type V). "
+            "Lowercase alphanumeric, max 20 chars. Used by the scheduling engine "
+            "for non-interference: items from the same cluster are spread apart."
+        ),
+    )
     items: list[Item] = Field(default_factory=list)
+
+    @field_validator("semantisch_cluster")
+    @classmethod
+    def check_cluster_format(cls, v: str | None) -> str | None:
+        if v is None:
+            return v
+        if not re.fullmatch(r"[a-z0-9_]{1,20}", v):
+            raise ValueError(
+                f"Invalid semantisch_cluster {v!r}. "
+                "Must be lowercase alphanumeric/underscore, 1-20 chars."
+            )
+        return v
 
     @field_validator("id")
     @classmethod

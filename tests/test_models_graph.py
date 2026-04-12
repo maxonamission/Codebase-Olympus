@@ -53,6 +53,32 @@ class TestKennisKnoop:
         assert knoop.titel_terminologie is None
         assert knoop.cevte_referentie is None
         assert knoop.content_ref is None
+        assert knoop.semantisch_cluster is None
+
+    def test_semantisch_cluster_valid(self, sample_knoop_data):
+        sample_knoop_data["semantisch_cluster"] = "familie"
+        knoop = KennisKnoop(**sample_knoop_data)
+        assert knoop.semantisch_cluster == "familie"
+
+    def test_semantisch_cluster_with_underscore(self, sample_knoop_data):
+        sample_knoop_data["semantisch_cluster"] = "dagelijks_leven"
+        knoop = KennisKnoop(**sample_knoop_data)
+        assert knoop.semantisch_cluster == "dagelijks_leven"
+
+    def test_semantisch_cluster_uppercase_rejected(self, sample_knoop_data):
+        sample_knoop_data["semantisch_cluster"] = "Familie"
+        with pytest.raises(ValidationError, match="semantisch_cluster"):
+            KennisKnoop(**sample_knoop_data)
+
+    def test_semantisch_cluster_too_long_rejected(self, sample_knoop_data):
+        sample_knoop_data["semantisch_cluster"] = "a" * 21
+        with pytest.raises(ValidationError, match="semantisch_cluster"):
+            KennisKnoop(**sample_knoop_data)
+
+    def test_semantisch_cluster_spaces_rejected(self, sample_knoop_data):
+        sample_knoop_data["semantisch_cluster"] = "daily life"
+        with pytest.raises(ValidationError, match="semantisch_cluster"):
+            KennisKnoop(**sample_knoop_data)
 
     def test_optional_fields_can_be_set(self, sample_knoop_data):
         sample_knoop_data["titel_terminologie"] = "nominativus"
