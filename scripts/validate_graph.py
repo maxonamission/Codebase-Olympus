@@ -19,7 +19,7 @@ def main() -> None:
 
     print(f"=== Validation Report: {path.name} ===")
     print(f"Nodes:      {report.node_count}")
-    print(f"Edges:      {report.edge_count}")
+    print(f"Edges:      {report.edge_count} ({report.transfer_edge_count} transfer)")
     print(f"Valid:      {report.is_valid}")
     print(f"Components: {report.weakly_connected_components}")
     print(f"Cycles:     {len(report.cycles)}")
