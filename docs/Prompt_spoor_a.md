@@ -334,12 +334,36 @@ Gebruik **0.3 als default**. Verhoog naar 0.4-0.5 alleen als de target echt onbe
 - Gebruik "polytoon" (niet "polytonic"), "diftong" (niet "diphthong"), "nasaal" (niet "nasal") in beschrijvingen.
 - Naamvallen in IDs: NOM, GEN, DAT, ACC, ABL, VOC (Latijnse afkortingen, consistent met PoC).
 
+### Timeout-preventie (BELANGRIJK)
+
+De API heeft een idle timeout (~60s). Grote JSON-blokken of lange tool-outputs veroorzaken `Stream idle timeout` errors. Voorkom dit:
+
+1. **Eén story per keer.** Niet meerdere stories in één response combineren.
+2. **Genereer JSON via een Python-script, niet inline.** Schrijf een script dat knopen genereert, valideert en opslaat. Toon alleen de samenvatting (aantal knopen, edges, validatie), niet de volledige JSON.
+3. **Commit na elke story.** Niet wachten tot het einde van een epic.
+4. **Lees bestanden met offset/limit.** Niet het hele bestand als het >150 regels is.
+5. **Beperk tool-output.** Gebruik `| tail -5` bij test-runs, niet de volledige output.
+
+**Voorbeeld workflow per story:**
+```
+1. Lees story-bestand (kort)
+2. Lees bestaande knopen (offset/limit, alleen relevante sectie)
+3. Schrijf een Python-script dat:
+   - De knopen definieert als dicts
+   - Valideert via GraphData(**data)
+   - Toevoegt aan bestaand JSON-bestand (laad, extend, schrijf)
+   - Validatie draait en resultaat print
+4. Run het script → toon samenvatting
+5. Verplaats story todo/ → done/
+6. Commit + push
+```
+
 ### Werkwijze per story
 
 1. Lees de relevante sectie uit de CvTE-minimumlijst (syllabi in docs/)
 2. Cross-refereer met de klas 1-afbakening in `docs/A_Lesstof_Latijn_Grieks.md`
 3. Lees **bestaande knopen** in `data/graph/` om naamconventies, beschrijvingsstijl en edge-patronen te volgen
-4. Genereer de knopen als JSON conform het GraphData-schema, met de kwaliteitseisen hierboven
+4. Genereer de knopen als JSON via een Python-script (niet inline), valideer automatisch
 5. Voeg prerequisite-edges toe voor het leerpad, plus enrichment-edges voor cross-section verbindingen
 6. Voeg de nieuwe knopen toe aan het bestaande JSON-bestand of maak een nieuw bestand per epic
 7. Run `python scripts/validate_graph.py data/graph/` — moet groen zijn (zowel individueel bestand als hele directory)
