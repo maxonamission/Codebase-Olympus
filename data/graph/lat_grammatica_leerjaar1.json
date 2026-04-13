@@ -129,6 +129,71 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL2-STAM",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Stam bepalen 2e declinatie",
+      "titel_terminologie": "stirps declinationis secundae",
+      "beschrijving": "De stam van een 2e-declinatiewoord vind je door -i van de genitivus singularis af te halen. Bijv. domin-i → stam domin-, bell-i → stam bell-.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL2-MASC",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Masculinum 2e declinatie (-us)",
+      "titel_terminologie": "masculina in -us",
+      "beschrijving": "Het hoofdpatroon van de 2e declinatie masculinum: nominativus sg. op -us (dominus, servus, amicus). Modelwoord: dominus, -i (m.).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL2-ER",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Masculinum 2e declinatie (-er)",
+      "titel_terminologie": "masculina in -er",
+      "beschrijving": "Variant van de 2e declinatie: nominativus sg. op -er. Twee subtypen: puer, pueri (stam behoudt -e-) en ager, agri (stam verliest -e-). Genitivus toont de ware stam.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL2-NEUT",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Neutrum 2e declinatie (-um)",
+      "titel_terminologie": "neutra in -um",
+      "beschrijving": "Neutra van de 2e declinatie: nominativus sg. op -um (bellum, templum). Neutrumregel: nom.=acc. in alle nummers; pl. nom./acc. altijd op -a.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL2-PARAD",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Paradigma 2e declinatie",
+      "titel_terminologie": "paradigma declinationis secundae",
+      "beschrijving": "Het volledige verbuigingsoverzicht van de 2e declinatie: dominus (m.) en bellum (n.). Synthese van alle zes naamvallen in enkelvoud en meervoud.",
+      "bloom_niveau": "synthese",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
     }
   ],
   "edges": [
@@ -255,6 +320,84 @@
     {
       "source_id": "LAT-G-MORF-VOC-D1",
       "target_id": "LAT-G-MORF-DECL1-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-STAM-INTRO",
+      "target_id": "LAT-G-MORF-DECL2-STAM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL2-INTRO",
+      "target_id": "LAT-G-MORF-DECL2-STAM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL2-INTRO",
+      "target_id": "LAT-G-MORF-DECL2-MASC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL2-MASC",
+      "target_id": "LAT-G-MORF-DECL2-ER",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL2-STAM",
+      "target_id": "LAT-G-MORF-DECL2-ER",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL2-INTRO",
+      "target_id": "LAT-G-MORF-DECL2-NEUT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-GENUS-INTRO",
+      "target_id": "LAT-G-MORF-DECL2-NEUT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-NOM-D2",
+      "target_id": "LAT-G-MORF-DECL2-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-GEN-D2",
+      "target_id": "LAT-G-MORF-DECL2-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DAT-D2",
+      "target_id": "LAT-G-MORF-DECL2-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-ACC-D2",
+      "target_id": "LAT-G-MORF-DECL2-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-ABL-D2",
+      "target_id": "LAT-G-MORF-DECL2-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-VOC-D2",
+      "target_id": "LAT-G-MORF-DECL2-PARAD",
       "type": "prerequisite",
       "encompassing_weight": 0.3
     }
