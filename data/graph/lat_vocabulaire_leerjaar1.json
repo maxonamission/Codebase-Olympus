@@ -12,7 +12,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-SUM.wav"
     },
     {
       "id": "LAT-V-F01-POSSUM",
@@ -26,7 +27,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-POSSUM.wav"
     },
     {
       "id": "LAT-V-F01-QUI",
@@ -40,7 +42,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-QUI.wav"
     },
     {
       "id": "LAT-V-F01-IS",
@@ -54,7 +57,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-IS.wav"
     },
     {
       "id": "LAT-V-F01-IN",
@@ -68,7 +72,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-IN.wav"
     },
     {
       "id": "LAT-V-F01-HIC",
@@ -82,7 +87,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-HIC.wav"
     },
     {
       "id": "LAT-V-F01-ILLE",
@@ -96,7 +102,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-ILLE.wav"
     },
     {
       "id": "LAT-V-F01-NON",
@@ -110,7 +117,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-NON.wav"
     },
     {
       "id": "LAT-V-F01-ET",
@@ -124,7 +132,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-ET.wav"
     },
     {
       "id": "LAT-V-F01-DICO",
@@ -138,7 +147,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-DICO.wav"
     },
     {
       "id": "LAT-V-F01-AD",
@@ -152,7 +162,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-AD.wav"
     },
     {
       "id": "LAT-V-F01-DO",
@@ -166,7 +177,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-DO.wav"
     },
     {
       "id": "LAT-V-F01-FACIO",
@@ -180,7 +192,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-FACIO.wav"
     },
     {
       "id": "LAT-V-F01-VIDEO",
@@ -194,7 +207,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-VIDEO.wav"
     },
     {
       "id": "LAT-V-F01-HABEO",
@@ -208,7 +222,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-HABEO.wav"
     },
     {
       "id": "LAT-V-F01-CUM",
@@ -222,7 +237,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-CUM.wav"
     },
     {
       "id": "LAT-V-F01-AB",
@@ -236,7 +252,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-AB.wav"
     },
     {
       "id": "LAT-V-F01-EGO",
@@ -250,7 +267,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-EGO.wav"
     },
     {
       "id": "LAT-V-F01-EX",
@@ -264,7 +282,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-EX.wav"
     },
     {
       "id": "LAT-V-F01-SUI",
@@ -278,7 +297,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-SUI.wav"
     },
     {
       "id": "LAT-V-F01-DE",
@@ -292,7 +312,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-DE.wav"
     },
     {
       "id": "LAT-V-F01-SED",
@@ -306,7 +327,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-SED.wav"
     },
     {
       "id": "LAT-V-F01-UT",
@@ -320,7 +342,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-UT.wav"
     },
     {
       "id": "LAT-V-F01-VENIO",
@@ -334,7 +357,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-VENIO.wav"
     },
     {
       "id": "LAT-V-F01-EO",
@@ -348,7 +372,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-EO.wav"
     },
     {
       "id": "LAT-V-F01-FERO",
@@ -362,7 +387,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-FERO.wav"
     },
     {
       "id": "LAT-V-F01-MAGNUS",
@@ -376,7 +402,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-MAGNUS.wav"
     },
     {
       "id": "LAT-V-F01-RES",
@@ -390,7 +417,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-RES.wav"
     },
     {
       "id": "LAT-V-F01-OMNIS",
@@ -404,7 +432,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-OMNIS.wav"
     },
     {
       "id": "LAT-V-F01-PER",
@@ -418,7 +447,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-PER.wav"
     },
     {
       "id": "LAT-V-F01-AGO",
@@ -432,7 +462,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-AGO.wav"
     },
     {
       "id": "LAT-V-F01-MEUS",
@@ -446,7 +477,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-MEUS.wav"
     },
     {
       "id": "LAT-V-F01-BONUS",
@@ -460,7 +492,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-BONUS.wav"
     },
     {
       "id": "LAT-V-F01-PETO",
@@ -474,7 +507,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-PETO.wav"
     },
     {
       "id": "LAT-V-F01-CAPIO",
@@ -488,7 +522,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-CAPIO.wav"
     },
     {
       "id": "LAT-V-F01-MULTUS",
@@ -502,7 +537,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-MULTUS.wav"
     },
     {
       "id": "LAT-V-F01-AUT",
@@ -516,7 +552,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-AUT.wav"
     },
     {
       "id": "LAT-V-F01-NEQUE",
@@ -530,7 +567,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-NEQUE.wav"
     },
     {
       "id": "LAT-V-F01-TUUS",
@@ -544,7 +582,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-TUUS.wav"
     },
     {
       "id": "LAT-V-F01-IPSE",
@@ -558,7 +597,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-IPSE.wav"
     },
     {
       "id": "LAT-V-F01-POPULUS",
@@ -572,7 +612,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-POPULUS.wav"
     },
     {
       "id": "LAT-V-F01-HOMO",
@@ -586,7 +627,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-HOMO.wav"
     },
     {
       "id": "LAT-V-F01-ANIMUS",
@@ -600,7 +642,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-ANIMUS.wav"
     },
     {
       "id": "LAT-V-F01-TENEO",
@@ -614,7 +657,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-TENEO.wav"
     },
     {
       "id": "LAT-V-F01-PARS",
@@ -628,7 +672,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-PARS.wav"
     },
     {
       "id": "LAT-V-F01-BELLUM",
@@ -642,7 +687,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-BELLUM.wav"
     },
     {
       "id": "LAT-V-F01-ATQUE",
@@ -656,7 +702,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-ATQUE.wav"
     },
     {
       "id": "LAT-V-F01-REX",
@@ -670,7 +717,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-REX.wav"
     },
     {
       "id": "LAT-V-F01-NOVUS",
@@ -684,7 +732,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-NOVUS.wav"
     },
     {
       "id": "LAT-V-F01-TU",
@@ -698,7 +747,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-TU.wav"
     },
     {
       "id": "LAT-V-F01-CORPUS",
@@ -712,7 +762,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-CORPUS.wav"
     },
     {
       "id": "LAT-V-F01-IUBEO",
@@ -726,7 +777,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-IUBEO.wav"
     },
     {
       "id": "LAT-V-F01-TEMPUS",
@@ -740,7 +792,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "tijd",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-TEMPUS.wav"
     },
     {
       "id": "LAT-V-F01-VIR",
@@ -754,7 +807,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-VIR.wav"
     },
     {
       "id": "LAT-V-F01-PONO",
@@ -768,7 +822,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-PONO.wav"
     },
     {
       "id": "LAT-V-F01-DUCO",
@@ -782,7 +837,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-DUCO.wav"
     },
     {
       "id": "LAT-V-F01-NOMEN",
@@ -796,7 +852,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-NOMEN.wav"
     },
     {
       "id": "LAT-V-F01-MANUS",
@@ -810,7 +867,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-MANUS.wav"
     },
     {
       "id": "LAT-V-F01-GENUS",
@@ -824,7 +882,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-GENUS.wav"
     },
     {
       "id": "LAT-V-F01-TERRA",
@@ -838,7 +897,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-TERRA.wav"
     },
     {
       "id": "LAT-V-F01-IAM",
@@ -852,7 +912,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-IAM.wav"
     },
     {
       "id": "LAT-V-F01-DIES",
@@ -866,7 +927,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "tijd",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-DIES.wav"
     },
     {
       "id": "LAT-V-F01-TAMEN",
@@ -880,7 +942,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-TAMEN.wav"
     },
     {
       "id": "LAT-V-F01-ALIUS",
@@ -894,7 +957,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-ALIUS.wav"
     },
     {
       "id": "LAT-V-F01-DEUS",
@@ -908,7 +972,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "religie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-DEUS.wav"
     },
     {
       "id": "LAT-V-F01-URBS",
@@ -922,7 +987,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-URBS.wav"
     },
     {
       "id": "LAT-V-F01-HOSTIS",
@@ -936,7 +1002,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-HOSTIS.wav"
     },
     {
       "id": "LAT-V-F01-MILES",
@@ -950,7 +1017,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-MILES.wav"
     },
     {
       "id": "LAT-V-F01-PATER",
@@ -964,7 +1032,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-PATER.wav"
     },
     {
       "id": "LAT-V-F01-PRIMUS",
@@ -978,7 +1047,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-PRIMUS.wav"
     },
     {
       "id": "LAT-V-F01-MITTO",
@@ -992,7 +1062,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-MITTO.wav"
     },
     {
       "id": "LAT-V-F01-ACCIPIO",
@@ -1006,7 +1077,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-ACCIPIO.wav"
     },
     {
       "id": "LAT-V-F01-LOCUS",
@@ -1020,7 +1092,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-LOCUS.wav"
     },
     {
       "id": "LAT-V-F01-CIVIS",
@@ -1034,7 +1107,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-CIVIS.wav"
     },
     {
       "id": "LAT-V-F01-VIS",
@@ -1048,7 +1122,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-VIS.wav"
     },
     {
       "id": "LAT-V-F01-VOCO",
@@ -1062,7 +1137,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-VOCO.wav"
     },
     {
       "id": "LAT-V-F01-CONSUL",
@@ -1076,7 +1152,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-CONSUL.wav"
     },
     {
       "id": "LAT-V-F01-RELINQU",
@@ -1090,7 +1167,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-RELINQU.wav"
     },
     {
       "id": "LAT-V-F01-LEX",
@@ -1104,7 +1182,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-LEX.wav"
     },
     {
       "id": "LAT-V-F01-CAPUT",
@@ -1118,7 +1197,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-CAPUT.wav"
     },
     {
       "id": "LAT-V-F01-ALTER",
@@ -1132,7 +1212,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-ALTER.wav"
     },
     {
       "id": "LAT-V-F01-MORS",
@@ -1146,7 +1227,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-MORS.wav"
     },
     {
       "id": "LAT-V-F01-IMPERIU",
@@ -1160,7 +1242,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-IMPERIU.wav"
     },
     {
       "id": "LAT-V-F01-FILIUS",
@@ -1174,7 +1257,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-FILIUS.wav"
     },
     {
       "id": "LAT-V-F01-AQUA",
@@ -1188,7 +1272,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-AQUA.wav"
     },
     {
       "id": "LAT-V-F01-AMO",
@@ -1202,7 +1287,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-AMO.wav"
     },
     {
       "id": "LAT-V-F01-DOMINUS",
@@ -1216,7 +1302,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-DOMINUS.wav"
     },
     {
       "id": "LAT-V-F01-CREDO",
@@ -1230,7 +1317,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-CREDO.wav"
     },
     {
       "id": "LAT-V-F01-SERVUS",
@@ -1244,7 +1332,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-SERVUS.wav"
     },
     {
       "id": "LAT-V-F01-VIA",
@@ -1258,7 +1347,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-VIA.wav"
     },
     {
       "id": "LAT-V-F01-TIMEO",
@@ -1272,7 +1362,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-TIMEO.wav"
     },
     {
       "id": "LAT-V-F01-MONS",
@@ -1286,7 +1377,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-MONS.wav"
     },
     {
       "id": "LAT-V-F01-AMOR",
@@ -1300,7 +1392,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-AMOR.wav"
     },
     {
       "id": "LAT-V-F01-MARE",
@@ -1314,7 +1407,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-MARE.wav"
     },
     {
       "id": "LAT-V-F01-FILIA",
@@ -1328,7 +1422,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-FILIA.wav"
     },
     {
       "id": "LAT-V-F01-MATER",
@@ -1342,7 +1437,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-MATER.wav"
     },
     {
       "id": "LAT-V-F01-OPUS",
@@ -1356,7 +1452,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-OPUS.wav"
     },
     {
       "id": "LAT-V-F01-SILVA",
@@ -1370,7 +1467,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-SILVA.wav"
     },
     {
       "id": "LAT-V-F01-FLUMEN",
@@ -1384,7 +1482,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-FLUMEN.wav"
     },
     {
       "id": "LAT-V-F01-ANNUS",
@@ -1398,7 +1497,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "tijd",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F01-ANNUS.wav"
     },
     {
       "id": "LAT-V-F02-VIRTUS",
@@ -1412,7 +1512,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-VIRTUS.wav"
     },
     {
       "id": "LAT-V-F02-NOSTER",
@@ -1426,7 +1527,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-NOSTER.wav"
     },
     {
       "id": "LAT-V-F02-AUTEM",
@@ -1440,7 +1542,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-AUTEM.wav"
     },
     {
       "id": "LAT-V-F02-ENIM",
@@ -1454,7 +1557,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-ENIM.wav"
     },
     {
       "id": "LAT-V-F02-TANTUS",
@@ -1468,7 +1572,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-TANTUS.wav"
     },
     {
       "id": "LAT-V-F02-ETIAM",
@@ -1482,7 +1587,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-ETIAM.wav"
     },
     {
       "id": "LAT-V-F02-QUOQUE",
@@ -1496,7 +1602,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-QUOQUE.wav"
     },
     {
       "id": "LAT-V-F02-INTER",
@@ -1510,7 +1617,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-INTER.wav"
     },
     {
       "id": "LAT-V-F02-SUUS",
@@ -1524,7 +1632,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-SUUS.wav"
     },
     {
       "id": "LAT-V-F02-ANTE",
@@ -1538,7 +1647,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-ANTE.wav"
     },
     {
       "id": "LAT-V-F02-POST",
@@ -1552,7 +1662,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-POST.wav"
     },
     {
       "id": "LAT-V-F02-QUIDEM",
@@ -1566,7 +1677,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-QUIDEM.wav"
     },
     {
       "id": "LAT-V-F02-VINCO",
@@ -1580,7 +1692,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-VINCO.wav"
     },
     {
       "id": "LAT-V-F02-ANIMA",
@@ -1594,7 +1707,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-ANIMA.wav"
     },
     {
       "id": "LAT-V-F02-PATRIA",
@@ -1608,7 +1722,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-PATRIA.wav"
     },
     {
       "id": "LAT-V-F02-SCIO",
@@ -1622,7 +1737,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-SCIO.wav"
     },
     {
       "id": "LAT-V-F02-DUX",
@@ -1636,7 +1752,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-DUX.wav"
     },
     {
       "id": "LAT-V-F02-GERO",
@@ -1650,7 +1767,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-GERO.wav"
     },
     {
       "id": "LAT-V-F02-SENATUS",
@@ -1664,7 +1782,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-SENATUS.wav"
     },
     {
       "id": "LAT-V-F02-QUAM",
@@ -1678,7 +1797,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-QUAM.wav"
     },
     {
       "id": "LAT-V-F02-NIHIL",
@@ -1692,7 +1812,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-NIHIL.wav"
     },
     {
       "id": "LAT-V-F02-VOX",
@@ -1706,7 +1827,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-VOX.wav"
     },
     {
       "id": "LAT-V-F02-SCRIBO",
@@ -1720,7 +1842,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-SCRIBO.wav"
     },
     {
       "id": "LAT-V-F02-MOVEO",
@@ -1734,7 +1857,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-MOVEO.wav"
     },
     {
       "id": "LAT-V-F02-SACER",
@@ -1748,7 +1872,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "religie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-SACER.wav"
     },
     {
       "id": "LAT-V-F02-VERBUM",
@@ -1762,7 +1887,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-VERBUM.wav"
     },
     {
       "id": "LAT-V-F02-REGIO",
@@ -1776,7 +1902,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-REGIO.wav"
     },
     {
       "id": "LAT-V-F02-OCULUS",
@@ -1790,7 +1917,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-OCULUS.wav"
     },
     {
       "id": "LAT-V-F02-LEGO",
@@ -1804,7 +1932,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-LEGO.wav"
     },
     {
       "id": "LAT-V-F02-PUGNO",
@@ -1818,7 +1947,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-PUGNO.wav"
     },
     {
       "id": "LAT-V-F02-NOX",
@@ -1832,7 +1962,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "tijd",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-NOX.wav"
     },
     {
       "id": "LAT-V-F02-CIBUS",
@@ -1846,7 +1977,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "voedsel",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-CIBUS.wav"
     },
     {
       "id": "LAT-V-F02-ARMA",
@@ -1860,7 +1992,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-ARMA.wav"
     },
     {
       "id": "LAT-V-F02-ITER",
@@ -1874,7 +2007,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-ITER.wav"
     },
     {
       "id": "LAT-V-F02-DOMUS",
@@ -1888,7 +2022,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-DOMUS.wav"
     },
     {
       "id": "LAT-V-F02-LITTERA",
@@ -1902,7 +2037,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-LITTERA.wav"
     },
     {
       "id": "LAT-V-F02-ROGO",
@@ -1916,7 +2052,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-ROGO.wav"
     },
     {
       "id": "LAT-V-F02-AUDIO",
@@ -1930,7 +2067,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-AUDIO.wav"
     },
     {
       "id": "LAT-V-F02-GLADIUS",
@@ -1944,7 +2082,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-GLADIUS.wav"
     },
     {
       "id": "LAT-V-F02-HORA",
@@ -1958,7 +2097,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "tijd",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-HORA.wav"
     },
     {
       "id": "LAT-V-F02-NAVIS",
@@ -1972,7 +2112,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-NAVIS.wav"
     },
     {
       "id": "LAT-V-F02-EQUUS",
@@ -1986,7 +2127,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-EQUUS.wav"
     },
     {
       "id": "LAT-V-F02-TIMOR",
@@ -2000,7 +2142,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-TIMOR.wav"
     },
     {
       "id": "LAT-V-F02-TEMPLUM",
@@ -2014,7 +2157,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "religie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-TEMPLUM.wav"
     },
     {
       "id": "LAT-V-F02-PORTO",
@@ -2028,7 +2172,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-PORTO.wav"
     },
     {
       "id": "LAT-V-F02-PECUNIA",
@@ -2042,7 +2187,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-PECUNIA.wav"
     },
     {
       "id": "LAT-V-F02-PUELLA",
@@ -2056,7 +2202,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-PUELLA.wav"
     },
     {
       "id": "LAT-V-F02-FUGIO",
@@ -2070,7 +2217,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-FUGIO.wav"
     },
     {
       "id": "LAT-V-F02-IRA",
@@ -2084,7 +2232,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-IRA.wav"
     },
     {
       "id": "LAT-V-F02-LIBER",
@@ -2098,7 +2247,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-LIBER.wav"
     },
     {
       "id": "LAT-V-F02-PORTA",
@@ -2112,7 +2262,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-PORTA.wav"
     },
     {
       "id": "LAT-V-F02-LAUDO",
@@ -2126,7 +2277,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-LAUDO.wav"
     },
     {
       "id": "LAT-V-F02-VINUM",
@@ -2140,7 +2292,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "voedsel",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-VINUM.wav"
     },
     {
       "id": "LAT-V-F02-MURUS",
@@ -2154,7 +2307,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-MURUS.wav"
     },
     {
       "id": "LAT-V-F02-PUER",
@@ -2168,7 +2322,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-PUER.wav"
     },
     {
       "id": "LAT-V-F02-AGER",
@@ -2182,7 +2337,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-AGER.wav"
     },
     {
       "id": "LAT-V-F02-LONGUS",
@@ -2196,7 +2352,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-LONGUS.wav"
     },
     {
       "id": "LAT-V-F02-GAUDIUM",
@@ -2210,7 +2367,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-GAUDIUM.wav"
     },
     {
       "id": "LAT-V-F02-DOLOR",
@@ -2224,7 +2382,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-DOLOR.wav"
     },
     {
       "id": "LAT-V-F02-FORUM",
@@ -2238,7 +2397,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-FORUM.wav"
     },
     {
       "id": "LAT-V-F02-VILLA",
@@ -2252,7 +2412,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-VILLA.wav"
     },
     {
       "id": "LAT-V-F02-HORTUS",
@@ -2266,7 +2427,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-HORTUS.wav"
     },
     {
       "id": "LAT-V-F02-SOL",
@@ -2280,7 +2442,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-SOL.wav"
     },
     {
       "id": "LAT-V-F02-CENA",
@@ -2294,7 +2457,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "voedsel",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-CENA.wav"
     },
     {
       "id": "LAT-V-F02-MAGISTR",
@@ -2308,7 +2472,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-MAGISTR.wav"
     },
     {
       "id": "LAT-V-F02-DISCIPL",
@@ -2322,7 +2487,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-DISCIPL.wav"
     },
     {
       "id": "LAT-V-F02-ARS",
@@ -2336,7 +2502,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-ARS.wav"
     },
     {
       "id": "LAT-V-F02-PUGNA",
@@ -2350,7 +2517,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-PUGNA.wav"
     },
     {
       "id": "LAT-V-F02-DEA",
@@ -2364,7 +2532,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "religie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-DEA.wav"
     },
     {
       "id": "LAT-V-F02-NUNTIUS",
@@ -2378,7 +2547,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-NUNTIUS.wav"
     },
     {
       "id": "LAT-V-F02-UXOR",
@@ -2392,7 +2562,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-UXOR.wav"
     },
     {
       "id": "LAT-V-F02-CASTRA",
@@ -2406,7 +2577,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-CASTRA.wav"
     },
     {
       "id": "LAT-V-F02-CLAMO",
@@ -2420,7 +2592,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-CLAMO.wav"
     },
     {
       "id": "LAT-V-F02-INSULA",
@@ -2434,7 +2607,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-INSULA.wav"
     },
     {
       "id": "LAT-V-F02-AUXILIU",
@@ -2448,7 +2622,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-AUXILIU.wav"
     },
     {
       "id": "LAT-V-F02-PROELIU",
@@ -2462,7 +2637,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-PROELIU.wav"
     },
     {
       "id": "LAT-V-F02-FELIX",
@@ -2476,7 +2652,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-FELIX.wav"
     },
     {
       "id": "LAT-V-F02-FORTIS",
@@ -2490,7 +2667,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-FORTIS.wav"
     },
     {
       "id": "LAT-V-F02-GRAVIS",
@@ -2504,7 +2682,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-GRAVIS.wav"
     },
     {
       "id": "LAT-V-F02-BREVIS",
@@ -2518,7 +2697,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-BREVIS.wav"
     },
     {
       "id": "LAT-V-F02-FACILIS",
@@ -2532,7 +2712,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-FACILIS.wav"
     },
     {
       "id": "LAT-V-F02-CLARUS",
@@ -2546,7 +2727,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-CLARUS.wav"
     },
     {
       "id": "LAT-V-F02-LAETUS",
@@ -2560,7 +2742,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-LAETUS.wav"
     },
     {
       "id": "LAT-V-F02-PULCHER",
@@ -2574,7 +2757,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-PULCHER.wav"
     },
     {
       "id": "LAT-V-F02-MALUS",
@@ -2588,7 +2772,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-MALUS.wav"
     },
     {
       "id": "LAT-V-F02-PARVUS",
@@ -2602,7 +2787,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-PARVUS.wav"
     },
     {
       "id": "LAT-V-F02-SAEPE",
@@ -2616,7 +2802,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-SAEPE.wav"
     },
     {
       "id": "LAT-V-F02-SEMPER",
@@ -2630,7 +2817,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-SEMPER.wav"
     },
     {
       "id": "LAT-V-F02-BENE",
@@ -2644,7 +2832,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-BENE.wav"
     },
     {
       "id": "LAT-V-F02-IBI",
@@ -2658,7 +2847,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-IBI.wav"
     },
     {
       "id": "LAT-V-F02-NUNC",
@@ -2672,7 +2862,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-NUNC.wav"
     },
     {
       "id": "LAT-V-F02-TUM",
@@ -2686,7 +2877,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-TUM.wav"
     },
     {
       "id": "LAT-V-F02-OLIM",
@@ -2700,7 +2892,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-OLIM.wav"
     },
     {
       "id": "LAT-V-F02-SUBITO",
@@ -2714,7 +2907,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-SUBITO.wav"
     },
     {
       "id": "LAT-V-F02-STATIM",
@@ -2728,7 +2922,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-STATIM.wav"
     },
     {
       "id": "LAT-V-F02-CONTRA",
@@ -2742,7 +2937,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-CONTRA.wav"
     },
     {
       "id": "LAT-V-F02-PROPTER",
@@ -2756,7 +2952,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-PROPTER.wav"
     },
     {
       "id": "LAT-V-F02-TRANS",
@@ -2770,7 +2967,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-TRANS.wav"
     },
     {
       "id": "LAT-V-F02-SINE",
@@ -2784,7 +2982,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-SINE.wav"
     },
     {
       "id": "LAT-V-F02-SUPER",
@@ -2798,7 +2997,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F02-SUPER.wav"
     },
     {
       "id": "LAT-V-F03-SCUTUM",
@@ -2812,7 +3012,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-SCUTUM.wav"
     },
     {
       "id": "LAT-V-F03-IMPERAT",
@@ -2826,7 +3027,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-IMPERAT.wav"
     },
     {
       "id": "LAT-V-F03-LEGIO",
@@ -2840,7 +3042,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-LEGIO.wav"
     },
     {
       "id": "LAT-V-F03-FRATER",
@@ -2854,7 +3057,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-FRATER.wav"
     },
     {
       "id": "LAT-V-F03-SOROR",
@@ -2868,7 +3072,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-SOROR.wav"
     },
     {
       "id": "LAT-V-F03-FLAMMA",
@@ -2882,7 +3087,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-FLAMMA.wav"
     },
     {
       "id": "LAT-V-F03-VENTUS",
@@ -2896,7 +3102,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-VENTUS.wav"
     },
     {
       "id": "LAT-V-F03-CAELUM",
@@ -2910,7 +3117,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-CAELUM.wav"
     },
     {
       "id": "LAT-V-F03-SANGUIS",
@@ -2924,7 +3132,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-SANGUIS.wav"
     },
     {
       "id": "LAT-V-F03-PES",
@@ -2938,7 +3147,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-PES.wav"
     },
     {
       "id": "LAT-V-F03-REGNUM",
@@ -2952,7 +3162,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-REGNUM.wav"
     },
     {
       "id": "LAT-V-F03-COPIA",
@@ -2966,7 +3177,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-COPIA.wav"
     },
     {
       "id": "LAT-V-F03-SIGNUM",
@@ -2980,7 +3192,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-SIGNUM.wav"
     },
     {
       "id": "LAT-V-F03-FUGA",
@@ -2994,7 +3207,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-FUGA.wav"
     },
     {
       "id": "LAT-V-F03-VICTOR",
@@ -3008,7 +3222,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-VICTOR.wav"
     },
     {
       "id": "LAT-V-F03-VULNER",
@@ -3022,7 +3237,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-VULNER.wav"
     },
     {
       "id": "LAT-V-F03-SUPERO",
@@ -3036,7 +3252,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-SUPERO.wav"
     },
     {
       "id": "LAT-V-F03-ORNO",
@@ -3050,7 +3267,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-ORNO.wav"
     },
     {
       "id": "LAT-V-F03-NARRO",
@@ -3064,7 +3282,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-NARRO.wav"
     },
     {
       "id": "LAT-V-F03-SERVO",
@@ -3078,7 +3297,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-SERVO.wav"
     },
     {
       "id": "LAT-V-F03-SPECTO",
@@ -3092,7 +3312,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-SPECTO.wav"
     },
     {
       "id": "LAT-V-F03-FUGO",
@@ -3106,7 +3327,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-FUGO.wav"
     },
     {
       "id": "LAT-V-F03-AMBULO",
@@ -3120,7 +3342,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-AMBULO.wav"
     },
     {
       "id": "LAT-V-F03-NAVIGO",
@@ -3134,7 +3357,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-NAVIGO.wav"
     },
     {
       "id": "LAT-V-F03-HABITO",
@@ -3148,7 +3372,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-HABITO.wav"
     },
     {
       "id": "LAT-V-F03-RESPOND",
@@ -3162,7 +3387,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-RESPOND.wav"
     },
     {
       "id": "LAT-V-F03-TERREO",
@@ -3176,7 +3402,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-TERREO.wav"
     },
     {
       "id": "LAT-V-F03-DEBEO",
@@ -3190,7 +3417,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-DEBEO.wav"
     },
     {
       "id": "LAT-V-F03-MANEO",
@@ -3204,7 +3432,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-MANEO.wav"
     },
     {
       "id": "LAT-V-F03-OSTENDO",
@@ -3218,7 +3447,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-OSTENDO.wav"
     },
     {
       "id": "LAT-V-F03-CURRO",
@@ -3232,7 +3462,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-CURRO.wav"
     },
     {
       "id": "LAT-V-F03-CADO",
@@ -3246,7 +3477,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-CADO.wav"
     },
     {
       "id": "LAT-V-F03-OCCIDO",
@@ -3260,7 +3492,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-OCCIDO.wav"
     },
     {
       "id": "LAT-V-F03-DISCO",
@@ -3274,7 +3507,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-DISCO.wav"
     },
     {
       "id": "LAT-V-F03-EDUCO",
@@ -3288,7 +3522,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-EDUCO.wav"
     },
     {
       "id": "LAT-V-F03-CONSTIT",
@@ -3302,7 +3537,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-CONSTIT.wav"
     },
     {
       "id": "LAT-V-F03-DEFENDO",
@@ -3316,7 +3552,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-DEFENDO.wav"
     },
     {
       "id": "LAT-V-F03-COGNOSC",
@@ -3330,7 +3567,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-COGNOSC.wav"
     },
     {
       "id": "LAT-V-F03-INTERFI",
@@ -3344,7 +3582,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-INTERFI.wav"
     },
     {
       "id": "LAT-V-F03-DORMIO",
@@ -3358,7 +3597,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-DORMIO.wav"
     },
     {
       "id": "LAT-V-F03-NESCIO",
@@ -3372,7 +3612,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-NESCIO.wav"
     },
     {
       "id": "LAT-V-F03-CUSTODI",
@@ -3386,7 +3627,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-CUSTODI.wav"
     },
     {
       "id": "LAT-V-F03-EPISTUL",
@@ -3400,7 +3642,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-EPISTUL.wav"
     },
     {
       "id": "LAT-V-F03-FEMINA",
@@ -3414,7 +3657,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-FEMINA.wav"
     },
     {
       "id": "LAT-V-F03-FABULA",
@@ -3428,7 +3672,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-FABULA.wav"
     },
     {
       "id": "LAT-V-F03-POETA",
@@ -3442,7 +3687,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-POETA.wav"
     },
     {
       "id": "LAT-V-F03-LUDUS",
@@ -3456,7 +3702,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-LUDUS.wav"
     },
     {
       "id": "LAT-V-F03-AMICUS",
@@ -3470,7 +3717,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-AMICUS.wav"
     },
     {
       "id": "LAT-V-F03-AURUM",
@@ -3484,7 +3732,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-AURUM.wav"
     },
     {
       "id": "LAT-V-F03-OPPIDUM",
@@ -3498,7 +3747,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-OPPIDUM.wav"
     },
     {
       "id": "LAT-V-F03-PERICUL",
@@ -3512,7 +3762,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-PERICUL.wav"
     },
     {
       "id": "LAT-V-F03-CONSILI",
@@ -3526,7 +3777,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-CONSILI.wav"
     },
     {
       "id": "LAT-V-F03-STUDIUM",
@@ -3540,7 +3792,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-STUDIUM.wav"
     },
     {
       "id": "LAT-V-F03-PRAEMIU",
@@ -3554,7 +3807,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-PRAEMIU.wav"
     },
     {
       "id": "LAT-V-F03-NEGOTIU",
@@ -3568,7 +3822,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-NEGOTIU.wav"
     },
     {
       "id": "LAT-V-F03-CUSTOS",
@@ -3582,7 +3837,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-CUSTOS.wav"
     },
     {
       "id": "LAT-V-F03-ORATOR",
@@ -3596,7 +3852,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-ORATOR.wav"
     },
     {
       "id": "LAT-V-F03-SACERDO",
@@ -3610,7 +3867,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "religie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-SACERDO.wav"
     },
     {
       "id": "LAT-V-F03-VULNUS",
@@ -3624,7 +3882,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-VULNUS.wav"
     },
     {
       "id": "LAT-V-F03-EXERCIT",
@@ -3638,7 +3897,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-EXERCIT.wav"
     },
     {
       "id": "LAT-V-F03-ADVENTU",
@@ -3652,7 +3912,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-ADVENTU.wav"
     },
     {
       "id": "LAT-V-F03-LACRIMA",
@@ -3666,7 +3927,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-LACRIMA.wav"
     },
     {
       "id": "LAT-V-F03-CAUSA",
@@ -3680,7 +3942,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-CAUSA.wav"
     },
     {
       "id": "LAT-V-F03-NATURA",
@@ -3694,7 +3957,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-NATURA.wav"
     },
     {
       "id": "LAT-V-F03-SAPIENT",
@@ -3708,7 +3972,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-SAPIENT.wav"
     },
     {
       "id": "LAT-V-F03-SENATOR",
@@ -3722,7 +3987,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-SENATOR.wav"
     },
     {
       "id": "LAT-V-F03-LUX",
@@ -3736,7 +4002,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-LUX.wav"
     },
     {
       "id": "LAT-V-F03-IGNIS",
@@ -3750,7 +4017,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-IGNIS.wav"
     },
     {
       "id": "LAT-V-F03-FERRUM",
@@ -3764,7 +4032,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-FERRUM.wav"
     },
     {
       "id": "LAT-V-F03-PANIS",
@@ -3778,7 +4047,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "voedsel",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-PANIS.wav"
     },
     {
       "id": "LAT-V-F03-ALTUS",
@@ -3792,7 +4062,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-ALTUS.wav"
     },
     {
       "id": "LAT-V-F03-SAEVUS",
@@ -3806,7 +4077,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-SAEVUS.wav"
     },
     {
       "id": "LAT-V-F03-MISER",
@@ -3820,7 +4092,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-MISER.wav"
     },
     {
       "id": "LAT-V-F03-CARUS",
@@ -3834,7 +4107,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-CARUS.wav"
     },
     {
       "id": "LAT-V-F03-LIBER2",
@@ -3848,7 +4122,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-LIBER2.wav"
     },
     {
       "id": "LAT-V-F03-TUTUS",
@@ -3862,7 +4137,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-TUTUS.wav"
     },
     {
       "id": "LAT-V-F03-SOLUS",
@@ -3876,7 +4152,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-SOLUS.wav"
     },
     {
       "id": "LAT-V-F03-TOTUS",
@@ -3890,7 +4167,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-TOTUS.wav"
     },
     {
       "id": "LAT-V-F03-NULLUS",
@@ -3904,7 +4182,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-NULLUS.wav"
     },
     {
       "id": "LAT-V-F03-VESTER",
@@ -3918,7 +4197,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-VESTER.wav"
     },
     {
       "id": "LAT-V-F03-IGITUR",
@@ -3932,7 +4212,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-IGITUR.wav"
     },
     {
       "id": "LAT-V-F03-NAM",
@@ -3946,7 +4227,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-NAM.wav"
     },
     {
       "id": "LAT-V-F03-QUOD",
@@ -3960,7 +4242,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-QUOD.wav"
     },
     {
       "id": "LAT-V-F03-UBI",
@@ -3974,7 +4257,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-UBI.wav"
     },
     {
       "id": "LAT-V-F03-NUMQUAM",
@@ -3988,7 +4272,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-NUMQUAM.wav"
     },
     {
       "id": "LAT-V-F03-DEINDE",
@@ -4002,7 +4287,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-DEINDE.wav"
     },
     {
       "id": "LAT-V-F03-DIU",
@@ -4016,7 +4302,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "tijd",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-DIU.wav"
     },
     {
       "id": "LAT-V-F03-TANDEM",
@@ -4030,7 +4317,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-TANDEM.wav"
     },
     {
       "id": "LAT-V-F03-FRUSTRA",
@@ -4044,7 +4332,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-FRUSTRA.wav"
     },
     {
       "id": "LAT-V-F03-OB",
@@ -4058,7 +4347,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-OB.wav"
     },
     {
       "id": "LAT-V-F03-PRO",
@@ -4072,7 +4362,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-PRO.wav"
     },
     {
       "id": "LAT-V-F03-SUB",
@@ -4086,7 +4377,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-SUB.wav"
     },
     {
       "id": "LAT-V-F03-APUD",
@@ -4100,7 +4392,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-APUD.wav"
     },
     {
       "id": "LAT-V-F03-CIRCUM",
@@ -4114,7 +4407,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-CIRCUM.wav"
     },
     {
       "id": "LAT-V-F03-CLAMOR",
@@ -4128,7 +4422,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-CLAMOR.wav"
     },
     {
       "id": "LAT-V-F03-PROBUS",
@@ -4142,7 +4437,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-PROBUS.wav"
     },
     {
       "id": "LAT-V-F03-TOGA",
@@ -4156,7 +4452,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-TOGA.wav"
     },
     {
       "id": "LAT-V-F03-GLADIAT",
@@ -4170,7 +4467,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-GLADIAT.wav"
     },
     {
       "id": "LAT-V-F03-ARA",
@@ -4184,7 +4482,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "religie",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-ARA.wav"
     },
     {
       "id": "LAT-V-F03-STATUA",
@@ -4198,7 +4497,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": []
+      "items": [],
+      "audio_ref": "LAT-V-F03-STATUA.wav"
     }
   ],
   "edges": [
