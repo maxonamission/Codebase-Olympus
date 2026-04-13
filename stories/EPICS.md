@@ -48,7 +48,7 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 **Doel:** Griekse grammaticale kern van klas 1, gebaseerd op de GTC-minimumlijst gefilterd op klas 1 scope (Pallas les 1-14 / ARGO thema 1-4).
 **Geschat:** ~100 knopen
 **Afhankelijkheden:** A3 (alfabet moet af als prerequisite)
-**Status:** in progress
+**Status:** done
 **Bestand:** `data/graph/grc_grammatica_leerjaar1.json`
 
 | Story | Titel | Knopen | Status |
@@ -62,8 +62,8 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 | A2-07 | Imperfectum indicativus actief — augment | 8 | done |
 | A2-08 | Aoristus introductie — sigmatisch + thematisch | 10 | done |
 | A2-09 | Pronomina — persoonlijk, bezittelijk, aanwijzend | 10 | done |
-| A2-10 | Voorzetsels + basissyntaxis | ~8 | todo |
-| A2-11 | Review en prerequisite-edge validatie voor heel epic A2 | — | todo |
+| A2-10 | Voorzetsels + basissyntaxis | 8 | done |
+| A2-11 | Review en prerequisite-edge validatie voor heel epic A2 | — | done |
 
 ---
 
