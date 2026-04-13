@@ -20,6 +20,16 @@ class SubscriptionStatus(StrEnum):
     EXPIRED = "expired"
 
 
+class PronunciationLat(StrEnum):
+    CLASSICAL = "classical"  # Restored classical pronunciation (default)
+    ECCLESIASTICAL = "ecclesiastical"  # Church Latin
+
+
+class PronunciationGrc(StrEnum):
+    ERASMIAN = "erasmian"  # Standard on Dutch gymnasia (default)
+    MODERN = "modern"  # Modern Greek pronunciation
+
+
 class Subscription(BaseModel):
     """Subscription state for a user account."""
 
@@ -38,4 +48,6 @@ class User(BaseModel):
     subscription: Subscription = Field(default_factory=Subscription)
     examenjaar_ltc: Optional[int] = None
     examenjaar_gtc: Optional[int] = None
+    pronunciation_preference_lat: PronunciationLat = PronunciationLat.CLASSICAL
+    pronunciation_preference_grc: PronunciationGrc = PronunciationGrc.ERASMIAN
     created_at: datetime = Field(default_factory=datetime.now)

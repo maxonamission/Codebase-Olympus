@@ -1,7 +1,8 @@
-# Spoor A — Epics overzicht
+# Epics overzicht
 
-Knowledge graph content voor leerjaar 1 gymnasium, beide talen.
-Doelomvang: ~850 knopen, ~1500-2000 edges.
+## Spoor A — Knowledge graph content
+
+Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 
 ## Uitvoervolgorde
 
@@ -135,3 +136,80 @@ Doelomvang: ~850 knopen, ~1500-2000 edges.
 | A6-03 | Cultuur — gedeelde mythologie en geschiedenis | ~20 | todo |
 | A6-04 | Vocabulaire — cognaten en leenwoorden | ~20 | todo |
 | A6-05 | Validatie transfer-edges — geen cycli, weights correct | — | todo |
+
+---
+
+## Spoor B-audio — TTS en STT voor Latijn en Grieks
+
+Audio-laag voor multi-modale taalverwerving. Gefaseerd: TTS in fase 3, STT in fase 5.
+
+### Uitvoervolgorde
+
+1. **B1** (TTS-pipeline) — evaluatie tools + audio genereren voor ~450 V-knopen
+2. **B2** (audio-oefentypen) — nieuwe ItemTypes + frontend player
+3. **B3** (STT-integratie) — spraakherkenning + mondelinge oefentypen
+4. **B4** (pronunciation assessment) — foneem-scoring + feedback (stretch goal)
+
+---
+
+## Epic B1: TTS-pipeline en audio-generatie
+
+**Doel:** Evalueer en bouw een TTS-pipeline voor klassiek Latijn (klassieke uitspraak) en Grieks (Erasmiaans). Genereer audio voor alle V-knopen.
+**Geschat:** ~450 audiobestanden
+**Afhankelijkheden:** A4 (vocabulaireknopen moeten bestaan)
+**Status:** todo
+
+| Story | Titel | Geschat | Status |
+|-------|-------|---------|--------|
+| B1-01 | TTS-evaluatie Latijn — Poeta ex Machina en alternatieven | — | todo |
+| B1-02 | TTS-evaluatie Grieks — Erasmiaans en alternatieven | — | todo |
+| B1-03 | TTS-pipeline bouwen — audio-generatiescript | — | todo |
+| B1-04 | Audio genereren — Latijn V-knopen F01-F03 | ~300 bestanden | todo |
+| B1-05 | Audio genereren — Grieks V-knopen F01-F02 | ~150 bestanden | todo |
+
+---
+
+## Epic B2: Audio-oefentypen
+
+**Doel:** Nieuwe oefentypen die audio gebruiken: luister-en-herken, luister-en-schrijf. Frontend audioplayer.
+**Geschat:** ~400 items + frontend component
+**Afhankelijkheden:** B1 (audio moet bestaan)
+**Status:** todo
+
+| Story | Titel | Geschat | Status |
+|-------|-------|---------|--------|
+| B2-01 | ItemType uitbreiden — luister-oefentypen | — | todo |
+| B2-02 | Audio player component — frontend | — | todo |
+| B2-03 | Luister-en-herken oefeningen genereren | ~200 items | todo |
+| B2-04 | Luister-en-schrijf oefeningen genereren | ~200 items | todo |
+
+---
+
+## Epic B3: STT-integratie
+
+**Doel:** Spraakherkenning voor mondelinge oefeningen en examensimulatie. AVG-conforme verwerking.
+**Geschat:** STT-pipeline + mondelinge oefentypen
+**Afhankelijkheden:** B1 (referentie-audio), fase 5
+**Status:** todo
+
+| Story | Titel | Geschat | Status |
+|-------|-------|---------|--------|
+| B3-01 | STT-evaluatie — Whisper vs. Voxtral | — | todo |
+| B3-02 | STT-pipeline bouwen — transcriptie-module | — | todo |
+| B3-03 | Mondelinge oefentypen — spreek-na en beantwoord mondeling | — | todo |
+| B3-04 | Privacy-implementatie — spraakdata AVG-conform | — | todo |
+
+---
+
+## Epic B4: Pronunciation assessment (stretch goal)
+
+**Doel:** Foneem-niveau uitspraakbeoordeling met MFA. Per-foneem feedback.
+**Geschat:** Scoring model + feedback-integratie
+**Afhankelijkheden:** B3 (STT moet werken)
+**Status:** todo
+
+| Story | Titel | Geschat | Status |
+|-------|-------|---------|--------|
+| B4-01 | Montreal Forced Aligner evaluatie en integratie | — | todo |
+| B4-02 | Pronunciation scoring model | — | todo |
+| B4-03 | Pronunciation feedback integratie in oefentypen | — | todo |
