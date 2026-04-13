@@ -34,9 +34,9 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 | A1-07 | Praesens indicativus actief — 4 conjugaties + esse | 5 | done |
 | A1-08 | Imperfectum indicativus actief | 4 | done |
 | A1-09 | Perfectum indicativus actief — inclusief stamtijdentypen | 12 | done |
-| A1-10 | Plusquamperfectum indicativus actief | ~5 | todo |
-| A1-11 | Imperativus + infinitivus praesens actief | ~6 | todo |
-| A1-12 | Pronomina — persoonlijk, bezittelijk, aanwijzend begin | ~12 | todo |
+| A1-10 | Plusquamperfectum indicativus actief | 5 | done |
+| A1-11 | Imperativus + infinitivus praesens actief | 5 | done |
+| A1-12 | Pronomina — persoonlijk, bezittelijk, aanwijzend begin | 11 | done |
 | A1-13 | Voorzetsels met accusativus en ablativus | ~8 | todo |
 | A1-14 | Basissyntaxis — woordvolgorde, congruentie, ontkenning, vraagzinnen | ~12 | todo |
 | A1-15 | Review en prerequisite-edge validatie voor heel epic A1 | — | todo |
