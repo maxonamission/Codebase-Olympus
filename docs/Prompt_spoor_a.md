@@ -152,16 +152,101 @@ Cross-linguïstische verbindingen, type `transfer`:
 5. **A5** (cultuur) — onafhankelijk van A1-A4 maar edges lopen ernaar
 6. **A6** (transfer-edges) — heeft A1+A2+A3+A4+A5 nodig
 
+### Kwaliteitseisen voor knopen
+
+De volgende eisen gelden voor alle knopen in spoor A. Ze zijn het resultaat van een vergelijking tussen twee onafhankelijke sessies die dezelfde stories uitvoerden — de ene produceerde betere beschrijvingen, de andere een betere grafstructuur. Deze eisen combineren het beste van beide.
+
+#### 1. Beschrijvingen: formaat en precisie
+
+Elke `beschrijving` volgt een vast formaat dat disambigueert en linguïstisch precies is:
+
+**Grammatica-knopen (type G, individuele vormen/letters):**
+```
+"De letter èta: Η (majuskel), η (minuskel). Klank: lang /ɛː/. Valse vriend: majuskel lijkt op Latijns H maar is een klinker."
+```
+
+Het patroon is: **Wat** (naam + vormen) → **Klank** (IPA-notatie) → **Disambiguatie** (onderscheid t.o.v. verwante vormen of Latijns equivalent).
+
+**Regels:**
+- Gebruik altijd **IPA-notatie** voor klanken: `/a/`, `/tʰ/`, `/pʰ/`, `/kʰ/`, `/ɛː/`, `/ɔː/`, `/ŋ/` etc.
+- Vermeld bij Griekse letters altijd majuskel én minuskel als aparte vormen.
+- Geef bij valse vrienden (Grieks/Latijn-verwarring) expliciet aan wat het verschil is.
+- Bij Erasmiaanse uitspraak: vermeld dat geaspireerden (θ, φ, χ) met hoorbare aspiratie worden uitgesproken, niet als fricatieven.
+- Bij accenten: geef een Grieks woordvoorbeeld (bv. λόγος, τοῦ, δῶρον).
+- Max 2 zinnen. Geen opsommingen van 3+ items in de beschrijving — dat hoort in een groepsknoop.
+
+**Vocabulaire-knopen (type V):**
+```
+"Het werkwoord εἰμί (zijn): onregelmatig, alle vormen suppletief. Frequentieband F01."
+```
+
+**Cultuur-knopen (type C):**
+```
+"Zeus/Jupiter: oppergod, heerser over hemel en bliksem. Verschijnt in vrijwel alle mythologische verhalen."
+```
+
+#### 2. ID-naamgeving: consistente afkortingen
+
+- Segmenten max **5-6 tekens** per stuk (niet het schema-maximum van 8). Dit houdt IDs leesbaar.
+- Gebruik **consequent dezelfde afkortingsstrategie**: EPSIL (niet EPSLN), LAMBD (niet LAMBDA), OMIKR (niet OMIKRN), UPSIL (niet UPSLN).
+- Segmentnamen in het **Nederlands of Latijn**, consistent met bestaande patronen: MORF, SYNT, FONL, KOMBI, DIAK, ALFA. Niet: COMB, PHON, ALPHA.
+- Raadpleeg altijd `data/graph/` om bestaande naamconventies te volgen.
+
+#### 3. Didactische groepering
+
+Waar een story >10 individuele knopen bevat op hetzelfde niveau, maak **groeperingsknopen** die de leerling door de stof leiden:
+
+```
+INTRO → GRP1 → GRP2 → GRP3 → individuele knopen per groep
+```
+
+Groepeer op didactisch relevante criteria:
+- Alfabetletters: visuele gelijkenis met Latijn (identiek / afwijkende vorm / valse vrienden / uniek)
+- Naamvallen: op functie (kern / bijwoordelijk / bezit)
+- Werkwoordstijden: op morphologisch kenmerk (stam / kenletter / uitgang)
+
+Voordeel: de DAG blijft beheersbaar (4 kinderen i.p.v. 24 vanuit INTRO) en het leerpad is expliciet.
+
+#### 4. Edge-gebruik: prerequisite vs. enrichment
+
+- **prerequisite**: de target-knoop is niet leerbaar zonder de source. Gebruik voor de hoofdstructuur van het leerpad.
+- **enrichment**: de source verrijkt het begrip van de target, maar is niet strikt nodig. Gebruik voor:
+  - Cross-section verbindingen (bv. diakritiek-knopen → leesvaardigheid)
+  - Verwante concepten die elkaars begrip versterken (bv. acutus → gravis, gamma → nasaal-gamma)
+  - Verbindingen tussen subsecties (bv. iota subscriptum → oneigenlijke diftongen)
+
+**Enrichment-edges die vaak vergeten worden:**
+- Diakritiek → leesvaardigheid (je moet spiritus en accenten kennen om te kunnen lezen)
+- Individuele letters → lettercombinaties die ze bevatten (gamma → nasaal-gamma)
+- Accenttypen onderling (acutus → gravis, want gravis vervangt acutus op de ultima)
+
+#### 5. Leesvaardigheid als integratiepunt
+
+Elke subgraph moet uitmonden in een **toetsbare integratie-knoop** (bloom_niveau: `toepassing`). Voorbeelden:
+- Alfabet: `KOMBI-LEESV` — Griekse woorden hardop lezen
+- Declinatie: een knoop die alle naamvallen combineert in een herkenningstaak
+- Werkwoord: een knoop die persoonsvorm-herkenning over tijden heen toetst
+
+Deze integratie-knoop krijgt prerequisite-edges vanuit alle relevante deelknopen.
+
+#### 6. Taalgebruik
+
+- `beschrijving`: Nederlands, met Griekse/Latijnse voorbeelden in origineel schrift
+- `titel_nl`: Nederlands, mag Grieks/Latijns schrift bevatten (bv. "Α α — alfa")
+- Segmentnamen in IDs: Latijns/Nederlands (MORF, FONL, KOMBI), niet Engels (COMB, PHON)
+- Gebruik "polytoon" (niet "polytonic"), "diftong" (niet "diphthong"), "nasaal" (niet "nasal") in beschrijvingen
+
 ### Werkwijze per story
 
 1. Lees de relevante sectie uit de CvTE-minimumlijst (syllabi in docs/)
-2. Cross-refereer met de klas 1-afbakening in RESEARCH_LESSTOF_KLAS1.md
-3. Genereer de knopen als JSON conform het GraphData-schema
-4. Voeg prerequisite-edges toe
-5. Voeg de nieuwe knopen toe aan het bestaande JSON-bestand of maak een nieuw bestand per epic
-6. Run `python scripts/validate_graph.py` — moet groen zijn
-7. Verplaats de story van `todo/` naar `done/`
-8. Commit: `feat(graph): [story-id] — [korte beschrijving]`
+2. Cross-refereer met de klas 1-afbakening in `docs/A_Lesstof_Latijn_Grieks.md`
+3. Lees **bestaande knopen** in `data/graph/` om naamconventies, beschrijvingsstijl en edge-patronen te volgen
+4. Genereer de knopen als JSON conform het GraphData-schema, met de kwaliteitseisen hierboven
+5. Voeg prerequisite-edges toe voor het leerpad, plus enrichment-edges voor cross-section verbindingen
+6. Voeg de nieuwe knopen toe aan het bestaande JSON-bestand of maak een nieuw bestand per epic
+7. Run `python scripts/validate_graph.py data/graph/` — moet groen zijn (zowel individueel bestand als hele directory)
+8. Verplaats de story van `todo/` naar `done/`
+9. Commit: `feat(graph): [story-id] — [korte beschrijving]`
 
 ### Begin nu met:
 1. De mappenstructuur aanmaken
