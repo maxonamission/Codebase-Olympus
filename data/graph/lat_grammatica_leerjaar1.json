@@ -63,7 +63,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-OBJDIR-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-OBJDIR"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "In welke naamval staat het lijdend voorwerp?",
+          "antwoord": "accusativus",
+          "feedback": "Het obiectum directum (lijdend voorwerp) staat in de accusativus: puellam videt.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-OBJDIR-002",
+          "knoop_ids": [
+            "LAT-G-SYNT-OBJDIR"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Welk zinsdeel is \"librum\" in: \"Puer librum legit\"?",
+          "antwoord": "lijdend voorwerp (accusativus)",
+          "feedback": "Librum = acc. sg. van liber: het boek is het lijdend voorwerp van legit (leest).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-OBJIND",
@@ -76,7 +107,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-OBJIND-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-OBJIND"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "In welke naamval staat het meewerkend voorwerp?",
+          "antwoord": "dativus",
+          "feedback": "Het obiectum indirectum (meewerkend voorwerp) staat in de dativus: puellae dat.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-OBJIND-002",
+          "knoop_ids": [
+            "LAT-G-SYNT-OBJIND"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Welk zinsdeel is \"puellae\" in: \"Magister puellae librum dat\"?",
+          "antwoord": "meewerkend voorwerp (dativus)",
+          "feedback": "Puellae = dat. sg.: aan het meisje. Magister geeft het boek (librum) aan het meisje (puellae).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-VOC-D1",
@@ -3643,7 +3705,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-INTRO-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welke twee naamvallen kunnen na een voorzetsel staan?",
+          "antwoord": "accusativus en ablativus",
+          "feedback": "Latijnse voorzetsels regeren de accusativus of de ablativus. Sommige (in) kunnen beide.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-INTRO-002",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Hoe weet je welke naamval bij een voorzetsel hoort?",
+          "antwoord": "je moet het per voorzetsel leren; het woordenboek vermeldt het",
+          "feedback": "Elk voorzetsel heeft een vaste naamval. Sommige (in, sub) wisselen op basis van betekenis.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-PREP-IN",
@@ -3655,7 +3748,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-IN-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-IN"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wanneer gebruikt \"in\" de accusativus en wanneer de ablativus?",
+          "antwoord": "accusativus = richting (waarheen), ablativus = plaats (waar)",
+          "feedback": "In + acc. = richting: in urbem (de stad in). In + abl. = plaats: in urbe (in de stad).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-IN-002",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-IN"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Welke naamval na \"in\" in: \"In horto sedet\"?",
+          "antwoord": "ablativus (hij zit in de tuin — plaats)",
+          "feedback": "Sedet = zitten (geen beweging). In + abl. = plaats. In horto = in de tuin.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-PREP-RICHT",
@@ -3667,7 +3791,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-RICHT-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-RICHT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke voorzetsels drukken richting uit met accusativus?",
+          "antwoord": "ad (naar/bij), in (naar...in), ante (vóór), post (achter)",
+          "feedback": "Richtingsvoorzetsels met acc.: ad (naar), in+acc (naar...in), ante (vóór), post (achter).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-RICHT-002",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-RICHT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vertaal: \"naar het forum\".",
+          "antwoord": "ad forum",
+          "feedback": "Ad + accusativus: ad forum (richting).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-PREP-TIJD",
@@ -3679,7 +3834,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-TIJD-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-TIJD"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welke voorzetsels drukken tijd uit?",
+          "antwoord": "ante (vóór), post (na) — beide met accusativus",
+          "feedback": "Tijdsvoorzetsels: ante bellum (vóór de oorlog), post cenam (na het diner). Beide + acc.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-TIJD-002",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-TIJD"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vertaal: \"na de oorlog\".",
+          "antwoord": "post bellum",
+          "feedback": "Post + accusativus: post bellum (na de oorlog).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-PREP-HERK",
@@ -3691,7 +3877,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-HERK-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-HERK"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke voorzetsels drukken herkomst uit met ablativus?",
+          "antwoord": "e/ex (uit), ab/a (van...af), de (van...af/over)",
+          "feedback": "Herkomstvoorzetsels met abl.: ex urbe (uit de stad), ab amico (van een vriend), de monte (van de berg).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-HERK-002",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-HERK"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vertaal: \"uit de stad\".",
+          "antwoord": "ex urbe (of e urbe)",
+          "feedback": "Ex/e + ablativus: ex urbe (uit de stad).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-PREP-OVERIG",
@@ -3703,7 +3920,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-OVERIG-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-OVERIG"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Welke naamval staat na \"cum\" en \"sine\"?",
+          "antwoord": "ablativus",
+          "feedback": "Cum (met) en sine (zonder) staan altijd met de ablativus: cum amico, sine pecunia.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-OVERIG-002",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-OVERIG"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vertaal: \"zonder geld\".",
+          "antwoord": "sine pecunia",
+          "feedback": "Sine + ablativus: sine pecunia (zonder geld).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-GEZEGDE",
@@ -3729,7 +3977,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-NWG-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-NWG"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wat is een naamwoordelijk gezegde?",
+          "antwoord": "koppelwerkwoord (esse) + naamwoordelijk deel in de nominativus",
+          "feedback": "Bij esse staat het naamwoordelijk deel in dezelfde naamval als het onderwerp: nominativus.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-NWG-002",
+          "knoop_ids": [
+            "LAT-G-SYNT-NWG"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Welke naamval is \"poeta\" in: \"Marcus poeta est\"?",
+          "antwoord": "nominativus (naamwoordelijk deel van het gezegde)",
+          "feedback": "Na esse staat het naamwoordelijk deel in de nominativus: Marcus = nom., poeta = nom.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-BIJV-BEP",
@@ -3741,7 +4020,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-BIJV-BEP-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-BIJV-BEP"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "In welke naamval staat een bijvoeglijke bepaling meestal?",
+          "antwoord": "genitivus",
+          "feedback": "Een bijvoeglijke bepaling geeft nadere info bij een naamwoord, vaak met genitivus: liber puellae (het boek van het meisje).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-BIJV-BEP-002",
+          "knoop_ids": [
+            "LAT-G-SYNT-BIJV-BEP"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Welk zinsdeel is \"puellae\" in: \"Liber puellae novus est\"?",
+          "antwoord": "bijvoeglijke bepaling (genitivus van bezit)",
+          "feedback": "Puellae = gen. sg.: van het meisje. Het is een bijvoeglijke bepaling bij liber.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-BIJW-BEP",
@@ -3765,7 +4075,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-BEPVZ-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-BEPVZ"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wat is een voorzetselgroep als zinsdeel?",
+          "antwoord": "een bijwoordelijke bepaling bestaande uit voorzetsel + naamwoord",
+          "feedback": "Een voorzetselgroep (in horto, ad urbem) fungeert als bijwoordelijke bepaling van plaats, richting of tijd.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-BEPVZ-002",
+          "knoop_ids": [
+            "LAT-G-SYNT-BEPVZ"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Welk zinsdeel is \"in horto\" in: \"Puella in horto ambulat\"?",
+          "antwoord": "bijwoordelijke bepaling van plaats",
+          "feedback": "In horto = in + abl. = plaatsbepaling: het meisje loopt in de tuin.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-HOOFDBIJ",
@@ -3790,7 +4131,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-ACI-INTRO-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-ACI-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Waar staat AcI voor?",
+          "antwoord": "Accusativus cum Infinitivo",
+          "feedback": "De AcI is een constructie met een accusativus (onderwerp van de AcI) + infinitivus (gezegde van de AcI).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-ACI-INTRO-002",
+          "knoop_ids": [
+            "LAT-G-SYNT-ACI-INTRO"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 40,
+          "stimulus": "Benoem de AcI in: \"Pater puellam cantare audit.\"",
+          "antwoord": "puellam (acc.) cantare (inf.) = het meisje zingt",
+          "feedback": "Pater hoort (audit) dat het meisje (puellam) zingt (cantare). Puellam cantare is de AcI.",
+          "bron": "handmatig"
+        }
+      ]
     }
   ],
   "edges": [
