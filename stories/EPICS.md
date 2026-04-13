@@ -314,21 +314,21 @@ Zie `docs/Prompt_spoor_c.md` voor de volledige prompt.
 **Doel:** Oefeningen genereren voor alle LAT-G knopen. Mix van herkenning, productie, analyse, contextueel.
 **Geschat:** ~330 items
 **Afhankelijkheden:** A1 (per story: corresponderende A1-story moet done zijn)
-**Status:** todo
+**Status:** done
 
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
-| C1-01 | Items voor conceptknopen (INTRO) | ~20 items | todo |
-| C1-02 | Items voor 1e declinatie | ~30 items | todo |
-| C1-03 | Items voor 2e declinatie | ~35 items | todo |
-| C1-04 | Items voor 3e declinatie | ~40 items | todo |
-| C1-05 | Items voor adjectieven | ~25 items | todo |
-| C1-06 | Items voor presens indicativus | ~50 items | todo |
-| C1-07 | Items voor imperfectum + perfectum | ~40 items | todo |
-| C1-08 | Items voor plqpf + imperativus + infinitivus | ~25 items | todo |
-| C1-09 | Items voor pronomina | ~30 items | todo |
-| C1-10 | Items voor voorzetsels + syntaxis | ~35 items | todo |
-| C1-11 | Validatie: dekking, IRT-parameters, oefentype-mix | — | todo |
+| C1-01 | Items voor conceptknopen (INTRO) | 24 items | done |
+| C1-02 | Items voor 1e declinatie | 30 items | done |
+| C1-03 | Items voor 2e declinatie | 39 items | done |
+| C1-04 | Items voor 3e declinatie | 37 items | done |
+| C1-05 | Items voor adjectieven | 25 items | done |
+| C1-06 | Items voor presens indicativus | 38 items | done |
+| C1-07 | Items voor imperfectum + perfectum | 39 items | done |
+| C1-08 | Items voor plqpf + imperativus + infinitivus | 22 items | done |
+| C1-09 | Items voor pronomina | 24 items | done |
+| C1-10 | Items voor voorzetsels + syntaxis | 32 items | done |
+| C1-11 | Validatie: dekking, IRT-parameters, oefentype-mix | — | done |
 
 ---
 
