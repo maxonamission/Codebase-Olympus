@@ -12,7 +12,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-EIMI-001",
+          "knoop_ids": [
+            "GRC-V-F01-EIMI"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.26,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-EIMI.wav",
+            "options": [
+              "wijs",
+              "niet",
+              "zijn",
+              "koning"
+            ]
+          },
+          "antwoord": "zijn",
+          "feedback": "εἰμί = zijn.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-EIMI.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-EIMI.wav"
     },
     {
@@ -27,7 +53,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-KAI-001",
+          "knoop_ids": [
+            "GRC-V-F01-KAI"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.78,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-KAI.wav",
+            "options": [
+              "graan, voedsel",
+              "mens",
+              "marktplein",
+              "en, ook"
+            ]
+          },
+          "antwoord": "en, ook",
+          "feedback": "καί = en, ook.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-KAI.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-KAI.wav"
     },
     {
@@ -42,7 +94,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-ARTIC-001",
+          "knoop_ids": [
+            "GRC-V-F01-ARTIC"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.78,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-ARTIC.wav",
+            "options": [
+              "de, het (lidwoord)",
+              "bloed",
+              "niet",
+              "dierbaar, bevriend"
+            ]
+          },
+          "antwoord": "de, het (lidwoord)",
+          "feedback": "ὁ = de, het (lidwoord).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ARTIC.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-ARTIC.wav"
     },
     {
@@ -57,7 +135,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-AUTOS-001",
+          "knoop_ids": [
+            "GRC-V-F01-AUTOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.84,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-AUTOS.wav",
+            "options": [
+              "zelf",
+              "en, ook",
+              "vreselijk, geweldig",
+              "naar, in"
+            ]
+          },
+          "antwoord": "zelf",
+          "feedback": "αὐτός = zelf.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-AUTOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-AUTOS.wav"
     },
     {
@@ -72,7 +176,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-DE-001",
+          "knoop_ids": [
+            "GRC-V-F01-DE"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.15,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-DE.wav",
+            "options": [
+              "man",
+              "willen",
+              "maar, en",
+              "stad, staat"
+            ]
+          },
+          "antwoord": "maar, en",
+          "feedback": "δέ = maar, en.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-DE.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-DE.wav"
     },
     {
@@ -87,7 +217,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-HOUTOS-001",
+          "knoop_ids": [
+            "GRC-V-F01-HOUTOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.45,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-HOUTOS.wav",
+            "options": [
+              "worden, ontstaan",
+              "naam",
+              "slecht, lelijk",
+              "deze, dit"
+            ]
+          },
+          "antwoord": "deze, dit",
+          "feedback": "οὗτος = deze, dit.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-HOUTOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-HOUTOS.wav"
     },
     {
@@ -102,7 +258,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-EGO-001",
+          "knoop_ids": [
+            "GRC-V-F01-EGO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.23,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-EGO.wav",
+            "options": [
+              "menen, schijnen",
+              "waarheid",
+              "leiden, voeren",
+              "ik"
+            ]
+          },
+          "antwoord": "ik",
+          "feedback": "ἐγώ = ik.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-EGO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-EGO.wav"
     },
     {
@@ -117,7 +299,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-OU-001",
+          "knoop_ids": [
+            "GRC-V-F01-OU"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.36,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-OU.wav",
+            "options": [
+              "niet",
+              "veldheer, strateeg",
+              "die, dat (ginds)",
+              "aarde, land"
+            ]
+          },
+          "antwoord": "niet",
+          "feedback": "οὐ = niet.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-OU.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-OU.wav"
     },
     {
@@ -132,7 +340,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-TIS-001",
+          "knoop_ids": [
+            "GRC-V-F01-TIS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-TIS.wav",
+            "options": [
+              "volk",
+              "leger",
+              "iemand, een zeker",
+              "met, samen met"
+            ]
+          },
+          "antwoord": "iemand, een zeker",
+          "feedback": "τις = iemand, een zeker.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-TIS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-TIS.wav"
     },
     {
@@ -147,7 +381,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-EN-001",
+          "knoop_ids": [
+            "GRC-V-F01-EN"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.62,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-EN.wav",
+            "options": [
+              "gaan, stappen",
+              "niet (bij verbod/wens)",
+              "in",
+              "op, naar, bij"
+            ]
+          },
+          "antwoord": "in",
+          "feedback": "ἐν = in.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-EN.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-EN.wav"
     },
     {
@@ -162,7 +422,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-ECHO-001",
+          "knoop_ids": [
+            "GRC-V-F01-ECHO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.19,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-ECHO.wav",
+            "options": [
+              "oog",
+              "eiland",
+              "keren, wenden",
+              "hebben, houden"
+            ]
+          },
+          "antwoord": "hebben, houden",
+          "feedback": "ἔχω = hebben, houden.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ECHO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-ECHO.wav"
     },
     {
@@ -177,7 +463,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-LEGO-001",
+          "knoop_ids": [
+            "GRC-V-F01-LEGO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.79,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-LEGO.wav",
+            "options": [
+              "zeggen",
+              "uit",
+              "jong, nieuw",
+              "wapen"
+            ]
+          },
+          "antwoord": "zeggen",
+          "feedback": "λέγω = zeggen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-LEGO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-LEGO.wav"
     },
     {
@@ -192,7 +504,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-GIGNM-001",
+          "knoop_ids": [
+            "GRC-V-F01-GIGNM"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.75,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-GIGNM.wav",
+            "options": [
+              "geschenk",
+              "worden, ontstaan",
+              "naam",
+              "rechtvaardig"
+            ]
+          },
+          "antwoord": "worden, ontstaan",
+          "feedback": "γίγνομαι = worden, ontstaan.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-GIGNM.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-GIGNM.wav"
     },
     {
@@ -207,7 +545,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-POIEO-001",
+          "knoop_ids": [
+            "GRC-V-F01-POIEO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.64,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-POIEO.wav",
+            "options": [
+              "maken, doen",
+              "bloed",
+              "altijd",
+              "slecht, lelijk"
+            ]
+          },
+          "antwoord": "maken, doen",
+          "feedback": "ποιέω = maken, doen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-POIEO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-POIEO.wav"
     },
     {
@@ -222,7 +586,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-HOS-001",
+          "knoop_ids": [
+            "GRC-V-F01-HOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.85,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-HOS.wav",
+            "options": [
+              "met",
+              "sterk",
+              "vreemdeling, gastvriend",
+              "dat, zoals, opdat"
+            ]
+          },
+          "antwoord": "dat, zoals, opdat",
+          "feedback": "ὡς = dat, zoals, opdat.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-HOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-HOS.wav"
     },
     {
@@ -237,7 +627,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-ALLA-001",
+          "knoop_ids": [
+            "GRC-V-F01-ALLA"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.47,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-ALLA.wav",
+            "options": [
+              "maar",
+              "marktplein",
+              "naar, in",
+              "uit"
+            ]
+          },
+          "antwoord": "maar",
+          "feedback": "ἀλλά = maar.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ALLA.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-ALLA.wav"
     },
     {
@@ -252,7 +668,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-GAR-001",
+          "knoop_ids": [
+            "GRC-V-F01-GAR"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.89,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-GAR.wav",
+            "options": [
+              "want",
+              "hoofd",
+              "groot",
+              "de, het (lidwoord)"
+            ]
+          },
+          "antwoord": "want",
+          "feedback": "γάρ = want.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-GAR.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-GAR.wav"
     },
     {
@@ -267,7 +709,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-EK-001",
+          "knoop_ids": [
+            "GRC-V-F01-EK"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.03,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-EK.wav",
+            "options": [
+              "lichaam",
+              "vrede",
+              "naar, in",
+              "uit"
+            ]
+          },
+          "antwoord": "uit",
+          "feedback": "ἐκ = uit.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-EK.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-EK.wav"
     },
     {
@@ -282,7 +750,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-PROS-001",
+          "knoop_ids": [
+            "GRC-V-F01-PROS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.85,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-PROS.wav",
+            "options": [
+              "komen, gaan",
+              "naar, bij, tegenover",
+              "vader",
+              "dierbaar, bevriend"
+            ]
+          },
+          "antwoord": "naar, bij, tegenover",
+          "feedback": "πρός = naar, bij, tegenover.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PROS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-PROS.wav"
     },
     {
@@ -297,7 +791,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-EPI-001",
+          "knoop_ids": [
+            "GRC-V-F01-EPI"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.51,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-EPI.wav",
+            "options": [
+              "nu",
+              "met, samen met",
+              "wijn",
+              "op, naar, bij"
+            ]
+          },
+          "antwoord": "op, naar, bij",
+          "feedback": "ἐπί = op, naar, bij.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-EPI.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-EPI.wav"
     },
     {
@@ -312,7 +832,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-SU-001",
+          "knoop_ids": [
+            "GRC-V-F01-SU"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.12,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-SU.wav",
+            "options": [
+              "werpen, gooien",
+              "menen, schijnen",
+              "jij",
+              "koning"
+            ]
+          },
+          "antwoord": "jij",
+          "feedback": "σύ = jij.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-SU.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-SU.wav"
     },
     {
@@ -327,7 +873,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-EKEINO-001",
+          "knoop_ids": [
+            "GRC-V-F01-EKEINO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.87,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-EKEINO.wav",
+            "options": [
+              "jij",
+              "zon",
+              "god",
+              "die, dat (ginds)"
+            ]
+          },
+          "antwoord": "die, dat (ginds)",
+          "feedback": "ἐκεῖνος = die, dat (ginds).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-EKEINO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-EKEINO.wav"
     },
     {
@@ -342,7 +914,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "religie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-THEOS-001",
+          "knoop_ids": [
+            "GRC-V-F01-THEOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.04,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-THEOS.wav",
+            "options": [
+              "god",
+              "soldaat",
+              "leren kennen, weten",
+              "brood"
+            ]
+          },
+          "antwoord": "god",
+          "feedback": "θεός = god.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-THEOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-THEOS.wav"
     },
     {
@@ -357,7 +955,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-ANTHRO-001",
+          "knoop_ids": [
+            "GRC-V-F01-ANTHRO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.56,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-ANTHRO.wav",
+            "options": [
+              "mens",
+              "wijn",
+              "plaatsen, leggen",
+              "bevelen"
+            ]
+          },
+          "antwoord": "mens",
+          "feedback": "ἄνθρωπος = mens.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ANTHRO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-ANTHRO.wav"
     },
     {
@@ -372,7 +996,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-POLIS-001",
+          "knoop_ids": [
+            "GRC-V-F01-POLIS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.66,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-POLIS.wav",
+            "options": [
+              "veel",
+              "water",
+              "stad, staat",
+              "dapper"
+            ]
+          },
+          "antwoord": "stad, staat",
+          "feedback": "πόλις = stad, staat.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-POLIS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-POLIS.wav"
     },
     {
@@ -387,7 +1037,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-LOGOS-001",
+          "knoop_ids": [
+            "GRC-V-F01-LOGOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.77,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-LOGOS.wav",
+            "options": [
+              "hoofd",
+              "paard",
+              "eiland",
+              "woord, rede, verhaal"
+            ]
+          },
+          "antwoord": "woord, rede, verhaal",
+          "feedback": "λόγος = woord, rede, verhaal.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-LOGOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-LOGOS.wav"
     },
     {
@@ -402,7 +1078,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-GE-001",
+          "knoop_ids": [
+            "GRC-V-F01-GE"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.79,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-GE.wav",
+            "options": [
+              "aarde, land",
+              "rennen",
+              "naar, bij, tegenover",
+              "iemand, een zeker"
+            ]
+          },
+          "antwoord": "aarde, land",
+          "feedback": "γῆ = aarde, land.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-GE.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-GE.wav"
     },
     {
@@ -417,7 +1119,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-ANER-001",
+          "knoop_ids": [
+            "GRC-V-F01-ANER"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.19,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-ANER.wav",
+            "options": [
+              "volk, stam",
+              "naar beneden, volgens",
+              "man",
+              "waarheid"
+            ]
+          },
+          "antwoord": "man",
+          "feedback": "ἀνήρ = man.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ANER.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-ANER.wav"
     },
     {
@@ -432,7 +1160,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-PATER-001",
+          "knoop_ids": [
+            "GRC-V-F01-PATER"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.53,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-PATER.wav",
+            "options": [
+              "vader",
+              "deugd, voortreffelijkheid",
+              "schrijven",
+              "stad, staat"
+            ]
+          },
+          "antwoord": "vader",
+          "feedback": "πατήρ = vader.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PATER.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-PATER.wav"
     },
     {
@@ -447,7 +1201,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-BASILE-001",
+          "knoop_ids": [
+            "GRC-V-F01-BASILE"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-BASILE.wav",
+            "options": [
+              "koning",
+              "maken, doen",
+              "woord, rede, verhaal",
+              "maar"
+            ]
+          },
+          "antwoord": "koning",
+          "feedback": "βασιλεύς = koning.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-BASILE.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-BASILE.wav"
     },
     {
@@ -462,7 +1242,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-MEGAS-001",
+          "knoop_ids": [
+            "GRC-V-F01-MEGAS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.86,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-MEGAS.wav",
+            "options": [
+              "groot",
+              "leiden, voeren",
+              "nacht",
+              "man"
+            ]
+          },
+          "antwoord": "groot",
+          "feedback": "μέγας = groot.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-MEGAS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-MEGAS.wav"
     },
     {
@@ -477,7 +1283,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-POLUS-001",
+          "knoop_ids": [
+            "GRC-V-F01-POLUS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.19,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-POLUS.wav",
+            "options": [
+              "vreselijk, geweldig",
+              "vrouw",
+              "veel",
+              "zien"
+            ]
+          },
+          "antwoord": "veel",
+          "feedback": "πολύς = veel.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-POLUS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-POLUS.wav"
     },
     {
@@ -492,7 +1324,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-AGATHO-001",
+          "knoop_ids": [
+            "GRC-V-F01-AGATHO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.83,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-AGATHO.wav",
+            "options": [
+              "brood",
+              "woord, rede, verhaal",
+              "worden, ontstaan",
+              "goed, dapper"
+            ]
+          },
+          "antwoord": "goed, dapper",
+          "feedback": "ἀγαθός = goed, dapper.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-AGATHO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-AGATHO.wav"
     },
     {
@@ -507,7 +1365,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-PAS-001",
+          "knoop_ids": [
+            "GRC-V-F01-PAS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.62,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-PAS.wav",
+            "options": [
+              "zon",
+              "rechter",
+              "alle, elk, geheel",
+              "begin, heerschappij"
+            ]
+          },
+          "antwoord": "alle, elk, geheel",
+          "feedback": "πᾶς = alle, elk, geheel.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PAS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-PAS.wav"
     },
     {
@@ -522,7 +1406,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-KATA-001",
+          "knoop_ids": [
+            "GRC-V-F01-KATA"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.85,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-KATA.wav",
+            "options": [
+              "naar beneden, volgens",
+              "lichaam",
+              "leven",
+              "slecht, lelijk"
+            ]
+          },
+          "antwoord": "naar beneden, volgens",
+          "feedback": "κατά = naar beneden, volgens.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-KATA.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-KATA.wav"
     },
     {
@@ -537,7 +1447,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-PERI-001",
+          "knoop_ids": [
+            "GRC-V-F01-PERI"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.94,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-PERI.wav",
+            "options": [
+              "dat, zoals, opdat",
+              "vinden",
+              "recht, gerechtigheid",
+              "om, over, rondom"
+            ]
+          },
+          "antwoord": "om, over, rondom",
+          "feedback": "περί = om, over, rondom.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PERI.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-PERI.wav"
     },
     {
@@ -552,7 +1488,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-META-001",
+          "knoop_ids": [
+            "GRC-V-F01-META"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.15,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-META.wav",
+            "options": [
+              "nu",
+              "waardig, waard",
+              "met",
+              "burger"
+            ]
+          },
+          "antwoord": "met",
+          "feedback": "μετά = met.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-META.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-META.wav"
     },
     {
@@ -567,7 +1529,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-DIA-001",
+          "knoop_ids": [
+            "GRC-V-F01-DIA"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.42,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-DIA.wav",
+            "options": [
+              "uit",
+              "tempel, heiligdom",
+              "zee",
+              "door, vanwege"
+            ]
+          },
+          "antwoord": "door, vanwege",
+          "feedback": "διά = door, vanwege.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-DIA.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-DIA.wav"
     },
     {
@@ -582,7 +1570,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-PARA-001",
+          "knoop_ids": [
+            "GRC-V-F01-PARA"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.33,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-PARA.wav",
+            "options": [
+              "slaaf",
+              "van, bij, langs",
+              "hebben, houden",
+              "jij"
+            ]
+          },
+          "antwoord": "van, bij, langs",
+          "feedback": "παρά = van, bij, langs.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PARA.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-PARA.wav"
     },
     {
@@ -597,7 +1611,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-HUPO-001",
+          "knoop_ids": [
+            "GRC-V-F01-HUPO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.54,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-HUPO.wav",
+            "options": [
+              "moeder",
+              "verlaten, achterlaten",
+              "onder, door",
+              "slecht, lelijk"
+            ]
+          },
+          "antwoord": "onder, door",
+          "feedback": "ὑπό = onder, door.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-HUPO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-HUPO.wav"
     },
     {
@@ -612,7 +1652,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-APO-001",
+          "knoop_ids": [
+            "GRC-V-F01-APO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.49,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-APO.wav",
+            "options": [
+              "naar, bij, tegenover",
+              "de, het (lidwoord)",
+              "naam",
+              "van, vanaf"
+            ]
+          },
+          "antwoord": "van, vanaf",
+          "feedback": "ἀπό = van, vanaf.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-APO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-APO.wav"
     },
     {
@@ -627,7 +1693,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-EIS-001",
+          "knoop_ids": [
+            "GRC-V-F01-EIS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.84,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-EIS.wav",
+            "options": [
+              "naar, in",
+              "overwinnen",
+              "uit",
+              "alle, elk, geheel"
+            ]
+          },
+          "antwoord": "naar, in",
+          "feedback": "εἰς = naar, in.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-EIS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-EIS.wav"
     },
     {
@@ -642,7 +1734,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-SUN-001",
+          "knoop_ids": [
+            "GRC-V-F01-SUN"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.07,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-SUN.wav",
+            "options": [
+              "nu",
+              "graan, voedsel",
+              "vluchten",
+              "met, samen met"
+            ]
+          },
+          "antwoord": "met, samen met",
+          "feedback": "σύν = met, samen met.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-SUN.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-SUN.wav"
     },
     {
@@ -657,7 +1775,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-GIGNSK-001",
+          "knoop_ids": [
+            "GRC-V-F01-GIGNSK"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.73,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-GIGNSK.wav",
+            "options": [
+              "aarde, land",
+              "naar beneden, volgens",
+              "slecht, lelijk",
+              "leren kennen, weten"
+            ]
+          },
+          "antwoord": "leren kennen, weten",
+          "feedback": "γιγνώσκω = leren kennen, weten.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-GIGNSK.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-GIGNSK.wav"
     },
     {
@@ -672,7 +1816,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-BAINO-001",
+          "knoop_ids": [
+            "GRC-V-F01-BAINO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.75,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-BAINO.wav",
+            "options": [
+              "gaan, stappen",
+              "ziel, leven",
+              "gevecht, slag",
+              "tonen, aanwijzen"
+            ]
+          },
+          "antwoord": "gaan, stappen",
+          "feedback": "βαίνω = gaan, stappen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-BAINO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-BAINO.wav"
     },
     {
@@ -687,7 +1857,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-PHERO-001",
+          "knoop_ids": [
+            "GRC-V-F01-PHERO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.67,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-PHERO.wav",
+            "options": [
+              "maken, doen",
+              "marktplein",
+              "dragen, brengen",
+              "mens"
+            ]
+          },
+          "antwoord": "dragen, brengen",
+          "feedback": "φέρω = dragen, brengen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PHERO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-PHERO.wav"
     },
     {
@@ -702,7 +1898,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-ERCHOM-001",
+          "knoop_ids": [
+            "GRC-V-F01-ERCHOM"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.44,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-ERCHOM.wav",
+            "options": [
+              "komen, gaan",
+              "alle, elk, geheel",
+              "slecht, lelijk",
+              "naar, in"
+            ]
+          },
+          "antwoord": "komen, gaan",
+          "feedback": "ἔρχομαι = komen, gaan.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ERCHOM.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-ERCHOM.wav"
     },
     {
@@ -717,7 +1939,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-HORAO-001",
+          "knoop_ids": [
+            "GRC-V-F01-HORAO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.57,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-HORAO.wav",
+            "options": [
+              "op, naar, bij",
+              "van, bij, langs",
+              "vader",
+              "zien"
+            ]
+          },
+          "antwoord": "zien",
+          "feedback": "ὁράω = zien.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-HORAO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-HORAO.wav"
     },
     {
@@ -732,7 +1980,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-DIDOMI-001",
+          "knoop_ids": [
+            "GRC-V-F01-DIDOMI"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.32,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-DIDOMI.wav",
+            "options": [
+              "werpen, gooien",
+              "leger",
+              "hebben, houden",
+              "geven"
+            ]
+          },
+          "antwoord": "geven",
+          "feedback": "δίδωμι = geven.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-DIDOMI.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-DIDOMI.wav"
     },
     {
@@ -747,7 +2021,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-GRAPHO-001",
+          "knoop_ids": [
+            "GRC-V-F01-GRAPHO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.07,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-GRAPHO.wav",
+            "options": [
+              "aarde, land",
+              "schrijven",
+              "eren",
+              "bloed"
+            ]
+          },
+          "antwoord": "schrijven",
+          "feedback": "γράφω = schrijven.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-GRAPHO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-GRAPHO.wav"
     },
     {
@@ -762,7 +2062,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-AGO-001",
+          "knoop_ids": [
+            "GRC-V-F01-AGO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.26,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-AGO.wav",
+            "options": [
+              "zee",
+              "naar, in",
+              "leiden, voeren",
+              "dragen, brengen"
+            ]
+          },
+          "antwoord": "leiden, voeren",
+          "feedback": "ἄγω = leiden, voeren.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-AGO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-AGO.wav"
     },
     {
@@ -777,7 +2103,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-PEMPO-001",
+          "knoop_ids": [
+            "GRC-V-F01-PEMPO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.62,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-PEMPO.wav",
+            "options": [
+              "menen, geloven",
+              "nacht",
+              "zenden, sturen",
+              "kind"
+            ]
+          },
+          "antwoord": "zenden, sturen",
+          "feedback": "πέμπω = zenden, sturen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PEMPO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-PEMPO.wav"
     },
     {
@@ -792,7 +2144,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-TITHEM-001",
+          "knoop_ids": [
+            "GRC-V-F01-TITHEM"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.69,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-TITHEM.wav",
+            "options": [
+              "plaatsen, leggen",
+              "schip",
+              "eiland",
+              "in"
+            ]
+          },
+          "antwoord": "plaatsen, leggen",
+          "feedback": "τίθημι = plaatsen, leggen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-TITHEM.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-TITHEM.wav"
     },
     {
@@ -807,7 +2185,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-MACHE-001",
+          "knoop_ids": [
+            "GRC-V-F01-MACHE"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.72,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-MACHE.wav",
+            "options": [
+              "gevecht, slag",
+              "weg, reis",
+              "ik",
+              "paard"
+            ]
+          },
+          "antwoord": "gevecht, slag",
+          "feedback": "μάχη = gevecht, slag.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-MACHE.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-MACHE.wav"
     },
     {
@@ -822,7 +2226,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-PSYCHE-001",
+          "knoop_ids": [
+            "GRC-V-F01-PSYCHE"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.06,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-PSYCHE.wav",
+            "options": [
+              "ziel, leven",
+              "uit",
+              "vreselijk, geweldig",
+              "overwinnen"
+            ]
+          },
+          "antwoord": "ziel, leven",
+          "feedback": "ψυχή = ziel, leven.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PSYCHE.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-PSYCHE.wav"
     },
     {
@@ -837,7 +2267,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-ARCHE-001",
+          "knoop_ids": [
+            "GRC-V-F01-ARCHE"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-ARCHE.wav",
+            "options": [
+              "koning",
+              "dragen, brengen",
+              "begin, heerschappij",
+              "mooi, goed"
+            ]
+          },
+          "antwoord": "begin, heerschappij",
+          "feedback": "ἀρχή = begin, heerschappij.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ARCHE.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-ARCHE.wav"
     },
     {
@@ -852,7 +2308,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-DIKE-001",
+          "knoop_ids": [
+            "GRC-V-F01-DIKE"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.75,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-DIKE.wav",
+            "options": [
+              "verlaten, achterlaten",
+              "vrede",
+              "liefhebben, houden van",
+              "recht, gerechtigheid"
+            ]
+          },
+          "antwoord": "recht, gerechtigheid",
+          "feedback": "δίκη = recht, gerechtigheid.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-DIKE.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-DIKE.wav"
     },
     {
@@ -867,7 +2349,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-NESOS-001",
+          "knoop_ids": [
+            "GRC-V-F01-NESOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.93,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-NESOS.wav",
+            "options": [
+              "eiland",
+              "zijn",
+              "vervolgens, dan",
+              "vrede"
+            ]
+          },
+          "antwoord": "eiland",
+          "feedback": "νῆσος = eiland.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-NESOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-NESOS.wav"
     },
     {
@@ -882,7 +2390,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-HODOS-001",
+          "knoop_ids": [
+            "GRC-V-F01-HODOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.33,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-HODOS.wav",
+            "options": [
+              "weg, reis",
+              "rennen",
+              "veel",
+              "verlaten, achterlaten"
+            ]
+          },
+          "antwoord": "weg, reis",
+          "feedback": "ὁδός = weg, reis.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-HODOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-HODOS.wav"
     },
     {
@@ -897,7 +2431,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-HIPPOS-001",
+          "knoop_ids": [
+            "GRC-V-F01-HIPPOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.34,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-HIPPOS.wav",
+            "options": [
+              "tempel, heiligdom",
+              "vinden",
+              "paard",
+              "keren, wenden"
+            ]
+          },
+          "antwoord": "paard",
+          "feedback": "ἵππος = paard.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-HIPPOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-HIPPOS.wav"
     },
     {
@@ -912,7 +2472,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-STRTGS-001",
+          "knoop_ids": [
+            "GRC-V-F01-STRTGS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-STRTGS.wav",
+            "options": [
+              "muur, vestingmuur",
+              "veldheer, strateeg",
+              "plaats",
+              "gaan, stappen"
+            ]
+          },
+          "antwoord": "veldheer, strateeg",
+          "feedback": "στρατηγός = veldheer, strateeg.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-STRTGS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-STRTGS.wav"
     },
     {
@@ -927,7 +2513,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-THALAT-001",
+          "knoop_ids": [
+            "GRC-V-F01-THALAT"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.56,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-THALAT.wav",
+            "options": [
+              "zee",
+              "vrijheid",
+              "gevecht, slag",
+              "deugd, voortreffelijkheid"
+            ]
+          },
+          "antwoord": "zee",
+          "feedback": "θάλαττα = zee.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-THALAT.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-THALAT.wav"
     },
     {
@@ -942,7 +2554,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-METER-001",
+          "knoop_ids": [
+            "GRC-V-F01-METER"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.72,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-METER.wav",
+            "options": [
+              "soldaat",
+              "moeder",
+              "sterk",
+              "ziel, leven"
+            ]
+          },
+          "antwoord": "moeder",
+          "feedback": "μήτηρ = moeder.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-METER.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-METER.wav"
     },
     {
@@ -957,7 +2595,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-PAIS-001",
+          "knoop_ids": [
+            "GRC-V-F01-PAIS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.85,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-PAIS.wav",
+            "options": [
+              "menen, geloven",
+              "veldheer, strateeg",
+              "kind, jongen",
+              "mens"
+            ]
+          },
+          "antwoord": "kind, jongen",
+          "feedback": "παῖς = kind, jongen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PAIS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-PAIS.wav"
     },
     {
@@ -972,7 +2636,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "tijd",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-NUX-001",
+          "knoop_ids": [
+            "GRC-V-F01-NUX"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.11,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-NUX.wav",
+            "options": [
+              "soldaat",
+              "moeder",
+              "zeggen",
+              "nacht"
+            ]
+          },
+          "antwoord": "nacht",
+          "feedback": "νύξ = nacht.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-NUX.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-NUX.wav"
     },
     {
@@ -987,7 +2677,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-PHOBOS-001",
+          "knoop_ids": [
+            "GRC-V-F01-PHOBOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.85,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-PHOBOS.wav",
+            "options": [
+              "schrijven",
+              "vrees, angst",
+              "waarheid",
+              "tijd"
+            ]
+          },
+          "antwoord": "vrees, angst",
+          "feedback": "φόβος = vrees, angst.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PHOBOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-PHOBOS.wav"
     },
     {
@@ -1002,7 +2718,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-ERGON-001",
+          "knoop_ids": [
+            "GRC-V-F01-ERGON"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.95,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-ERGON.wav",
+            "options": [
+              "man",
+              "marktplein",
+              "werk, daad",
+              "en, ook"
+            ]
+          },
+          "antwoord": "werk, daad",
+          "feedback": "ἔργον = werk, daad.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ERGON.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-ERGON.wav"
     },
     {
@@ -1017,7 +2759,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-KALOS-001",
+          "knoop_ids": [
+            "GRC-V-F01-KALOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.05,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-KALOS.wav",
+            "options": [
+              "mooi, goed",
+              "veel",
+              "lichaam",
+              "kind, jongen"
+            ]
+          },
+          "antwoord": "mooi, goed",
+          "feedback": "καλός = mooi, goed.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-KALOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-KALOS.wav"
     },
     {
@@ -1032,7 +2800,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-KAKOS-001",
+          "knoop_ids": [
+            "GRC-V-F01-KAKOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.55,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-KAKOS.wav",
+            "options": [
+              "dierbaar, bevriend",
+              "land, streek",
+              "slecht, lelijk",
+              "kunst, vaardigheid"
+            ]
+          },
+          "antwoord": "slecht, lelijk",
+          "feedback": "κακός = slecht, lelijk.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-KAKOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-KAKOS.wav"
     },
     {
@@ -1047,7 +2841,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-NEOS-001",
+          "knoop_ids": [
+            "GRC-V-F01-NEOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.73,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-NEOS.wav",
+            "options": [
+              "kind, jongen",
+              "jong, nieuw",
+              "wijs",
+              "vervolgens, dan"
+            ]
+          },
+          "antwoord": "jong, nieuw",
+          "feedback": "νέος = jong, nieuw.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-NEOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-NEOS.wav"
     },
     {
@@ -1062,7 +2882,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-MIKROS-001",
+          "knoop_ids": [
+            "GRC-V-F01-MIKROS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.11,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-MIKROS.wav",
+            "options": [
+              "klein",
+              "veldheer, strateeg",
+              "op, naar, bij",
+              "dus, dan"
+            ]
+          },
+          "antwoord": "klein",
+          "feedback": "μικρός = klein.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-MIKROS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-MIKROS.wav"
     },
     {
@@ -1077,7 +2923,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-SOPHOS-001",
+          "knoop_ids": [
+            "GRC-V-F01-SOPHOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.29,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-SOPHOS.wav",
+            "options": [
+              "om, over, rondom",
+              "wijs",
+              "van, bij, langs",
+              "jij"
+            ]
+          },
+          "antwoord": "wijs",
+          "feedback": "σοφός = wijs.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-SOPHOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-SOPHOS.wav"
     },
     {
@@ -1092,7 +2964,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-DEINOS-001",
+          "knoop_ids": [
+            "GRC-V-F01-DEINOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.58,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-DEINOS.wav",
+            "options": [
+              "vreselijk, geweldig",
+              "want",
+              "boek",
+              "vriend"
+            ]
+          },
+          "antwoord": "vreselijk, geweldig",
+          "feedback": "δεινός = vreselijk, geweldig.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-DEINOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-DEINOS.wav"
     },
     {
@@ -1107,7 +3005,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-MEN-001",
+          "knoop_ids": [
+            "GRC-V-F01-MEN"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.52,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-MEN.wav",
+            "options": [
+              "leven",
+              "plaatsen, leggen",
+              "slaaf",
+              "enerzijds, weliswaar"
+            ]
+          },
+          "antwoord": "enerzijds, weliswaar",
+          "feedback": "μέν = enerzijds, weliswaar.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-MEN.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-MEN.wav"
     },
     {
@@ -1122,7 +3046,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F01-OUN-001",
+          "knoop_ids": [
+            "GRC-V-F01-OUN"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.51,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F01-OUN.wav",
+            "options": [
+              "eren",
+              "dus, dan",
+              "horen",
+              "leven"
+            ]
+          },
+          "antwoord": "dus, dan",
+          "feedback": "οὖν = dus, dan.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-OUN.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F01-OUN.wav"
     },
     {
@@ -1137,7 +3087,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-LAMBAN-001",
+          "knoop_ids": [
+            "GRC-V-F02-LAMBAN"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.33,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-LAMBAN.wav",
+            "options": [
+              "zon",
+              "vrede",
+              "jong, nieuw",
+              "nemen, pakken"
+            ]
+          },
+          "antwoord": "nemen, pakken",
+          "feedback": "λαμβάνω = nemen, pakken.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-LAMBAN.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-LAMBAN.wav"
     },
     {
@@ -1152,7 +3128,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-HEURSK-001",
+          "knoop_ids": [
+            "GRC-V-F02-HEURSK"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.09,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-HEURSK.wav",
+            "options": [
+              "hand",
+              "vinden",
+              "met, samen met",
+              "tempel, heiligdom"
+            ]
+          },
+          "antwoord": "vinden",
+          "feedback": "εὑρίσκω = vinden.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-HEURSK.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-HEURSK.wav"
     },
     {
@@ -1167,7 +3169,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-AKOUO-001",
+          "knoop_ids": [
+            "GRC-V-F02-AKOUO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.82,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-AKOUO.wav",
+            "options": [
+              "ik",
+              "wedstrijd, strijd",
+              "horen",
+              "die, dat (ginds)"
+            ]
+          },
+          "antwoord": "horen",
+          "feedback": "ἀκούω = horen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-AKOUO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-AKOUO.wav"
     },
     {
@@ -1182,7 +3210,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-PHEUGO-001",
+          "knoop_ids": [
+            "GRC-V-F02-PHEUGO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.66,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-PHEUGO.wav",
+            "options": [
+              "vluchten",
+              "plaats",
+              "keren, wenden",
+              "werk, daad"
+            ]
+          },
+          "antwoord": "vluchten",
+          "feedback": "φεύγω = vluchten.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-PHEUGO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-PHEUGO.wav"
     },
     {
@@ -1197,7 +3251,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-BALLO-001",
+          "knoop_ids": [
+            "GRC-V-F02-BALLO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.98,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-BALLO.wav",
+            "options": [
+              "slaaf",
+              "plaats",
+              "werpen, gooien",
+              "wijs"
+            ]
+          },
+          "antwoord": "werpen, gooien",
+          "feedback": "βάλλω = werpen, gooien.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-BALLO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-BALLO.wav"
     },
     {
@@ -1212,7 +3292,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-KELEUO-001",
+          "knoop_ids": [
+            "GRC-V-F02-KELEUO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.22,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-KELEUO.wav",
+            "options": [
+              "overwinnen",
+              "bevelen",
+              "maken, doen",
+              "wijn"
+            ]
+          },
+          "antwoord": "bevelen",
+          "feedback": "κελεύω = bevelen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-KELEUO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-KELEUO.wav"
     },
     {
@@ -1227,7 +3333,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-LEIPO-001",
+          "knoop_ids": [
+            "GRC-V-F02-LEIPO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.76,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-LEIPO.wav",
+            "options": [
+              "kind, jongen",
+              "niet",
+              "verlaten, achterlaten",
+              "hebben, houden"
+            ]
+          },
+          "antwoord": "verlaten, achterlaten",
+          "feedback": "λείπω = verlaten, achterlaten.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-LEIPO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-LEIPO.wav"
     },
     {
@@ -1242,7 +3374,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-MANTHN-001",
+          "knoop_ids": [
+            "GRC-V-F02-MANTHN"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.23,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-MANTHN.wav",
+            "options": [
+              "leren",
+              "koning",
+              "wedstrijd, strijd",
+              "soldaat"
+            ]
+          },
+          "antwoord": "leren",
+          "feedback": "μανθάνω = leren.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-MANTHN.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-MANTHN.wav"
     },
     {
@@ -1257,7 +3415,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-PEITHO-001",
+          "knoop_ids": [
+            "GRC-V-F02-PEITHO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.07,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-PEITHO.wav",
+            "options": [
+              "met, samen met",
+              "naar, in",
+              "overtuigen",
+              "koning"
+            ]
+          },
+          "antwoord": "overtuigen",
+          "feedback": "πείθω = overtuigen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-PEITHO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-PEITHO.wav"
     },
     {
@@ -1272,7 +3456,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-TREPO-001",
+          "knoop_ids": [
+            "GRC-V-F02-TREPO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.9,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-TREPO.wav",
+            "options": [
+              "geschenk",
+              "oorlog",
+              "keren, wenden",
+              "waarheid"
+            ]
+          },
+          "antwoord": "keren, wenden",
+          "feedback": "τρέπω = keren, wenden.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-TREPO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-TREPO.wav"
     },
     {
@@ -1287,7 +3497,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-TRECHO-001",
+          "knoop_ids": [
+            "GRC-V-F02-TRECHO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.34,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-TRECHO.wav",
+            "options": [
+              "wedstrijd, strijd",
+              "groot",
+              "horen",
+              "rennen"
+            ]
+          },
+          "antwoord": "rennen",
+          "feedback": "τρέχω = rennen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-TRECHO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-TRECHO.wav"
     },
     {
@@ -1302,7 +3538,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-NOMIZO-001",
+          "knoop_ids": [
+            "GRC-V-F02-NOMIZO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.89,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-NOMIZO.wav",
+            "options": [
+              "tonen, aanwijzen",
+              "dierbaar, bevriend",
+              "uit",
+              "menen, geloven"
+            ]
+          },
+          "antwoord": "menen, geloven",
+          "feedback": "νομίζω = menen, geloven.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-NOMIZO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-NOMIZO.wav"
     },
     {
@@ -1317,7 +3579,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-BOULOM-001",
+          "knoop_ids": [
+            "GRC-V-F02-BOULOM"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.38,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-BOULOM.wav",
+            "options": [
+              "naam",
+              "menen, schijnen",
+              "willen",
+              "onder, door"
+            ]
+          },
+          "antwoord": "willen",
+          "feedback": "βούλομαι = willen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-BOULOM.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-BOULOM.wav"
     },
     {
@@ -1332,7 +3620,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-DEIKNU-001",
+          "knoop_ids": [
+            "GRC-V-F02-DEIKNU"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.68,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-DEIKNU.wav",
+            "options": [
+              "tonen, aanwijzen",
+              "altijd",
+              "rechter",
+              "hand"
+            ]
+          },
+          "antwoord": "tonen, aanwijzen",
+          "feedback": "δείκνυμι = tonen, aanwijzen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-DEIKNU.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-DEIKNU.wav"
     },
     {
@@ -1347,7 +3661,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-PHILEO-001",
+          "knoop_ids": [
+            "GRC-V-F02-PHILEO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.43,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-PHILEO.wav",
+            "options": [
+              "god",
+              "moeder",
+              "liefhebben, houden van",
+              "wijs"
+            ]
+          },
+          "antwoord": "liefhebben, houden van",
+          "feedback": "φιλέω = liefhebben, houden van.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-PHILEO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-PHILEO.wav"
     },
     {
@@ -1362,7 +3702,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-NIKAO-001",
+          "knoop_ids": [
+            "GRC-V-F02-NIKAO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.51,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-NIKAO.wav",
+            "options": [
+              "menen, geloven",
+              "overwinnen",
+              "plaats",
+              "niet"
+            ]
+          },
+          "antwoord": "overwinnen",
+          "feedback": "νικάω = overwinnen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-NIKAO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-NIKAO.wav"
     },
     {
@@ -1377,7 +3743,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-TIMAO-001",
+          "knoop_ids": [
+            "GRC-V-F02-TIMAO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.44,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-TIMAO.wav",
+            "options": [
+              "eren",
+              "overwinnen",
+              "willen",
+              "werk, daad"
+            ]
+          },
+          "antwoord": "eren",
+          "feedback": "τιμάω = eren.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-TIMAO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-TIMAO.wav"
     },
     {
@@ -1392,7 +3784,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-ZETEO-001",
+          "knoop_ids": [
+            "GRC-V-F02-ZETEO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.51,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-ZETEO.wav",
+            "options": [
+              "zoeken",
+              "die, dat (ginds)",
+              "geven",
+              "dapper"
+            ]
+          },
+          "antwoord": "zoeken",
+          "feedback": "ζητέω = zoeken.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ZETEO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-ZETEO.wav"
     },
     {
@@ -1407,7 +3825,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-DOKEO-001",
+          "knoop_ids": [
+            "GRC-V-F02-DOKEO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.71,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-DOKEO.wav",
+            "options": [
+              "zee",
+              "soldaat",
+              "menen, schijnen",
+              "rivier"
+            ]
+          },
+          "antwoord": "menen, schijnen",
+          "feedback": "δοκέω = menen, schijnen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-DOKEO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-DOKEO.wav"
     },
     {
@@ -1422,7 +3866,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-STRATO-001",
+          "knoop_ids": [
+            "GRC-V-F02-STRATO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.57,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-STRATO.wav",
+            "options": [
+              "leger",
+              "vluchten",
+              "tempel, heiligdom",
+              "moeder"
+            ]
+          },
+          "antwoord": "leger",
+          "feedback": "στρατός = leger.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-STRATO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-STRATO.wav"
     },
     {
@@ -1437,7 +3907,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-DEMOS-001",
+          "knoop_ids": [
+            "GRC-V-F02-DEMOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.75,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-DEMOS.wav",
+            "options": [
+              "volk",
+              "keren, wenden",
+              "brood",
+              "overwinnen"
+            ]
+          },
+          "antwoord": "volk",
+          "feedback": "δῆμος = volk.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-DEMOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-DEMOS.wav"
     },
     {
@@ -1452,7 +3948,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-NOMOS-001",
+          "knoop_ids": [
+            "GRC-V-F02-NOMOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.81,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-NOMOS.wav",
+            "options": [
+              "groot",
+              "bevelen",
+              "schrijven",
+              "wet, gebruik"
+            ]
+          },
+          "antwoord": "wet, gebruik",
+          "feedback": "νόμος = wet, gebruik.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-NOMOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-NOMOS.wav"
     },
     {
@@ -1467,7 +3989,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-POLEMO-001",
+          "knoop_ids": [
+            "GRC-V-F02-POLEMO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-POLEMO.wav",
+            "options": [
+              "rechter",
+              "al, reeds",
+              "oorlog",
+              "klein"
+            ]
+          },
+          "antwoord": "oorlog",
+          "feedback": "πόλεμος = oorlog.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-POLEMO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-POLEMO.wav"
     },
     {
@@ -1482,7 +4030,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-TOPOS-001",
+          "knoop_ids": [
+            "GRC-V-F02-TOPOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.73,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-TOPOS.wav",
+            "options": [
+              "zoeken",
+              "horen",
+              "dragen, brengen",
+              "plaats"
+            ]
+          },
+          "antwoord": "plaats",
+          "feedback": "τόπος = plaats.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-TOPOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-TOPOS.wav"
     },
     {
@@ -1497,7 +4071,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "tijd",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-CHRONO-001",
+          "knoop_ids": [
+            "GRC-V-F02-CHRONO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.9,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-CHRONO.wav",
+            "options": [
+              "tijd",
+              "dus, dan",
+              "hoofd",
+              "maken, doen"
+            ]
+          },
+          "antwoord": "tijd",
+          "feedback": "χρόνος = tijd.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-CHRONO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-CHRONO.wav"
     },
     {
@@ -1512,7 +4112,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-BIOS-001",
+          "knoop_ids": [
+            "GRC-V-F02-BIOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.66,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-BIOS.wav",
+            "options": [
+              "leven",
+              "volk, stam",
+              "zelf",
+              "vreselijk, geweldig"
+            ]
+          },
+          "antwoord": "leven",
+          "feedback": "βίος = leven.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-BIOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-BIOS.wav"
     },
     {
@@ -1527,7 +4153,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-OIKOS-001",
+          "knoop_ids": [
+            "GRC-V-F02-OIKOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.51,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-OIKOS.wav",
+            "options": [
+              "nacht",
+              "maken, doen",
+              "burger",
+              "huis"
+            ]
+          },
+          "antwoord": "huis",
+          "feedback": "οἶκος = huis.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-OIKOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-OIKOS.wav"
     },
     {
@@ -1542,7 +4194,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-DORON-001",
+          "knoop_ids": [
+            "GRC-V-F02-DORON"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.91,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-DORON.wav",
+            "options": [
+              "geschenk",
+              "van, bij, langs",
+              "maken, doen",
+              "waarheid"
+            ]
+          },
+          "antwoord": "geschenk",
+          "feedback": "δῶρον = geschenk.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-DORON.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-DORON.wav"
     },
     {
@@ -1557,7 +4235,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-HOPLON-001",
+          "knoop_ids": [
+            "GRC-V-F02-HOPLON"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.22,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-HOPLON.wav",
+            "options": [
+              "kind, jongen",
+              "wapen",
+              "groot",
+              "oog"
+            ]
+          },
+          "antwoord": "wapen",
+          "feedback": "ὅπλον = wapen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-HOPLON.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-HOPLON.wav"
     },
     {
@@ -1572,7 +4276,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "religie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-HIERON-001",
+          "knoop_ids": [
+            "GRC-V-F02-HIERON"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.69,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-HIERON.wav",
+            "options": [
+              "tempel, heiligdom",
+              "oorlog",
+              "land, streek",
+              "water"
+            ]
+          },
+          "antwoord": "tempel, heiligdom",
+          "feedback": "ἱερόν = tempel, heiligdom.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-HIERON.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-HIERON.wav"
     },
     {
@@ -1587,7 +4317,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-BIBLIO-001",
+          "knoop_ids": [
+            "GRC-V-F02-BIBLIO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.84,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-BIBLIO.wav",
+            "options": [
+              "woord, rede, verhaal",
+              "boek",
+              "gevecht, slag",
+              "maar"
+            ]
+          },
+          "antwoord": "boek",
+          "feedback": "βιβλίον = boek.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-BIBLIO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-BIBLIO.wav"
     },
     {
@@ -1602,7 +4358,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-TEKNON-001",
+          "knoop_ids": [
+            "GRC-V-F02-TEKNON"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.55,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-TEKNON.wav",
+            "options": [
+              "hoofd",
+              "op, naar, bij",
+              "kind",
+              "gaan, stappen"
+            ]
+          },
+          "antwoord": "kind",
+          "feedback": "τέκνον = kind.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-TEKNON.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-TEKNON.wav"
     },
     {
@@ -1617,7 +4399,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-PHILOS-001",
+          "knoop_ids": [
+            "GRC-V-F02-PHILOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-PHILOS.wav",
+            "options": [
+              "vriend",
+              "dus, dan",
+              "iemand, een zeker",
+              "schip"
+            ]
+          },
+          "antwoord": "vriend",
+          "feedback": "φίλος = vriend.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-PHILOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-PHILOS.wav"
     },
     {
@@ -1632,7 +4440,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-DOULOS-001",
+          "knoop_ids": [
+            "GRC-V-F02-DOULOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.57,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-DOULOS.wav",
+            "options": [
+              "lichaam",
+              "slaaf",
+              "paard",
+              "naar, bij, tegenover"
+            ]
+          },
+          "antwoord": "slaaf",
+          "feedback": "δοῦλος = slaaf.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-DOULOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-DOULOS.wav"
     },
     {
@@ -1647,7 +4481,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-AGORA-001",
+          "knoop_ids": [
+            "GRC-V-F02-AGORA"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.94,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-AGORA.wav",
+            "options": [
+              "graan, voedsel",
+              "van, bij, langs",
+              "marktplein",
+              "eiland"
+            ]
+          },
+          "antwoord": "marktplein",
+          "feedback": "ἀγορά = marktplein.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-AGORA.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-AGORA.wav"
     },
     {
@@ -1662,7 +4522,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-TECHNE-001",
+          "knoop_ids": [
+            "GRC-V-F02-TECHNE"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.31,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-TECHNE.wav",
+            "options": [
+              "muur, vestingmuur",
+              "vluchten",
+              "kunst, vaardigheid",
+              "enerzijds, weliswaar"
+            ]
+          },
+          "antwoord": "kunst, vaardigheid",
+          "feedback": "τέχνη = kunst, vaardigheid.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-TECHNE.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-TECHNE.wav"
     },
     {
@@ -1677,7 +4563,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-ARETE-001",
+          "knoop_ids": [
+            "GRC-V-F02-ARETE"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-ARETE.wav",
+            "options": [
+              "jong, nieuw",
+              "deugd, voortreffelijkheid",
+              "wapen",
+              "waardig, waard"
+            ]
+          },
+          "antwoord": "deugd, voortreffelijkheid",
+          "feedback": "ἀρετή = deugd, voortreffelijkheid.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ARETE.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-ARETE.wav"
     },
     {
@@ -1692,7 +4604,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-EIRENE-001",
+          "knoop_ids": [
+            "GRC-V-F02-EIRENE"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.04,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-EIRENE.wav",
+            "options": [
+              "kunst, vaardigheid",
+              "leren",
+              "nacht",
+              "vrede"
+            ]
+          },
+          "antwoord": "vrede",
+          "feedback": "εἰρήνη = vrede.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-EIRENE.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-EIRENE.wav"
     },
     {
@@ -1707,7 +4645,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-SOPHIA-001",
+          "knoop_ids": [
+            "GRC-V-F02-SOPHIA"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.48,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-SOPHIA.wav",
+            "options": [
+              "deze, dit",
+              "waarheid",
+              "slecht, lelijk",
+              "wijsheid"
+            ]
+          },
+          "antwoord": "wijsheid",
+          "feedback": "σοφία = wijsheid.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-SOPHIA.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-SOPHIA.wav"
     },
     {
@@ -1722,7 +4686,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-CHORA-001",
+          "knoop_ids": [
+            "GRC-V-F02-CHORA"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.03,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-CHORA.wav",
+            "options": [
+              "land, streek",
+              "wijsheid",
+              "wijs",
+              "komen, gaan"
+            ]
+          },
+          "antwoord": "land, streek",
+          "feedback": "χώρα = land, streek.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-CHORA.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-CHORA.wav"
     },
     {
@@ -1737,7 +4727,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-THANAT-001",
+          "knoop_ids": [
+            "GRC-V-F02-THANAT"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.14,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-THANAT.wav",
+            "options": [
+              "tempel, heiligdom",
+              "dood",
+              "schip",
+              "liefhebben, houden van"
+            ]
+          },
+          "antwoord": "dood",
+          "feedback": "θάνατος = dood.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-THANAT.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-THANAT.wav"
     },
     {
@@ -1752,7 +4768,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-HUDOR-001",
+          "knoop_ids": [
+            "GRC-V-F02-HUDOR"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.19,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-HUDOR.wav",
+            "options": [
+              "water",
+              "keren, wenden",
+              "vreemdeling, gastvriend",
+              "boek"
+            ]
+          },
+          "antwoord": "water",
+          "feedback": "ὕδωρ = water.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-HUDOR.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-HUDOR.wav"
     },
     {
@@ -1767,7 +4809,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-SOMA-001",
+          "knoop_ids": [
+            "GRC-V-F02-SOMA"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.68,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-SOMA.wav",
+            "options": [
+              "water",
+              "in",
+              "brood",
+              "lichaam"
+            ]
+          },
+          "antwoord": "lichaam",
+          "feedback": "σῶμα = lichaam.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-SOMA.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-SOMA.wav"
     },
     {
@@ -1782,7 +4850,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-ONOMA-001",
+          "knoop_ids": [
+            "GRC-V-F02-ONOMA"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.81,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-ONOMA.wav",
+            "options": [
+              "verstandig, bezonnen",
+              "naam",
+              "wapen",
+              "zijn"
+            ]
+          },
+          "antwoord": "naam",
+          "feedback": "ὄνομα = naam.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ONOMA.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-ONOMA.wav"
     },
     {
@@ -1797,7 +4891,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-GUNE-001",
+          "knoop_ids": [
+            "GRC-V-F02-GUNE"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.45,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-GUNE.wav",
+            "options": [
+              "rechtvaardig",
+              "zoeken",
+              "wijsheid",
+              "vrouw"
+            ]
+          },
+          "antwoord": "vrouw",
+          "feedback": "γυνή = vrouw.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-GUNE.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-GUNE.wav"
     },
     {
@@ -1812,7 +4932,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-CHEIR-001",
+          "knoop_ids": [
+            "GRC-V-F02-CHEIR"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.29,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-CHEIR.wav",
+            "options": [
+              "enerzijds, weliswaar",
+              "vrede",
+              "zon",
+              "hand"
+            ]
+          },
+          "antwoord": "hand",
+          "feedback": "χείρ = hand.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-CHEIR.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-CHEIR.wav"
     },
     {
@@ -1827,7 +4973,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-NAUS-001",
+          "knoop_ids": [
+            "GRC-V-F02-NAUS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.01,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-NAUS.wav",
+            "options": [
+              "werpen, gooien",
+              "hoofd",
+              "schip",
+              "zelf"
+            ]
+          },
+          "antwoord": "schip",
+          "feedback": "ναῦς = schip.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-NAUS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-NAUS.wav"
     },
     {
@@ -1842,7 +5014,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-STRTTS-001",
+          "knoop_ids": [
+            "GRC-V-F02-STRTTS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.49,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-STRTTS.wav",
+            "options": [
+              "soldaat",
+              "naam",
+              "groot",
+              "koning"
+            ]
+          },
+          "antwoord": "soldaat",
+          "feedback": "στρατιώτης = soldaat.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-STRTTS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-STRTTS.wav"
     },
     {
@@ -1857,7 +5055,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-POLITS-001",
+          "knoop_ids": [
+            "GRC-V-F02-POLITS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.45,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-POLITS.wav",
+            "options": [
+              "kind",
+              "jong, nieuw",
+              "burger",
+              "rechter"
+            ]
+          },
+          "antwoord": "burger",
+          "feedback": "πολίτης = burger.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-POLITS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-POLITS.wav"
     },
     {
@@ -1872,7 +5096,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-KRITIS-001",
+          "knoop_ids": [
+            "GRC-V-F02-KRITIS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.23,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-KRITIS.wav",
+            "options": [
+              "geven",
+              "sterk",
+              "rechter",
+              "plaats"
+            ]
+          },
+          "antwoord": "rechter",
+          "feedback": "κριτής = rechter.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-KRITIS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-KRITIS.wav"
     },
     {
@@ -1887,7 +5137,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-HELIOS-001",
+          "knoop_ids": [
+            "GRC-V-F02-HELIOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.27,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-HELIOS.wav",
+            "options": [
+              "dierbaar, bevriend",
+              "kind",
+              "zon",
+              "willen"
+            ]
+          },
+          "antwoord": "zon",
+          "feedback": "ἥλιος = zon.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-HELIOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-HELIOS.wav"
     },
     {
@@ -1902,7 +5178,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-POTAMO-001",
+          "knoop_ids": [
+            "GRC-V-F02-POTAMO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.65,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-POTAMO.wav",
+            "options": [
+              "rivier",
+              "vrijheid",
+              "zon",
+              "van, bij, langs"
+            ]
+          },
+          "antwoord": "rivier",
+          "feedback": "ποταμός = rivier.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-POTAMO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-POTAMO.wav"
     },
     {
@@ -1917,7 +5219,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-XENOS-001",
+          "knoop_ids": [
+            "GRC-V-F02-XENOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.02,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-XENOS.wav",
+            "options": [
+              "graan, voedsel",
+              "vreemdeling, gastvriend",
+              "hoofd",
+              "wet, gebruik"
+            ]
+          },
+          "antwoord": "vreemdeling, gastvriend",
+          "feedback": "ξένος = vreemdeling, gastvriend.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-XENOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-XENOS.wav"
     },
     {
@@ -1932,7 +5260,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-DIKAIO-001",
+          "knoop_ids": [
+            "GRC-V-F02-DIKAIO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.68,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-DIKAIO.wav",
+            "options": [
+              "volk, stam",
+              "rechtvaardig",
+              "plaats",
+              "zee"
+            ]
+          },
+          "antwoord": "rechtvaardig",
+          "feedback": "δίκαιος = rechtvaardig.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-DIKAIO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-DIKAIO.wav"
     },
     {
@@ -1947,7 +5301,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-AXIOS-001",
+          "knoop_ids": [
+            "GRC-V-F02-AXIOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.87,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-AXIOS.wav",
+            "options": [
+              "oorlog",
+              "waardig, waard",
+              "plaats",
+              "schip"
+            ]
+          },
+          "antwoord": "waardig, waard",
+          "feedback": "ἄξιος = waardig, waard.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-AXIOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-AXIOS.wav"
     },
     {
@@ -1962,7 +5342,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-PHILAD-001",
+          "knoop_ids": [
+            "GRC-V-F02-PHILAD"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.98,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-PHILAD.wav",
+            "options": [
+              "vrede",
+              "keren, wenden",
+              "woord, rede, verhaal",
+              "dierbaar, bevriend"
+            ]
+          },
+          "antwoord": "dierbaar, bevriend",
+          "feedback": "φίλος = dierbaar, bevriend.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-PHILAD.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-PHILAD.wav"
     },
     {
@@ -1977,7 +5383,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-ISCHUR-001",
+          "knoop_ids": [
+            "GRC-V-F02-ISCHUR"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.66,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-ISCHUR.wav",
+            "options": [
+              "onder, door",
+              "tempel, heiligdom",
+              "met",
+              "sterk"
+            ]
+          },
+          "antwoord": "sterk",
+          "feedback": "ἰσχυρός = sterk.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ISCHUR.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-ISCHUR.wav"
     },
     {
@@ -1992,7 +5424,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-SOPHRN-001",
+          "knoop_ids": [
+            "GRC-V-F02-SOPHRN"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.13,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-SOPHRN.wav",
+            "options": [
+              "verstandig, bezonnen",
+              "jij",
+              "huis",
+              "keren, wenden"
+            ]
+          },
+          "antwoord": "verstandig, bezonnen",
+          "feedback": "σώφρων = verstandig, bezonnen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-SOPHRN.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-SOPHRN.wav"
     },
     {
@@ -2007,7 +5465,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-ANDREI-001",
+          "knoop_ids": [
+            "GRC-V-F02-ANDREI"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.57,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-ANDREI.wav",
+            "options": [
+              "in",
+              "veldheer, strateeg",
+              "dapper",
+              "uit"
+            ]
+          },
+          "antwoord": "dapper",
+          "feedback": "ἀνδρεῖος = dapper.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ANDREI.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-ANDREI.wav"
     },
     {
@@ -2022,7 +5506,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-EITA-001",
+          "knoop_ids": [
+            "GRC-V-F02-EITA"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.68,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-EITA.wav",
+            "options": [
+              "woord, rede, verhaal",
+              "met, samen met",
+              "vervolgens, dan",
+              "wijsheid"
+            ]
+          },
+          "antwoord": "vervolgens, dan",
+          "feedback": "εἶτα = vervolgens, dan.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-EITA.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-EITA.wav"
     },
     {
@@ -2037,7 +5547,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-EDE-001",
+          "knoop_ids": [
+            "GRC-V-F02-EDE"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.76,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-EDE.wav",
+            "options": [
+              "eren",
+              "al, reeds",
+              "dat, zoals, opdat",
+              "nemen, pakken"
+            ]
+          },
+          "antwoord": "al, reeds",
+          "feedback": "ἤδη = al, reeds.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-EDE.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-EDE.wav"
     },
     {
@@ -2052,7 +5588,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-NUN-001",
+          "knoop_ids": [
+            "GRC-V-F02-NUN"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.39,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-NUN.wav",
+            "options": [
+              "komen, gaan",
+              "wedstrijd, strijd",
+              "nu",
+              "boek"
+            ]
+          },
+          "antwoord": "nu",
+          "feedback": "νῦν = nu.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-NUN.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-NUN.wav"
     },
     {
@@ -2067,7 +5629,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-ME-001",
+          "knoop_ids": [
+            "GRC-V-F02-ME"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.36,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-ME.wav",
+            "options": [
+              "zee",
+              "vreemdeling, gastvriend",
+              "niet (bij verbod/wens)",
+              "oorlog"
+            ]
+          },
+          "antwoord": "niet (bij verbod/wens)",
+          "feedback": "μή = niet (bij verbod/wens).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ME.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-ME.wav"
     },
     {
@@ -2082,7 +5670,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-AEI-001",
+          "knoop_ids": [
+            "GRC-V-F02-AEI"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.93,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-AEI.wav",
+            "options": [
+              "vrees, angst",
+              "altijd",
+              "lichaam",
+              "de, het (lidwoord)"
+            ]
+          },
+          "antwoord": "altijd",
+          "feedback": "ἀεί = altijd.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-AEI.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-AEI.wav"
     },
     {
@@ -2097,7 +5711,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "voedsel",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-OINOS-001",
+          "knoop_ids": [
+            "GRC-V-F02-OINOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-OINOS.wav",
+            "options": [
+              "wijn",
+              "slaaf",
+              "tonen, aanwijzen",
+              "vinden"
+            ]
+          },
+          "antwoord": "wijn",
+          "feedback": "οἶνος = wijn.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-OINOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-OINOS.wav"
     },
     {
@@ -2112,7 +5752,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "voedsel",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-SITOS-001",
+          "knoop_ids": [
+            "GRC-V-F02-SITOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.43,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-SITOS.wav",
+            "options": [
+              "graan, voedsel",
+              "burger",
+              "man",
+              "plaats"
+            ]
+          },
+          "antwoord": "graan, voedsel",
+          "feedback": "σῖτος = graan, voedsel.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-SITOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-SITOS.wav"
     },
     {
@@ -2127,7 +5793,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "voedsel",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-ARTOS-001",
+          "knoop_ids": [
+            "GRC-V-F02-ARTOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.09,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-ARTOS.wav",
+            "options": [
+              "nemen, pakken",
+              "huis",
+              "brood",
+              "deze, dit"
+            ]
+          },
+          "antwoord": "brood",
+          "feedback": "ἄρτος = brood.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ARTOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-ARTOS.wav"
     },
     {
@@ -2142,7 +5834,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-KEPHAL-001",
+          "knoop_ids": [
+            "GRC-V-F02-KEPHAL"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.38,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-KEPHAL.wav",
+            "options": [
+              "vreemdeling, gastvriend",
+              "weg, reis",
+              "hoofd",
+              "enerzijds, weliswaar"
+            ]
+          },
+          "antwoord": "hoofd",
+          "feedback": "κεφαλή = hoofd.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-KEPHAL.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-KEPHAL.wav"
     },
     {
@@ -2157,7 +5875,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-OPHTHL-001",
+          "knoop_ids": [
+            "GRC-V-F02-OPHTHL"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.42,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-OPHTHL.wav",
+            "options": [
+              "hebben, houden",
+              "oog",
+              "om, over, rondom",
+              "stad, staat"
+            ]
+          },
+          "antwoord": "oog",
+          "feedback": "ὀφθαλμός = oog.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-OPHTHL.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-OPHTHL.wav"
     },
     {
@@ -2172,7 +5916,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-HAIMA-001",
+          "knoop_ids": [
+            "GRC-V-F02-HAIMA"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.82,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-HAIMA.wav",
+            "options": [
+              "bloed",
+              "alle, elk, geheel",
+              "nemen, pakken",
+              "mens"
+            ]
+          },
+          "antwoord": "bloed",
+          "feedback": "αἷμα = bloed.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-HAIMA.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-HAIMA.wav"
     },
     {
@@ -2187,7 +5957,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-AGON-001",
+          "knoop_ids": [
+            "GRC-V-F02-AGON"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.09,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-AGON.wav",
+            "options": [
+              "menen, schijnen",
+              "alle, elk, geheel",
+              "wedstrijd, strijd",
+              "altijd"
+            ]
+          },
+          "antwoord": "wedstrijd, strijd",
+          "feedback": "ἀγών = wedstrijd, strijd.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-AGON.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-AGON.wav"
     },
     {
@@ -2202,7 +5998,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-TEICHO-001",
+          "knoop_ids": [
+            "GRC-V-F02-TEICHO"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.86,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-TEICHO.wav",
+            "options": [
+              "nemen, pakken",
+              "menen, geloven",
+              "burger",
+              "muur, vestingmuur"
+            ]
+          },
+          "antwoord": "muur, vestingmuur",
+          "feedback": "τεῖχος = muur, vestingmuur.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-TEICHO.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-TEICHO.wav"
     },
     {
@@ -2217,7 +6039,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-ETHNOS-001",
+          "knoop_ids": [
+            "GRC-V-F02-ETHNOS"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.99,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-ETHNOS.wav",
+            "options": [
+              "hoofd",
+              "eiland",
+              "volk, stam",
+              "huis"
+            ]
+          },
+          "antwoord": "volk, stam",
+          "feedback": "ἔθνος = volk, stam.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ETHNOS.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-ETHNOS.wav"
     },
     {
@@ -2232,7 +6080,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-ALETHE-001",
+          "knoop_ids": [
+            "GRC-V-F02-ALETHE"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.42,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-ALETHE.wav",
+            "options": [
+              "waarheid",
+              "niet (bij verbod/wens)",
+              "water",
+              "veel"
+            ]
+          },
+          "antwoord": "waarheid",
+          "feedback": "ἀλήθεια = waarheid.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ALETHE.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-ALETHE.wav"
     },
     {
@@ -2247,7 +6121,33 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-V-F02-ELEUTH-001",
+          "knoop_ids": [
+            "GRC-V-F02-ELEUTH"
+          ],
+          "type": "luister_herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.08,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en kies de juiste vertaling.",
+            "audio_ref": "GRC-V-F02-ELEUTH.wav",
+            "options": [
+              "man",
+              "volk",
+              "vrijheid",
+              "paard"
+            ]
+          },
+          "antwoord": "vrijheid",
+          "feedback": "ἐλευθερία = vrijheid.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ELEUTH.wav"
+        }
+      ],
       "audio_ref": "GRC-V-F02-ELEUTH.wav"
     }
   ],
