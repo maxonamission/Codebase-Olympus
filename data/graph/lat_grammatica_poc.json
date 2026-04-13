@@ -1576,7 +1576,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-DECL3-INTRO-001",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL3-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Waarom is de 3e declinatie lastiger dan de 1e en 2e?",
+          "antwoord": "de nominativus heeft geen vaste uitgang — er is grote variatie",
+          "feedback": "De 3e declinatie kent diverse nominativus-uitgangen (rex, corpus, nomen). De genitivus sg. op -is is het herkenningsteken.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL3-INTRO-002",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL3-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Hoe herken je in het woordenboek dat een woord bij de 3e declinatie hoort?",
+          "antwoord": "de genitivus singularis eindigt op -is",
+          "feedback": "Een woord hoort bij de 3e declinatie als de genitivus singularis op -is eindigt. Bijv. rex, reg-is.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL3-INTRO-003",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL3-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke twee subtypes onderscheidt de 3e declinatie?",
+          "antwoord": "consonantstammen en i-stammen",
+          "feedback": "De 3e declinatie kent consonantstammen (stam op medeklinker, bijv. rex) en i-stammen (stam op -i, bijv. mare).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-NOM-D3",
@@ -1588,7 +1634,56 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-NOM-D3-001",
+          "knoop_ids": [
+            "LAT-G-MORF-NOM-D3"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Noem drie verschillende nominativus-vormen van de 3e declinatie.",
+          "antwoord": [
+            "rex, corpus, nomen",
+            "miles, lex, caput"
+          ],
+          "feedback": "De nominativus sg. van de 3e declinatie varieert sterk: rex, miles, corpus, nomen, mare, etc.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-NOM-D3-002",
+          "knoop_ids": [
+            "LAT-G-MORF-NOM-D3"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de nominativus meervoud van 'rex, regis'.",
+          "antwoord": "reges",
+          "feedback": "De nominativus pl. van consonantstammen van de 3e declinatie eindigt op -es: rex → reges.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-NOM-D3-003",
+          "knoop_ids": [
+            "LAT-G-MORF-NOM-D3"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de nominativus meervoud van 'mare, maris (n.)'.",
+          "antwoord": "maria",
+          "feedback": "Bij neutra i-stammen eindigt de nom. pl. op -ia: mare → maria (neutrumregel + i-stam).",
+          "bron": "handmatig"
+        }
+      ]
     }
   ],
   "edges": [
