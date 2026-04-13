@@ -322,7 +322,7 @@ Zie `docs/Prompt_spoor_c.md` voor de volledige prompt.
 | C1-04 | Items voor 3e declinatie | 37 items | done |
 | C1-05 | Items voor adjectieven | 25 items | done |
 | C1-06 | Items voor presens indicativus | 38 items | done |
-| C1-07 | Items voor imperfectum + perfectum | ~40 items | todo |
+| C1-07 | Items voor imperfectum + perfectum | 39 items | done |
 | C1-08 | Items voor plqpf + imperativus + infinitivus | ~25 items | todo |
 | C1-09 | Items voor pronomina | ~30 items | todo |
 | C1-10 | Items voor voorzetsels + syntaxis | ~35 items | todo |

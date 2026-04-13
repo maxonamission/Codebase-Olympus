@@ -1753,7 +1753,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-INTRO-001",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Hoe wordt het imperfectum gevormd?",
+          "antwoord": "praesensstam + -ba- + persoonsuitgang",
+          "feedback": "Het imperfectum wordt gevormd met het tussenvoegsel -ba-: ama-ba-m, mone-ba-m.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-INTRO-002",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welke handeling drukt het imperfectum uit?",
+          "antwoord": "een onvoltooide of voortdurende handeling in het verleden",
+          "feedback": "Het imperfectum beschrijft iets dat gaande was of herhaald werd: \"hij liep\" (niet \"hij heeft gelopen\").",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-IMPF-C1C2-ACT",
@@ -1765,7 +1796,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-C1C2-ACT-001",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-C1C2-ACT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Welke persoon en getal is \"amabat\"?",
+          "antwoord": "3e persoon enkelvoud imperfectum",
+          "feedback": "Ama-ba-t: stam ama- + -ba- + -t = 3e pers. sg. imperfectum.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-C1C2-ACT-002",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-C1C2-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg \"amare\" in de 1e persoon enkelvoud imperfectum.",
+          "antwoord": "amabam",
+          "feedback": "1e conj.: stam ama- + -ba- + -m = amabam.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-C1C2-ACT-003",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-C1C2-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg \"monere\" in de 3e persoon meervoud imperfectum.",
+          "antwoord": "monebant",
+          "feedback": "2e conj.: stam mone- + -ba- + -nt = monebant.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-IMPF-C3C4-ACT",
@@ -1777,7 +1854,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-C3C4-ACT-001",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-C3C4-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg \"regere\" in de 1e persoon enkelvoud imperfectum.",
+          "antwoord": "regebam",
+          "feedback": "3e conj.: stam rege- + -ba- + -m = regebam. Let op: bindklinker -e- voor -ba-.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-C3C4-ACT-002",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-C3C4-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg \"audire\" in de 2e persoon enkelvoud imperfectum.",
+          "antwoord": "audiebas",
+          "feedback": "4e conj.: stam audi- + -eba- + -s = audiebas.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-ADJ-D12-INTRO",
