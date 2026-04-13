@@ -2923,6 +2923,84 @@
       "target_id": "GRC-V-F01-SUN",
       "type": "prerequisite",
       "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-ONTK",
+      "target_id": "GRC-V-F01-OU",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-SYNT-ONTK",
+      "target_id": "GRC-V-F02-ME",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-SYNT-ZINSBOUW",
+      "target_id": "GRC-V-F01-KAI",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-SYNT-ZINSBOUW",
+      "target_id": "GRC-V-F01-DE",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-SYNT-ZINSBOUW",
+      "target_id": "GRC-V-F01-ALLA",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-SYNT-ZINSBOUW",
+      "target_id": "GRC-V-F01-GAR",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-SYNT-ZINSBOUW",
+      "target_id": "GRC-V-F01-HOS",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-SYNT-ZINSBOUW",
+      "target_id": "GRC-V-F01-OUN",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-SYNT-WRDVLG",
+      "target_id": "GRC-V-F01-MEN",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-SYNT-WRDVLG",
+      "target_id": "GRC-V-F02-NUN",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-SYNT-WRDVLG",
+      "target_id": "GRC-V-F02-AEI",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-SYNT-WRDVLG",
+      "target_id": "GRC-V-F02-EDE",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-SYNT-WRDVLG",
+      "target_id": "GRC-V-F02-EITA",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
     }
   ]
 }
