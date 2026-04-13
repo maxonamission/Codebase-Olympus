@@ -1451,6 +1451,23 @@
           "antwoord": "laudas",
           "feedback": "1e conjugatie: stam laud- + -a- + -s = laudas.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C1-ACT-005",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C1-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'amare' in de presens indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Stam ama- + persoonsuitgangen. Let op: 1e pers.sg. amo (niet amao).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "amo, amas, amat, amamus, amatis, amant"
         }
       ]
     },
@@ -1524,6 +1541,23 @@
           "antwoord": "habent",
           "feedback": "2e conjugatie: stam hab- + -e- + -nt = habent.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C2-ACT-005",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C2-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'monēre' in de presens indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Stam mone- + persoonsuitgangen. De stamklinker -e- is lang (ē) en blijft in alle vormen.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "moneo, mones, monet, monemus, monetis, monent"
         }
       ]
     },
@@ -1597,6 +1631,23 @@
           "antwoord": "ducitis",
           "feedback": "3e conjugatie: stam duc- + -i- + -tis = ducitis.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C3-ACT-005",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C3-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'legere' in de presens indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "3e conjugatie: stamklinker wisselt (e/i/u). Let op: 3e pl. -unt (niet -ent).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "lego, legis, legit, legimus, legitis, legunt"
         }
       ]
     },
@@ -1655,6 +1706,23 @@
           "antwoord": "audiunt",
           "feedback": "4e conjugatie: stam aud- + -iu- + -nt = audiunt. Let op: -iu- voor -nt (net als 3e conj.).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C4-ACT-004",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C4-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'audīre' in de presens indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "4e conjugatie: stamklinker -i- lang. Let op: 3e pl. audiunt (met -i-).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "audio, audis, audit, audimus, auditis, audiunt"
         }
       ]
     },
@@ -1728,6 +1796,23 @@
           "antwoord": "es",
           "feedback": "Esse praesens: es (jij bent). De kortste vorm van het paradigma.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-ESSE-005",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-ESSE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'esse' in de presens indicativus op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Onregelmatig werkwoord. Let op de stamwisseling su-/es-.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "sum, es, est, sumus, estis, sunt"
         }
       ]
     },
@@ -1786,6 +1871,23 @@
           "antwoord": "als onderwerp, na bepaalde werkwoorden, in de AcI",
           "feedback": "De infinitivus kan onderwerp zijn (errare humanum est), object (volo dicere) of deel van een AcI.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-INF-PRAES-ACT-004",
+          "knoop_ids": [
+            "LAT-G-MORF-INF-PRAES-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de infinitivus presens actief van alle vier conjugaties + esse op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Let op het verschil tussen 2e conj. -ēre (lang) en 3e conj. -ere (kort).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "1e: -āre (amare), 2e: -ēre (monere), 3e: -ere (legere), 4e: -īre (audire), esse"
         }
       ]
     },
@@ -1887,6 +1989,23 @@
           "antwoord": "monebant",
           "feedback": "2e conj.: stam mone- + -ba- + -nt = monebant.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-C1C2-ACT-004",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-C1C2-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'amare' in het imperfectum indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Kenmerk: -ba- tussen stam en persoonsuitgang. 1e pers.sg. -bam.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "amabam, amabas, amabat, amabamus, amabatis, amabant"
         }
       ]
     },
@@ -1930,6 +2049,23 @@
           "antwoord": "audiebas",
           "feedback": "4e conj.: stam audi- + -eba- + -s = audiebas.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-C3C4-ACT-003",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-C3C4-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'audīre' in het imperfectum indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "3e/4e conjugatie: -eba- (met extra -e-). Vergelijk met 1e/2e: -ba-.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "audiebam, audiebas, audiebat, audiebamus, audiebatis, audiebant"
         }
       ]
     },
