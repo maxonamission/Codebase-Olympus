@@ -59,9 +59,9 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 | A2-04 | 3e declinatie introductie — via adjectieven πᾶς, σώφρων | 8 | done |
 | A2-05 | Adjectieven α/ο-stam en medeklinkerstam | 8 | done |
 | A2-06 | Praesens indicativus actief — thematisch + contracta + εἰμί | 12 | done |
-| A2-07 | Imperfectum indicativus actief — augment | ~8 | todo |
-| A2-08 | Aoristus introductie — sigmatisch + thematisch | ~10 | todo |
-| A2-09 | Pronomina — persoonlijk, bezittelijk, aanwijzend | ~10 | todo |
+| A2-07 | Imperfectum indicativus actief — augment | 8 | done |
+| A2-08 | Aoristus introductie — sigmatisch + thematisch | 10 | done |
+| A2-09 | Pronomina — persoonlijk, bezittelijk, aanwijzend | 10 | done |
 | A2-10 | Voorzetsels + basissyntaxis | ~8 | todo |
 | A2-11 | Review en prerequisite-edge validatie voor heel epic A2 | — | todo |
 
