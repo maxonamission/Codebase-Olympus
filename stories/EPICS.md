@@ -346,3 +346,69 @@ Zie `docs/Prompt_spoor_c.md` voor de volledige prompt.
 | C2-03 | Content voor werkwoord-paradigma's | 8 bestanden | done |
 | C2-04 | Content voor syntaxis | 6 bestanden | done |
 | C2-05 | Content voor pronomina + adjectieven | 6 bestanden | done |
+
+---
+
+## Spoor D — Werkende MVP-applicatie (FastAPI + React)
+
+De engine naar een webapplicatie brengen. Zie `docs/Prompt_spoor_d.md` voor de volledige prompt.
+
+### Uitvoervolgorde
+
+1. **D1** (backend) en **D2-01+02** (frontend setup + login) kunnen parallel
+2. **D2-03+** heeft D1-05 nodig (session endpoints)
+3. **D3** na D1+D2 compleet
+
+---
+
+## Epic D1: FastAPI backend
+
+**Doel:** REST API die de sessie-engine wraps. SQLite persistence. Auth.
+**Geschat:** 8 stories
+**Afhankelijkheden:** Geen (bouwt op bestaande engine)
+**Status:** todo
+
+| Story | Titel | Status |
+|-------|-------|--------|
+| D1-01 | Project setup: FastAPI + uvicorn + SQLite | todo |
+| D1-02 | Auth endpoints: register + login | todo |
+| D1-03 | Database CRUD: users + learner_models | todo |
+| D1-04 | SessionManager: stapsgewijs sessie-protocol | todo |
+| D1-05 | Session endpoints: start + answer | todo |
+| D1-06 | Session endpoint: summary | todo |
+| D1-07 | Progress endpoints | todo |
+| D1-08 | Intake endpoints | todo |
+
+---
+
+## Epic D2: React frontend
+
+**Doel:** Minimale maar functionele UI: login, sessie-interface, dashboard.
+**Geschat:** 7 stories
+**Afhankelijkheden:** D1-02 (auth), D1-05 (session), D1-07 (progress)
+**Status:** todo
+
+| Story | Titel | Status |
+|-------|-------|--------|
+| D2-01 | Project setup: Vite + React + routing | todo |
+| D2-02 | Login pagina | todo |
+| D2-03 | Session pagina: vraag tonen | todo |
+| D2-04 | Session pagina: antwoord + feedback | todo |
+| D2-05 | Session pagina: samenvatting | todo |
+| D2-06 | Dashboard pagina | todo |
+| D2-07 | Polytonic Greek input | todo |
+
+---
+
+## Epic D3: Integratie en pilot-ready
+
+**Doel:** Alles draait samen. Dev server, seed data, end-to-end test.
+**Geschat:** 3 stories
+**Afhankelijkheden:** D1 + D2 compleet
+**Status:** todo
+
+| Story | Titel | Status |
+|-------|-------|--------|
+| D3-01 | Dev server script + CORS + proxy | todo |
+| D3-02 | Seed script: test-user met intake | todo |
+| D3-03 | End-to-end smoke test + pilot guide | todo |
