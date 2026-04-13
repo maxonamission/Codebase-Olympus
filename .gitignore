@@ -30,3 +30,6 @@ htmlcov/
 # uv
 .uv/
 uv.lock
+
+# Generated worksheets (PDFs)
+data/worksheets/*.pdf
