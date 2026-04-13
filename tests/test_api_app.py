@@ -1,6 +1,5 @@
 """Tests for D1-01: FastAPI app startup and health endpoint."""
 
-import sqlite3
 import tempfile
 from pathlib import Path
 
@@ -12,13 +11,14 @@ from gymnasium_classica.api.database import init_db
 
 @pytest.fixture()
 def client():
-    """Create a TestClient with a temporary database."""
-    from gymnasium_classica.api.app import app
+    """Create a TestClient with a fresh temporary database."""
+    from gymnasium_classica.api.app import create_app
 
-    # The lifespan loads the graph and inits the DB; we use TestClient's
-    # context-manager behaviour to trigger lifespan events.
-    with TestClient(app) as c:
-        yield c
+    with tempfile.TemporaryDirectory() as tmp:
+        db_path = Path(tmp) / "test.db"
+        test_app = create_app(db_path=db_path)
+        with TestClient(test_app) as c:
+            yield c
 
 
 class TestHealth:
