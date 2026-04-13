@@ -45,6 +45,15 @@ class KnoopState(BaseModel):
     item_history: list[ItemResponse] = Field(default_factory=list)
 
 
+class OfflineAssignment(BaseModel):
+    """A pending offline writing assignment scheduled at the end of a session."""
+
+    knoop_id: str
+    item_id: str
+    assigned_at: datetime
+    completed: bool = False
+
+
 class SessionRecord(BaseModel):
     """A record of a single study session."""
 
@@ -62,6 +71,7 @@ class LearnerModel(BaseModel):
     user_id: UUID
     knoop_states: dict[str, KnoopState] = Field(default_factory=dict)
     session_history: list[SessionRecord] = Field(default_factory=list)
+    pending_offline_assignments: list[OfflineAssignment] = Field(default_factory=list)
     intake_completed: bool = False
     intake_method: Optional[str] = Field(
         default=None,
