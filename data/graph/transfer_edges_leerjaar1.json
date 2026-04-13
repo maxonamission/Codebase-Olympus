@@ -960,6 +960,246 @@
       "target_id": "SHA-C-POL-FAMIL",
       "type": "transfer",
       "encompassing_weight": 0.1
+    },
+    {
+      "source_id": "LAT-V-F01-AGO",
+      "target_id": "GRC-V-F01-AGO",
+      "type": "transfer",
+      "encompassing_weight": 0.6
+    },
+    {
+      "source_id": "GRC-V-F01-AGO",
+      "target_id": "LAT-V-F01-AGO",
+      "type": "transfer",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-V-F01-DO",
+      "target_id": "GRC-V-F01-DIDOMI",
+      "type": "transfer",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-V-F01-DIDOMI",
+      "target_id": "LAT-V-F01-DO",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-V-F01-EGO",
+      "target_id": "GRC-V-F01-EGO",
+      "type": "transfer",
+      "encompassing_weight": 0.7
+    },
+    {
+      "source_id": "GRC-V-F01-EGO",
+      "target_id": "LAT-V-F01-EGO",
+      "type": "transfer",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-V-F01-FERO",
+      "target_id": "GRC-V-F01-PHERO",
+      "type": "transfer",
+      "encompassing_weight": 0.6
+    },
+    {
+      "source_id": "GRC-V-F01-PHERO",
+      "target_id": "LAT-V-F01-FERO",
+      "type": "transfer",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-V-F01-PATER",
+      "target_id": "GRC-V-F01-PATER",
+      "type": "transfer",
+      "encompassing_weight": 0.7
+    },
+    {
+      "source_id": "GRC-V-F01-PATER",
+      "target_id": "LAT-V-F01-PATER",
+      "type": "transfer",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-V-F01-MATER",
+      "target_id": "GRC-V-F01-METER",
+      "type": "transfer",
+      "encompassing_weight": 0.6
+    },
+    {
+      "source_id": "GRC-V-F01-METER",
+      "target_id": "LAT-V-F01-MATER",
+      "type": "transfer",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-V-F01-MAGNUS",
+      "target_id": "GRC-V-F01-MEGAS",
+      "type": "transfer",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-V-F01-MEGAS",
+      "target_id": "LAT-V-F01-MAGNUS",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-V-F01-NOVUS",
+      "target_id": "GRC-V-F01-NEOS",
+      "type": "transfer",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-V-F01-NEOS",
+      "target_id": "LAT-V-F01-NOVUS",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-V-F01-SUM",
+      "target_id": "GRC-V-F01-EIMI",
+      "type": "transfer",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-V-F01-EIMI",
+      "target_id": "LAT-V-F01-SUM",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-V-F01-TU",
+      "target_id": "GRC-V-F01-SU",
+      "type": "transfer",
+      "encompassing_weight": 0.6
+    },
+    {
+      "source_id": "GRC-V-F01-SU",
+      "target_id": "LAT-V-F01-TU",
+      "type": "transfer",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-V-F01-NOMEN",
+      "target_id": "GRC-V-F02-ONOMA",
+      "type": "transfer",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-V-F02-ONOMA",
+      "target_id": "LAT-V-F01-NOMEN",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-V-F02-VINUM",
+      "target_id": "GRC-V-F02-OINOS",
+      "type": "transfer",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-V-F02-OINOS",
+      "target_id": "LAT-V-F02-VINUM",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-V-F01-DEUS",
+      "target_id": "GRC-V-F01-THEOS",
+      "type": "transfer",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-V-F01-THEOS",
+      "target_id": "LAT-V-F01-DEUS",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-V-F01-AQUA",
+      "target_id": "GRC-V-F02-HUDOR",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-V-F02-HUDOR",
+      "target_id": "LAT-V-F01-AQUA",
+      "type": "transfer",
+      "encompassing_weight": 0.1
+    },
+    {
+      "source_id": "LAT-V-F01-BELLUM",
+      "target_id": "GRC-V-F02-POLEMO",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-V-F02-POLEMO",
+      "target_id": "LAT-V-F01-BELLUM",
+      "type": "transfer",
+      "encompassing_weight": 0.1
+    },
+    {
+      "source_id": "LAT-V-F01-CIVIS",
+      "target_id": "GRC-V-F02-POLITS",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-V-F02-POLITS",
+      "target_id": "LAT-V-F01-CIVIS",
+      "type": "transfer",
+      "encompassing_weight": 0.1
+    },
+    {
+      "source_id": "LAT-V-F01-TERRA",
+      "target_id": "GRC-V-F01-GE",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-V-F01-GE",
+      "target_id": "LAT-V-F01-TERRA",
+      "type": "transfer",
+      "encompassing_weight": 0.1
+    },
+    {
+      "source_id": "LAT-V-F01-AMO",
+      "target_id": "GRC-V-F02-PHILEO",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-V-F02-PHILEO",
+      "target_id": "LAT-V-F01-AMO",
+      "type": "transfer",
+      "encompassing_weight": 0.1
+    },
+    {
+      "source_id": "LAT-V-F01-DICO",
+      "target_id": "GRC-V-F01-LEGO",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-V-F01-LEGO",
+      "target_id": "LAT-V-F01-DICO",
+      "type": "transfer",
+      "encompassing_weight": 0.1
+    },
+    {
+      "source_id": "LAT-V-F01-VIDEO",
+      "target_id": "GRC-V-F01-HORAO",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-V-F01-HORAO",
+      "target_id": "LAT-V-F01-VIDEO",
+      "type": "transfer",
+      "encompassing_weight": 0.1
     }
   ]
 }

@@ -127,7 +127,7 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 **Doel:** Cross-linguïstische verbindingen (type `transfer`) tussen Latijn en Grieks.
 **Geschat:** ~100 edges
 **Afhankelijkheden:** A1, A2, A3, A4, A5 (alle knopen moeten bestaan)
-**Status:** in progress
+**Status:** done
 **Bestand:** `data/graph/transfer_edges_leerjaar1.json`
 
 | Story | Titel | Edges | Status |
@@ -135,8 +135,8 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 | A6-01 | Naamvalsysteem — LAT ↔ GRC naamvallen | 30 | done |
 | A6-02 | Werkwoordsmorfologie — praesens/imperfectum/aoristus parallellen | 30 | done |
 | A6-03 | Cultuur — gedeelde mythologie en geschiedenis | 20 | done |
-| A6-04 | Vocabulaire — cognaten en leenwoorden | ~20 | todo |
-| A6-05 | Validatie transfer-edges — geen cycli, weights correct | — | todo |
+| A6-04 | Vocabulaire — cognaten en leenwoorden | 20 | done |
+| A6-05 | Validatie transfer-edges — geen cycli, weights correct | — | done |
 
 ---
 
