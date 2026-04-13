@@ -176,14 +176,14 @@ Audio-laag voor multi-modale taalverwerving. Gefaseerd: TTS in fase 3, STT in fa
 **Doel:** Nieuwe oefentypen die audio gebruiken: luister-en-herken, luister-en-schrijf. Frontend audioplayer.
 **Geschat:** ~400 items + frontend component
 **Afhankelijkheden:** B1 (audio moet bestaan)
-**Status:** todo
+**Status:** done
 
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
 | B2-01 | ItemType uitbreiden — luister-oefentypen | — | done |
 | B2-02 | Audio player component — frontend | — | done |
-| B2-03 | Luister-en-herken oefeningen genereren | ~200 items | todo |
-| B2-04 | Luister-en-schrijf oefeningen genereren | ~200 items | todo |
+| B2-03 | Luister-en-herken oefeningen genereren | 450 items | done |
+| B2-04 | Luister-en-schrijf oefeningen genereren | 450 items | done |
 
 ---
 
