@@ -72,14 +72,14 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 **Doel:** Grieks alfabet als onboarding-subgraph. Prerequisite voor alle GRC-grammaticaknopen.
 **Geschat:** ~40 knopen
 **Afhankelijkheden:** Geen
-**Status:** todo
+**Status:** done
 **Bestand:** `data/graph/grc_alfabet.json`
 
 | Story | Titel | Knopen | Status |
 |-------|-------|--------|--------|
-| A3-01 | Letters herkenning — 24 letters, majuskel + minuskel | ~24 | todo |
-| A3-02 | Diakritische tekens — spiritus, accenten, iota subscriptum | ~8 | todo |
-| A3-03 | Lettercombinaties en uitspraak — diphthongen, γγ=ng, speciale combinaties | ~8 | todo |
+| A3-01 | Letters herkenning — 24 letters, majuskel + minuskel | 29 | done |
+| A3-02 | Diakritische tekens — spiritus, accenten, iota subscriptum | 10 | done |
+| A3-03 | Lettercombinaties en uitspraak — diphthongen, γγ=ng, speciale combinaties | 8 | done |
 
 ---
 

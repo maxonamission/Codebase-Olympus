@@ -1,0 +1,906 @@
+{
+  "knopen": [
+    {
+      "id": "GRC-G-FONL-ALFA-INTRO",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Het Griekse alfabet",
+      "beschrijving": "Introductie van het Griekse alfabet: 24 letters, elk met een majuskel- en minuskelvorm, naam en klankwaarde.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": false,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-GRP1",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Groep 1: identieke letters",
+      "beschrijving": "Letters die identiek zijn aan het Latijnse alfabet in vorm en klank: Α/α (alfa), Β/β (bèta), Ε/ε (epsilon), Ζ/ζ (dzèta), Ι/ι (iota), Κ/κ (kappa), Μ/μ (mu), Ν/ν (nu), Ο/ο (omikron), Τ/τ (tau).",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-ALFA",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Α α — alfa",
+      "beschrijving": "De letter alfa (Α/α): korte of lange a-klank, eerste letter van het alfabet.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-BETA",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Β β — bèta",
+      "beschrijving": "De letter bèta (Β/β): b-klank, visueel herkenbaar vanuit het Latijnse alfabet.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-GAMMA",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Γ γ — gamma",
+      "beschrijving": "De letter gamma (Γ/γ): g-klank, afwijkende vorm ten opzichte van Latijnse G.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-DELTA",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Δ δ — delta",
+      "beschrijving": "De letter delta (Δ/δ): d-klank, majuskel driehoekig, minuskel gebogen.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-EPSIL",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Ε ε — epsilon",
+      "beschrijving": "De letter epsilon (Ε/ε): korte e-klank, visueel herkenbaar vanuit Latijns E.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-DZETA",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Ζ ζ — dzèta",
+      "beschrijving": "De letter dzèta (Ζ/ζ): dz-klank (Erasmiaans), visueel herkenbaar vanuit Latijns Z.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-ETA",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Η η — èta",
+      "beschrijving": "De letter èta (Η/η): lange e-klank, lijkt op Latijnse H maar is een klinker.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-THETA",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Θ θ — thèta",
+      "beschrijving": "De letter thèta (Θ/θ): geaspireerde t-klank (th), geen Latijns equivalent.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-IOTA",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Ι ι — iota",
+      "beschrijving": "De letter iota (Ι/ι): i-klank (kort of lang), visueel herkenbaar vanuit Latijns I.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-KAPPA",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Κ κ — kappa",
+      "beschrijving": "De letter kappa (Κ/κ): k-klank, visueel herkenbaar vanuit Latijns K.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-LAMBD",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Λ λ — lambda",
+      "beschrijving": "De letter lambda (Λ/λ): l-klank, afwijkende vorm ten opzichte van Latijnse L.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-MU",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Μ μ — mu",
+      "beschrijving": "De letter mu (Μ/μ): m-klank, visueel herkenbaar vanuit Latijns M.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-NU",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Ν ν — nu",
+      "beschrijving": "De letter nu (Ν/ν): n-klank, visueel herkenbaar vanuit Latijns N.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-XI",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Ξ ξ — xi",
+      "beschrijving": "De letter xi (Ξ/ξ): ks-klank, unieke Griekse letter zonder Latijns equivalent.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-OMIKR",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Ο ο — omikron",
+      "beschrijving": "De letter omikron (Ο/ο): korte o-klank, visueel herkenbaar vanuit Latijns O.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-PI",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Π π — pi",
+      "beschrijving": "De letter pi (Π/π): p-klank, lijkt op Latijns P maar minuskel wijkt af.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-RHO",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Ρ ρ — rho",
+      "beschrijving": "De letter rho (Ρ/ρ): r-klank, lijkt op Latijns P maar klinkt als R.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-SIGMA",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Σ σ/ς — sigma",
+      "beschrijving": "De letter sigma (Σ/σ/ς): s-klank, twee minuskelvormen — σ middenin en ς aan het woordeinde.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-TAU",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Τ τ — tau",
+      "beschrijving": "De letter tau (Τ/τ): t-klank, visueel herkenbaar vanuit Latijns T.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-UPSIL",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Υ υ — upsilon",
+      "beschrijving": "De letter upsilon (Υ/υ): u-klank (Erasmiaans uu), lijkt op Latijns Y.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-PHI",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Φ φ — phi",
+      "beschrijving": "De letter phi (Φ/φ): geaspireerde p-klank (ph), geen Latijns equivalent.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-CHI",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Χ χ — chi",
+      "beschrijving": "De letter chi (Χ/χ): geaspireerde k-klank (ch), lijkt op Latijns X maar klinkt anders.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-PSI",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Ψ ψ — psi",
+      "beschrijving": "De letter psi (Ψ/ψ): ps-klank, unieke Griekse letter zonder Latijns equivalent.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-OMEGA",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Ω ω — omega",
+      "beschrijving": "De letter omega (Ω/ω): lange o-klank, laatste letter van het alfabet.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-GRP2",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Groep 2: afwijkende vorm, bekende klank",
+      "beschrijving": "Letters met een afwijkende Griekse vorm maar een herkenbare klank: Γ/γ (gamma=g), Δ/δ (delta=d), Λ/λ (lambda=l), Π/π (pi=p), Σ/σ/ς (sigma=s), Ω/ω (omega=lange o).",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-GRP3",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Groep 3: valse vrienden",
+      "beschrijving": "Letters die op een Latijnse letter lijken maar anders klinken: Η/η (lijkt op H, klinkt als lange e), Ρ/ρ (lijkt op P, klinkt als r), Χ/χ (lijkt op X, klinkt als ch), Υ/υ (lijkt op Y, klinkt als uu).",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-ALFA-GRP4",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Groep 4: unieke Griekse letters",
+      "beschrijving": "Letters zonder Latijns equivalent: Θ/θ (thèta=th), Ξ/ξ (xi=ks), Φ/φ (phi=ph), Ψ/ψ (psi=ps).",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-DIAK-INTRO",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Diakritische tekens",
+      "beschrijving": "Overzicht van de diakritische tekens in polytonic Grieks: spiritus, accenten en iota subscriptum.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": false,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-DIAK-SPIR",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Spiritus asper en lenis",
+      "beschrijving": "Elke beginklinker en initiële ρ draagt een spiritus: asper (ἁ = h-klank) of lenis (ἀ = geen h-klank).",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-DIAK-ASPER",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Spiritus asper",
+      "beschrijving": "De spiritus asper (῾) geeft een h-klank aan: ὁ klinkt als 'ho', ῥ als 'rh'.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-DIAK-LENIS",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Spiritus lenis",
+      "beschrijving": "De spiritus lenis (᾿) geeft aan dat er geen h-klank is: ἀ klinkt als zuivere a.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-DIAK-ACC",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Accenten — acutus, gravis, circumflexus",
+      "beschrijving": "Grieks kent drie accenten die de toonhoogte aangeven: acutus (´ stijgend), gravis (` dalend) en circumflexus (῀ stijgend-dalend).",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-DIAK-ACUT",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Acutus (oxeia)",
+      "beschrijving": "De acutus (´) markeert een stijgende toon en kan op de laatste drie lettergrepen staan.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-DIAK-GRAV",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Gravis (bareia)",
+      "beschrijving": "De gravis (`) vervangt de acutus op de ultima als het woord niet aan het zinseinde staat.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-DIAK-CIRCU",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Circumflexus (perispomene)",
+      "beschrijving": "De circumflexus (῀) kan alleen op een lange lettergreep staan, op de ultima of paenultima.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-DIAK-IOTSU",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Iota subscriptum",
+      "beschrijving": "Een kleine iota onder α, η of ω (ᾳ, ῃ, ῳ) die niet wordt uitgesproken maar de oorspronkelijke diftong aanduidt.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-DIAK-CORON",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Coronis",
+      "beschrijving": "De coronis (᾽) markeert crasis — samentrekking van twee woorden, bijv. κἀγώ uit καὶ ἐγώ.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-KOMBI-INTRO",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Lettercombinaties en uitspraak",
+      "beschrijving": "Overzicht van Griekse lettercombinaties: diftongendiftongen, nasaal-gamma en dubbele medeklinkers.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": false,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-KOMBI-DIFTE",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Echte diftongen",
+      "beschrijving": "Diftongen met korte eerste klinker: αι (ai), ει (ei), οι (oi), αυ (au), ευ (eu), ου (oe/oo).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-KOMBI-DIFTO",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Oneigenlijke diftongen",
+      "beschrijving": "Diftongen met lange eerste klinker: ηυ (eeu), υι (ui), plus ᾳ/ῃ/ῳ (iota subscriptum-vormen).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-KOMBI-NASAL",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Nasaal-gamma (γγ, γκ, γχ, γξ)",
+      "beschrijving": "Gamma vóór een andere velaar klinkt als n: γγ=ng, γκ=nk, γχ=nch, γξ=nks.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-KOMBI-DUBBL",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Dubbele medeklinkers",
+      "beschrijving": "De drie dubbele medeklinkers: ζ (dz), ξ (ks) en ψ (ps) vertegenwoordigen elk twee klanken.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-KOMBI-ASPIR",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Geaspireerde medeklinkers",
+      "beschrijving": "De drie geaspireerden θ (th), φ (ph), χ (ch) worden met een h-achtige uitblazing uitgesproken.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-KOMBI-KWANT",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Klinkerlengte — kort vs. lang",
+      "beschrijving": "Het onderscheid kort/lang: ε en ο zijn altijd kort, η en ω altijd lang, α/ι/υ wisselend.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-FONL-KOMBI-LEESV",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Leesvaardigheid — woorden lezen",
+      "beschrijving": "Integratie van alle letters, diakritische tekens en lettercombinaties: Griekse woorden hardop lezen.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "GRC-G-FONL-ALFA-INTRO",
+      "target_id": "GRC-G-FONL-ALFA-GRP1",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-INTRO",
+      "target_id": "GRC-G-FONL-ALFA-GRP2",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-INTRO",
+      "target_id": "GRC-G-FONL-ALFA-GRP3",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-INTRO",
+      "target_id": "GRC-G-FONL-ALFA-GRP4",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP1",
+      "target_id": "GRC-G-FONL-ALFA-ALFA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP1",
+      "target_id": "GRC-G-FONL-ALFA-BETA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP1",
+      "target_id": "GRC-G-FONL-ALFA-EPSIL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP1",
+      "target_id": "GRC-G-FONL-ALFA-DZETA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP1",
+      "target_id": "GRC-G-FONL-ALFA-IOTA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP1",
+      "target_id": "GRC-G-FONL-ALFA-KAPPA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP1",
+      "target_id": "GRC-G-FONL-ALFA-MU",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP1",
+      "target_id": "GRC-G-FONL-ALFA-NU",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP1",
+      "target_id": "GRC-G-FONL-ALFA-OMIKR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP1",
+      "target_id": "GRC-G-FONL-ALFA-TAU",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP2",
+      "target_id": "GRC-G-FONL-ALFA-GAMMA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP2",
+      "target_id": "GRC-G-FONL-ALFA-DELTA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP2",
+      "target_id": "GRC-G-FONL-ALFA-LAMBD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP2",
+      "target_id": "GRC-G-FONL-ALFA-PI",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP2",
+      "target_id": "GRC-G-FONL-ALFA-SIGMA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP2",
+      "target_id": "GRC-G-FONL-ALFA-OMEGA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP3",
+      "target_id": "GRC-G-FONL-ALFA-ETA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP3",
+      "target_id": "GRC-G-FONL-ALFA-RHO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP3",
+      "target_id": "GRC-G-FONL-ALFA-CHI",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP3",
+      "target_id": "GRC-G-FONL-ALFA-UPSIL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP4",
+      "target_id": "GRC-G-FONL-ALFA-THETA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP4",
+      "target_id": "GRC-G-FONL-ALFA-XI",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP4",
+      "target_id": "GRC-G-FONL-ALFA-PHI",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP4",
+      "target_id": "GRC-G-FONL-ALFA-PSI",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP1",
+      "target_id": "GRC-G-FONL-ALFA-GRP2",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP2",
+      "target_id": "GRC-G-FONL-ALFA-GRP3",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP3",
+      "target_id": "GRC-G-FONL-ALFA-GRP4",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-ALFA-GRP4",
+      "target_id": "GRC-G-FONL-DIAK-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-FONL-DIAK-INTRO",
+      "target_id": "GRC-G-FONL-DIAK-SPIR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-FONL-DIAK-SPIR",
+      "target_id": "GRC-G-FONL-DIAK-ASPER",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-G-FONL-DIAK-SPIR",
+      "target_id": "GRC-G-FONL-DIAK-LENIS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-G-FONL-DIAK-INTRO",
+      "target_id": "GRC-G-FONL-DIAK-ACC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-FONL-DIAK-ACC",
+      "target_id": "GRC-G-FONL-DIAK-ACUT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-G-FONL-DIAK-ACC",
+      "target_id": "GRC-G-FONL-DIAK-GRAV",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-G-FONL-DIAK-ACC",
+      "target_id": "GRC-G-FONL-DIAK-CIRCU",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-G-FONL-DIAK-INTRO",
+      "target_id": "GRC-G-FONL-DIAK-IOTSU",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-DIAK-INTRO",
+      "target_id": "GRC-G-FONL-DIAK-CORON",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-FONL-DIAK-INTRO",
+      "target_id": "GRC-G-FONL-KOMBI-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-FONL-KOMBI-INTRO",
+      "target_id": "GRC-G-FONL-KOMBI-DIFTE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-FONL-KOMBI-INTRO",
+      "target_id": "GRC-G-FONL-KOMBI-DIFTO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-KOMBI-DIFTE",
+      "target_id": "GRC-G-FONL-KOMBI-DIFTO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-KOMBI-INTRO",
+      "target_id": "GRC-G-FONL-KOMBI-NASAL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-KOMBI-INTRO",
+      "target_id": "GRC-G-FONL-KOMBI-DUBBL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-KOMBI-INTRO",
+      "target_id": "GRC-G-FONL-KOMBI-ASPIR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-KOMBI-INTRO",
+      "target_id": "GRC-G-FONL-KOMBI-KWANT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-KOMBI-DIFTE",
+      "target_id": "GRC-G-FONL-KOMBI-LEESV",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-KOMBI-DIFTO",
+      "target_id": "GRC-G-FONL-KOMBI-LEESV",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-KOMBI-NASAL",
+      "target_id": "GRC-G-FONL-KOMBI-LEESV",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-FONL-KOMBI-DUBBL",
+      "target_id": "GRC-G-FONL-KOMBI-LEESV",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-FONL-KOMBI-ASPIR",
+      "target_id": "GRC-G-FONL-KOMBI-LEESV",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-FONL-KOMBI-KWANT",
+      "target_id": "GRC-G-FONL-KOMBI-LEESV",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-FONL-DIAK-IOTSU",
+      "target_id": "GRC-G-FONL-KOMBI-DIFTO",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    }
+  ]
+}
