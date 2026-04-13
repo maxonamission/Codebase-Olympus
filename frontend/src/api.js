@@ -39,3 +39,23 @@ export function register(email, password) {
     body: JSON.stringify({ email, password }),
   });
 }
+
+export function startSession() {
+  return apiFetch('/session/start', { method: 'POST' });
+}
+
+export function submitAnswer(sessionId, { responseType, responseTimeMs, answer }) {
+  return apiFetch('/session/answer', {
+    method: 'POST',
+    body: JSON.stringify({
+      session_id: sessionId,
+      response_type: responseType,
+      response_time_ms: responseTimeMs,
+      answer,
+    }),
+  });
+}
+
+export function getSessionSummary(sessionId) {
+  return apiFetch(`/session/${sessionId}/summary`);
+}

@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
+import Session from './pages/Session'
 
 function ProtectedRoute({ children }) {
   const token = localStorage.getItem('token')
@@ -19,6 +20,14 @@ export default function App() {
         element={
           <ProtectedRoute>
             <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/session"
+        element={
+          <ProtectedRoute>
+            <Session />
           </ProtectedRoute>
         }
       />
