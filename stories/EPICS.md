@@ -340,7 +340,7 @@ Zie `docs/Prompt_spoor_c.md` voor de volledige prompt.
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
 | C2-01 | Content voor concept-INTRO knopen | 8 bestanden | done |
-| C2-02 | Content voor declinatie-paradigma's | ~6 bestanden | doing |
+| C2-02 | Content voor declinatie-paradigma's | 6 bestanden | done |
 | C2-03 | Content voor werkwoord-paradigma's | ~8 bestanden | doing |
 | C2-04 | Content voor syntaxis | ~6 bestanden | todo |
 | C2-05 | Content voor pronomina + adjectieven | ~6 bestanden | todo |
