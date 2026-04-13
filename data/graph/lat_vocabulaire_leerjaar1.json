@@ -5803,6 +5803,204 @@
       "target_id": "LAT-V-F02-NIHIL",
       "type": "prerequisite",
       "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F01-ATQUE",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F01-AUT",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F01-ET",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F01-IAM",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F01-NEQUE",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F01-NON",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F01-SED",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F01-TAMEN",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F01-UT",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F02-AUTEM",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F02-BENE",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F02-ENIM",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F02-ETIAM",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F02-IBI",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F02-NUNC",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F02-OLIM",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F02-QUAM",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F02-QUIDEM",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F02-QUOQUE",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F02-SAEPE",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F02-SEMPER",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F02-STATIM",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F02-SUBITO",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F02-TUM",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F03-DEINDE",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F03-DIU",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F03-FRUSTRA",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F03-IGITUR",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F03-NAM",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F03-NUMQUAM",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F03-QUOD",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F03-TANDEM",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-V-F03-UBI",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
     }
   ]
 }
