@@ -55,6 +55,13 @@ class ItemType(StrEnum):
     ANALYSE = "analyse"
     SYNTHESE = "synthese"
     CONTEXTUEEL = "contextueel"
+    OFFLINE_SCHRIJVEN = "offline_schrijven"
+
+
+class VerificatieMethode(StrEnum):
+    SELF_REPORT = "self_report"
+    OCR = "ocr"
+    MENTOR_REVIEW = "mentor_review"
 
 
 class Richting(StrEnum):
@@ -88,6 +95,14 @@ class Item(BaseModel):
     audio_ref: Optional[str] = Field(
         default=None,
         description="Path to audio file in data/audio/, e.g. LAT-V-F01-ESSE.mp3",
+    )
+    verificatie_methode: Optional[VerificatieMethode] = Field(
+        default=None,
+        description="For offline_schrijven items: how the result is verified.",
+    )
+    verwacht_resultaat: Optional[str] = Field(
+        default=None,
+        description="For offline_schrijven items: the expected written result (paradigm, translation, etc.).",
     )
 
 

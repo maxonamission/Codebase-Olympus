@@ -213,3 +213,81 @@ Audio-laag voor multi-modale taalverwerving. Gefaseerd: TTS in fase 3, STT in fa
 | B4-01 | Montreal Forced Aligner evaluatie en integratie | — | todo |
 | B4-02 | Pronunciation scoring model | — | todo |
 | B4-03 | Pronunciation feedback integratie in oefentypen | — | todo |
+
+---
+
+## Spoor B-offline — Schrijfoefeningen, OCR en mentor-portfolio
+
+Offline schrijven als volwaardige oefenvorm met OCR-verificatie en mentor-portfolio.
+
+### Uitvoervolgorde
+
+1. **B5** (offline oefentypen) — datamodel, self-report, PDF-werkbladen, scheduling
+2. **B6** (OCR-pipeline) — camera-capture, Grieks alfabet, paradigma's, vertalingen
+3. **B7** (LLM-vertaalbeoordeling) — OCR + LLM-feedback op vertalingen
+4. **B8** (mentor-portfolio) — selectie, PDF-generatie, Addisco-integratie
+
+---
+
+## Epic B5: Offline oefentypen en scheduling
+
+**Doel:** Offline schrijfoefeningen als gepland onderdeel van de learning loop. Self-report flow, printbare werkbladen, scheduling aan einde sessie.
+**Geschat:** ~100 items + scheduling-logica + PDF-generatie
+**Afhankelijkheden:** A1, A2, A3 (grammaticaknopen moeten bestaan)
+**Status:** todo
+
+| Story | Titel | Geschat | Status |
+|-------|-------|---------|--------|
+| B5-01 | Offline oefentype en scheduling-integratie | — | todo |
+| B5-02 | Self-report flow en BKT-integratie met verlaagde confidence | — | todo |
+| B5-03 | Printbare PDF-werkbladen genereren | — | todo |
+| B5-04 | Paradigma-schrijfoefeningen genereren | ~50 items | todo |
+| B5-05 | Vertaal-op-papier oefeningen genereren | ~30 items | todo |
+| B5-06 | Grieks alfabet schrijfoefeningen | ~24 items | todo |
+
+---
+
+## Epic B6: OCR-pipeline
+
+**Doel:** OCR-verificatie voor offline schrijfwerk waar dat beslissend is voor progressie: Grieks alfabet (blokkerend), paradigmatabellen (progressie-kritisch), vertalingen (feedback-kritisch).
+**Geschat:** OCR-pipeline + BKT-integratie
+**Afhankelijkheden:** B5 (offline items moeten bestaan), fase 5
+**Status:** todo
+
+| Story | Titel | Geschat | Status |
+|-------|-------|---------|--------|
+| B6-01 | Camera-capture component — frontend | — | todo |
+| B6-02 | OCR Grieks alfabet — letterherkenning | — | todo |
+| B6-03 | OCR paradigmatabellen — gestructureerde herkenning | — | todo |
+| B6-04 | OCR Nederlandse vertalingen — handschriftherkenning | — | todo |
+| B6-05 | BKT-integratie OCR — confidence-mapping | — | todo |
+
+---
+
+## Epic B7: LLM-vertaalbeoordeling
+
+**Doel:** Na OCR-transcriptie van een vertaling: LLM vergelijkt met modelantwoord en genereert inhoudelijke feedback per foutcategorie.
+**Geschat:** LLM-pipeline + foutcategorisatie
+**Afhankelijkheden:** B6 (OCR moet werken), Claude API
+**Status:** todo
+
+| Story | Titel | Geschat | Status |
+|-------|-------|---------|--------|
+| B7-01 | LLM-vergelijking met modelantwoord | — | todo |
+| B7-02 | Foutcategorisatie en feedback-generatie | — | todo |
+| B7-03 | Integratie met BKT en conditional completion | — | todo |
+
+---
+
+## Epic B8: Mentor-portfolio
+
+**Doel:** Maandelijks portfolio met selectie van meest informatieve offline werk. PDF-export, optionele Addisco-integratie.
+**Geschat:** Selectie-algoritme + PDF-generatie
+**Afhankelijkheden:** B5, B6 (offline werk en OCR-resultaten)
+**Status:** todo
+
+| Story | Titel | Geschat | Status |
+|-------|-------|---------|--------|
+| B8-01 | Portfolio-selectie-algoritme | — | todo |
+| B8-02 | Portfolio PDF-generatie | — | todo |
+| B8-03 | Mentor-dashboard en Addisco-integratie | — | todo |
