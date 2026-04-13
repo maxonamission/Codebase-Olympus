@@ -1043,6 +1043,102 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "items": []
+    },
+    {
+      "id": "GRC-G-SYNT-PREP-INTRO",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Voorzetsels",
+      "beschrijving": "Introductie Griekse voorzetsels: elk voorzetsel vereist een specifieke naamval (gen., dat. of acc.), sommige meerdere.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-SYNT-PREP-GEN",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Voorzetsels met genitivus",
+      "beschrijving": "Veelvoorkomende voorzetsels met genitivus: ἐκ/ἐξ (uit), ἀπό (van...af), πρό (voor), ἀντί (in plaats van).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-SYNT-PREP-DAT",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Voorzetsels met dativus",
+      "beschrijving": "Veelvoorkomende voorzetsels met dativus: ἐν (in), σύν (met). Dativus drukt plaats of gezelschap uit.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-SYNT-PREP-ACC",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Voorzetsels met accusativus",
+      "beschrijving": "Veelvoorkomende voorzetsels met accusativus: εἰς (naar...toe), ἀνά (omhoog), διά (door, wegens met acc.).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-SYNT-PREP-MRV",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Voorzetsels met meerdere naamvallen",
+      "beschrijving": "Voorzetsels als περί (+gen: over, +acc: rond), ἐπί, παρά, πρός, μετά, ὑπό. Betekenis wisselt per naamval.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-SYNT-WRDVLG",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Woordvolgorde",
+      "beschrijving": "Het Grieks heeft vrije woordvolgorde; nadruk bepaalt de positie. Werkwoord vaak op de tweede plaats, maar niet verplicht.",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-SYNT-ONTK",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Ontkenning: οὐ en μή",
+      "beschrijving": "Twee ontkenningspartikels: οὐ (bij indicativus, feitelijk) en μή (bij conjunctivus, optativus, imperativus, infinitivus).",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-SYNT-ZINSBOUW",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Basissyntaxis",
+      "beschrijving": "Zinsdelen in het Grieks: onderwerp (nom.), gezegde (persoonsvorm), lijdend voorwerp (acc.), meewerkend voorwerp (dat.).",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
     }
   ],
   "edges": [
@@ -2101,6 +2197,102 @@
       "target_id": "GRC-G-SYNT-PRON-GEBR",
       "type": "prerequisite",
       "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-MORF-NAAMVAL-INTRO",
+      "target_id": "GRC-G-SYNT-PREP-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-G-SYNT-PREP-GEN",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-G-SYNT-PREP-DAT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-G-SYNT-PREP-ACC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-SYNT-GEN-FUNCTIE",
+      "target_id": "GRC-G-SYNT-PREP-GEN",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-DAT-FUNCTIE",
+      "target_id": "GRC-G-SYNT-PREP-DAT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-ACC-FUNCTIE",
+      "target_id": "GRC-G-SYNT-PREP-ACC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-GEN",
+      "target_id": "GRC-G-SYNT-PREP-MRV",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-DAT",
+      "target_id": "GRC-G-SYNT-PREP-MRV",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-ACC",
+      "target_id": "GRC-G-SYNT-PREP-MRV",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-G-SYNT-WRDVLG",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-MORF-NAAMVAL-INTRO",
+      "target_id": "GRC-G-SYNT-WRDVLG",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-SYNT-WRDVLG",
+      "target_id": "GRC-G-SYNT-ONTK",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-G-SYNT-ONTK",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-MORF-NAAMVAL-INTRO",
+      "target_id": "GRC-G-SYNT-ZINSBOUW",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-G-SYNT-ZINSBOUW",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
     }
   ]
 }
