@@ -335,7 +335,7 @@ Zie `docs/Prompt_spoor_c.md` voor de volledige prompt.
 **Doel:** Didactische markdown content voor de kernknopen: paradigmatabellen, uitleg, herkenningstips.
 **Geschat:** ~34 bestanden
 **Afhankelijkheden:** A1 (knopen moeten bestaan)
-**Status:** in progress
+**Status:** done
 
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
@@ -343,4 +343,4 @@ Zie `docs/Prompt_spoor_c.md` voor de volledige prompt.
 | C2-02 | Content voor declinatie-paradigma's | 6 bestanden | done |
 | C2-03 | Content voor werkwoord-paradigma's | 8 bestanden | done |
 | C2-04 | Content voor syntaxis | 6 bestanden | done |
-| C2-05 | Content voor pronomina + adjectieven | ~6 bestanden | doing |
+| C2-05 | Content voor pronomina + adjectieven | 6 bestanden | done |
