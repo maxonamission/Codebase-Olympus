@@ -37,6 +37,26 @@
           "feedback": "εἰμί = zijn.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-EIMI.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-EIMI-002",
+          "knoop_ids": [
+            "GRC-V-F01-EIMI"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.96,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-EIMI.wav",
+            "hint": "zijn"
+          },
+          "antwoord": "εἰμί",
+          "feedback": "Het woord is 'εἰμί' (zijn).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-EIMI.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-EIMI.wav"
@@ -76,6 +96,26 @@
           },
           "antwoord": "en, ook",
           "feedback": "καί = en, ook.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-KAI.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-KAI-002",
+          "knoop_ids": [
+            "GRC-V-F01-KAI"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.04,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-KAI.wav",
+            "hint": "en, ook"
+          },
+          "antwoord": "καί",
+          "feedback": "Het woord is 'καί' (en, ook).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-KAI.wav"
         }
@@ -119,6 +159,26 @@
           "feedback": "ὁ = de, het (lidwoord).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-ARTIC.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-ARTIC-002",
+          "knoop_ids": [
+            "GRC-V-F01-ARTIC"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.41,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-ARTIC.wav",
+            "hint": "de, het (lidwoord)"
+          },
+          "antwoord": "ὁ",
+          "feedback": "Het woord is 'ὁ' (de, het (lidwoord)).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ARTIC.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-ARTIC.wav"
@@ -158,6 +218,26 @@
           },
           "antwoord": "zelf",
           "feedback": "αὐτός = zelf.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-AUTOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-AUTOS-002",
+          "knoop_ids": [
+            "GRC-V-F01-AUTOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.33,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-AUTOS.wav",
+            "hint": "zelf"
+          },
+          "antwoord": "αὐτός",
+          "feedback": "Het woord is 'αὐτός' (zelf).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-AUTOS.wav"
         }
@@ -201,6 +281,26 @@
           "feedback": "δέ = maar, en.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-DE.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-DE-002",
+          "knoop_ids": [
+            "GRC-V-F01-DE"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-DE.wav",
+            "hint": "maar, en"
+          },
+          "antwoord": "δέ",
+          "feedback": "Het woord is 'δέ' (maar, en).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-DE.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-DE.wav"
@@ -240,6 +340,26 @@
           },
           "antwoord": "deze, dit",
           "feedback": "οὗτος = deze, dit.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-HOUTOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-HOUTOS-002",
+          "knoop_ids": [
+            "GRC-V-F01-HOUTOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.02,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-HOUTOS.wav",
+            "hint": "deze, dit"
+          },
+          "antwoord": "οὗτος",
+          "feedback": "Het woord is 'οὗτος' (deze, dit).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-HOUTOS.wav"
         }
@@ -283,6 +403,26 @@
           "feedback": "ἐγώ = ik.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-EGO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-EGO-002",
+          "knoop_ids": [
+            "GRC-V-F01-EGO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.34,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-EGO.wav",
+            "hint": "ik"
+          },
+          "antwoord": "ἐγώ",
+          "feedback": "Het woord is 'ἐγώ' (ik).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-EGO.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-EGO.wav"
@@ -322,6 +462,26 @@
           },
           "antwoord": "niet",
           "feedback": "οὐ = niet.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-OU.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-OU-002",
+          "knoop_ids": [
+            "GRC-V-F01-OU"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.13,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-OU.wav",
+            "hint": "niet"
+          },
+          "antwoord": "οὐ",
+          "feedback": "Het woord is 'οὐ' (niet).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-OU.wav"
         }
@@ -365,6 +525,26 @@
           "feedback": "τις = iemand, een zeker.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-TIS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-TIS-002",
+          "knoop_ids": [
+            "GRC-V-F01-TIS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.63,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-TIS.wav",
+            "hint": "iemand, een zeker"
+          },
+          "antwoord": "τις",
+          "feedback": "Het woord is 'τις' (iemand, een zeker).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-TIS.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-TIS.wav"
@@ -404,6 +584,26 @@
           },
           "antwoord": "in",
           "feedback": "ἐν = in.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-EN.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-EN-002",
+          "knoop_ids": [
+            "GRC-V-F01-EN"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.04,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-EN.wav",
+            "hint": "in"
+          },
+          "antwoord": "ἐν",
+          "feedback": "Het woord is 'ἐν' (in).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-EN.wav"
         }
@@ -447,6 +647,26 @@
           "feedback": "ἔχω = hebben, houden.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-ECHO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-ECHO-002",
+          "knoop_ids": [
+            "GRC-V-F01-ECHO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.33,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-ECHO.wav",
+            "hint": "hebben, houden"
+          },
+          "antwoord": "ἔχω",
+          "feedback": "Het woord is 'ἔχω' (hebben, houden).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ECHO.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-ECHO.wav"
@@ -486,6 +706,26 @@
           },
           "antwoord": "zeggen",
           "feedback": "λέγω = zeggen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-LEGO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-LEGO-002",
+          "knoop_ids": [
+            "GRC-V-F01-LEGO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.76,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-LEGO.wav",
+            "hint": "zeggen"
+          },
+          "antwoord": "λέγω",
+          "feedback": "Het woord is 'λέγω' (zeggen).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-LEGO.wav"
         }
@@ -529,6 +769,26 @@
           "feedback": "γίγνομαι = worden, ontstaan.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-GIGNM.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-GIGNM-002",
+          "knoop_ids": [
+            "GRC-V-F01-GIGNM"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.04,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-GIGNM.wav",
+            "hint": "worden, ontstaan"
+          },
+          "antwoord": "γίγνομαι",
+          "feedback": "Het woord is 'γίγνομαι' (worden, ontstaan).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-GIGNM.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-GIGNM.wav"
@@ -568,6 +828,26 @@
           },
           "antwoord": "maken, doen",
           "feedback": "ποιέω = maken, doen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-POIEO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-POIEO-002",
+          "knoop_ids": [
+            "GRC-V-F01-POIEO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-POIEO.wav",
+            "hint": "maken, doen"
+          },
+          "antwoord": "ποιέω",
+          "feedback": "Het woord is 'ποιέω' (maken, doen).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-POIEO.wav"
         }
@@ -611,6 +891,26 @@
           "feedback": "ὡς = dat, zoals, opdat.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-HOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-HOS-002",
+          "knoop_ids": [
+            "GRC-V-F01-HOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.97,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-HOS.wav",
+            "hint": "dat, zoals, opdat"
+          },
+          "antwoord": "ὡς",
+          "feedback": "Het woord is 'ὡς' (dat, zoals, opdat).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-HOS.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-HOS.wav"
@@ -650,6 +950,26 @@
           },
           "antwoord": "maar",
           "feedback": "ἀλλά = maar.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ALLA.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-ALLA-002",
+          "knoop_ids": [
+            "GRC-V-F01-ALLA"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.82,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-ALLA.wav",
+            "hint": "maar"
+          },
+          "antwoord": "ἀλλά",
+          "feedback": "Het woord is 'ἀλλά' (maar).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-ALLA.wav"
         }
@@ -693,6 +1013,26 @@
           "feedback": "γάρ = want.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-GAR.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-GAR-002",
+          "knoop_ids": [
+            "GRC-V-F01-GAR"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.33,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-GAR.wav",
+            "hint": "want"
+          },
+          "antwoord": "γάρ",
+          "feedback": "Het woord is 'γάρ' (want).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-GAR.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-GAR.wav"
@@ -732,6 +1072,26 @@
           },
           "antwoord": "uit",
           "feedback": "ἐκ = uit.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-EK.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-EK-002",
+          "knoop_ids": [
+            "GRC-V-F01-EK"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.88,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-EK.wav",
+            "hint": "uit"
+          },
+          "antwoord": "ἐκ",
+          "feedback": "Het woord is 'ἐκ' (uit).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-EK.wav"
         }
@@ -775,6 +1135,26 @@
           "feedback": "πρός = naar, bij, tegenover.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-PROS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-PROS-002",
+          "knoop_ids": [
+            "GRC-V-F01-PROS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.21,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-PROS.wav",
+            "hint": "naar, bij, tegenover"
+          },
+          "antwoord": "πρός",
+          "feedback": "Het woord is 'πρός' (naar, bij, tegenover).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PROS.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-PROS.wav"
@@ -814,6 +1194,26 @@
           },
           "antwoord": "op, naar, bij",
           "feedback": "ἐπί = op, naar, bij.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-EPI.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-EPI-002",
+          "knoop_ids": [
+            "GRC-V-F01-EPI"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.01,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-EPI.wav",
+            "hint": "op, naar, bij"
+          },
+          "antwoord": "ἐπί",
+          "feedback": "Het woord is 'ἐπί' (op, naar, bij).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-EPI.wav"
         }
@@ -857,6 +1257,26 @@
           "feedback": "σύ = jij.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-SU.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-SU-002",
+          "knoop_ids": [
+            "GRC-V-F01-SU"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.21,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-SU.wav",
+            "hint": "jij"
+          },
+          "antwoord": "σύ",
+          "feedback": "Het woord is 'σύ' (jij).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-SU.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-SU.wav"
@@ -896,6 +1316,26 @@
           },
           "antwoord": "die, dat (ginds)",
           "feedback": "ἐκεῖνος = die, dat (ginds).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-EKEINO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-EKEINO-002",
+          "knoop_ids": [
+            "GRC-V-F01-EKEINO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.05,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-EKEINO.wav",
+            "hint": "die, dat (ginds)"
+          },
+          "antwoord": "ἐκεῖνος",
+          "feedback": "Het woord is 'ἐκεῖνος' (die, dat (ginds)).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-EKEINO.wav"
         }
@@ -939,6 +1379,26 @@
           "feedback": "θεός = god.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-THEOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-THEOS-002",
+          "knoop_ids": [
+            "GRC-V-F01-THEOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.51,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-THEOS.wav",
+            "hint": "god"
+          },
+          "antwoord": "θεός",
+          "feedback": "Het woord is 'θεός' (god).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-THEOS.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-THEOS.wav"
@@ -978,6 +1438,26 @@
           },
           "antwoord": "mens",
           "feedback": "ἄνθρωπος = mens.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ANTHRO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-ANTHRO-002",
+          "knoop_ids": [
+            "GRC-V-F01-ANTHRO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.23,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-ANTHRO.wav",
+            "hint": "mens"
+          },
+          "antwoord": "ἄνθρωπος",
+          "feedback": "Het woord is 'ἄνθρωπος' (mens).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-ANTHRO.wav"
         }
@@ -1021,6 +1501,26 @@
           "feedback": "πόλις = stad, staat.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-POLIS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-POLIS-002",
+          "knoop_ids": [
+            "GRC-V-F01-POLIS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.44,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-POLIS.wav",
+            "hint": "stad, staat"
+          },
+          "antwoord": "πόλις",
+          "feedback": "Het woord is 'πόλις' (stad, staat).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-POLIS.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-POLIS.wav"
@@ -1060,6 +1560,26 @@
           },
           "antwoord": "woord, rede, verhaal",
           "feedback": "λόγος = woord, rede, verhaal.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-LOGOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-LOGOS-002",
+          "knoop_ids": [
+            "GRC-V-F01-LOGOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-LOGOS.wav",
+            "hint": "woord, rede, verhaal"
+          },
+          "antwoord": "λόγος",
+          "feedback": "Het woord is 'λόγος' (woord, rede, verhaal).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-LOGOS.wav"
         }
@@ -1103,6 +1623,26 @@
           "feedback": "γῆ = aarde, land.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-GE.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-GE-002",
+          "knoop_ids": [
+            "GRC-V-F01-GE"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.14,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-GE.wav",
+            "hint": "aarde, land"
+          },
+          "antwoord": "γῆ",
+          "feedback": "Het woord is 'γῆ' (aarde, land).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-GE.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-GE.wav"
@@ -1142,6 +1682,26 @@
           },
           "antwoord": "man",
           "feedback": "ἀνήρ = man.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ANER.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-ANER-002",
+          "knoop_ids": [
+            "GRC-V-F01-ANER"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.15,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-ANER.wav",
+            "hint": "man"
+          },
+          "antwoord": "ἀνήρ",
+          "feedback": "Het woord is 'ἀνήρ' (man).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-ANER.wav"
         }
@@ -1185,6 +1745,26 @@
           "feedback": "πατήρ = vader.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-PATER.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-PATER-002",
+          "knoop_ids": [
+            "GRC-V-F01-PATER"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.27,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-PATER.wav",
+            "hint": "vader"
+          },
+          "antwoord": "πατήρ",
+          "feedback": "Het woord is 'πατήρ' (vader).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PATER.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-PATER.wav"
@@ -1224,6 +1804,26 @@
           },
           "antwoord": "koning",
           "feedback": "βασιλεύς = koning.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-BASILE.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-BASILE-002",
+          "knoop_ids": [
+            "GRC-V-F01-BASILE"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.91,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-BASILE.wav",
+            "hint": "koning"
+          },
+          "antwoord": "βασιλεύς",
+          "feedback": "Het woord is 'βασιλεύς' (koning).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-BASILE.wav"
         }
@@ -1267,6 +1867,26 @@
           "feedback": "μέγας = groot.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-MEGAS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-MEGAS-002",
+          "knoop_ids": [
+            "GRC-V-F01-MEGAS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.21,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-MEGAS.wav",
+            "hint": "groot"
+          },
+          "antwoord": "μέγας",
+          "feedback": "Het woord is 'μέγας' (groot).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-MEGAS.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-MEGAS.wav"
@@ -1306,6 +1926,26 @@
           },
           "antwoord": "veel",
           "feedback": "πολύς = veel.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-POLUS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-POLUS-002",
+          "knoop_ids": [
+            "GRC-V-F01-POLUS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.09,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-POLUS.wav",
+            "hint": "veel"
+          },
+          "antwoord": "πολύς",
+          "feedback": "Het woord is 'πολύς' (veel).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-POLUS.wav"
         }
@@ -1349,6 +1989,26 @@
           "feedback": "ἀγαθός = goed, dapper.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-AGATHO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-AGATHO-002",
+          "knoop_ids": [
+            "GRC-V-F01-AGATHO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-AGATHO.wav",
+            "hint": "goed, dapper"
+          },
+          "antwoord": "ἀγαθός",
+          "feedback": "Het woord is 'ἀγαθός' (goed, dapper).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-AGATHO.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-AGATHO.wav"
@@ -1388,6 +2048,26 @@
           },
           "antwoord": "alle, elk, geheel",
           "feedback": "πᾶς = alle, elk, geheel.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PAS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-PAS-002",
+          "knoop_ids": [
+            "GRC-V-F01-PAS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.46,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-PAS.wav",
+            "hint": "alle, elk, geheel"
+          },
+          "antwoord": "πᾶς",
+          "feedback": "Het woord is 'πᾶς' (alle, elk, geheel).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-PAS.wav"
         }
@@ -1431,6 +2111,26 @@
           "feedback": "κατά = naar beneden, volgens.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-KATA.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-KATA-002",
+          "knoop_ids": [
+            "GRC-V-F01-KATA"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.57,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-KATA.wav",
+            "hint": "naar beneden, volgens"
+          },
+          "antwoord": "κατά",
+          "feedback": "Het woord is 'κατά' (naar beneden, volgens).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-KATA.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-KATA.wav"
@@ -1470,6 +2170,26 @@
           },
           "antwoord": "om, over, rondom",
           "feedback": "περί = om, over, rondom.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PERI.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-PERI-002",
+          "knoop_ids": [
+            "GRC-V-F01-PERI"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.83,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-PERI.wav",
+            "hint": "om, over, rondom"
+          },
+          "antwoord": "περί",
+          "feedback": "Het woord is 'περί' (om, over, rondom).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-PERI.wav"
         }
@@ -1513,6 +2233,26 @@
           "feedback": "μετά = met.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-META.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-META-002",
+          "knoop_ids": [
+            "GRC-V-F01-META"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.24,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-META.wav",
+            "hint": "met"
+          },
+          "antwoord": "μετά",
+          "feedback": "Het woord is 'μετά' (met).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-META.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-META.wav"
@@ -1552,6 +2292,26 @@
           },
           "antwoord": "door, vanwege",
           "feedback": "διά = door, vanwege.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-DIA.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-DIA-002",
+          "knoop_ids": [
+            "GRC-V-F01-DIA"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.93,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-DIA.wav",
+            "hint": "door, vanwege"
+          },
+          "antwoord": "διά",
+          "feedback": "Het woord is 'διά' (door, vanwege).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-DIA.wav"
         }
@@ -1595,6 +2355,26 @@
           "feedback": "παρά = van, bij, langs.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-PARA.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-PARA-002",
+          "knoop_ids": [
+            "GRC-V-F01-PARA"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.29,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-PARA.wav",
+            "hint": "van, bij, langs"
+          },
+          "antwoord": "παρά",
+          "feedback": "Het woord is 'παρά' (van, bij, langs).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PARA.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-PARA.wav"
@@ -1634,6 +2414,26 @@
           },
           "antwoord": "onder, door",
           "feedback": "ὑπό = onder, door.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-HUPO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-HUPO-002",
+          "knoop_ids": [
+            "GRC-V-F01-HUPO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.87,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-HUPO.wav",
+            "hint": "onder, door"
+          },
+          "antwoord": "ὑπό",
+          "feedback": "Het woord is 'ὑπό' (onder, door).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-HUPO.wav"
         }
@@ -1677,6 +2477,26 @@
           "feedback": "ἀπό = van, vanaf.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-APO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-APO-002",
+          "knoop_ids": [
+            "GRC-V-F01-APO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.06,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-APO.wav",
+            "hint": "van, vanaf"
+          },
+          "antwoord": "ἀπό",
+          "feedback": "Het woord is 'ἀπό' (van, vanaf).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-APO.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-APO.wav"
@@ -1716,6 +2536,26 @@
           },
           "antwoord": "naar, in",
           "feedback": "εἰς = naar, in.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-EIS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-EIS-002",
+          "knoop_ids": [
+            "GRC-V-F01-EIS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.07,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-EIS.wav",
+            "hint": "naar, in"
+          },
+          "antwoord": "εἰς",
+          "feedback": "Het woord is 'εἰς' (naar, in).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-EIS.wav"
         }
@@ -1759,6 +2599,26 @@
           "feedback": "σύν = met, samen met.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-SUN.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-SUN-002",
+          "knoop_ids": [
+            "GRC-V-F01-SUN"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.34,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-SUN.wav",
+            "hint": "met, samen met"
+          },
+          "antwoord": "σύν",
+          "feedback": "Het woord is 'σύν' (met, samen met).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-SUN.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-SUN.wav"
@@ -1798,6 +2658,26 @@
           },
           "antwoord": "leren kennen, weten",
           "feedback": "γιγνώσκω = leren kennen, weten.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-GIGNSK.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-GIGNSK-002",
+          "knoop_ids": [
+            "GRC-V-F01-GIGNSK"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.43,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-GIGNSK.wav",
+            "hint": "leren kennen, weten"
+          },
+          "antwoord": "γιγνώσκω",
+          "feedback": "Het woord is 'γιγνώσκω' (leren kennen, weten).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-GIGNSK.wav"
         }
@@ -1841,6 +2721,26 @@
           "feedback": "βαίνω = gaan, stappen.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-BAINO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-BAINO-002",
+          "knoop_ids": [
+            "GRC-V-F01-BAINO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.12,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-BAINO.wav",
+            "hint": "gaan, stappen"
+          },
+          "antwoord": "βαίνω",
+          "feedback": "Het woord is 'βαίνω' (gaan, stappen).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-BAINO.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-BAINO.wav"
@@ -1880,6 +2780,26 @@
           },
           "antwoord": "dragen, brengen",
           "feedback": "φέρω = dragen, brengen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PHERO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-PHERO-002",
+          "knoop_ids": [
+            "GRC-V-F01-PHERO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.35,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-PHERO.wav",
+            "hint": "dragen, brengen"
+          },
+          "antwoord": "φέρω",
+          "feedback": "Het woord is 'φέρω' (dragen, brengen).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-PHERO.wav"
         }
@@ -1923,6 +2843,26 @@
           "feedback": "ἔρχομαι = komen, gaan.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-ERCHOM.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-ERCHOM-002",
+          "knoop_ids": [
+            "GRC-V-F01-ERCHOM"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.15,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-ERCHOM.wav",
+            "hint": "komen, gaan"
+          },
+          "antwoord": "ἔρχομαι",
+          "feedback": "Het woord is 'ἔρχομαι' (komen, gaan).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ERCHOM.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-ERCHOM.wav"
@@ -1962,6 +2902,26 @@
           },
           "antwoord": "zien",
           "feedback": "ὁράω = zien.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-HORAO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-HORAO-002",
+          "knoop_ids": [
+            "GRC-V-F01-HORAO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.42,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-HORAO.wav",
+            "hint": "zien"
+          },
+          "antwoord": "ὁράω",
+          "feedback": "Het woord is 'ὁράω' (zien).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-HORAO.wav"
         }
@@ -2005,6 +2965,26 @@
           "feedback": "δίδωμι = geven.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-DIDOMI.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-DIDOMI-002",
+          "knoop_ids": [
+            "GRC-V-F01-DIDOMI"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.95,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-DIDOMI.wav",
+            "hint": "geven"
+          },
+          "antwoord": "δίδωμι",
+          "feedback": "Het woord is 'δίδωμι' (geven).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-DIDOMI.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-DIDOMI.wav"
@@ -2044,6 +3024,26 @@
           },
           "antwoord": "schrijven",
           "feedback": "γράφω = schrijven.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-GRAPHO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-GRAPHO-002",
+          "knoop_ids": [
+            "GRC-V-F01-GRAPHO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.55,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-GRAPHO.wav",
+            "hint": "schrijven"
+          },
+          "antwoord": "γράφω",
+          "feedback": "Het woord is 'γράφω' (schrijven).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-GRAPHO.wav"
         }
@@ -2087,6 +3087,26 @@
           "feedback": "ἄγω = leiden, voeren.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-AGO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-AGO-002",
+          "knoop_ids": [
+            "GRC-V-F01-AGO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.56,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-AGO.wav",
+            "hint": "leiden, voeren"
+          },
+          "antwoord": "ἄγω",
+          "feedback": "Het woord is 'ἄγω' (leiden, voeren).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-AGO.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-AGO.wav"
@@ -2126,6 +3146,26 @@
           },
           "antwoord": "zenden, sturen",
           "feedback": "πέμπω = zenden, sturen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PEMPO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-PEMPO-002",
+          "knoop_ids": [
+            "GRC-V-F01-PEMPO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.31,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-PEMPO.wav",
+            "hint": "zenden, sturen"
+          },
+          "antwoord": "πέμπω",
+          "feedback": "Het woord is 'πέμπω' (zenden, sturen).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-PEMPO.wav"
         }
@@ -2169,6 +3209,26 @@
           "feedback": "τίθημι = plaatsen, leggen.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-TITHEM.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-TITHEM-002",
+          "knoop_ids": [
+            "GRC-V-F01-TITHEM"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-TITHEM.wav",
+            "hint": "plaatsen, leggen"
+          },
+          "antwoord": "τίθημι",
+          "feedback": "Het woord is 'τίθημι' (plaatsen, leggen).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-TITHEM.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-TITHEM.wav"
@@ -2208,6 +3268,26 @@
           },
           "antwoord": "gevecht, slag",
           "feedback": "μάχη = gevecht, slag.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-MACHE.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-MACHE-002",
+          "knoop_ids": [
+            "GRC-V-F01-MACHE"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-MACHE.wav",
+            "hint": "gevecht, slag"
+          },
+          "antwoord": "μάχη",
+          "feedback": "Het woord is 'μάχη' (gevecht, slag).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-MACHE.wav"
         }
@@ -2251,6 +3331,26 @@
           "feedback": "ψυχή = ziel, leven.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-PSYCHE.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-PSYCHE-002",
+          "knoop_ids": [
+            "GRC-V-F01-PSYCHE"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.97,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-PSYCHE.wav",
+            "hint": "ziel, leven"
+          },
+          "antwoord": "ψυχή",
+          "feedback": "Het woord is 'ψυχή' (ziel, leven).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PSYCHE.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-PSYCHE.wav"
@@ -2290,6 +3390,26 @@
           },
           "antwoord": "begin, heerschappij",
           "feedback": "ἀρχή = begin, heerschappij.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ARCHE.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-ARCHE-002",
+          "knoop_ids": [
+            "GRC-V-F01-ARCHE"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.91,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-ARCHE.wav",
+            "hint": "begin, heerschappij"
+          },
+          "antwoord": "ἀρχή",
+          "feedback": "Het woord is 'ἀρχή' (begin, heerschappij).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-ARCHE.wav"
         }
@@ -2333,6 +3453,26 @@
           "feedback": "δίκη = recht, gerechtigheid.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-DIKE.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-DIKE-002",
+          "knoop_ids": [
+            "GRC-V-F01-DIKE"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.26,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-DIKE.wav",
+            "hint": "recht, gerechtigheid"
+          },
+          "antwoord": "δίκη",
+          "feedback": "Het woord is 'δίκη' (recht, gerechtigheid).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-DIKE.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-DIKE.wav"
@@ -2372,6 +3512,26 @@
           },
           "antwoord": "eiland",
           "feedback": "νῆσος = eiland.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-NESOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-NESOS-002",
+          "knoop_ids": [
+            "GRC-V-F01-NESOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.09,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-NESOS.wav",
+            "hint": "eiland"
+          },
+          "antwoord": "νῆσος",
+          "feedback": "Het woord is 'νῆσος' (eiland).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-NESOS.wav"
         }
@@ -2415,6 +3575,26 @@
           "feedback": "ὁδός = weg, reis.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-HODOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-HODOS-002",
+          "knoop_ids": [
+            "GRC-V-F01-HODOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.25,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-HODOS.wav",
+            "hint": "weg, reis"
+          },
+          "antwoord": "ὁδός",
+          "feedback": "Het woord is 'ὁδός' (weg, reis).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-HODOS.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-HODOS.wav"
@@ -2454,6 +3634,26 @@
           },
           "antwoord": "paard",
           "feedback": "ἵππος = paard.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-HIPPOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-HIPPOS-002",
+          "knoop_ids": [
+            "GRC-V-F01-HIPPOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.57,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-HIPPOS.wav",
+            "hint": "paard"
+          },
+          "antwoord": "ἵππος",
+          "feedback": "Het woord is 'ἵππος' (paard).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-HIPPOS.wav"
         }
@@ -2497,6 +3697,26 @@
           "feedback": "στρατηγός = veldheer, strateeg.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-STRTGS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-STRTGS-002",
+          "knoop_ids": [
+            "GRC-V-F01-STRTGS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.48,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-STRTGS.wav",
+            "hint": "veldheer, strateeg"
+          },
+          "antwoord": "στρατηγός",
+          "feedback": "Het woord is 'στρατηγός' (veldheer, strateeg).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-STRTGS.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-STRTGS.wav"
@@ -2536,6 +3756,26 @@
           },
           "antwoord": "zee",
           "feedback": "θάλαττα = zee.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-THALAT.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-THALAT-002",
+          "knoop_ids": [
+            "GRC-V-F01-THALAT"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.96,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-THALAT.wav",
+            "hint": "zee"
+          },
+          "antwoord": "θάλαττα",
+          "feedback": "Het woord is 'θάλαττα' (zee).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-THALAT.wav"
         }
@@ -2579,6 +3819,26 @@
           "feedback": "μήτηρ = moeder.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-METER.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-METER-002",
+          "knoop_ids": [
+            "GRC-V-F01-METER"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.84,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-METER.wav",
+            "hint": "moeder"
+          },
+          "antwoord": "μήτηρ",
+          "feedback": "Het woord is 'μήτηρ' (moeder).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-METER.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-METER.wav"
@@ -2618,6 +3878,26 @@
           },
           "antwoord": "kind, jongen",
           "feedback": "παῖς = kind, jongen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PAIS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-PAIS-002",
+          "knoop_ids": [
+            "GRC-V-F01-PAIS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.03,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-PAIS.wav",
+            "hint": "kind, jongen"
+          },
+          "antwoord": "παῖς",
+          "feedback": "Het woord is 'παῖς' (kind, jongen).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-PAIS.wav"
         }
@@ -2661,6 +3941,26 @@
           "feedback": "νύξ = nacht.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-NUX.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-NUX-002",
+          "knoop_ids": [
+            "GRC-V-F01-NUX"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.26,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-NUX.wav",
+            "hint": "nacht"
+          },
+          "antwoord": "νύξ",
+          "feedback": "Het woord is 'νύξ' (nacht).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-NUX.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-NUX.wav"
@@ -2700,6 +4000,26 @@
           },
           "antwoord": "vrees, angst",
           "feedback": "φόβος = vrees, angst.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-PHOBOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-PHOBOS-002",
+          "knoop_ids": [
+            "GRC-V-F01-PHOBOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.16,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-PHOBOS.wav",
+            "hint": "vrees, angst"
+          },
+          "antwoord": "φόβος",
+          "feedback": "Het woord is 'φόβος' (vrees, angst).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-PHOBOS.wav"
         }
@@ -2743,6 +4063,26 @@
           "feedback": "ἔργον = werk, daad.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-ERGON.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-ERGON-002",
+          "knoop_ids": [
+            "GRC-V-F01-ERGON"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.34,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-ERGON.wav",
+            "hint": "werk, daad"
+          },
+          "antwoord": "ἔργον",
+          "feedback": "Het woord is 'ἔργον' (werk, daad).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-ERGON.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-ERGON.wav"
@@ -2782,6 +4122,26 @@
           },
           "antwoord": "mooi, goed",
           "feedback": "καλός = mooi, goed.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-KALOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-KALOS-002",
+          "knoop_ids": [
+            "GRC-V-F01-KALOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.05,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-KALOS.wav",
+            "hint": "mooi, goed"
+          },
+          "antwoord": "καλός",
+          "feedback": "Het woord is 'καλός' (mooi, goed).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-KALOS.wav"
         }
@@ -2825,6 +4185,26 @@
           "feedback": "κακός = slecht, lelijk.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-KAKOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-KAKOS-002",
+          "knoop_ids": [
+            "GRC-V-F01-KAKOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.47,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-KAKOS.wav",
+            "hint": "slecht, lelijk"
+          },
+          "antwoord": "κακός",
+          "feedback": "Het woord is 'κακός' (slecht, lelijk).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-KAKOS.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-KAKOS.wav"
@@ -2864,6 +4244,26 @@
           },
           "antwoord": "jong, nieuw",
           "feedback": "νέος = jong, nieuw.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-NEOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-NEOS-002",
+          "knoop_ids": [
+            "GRC-V-F01-NEOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-NEOS.wav",
+            "hint": "jong, nieuw"
+          },
+          "antwoord": "νέος",
+          "feedback": "Het woord is 'νέος' (jong, nieuw).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-NEOS.wav"
         }
@@ -2907,6 +4307,26 @@
           "feedback": "μικρός = klein.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-MIKROS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-MIKROS-002",
+          "knoop_ids": [
+            "GRC-V-F01-MIKROS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.32,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-MIKROS.wav",
+            "hint": "klein"
+          },
+          "antwoord": "μικρός",
+          "feedback": "Het woord is 'μικρός' (klein).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-MIKROS.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-MIKROS.wav"
@@ -2946,6 +4366,26 @@
           },
           "antwoord": "wijs",
           "feedback": "σοφός = wijs.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-SOPHOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-SOPHOS-002",
+          "knoop_ids": [
+            "GRC-V-F01-SOPHOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.41,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-SOPHOS.wav",
+            "hint": "wijs"
+          },
+          "antwoord": "σοφός",
+          "feedback": "Het woord is 'σοφός' (wijs).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-SOPHOS.wav"
         }
@@ -2989,6 +4429,26 @@
           "feedback": "δεινός = vreselijk, geweldig.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-DEINOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-DEINOS-002",
+          "knoop_ids": [
+            "GRC-V-F01-DEINOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.31,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-DEINOS.wav",
+            "hint": "vreselijk, geweldig"
+          },
+          "antwoord": "δεινός",
+          "feedback": "Het woord is 'δεινός' (vreselijk, geweldig).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-DEINOS.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-DEINOS.wav"
@@ -3028,6 +4488,26 @@
           },
           "antwoord": "enerzijds, weliswaar",
           "feedback": "μέν = enerzijds, weliswaar.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-MEN.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-MEN-002",
+          "knoop_ids": [
+            "GRC-V-F01-MEN"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.47,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-MEN.wav",
+            "hint": "enerzijds, weliswaar"
+          },
+          "antwoord": "μέν",
+          "feedback": "Het woord is 'μέν' (enerzijds, weliswaar).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-MEN.wav"
         }
@@ -3071,6 +4551,26 @@
           "feedback": "οὖν = dus, dan.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F01-OUN.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-OUN-002",
+          "knoop_ids": [
+            "GRC-V-F01-OUN"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.98,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F01-OUN.wav",
+            "hint": "dus, dan"
+          },
+          "antwoord": "οὖν",
+          "feedback": "Het woord is 'οὖν' (dus, dan).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F01-OUN.wav"
         }
       ],
       "audio_ref": "GRC-V-F01-OUN.wav"
@@ -3110,6 +4610,26 @@
           },
           "antwoord": "nemen, pakken",
           "feedback": "λαμβάνω = nemen, pakken.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-LAMBAN.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-LAMBAN-002",
+          "knoop_ids": [
+            "GRC-V-F02-LAMBAN"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.59,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-LAMBAN.wav",
+            "hint": "nemen, pakken"
+          },
+          "antwoord": "λαμβάνω",
+          "feedback": "Het woord is 'λαμβάνω' (nemen, pakken).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-LAMBAN.wav"
         }
@@ -3153,6 +4673,26 @@
           "feedback": "εὑρίσκω = vinden.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-HEURSK.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-HEURSK-002",
+          "knoop_ids": [
+            "GRC-V-F02-HEURSK"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.37,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-HEURSK.wav",
+            "hint": "vinden"
+          },
+          "antwoord": "εὑρίσκω",
+          "feedback": "Het woord is 'εὑρίσκω' (vinden).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-HEURSK.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-HEURSK.wav"
@@ -3192,6 +4732,26 @@
           },
           "antwoord": "horen",
           "feedback": "ἀκούω = horen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-AKOUO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-AKOUO-002",
+          "knoop_ids": [
+            "GRC-V-F02-AKOUO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.69,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-AKOUO.wav",
+            "hint": "horen"
+          },
+          "antwoord": "ἀκούω",
+          "feedback": "Het woord is 'ἀκούω' (horen).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-AKOUO.wav"
         }
@@ -3235,6 +4795,26 @@
           "feedback": "φεύγω = vluchten.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-PHEUGO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-PHEUGO-002",
+          "knoop_ids": [
+            "GRC-V-F02-PHEUGO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-PHEUGO.wav",
+            "hint": "vluchten"
+          },
+          "antwoord": "φεύγω",
+          "feedback": "Het woord is 'φεύγω' (vluchten).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-PHEUGO.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-PHEUGO.wav"
@@ -3274,6 +4854,26 @@
           },
           "antwoord": "werpen, gooien",
           "feedback": "βάλλω = werpen, gooien.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-BALLO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-BALLO-002",
+          "knoop_ids": [
+            "GRC-V-F02-BALLO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.37,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-BALLO.wav",
+            "hint": "werpen, gooien"
+          },
+          "antwoord": "βάλλω",
+          "feedback": "Het woord is 'βάλλω' (werpen, gooien).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-BALLO.wav"
         }
@@ -3317,6 +4917,26 @@
           "feedback": "κελεύω = bevelen.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-KELEUO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-KELEUO-002",
+          "knoop_ids": [
+            "GRC-V-F02-KELEUO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.84,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-KELEUO.wav",
+            "hint": "bevelen"
+          },
+          "antwoord": "κελεύω",
+          "feedback": "Het woord is 'κελεύω' (bevelen).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-KELEUO.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-KELEUO.wav"
@@ -3356,6 +4976,26 @@
           },
           "antwoord": "verlaten, achterlaten",
           "feedback": "λείπω = verlaten, achterlaten.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-LEIPO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-LEIPO-002",
+          "knoop_ids": [
+            "GRC-V-F02-LEIPO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.39,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-LEIPO.wav",
+            "hint": "verlaten, achterlaten"
+          },
+          "antwoord": "λείπω",
+          "feedback": "Het woord is 'λείπω' (verlaten, achterlaten).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-LEIPO.wav"
         }
@@ -3399,6 +5039,26 @@
           "feedback": "μανθάνω = leren.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-MANTHN.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-MANTHN-002",
+          "knoop_ids": [
+            "GRC-V-F02-MANTHN"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.88,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-MANTHN.wav",
+            "hint": "leren"
+          },
+          "antwoord": "μανθάνω",
+          "feedback": "Het woord is 'μανθάνω' (leren).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-MANTHN.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-MANTHN.wav"
@@ -3438,6 +5098,26 @@
           },
           "antwoord": "overtuigen",
           "feedback": "πείθω = overtuigen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-PEITHO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-PEITHO-002",
+          "knoop_ids": [
+            "GRC-V-F02-PEITHO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.35,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-PEITHO.wav",
+            "hint": "overtuigen"
+          },
+          "antwoord": "πείθω",
+          "feedback": "Het woord is 'πείθω' (overtuigen).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-PEITHO.wav"
         }
@@ -3481,6 +5161,26 @@
           "feedback": "τρέπω = keren, wenden.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-TREPO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-TREPO-002",
+          "knoop_ids": [
+            "GRC-V-F02-TREPO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-TREPO.wav",
+            "hint": "keren, wenden"
+          },
+          "antwoord": "τρέπω",
+          "feedback": "Het woord is 'τρέπω' (keren, wenden).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-TREPO.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-TREPO.wav"
@@ -3520,6 +5220,26 @@
           },
           "antwoord": "rennen",
           "feedback": "τρέχω = rennen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-TRECHO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-TRECHO-002",
+          "knoop_ids": [
+            "GRC-V-F02-TRECHO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.33,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-TRECHO.wav",
+            "hint": "rennen"
+          },
+          "antwoord": "τρέχω",
+          "feedback": "Het woord is 'τρέχω' (rennen).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-TRECHO.wav"
         }
@@ -3563,6 +5283,26 @@
           "feedback": "νομίζω = menen, geloven.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-NOMIZO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-NOMIZO-002",
+          "knoop_ids": [
+            "GRC-V-F02-NOMIZO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-NOMIZO.wav",
+            "hint": "menen, geloven"
+          },
+          "antwoord": "νομίζω",
+          "feedback": "Het woord is 'νομίζω' (menen, geloven).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-NOMIZO.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-NOMIZO.wav"
@@ -3602,6 +5342,26 @@
           },
           "antwoord": "willen",
           "feedback": "βούλομαι = willen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-BOULOM.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-BOULOM-002",
+          "knoop_ids": [
+            "GRC-V-F02-BOULOM"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.76,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-BOULOM.wav",
+            "hint": "willen"
+          },
+          "antwoord": "βούλομαι",
+          "feedback": "Het woord is 'βούλομαι' (willen).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-BOULOM.wav"
         }
@@ -3645,6 +5405,26 @@
           "feedback": "δείκνυμι = tonen, aanwijzen.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-DEIKNU.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-DEIKNU-002",
+          "knoop_ids": [
+            "GRC-V-F02-DEIKNU"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.14,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-DEIKNU.wav",
+            "hint": "tonen, aanwijzen"
+          },
+          "antwoord": "δείκνυμι",
+          "feedback": "Het woord is 'δείκνυμι' (tonen, aanwijzen).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-DEIKNU.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-DEIKNU.wav"
@@ -3684,6 +5464,26 @@
           },
           "antwoord": "liefhebben, houden van",
           "feedback": "φιλέω = liefhebben, houden van.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-PHILEO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-PHILEO-002",
+          "knoop_ids": [
+            "GRC-V-F02-PHILEO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.07,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-PHILEO.wav",
+            "hint": "liefhebben, houden van"
+          },
+          "antwoord": "φιλέω",
+          "feedback": "Het woord is 'φιλέω' (liefhebben, houden van).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-PHILEO.wav"
         }
@@ -3727,6 +5527,26 @@
           "feedback": "νικάω = overwinnen.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-NIKAO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-NIKAO-002",
+          "knoop_ids": [
+            "GRC-V-F02-NIKAO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.16,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-NIKAO.wav",
+            "hint": "overwinnen"
+          },
+          "antwoord": "νικάω",
+          "feedback": "Het woord is 'νικάω' (overwinnen).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-NIKAO.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-NIKAO.wav"
@@ -3766,6 +5586,26 @@
           },
           "antwoord": "eren",
           "feedback": "τιμάω = eren.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-TIMAO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-TIMAO-002",
+          "knoop_ids": [
+            "GRC-V-F02-TIMAO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.94,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-TIMAO.wav",
+            "hint": "eren"
+          },
+          "antwoord": "τιμάω",
+          "feedback": "Het woord is 'τιμάω' (eren).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-TIMAO.wav"
         }
@@ -3809,6 +5649,26 @@
           "feedback": "ζητέω = zoeken.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-ZETEO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-ZETEO-002",
+          "knoop_ids": [
+            "GRC-V-F02-ZETEO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.19,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-ZETEO.wav",
+            "hint": "zoeken"
+          },
+          "antwoord": "ζητέω",
+          "feedback": "Het woord is 'ζητέω' (zoeken).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ZETEO.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-ZETEO.wav"
@@ -3848,6 +5708,26 @@
           },
           "antwoord": "menen, schijnen",
           "feedback": "δοκέω = menen, schijnen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-DOKEO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-DOKEO-002",
+          "knoop_ids": [
+            "GRC-V-F02-DOKEO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.63,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-DOKEO.wav",
+            "hint": "menen, schijnen"
+          },
+          "antwoord": "δοκέω",
+          "feedback": "Het woord is 'δοκέω' (menen, schijnen).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-DOKEO.wav"
         }
@@ -3891,6 +5771,26 @@
           "feedback": "στρατός = leger.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-STRATO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-STRATO-002",
+          "knoop_ids": [
+            "GRC-V-F02-STRATO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-STRATO.wav",
+            "hint": "leger"
+          },
+          "antwoord": "στρατός",
+          "feedback": "Het woord is 'στρατός' (leger).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-STRATO.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-STRATO.wav"
@@ -3930,6 +5830,26 @@
           },
           "antwoord": "volk",
           "feedback": "δῆμος = volk.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-DEMOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-DEMOS-002",
+          "knoop_ids": [
+            "GRC-V-F02-DEMOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.57,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-DEMOS.wav",
+            "hint": "volk"
+          },
+          "antwoord": "δῆμος",
+          "feedback": "Het woord is 'δῆμος' (volk).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-DEMOS.wav"
         }
@@ -3973,6 +5893,26 @@
           "feedback": "νόμος = wet, gebruik.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-NOMOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-NOMOS-002",
+          "knoop_ids": [
+            "GRC-V-F02-NOMOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.49,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-NOMOS.wav",
+            "hint": "wet, gebruik"
+          },
+          "antwoord": "νόμος",
+          "feedback": "Het woord is 'νόμος' (wet, gebruik).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-NOMOS.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-NOMOS.wav"
@@ -4012,6 +5952,26 @@
           },
           "antwoord": "oorlog",
           "feedback": "πόλεμος = oorlog.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-POLEMO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-POLEMO-002",
+          "knoop_ids": [
+            "GRC-V-F02-POLEMO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.79,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-POLEMO.wav",
+            "hint": "oorlog"
+          },
+          "antwoord": "πόλεμος",
+          "feedback": "Het woord is 'πόλεμος' (oorlog).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-POLEMO.wav"
         }
@@ -4055,6 +6015,26 @@
           "feedback": "τόπος = plaats.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-TOPOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-TOPOS-002",
+          "knoop_ids": [
+            "GRC-V-F02-TOPOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.46,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-TOPOS.wav",
+            "hint": "plaats"
+          },
+          "antwoord": "τόπος",
+          "feedback": "Het woord is 'τόπος' (plaats).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-TOPOS.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-TOPOS.wav"
@@ -4094,6 +6074,26 @@
           },
           "antwoord": "tijd",
           "feedback": "χρόνος = tijd.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-CHRONO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-CHRONO-002",
+          "knoop_ids": [
+            "GRC-V-F02-CHRONO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.29,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-CHRONO.wav",
+            "hint": "tijd"
+          },
+          "antwoord": "χρόνος",
+          "feedback": "Het woord is 'χρόνος' (tijd).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-CHRONO.wav"
         }
@@ -4137,6 +6137,26 @@
           "feedback": "βίος = leven.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-BIOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-BIOS-002",
+          "knoop_ids": [
+            "GRC-V-F02-BIOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.02,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-BIOS.wav",
+            "hint": "leven"
+          },
+          "antwoord": "βίος",
+          "feedback": "Het woord is 'βίος' (leven).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-BIOS.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-BIOS.wav"
@@ -4176,6 +6196,26 @@
           },
           "antwoord": "huis",
           "feedback": "οἶκος = huis.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-OIKOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-OIKOS-002",
+          "knoop_ids": [
+            "GRC-V-F02-OIKOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.08,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-OIKOS.wav",
+            "hint": "huis"
+          },
+          "antwoord": "οἶκος",
+          "feedback": "Het woord is 'οἶκος' (huis).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-OIKOS.wav"
         }
@@ -4219,6 +6259,26 @@
           "feedback": "δῶρον = geschenk.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-DORON.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-DORON-002",
+          "knoop_ids": [
+            "GRC-V-F02-DORON"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.02,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-DORON.wav",
+            "hint": "geschenk"
+          },
+          "antwoord": "δῶρον",
+          "feedback": "Het woord is 'δῶρον' (geschenk).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-DORON.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-DORON.wav"
@@ -4258,6 +6318,26 @@
           },
           "antwoord": "wapen",
           "feedback": "ὅπλον = wapen.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-HOPLON.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-HOPLON-002",
+          "knoop_ids": [
+            "GRC-V-F02-HOPLON"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.81,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-HOPLON.wav",
+            "hint": "wapen"
+          },
+          "antwoord": "ὅπλον",
+          "feedback": "Het woord is 'ὅπλον' (wapen).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-HOPLON.wav"
         }
@@ -4301,6 +6381,26 @@
           "feedback": "ἱερόν = tempel, heiligdom.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-HIERON.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-HIERON-002",
+          "knoop_ids": [
+            "GRC-V-F02-HIERON"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-HIERON.wav",
+            "hint": "tempel, heiligdom"
+          },
+          "antwoord": "ἱερόν",
+          "feedback": "Het woord is 'ἱερόν' (tempel, heiligdom).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-HIERON.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-HIERON.wav"
@@ -4340,6 +6440,26 @@
           },
           "antwoord": "boek",
           "feedback": "βιβλίον = boek.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-BIBLIO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-BIBLIO-002",
+          "knoop_ids": [
+            "GRC-V-F02-BIBLIO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.96,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-BIBLIO.wav",
+            "hint": "boek"
+          },
+          "antwoord": "βιβλίον",
+          "feedback": "Het woord is 'βιβλίον' (boek).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-BIBLIO.wav"
         }
@@ -4383,6 +6503,26 @@
           "feedback": "τέκνον = kind.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-TEKNON.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-TEKNON-002",
+          "knoop_ids": [
+            "GRC-V-F02-TEKNON"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.17,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-TEKNON.wav",
+            "hint": "kind"
+          },
+          "antwoord": "τέκνον",
+          "feedback": "Het woord is 'τέκνον' (kind).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-TEKNON.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-TEKNON.wav"
@@ -4422,6 +6562,26 @@
           },
           "antwoord": "vriend",
           "feedback": "φίλος = vriend.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-PHILOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-PHILOS-002",
+          "knoop_ids": [
+            "GRC-V-F02-PHILOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.65,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-PHILOS.wav",
+            "hint": "vriend"
+          },
+          "antwoord": "φίλος",
+          "feedback": "Het woord is 'φίλος' (vriend).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-PHILOS.wav"
         }
@@ -4465,6 +6625,26 @@
           "feedback": "δοῦλος = slaaf.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-DOULOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-DOULOS-002",
+          "knoop_ids": [
+            "GRC-V-F02-DOULOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.68,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-DOULOS.wav",
+            "hint": "slaaf"
+          },
+          "antwoord": "δοῦλος",
+          "feedback": "Het woord is 'δοῦλος' (slaaf).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-DOULOS.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-DOULOS.wav"
@@ -4504,6 +6684,26 @@
           },
           "antwoord": "marktplein",
           "feedback": "ἀγορά = marktplein.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-AGORA.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-AGORA-002",
+          "knoop_ids": [
+            "GRC-V-F02-AGORA"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.43,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-AGORA.wav",
+            "hint": "marktplein"
+          },
+          "antwoord": "ἀγορά",
+          "feedback": "Het woord is 'ἀγορά' (marktplein).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-AGORA.wav"
         }
@@ -4547,6 +6747,26 @@
           "feedback": "τέχνη = kunst, vaardigheid.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-TECHNE.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-TECHNE-002",
+          "knoop_ids": [
+            "GRC-V-F02-TECHNE"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.31,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-TECHNE.wav",
+            "hint": "kunst, vaardigheid"
+          },
+          "antwoord": "τέχνη",
+          "feedback": "Het woord is 'τέχνη' (kunst, vaardigheid).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-TECHNE.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-TECHNE.wav"
@@ -4586,6 +6806,26 @@
           },
           "antwoord": "deugd, voortreffelijkheid",
           "feedback": "ἀρετή = deugd, voortreffelijkheid.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ARETE.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-ARETE-002",
+          "knoop_ids": [
+            "GRC-V-F02-ARETE"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-ARETE.wav",
+            "hint": "deugd, voortreffelijkheid"
+          },
+          "antwoord": "ἀρετή",
+          "feedback": "Het woord is 'ἀρετή' (deugd, voortreffelijkheid).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-ARETE.wav"
         }
@@ -4629,6 +6869,26 @@
           "feedback": "εἰρήνη = vrede.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-EIRENE.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-EIRENE-002",
+          "knoop_ids": [
+            "GRC-V-F02-EIRENE"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.75,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-EIRENE.wav",
+            "hint": "vrede"
+          },
+          "antwoord": "εἰρήνη",
+          "feedback": "Het woord is 'εἰρήνη' (vrede).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-EIRENE.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-EIRENE.wav"
@@ -4668,6 +6928,26 @@
           },
           "antwoord": "wijsheid",
           "feedback": "σοφία = wijsheid.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-SOPHIA.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-SOPHIA-002",
+          "knoop_ids": [
+            "GRC-V-F02-SOPHIA"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.27,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-SOPHIA.wav",
+            "hint": "wijsheid"
+          },
+          "antwoord": "σοφία",
+          "feedback": "Het woord is 'σοφία' (wijsheid).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-SOPHIA.wav"
         }
@@ -4711,6 +6991,26 @@
           "feedback": "χώρα = land, streek.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-CHORA.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-CHORA-002",
+          "knoop_ids": [
+            "GRC-V-F02-CHORA"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.37,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-CHORA.wav",
+            "hint": "land, streek"
+          },
+          "antwoord": "χώρα",
+          "feedback": "Het woord is 'χώρα' (land, streek).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-CHORA.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-CHORA.wav"
@@ -4750,6 +7050,26 @@
           },
           "antwoord": "dood",
           "feedback": "θάνατος = dood.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-THANAT.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-THANAT-002",
+          "knoop_ids": [
+            "GRC-V-F02-THANAT"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.31,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-THANAT.wav",
+            "hint": "dood"
+          },
+          "antwoord": "θάνατος",
+          "feedback": "Het woord is 'θάνατος' (dood).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-THANAT.wav"
         }
@@ -4793,6 +7113,26 @@
           "feedback": "ὕδωρ = water.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-HUDOR.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-HUDOR-002",
+          "knoop_ids": [
+            "GRC-V-F02-HUDOR"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.45,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-HUDOR.wav",
+            "hint": "water"
+          },
+          "antwoord": "ὕδωρ",
+          "feedback": "Het woord is 'ὕδωρ' (water).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-HUDOR.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-HUDOR.wav"
@@ -4832,6 +7172,26 @@
           },
           "antwoord": "lichaam",
           "feedback": "σῶμα = lichaam.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-SOMA.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-SOMA-002",
+          "knoop_ids": [
+            "GRC-V-F02-SOMA"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.96,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-SOMA.wav",
+            "hint": "lichaam"
+          },
+          "antwoord": "σῶμα",
+          "feedback": "Het woord is 'σῶμα' (lichaam).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-SOMA.wav"
         }
@@ -4875,6 +7235,26 @@
           "feedback": "ὄνομα = naam.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-ONOMA.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-ONOMA-002",
+          "knoop_ids": [
+            "GRC-V-F02-ONOMA"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.91,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-ONOMA.wav",
+            "hint": "naam"
+          },
+          "antwoord": "ὄνομα",
+          "feedback": "Het woord is 'ὄνομα' (naam).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ONOMA.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-ONOMA.wav"
@@ -4914,6 +7294,26 @@
           },
           "antwoord": "vrouw",
           "feedback": "γυνή = vrouw.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-GUNE.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-GUNE-002",
+          "knoop_ids": [
+            "GRC-V-F02-GUNE"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.23,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-GUNE.wav",
+            "hint": "vrouw"
+          },
+          "antwoord": "γυνή",
+          "feedback": "Het woord is 'γυνή' (vrouw).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-GUNE.wav"
         }
@@ -4957,6 +7357,26 @@
           "feedback": "χείρ = hand.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-CHEIR.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-CHEIR-002",
+          "knoop_ids": [
+            "GRC-V-F02-CHEIR"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.14,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-CHEIR.wav",
+            "hint": "hand"
+          },
+          "antwoord": "χείρ",
+          "feedback": "Het woord is 'χείρ' (hand).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-CHEIR.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-CHEIR.wav"
@@ -4996,6 +7416,26 @@
           },
           "antwoord": "schip",
           "feedback": "ναῦς = schip.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-NAUS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-NAUS-002",
+          "knoop_ids": [
+            "GRC-V-F02-NAUS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.81,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-NAUS.wav",
+            "hint": "schip"
+          },
+          "antwoord": "ναῦς",
+          "feedback": "Het woord is 'ναῦς' (schip).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-NAUS.wav"
         }
@@ -5039,6 +7479,26 @@
           "feedback": "στρατιώτης = soldaat.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-STRTTS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-STRTTS-002",
+          "knoop_ids": [
+            "GRC-V-F02-STRTTS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.17,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-STRTTS.wav",
+            "hint": "soldaat"
+          },
+          "antwoord": "στρατιώτης",
+          "feedback": "Het woord is 'στρατιώτης' (soldaat).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-STRTTS.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-STRTTS.wav"
@@ -5078,6 +7538,26 @@
           },
           "antwoord": "burger",
           "feedback": "πολίτης = burger.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-POLITS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-POLITS-002",
+          "knoop_ids": [
+            "GRC-V-F02-POLITS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-POLITS.wav",
+            "hint": "burger"
+          },
+          "antwoord": "πολίτης",
+          "feedback": "Het woord is 'πολίτης' (burger).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-POLITS.wav"
         }
@@ -5121,6 +7601,26 @@
           "feedback": "κριτής = rechter.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-KRITIS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-KRITIS-002",
+          "knoop_ids": [
+            "GRC-V-F02-KRITIS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-KRITIS.wav",
+            "hint": "rechter"
+          },
+          "antwoord": "κριτής",
+          "feedback": "Het woord is 'κριτής' (rechter).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-KRITIS.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-KRITIS.wav"
@@ -5160,6 +7660,26 @@
           },
           "antwoord": "zon",
           "feedback": "ἥλιος = zon.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-HELIOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-HELIOS-002",
+          "knoop_ids": [
+            "GRC-V-F02-HELIOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.49,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-HELIOS.wav",
+            "hint": "zon"
+          },
+          "antwoord": "ἥλιος",
+          "feedback": "Het woord is 'ἥλιος' (zon).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-HELIOS.wav"
         }
@@ -5203,6 +7723,26 @@
           "feedback": "ποταμός = rivier.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-POTAMO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-POTAMO-002",
+          "knoop_ids": [
+            "GRC-V-F02-POTAMO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.03,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-POTAMO.wav",
+            "hint": "rivier"
+          },
+          "antwoord": "ποταμός",
+          "feedback": "Het woord is 'ποταμός' (rivier).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-POTAMO.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-POTAMO.wav"
@@ -5242,6 +7782,26 @@
           },
           "antwoord": "vreemdeling, gastvriend",
           "feedback": "ξένος = vreemdeling, gastvriend.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-XENOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-XENOS-002",
+          "knoop_ids": [
+            "GRC-V-F02-XENOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.39,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-XENOS.wav",
+            "hint": "vreemdeling, gastvriend"
+          },
+          "antwoord": "ξένος",
+          "feedback": "Het woord is 'ξένος' (vreemdeling, gastvriend).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-XENOS.wav"
         }
@@ -5285,6 +7845,26 @@
           "feedback": "δίκαιος = rechtvaardig.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-DIKAIO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-DIKAIO-002",
+          "knoop_ids": [
+            "GRC-V-F02-DIKAIO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.32,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-DIKAIO.wav",
+            "hint": "rechtvaardig"
+          },
+          "antwoord": "δίκαιος",
+          "feedback": "Het woord is 'δίκαιος' (rechtvaardig).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-DIKAIO.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-DIKAIO.wav"
@@ -5324,6 +7904,26 @@
           },
           "antwoord": "waardig, waard",
           "feedback": "ἄξιος = waardig, waard.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-AXIOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-AXIOS-002",
+          "knoop_ids": [
+            "GRC-V-F02-AXIOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.25,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-AXIOS.wav",
+            "hint": "waardig, waard"
+          },
+          "antwoord": "ἄξιος",
+          "feedback": "Het woord is 'ἄξιος' (waardig, waard).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-AXIOS.wav"
         }
@@ -5367,6 +7967,26 @@
           "feedback": "φίλος = dierbaar, bevriend.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-PHILAD.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-PHILAD-002",
+          "knoop_ids": [
+            "GRC-V-F02-PHILAD"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.46,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-PHILAD.wav",
+            "hint": "dierbaar, bevriend"
+          },
+          "antwoord": "φίλος",
+          "feedback": "Het woord is 'φίλος' (dierbaar, bevriend).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-PHILAD.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-PHILAD.wav"
@@ -5406,6 +8026,26 @@
           },
           "antwoord": "sterk",
           "feedback": "ἰσχυρός = sterk.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ISCHUR.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-ISCHUR-002",
+          "knoop_ids": [
+            "GRC-V-F02-ISCHUR"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.09,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-ISCHUR.wav",
+            "hint": "sterk"
+          },
+          "antwoord": "ἰσχυρός",
+          "feedback": "Het woord is 'ἰσχυρός' (sterk).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-ISCHUR.wav"
         }
@@ -5449,6 +8089,26 @@
           "feedback": "σώφρων = verstandig, bezonnen.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-SOPHRN.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-SOPHRN-002",
+          "knoop_ids": [
+            "GRC-V-F02-SOPHRN"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.32,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-SOPHRN.wav",
+            "hint": "verstandig, bezonnen"
+          },
+          "antwoord": "σώφρων",
+          "feedback": "Het woord is 'σώφρων' (verstandig, bezonnen).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-SOPHRN.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-SOPHRN.wav"
@@ -5488,6 +8148,26 @@
           },
           "antwoord": "dapper",
           "feedback": "ἀνδρεῖος = dapper.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ANDREI.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-ANDREI-002",
+          "knoop_ids": [
+            "GRC-V-F02-ANDREI"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.42,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-ANDREI.wav",
+            "hint": "dapper"
+          },
+          "antwoord": "ἀνδρεῖος",
+          "feedback": "Het woord is 'ἀνδρεῖος' (dapper).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-ANDREI.wav"
         }
@@ -5531,6 +8211,26 @@
           "feedback": "εἶτα = vervolgens, dan.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-EITA.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-EITA-002",
+          "knoop_ids": [
+            "GRC-V-F02-EITA"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.13,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-EITA.wav",
+            "hint": "vervolgens, dan"
+          },
+          "antwoord": "εἶτα",
+          "feedback": "Het woord is 'εἶτα' (vervolgens, dan).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-EITA.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-EITA.wav"
@@ -5570,6 +8270,26 @@
           },
           "antwoord": "al, reeds",
           "feedback": "ἤδη = al, reeds.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-EDE.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-EDE-002",
+          "knoop_ids": [
+            "GRC-V-F02-EDE"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.73,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-EDE.wav",
+            "hint": "al, reeds"
+          },
+          "antwoord": "ἤδη",
+          "feedback": "Het woord is 'ἤδη' (al, reeds).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-EDE.wav"
         }
@@ -5613,6 +8333,26 @@
           "feedback": "νῦν = nu.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-NUN.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-NUN-002",
+          "knoop_ids": [
+            "GRC-V-F02-NUN"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-NUN.wav",
+            "hint": "nu"
+          },
+          "antwoord": "νῦν",
+          "feedback": "Het woord is 'νῦν' (nu).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-NUN.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-NUN.wav"
@@ -5652,6 +8392,26 @@
           },
           "antwoord": "niet (bij verbod/wens)",
           "feedback": "μή = niet (bij verbod/wens).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ME.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-ME-002",
+          "knoop_ids": [
+            "GRC-V-F02-ME"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.14,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-ME.wav",
+            "hint": "niet (bij verbod/wens)"
+          },
+          "antwoord": "μή",
+          "feedback": "Het woord is 'μή' (niet (bij verbod/wens)).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-ME.wav"
         }
@@ -5695,6 +8455,26 @@
           "feedback": "ἀεί = altijd.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-AEI.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-AEI-002",
+          "knoop_ids": [
+            "GRC-V-F02-AEI"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.15,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-AEI.wav",
+            "hint": "altijd"
+          },
+          "antwoord": "ἀεί",
+          "feedback": "Het woord is 'ἀεί' (altijd).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-AEI.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-AEI.wav"
@@ -5734,6 +8514,26 @@
           },
           "antwoord": "wijn",
           "feedback": "οἶνος = wijn.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-OINOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-OINOS-002",
+          "knoop_ids": [
+            "GRC-V-F02-OINOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.19,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-OINOS.wav",
+            "hint": "wijn"
+          },
+          "antwoord": "οἶνος",
+          "feedback": "Het woord is 'οἶνος' (wijn).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-OINOS.wav"
         }
@@ -5777,6 +8577,26 @@
           "feedback": "σῖτος = graan, voedsel.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-SITOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-SITOS-002",
+          "knoop_ids": [
+            "GRC-V-F02-SITOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.71,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-SITOS.wav",
+            "hint": "graan, voedsel"
+          },
+          "antwoord": "σῖτος",
+          "feedback": "Het woord is 'σῖτος' (graan, voedsel).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-SITOS.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-SITOS.wav"
@@ -5816,6 +8636,26 @@
           },
           "antwoord": "brood",
           "feedback": "ἄρτος = brood.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ARTOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-ARTOS-002",
+          "knoop_ids": [
+            "GRC-V-F02-ARTOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.82,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-ARTOS.wav",
+            "hint": "brood"
+          },
+          "antwoord": "ἄρτος",
+          "feedback": "Het woord is 'ἄρτος' (brood).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-ARTOS.wav"
         }
@@ -5859,6 +8699,26 @@
           "feedback": "κεφαλή = hoofd.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-KEPHAL.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-KEPHAL-002",
+          "knoop_ids": [
+            "GRC-V-F02-KEPHAL"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-KEPHAL.wav",
+            "hint": "hoofd"
+          },
+          "antwoord": "κεφαλή",
+          "feedback": "Het woord is 'κεφαλή' (hoofd).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-KEPHAL.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-KEPHAL.wav"
@@ -5898,6 +8758,26 @@
           },
           "antwoord": "oog",
           "feedback": "ὀφθαλμός = oog.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-OPHTHL.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-OPHTHL-002",
+          "knoop_ids": [
+            "GRC-V-F02-OPHTHL"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.31,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-OPHTHL.wav",
+            "hint": "oog"
+          },
+          "antwoord": "ὀφθαλμός",
+          "feedback": "Het woord is 'ὀφθαλμός' (oog).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-OPHTHL.wav"
         }
@@ -5941,6 +8821,26 @@
           "feedback": "αἷμα = bloed.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-HAIMA.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-HAIMA-002",
+          "knoop_ids": [
+            "GRC-V-F02-HAIMA"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.63,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-HAIMA.wav",
+            "hint": "bloed"
+          },
+          "antwoord": "αἷμα",
+          "feedback": "Het woord is 'αἷμα' (bloed).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-HAIMA.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-HAIMA.wav"
@@ -5980,6 +8880,26 @@
           },
           "antwoord": "wedstrijd, strijd",
           "feedback": "ἀγών = wedstrijd, strijd.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-AGON.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-AGON-002",
+          "knoop_ids": [
+            "GRC-V-F02-AGON"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.32,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-AGON.wav",
+            "hint": "wedstrijd, strijd"
+          },
+          "antwoord": "ἀγών",
+          "feedback": "Het woord is 'ἀγών' (wedstrijd, strijd).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-AGON.wav"
         }
@@ -6023,6 +8943,26 @@
           "feedback": "τεῖχος = muur, vestingmuur.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-TEICHO.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-TEICHO-002",
+          "knoop_ids": [
+            "GRC-V-F02-TEICHO"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.81,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-TEICHO.wav",
+            "hint": "muur, vestingmuur"
+          },
+          "antwoord": "τεῖχος",
+          "feedback": "Het woord is 'τεῖχος' (muur, vestingmuur).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-TEICHO.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-TEICHO.wav"
@@ -6062,6 +9002,26 @@
           },
           "antwoord": "volk, stam",
           "feedback": "ἔθνος = volk, stam.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ETHNOS.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-ETHNOS-002",
+          "knoop_ids": [
+            "GRC-V-F02-ETHNOS"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.09,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-ETHNOS.wav",
+            "hint": "volk, stam"
+          },
+          "antwoord": "ἔθνος",
+          "feedback": "Het woord is 'ἔθνος' (volk, stam).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-ETHNOS.wav"
         }
@@ -6105,6 +9065,26 @@
           "feedback": "ἀλήθεια = waarheid.",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-ALETHE.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-ALETHE-002",
+          "knoop_ids": [
+            "GRC-V-F02-ALETHE"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-ALETHE.wav",
+            "hint": "waarheid"
+          },
+          "antwoord": "ἀλήθεια",
+          "feedback": "Het woord is 'ἀλήθεια' (waarheid).",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ALETHE.wav"
         }
       ],
       "audio_ref": "GRC-V-F02-ALETHE.wav"
@@ -6144,6 +9124,26 @@
           },
           "antwoord": "vrijheid",
           "feedback": "ἐλευθερία = vrijheid.",
+          "bron": "llm_gegenereerd",
+          "audio_ref": "GRC-V-F02-ELEUTH.wav"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-ELEUTH-002",
+          "knoop_ids": [
+            "GRC-V-F02-ELEUTH"
+          ],
+          "type": "luister_productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.47,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Luister naar het Griekse woord en typ het in het Grieks.",
+            "audio_ref": "GRC-V-F02-ELEUTH.wav",
+            "hint": "vrijheid"
+          },
+          "antwoord": "ἐλευθερία",
+          "feedback": "Het woord is 'ἐλευθερία' (vrijheid).",
           "bron": "llm_gegenereerd",
           "audio_ref": "GRC-V-F02-ELEUTH.wav"
         }
