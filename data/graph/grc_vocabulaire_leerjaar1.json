@@ -1049,6 +1049,1056 @@
       "pensum_jaren": [],
       "semantisch_cluster": null,
       "items": []
+    },
+    {
+      "id": "GRC-V-F02-LAMBAN",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "λαμβάνω, λαμβάνειν, ἔλαβον — nemen, pakken",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord λαμβάνω (nemen, pakken): λαμβάνειν, ἔλαβον. thematisch. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-HEURSK",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "εὑρίσκω, εὑρίσκειν, ηὗρον — vinden",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord εὑρίσκω (vinden): εὑρίσκειν, ηὗρον. thematisch. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-AKOUO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ἀκούω, ἀκούειν, ἤκουσα — horen",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord ἀκούω (horen): ἀκούειν, ἤκουσα. thematisch. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "communicatie",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-PHEUGO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "φεύγω, φεύγειν, ἔφυγον — vluchten",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord φεύγω (vluchten): φεύγειν, ἔφυγον. thematisch. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "beweging",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-BALLO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "βάλλω, βάλλειν, ἔβαλον — werpen, gooien",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord βάλλω (werpen, gooien): βάλλειν, ἔβαλον. thematisch. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "oorlog",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-KELEUO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "κελεύω, κελεύειν, ἐκέλευσα — bevelen",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord κελεύω (bevelen): κελεύειν, ἐκέλευσα. thematisch. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "communicatie",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-LEIPO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "λείπω, λείπειν, ἔλιπον — verlaten, achterlaten",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord λείπω (verlaten, achterlaten): λείπειν, ἔλιπον. thematisch. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-MANTHN",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "μανθάνω, μανθάνειν, ἔμαθον — leren",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord μανθάνω (leren): μανθάνειν, ἔμαθον. thematisch. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "onderwijs",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-PEITHO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "πείθω, πείθειν, ἔπεισα — overtuigen",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord πείθω (overtuigen): πείθειν, ἔπεισα. thematisch. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "communicatie",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-TREPO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "τρέπω, τρέπειν, ἔτρεψα — keren, wenden",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord τρέπω (keren, wenden): τρέπειν, ἔτρεψα. thematisch. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "beweging",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-TRECHO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "τρέχω, τρέχειν, ἔδραμον — rennen",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord τρέχω (rennen): τρέχειν, ἔδραμον. thematisch. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "beweging",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-NOMIZO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "νομίζω, νομίζειν, ἐνόμισα — menen, geloven",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord νομίζω (menen, geloven): νομίζειν, ἐνόμισα. thematisch. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-BOULOM",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "βούλομαι, βούλεσθαι — willen",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord βούλομαι (willen): βούλεσθαι. thematisch. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-DEIKNU",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "δείκνυμι, δεικνύναι, ἔδειξα — tonen, aanwijzen",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord δείκνυμι (tonen, aanwijzen): onregelmatig. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "communicatie",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-PHILEO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "φιλέω, φιλεῖν, ἐφίλησα — liefhebben, houden van",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord φιλέω (liefhebben, houden van): φιλεῖν, ἐφίλησα. contractum. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "emotie",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-NIKAO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "νικάω, νικᾶν, ἐνίκησα — overwinnen",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord νικάω (overwinnen): νικᾶν, ἐνίκησα. contractum. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "oorlog",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-TIMAO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "τιμάω, τιμᾶν, ἐτίμησα — eren",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord τιμάω (eren): τιμᾶν, ἐτίμησα. contractum. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-ZETEO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ζητέω, ζητεῖν, ἐζήτησα — zoeken",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord ζητέω (zoeken): ζητεῖν, ἐζήτησα. contractum. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-DOKEO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "δοκέω, δοκεῖν, ἔδοξα — menen, schijnen",
+      "titel_terminologie": null,
+      "beschrijving": "Het werkwoord δοκέω (menen, schijnen): δοκεῖν, ἔδοξα. contractum. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-STRATO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "στρατός, -οῦ (m.) — leger",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord στρατός, -οῦ (m.): leger. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "oorlog",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-DEMOS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "δῆμος, -ου (m.) — volk",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord δῆμος, -ου (m.): volk. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "politiek",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-NOMOS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "νόμος, -ου (m.) — wet, gebruik",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord νόμος, -ου (m.): wet, gebruik. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "politiek",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-POLEMO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "πόλεμος, -ου (m.) — oorlog",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord πόλεμος, -ου (m.): oorlog. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "oorlog",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-TOPOS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "τόπος, -ου (m.) — plaats",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord τόπος, -ου (m.): plaats. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "gebouwen",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-CHRONO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "χρόνος, -ου (m.) — tijd",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord χρόνος, -ου (m.): tijd. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "tijd",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-BIOS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "βίος, -ου (m.) — leven",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord βίος, -ου (m.): leven. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-OIKOS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "οἶκος, -ου (m.) — huis",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord οἶκος, -ου (m.): huis. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "gebouwen",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-DORON",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "δῶρον, -ου (o.) — geschenk",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord δῶρον, -ου (o.): geschenk. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-HOPLON",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ὅπλον, -ου (o.) — wapen; (pl.) wapenrusting",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ὅπλον, -ου (o.): wapen; (pl.) wapenrusting. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "oorlog",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-HIERON",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ἱερόν, -οῦ (o.) — tempel, heiligdom",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ἱερόν, -οῦ (o.): tempel, heiligdom. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "religie",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-BIBLIO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "βιβλίον, -ου (o.) — boek",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord βιβλίον, -ου (o.): boek. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "onderwijs",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-TEKNON",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "τέκνον, -ου (o.) — kind",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord τέκνον, -ου (o.): kind. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "familie",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-PHILOS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "φίλος, -ου (m.) — vriend",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord φίλος, -ου (m.): vriend. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "familie",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-DOULOS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "δοῦλος, -ου (m.) — slaaf",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord δοῦλος, -ου (m.): slaaf. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "familie",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-AGORA",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ἀγορά, -ᾶς (v.) — marktplein",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ἀγορά, -ᾶς (v.): marktplein. 1e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "gebouwen",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-TECHNE",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "τέχνη, -ης (v.) — kunst, vaardigheid",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord τέχνη, -ης (v.): kunst, vaardigheid. 1e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "onderwijs",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-ARETE",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ἀρετή, -ῆς (v.) — deugd, voortreffelijkheid",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ἀρετή, -ῆς (v.): deugd, voortreffelijkheid. 1e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "emotie",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-EIRENE",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "εἰρήνη, -ης (v.) — vrede",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord εἰρήνη, -ης (v.): vrede. 1e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "politiek",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-SOPHIA",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "σοφία, -ας (v.) — wijsheid",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord σοφία, -ας (v.): wijsheid. 1e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "onderwijs",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-CHORA",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "χώρα, -ας (v.) — land, streek",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord χώρα, -ας (v.): land, streek. 1e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "natuur",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-THANAT",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "θάνατος, -ου (m.) — dood",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord θάνατος, -ου (m.): dood. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-HUDOR",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ὕδωρ, ὕδατος (o.) — water",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ὕδωρ, ὕδατος (o.): water. 3e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "natuur",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-SOMA",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "σῶμα, σώματος (o.) — lichaam",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord σῶμα, σώματος (o.): lichaam. 3e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "lichaam",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-ONOMA",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ὄνομα, ὀνόματος (o.) — naam",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ὄνομα, ὀνόματος (o.): naam. 3e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "communicatie",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-GUNE",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "γυνή, γυναικός (v.) — vrouw",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord γυνή, γυναικός (v.): vrouw. 3e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "familie",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-CHEIR",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "χείρ, χειρός (v.) — hand",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord χείρ, χειρός (v.): hand. 3e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "lichaam",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-NAUS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ναῦς, νεώς (v.) — schip",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ναῦς, νεώς (v.): schip. 3e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "beweging",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-STRTTS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "στρατιώτης, -ου (m.) — soldaat",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord στρατιώτης, -ου (m.): soldaat. 1e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "oorlog",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-POLITS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "πολίτης, -ου (m.) — burger",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord πολίτης, -ου (m.): burger. 1e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "politiek",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-KRITIS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "κριτής, -οῦ (m.) — rechter",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord κριτής, -οῦ (m.): rechter. 1e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "politiek",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-HELIOS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ἥλιος, -ου (m.) — zon",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ἥλιος, -ου (m.): zon. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "natuur",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-POTAMO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ποταμός, -οῦ (m.) — rivier",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ποταμός, -οῦ (m.): rivier. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "natuur",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-XENOS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ξένος, -ου (m.) — vreemdeling, gastvriend",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ξένος, -ου (m.): vreemdeling, gastvriend. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-DIKAIO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "δίκαιος, -α, -ον — rechtvaardig",
+      "titel_terminologie": null,
+      "beschrijving": "Het bijvoeglijk naamwoord δίκαιος, -α, -ον: rechtvaardig. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "politiek",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-AXIOS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ἄξιος, -α, -ον — waardig, waard",
+      "titel_terminologie": null,
+      "beschrijving": "Het bijvoeglijk naamwoord ἄξιος, -α, -ον: waardig, waard. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-PHILAD",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "φίλος, -η, -ον — dierbaar, bevriend",
+      "titel_terminologie": null,
+      "beschrijving": "Het bijvoeglijk naamwoord φίλος, -η, -ον: dierbaar, bevriend. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "emotie",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-ISCHUR",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ἰσχυρός, -ά, -όν — sterk",
+      "titel_terminologie": null,
+      "beschrijving": "Het bijvoeglijk naamwoord ἰσχυρός, -ά, -όν: sterk. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-SOPHRN",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "σώφρων, -ον, gen. -ονος — verstandig, bezonnen",
+      "titel_terminologie": null,
+      "beschrijving": "Het bijvoeglijk naamwoord σώφρων, -ον, gen. -ονος: verstandig, bezonnen. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-ANDREI",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ἀνδρεῖος, -α, -ον — dapper",
+      "titel_terminologie": null,
+      "beschrijving": "Het bijvoeglijk naamwoord ἀνδρεῖος, -α, -ον: dapper. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-EITA",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "εἶτα (bijw.) — vervolgens, dan",
+      "titel_terminologie": null,
+      "beschrijving": "Het bijwoord εἶτα: vervolgens, dan. Onverbuigbaar. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-EDE",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ἤδη (bijw.) — al, reeds",
+      "titel_terminologie": null,
+      "beschrijving": "Het bijwoord ἤδη: al, reeds. Onverbuigbaar. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-NUN",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "νῦν (bijw.) — nu",
+      "titel_terminologie": null,
+      "beschrijving": "Het bijwoord νῦν: nu. Onverbuigbaar. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-ME",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "μή (bijw.) — niet (bij verbod/wens)",
+      "titel_terminologie": null,
+      "beschrijving": "Het bijwoord μή: niet (bij verbod/wens). Onverbuigbaar. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-AEI",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ἀεί (bijw.) — altijd",
+      "titel_terminologie": null,
+      "beschrijving": "Het bijwoord ἀεί: altijd. Onverbuigbaar. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": null,
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-OINOS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "οἶνος, -ου (m.) — wijn",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord οἶνος, -ου (m.): wijn. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "voedsel",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-SITOS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "σῖτος, -ου (m.) — graan, voedsel",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord σῖτος, -ου (m.): graan, voedsel. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "voedsel",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-ARTOS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ἄρτος, -ου (m.) — brood",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ἄρτος, -ου (m.): brood. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "voedsel",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-KEPHAL",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "κεφαλή, -ῆς (v.) — hoofd",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord κεφαλή, -ῆς (v.): hoofd. 1e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "lichaam",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-OPHTHL",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ὀφθαλμός, -οῦ (m.) — oog",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ὀφθαλμός, -οῦ (m.): oog. 2e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "lichaam",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-HAIMA",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "αἷμα, αἵματος (o.) — bloed",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord αἷμα, αἵματος (o.): bloed. 3e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "lichaam",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-AGON",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ἀγών, ἀγῶνος (m.) — wedstrijd, strijd",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ἀγών, ἀγῶνος (m.): wedstrijd, strijd. 3e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "oorlog",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-TEICHO",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "τεῖχος, -ους (o.) — muur, vestingmuur",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord τεῖχος, -ους (o.): muur, vestingmuur. 3e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "gebouwen",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-ETHNOS",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ἔθνος, -ους (o.) — volk, stam",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ἔθνος, -ους (o.): volk, stam. 3e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "politiek",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-ALETHE",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ἀλήθεια, -ας (v.) — waarheid",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ἀλήθεια, -ας (v.): waarheid. 1e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "onderwijs",
+      "items": []
+    },
+    {
+      "id": "GRC-V-F02-ELEUTH",
+      "type": "V",
+      "taal": "grc",
+      "titel_nl": "ἐλευθερία, -ας (v.) — vrijheid",
+      "titel_terminologie": null,
+      "beschrijving": "Het zelfstandig naamwoord ἐλευθερία, -ας (v.): vrijheid. 1e declinatie. Frequentieband F02.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "semantisch_cluster": "politiek",
+      "items": []
     }
   ],
   "edges": [
@@ -1373,6 +2423,426 @@
     {
       "source_id": "GRC-G-MORF-DECL2-INTRO",
       "target_id": "GRC-V-F01-DEINOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-LAMBAN",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-HEURSK",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-AKOUO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-PHEUGO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-BALLO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-KELEUO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-LEIPO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-MANTHN",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-PEITHO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-TREPO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-TRECHO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-NOMIZO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-BOULOM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-DEIKNU",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-PHILEO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-NIKAO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-TIMAO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-ZETEO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-V-F02-DOKEO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-STRATO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-DEMOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-NOMOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-POLEMO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-TOPOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-CHRONO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-BIOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-OIKOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-DORON",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-HOPLON",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-HIERON",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-BIBLIO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-TEKNON",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-PHILOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-DOULOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL1-INTRO",
+      "target_id": "GRC-V-F02-AGORA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL1-INTRO",
+      "target_id": "GRC-V-F02-TECHNE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL1-INTRO",
+      "target_id": "GRC-V-F02-ARETE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL1-INTRO",
+      "target_id": "GRC-V-F02-EIRENE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL1-INTRO",
+      "target_id": "GRC-V-F02-SOPHIA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL1-INTRO",
+      "target_id": "GRC-V-F02-CHORA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-THANAT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-V-F02-HUDOR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-V-F02-SOMA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-V-F02-ONOMA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-V-F02-GUNE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-V-F02-CHEIR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-V-F02-NAUS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL1-INTRO",
+      "target_id": "GRC-V-F02-STRTTS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL1-INTRO",
+      "target_id": "GRC-V-F02-POLITS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL1-INTRO",
+      "target_id": "GRC-V-F02-KRITIS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-HELIOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-POTAMO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-XENOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-DIKAIO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-AXIOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-PHILAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-ISCHUR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-SOPHRN",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-ANDREI",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-OINOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-SITOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-ARTOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL1-INTRO",
+      "target_id": "GRC-V-F02-KEPHAL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-V-F02-OPHTHL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-V-F02-HAIMA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-V-F02-AGON",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-V-F02-TEICHO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-V-F02-ETHNOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL1-INTRO",
+      "target_id": "GRC-V-F02-ALETHE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL1-INTRO",
+      "target_id": "GRC-V-F02-ELEUTH",
       "type": "prerequisite",
       "encompassing_weight": 0.3
     }
