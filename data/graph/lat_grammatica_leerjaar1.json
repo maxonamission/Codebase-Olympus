@@ -1,0 +1,138 @@
+{
+  "knopen": [
+    {
+      "id": "LAT-G-SYNT-VOC-FUNCTIE",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Functie van de vocativus",
+      "titel_terminologie": "casus vocativus",
+      "beschrijving": "De vocativus is de naamval van de aanspreekvorm. Wordt gebruikt om iemand direct aan te spreken, bijv. 'Marce!' (Marcus!). Vaak gelijk aan de nominativus, behalve bij de 2e declinatie sg. (-e).",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-STAM-INTRO",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Wat is een woordstam?",
+      "titel_terminologie": "stirps",
+      "beschrijving": "De woordstam is het onveranderlijke deel van een woord dat de basisbetekenis draagt. Bij verbuiging en vervoeging blijft de stam gelijk; alleen de uitgang verandert.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-UIT-INTRO",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Wat is een uitgang?",
+      "titel_terminologie": "terminatio",
+      "beschrijving": "De uitgang is het veranderlijke deel achter de woordstam. Bij zelfstandige naamwoorden drukt de uitgang naamval en getal uit; bij werkwoorden persoon, getal en tijd.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-SUBJ",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Onderwerp",
+      "titel_terminologie": "subiectum",
+      "beschrijving": "Het onderwerp (subiectum) is het zinsdeel dat aangeeft wie of wat de handeling verricht. Staat in het Latijn in de nominativus en is congruent met de persoonsvorm.",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-OBJDIR",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Lijdend voorwerp",
+      "titel_terminologie": "obiectum directum",
+      "beschrijving": "Het lijdend voorwerp (obiectum directum) is het zinsdeel dat de handeling ondergaat. Staat in het Latijn in de accusativus, bijv. 'puellam videt' (hij ziet het meisje).",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-OBJIND",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Meewerkend voorwerp",
+      "titel_terminologie": "obiectum indirectum",
+      "beschrijving": "Het meewerkend voorwerp (obiectum indirectum) is het zinsdeel dat aangeeft aan wie of voor wie de handeling plaatsvindt. Staat in het Latijn in de dativus, bijv. 'puellae dat' (hij geeft aan het meisje).",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "LAT-G-MORF-NAAMVAL-INTRO",
+      "target_id": "LAT-G-SYNT-VOC-FUNCTIE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL-INTRO",
+      "target_id": "LAT-G-MORF-STAM-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-STAM-INTRO",
+      "target_id": "LAT-G-MORF-UIT-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.7
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-G-SYNT-SUBJ",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-G-SYNT-OBJDIR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-G-SYNT-OBJIND",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-SYNT-NOM-FUNCTIE",
+      "target_id": "LAT-G-SYNT-SUBJ",
+      "type": "enrichment",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-ACC-FUNCTIE",
+      "target_id": "LAT-G-SYNT-OBJDIR",
+      "type": "enrichment",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-DAT-FUNCTIE",
+      "target_id": "LAT-G-SYNT-OBJIND",
+      "type": "enrichment",
+      "encompassing_weight": 0.3
+    }
+  ]
+}
