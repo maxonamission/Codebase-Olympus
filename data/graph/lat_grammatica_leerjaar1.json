@@ -3133,7 +3133,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-INTRO-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke drie hoofdcategorieën pronomina kent het Latijn?",
+          "antwoord": "persoonlijk, bezittelijk, aanwijzend",
+          "feedback": "De drie hoofdgroepen in klas 1: persoonlijke (ego, tu), bezittelijke (meus, tuus) en aanwijzende (hic, ille) voornaamwoorden.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-INTRO-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Wat is het verschil tussen een pronomen en een zelfstandig naamwoord?",
+          "antwoord": "een pronomen vervangt of verwijst naar een zelfstandig naamwoord",
+          "feedback": "Pronomina (voornaamwoorden) staan in plaats van een nomen: \"hij\" in plaats van \"Marcus\".",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRON-PERS",
@@ -3146,7 +3177,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-PERS-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-PERS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welke persoonlijke voornaamwoorden kent het Latijn?",
+          "antwoord": "ego (ik), tu (jij), nos (wij), vos (jullie)",
+          "feedback": "De 1e en 2e persoon hebben eigen vormen. De 3e persoon gebruikt is/ea/id.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-PERS-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-PERS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Waarom gebruikt het Latijn zelden een persoonlijk voornaamwoord als onderwerp?",
+          "antwoord": "de persoonsvorm van het werkwoord geeft de persoon al aan",
+          "feedback": "\"Amo\" betekent al \"ik heb lief\". Ego amo is nadrukkelijk: \"ÍK heb lief\".",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRON-EGO",
@@ -3158,7 +3220,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-EGO-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-EGO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de genitivus van \"ego\".",
+          "antwoord": "mei",
+          "feedback": "Ego: nom. ego, gen. mei, dat. mihi, acc. me, abl. me.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-EGO-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-EGO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de dativus van \"tu\".",
+          "antwoord": "tibi",
+          "feedback": "Tu: nom. tu, gen. tui, dat. tibi, acc. te, abl. te.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-EGO-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-EGO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de accusativus meervoud van \"nos\".",
+          "antwoord": "nos",
+          "feedback": "Nos: nom. nos, gen. nostrum/nostri, dat. nobis, acc. nos, abl. nobis.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRON-IS",
@@ -3170,7 +3278,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-IS-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-IS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Waarvoor wordt \"is, ea, id\" gebruikt?",
+          "antwoord": "als persoonlijk voornaamwoord 3e persoon (hij/zij/het) en als aanwijzend (die/dat)",
+          "feedback": "Is/ea/id is het meest neutrale verwijswoord: \"hij/zij/het\" of \"die/dat\".",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-IS-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-IS"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de genitivus enkelvoud van \"is\" (alle genera).",
+          "antwoord": "eius",
+          "feedback": "De gen. sg. is voor alle genera gelijk: eius. Dit is een belangrijk herkenningspunt.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-IS-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-IS"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de nominativus meervoud masculinum van \"is\".",
+          "antwoord": "ei (of ii)",
+          "feedback": "Nom. pl. m.: ei (of ii), f.: eae, n.: ea.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRON-REFL",
@@ -3183,7 +3337,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-REFL-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-REFL"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wat is het reflexieve voornaamwoord voor de 3e persoon?",
+          "antwoord": "sui, sibi, se, se (gen., dat., acc., abl.)",
+          "feedback": "Het reflexivum 3e persoon heeft geen nominativus: gen. sui, dat. sibi, acc. se, abl. se.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-REFL-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-REFL"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "In \"Pater se lavat\" — waarnaar verwijst \"se\"?",
+          "antwoord": "naar het onderwerp \"pater\" (de vader wast zichzelf)",
+          "feedback": "Se is reflexief: het verwijst altijd terug naar het onderwerp van de zin.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRON-BEZ",
@@ -3196,7 +3381,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-BEZ-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-BEZ"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Noem de Latijnse bezittelijke voornaamwoorden.",
+          "antwoord": "meus (mijn), tuus (jouw), suus (zijn/haar eigen), noster (ons), vester (jullie)",
+          "feedback": "Bezittelijke pronomina congrueren als adjectieven met het bezit (niet de bezitter).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-BEZ-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-BEZ"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Als welk type adjectief verbuigen bezittelijke voornaamwoorden?",
+          "antwoord": "als bonus-type (1e/2e declinatie), behalve noster/vester (als pulcher-type)",
+          "feedback": "Meus, tuus, suus verbuigen als bonus/-a/-um. Noster, vester als pulcher/-tra/-trum.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRON-MEUS",
@@ -3208,7 +3424,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-MEUS-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-MEUS"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de dativus enkelvoud femininum van \"meus\".",
+          "antwoord": "meae",
+          "feedback": "Meus verbuigt als bonus: fem. mea, gen. sg. f. meae, dat. sg. f. meae.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-MEUS-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-MEUS"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de genitivus meervoud van \"noster\" (masc.).",
+          "antwoord": "nostrorum",
+          "feedback": "Noster: gen. pl. m. nostrorum. Verbuigt als pulcher/-tra/-trum.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRON-SUUS",
@@ -3220,7 +3467,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-SUUS-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-SUUS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wat is het verschil tussen \"suus\" en \"eius\"?",
+          "antwoord": "suus verwijst naar het onderwerp (reflexief), eius naar iemand anders",
+          "feedback": "Suus = reflexief-bezittelijk (zijn/haar eigen). Eius = niet-reflexief (van hem/haar, iemand anders).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-SUUS-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-SUUS"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 35,
+          "stimulus": "\"Pater filium suum amat.\" — wiens zoon wordt bedoeld?",
+          "antwoord": "de zoon van de vader zelf (suus = reflexief, verwijst naar pater)",
+          "feedback": "Suus verwijst terug naar het onderwerp: pater amat filium suum = de vader houdt van ZIJN EIGEN zoon.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRON-AANW",
@@ -3233,7 +3511,40 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-AANW-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-AANW"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Noem de twee belangrijkste aanwijzende voornaamwoorden.",
+          "antwoord": [
+            "hic (deze, dichtbij) en ille (die/gene, veraf)"
+          ],
+          "feedback": "Hic wijst naar iets dichtbij de spreker. Ille wijst naar iets verderaf.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-AANW-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-AANW"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Welk aanwijzend voornaamwoord gebruik je voor iets dichtbij?",
+          "antwoord": "hic (deze)",
+          "feedback": "Hic = deze/dit (dichtbij spreker). Ille = die/dat/gene (veraf van spreker).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRON-HIC",
@@ -3245,7 +3556,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-HIC-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-HIC"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de genitivus enkelvoud van \"hic\" (alle genera).",
+          "antwoord": "huius",
+          "feedback": "De gen. sg. is voor alle genera gelijk: huius. Vergelijk eius (van is/ea/id).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-HIC-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-HIC"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de accusativus enkelvoud masculinum van \"hic\".",
+          "antwoord": "hunc",
+          "feedback": "Hic acc. sg. m.: hunc, f.: hanc, n.: hoc.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRON-ILLE",
@@ -3257,7 +3599,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-ILLE-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-ILLE"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de genitivus enkelvoud van \"ille\" (alle genera).",
+          "antwoord": "illius",
+          "feedback": "De gen. sg. is voor alle genera gelijk: illius. Kenmerkend pronominaal patroon (-ius).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRON-ILLE-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRON-ILLE"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de dativus enkelvoud van \"ille\" (alle genera).",
+          "antwoord": "illi",
+          "feedback": "De dat. sg. is voor alle genera gelijk: illi. Vergelijk huic (van hic).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-PREP-INTRO",
