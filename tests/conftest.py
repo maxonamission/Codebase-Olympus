@@ -186,6 +186,99 @@ def cyclic_graph_data() -> dict:
 
 
 @pytest.fixture
+def bidirectional_transfer_graph_data() -> dict:
+    """A graph with bidirectional transfer edges (should NOT count as cycles)."""
+    return {
+        "knopen": [
+            {
+                "id": "LAT-G-MORF-NAAMVAL-INTRO",
+                "type": "G",
+                "taal": "lat",
+                "titel_nl": "Naamval LAT",
+                "beschrijving": "Naamval introductie Latijn.",
+                "bloom_niveau": "kennis",
+                "fase": "onderbouw_1",
+                "toetsbaar": True,
+                "items": [],
+            },
+            {
+                "id": "LAT-G-MORF-DECL-INTRO",
+                "type": "G",
+                "taal": "lat",
+                "titel_nl": "Declinatie LAT",
+                "beschrijving": "Declinatie introductie Latijn.",
+                "bloom_niveau": "kennis",
+                "fase": "onderbouw_1",
+                "toetsbaar": True,
+                "items": [],
+            },
+            {
+                "id": "GRC-G-MORF-NAAMVAL-INTRO",
+                "type": "G",
+                "taal": "grc",
+                "titel_nl": "Naamval GRC",
+                "beschrijving": "Naamval introductie Grieks.",
+                "bloom_niveau": "kennis",
+                "fase": "onderbouw_1",
+                "toetsbaar": True,
+                "items": [],
+            },
+            {
+                "id": "GRC-G-MORF-DECL-INTRO",
+                "type": "G",
+                "taal": "grc",
+                "titel_nl": "Declinatie GRC",
+                "beschrijving": "Declinatie introductie Grieks.",
+                "bloom_niveau": "kennis",
+                "fase": "onderbouw_1",
+                "toetsbaar": True,
+                "items": [],
+            },
+        ],
+        "edges": [
+            # Prerequisite edges (acyclic)
+            {
+                "source_id": "LAT-G-MORF-NAAMVAL-INTRO",
+                "target_id": "LAT-G-MORF-DECL-INTRO",
+                "type": "prerequisite",
+                "encompassing_weight": 0.5,
+            },
+            {
+                "source_id": "GRC-G-MORF-NAAMVAL-INTRO",
+                "target_id": "GRC-G-MORF-DECL-INTRO",
+                "type": "prerequisite",
+                "encompassing_weight": 0.5,
+            },
+            # Bidirectional transfer edges (would be cycles if counted)
+            {
+                "source_id": "LAT-G-MORF-NAAMVAL-INTRO",
+                "target_id": "GRC-G-MORF-NAAMVAL-INTRO",
+                "type": "transfer",
+                "encompassing_weight": 0.7,
+            },
+            {
+                "source_id": "GRC-G-MORF-NAAMVAL-INTRO",
+                "target_id": "LAT-G-MORF-NAAMVAL-INTRO",
+                "type": "transfer",
+                "encompassing_weight": 0.5,
+            },
+            {
+                "source_id": "LAT-G-MORF-DECL-INTRO",
+                "target_id": "GRC-G-MORF-DECL-INTRO",
+                "type": "transfer",
+                "encompassing_weight": 0.6,
+            },
+            {
+                "source_id": "GRC-G-MORF-DECL-INTRO",
+                "target_id": "LAT-G-MORF-DECL-INTRO",
+                "type": "transfer",
+                "encompassing_weight": 0.4,
+            },
+        ],
+    }
+
+
+@pytest.fixture
 def poc_graph_path() -> Path:
     """Path to the PoC JSON file."""
     return Path(__file__).parent.parent / "data" / "graph" / "lat_grammatica_poc.json"
