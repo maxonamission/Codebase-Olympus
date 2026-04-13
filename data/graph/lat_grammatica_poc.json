@@ -216,6 +216,23 @@
           "antwoord": "de uitgang (naamvalsuitgang)",
           "feedback": "In het Latijn bepaalt de naamvalsuitgang de zinsfunctie, niet de woordvolgorde. Het onderwerp staat in de nominativus.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-ZINSDEEL-INTRO-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-ZINSDEEL-INTRO"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier en ontleed in zinsdelen: 'Dominus servo pecuniam dat.'",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Bepaal eerst het gezegde (pv), dan het onderwerp (nom.), lijdend vw (acc.), meewerkend vw (dat.).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De heer geeft de slaaf geld. Dominus=ow, servo=mwv, pecuniam=lv, dat=gezegde."
         }
       ]
     },
@@ -1158,6 +1175,23 @@
           "antwoord": "onderwerp",
           "feedback": "'Puella' staat in de nominativus en is het onderwerp van 'cantat' (zingt).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-NOM-FUNCTIE-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-NOM-FUNCTIE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Puella cantat.' Onderstreep het onderwerp.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "De nominativus geeft het onderwerp aan. Puella is nom.sg. 1e declinatie.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "Het meisje zingt. Onderwerp: puella (nominativus)."
         }
       ]
     },
@@ -1201,6 +1235,23 @@
           "antwoord": "lijdend voorwerp",
           "feedback": "'Puellam' is accusativus singularis en lijdend voorwerp: 'De heer ziet het meisje.'",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-ACC-FUNCTIE-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-ACC-FUNCTIE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Dominus servum vocat.' Markeer het lijdend voorwerp.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "De accusativus markeert het lijdend voorwerp. Servum = acc.sg. 2e declinatie.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De heer roept de slaaf. Lijdend voorwerp: servum (accusativus)."
         }
       ]
     },
@@ -1244,6 +1295,23 @@
           "antwoord": "bezit (genitivus van bezit)",
           "feedback": "'Puellae' is hier genitivus singularis en drukt bezit uit: 'Het boek is van het meisje.'",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-GEN-FUNCTIE-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-GEN-FUNCTIE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Liber puellae est bonus.' Markeer de genitivus.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "De genitivus drukt bezit uit ('van'). Puellae = gen.sg. 1e declinatie.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "Het boek van het meisje is goed. Genitivus: puellae."
         }
       ]
     },
@@ -1287,6 +1355,23 @@
           "antwoord": "meewerkend voorwerp",
           "feedback": "'Puellae' is hier dativus singularis en meewerkend voorwerp: 'De heer geeft het boek aan het meisje.'",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-DAT-FUNCTIE-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-DAT-FUNCTIE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Magister puero librum dat.' Markeer het meewerkend voorwerp.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "De dativus markeert het meewerkend voorwerp ('aan/voor'). Puero = dat.sg. 2e decl.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De leraar geeft de jongen een boek. Meewerkend voorwerp: puero (dativus)."
         }
       ]
     },
@@ -1330,6 +1415,23 @@
           "antwoord": "middel (ablativus van middel)",
           "feedback": "'Gladio' is ablativus singularis en drukt het middel uit: 'De soldaat vecht met het zwaard.'",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-ABL-FUNCTIE-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-ABL-FUNCTIE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Miles gladio pugnat.' Markeer de ablativus.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "De ablativus kan 'met' (instrumentalis) uitdrukken. Gladio = abl.sg. 2e declinatie.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De soldaat vecht met een zwaard. Ablativus: gladio (instrumentalis)."
         }
       ]
     },
@@ -1451,6 +1553,23 @@
           "antwoord": "laudas",
           "feedback": "1e conjugatie: stam laud- + -a- + -s = laudas.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C1-ACT-005",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C1-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'amare' in de presens indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Stam ama- + persoonsuitgangen. Let op: 1e pers.sg. amo (niet amao).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "amo, amas, amat, amamus, amatis, amant"
         }
       ]
     },
@@ -1524,6 +1643,23 @@
           "antwoord": "habent",
           "feedback": "2e conjugatie: stam hab- + -e- + -nt = habent.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C2-ACT-005",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C2-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'monēre' in de presens indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Stam mone- + persoonsuitgangen. De stamklinker -e- is lang (ē) en blijft in alle vormen.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "moneo, mones, monet, monemus, monetis, monent"
         }
       ]
     },
@@ -1597,6 +1733,23 @@
           "antwoord": "ducitis",
           "feedback": "3e conjugatie: stam duc- + -i- + -tis = ducitis.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C3-ACT-005",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C3-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'legere' in de presens indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "3e conjugatie: stamklinker wisselt (e/i/u). Let op: 3e pl. -unt (niet -ent).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "lego, legis, legit, legimus, legitis, legunt"
         }
       ]
     },
@@ -1655,6 +1808,23 @@
           "antwoord": "audiunt",
           "feedback": "4e conjugatie: stam aud- + -iu- + -nt = audiunt. Let op: -iu- voor -nt (net als 3e conj.).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C4-ACT-004",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C4-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'audīre' in de presens indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "4e conjugatie: stamklinker -i- lang. Let op: 3e pl. audiunt (met -i-).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "audio, audis, audit, audimus, auditis, audiunt"
         }
       ]
     },
@@ -1728,6 +1898,23 @@
           "antwoord": "es",
           "feedback": "Esse praesens: es (jij bent). De kortste vorm van het paradigma.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-ESSE-005",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-ESSE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'esse' in de presens indicativus op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Onregelmatig werkwoord. Let op de stamwisseling su-/es-.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "sum, es, est, sumus, estis, sunt"
         }
       ]
     },
@@ -1786,6 +1973,23 @@
           "antwoord": "als onderwerp, na bepaalde werkwoorden, in de AcI",
           "feedback": "De infinitivus kan onderwerp zijn (errare humanum est), object (volo dicere) of deel van een AcI.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-INF-PRAES-ACT-004",
+          "knoop_ids": [
+            "LAT-G-MORF-INF-PRAES-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de infinitivus presens actief van alle vier conjugaties + esse op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Let op het verschil tussen 2e conj. -ēre (lang) en 3e conj. -ere (kort).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "1e: -āre (amare), 2e: -ēre (monere), 3e: -ere (legere), 4e: -īre (audire), esse"
         }
       ]
     },
@@ -1887,6 +2091,23 @@
           "antwoord": "monebant",
           "feedback": "2e conj.: stam mone- + -ba- + -nt = monebant.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-C1C2-ACT-004",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-C1C2-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'amare' in het imperfectum indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Kenmerk: -ba- tussen stam en persoonsuitgang. 1e pers.sg. -bam.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "amabam, amabas, amabat, amabamus, amabatis, amabant"
         }
       ]
     },
@@ -1930,6 +2151,23 @@
           "antwoord": "audiebas",
           "feedback": "4e conj.: stam audi- + -eba- + -s = audiebas.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-C3C4-ACT-003",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-C3C4-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'audīre' in het imperfectum indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "3e/4e conjugatie: -eba- (met extra -e-). Vergelijk met 1e/2e: -ba-.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "audiebam, audiebas, audiebat, audiebamus, audiebatis, audiebant"
         }
       ]
     },
@@ -2089,6 +2327,23 @@
           "antwoord": "bonum",
           "feedback": "Bellum is neutrum: acc. sg. neutrum van bonus = bonum. Neutrumregel: nom.=acc.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-ADJ-CONGR-004",
+          "knoop_ids": [
+            "LAT-G-SYNT-ADJ-CONGR"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Puella bona librum magnum legit.' Let op de congruentie.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Bijvoeglijk naamwoord stemt overeen in naamval, getal en geslacht met het zelfstandig naamwoord.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "Het goede meisje leest een groot boek. Bona hoort bij puella, magnum bij librum."
         }
       ]
     },
@@ -2132,6 +2387,23 @@
           "antwoord": "accusativus",
           "feedback": "Ad + accusativus = richting: \"Hij loopt naar de tempel.\" Ad vereist altijd accusativus.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-ACC-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-ACC"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Servi ad templum ambulant.'",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Ad + accusativus drukt richting uit ('naar'). Templum = acc.sg. 2e decl. neutrum.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De slaven lopen naar de tempel. Ad + acc. = richting."
         }
       ]
     },
@@ -2175,6 +2447,23 @@
           "antwoord": "ablativus",
           "feedback": "Cum + ablativus = samen met: \"Hij loopt met een vriend.\" Cum vereist altijd ablativus.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-ABL-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-ABL"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Rex cum militibus venit.'",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Cum + ablativus drukt vergezelling uit ('met'). Militibus = abl.pl. 3e declinatie.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De koning komt met de soldaten. Cum + abl. = samen met."
         }
       ]
     },
@@ -2188,7 +2477,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-OVEREENK-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-OVEREENK"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Puellae in horto ludunt.' Let op congruentie onderwerp-persoonsvorm.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Onderwerp en persoonsvorm moeten overeenstemmen in getal. Meervoud → -nt uitgang.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De meisjes spelen in de tuin. Puellae (pl.) → ludunt (3e pers. pl.)."
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-WRDVLG",
@@ -2200,7 +2507,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-WRDVLG-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-WRDVLG"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Magnum periculum nautae timent.' Let op de Latijnse woordvolgorde.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Latijn heeft vrije woordvolgorde maar vaak SOV. Hier staat het object vooraan voor nadruk.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De zeelieden vrezen het grote gevaar. SOV-volgorde: object vooraan, werkwoord achteraan."
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-ONTK",
@@ -2242,6 +2567,23 @@
           "antwoord": "Miles non pugnat.",
           "feedback": "Ontkenning met non vóór het werkwoord: non pugnat.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-ONTK-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-ONTK"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Servus dominum non timet.'",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Non ontkent het werkwoord en staat er direct voor. Non timet = vreest niet.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De slaaf vreest de heer niet. Non staat direct voor het werkwoord."
         }
       ]
     },
@@ -2285,6 +2627,23 @@
           "antwoord": "voeg -ne toe aan het eerste woord: Amatne?",
           "feedback": "-Ne is enclitisch (achter het woord geplakt): Venitne? = Komt hij?",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-VRAAGZIN-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-VRAAGZIN"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Cur puella lacrimat?'",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Latijnse vraagzinnen beginnen met een vraagwoord. Cur = waarom, quis = wie, ubi = waar.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "Waarom huilt het meisje? Cur = waarom (vragend bijwoord)."
         }
       ]
     },

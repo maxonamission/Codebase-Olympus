@@ -34,7 +34,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-ALFA-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-ALFA"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter alfa vijf keer op papier: hoofdletter (Α) en kleine letter (α). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Α α.",
+          "feedback": "Lijkt op de Latijnse A, maar de kleine letter is rond.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Α en 5× α — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-BETA",
@@ -46,7 +64,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-BETA-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-BETA"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter bèta vijf keer op papier: hoofdletter (Β) en kleine letter (β). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Β β.",
+          "feedback": "De kleine letter lijkt op een Duitse ß. Trek de lus naar beneden.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Β en 5× β — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-GAMMA",
@@ -58,7 +94,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-GAMMA-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-GAMMA"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter gamma vijf keer op papier: hoofdletter (Γ) en kleine letter (γ). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Γ γ.",
+          "feedback": "De hoofdletter is een omgekeerde L. De kleine letter hangt onder de regel.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Γ en 5× γ — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-DELTA",
@@ -70,7 +124,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-DELTA-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-DELTA"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter delta vijf keer op papier: hoofdletter (Δ) en kleine letter (δ). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Δ δ.",
+          "feedback": "De hoofdletter is een driehoek. De kleine letter lijkt op een omgekeerde 6.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Δ en 5× δ — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-EPSIL",
@@ -82,7 +154,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-EPSIL-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-EPSIL"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter epsilon vijf keer op papier: hoofdletter (Ε) en kleine letter (ε). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Ε ε.",
+          "feedback": "Kort! Lijkt op een kleine halve maan of omgekeerde 3.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Ε en 5× ε — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-DZETA",
@@ -94,7 +184,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-DZETA-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-DZETA"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter dzèta vijf keer op papier: hoofdletter (Ζ) en kleine letter (ζ). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Ζ ζ.",
+          "feedback": "De kleine letter heeft een staart onder de regel. Begin bovenaan met een horizontale streep.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Ζ en 5× ζ — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-ETA",
@@ -106,7 +214,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-ETA-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-ETA"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter èta vijf keer op papier: hoofdletter (Η) en kleine letter (η). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Η η.",
+          "feedback": "Lang! De kleine letter lijkt op een n met een lange staart naar beneden.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Η en 5× η — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-THETA",
@@ -118,7 +244,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-THETA-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-THETA"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter thèta vijf keer op papier: hoofdletter (Θ) en kleine letter (θ). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Θ θ.",
+          "feedback": "Een cirkel met een horizontale streep erdoor (hoofdletter) of een ronde 0 met bovenstok.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Θ en 5× θ — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-IOTA",
@@ -130,7 +274,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-IOTA-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-IOTA"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter iota vijf keer op papier: hoofdletter (Ι) en kleine letter (ι). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Ι ι.",
+          "feedback": "De eenvoudigste letter: één verticale streep. Geen punt erboven.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Ι en 5× ι — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-KAPPA",
@@ -142,7 +304,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-KAPPA-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-KAPPA"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter kappa vijf keer op papier: hoofdletter (Κ) en kleine letter (κ). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Κ κ.",
+          "feedback": "Lijkt sterk op de Latijnse K. De kleine letter heeft twee schuine streepjes.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Κ en 5× κ — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-LAMBD",
@@ -154,7 +334,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-LAMBD-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-LAMBD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter lambda vijf keer op papier: hoofdletter (Λ) en kleine letter (λ). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Λ λ.",
+          "feedback": "De hoofdletter is een omgekeerde V. De kleine letter begint met een bovenstok.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Λ en 5× λ — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-MU",
@@ -166,7 +364,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-MU-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-MU"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter mu vijf keer op papier: hoofdletter (Μ) en kleine letter (μ). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Μ μ.",
+          "feedback": "De hoofdletter = M. De kleine letter heeft een staart onder de regel.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Μ en 5× μ — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-NU",
@@ -178,7 +394,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-NU-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-NU"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter nu vijf keer op papier: hoofdletter (Ν) en kleine letter (ν). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Ν ν.",
+          "feedback": "Valse vriend! De hoofdletter = N, maar de kleine letter lijkt op een v.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Ν en 5× ν — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-XI",
@@ -190,7 +424,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-XI-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-XI"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter xi vijf keer op papier: hoofdletter (Ξ) en kleine letter (ξ). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Ξ ξ.",
+          "feedback": "Drie horizontale strepen (hoofdletter). De kleine letter kronkelt naar beneden.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Ξ en 5× ξ — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-OMIKR",
@@ -202,7 +454,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-OMIKR-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-OMIKR"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter omikron vijf keer op papier: hoofdletter (Ο) en kleine letter (ο). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Ο ο.",
+          "feedback": "Kort! Identiek aan de Latijnse O/o. Let op: niet verwarren met omega.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Ο en 5× ο — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-PI",
@@ -214,7 +484,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-PI-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-PI"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter pi vijf keer op papier: hoofdletter (Π) en kleine letter (π). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Π π.",
+          "feedback": "De hoofdletter lijkt op een poort. De kleine letter heeft twee poten.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Π en 5× π — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-RHO",
@@ -226,7 +514,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-RHO-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-RHO"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter rho vijf keer op papier: hoofdletter (Ρ) en kleine letter (ρ). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Ρ ρ.",
+          "feedback": "Valse vriend! Lijkt op P/p maar is een R-klank. Kleine letter hangt onder de regel.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Ρ en 5× ρ — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-SIGMA",
@@ -238,7 +544,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-SIGMA-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-SIGMA"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter sigma vijf keer op papier: hoofdletter (Σ) en kleine letter (σ/ς). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Σ σ/ς.",
+          "feedback": "Twee vormen! σ midden in een woord, ς aan het einde. De hoofdletter heeft puntige hoeken.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Σ en 5× σ/ς — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-TAU",
@@ -250,7 +574,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-TAU-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-TAU"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter tau vijf keer op papier: hoofdletter (Τ) en kleine letter (τ). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Τ τ.",
+          "feedback": "Lijkt op de Latijnse T/t. De kleine letter is een kort streepje met een boog.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Τ en 5× τ — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-UPSIL",
@@ -262,7 +604,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-UPSIL-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-UPSIL"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter upsilon vijf keer op papier: hoofdletter (Υ) en kleine letter (υ). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Υ υ.",
+          "feedback": "Valse vriend! Lijkt op Y, maar klinkt als u of uu.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Υ en 5× υ — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-PHI",
@@ -274,7 +634,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-PHI-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-PHI"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter phi vijf keer op papier: hoofdletter (Φ) en kleine letter (φ). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Φ φ.",
+          "feedback": "Een cirkel met een verticale streep erdoor. De kleine letter steekt boven en onder uit.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Φ en 5× φ — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-CHI",
@@ -286,7 +664,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-CHI-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-CHI"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter chi vijf keer op papier: hoofdletter (Χ) en kleine letter (χ). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Χ χ.",
+          "feedback": "Valse vriend! Lijkt op X, maar klinkt als ch (als in 'loch').",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Χ en 5× χ — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-PSI",
@@ -298,7 +694,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-PSI-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-PSI"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter psi vijf keer op papier: hoofdletter (Ψ) en kleine letter (ψ). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Ψ ψ.",
+          "feedback": "Een drietand. De kleine letter lijkt op een drietand met een staart.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Ψ en 5× ψ — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-OMEGA",
@@ -310,7 +724,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-FONL-ALFA-OMEGA-001",
+          "knoop_ids": [
+            "GRC-G-FONL-ALFA-OMEGA"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de Griekse letter omega vijf keer op papier: hoofdletter (Ω) en kleine letter (ω). Let op de schrijfrichting en verhoudingen.",
+          "antwoord": "Controleer je lettervormen met het voorbeeld: Ω ω.",
+          "feedback": "Lang! De hoofdletter is een hoefijzer. De kleine letter lijkt op een w.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "5× Ω en 5× ω — herkenbare lettervorm"
+        }
+      ]
     },
     {
       "id": "GRC-G-FONL-ALFA-GRP2",

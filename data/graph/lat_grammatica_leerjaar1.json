@@ -11,7 +11,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-VOC-FUNCTIE-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-VOC-FUNCTIE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Serve, veni!' Markeer de vocativus.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "De vocativus is de aanspreekvorm. 2e decl. -us → -e (servus → serve).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "Slaaf, kom! Vocativus: serve (aanspreekvorm van servus)."
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-STAM-INTRO",
@@ -50,7 +68,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-SUBJ-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-SUBJ"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Rex et regina in regia habitant.' Bepaal het onderwerp.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Een samengesteld onderwerp staat in de nominativus. Het werkwoord is meervoud.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De koning en de koningin wonen in het paleis. Onderwerp: rex et regina (meervoudig)."
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-OBJDIR",
@@ -93,6 +129,23 @@
           "antwoord": "lijdend voorwerp (accusativus)",
           "feedback": "Librum = acc. sg. van liber: het boek is het lijdend voorwerp van legit (leest).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-OBJDIR-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-OBJDIR"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Milites urbem defendunt.' Onderstreep het lijdend voorwerp.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Het lijdend voorwerp staat in de accusativus. Urbem = acc.sg. van urbs.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De soldaten verdedigen de stad. Lijdend voorwerp: urbem (acc.sg. 3e decl.)."
         }
       ]
     },
@@ -137,6 +190,23 @@
           "antwoord": "meewerkend voorwerp (dativus)",
           "feedback": "Puellae = dat. sg.: aan het meisje. Magister geeft het boek (librum) aan het meisje (puellae).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-OBJIND-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-OBJIND"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Pater filio gladium donat.' Markeer mwv en lv.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Meewerkend voorwerp = dativus, lijdend voorwerp = accusativus. Let op het verschil.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De vader schenkt zijn zoon een zwaard. Mwv: filio (dat.), lv: gladium (acc.)."
         }
       ]
     },
@@ -302,6 +372,23 @@
           "antwoord": "nautarum",
           "feedback": "Nauta verbuigt als een gewoon 1e-declinatiewoord: nauta, nautae → gen. pl. nautārum.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-MASC-004",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-MASC"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige verbuiging van 'nauta, nautae m.' op papier en markeer het grammaticale geslacht.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Nauta is mannelijk ondanks de 1e-declinatie. De uitgangen zijn identiek aan puella-type.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "nauta, nautae, nautae, nautam, nauta, nautā / nautae, nautarum, nautis, nautas, nautae, nautis (masculinum)"
         }
       ]
     },
@@ -378,6 +465,40 @@
           "antwoord": "puellae, puellarum",
           "feedback": "Gen. sg. puell-ae, gen. pl. puell-ārum. Let op: gen. sg. -ae is gelijk aan dat. sg. en nom. pl.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-PARAD-005",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige verbuiging van 'puella, puellae f.' (alle naamvallen, enkelvoud en meervoud) op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Controleer of je zes naamvallen hebt in beide numeri. Let op: gen.sg. en dat.sg. zijn allebei -ae.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "puella, puellae, puellae, puellam, puella, puellā / puellae, puellarum, puellis, puellas, puellae, puellis"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-PARAD-006",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige verbuiging van 'terra, terrae f.' op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Controleer dat abl.sg. op -ā eindigt (lang) en dat dat.pl. en abl.pl. beide -is zijn.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "terra, terrae, terrae, terram, terra, terrā / terrae, terrarum, terris, terras, terrae, terris"
         }
       ]
     },
@@ -496,6 +617,23 @@
           "antwoord": "amicis",
           "feedback": "De dativus meervoud van de 2e declinatie eindigt op -īs: amicus → amicīs.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-MASC-004",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-MASC"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige verbuiging van 'servus, servi m.' op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Let op: voc.sg. is serve (niet servus). Acc.pl. kan ook servōs zijn.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "servus, servi, servo, servum, serve, servo / servi, servorum, servis, servos, servi, servis"
         }
       ]
     },
@@ -570,6 +708,23 @@
           "antwoord": "agro",
           "feedback": "Stam agr- + uitgang -ō = agrō. Let op: niet 'agero' — de -e- uit de nominativus valt weg.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-ER-005",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-ER"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige verbuiging van 'puer, pueri m.' op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Puer behoudt de -e- in alle vormen. Vergelijk met ager (agri) waar de -e- wegvalt.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "puer, pueri, puero, puerum, puer, puero / pueri, puerorum, pueris, pueros, pueri, pueris"
         }
       ]
     },
@@ -629,6 +784,23 @@
           "antwoord": "templa",
           "feedback": "Neutrumregel: nom. pl. van neutra eindigt op -a: templum → templa. Niet verwarren met 1e declinatie femininum -a (sg.).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-NEUT-004",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-NEUT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige verbuiging van 'templum, templi n.' op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Neutrum: nom.=acc.=voc. Meervoud nom./acc./voc. eindigen op -a.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "templum, templi, templo, templum, templum, templo / templa, templorum, templis, templa, templa, templis"
         }
       ]
     },
@@ -722,6 +894,40 @@
           ],
           "feedback": "'Bella' kan nom. pl. of acc. pl. zijn (neutrumregel). Niet verwarren met 1e-declinatie nom. sg. fem. — 'bella' als neutrum pl. van 'bellum'.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-PARAD-006",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige verbuiging van 'dominus, domini m.' op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Let op: voc.sg. is -e (niet -us). Nom.pl. en voc.pl. zijn beide -i.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "dominus, domini, domino, dominum, domine, domino / domini, dominorum, dominis, dominos, domini, dominis"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-PARAD-007",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige verbuiging van 'bellum, belli n.' op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Neutrum-regel: nom.=acc.=voc. in beide numeri. Meervoud: -a (niet -i).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "bellum, belli, bello, bellum, bellum, bello / bella, bellorum, bellis, bella, bella, bellis"
         }
       ]
     },
@@ -1116,6 +1322,23 @@
           "antwoord": "rege, regum",
           "feedback": "Consonantstam: abl. sg. reg- + -e = rege, gen. pl. reg- + -um = regum.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL3-CONS-004",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL3-CONS"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige verbuiging van 'consul, consulis m.' op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Consonantstam: abl.sg. -e, gen.pl. -um. Nom.sg. = voc.sg. zonder uitgang.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "consul, consulis, consuli, consulem, consul, consule / consules, consulum, consulibus, consules, consules, consulibus"
         }
       ]
     },
@@ -1176,6 +1399,23 @@
           "antwoord": "civium",
           "feedback": "Civis is een i-stam: gen. pl. op -ium: civ- + -ium = civium.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL3-ISTAM-004",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL3-ISTAM"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.9,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige verbuiging van 'civis, civis c.' op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "I-stam: gen.pl. -ium. Herken i-stammen aan gelijk lettergreeptal nom./gen.sg.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "civis, civis, civi, civem, civis, cive / cives, civium, civibus, cives, cives, civibus"
         }
       ]
     },
@@ -1235,6 +1475,23 @@
           "antwoord": "nomina",
           "feedback": "Nomen is een neutrum consonantstam: acc. pl. = nom. pl. = -a: nomin- + -a = nomina.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL3-NEUT-004",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL3-NEUT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige verbuiging van 'corpus, corporis n.' op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Neutrum consonantstam: nom.=acc.=voc., meervoud -a. Gen.pl. -um (niet -ium).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "corpus, corporis, corpori, corpus, corpus, corpore / corpora, corporum, corporibus, corpora, corpora, corporibus"
         }
       ]
     },
@@ -1328,6 +1585,40 @@
           ],
           "feedback": "Milit-ibus: stam milit- + uitgang -ibus = dat./abl. pl. van miles, militis.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL3-PARAD-006",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL3-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige verbuiging van 'rex, regis m.' op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Consonantstam: gen.pl. -um (niet -ium). Nom.sg. rex is onregelmatig (reg+s > rex).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "rex, regis, regi, regem, rex, rege / reges, regum, regibus, reges, reges, regibus"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL3-PARAD-007",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL3-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige verbuiging van 'mare, maris n.' op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "I-stam neutrum: abl.sg. -i, nom./acc.pl. -ia, gen.pl. -ium.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "mare, maris, mari, mare, mare, mari / maria, marium, maribus, maria, maria, maribus"
         }
       ]
     },
@@ -1944,6 +2235,23 @@
           "antwoord": "capiunt",
           "feedback": "Gemengde conj.: cap- + -iu- + -nt = capiunt (net als 4e conj. audiunt).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C3B-ACT-004",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C3B-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'capere' (gemengde conjugatie) in de presens indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Gemengde conjugatie: als 3e maar met -i- in 1e sg. en 3e pl. (capio, capiunt).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "capio, capis, capit, capimus, capitis, capiunt"
         }
       ]
     },
@@ -2002,6 +2310,23 @@
           "antwoord": "possunt",
           "feedback": "Pot- + sunt = possunt (t → s voor s).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-POSSE-004",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-POSSE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'posse' in de presens indicativus op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Pot- voor klinker (potes), pos- voor s (possum). Samengesteld uit pot+esse.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "possum, potes, potest, possumus, potestis, possunt"
         }
       ]
     },
@@ -2075,6 +2400,40 @@
           "antwoord": "de 4e conjugatie en de gemengde conjugatie",
           "feedback": "Zowel 4e conj. (audiunt) als gem. conj. (capiunt) hebben -iunt in de 3e pers. pl.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-PARAD-005",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de presens indicativus actief van alle vier conjugaties naast elkaar op papier (1e pers. sg. t/m 3e pers. pl.).",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Vergelijk de stamklinkers: -a-, -e-, wisselend, -i-. 3e pl.: -ant/-ent/-unt/-iunt.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "1e: amo/as/at/amus/atis/ant, 2e: moneo/es/et/emus/etis/ent, 3e: lego/is/it/imus/itis/unt, 4e: audio/is/it/imus/itis/iunt"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-PARAD-006",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de presens indicativus actief van 'esse' en 'posse' naast elkaar op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Posse = pot/pos + esse. Let op: pos- voor s, pot- voor klinker.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "sum/possum, es/potes, est/potest, sumus/possumus, estis/potestis, sunt/possunt"
         }
       ]
     },
@@ -2118,6 +2477,23 @@
           "antwoord": "erant",
           "feedback": "Esse impf.: erant (zij waren).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-ESSE-003",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-ESSE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'esse' in het imperfectum indicativus op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Imperfectum van esse: stam era- + persoonsuitgangen. Regelmatig patroon.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "eram, eras, erat, eramus, eratis, erant"
         }
       ]
     },
@@ -2161,6 +2537,23 @@
           "antwoord": "capiebant",
           "feedback": "Gem. conj.: capi- + -eba- + -nt = capiebant.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-C3B-ACT-003",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-C3B-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'capere' in het imperfectum indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Gemengde conjugatie: imperfectum met -ieba- (als 4e conjugatie).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "capiebam, capiebas, capiebat, capiebamus, capiebatis, capiebant"
         }
       ]
     },
@@ -2204,6 +2597,23 @@
           "antwoord": "poterat",
           "feedback": "Posse impf.: pot- + erat = poterat (hij/zij kon).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-POSSE-003",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-POSSE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'posse' in het imperfectum indicativus op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Pot- + eram: regelmatig imperfectum op basis van esse.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "poteram, poteras, poterat, poteramus, poteratis, poterant"
         }
       ]
     },
@@ -2247,6 +2657,40 @@
           "antwoord": "-ba-",
           "feedback": "Het tussenvoegsel -ba- is het herkenningsteken van het imperfectum: amabam, monebat, regebant.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-PARAD-003",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf het imperfectum indicativus actief van conj. 1, 3 en esse naast elkaar op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Kenmerk imperfectum: -ba- (1e/2e) of -eba- (3e/4e). Esse heeft era-.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "1e: amabam/-bas/-bat/-bamus/-batis/-bant, 3e: legebam/-bas/-bat/-bamus/-batis/-bant, esse: eram/-as/-at/-amus/-atis/-ant"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPF-PARAD-004",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPF-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf het imperfectum indicativus actief van alle vier conjugaties op papier (alleen 1e pers.sg. + 3e pers.pl.).",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Let op het verschil: 1e/2e -ba-, 3e/4e -eba-. Uitgang 3e pl. altijd -nt.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "1e: amabam/amabant, 2e: monebam/monebant, 3e: legebam/legebant, 4e: audiebam/audiebant"
         }
       ]
     },
@@ -2549,6 +2993,23 @@
           "antwoord": "laudavi",
           "feedback": "1e conj. v-perfectum: laudav- + -i = laudavi.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PERF-C1-ACT-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PERF-C1-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'amāre' in het perfectum indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "V-perfectum: stam amav-. Uitgangen: -i, -isti, -it, -imus, -istis, -erunt.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "amavi, amavisti, amavit, amavimus, amavistis, amaverunt"
         }
       ]
     },
@@ -2592,6 +3053,23 @@
           "antwoord": "habuit",
           "feedback": "Perfectumstam habu- + -it = habuit.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PERF-C2-ACT-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PERF-C2-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'monēre' in het perfectum indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "U-perfectum: stam monu-. Perfectumstam kan afwijken van de presensstam.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "monui, monuisti, monuit, monuimus, monuistis, monuerunt"
         }
       ]
     },
@@ -2635,6 +3113,23 @@
           "antwoord": "scripsi",
           "feedback": "3e conj. s-perfectum: scrib- + -s- + -i → scripsi (b+s=ps).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PERF-C3-ACT-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PERF-C3-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'legere' in het perfectum indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Stam-perfectum (zonder extra kenmerk). Let op: legit kan presens of perfectum zijn.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "legi, legisti, legit, legimus, legistis, legerunt"
         }
       ]
     },
@@ -2678,6 +3173,23 @@
           "antwoord": "audivistis",
           "feedback": "Perfectumstam audiv- + -istis = audivistis.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PERF-C4-ACT-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PERF-C4-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'audīre' in het perfectum indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "V-perfectum: stam audiv-. Regelmatig als 1e conjugatie.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "audivi, audivisti, audivit, audivimus, audivistis, audiverunt"
         }
       ]
     },
@@ -2721,6 +3233,23 @@
           "antwoord": "fuerunt",
           "feedback": "Perfectumstam fu- + -erunt = fuerunt (zij zijn geweest).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PERF-ESSE-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PERF-ESSE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'esse' in het perfectum indicativus op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Perfectumstam fu- (suppletief). Uitgangen zijn regulier.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "fui, fuisti, fuit, fuimus, fuistis, fuerunt"
         }
       ]
     },
@@ -2764,6 +3293,40 @@
           "antwoord": "3e persoon meervoud perfectum indicativus actief, 3e conjugatie",
           "feedback": "Dix-erunt: perfectumstam dix- (s-perf. van dicere) + -erunt = 3e pers. pl. perf.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PERF-PARAD-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PERF-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de perfectum-uitgangen (alle personen) op papier, met een voorbeeld per perfectumtype (v, u, s, stam).",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "De perfectum-uitgangen zijn altijd gelijk, alleen de perfectumstam verschilt per type.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "-i, -isti, -it, -imus, -istis, -erunt. V: amavi, U: monui, S: dixi, Stam: legi"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PERF-PARAD-004",
+          "knoop_ids": [
+            "LAT-G-MORF-PERF-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf het perfectum indicativus actief van 'amare' en 'esse' naast elkaar op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Beide regelmatig in uitgangen. Verschil zit in de perfectumstam: amav- vs. fu-.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "amavi/fui, amavisti/fuisti, amavit/fuit, amavimus/fuimus, amavistis/fuistis, amaverunt/fuerunt"
         }
       ]
     },
@@ -2866,6 +3429,23 @@
           "antwoord": "-era-",
           "feedback": "Het tussenvoegsel -era- na de perfectumstam is het kenmerk van het plusquamperfectum.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PLQPF-REG-ACT-004",
+          "knoop_ids": [
+            "LAT-G-MORF-PLQPF-REG-ACT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'amare' in het plusquamperfectum indicativus actief op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Perfectumstam + era- + persoonsuitgangen. Herkenbaar aan -era-.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "amaveram, amaveras, amaverat, amaveramus, amaveratis, amaverant"
         }
       ]
     },
@@ -2909,6 +3489,23 @@
           "antwoord": "fuerat",
           "feedback": "Fu- + -era- + -t = fuerat (hij/zij was geweest).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PLQPF-ESSE-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PLQPF-ESSE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'esse' in het plusquamperfectum indicativus op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Perfectumstam fu- + eram. Regelmatig patroon.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "fueram, fueras, fuerat, fueramus, fueratis, fuerant"
         }
       ]
     },
@@ -2952,6 +3549,23 @@
           "antwoord": "potuerant",
           "feedback": "Potu- + -era- + -nt = potuerant.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PLQPF-POSSE-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PLQPF-POSSE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de volledige vervoeging van 'posse' in het plusquamperfectum indicativus op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Perfectumstam potu- + eram. Vergelijk met imperfectum poteram.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "potueram, potueras, potuerat, potueramus, potueratis, potuerant"
         }
       ]
     },
@@ -2995,6 +3609,23 @@
           "antwoord": "plqpf. heeft perfectumstam + -era-, imperfectum heeft praesensstam + -ba-",
           "feedback": "Imperfectum: praesensstam + -ba- (amabam). Plqpf.: perfectumstam + -era- (amaveram).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PLQPF-PARAD-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PLQPF-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.9,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf het plusquamperfectum van 'amare', 'legere' en 'esse' naast elkaar op papier (alle personen).",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Alle drie: perfectumstam + era-uitgangen. Herken het -era- kenmerk.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "amaveram/legeram/fueram, amaveras/legeras/fueras, amaverat/legerat/fuerat, amaveramus/legeramus/fueramus, amaveratis/legeratis/fueratis, amaverant/legerant/fuerant"
         }
       ]
     },
@@ -3082,6 +3713,23 @@
           "antwoord": "audi!",
           "feedback": "Praesensstam = audi-. Imper. sg. = audi! (luister!).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPER-SG-003",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPER-SG"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de imperativus singularis van alle vier conjugaties + esse op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Imperativus sg. = zuivere stam (zonder uitgang). Esse: es.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "1e: ama, 2e: mone, 3e: lege, 4e: audi, esse: es"
         }
       ]
     },
@@ -3125,6 +3773,23 @@
           "antwoord": "regite!",
           "feedback": "3e conj.: stam rege- + -te → regite! (let op bindklinker -i-).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPER-PL-003",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPER-PL"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de imperativus pluralis van alle vier conjugaties + esse op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Imperativus pl. = stam + -te. Let op: 3e conj. -ite, 4e conj. -ite.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "1e: amate, 2e: monete, 3e: legite, 4e: audite, esse: este"
         }
       ]
     },
@@ -3168,6 +3833,23 @@
           "antwoord": "este!",
           "feedback": "Esse imper. pl.: este! (weest!).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPER-ESSE-003",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPER-ESSE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 120,
+          "stimulus": "Schrijf de imperativus singularis en pluralis van 'esse' op papier.",
+          "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+          "feedback": "Es = 'wees!', este = 'weest!'. Onregelmatig maar eenvoudig.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "sg.: es, pl.: este"
         }
       ]
     },
@@ -3778,6 +4460,23 @@
           "antwoord": "ablativus (hij zit in de tuin — plaats)",
           "feedback": "Sedet = zitten (geen beweging). In + abl. = plaats. In horto = in de tuin.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-IN-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-IN"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal beide zinnen op papier: 'Miles in urbem currit.' / 'Miles in urbe stat.'",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "In + accusativus = richting ('waarheen'). In + ablativus = plaats ('waar').",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De soldaat rent de stad in. / De soldaat staat in de stad. In+acc=richting, in+abl=plaats."
         }
       ]
     },
@@ -3821,6 +4520,23 @@
           "antwoord": "ad forum",
           "feedback": "Ad + accusativus: ad forum (richting).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-RICHT-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-RICHT"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Nautae per mare ad insulam navigant.'",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Per = door/over, ad = naar. Beide met accusativus (richting/beweging).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De zeelieden varen over zee naar het eiland. Per+acc, ad+acc."
         }
       ]
     },
@@ -3864,6 +4580,23 @@
           "antwoord": "post bellum",
           "feedback": "Post + accusativus: post bellum (na de oorlog).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-TIJD-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-TIJD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Post proelium milites in castra redeunt.'",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Post + accusativus drukt 'na' uit (tijd). In castra = richting (acc.pl.n.).",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "Na de slag keren de soldaten terug naar het kamp. Post + acc = na."
         }
       ]
     },
@@ -3907,6 +4640,23 @@
           "antwoord": "ex urbe (of e urbe)",
           "feedback": "Ex/e + ablativus: ex urbe (uit de stad).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-HERK-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-HERK"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Consul ex urbe discedit.'",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Ex/e + ablativus drukt herkomst of scheiding uit. Urbe = abl.sg. 3e decl.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De consul vertrekt uit de stad. Ex + abl = uit (herkomst)."
         }
       ]
     },
@@ -3950,6 +4700,23 @@
           "antwoord": "sine pecunia",
           "feedback": "Sine + ablativus: sine pecunia (zonder geld).",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-PREP-OVERIG-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-PREP-OVERIG"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Sine armis pugnare non possumus.'",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Sine + ablativus = 'zonder'. Armis = abl.pl. 2e decl. neutrum.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "Zonder wapens kunnen wij niet vechten. Sine + abl = zonder."
         }
       ]
     },
@@ -3964,7 +4731,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-GEZEGDE-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-GEZEGDE"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier en markeer het gezegde: 'Milites fortes hostes vicerunt.'",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Het gezegde is de persoonsvorm. Vicerunt = 3e pers.pl. perfectum van vincere.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De dappere soldaten hebben de vijanden overwonnen. Gezegde: vicerunt (perf.)."
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-NWG",
@@ -4007,6 +4792,23 @@
           "antwoord": "nominativus (naamwoordelijk deel van het gezegde)",
           "feedback": "Na esse staat het naamwoordelijk deel in de nominativus: Marcus = nom., poeta = nom.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-NWG-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-NWG"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Roma magna urbs est.' Bepaal het naamwoordelijk gezegde.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Bij een naamwoordelijk gezegde staat het naamwoordelijk deel in de nominativus.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "Rome is een grote stad. Nwg: magna urbs (nom., congruent met Roma)."
         }
       ]
     },
@@ -4050,6 +4852,23 @@
           "antwoord": "bijvoeglijke bepaling (genitivus van bezit)",
           "feedback": "Puellae = gen. sg.: van het meisje. Het is een bijvoeglijke bepaling bij liber.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-BIJV-BEP-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-BIJV-BEP"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Gladius militis fortis est longus.' Markeer de bijvoeglijke bepaling.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Een genitivus bij een zelfstandig naamwoord is een bijvoeglijke bepaling.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "Het zwaard van de dappere soldaat is lang. Bijv. bep.: militis fortis (gen.)."
         }
       ]
     },
@@ -4063,7 +4882,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-BIJW-BEP-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-BIJW-BEP"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Pueri in horto laeti ludunt.' Markeer de bijwoordelijke bepaling.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Voorzetselgroepen (in horto) en bijwoorden fungeren als bijwoordelijke bepaling.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De jongens spelen vrolijk in de tuin. Bijw. bep. van plaats: in horto."
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-BEPVZ",
@@ -4105,6 +4942,23 @@
           "antwoord": "bijwoordelijke bepaling van plaats",
           "feedback": "In horto = in + abl. = plaatsbepaling: het meisje loopt in de tuin.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-BEPVZ-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-BEPVZ"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Pro patria pugnamus.' Bepaal de functie van de voorzetselgroep.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Pro + ablativus = 'voor/ten behoeve van'. Voorzetselgroep als bijw. bepaling.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "Wij vechten voor het vaderland. Pro patria = bijw. bep. van reden/doel."
         }
       ]
     },
@@ -4118,7 +4972,25 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-HOOFDBIJ-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-HOOFDBIJ"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Rex, qui bonus est, populum amat.' Markeer hoofd- en bijzin.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "De bijzin begint met een betrekkelijk voornaamwoord (qui) en geeft extra informatie.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De koning, die goed is, houdt van het volk. Hoofdzin: Rex populum amat. Bijzin: qui bonus est."
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-ACI-INTRO",
@@ -4161,6 +5033,40 @@
           "antwoord": "puellam (acc.) cantare (inf.) = het meisje zingt",
           "feedback": "Pater hoort (audit) dat het meisje (puellam) zingt (cantare). Puellam cantare is de AcI.",
           "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-ACI-INTRO-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-ACI-INTRO"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Puella servum venire videt.' Herken de AcI-constructie.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "AcI: accusativus (onderwerp bijzin) + infinitivus (gezegde bijzin). Vertaal met 'dat'-zin.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "Het meisje ziet dat de slaaf komt. AcI: servum (acc.) + venire (inf.)."
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-ACI-INTRO-004",
+          "knoop_ids": [
+            "LAT-G-SYNT-ACI-INTRO"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 180,
+          "stimulus": "Vertaal op papier: 'Consul milites fortes esse dicit.' Herken de AcI.",
+          "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+          "feedback": "Dicere + AcI: 'zeggen dat...'. Milites = acc.pl., fortes esse = nwg in infinitivus.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "De consul zegt dat de soldaten dapper zijn. AcI: milites (acc.) + fortes esse (inf.)."
         }
       ]
     }
