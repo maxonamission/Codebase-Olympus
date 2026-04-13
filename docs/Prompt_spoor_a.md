@@ -158,32 +158,76 @@ De volgende eisen gelden voor alle knopen in spoor A. Ze zijn het resultaat van 
 
 #### 1. Beschrijvingen: formaat en precisie
 
-Elke `beschrijving` volgt een vast formaat dat disambigueert en linguïstisch precies is:
+Elke `beschrijving` volgt een formaat dat disambigueert en vakinhoudelijk precies is. Het patroon verschilt per knooptype:
 
-**Grammatica-knopen (type G, individuele vormen/letters):**
+**Fonologie-knopen (FONL — letters, klanken, diakritiek):**
 ```
 "De letter èta: Η (majuskel), η (minuskel). Klank: lang /ɛː/. Valse vriend: majuskel lijkt op Latijns H maar is een klinker."
 ```
-
-Het patroon is: **Wat** (naam + vormen) → **Klank** (IPA-notatie) → **Disambiguatie** (onderscheid t.o.v. verwante vormen of Latijns equivalent).
-
-**Regels:**
-- Gebruik altijd **IPA-notatie** voor klanken: `/a/`, `/tʰ/`, `/pʰ/`, `/kʰ/`, `/ɛː/`, `/ɔː/`, `/ŋ/` etc.
-- Vermeld bij Griekse letters altijd majuskel én minuskel als aparte vormen.
-- Geef bij valse vrienden (Grieks/Latijn-verwarring) expliciet aan wat het verschil is.
-- Bij Erasmiaanse uitspraak: vermeld dat geaspireerden (θ, φ, χ) met hoorbare aspiratie worden uitgesproken, niet als fricatieven.
+Patroon: **Wat** (naam + vormen) → **Klank** (IPA-notatie) → **Disambiguatie**.
+- Gebruik altijd IPA-notatie: `/a/`, `/tʰ/`, `/pʰ/`, `/kʰ/`, `/ɛː/`, `/ɔː/`, `/ŋ/`.
+- Vermeld bij Griekse letters altijd majuskel én minuskel.
+- Geef bij valse vrienden expliciet aan wat het verschil is.
+- Bij Erasmiaanse uitspraak: geaspireerden (θ, φ, χ) met hoorbare aspiratie, niet als fricatieven.
 - Bij accenten: geef een Grieks woordvoorbeeld (bv. λόγος, τοῦ, δῶρον).
-- Max 2 zinnen. Geen opsommingen van 3+ items in de beschrijving — dat hoort in een groepsknoop.
+
+**Morfologie-knopen (MORF — declinaties, conjugaties, paradigma's):**
+
+Conceptknopen (INTRO):
+```
+"Introductie van het imperfectum: vorming (stam + ba + persoonsuitgang) en gebruik (duurhandeling in het verleden)."
+```
+Patroon: **Wat** (naam concept) → **Vorming** (hoe herkenbaar) → **Gebruik** (functie).
+
+Naamvalsknopen (per declinatie):
+```
+"De genitivus sg. (-ae) en pl. (-arum) van de 1e declinatie."
+```
+Patroon: **Naamval** → **Uitgangen** sg. en pl. → **Declinatie**.
+
+Werkwoordstijdknopen (per conjugatie):
+```
+"Alle zes persoonsvormen van het presens ind. act. van de 1e conjugatie: amo, amas, amat, amamus, amatis, amant."
+```
+Patroon: **Bereik** (6 vormen) → **Tijd/modus/diathese** → **Conjugatie** → **Modelparadigma**.
+
+Paradigma-intro-knopen (per declinatie):
+```
+"Overzicht van de 1e declinatie (a-stammen). Modelwoord: puella, -ae (v.)."
+```
+Patroon: **Naam** → **Stamtype** → **Modelwoord met genitief en genus**.
+
+**Syntaxis-knopen (SYNT — zinsbouw, functies):**
+```
+"De nominativus als naamval van het onderwerp en het naamwoordelijk deel van het gezegde."
+```
+Patroon: **Vorm** → **Syntactische functie(s)**. Geen paradigma, wél functieomschrijving.
+
+```
+"Veelvoorkomende voorzetsels die de accusativus vereisen: in (+acc), ad, per, ante, post, etc."
+```
+Patroon: **Regel** → **Voorbeelden** (3-5 representatieve items).
 
 **Vocabulaire-knopen (type V):**
 ```
 "Het werkwoord εἰμί (zijn): onregelmatig, alle vormen suppletief. Frequentieband F01."
 ```
+Patroon: **Lemma** (origineel schrift + vertaling) → **Bijzonderheid** → **Frequentieband**.
+
+```
+"Het zelfstandig naamwoord terra, -ae (v.): aarde, land. 1e declinatie. Frequentieband F01."
+```
+Patroon: **Lemma** met stamtijden/genitief → **Vertaling** → **Declinatie/conjugatie** → **Frequentieband**.
 
 **Cultuur-knopen (type C):**
 ```
 "Zeus/Jupiter: oppergod, heerser over hemel en bliksem. Verschijnt in vrijwel alle mythologische verhalen."
 ```
+Patroon: **Grieks/Latijns equivalent** → **Kernidentificatie** → **Belang/context**.
+
+**Universele regels:**
+- Max 2 zinnen. Geen opsommingen van 3+ items in de beschrijving — dat hoort in een groepsknoop.
+- Volg bestaande beschrijvingen in `data/graph/` als referentie voor stijl en diepte.
 
 #### 2. ID-naamgeving: consistente afkortingen
 
@@ -200,12 +244,16 @@ Waar een story >10 individuele knopen bevat op hetzelfde niveau, maak **groeperi
 INTRO → GRP1 → GRP2 → GRP3 → individuele knopen per groep
 ```
 
-Groepeer op didactisch relevante criteria:
-- Alfabetletters: visuele gelijkenis met Latijn (identiek / afwijkende vorm / valse vrienden / uniek)
-- Naamvallen: op functie (kern / bijwoordelijk / bezit)
-- Werkwoordstijden: op morphologisch kenmerk (stam / kenletter / uitgang)
+Groepeer op didactisch relevante criteria per epic:
+- **Alfabet (A3):** visuele gelijkenis met Latijn (identiek / afwijkende vorm / valse vrienden / uniek)
+- **Declinaties (A1/A2):** NIET groeperen — 6 naamvallen per declinatie is al een beheerbaar aantal; gebruik de DECL-INTRO als groeperingsknoop
+- **Conjugaties (A1/A2):** per tempus een INTRO-knoop, dan per conjugatie (C1-C4) de paradigma-knopen
+- **Vocabulaire (A4):** groepeer per semantisch cluster binnen een frequentieband als een cluster >10 woorden bevat
+- **Cultuur (A5):** groepeer per thema (mythologie, dagelijks leven, geschiedenis)
 
 Voordeel: de DAG blijft beheersbaar (4 kinderen i.p.v. 24 vanuit INTRO) en het leerpad is expliciet.
+
+**Wanneer NIET groeperen:** declinatie-naamvallen (max 6 per decl.), pronomina-types (max 4-5), diakritische subcategorieën (max 3 accenten). Groepsknopen voor <6 items zijn overhead.
 
 #### 4. Edge-gebruik: prerequisite vs. enrichment
 
@@ -220,21 +268,71 @@ Voordeel: de DAG blijft beheersbaar (4 kinderen i.p.v. 24 vanuit INTRO) en het l
 - Individuele letters → lettercombinaties die ze bevatten (gamma → nasaal-gamma)
 - Accenttypen onderling (acutus → gravis, want gravis vervangt acutus op de ultima)
 
-#### 5. Leesvaardigheid als integratiepunt
+#### 5. Integratiepunten per subgraph
 
 Elke subgraph moet uitmonden in een **toetsbare integratie-knoop** (bloom_niveau: `toepassing`). Voorbeelden:
-- Alfabet: `KOMBI-LEESV` — Griekse woorden hardop lezen
-- Declinatie: een knoop die alle naamvallen combineert in een herkenningstaak
-- Werkwoord: een knoop die persoonsvorm-herkenning over tijden heen toetst
+- **Alfabet:** `KOMBI-LEESV` — Griekse woorden hardop lezen
+- **Declinatie:** een knoop die alle naamvallen van die declinatie combineert in een herkenningstaak (bv. `LAT-G-MORF-DECL1-HERK`)
+- **Werkwoord:** een knoop die persoonsvorm-herkenning over conjugaties heen toetst per tempus
+- **Vocabulaire:** niet per woord, maar per frequentieband: een knoop die de ~100 woorden van F01 combineert in contextherkenning
 
 Deze integratie-knoop krijgt prerequisite-edges vanuit alle relevante deelknopen.
 
-#### 6. Taalgebruik
+#### 6. Bloom-niveaus: richtlijnen per knooptype
 
-- `beschrijving`: Nederlands, met Griekse/Latijnse voorbeelden in origineel schrift
-- `titel_nl`: Nederlands, mag Grieks/Latijns schrift bevatten (bv. "Α α — alfa")
-- Segmentnamen in IDs: Latijns/Nederlands (MORF, FONL, KOMBI), niet Engels (COMB, PHON)
-- Gebruik "polytoon" (niet "polytonic"), "diftong" (niet "diphthong"), "nasaal" (niet "nasal") in beschrijvingen
+De PoC gebruikt drie niveaus met een duidelijk patroon. Volg dit:
+
+| Knooptype | bloom_niveau | Wanneer |
+|-----------|-------------|---------|
+| INTRO / conceptknoop | `kennis` | Definitie, overzicht, geen actieve toepassing |
+| Functie-/gebruiksknoop (SYNT) | `begrip` | Leerling begrijpt de rol van een vorm in de zin |
+| Paradigma-/vormknoop (uitgangen, vormen) | `toepassing` | Leerling kan de vorm herkennen én produceren |
+| Integratie-/herkenningsknoop | `toepassing` | Leerling past kennis toe op onbekende voorbeelden |
+
+Gebruik `analyse` pas in bovenbouw of bij complexe syntaxis (AcI, ablativus absolutus — buiten scope klas 1).
+
+#### 7. Encompassing_weight: richtlijnen
+
+De PoC gebruikt weights tussen 0.2 en 0.5 met dit patroon:
+
+| Weight | Betekenis | Voorbeeld |
+|--------|-----------|-----------|
+| **0.2** | Zwakke prerequisite — helpt maar is niet essentieel | enrichment-edge, optionele context |
+| **0.3** | Standaard prerequisite — normaal vereiste voorkennis | naamval-intro → declinatie-intro |
+| **0.4** | Sterke prerequisite — direct noodzakelijk | declinatie-intro → paradigmaknopen |
+| **0.5** | Kritieke prerequisite — knoop is niet leerbaar zonder source | overzichtsknoop → specifieke deelvormen |
+
+Gebruik **0.3 als default**. Verhoog naar 0.4-0.5 alleen als de target echt onbegrijpelijk is zonder de source.
+
+#### 8. Grieks-specifieke aandachtspunten
+
+- **Alle GRC-G-knopen** (behalve alfabet/fonologie) krijgen een prerequisite-edge vanuit `GRC-G-FONL-KOMBI-LEESV`. Een leerling moet het alfabet beheersen vóór grammatica.
+- **Augment** (imperfectum, aoristus): beschrijf altijd het type (syllabisch ἐ- vs. temporaal) en de positie (voor de stam).
+- **Contracta** (ποιέω-type): vermeld welke klinker contraheert en het resultaat.
+- **Lidwoord** ὁ, ἡ, τό: dit is een zelfstandige knoop, geen onderdeel van de declinatie. Het Griekse lidwoord bestaat niet in het Latijn en is een cruciale marker.
+- **Medium/passivum, conjunctivus, optativus**: buiten scope klas 1, niet modelleren.
+
+#### 9. Latijn-specifieke aandachtspunten
+
+- **Bestaande PoC-knopen** (50 stuks in `lat_grammatica_poc.json`): nieuwe A1-knopen moeten hierop aansluiten, niet dupliceren. Check altijd of een knoop al bestaat.
+- **Stamtijden**: bij perfectum-knopen altijd het type noemen (v-perfectum, u-perfectum, reduplicatie, stamwisseling).
+- **esse/posse**: onregelmatig, altijd apart modelleren met volledige paradigma's in de beschrijving.
+- **Naamvalsfuncties** (SYNT-knopen): de PoC heeft al functie-knopen voor nom/acc/gen/dat/abl. A1-stories moeten hier edges naartoe leggen, niet nieuwe functie-knopen aanmaken.
+
+#### 10. Vocabulaire-specifieke aandachtspunten (A4)
+
+- **`semantisch_cluster`-veld** invullen: lowercase, max 20 chars. Bv. `goden`, `familie`, `oorlog`, `natuur`, `basiswerkwoord`.
+- **Prerequisite-edge naar grammatica**: elk vocabulairewoord krijgt een edge naar de relevante declinatie- of conjugatie-INTRO-knoop (bv. `terra` → `LAT-G-MORF-DECL1-INTRO`).
+- **Lemma-formaat** in `titel_nl`: Latijn: "terra, -ae (v.) — aarde", Grieks: "λόγος, -ου (m.) — woord, rede".
+- **Frequentieband** in ID: F01 (top 100), F02 (101-200), F03 (201-300).
+
+#### 11. Taalgebruik
+
+- `beschrijving`: Nederlands, met Griekse/Latijnse voorbeelden in origineel schrift.
+- `titel_nl`: Nederlands, mag Grieks/Latijns schrift bevatten (bv. "Α α — alfa", "Praesens indicativus actief — 1e conjugatie").
+- Segmentnamen in IDs: Latijns/Nederlands (MORF, FONL, KOMBI, DIAK, PRAES, IMPF, PERF), niet Engels (COMB, PHON, PRES).
+- Gebruik "polytoon" (niet "polytonic"), "diftong" (niet "diphthong"), "nasaal" (niet "nasal") in beschrijvingen.
+- Naamvallen in IDs: NOM, GEN, DAT, ACC, ABL, VOC (Latijnse afkortingen, consistent met PoC).
 
 ### Werkwijze per story
 
