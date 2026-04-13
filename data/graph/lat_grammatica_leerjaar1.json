@@ -89,7 +89,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-VOC-D1-001",
+          "knoop_ids": [
+            "LAT-G-MORF-VOC-D1"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Is de vocativus van de 1e declinatie gelijk aan een andere naamval?",
+          "antwoord": "ja, de vocativus is gelijk aan de nominativus",
+          "feedback": "Bij de 1e declinatie is de vocativus altijd gelijk aan de nominativus: puella! (sg.), puellae! (pl.).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-VOC-D1-002",
+          "knoop_ids": [
+            "LAT-G-MORF-VOC-D1"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Hoe spreek je een meisje (puella) direct aan in het Latijn?",
+          "antwoord": "puella!",
+          "feedback": "De vocativus van 'puella' is 'puella!' — gelijk aan de nominativus bij de 1e declinatie.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-DECL1-STAM",
@@ -102,7 +133,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-STAM-001",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-STAM"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Hoe bepaal je de stam van een 1e-declinatiewoord?",
+          "antwoord": "haal -ae van de genitivus singularis af",
+          "feedback": "De stam vind je door -ae van de genitivus singularis af te halen. Bijv. puell-ae → stam puell-.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-STAM-002",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-STAM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Wat is de stam van 'agricola, agricolae'?",
+          "antwoord": "agricol-",
+          "feedback": "Genitivus agricol-ae → stam agricol-. Aan deze stam plak je de naamvalsuitgangen.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-STAM-003",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-STAM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Wat is de stam van 'terra, terrae'?",
+          "antwoord": "terr-",
+          "feedback": "Genitivus terr-ae → stam terr-. Aan deze stam plak je de naamvalsuitgangen.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-DECL1-MASC",
@@ -115,7 +192,56 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-MASC-001",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-MASC"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Noem twee mannelijke woorden die toch bij de 1e declinatie horen.",
+          "antwoord": [
+            "nauta en poeta",
+            "nauta, poeta, pirata, agricola"
+          ],
+          "feedback": "Nauta (zeeman), poeta (dichter), pirata (piraat) en agricola (boer) zijn masculinum maar volgen de 1e declinatie.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-MASC-002",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-MASC"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Verbuigen mannelijke woorden van de 1e declinatie anders dan vrouwelijke?",
+          "antwoord": "nee, de uitgangen zijn identiek",
+          "feedback": "Masculina van de 1e declinatie verbuigen identiek aan feminina. Alleen het genus verschilt (m. in plaats van f.).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-MASC-003",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-MASC"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de genitivus meervoud van 'nauta'.",
+          "antwoord": "nautarum",
+          "feedback": "Nauta verbuigt als een gewoon 1e-declinatiewoord: nauta, nautae → gen. pl. nautārum.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-DECL1-PARAD",
@@ -128,7 +254,70 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-PARAD-001",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-PARAD"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welke twee naamvallen van de 1e declinatie meervoud hebben dezelfde uitgang -is?",
+          "antwoord": "dativus pluralis en ablativus pluralis",
+          "feedback": "De dativus en ablativus pluralis eindigen beiden op -īs. Context bepaalt de functie.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-PARAD-002",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-PARAD"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Ontleed 'puellarum' volledig.",
+          "antwoord": "genitivus pluralis, 1e declinatie",
+          "feedback": "Puell-ārum: stam puell- + uitgang -ārum = genitivus pluralis van de 1e declinatie.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-PARAD-003",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-PARAD"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 1.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 35,
+          "stimulus": "Ontleed 'terris' volledig.",
+          "antwoord": [
+            "dativus pluralis of ablativus pluralis, 1e declinatie"
+          ],
+          "feedback": "Terr-īs: stam terr- + uitgang -īs = dativus of ablativus pluralis van de 1e declinatie. De context bepaalt welke.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-PARAD-004",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-PARAD"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Verbuig 'puella' in de genitivus singularis en meervoud.",
+          "antwoord": "puellae, puellarum",
+          "feedback": "Gen. sg. puell-ae, gen. pl. puell-ārum. Let op: gen. sg. -ae is gelijk aan dat. sg. en nom. pl.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-DECL2-STAM",

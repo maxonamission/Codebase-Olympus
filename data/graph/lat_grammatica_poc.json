@@ -333,7 +333,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-INTRO-001",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Op welke letter eindigen de meeste woorden van de 1e declinatie in de nominativus singularis?",
+          "antwoord": "-a",
+          "feedback": "Woorden van de 1e declinatie (a-stammen) eindigen in de nominativus singularis op -a. Bijv. puella, terra, aqua.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-INTRO-002",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welk woordgeslacht hebben de meeste woorden van de 1e declinatie?",
+          "antwoord": "femininum (vrouwelijk)",
+          "feedback": "De 1e declinatie bevat voornamelijk feminina. Uitzonderingen zijn beroepsnamen als nauta (zeeman) en poeta (dichter), die masculinum zijn.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL1-INTRO-003",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL1-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Hoe herken je in het woordenboek dat een woord bij de 1e declinatie hoort?",
+          "antwoord": "de genitivus singularis eindigt op -ae",
+          "feedback": "Een woord hoort bij de 1e declinatie als de genitivus singularis op -ae eindigt. Bijv. puella, -ae.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-NOM-D1",
@@ -345,7 +391,56 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-NOM-D1-001",
+          "knoop_ids": [
+            "LAT-G-MORF-NOM-D1"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Welke naamval is 'puella'?",
+          "antwoord": [
+            "nominativus singularis",
+            "ablativus singularis"
+          ],
+          "feedback": "'Puella' kan nominativus sg. of ablativus sg. zijn (de uitgang -a is gelijk). Context bepaalt de functie.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-NOM-D1-002",
+          "knoop_ids": [
+            "LAT-G-MORF-NOM-D1"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de nominativus meervoud van 'puella'.",
+          "antwoord": "puellae",
+          "feedback": "De nominativus meervoud van de 1e declinatie eindigt op -ae: puella → puellae.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-NOM-D1-003",
+          "knoop_ids": [
+            "LAT-G-MORF-NOM-D1"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Wat is de nominativus-uitgang van de 1e declinatie in het enkelvoud?",
+          "antwoord": "-a",
+          "feedback": "De nominativus singularis van de 1e declinatie eindigt op -a. Let op: dit is gelijk aan de ablativus sg.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-GEN-D1",
@@ -357,7 +452,55 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-GEN-D1-001",
+          "knoop_ids": [
+            "LAT-G-MORF-GEN-D1"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welke naamval(len) kan 'puellae' zijn?",
+          "antwoord": [
+            "genitivus singularis, dativus singularis, of nominativus pluralis"
+          ],
+          "feedback": "'Puellae' kan genitivus sg., dativus sg. of nominativus pl. zijn. De uitgang -ae komt in drie naamvallen voor.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-GEN-D1-002",
+          "knoop_ids": [
+            "LAT-G-MORF-GEN-D1"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de genitivus meervoud van 'terra'.",
+          "antwoord": "terrarum",
+          "feedback": "De genitivus meervoud van de 1e declinatie eindigt op -ārum: terra → terrārum.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-GEN-D1-003",
+          "knoop_ids": [
+            "LAT-G-MORF-GEN-D1"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de genitivus enkelvoud van 'aqua'.",
+          "antwoord": "aquae",
+          "feedback": "De genitivus singularis van de 1e declinatie eindigt op -ae: aqua → aquae.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-DAT-D1",
@@ -369,7 +512,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-DAT-D1-001",
+          "knoop_ids": [
+            "LAT-G-MORF-DAT-D1"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Wat is de dativus-uitgang van de 1e declinatie in het enkelvoud?",
+          "antwoord": "-ae",
+          "feedback": "De dativus singularis van de 1e declinatie eindigt op -ae. Let op: dit is gelijk aan de genitivus sg. en nominativus pl.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DAT-D1-002",
+          "knoop_ids": [
+            "LAT-G-MORF-DAT-D1"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de dativus meervoud van 'puella'.",
+          "antwoord": "puellis",
+          "feedback": "De dativus meervoud van de 1e declinatie eindigt op -īs: puella → puellīs. Let op: dit is gelijk aan de ablativus pl.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DAT-D1-003",
+          "knoop_ids": [
+            "LAT-G-MORF-DAT-D1"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de dativus enkelvoud van 'terra'.",
+          "antwoord": "terrae",
+          "feedback": "De dativus singularis van de 1e declinatie eindigt op -ae: terra → terrae.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-ACC-D1",
@@ -381,7 +570,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-ACC-D1-001",
+          "knoop_ids": [
+            "LAT-G-MORF-ACC-D1"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Welke naamval is 'puellam'?",
+          "antwoord": "accusativus singularis",
+          "feedback": "De uitgang -am is uniek voor de accusativus singularis van de 1e declinatie.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ACC-D1-002",
+          "knoop_ids": [
+            "LAT-G-MORF-ACC-D1"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de accusativus meervoud van 'puella'.",
+          "antwoord": "puellas",
+          "feedback": "De accusativus meervoud van de 1e declinatie eindigt op -ās: puella → puellās.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ACC-D1-003",
+          "knoop_ids": [
+            "LAT-G-MORF-ACC-D1"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de accusativus enkelvoud van 'aqua'.",
+          "antwoord": "aquam",
+          "feedback": "De accusativus singularis van de 1e declinatie eindigt op -am: aqua → aquam.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-ABL-D1",
@@ -393,7 +628,56 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-ABL-D1-001",
+          "knoop_ids": [
+            "LAT-G-MORF-ABL-D1"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Wat is de ablativus-uitgang van de 1e declinatie in het enkelvoud?",
+          "antwoord": "-ā (lang a)",
+          "feedback": "De ablativus singularis van de 1e declinatie eindigt op -ā (lange a). Geschreven zonder macron lijkt het op de nominativus sg. -a.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ABL-D1-002",
+          "knoop_ids": [
+            "LAT-G-MORF-ABL-D1"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de ablativus meervoud van 'terra'.",
+          "antwoord": "terris",
+          "feedback": "De ablativus meervoud van de 1e declinatie eindigt op -īs: terra → terrīs. Dit is gelijk aan de dativus pl.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ABL-D1-003",
+          "knoop_ids": [
+            "LAT-G-MORF-ABL-D1"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de ablativus enkelvoud van 'puella'.",
+          "antwoord": [
+            "puellā",
+            "puella"
+          ],
+          "feedback": "De ablativus singularis van de 1e declinatie eindigt op -ā: puella → puellā. Zonder macron geschreven als 'puella'.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-DECL2-INTRO",
