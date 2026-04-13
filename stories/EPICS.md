@@ -20,7 +20,7 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 **Doel:** Methode-onafhankelijke grammaticale kern van klas 1, gebaseerd op de CvTE-minimumlijst gefilterd op wat alle methoden gemeen hebben.
 **Geschat:** ~150 knopen
 **Afhankelijkheden:** Geen (bouwt voort op bestaande PoC)
-**Status:** in progress
+**Status:** done
 **Bestand:** `data/graph/lat_grammatica_leerjaar1.json`
 
 | Story | Titel | Knopen | Status |
@@ -28,18 +28,18 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 | A1-01 | Conceptknopen en naamvalsysteem | 6 | done |
 | A1-02 | 1e declinatie — alle naamvallen + paradigma | 4 | done |
 | A1-03 | 2e declinatie — o-stammen masculinum + neutrum | 5 | done |
-| A1-04 | 3e declinatie — consonantstammen + i-stammen basis | ~15 | todo |
-| A1-05 | Adjectieven bonus-type en fortis-type | ~10 | todo |
-| A1-06 | Werkwoord-concepten — conjugatie-intro, persoon, tempus, modus | ~10 | todo |
-| A1-07 | Praesens indicativus actief — 4 conjugaties + esse | ~15 | todo |
-| A1-08 | Imperfectum indicativus actief | ~8 | todo |
-| A1-09 | Perfectum indicativus actief — inclusief stamtijdentypen | ~12 | todo |
-| A1-10 | Plusquamperfectum indicativus actief | ~5 | todo |
-| A1-11 | Imperativus + infinitivus praesens actief | ~6 | todo |
-| A1-12 | Pronomina — persoonlijk, bezittelijk, aanwijzend begin | ~12 | todo |
-| A1-13 | Voorzetsels met accusativus en ablativus | ~8 | todo |
-| A1-14 | Basissyntaxis — woordvolgorde, congruentie, ontkenning, vraagzinnen | ~12 | todo |
-| A1-15 | Review en prerequisite-edge validatie voor heel epic A1 | — | todo |
+| A1-04 | 3e declinatie — consonantstammen + i-stammen basis | 10 | done |
+| A1-05 | Adjectieven bonus-type en fortis-type | 7 | done |
+| A1-06 | Werkwoord-concepten — conjugatie-intro, persoon, tempus, modus | 6 | done |
+| A1-07 | Praesens indicativus actief — 4 conjugaties + esse | 5 | done |
+| A1-08 | Imperfectum indicativus actief | 4 | done |
+| A1-09 | Perfectum indicativus actief — inclusief stamtijdentypen | 12 | done |
+| A1-10 | Plusquamperfectum indicativus actief | 5 | done |
+| A1-11 | Imperativus + infinitivus praesens actief | 5 | done |
+| A1-12 | Pronomina — persoonlijk, bezittelijk, aanwijzend begin | 11 | done |
+| A1-13 | Voorzetsels met accusativus en ablativus | 6 | done |
+| A1-14 | Basissyntaxis — woordvolgorde, congruentie, ontkenning, vraagzinnen | 7 | done |
+| A1-15 | Review en prerequisite-edge validatie voor heel epic A1 | — | done |
 
 ---
 
