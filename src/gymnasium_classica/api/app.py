@@ -11,6 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from gymnasium_classica.api.database import init_db
 from gymnasium_classica.api.routes.auth import router as auth_router
+from gymnasium_classica.api.routes.session import router as session_router
 from gymnasium_classica.graph.loader import load_graph
 
 GRAPH_DIR = Path("data/graph")
@@ -53,6 +54,7 @@ def create_app(
     )
 
     application.include_router(auth_router)
+    application.include_router(session_router)
 
     @application.get("/health")
     async def health():
