@@ -22,9 +22,11 @@ from gymnasium_classica.models.learner import (
     MasterySource,
     OfflineAssignment,
     ResponseType,
+    SelfReportResponse,
     SessionRecord,
 )
 from gymnasium_classica.scheduling.bkt import (
+    SELF_REPORT_BKT_PARAMS,
     propagate_practice_correct,
     update_knoop_state,
 )
@@ -245,6 +247,45 @@ def _collect_offline_items(
 def _pending_follow_ups(learner: LearnerModel) -> list[OfflineAssignment]:
     """Return uncompleted offline assignments that need a follow-up question."""
     return [a for a in learner.pending_offline_assignments if not a.completed]
+
+
+def process_self_report(
+    learner: LearnerModel,
+    assignment: OfflineAssignment,
+    response: SelfReportResponse,
+) -> None:
+    """Process a self-reported outcome for an offline writing assignment.
+
+    Maps SelfReportResponse to a BKT-compatible correct/incorrect and
+    updates the learner state using SELF_REPORT_BKT_PARAMS (higher P(G)
+    and P(S) to reflect reduced confidence in self-reported results).
+
+    - CORRECT → BKT correct
+    - PARTIAL → BKT correct (but the higher P(G)=0.35 tempers the update)
+    - INCORRECT → BKT incorrect
+    """
+    correct_for_bkt = response in (
+        SelfReportResponse.CORRECT,
+        SelfReportResponse.PARTIAL,
+    )
+    bkt_response = ResponseType.CORRECT if correct_for_bkt else ResponseType.INCORRECT
+
+    update_knoop_state(
+        learner,
+        assignment.knoop_id,
+        bkt_response,
+        params=SELF_REPORT_BKT_PARAMS,
+    )
+
+    # Mark mastery source as self-report
+    state = learner.knoop_states[assignment.knoop_id]
+    state.source = MasterySource.SELF_REPORT
+
+    # Mark assignment as completed
+    assignment.completed = True
+
+    # Track self-report ratio
+    learner.self_report_count += 1
 
 
 def run_session(

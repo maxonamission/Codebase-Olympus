@@ -14,12 +14,21 @@ class ResponseType(StrEnum):
     SLOW_CORRECT = "slow_correct"
 
 
+class SelfReportResponse(StrEnum):
+    """Self-reported outcome for an offline writing assignment."""
+
+    CORRECT = "correct"
+    PARTIAL = "partial"
+    INCORRECT = "incorrect"
+
+
 class MasterySource(StrEnum):
     """How the current posterior mastery was established."""
 
     DIAGNOSTIC = "diagnostic"  # Set during intake placement test
     PRACTICE = "practice"  # Updated through regular exercises
     REVIEW = "review"  # Updated through fallback / conditional-completion review
+    SELF_REPORT = "self_report"  # Updated through self-reported offline work
 
 
 class ItemResponse(BaseModel):
@@ -72,6 +81,8 @@ class LearnerModel(BaseModel):
     knoop_states: dict[str, KnoopState] = Field(default_factory=dict)
     session_history: list[SessionRecord] = Field(default_factory=list)
     pending_offline_assignments: list[OfflineAssignment] = Field(default_factory=list)
+    self_report_count: int = Field(default=0, ge=0)
+    ocr_verified_count: int = Field(default=0, ge=0)
     intake_completed: bool = False
     intake_method: Optional[str] = Field(
         default=None,
