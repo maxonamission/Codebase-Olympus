@@ -48,14 +48,14 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 **Doel:** Griekse grammaticale kern van klas 1, gebaseerd op de GTC-minimumlijst gefilterd op klas 1 scope (Pallas les 1-14 / ARGO thema 1-4).
 **Geschat:** ~100 knopen
 **Afhankelijkheden:** A3 (alfabet moet af als prerequisite)
-**Status:** todo
+**Status:** in progress
 **Bestand:** `data/graph/grc_grammatica_leerjaar1.json`
 
 | Story | Titel | Knopen | Status |
 |-------|-------|--------|--------|
-| A2-01 | Conceptknopen Grieks — lidwoord, naamvalsysteem | ~10 | todo |
-| A2-02 | 1e declinatie (α/η-stammen) | ~10 | todo |
-| A2-03 | 2e declinatie (ο-stammen) | ~10 | todo |
+| A2-01 | Conceptknopen Grieks — lidwoord, naamvalsysteem | 11 | done |
+| A2-02 | 1e declinatie (α/η-stammen) | 10 | done |
+| A2-03 | 2e declinatie (ο-stammen) | 10 | done |
 | A2-04 | 3e declinatie introductie — via adjectieven πᾶς, σώφρων | ~8 | todo |
 | A2-05 | Adjectieven α/ο-stam en medeklinkerstam | ~8 | todo |
 | A2-06 | Praesens indicativus actief — thematisch + contracta + εἰμί | ~12 | todo |
