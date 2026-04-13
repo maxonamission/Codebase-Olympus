@@ -33,3 +33,8 @@ uv.lock
 
 # Generated worksheets (PDFs)
 data/worksheets/*.pdf
+
+# SQLite databases
+*.db
+*.db-wal
+*.db-shm
