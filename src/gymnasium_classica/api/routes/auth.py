@@ -1,11 +1,11 @@
 """Auth routes: register and login."""
 
-import json
 import sqlite3
 
 from fastapi import APIRouter, HTTPException, Request
 
 from gymnasium_classica.api.auth import generate_token, hash_password, verify_password
+from gymnasium_classica.api.database import create_user, get_user_by_email
 from gymnasium_classica.api.schemas import AuthResponse, LoginRequest, RegisterRequest
 from gymnasium_classica.models.user import User
 
@@ -22,18 +22,13 @@ async def register(body: RegisterRequest, request: Request):
     if existing:
         raise HTTPException(status_code=409, detail="Email already registered")
 
-    # Create User model and persist
+    # Create User model and persist via CRUD
     user = User(email=body.email)
     pw_hash = hash_password(body.password)
-    user_id = str(user.id)
-    user_data = user.model_dump_json()
-
-    db.execute(
-        "INSERT INTO users (id, email, password_hash, data) VALUES (?, ?, ?, ?)",
-        (user_id, body.email, pw_hash, user_data),
-    )
+    create_user(db, user, pw_hash)
 
     # Generate and store token
+    user_id = str(user.id)
     token = generate_token()
     db.execute("INSERT INTO auth_tokens (token, user_id) VALUES (?, ?)", (token, user_id))
     db.commit()
