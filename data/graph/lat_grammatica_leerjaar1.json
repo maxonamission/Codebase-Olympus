@@ -77,6 +77,58 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "items": []
+    },
+    {
+      "id": "LAT-G-MORF-VOC-D1",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Vocativus 1e declinatie",
+      "titel_terminologie": "vocativus declinationis primae",
+      "beschrijving": "De vocativus van de 1e declinatie is gelijk aan de nominativus: sg. -a, pl. -ae. Bijv. puella! (meisje!), puellae! (meisjes!).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL1-STAM",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Stam bepalen 1e declinatie",
+      "titel_terminologie": "stirps declinationis primae",
+      "beschrijving": "De stam van een 1e-declinatiewoord vind je door -ae van de genitivus singularis af te halen. Bijv. puell-ae → stam puell-. Aan deze stam plak je de naamvalsuitgangen.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL1-MASC",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Masculina 1e declinatie",
+      "titel_terminologie": "masculina declinationis primae",
+      "beschrijving": "Enkele mannelijke woorden volgen de 1e declinatie: nauta (zeeman), poeta (dichter), pirata (piraat), agricola (boer). Ze verbuigen identiek aan feminina maar zijn masculinum.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL1-PARAD",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Paradigma 1e declinatie",
+      "titel_terminologie": "paradigma declinationis primae",
+      "beschrijving": "Het volledige verbuigingsoverzicht van de 1e declinatie (puella, -ae). Synthese van alle zes naamvallen in enkelvoud en meervoud tot één paradigma.",
+      "bloom_niveau": "synthese",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
     }
   ],
   "edges": [
@@ -132,6 +184,78 @@
       "source_id": "LAT-G-SYNT-DAT-FUNCTIE",
       "target_id": "LAT-G-SYNT-OBJIND",
       "type": "enrichment",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL1-INTRO",
+      "target_id": "LAT-G-MORF-VOC-D1",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-SYNT-VOC-FUNCTIE",
+      "target_id": "LAT-G-MORF-VOC-D1",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-STAM-INTRO",
+      "target_id": "LAT-G-MORF-DECL1-STAM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL1-INTRO",
+      "target_id": "LAT-G-MORF-DECL1-STAM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL1-INTRO",
+      "target_id": "LAT-G-MORF-DECL1-MASC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-GENUS-INTRO",
+      "target_id": "LAT-G-MORF-DECL1-MASC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-NOM-D1",
+      "target_id": "LAT-G-MORF-DECL1-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-GEN-D1",
+      "target_id": "LAT-G-MORF-DECL1-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DAT-D1",
+      "target_id": "LAT-G-MORF-DECL1-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-ACC-D1",
+      "target_id": "LAT-G-MORF-DECL1-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-ABL-D1",
+      "target_id": "LAT-G-MORF-DECL1-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-VOC-D1",
+      "target_id": "LAT-G-MORF-DECL1-PARAD",
+      "type": "prerequisite",
       "encompassing_weight": 0.3
     }
   ]
