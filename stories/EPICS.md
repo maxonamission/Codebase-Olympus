@@ -312,7 +312,7 @@ Zie `docs/Prompt_spoor_c.md` voor de volledige prompt.
 **Doel:** Oefeningen genereren voor alle LAT-G knopen. Mix van herkenning, productie, analyse, contextueel.
 **Geschat:** ~330 items
 **Afhankelijkheden:** A1 (per story: corresponderende A1-story moet done zijn)
-**Status:** todo
+**Status:** done
 
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
@@ -326,7 +326,7 @@ Zie `docs/Prompt_spoor_c.md` voor de volledige prompt.
 | C1-08 | Items voor plqpf + imperativus + infinitivus | 22 items | done |
 | C1-09 | Items voor pronomina | 24 items | done |
 | C1-10 | Items voor voorzetsels + syntaxis | 32 items | done |
-| C1-11 | Validatie: dekking, IRT-parameters, oefentype-mix | — | todo |
+| C1-11 | Validatie: dekking, IRT-parameters, oefentype-mix | — | done |
 
 ---
 
