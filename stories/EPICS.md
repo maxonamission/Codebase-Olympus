@@ -291,3 +291,56 @@ Offline schrijven als volwaardige oefenvorm met OCR-verificatie en mentor-portfo
 | B8-01 | Portfolio-selectie-algoritme | — | todo |
 | B8-02 | Portfolio PDF-generatie | — | todo |
 | B8-03 | Mentor-dashboard en Addisco-integratie | — | todo |
+
+---
+
+## Spoor C — Items en content voor Latijnse grammatica
+
+Items (oefeningen) en didactische content voor de LAT-G knopen, richting pilot.
+Zie `docs/Prompt_spoor_c.md` voor de volledige prompt.
+
+### Uitvoervolgorde
+
+- **C1** en **C2** zijn onderling onafhankelijk en kunnen parallel
+- C1-stories hangen af van de corresponderende A1-story (knopen moeten bestaan)
+- C2-stories hangen af van dezelfde A1-knopen maar niet van C1
+
+---
+
+## Epic C1: Items genereren — Latijnse grammatica
+
+**Doel:** Oefeningen genereren voor alle LAT-G knopen. Mix van herkenning, productie, analyse, contextueel.
+**Geschat:** ~330 items
+**Afhankelijkheden:** A1 (per story: corresponderende A1-story moet done zijn)
+**Status:** todo
+
+| Story | Titel | Geschat | Status |
+|-------|-------|---------|--------|
+| C1-01 | Items voor conceptknopen (INTRO) | ~20 items | todo |
+| C1-02 | Items voor 1e declinatie | ~30 items | todo |
+| C1-03 | Items voor 2e declinatie | ~35 items | todo |
+| C1-04 | Items voor 3e declinatie | ~40 items | todo |
+| C1-05 | Items voor adjectieven | ~25 items | todo |
+| C1-06 | Items voor presens indicativus | ~50 items | todo |
+| C1-07 | Items voor imperfectum + perfectum | ~40 items | todo |
+| C1-08 | Items voor plqpf + imperativus + infinitivus | ~25 items | todo |
+| C1-09 | Items voor pronomina | ~30 items | todo |
+| C1-10 | Items voor voorzetsels + syntaxis | ~35 items | todo |
+| C1-11 | Validatie: dekking, IRT-parameters, oefentype-mix | — | todo |
+
+---
+
+## Epic C2: Content schrijven — Latijnse grammatica
+
+**Doel:** Didactische markdown content voor de kernknopen: paradigmatabellen, uitleg, herkenningstips.
+**Geschat:** ~34 bestanden
+**Afhankelijkheden:** A1 (knopen moeten bestaan)
+**Status:** in progress
+
+| Story | Titel | Geschat | Status |
+|-------|-------|---------|--------|
+| C2-01 | Content voor concept-INTRO knopen | ~8 bestanden | doing |
+| C2-02 | Content voor declinatie-paradigma's | ~6 bestanden | doing |
+| C2-03 | Content voor werkwoord-paradigma's | ~8 bestanden | doing |
+| C2-04 | Content voor syntaxis | ~6 bestanden | todo |
+| C2-05 | Content voor pronomina + adjectieven | ~6 bestanden | todo |
