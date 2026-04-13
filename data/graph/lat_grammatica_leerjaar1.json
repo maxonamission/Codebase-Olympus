@@ -2716,7 +2716,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PLQPF-INTRO-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PLQPF-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Hoe wordt het plusquamperfectum gevormd?",
+          "antwoord": "perfectumstam + -era- + persoonsuitgang",
+          "feedback": "Plqpf. = perfectumstam + -era- + uitgang: amav-era-m. Het is als het ware het imperfectum van het perfectum.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PLQPF-INTRO-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PLQPF-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welke handeling drukt het plusquamperfectum uit?",
+          "antwoord": "een handeling die al voltooid was vóór een ander verleden moment",
+          "feedback": "Het plqpf. drukt voor-verleden tijd uit: \"hij had gelopen\" (vóór iets anders gebeurde).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PLQPF-REG-ACT",
@@ -2728,7 +2759,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PLQPF-REG-ACT-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PLQPF-REG-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg \"amare\" in de 1e persoon enkelvoud plusquamperfectum.",
+          "antwoord": "amaveram",
+          "feedback": "Perfectumstam amav- + -era- + -m = amaveram.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PLQPF-REG-ACT-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PLQPF-REG-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg \"monere\" in de 3e persoon meervoud plusquamperfectum.",
+          "antwoord": "monuerant",
+          "feedback": "Perfectumstam monu- + -era- + -nt = monuerant.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PLQPF-REG-ACT-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PLQPF-REG-ACT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Wat is het herkenningsteken van het plusquamperfectum?",
+          "antwoord": "-era-",
+          "feedback": "Het tussenvoegsel -era- na de perfectumstam is het kenmerk van het plusquamperfectum.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PLQPF-ESSE",
@@ -2740,7 +2817,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PLQPF-ESSE-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PLQPF-ESSE"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg \"esse\" volledig in het plusquamperfectum.",
+          "antwoord": "fueram, fueras, fuerat, fueramus, fueratis, fuerant",
+          "feedback": "Esse plqpf.: perfectumstam fu- + -era- + uitgangen.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PLQPF-ESSE-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PLQPF-ESSE"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Geef de 3e persoon enkelvoud plqpf. van \"esse\".",
+          "antwoord": "fuerat",
+          "feedback": "Fu- + -era- + -t = fuerat (hij/zij was geweest).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PLQPF-POSSE",
@@ -2752,7 +2860,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PLQPF-POSSE-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PLQPF-POSSE"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de 1e persoon enkelvoud plqpf. van \"posse\".",
+          "antwoord": "potueram",
+          "feedback": "Perfectumstam potu- + -era- + -m = potueram (ik had gekund).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PLQPF-POSSE-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PLQPF-POSSE"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de 3e persoon meervoud plqpf. van \"posse\".",
+          "antwoord": "potuerant",
+          "feedback": "Potu- + -era- + -nt = potuerant.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PLQPF-PARAD",
@@ -2764,7 +2903,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PLQPF-PARAD-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PLQPF-PARAD"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 1.1,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Ontleed \"audiverant\" volledig.",
+          "antwoord": "3e persoon meervoud plusquamperfectum indicativus actief, 4e conjugatie",
+          "feedback": "Audiv-era-nt: perfectumstam audiv- + plqpf.-kenmerk -era- + uitgang -nt.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PLQPF-PARAD-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PLQPF-PARAD"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Hoe onderscheid je het plqpf. van het imperfectum?",
+          "antwoord": "plqpf. heeft perfectumstam + -era-, imperfectum heeft praesensstam + -ba-",
+          "feedback": "Imperfectum: praesensstam + -ba- (amabam). Plqpf.: perfectumstam + -era- (amaveram).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-IMPER-INTRO",
@@ -2777,7 +2947,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-IMPER-INTRO-001",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPER-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Welke twee vormen heeft de imperativus?",
+          "antwoord": "enkelvoud en meervoud",
+          "feedback": "De imperativus kent alleen een enkelvouds- en een meervoudsvorm (geen 1e persoon).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPER-INTRO-002",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPER-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Waarvoor gebruik je de imperativus?",
+          "antwoord": "om een bevel of verzoek uit te drukken",
+          "feedback": "De imperativus (gebiedende wijs) drukt een bevel, verzoek of aansporing uit.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-IMPER-SG",
@@ -2789,7 +2990,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-IMPER-SG-001",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPER-SG"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Hoe vorm je de imperativus enkelvoud?",
+          "antwoord": "de imperativus sg. is gelijk aan de praesensstam",
+          "feedback": "Imper. sg. = praesensstam: ama! (1e), mone! (2e), rege! (3e), audi! (4e).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPER-SG-002",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPER-SG"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de imperativus enkelvoud van \"audire\".",
+          "antwoord": "audi!",
+          "feedback": "Praesensstam = audi-. Imper. sg. = audi! (luister!).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-IMPER-PL",
@@ -2801,7 +3033,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-IMPER-PL-001",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPER-PL"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de imperativus meervoud van \"amare\".",
+          "antwoord": "amate!",
+          "feedback": "Praesensstam ama- + -te = amate! (heb lief, jullie!).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPER-PL-002",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPER-PL"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de imperativus meervoud van \"regere\".",
+          "antwoord": "regite!",
+          "feedback": "3e conj.: stam rege- + -te → regite! (let op bindklinker -i-).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-IMPER-ESSE",
@@ -2813,7 +3076,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-IMPER-ESSE-001",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPER-ESSE"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Wat is de imperativus enkelvoud van \"esse\"?",
+          "antwoord": "es! (wees!)",
+          "feedback": "Esse imper.: sg. es! (wees!), pl. este! (weest!). Onregelmatig.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-IMPER-ESSE-002",
+          "knoop_ids": [
+            "LAT-G-MORF-IMPER-ESSE"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de imperativus meervoud van \"esse\".",
+          "antwoord": "este!",
+          "feedback": "Esse imper. pl.: este! (weest!).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-INF-INTRO",
