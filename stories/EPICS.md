@@ -316,7 +316,7 @@ Zie `docs/Prompt_spoor_c.md` voor de volledige prompt.
 
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
-| C1-01 | Items voor conceptknopen (INTRO) | ~20 items | todo |
+| C1-01 | Items voor conceptknopen (INTRO) | 24 items | done |
 | C1-02 | Items voor 1e declinatie | ~30 items | todo |
 | C1-03 | Items voor 2e declinatie | ~35 items | todo |
 | C1-04 | Items voor 3e declinatie | ~40 items | todo |
