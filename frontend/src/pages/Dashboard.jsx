@@ -1,18 +1,115 @@
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { getProgressOverview } from '../api'
+
+const DOMAIN_LABELS = {
+  G: 'Grammatica',
+  V: 'Vocabulaire',
+  C: 'Cultuur',
+  I: 'Integratie',
+}
+
+function DomainBar({ domain, mastered, total }) {
+  const pct = total > 0 ? Math.round((mastered / total) * 100) : 0
+  const label = DOMAIN_LABELS[domain] || domain
+
+  return (
+    <div className="domain-row">
+      <span className="domain-label">{label}</span>
+      <div className="domain-track">
+        <div className="domain-fill" style={{ width: `${pct}%` }} />
+      </div>
+      <span className="domain-count">{mastered}/{total}</span>
+    </div>
+  )
+}
 
 export default function Dashboard() {
   const navigate = useNavigate()
+  const [overview, setOverview] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
+
+  useEffect(() => {
+    async function load() {
+      try {
+        const data = await getProgressOverview()
+        setOverview(data)
+      } catch (err) {
+        setError(err.message)
+      } finally {
+        setLoading(false)
+      }
+    }
+    load()
+  }, [])
 
   function handleLogout() {
     localStorage.removeItem('token')
     navigate('/login')
   }
 
+  function handleStartSession() {
+    navigate('/session')
+  }
+
+  if (loading) {
+    return (
+      <div className="page dashboard-page">
+        <p className="loading-text">Dashboard laden...</p>
+      </div>
+    )
+  }
+
+  const domains = overview?.domains || {}
+  const totalMastered = overview?.total_mastered || 0
+  const totalNodes = overview?.total_nodes || 0
+  const streak = overview?.streak || 0
+  const totalPct = totalNodes > 0 ? Math.round((totalMastered / totalNodes) * 100) : 0
+
   return (
-    <div className="page">
-      <h1>Dashboard</h1>
-      <p>Welkom bij Gymnasium Classica.</p>
-      <button onClick={handleLogout}>Uitloggen</button>
+    <div className="page dashboard-page">
+      <div className="dashboard-header">
+        <h1>Dashboard</h1>
+        <button className="btn-link" onClick={handleLogout}>Uitloggen</button>
+      </div>
+
+      {error && <div className="error-message">{error}</div>}
+
+      <div className="dashboard-stats">
+        <div className="stat-card">
+          <span className="stat-number">{totalPct}%</span>
+          <span className="stat-label">Beheerst</span>
+        </div>
+        <div className="stat-card">
+          <span className="stat-number">{totalMastered}</span>
+          <span className="stat-label">van {totalNodes} knopen</span>
+        </div>
+        <div className="stat-card">
+          <span className="stat-number">{streak}</span>
+          <span className="stat-label">{streak === 1 ? 'dag' : 'dagen'} streak</span>
+        </div>
+      </div>
+
+      <div className="card dashboard-domains">
+        <h2>Voortgang per domein</h2>
+        {Object.entries(domains).length > 0 ? (
+          Object.entries(domains).map(([domain, { mastered, total }]) => (
+            <DomainBar
+              key={domain}
+              domain={domain}
+              mastered={mastered}
+              total={total}
+            />
+          ))
+        ) : (
+          <p className="text-muted">Nog geen voortgang. Start je eerste sessie!</p>
+        )}
+      </div>
+
+      <button className="btn btn-primary" onClick={handleStartSession}>
+        Start sessie
+      </button>
     </div>
   )
 }

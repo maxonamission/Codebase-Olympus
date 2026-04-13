@@ -59,3 +59,7 @@ export function submitAnswer(sessionId, { responseType, responseTimeMs, answer }
 export function getSessionSummary(sessionId) {
   return apiFetch(`/session/${sessionId}/summary`);
 }
+
+export function getProgressOverview() {
+  return apiFetch('/progress/overview');
+}
