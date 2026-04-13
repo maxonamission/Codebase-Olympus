@@ -10,7 +10,9 @@ from gymnasium_classica.api.schemas import (
     AnswerResponse,
     FeedbackResponse,
     ItemInfo,
+    MasteryChange,
     QuestionResponse,
+    SessionSummaryResponse,
     StartSessionResponse,
 )
 from gymnasium_classica.api.session_manager import Question, SessionManager
@@ -116,4 +118,33 @@ async def submit_answer(
         ),
         next_question=_question_to_response(result.next_question),
         session_finished=result.session_finished,
+    )
+
+
+@router.get("/{session_id}/summary", response_model=SessionSummaryResponse)
+async def get_session_summary(
+    session_id: str,
+    user_id: str = Depends(get_current_user_id),
+):
+    """Return a summary of a completed (or in-progress) session."""
+    if not session_manager.has_session(session_id):
+        raise HTTPException(status_code=404, detail="Session not found")
+
+    state = session_manager.get_session_state(session_id)
+    if state.user_id != user_id:
+        raise HTTPException(status_code=403, detail="Not your session")
+
+    summary = session_manager.get_summary(session_id)
+    return SessionSummaryResponse(
+        session_id=summary.session_id,
+        started_at=summary.started_at,
+        ended_at=summary.ended_at,
+        total_items=summary.total_items,
+        nodes_introduced=summary.nodes_introduced,
+        nodes_reviewed=summary.nodes_reviewed,
+        mastery_changes={
+            k: MasteryChange(before=v[0], after=v[1])
+            for k, v in summary.mastery_changes.items()
+        },
+        phases_completed=summary.phases_completed,
     )

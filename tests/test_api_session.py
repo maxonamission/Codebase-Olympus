@@ -167,3 +167,60 @@ class TestSubmitAnswer:
                 break
 
         assert steps < max_steps
+
+
+class TestSessionSummary:
+    def _run_session(self, client, headers):
+        """Helper: start and complete a session, return session_id."""
+        start = client.post("/session/start", headers=headers).json()
+        session_id = start["session_id"]
+        q = start["question"]
+        while q is not None:
+            resp = client.post(
+                "/session/answer",
+                json={
+                    "session_id": session_id,
+                    "response": "correct",
+                    "response_time_ms": 1000,
+                },
+                headers=headers,
+            ).json()
+            q = resp.get("next_question")
+            if resp["session_finished"]:
+                break
+        return session_id
+
+    def test_summary_after_session(self, client):
+        headers = _auth_header(client)
+        session_id = self._run_session(client, headers)
+        resp = client.get(f"/session/{session_id}/summary", headers=headers)
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["session_id"] == session_id
+        assert data["total_items"] >= 0
+        assert isinstance(data["nodes_introduced"], list)
+        assert isinstance(data["nodes_reviewed"], list)
+        assert isinstance(data["mastery_changes"], dict)
+        assert isinstance(data["phases_completed"], list)
+
+    def test_summary_unknown_session(self, client):
+        headers = _auth_header(client)
+        resp = client.get("/session/nonexistent/summary", headers=headers)
+        assert resp.status_code == 404
+
+    def test_summary_wrong_user(self, client):
+        h1 = _auth_header(client, "sum1@example.nl")
+        session_id = self._run_session(client, h1)
+        h2 = _auth_header(client, "sum2@example.nl")
+        resp = client.get(f"/session/{session_id}/summary", headers=h2)
+        assert resp.status_code == 403
+
+    def test_summary_mastery_changes_format(self, client):
+        headers = _auth_header(client)
+        session_id = self._run_session(client, headers)
+        data = client.get(f"/session/{session_id}/summary", headers=headers).json()
+        for knoop_id, change in data["mastery_changes"].items():
+            assert "before" in change
+            assert "after" in change
+            assert isinstance(change["before"], float)
+            assert isinstance(change["after"], float)
