@@ -479,6 +479,261 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PRAES-INTRO",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Het praesens indicativus actief",
+      "titel_terminologie": "praesens indicativi activi",
+      "beschrijving": "Het praesens drukt een handeling uit die nu plaatsvindt of gewoonlijk gebeurt. Vorming: praesens-stam + persoonsuitgang. Zes persoonsvormen per conjugatie.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PERS-UITG",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Actieve persoonsuitgangen",
+      "titel_terminologie": "terminationes personales activi",
+      "beschrijving": "De zes actieve persoonsuitgangen: -o/-m (1e sg.), -s (2e sg.), -t (3e sg.), -mus (1e pl.), -tis (2e pl.), -nt (3e pl.). Gelden voor praesens en imperfectum.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PRAES-C3B-ACT",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Praesens indicativus actief gemengde conjugatie",
+      "beschrijving": "Alle zes persoonsvormen van het praesens ind. act. van de gemengde conjugatie: capio, capis, capit, capimus, capitis, capiunt. Stam met -i- als bij de 4e conjugatie.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PRAES-POSSE",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Praesens van posse",
+      "beschrijving": "Het onregelmatige werkwoord posse (kunnen): possum, potes, potest, possumus, potestis, possunt. Samengesteld uit pot- + esse; t wordt s voor s.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PRAES-PARAD",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Paradigma praesens indicativus actief",
+      "beschrijving": "Vergelijkend overzicht van het praesens ind. act. van alle vier conjugaties, de gemengde conjugatie, esse en posse. Zeven paradigma's naast elkaar.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-IMPF-ESSE",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Imperfectum van esse",
+      "beschrijving": "Het imperfectum van esse (zijn): eram, eras, erat, eramus, eratis, erant. Onregelmatige vorming zonder -ba-kenmerk.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-IMPF-C3B-ACT",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Imperfectum gemengde conjugatie",
+      "beschrijving": "Het imperfectum ind. act. van de gemengde conjugatie: capiebam, capiebas, capiebat, etc. Vorming als 4e conjugatie: stam + ie + ba + persoonsuitgang.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-IMPF-POSSE",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Imperfectum van posse",
+      "beschrijving": "Het imperfectum van posse (kunnen): poteram, poteras, poterat, poteramus, poteratis, poterant. Samengesteld uit pot- + eram (imperfectum van esse).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-IMPF-PARAD",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Paradigma imperfectum indicativus actief",
+      "beschrijving": "Vergelijkend overzicht van het imperfectum ind. act. van alle vier conjugaties, de gemengde conjugatie, esse en posse.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PERF-INTRO",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Het perfectum indicativus actief",
+      "titel_terminologie": "perfectum indicativi activi",
+      "beschrijving": "Het perfectum drukt een voltooide handeling uit. Vorming: perfectum-stam (3e stamtijd) + perfectum-uitgangen. De perfectum-stam verschilt per werkwoord.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PERF-UITG",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Perfectum-uitgangen",
+      "beschrijving": "De zes perfectum-uitgangen: -i (1e sg.), -isti (2e sg.), -it (3e sg.), -imus (1e pl.), -istis (2e pl.), -erunt (3e pl.). Afwijkend van de actieve persoonsuitgangen.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PERF-STAMT-V",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "V-perfectum",
+      "beschrijving": "Perfectum-stam gevormd met -v-: amavi (amare), audivi (audire), delevi (delere). Herkenbaar en voorspelbaar; komt vooral voor bij de 1e en 4e conjugatie.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PERF-STAMT-U",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "U-perfectum",
+      "beschrijving": "Perfectum-stam gevormd met -u-: monui (monere), docui (docere), rapui (rapere). Komt vooral voor bij de 2e conjugatie en enkele 3e-conjugatiewerkwoorden.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PERF-STAMT-S",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "S-perfectum",
+      "beschrijving": "Perfectum-stam gevormd met -s-: dixi (dicere), scripsi (scribere), rexi (regere). De -s- assimileert vaak met de stammedeklinker (g+s=x, b+s=ps).",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PERF-STAMT-OV",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Overige perfectumtypen",
+      "beschrijving": "Perfectumvorming door reduplicatie (cucurri, tetendi, cecidi) of stamwisseling (cepi, feci, veni, vidi). Niet voorspelbaar; moet per werkwoord geleerd worden.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PERF-C1-ACT",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Perfectum 1e conjugatie",
+      "beschrijving": "Alle zes persoonsvormen van het perfectum ind. act. van de 1e conjugatie: amavi, amavisti, amavit, amavimus, amavistis, amaverunt. V-perfectum.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PERF-C2-ACT",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Perfectum 2e conjugatie",
+      "beschrijving": "Alle zes persoonsvormen van het perfectum ind. act. van de 2e conjugatie: monui, monuisti, monuit, monuimus, monuistis, monuerunt. U-perfectum.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PERF-C3-ACT",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Perfectum 3e conjugatie",
+      "beschrijving": "Alle zes persoonsvormen van het perfectum ind. act. van de 3e conjugatie: rexi, rexisti, rexit, etc. Diverse stamtypen: s-perfectum (rexi), reduplicatie (cucurri), stamwisseling (cepi).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PERF-C4-ACT",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Perfectum 4e conjugatie",
+      "beschrijving": "Alle zes persoonsvormen van het perfectum ind. act. van de 4e conjugatie: audivi, audivisti, audivit, audivimus, audivistis, audiverunt. V-perfectum.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PERF-ESSE",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Perfectum van esse",
+      "beschrijving": "Het perfectum van esse (zijn): fui, fuisti, fuit, fuimus, fuistis, fuerunt. Onregelmatige perfectum-stam fu-.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-PERF-PARAD",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Paradigma perfectum indicativus actief",
+      "beschrijving": "Vergelijkend overzicht van het perfectum ind. act. van alle vier conjugaties en esse. De perfectum-uitgangen zijn voor alle werkwoorden identiek.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
     }
   ],
   "edges": [
@@ -997,6 +1252,372 @@
       "target_id": "LAT-G-MORF-CONJ-HERKEN",
       "type": "enrichment",
       "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-MORF-TEMPUS-INTRO",
+      "target_id": "LAT-G-MORF-PRAES-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-MODUS-INTRO",
+      "target_id": "LAT-G-MORF-PRAES-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DIATH-INTRO",
+      "target_id": "LAT-G-MORF-PRAES-INTRO",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-MORF-PERSOON-INTRO",
+      "target_id": "LAT-G-MORF-PERS-UITG",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-UIT-INTRO",
+      "target_id": "LAT-G-MORF-PERS-UITG",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-INTRO",
+      "target_id": "LAT-G-MORF-PRAES-C1-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-INTRO",
+      "target_id": "LAT-G-MORF-PRAES-C2-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-INTRO",
+      "target_id": "LAT-G-MORF-PRAES-C3-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-INTRO",
+      "target_id": "LAT-G-MORF-PRAES-C4-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-INTRO",
+      "target_id": "LAT-G-MORF-PRAES-ESSE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-INTRO",
+      "target_id": "LAT-G-MORF-PRAES-C3B-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-INTRO",
+      "target_id": "LAT-G-MORF-PRAES-POSSE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-CONJ3B-INTRO",
+      "target_id": "LAT-G-MORF-PRAES-C3B-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-ESSE",
+      "target_id": "LAT-G-MORF-PRAES-POSSE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-C1-ACT",
+      "target_id": "LAT-G-MORF-PRAES-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-C2-ACT",
+      "target_id": "LAT-G-MORF-PRAES-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-C3-ACT",
+      "target_id": "LAT-G-MORF-PRAES-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-C4-ACT",
+      "target_id": "LAT-G-MORF-PRAES-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-C3B-ACT",
+      "target_id": "LAT-G-MORF-PRAES-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-ESSE",
+      "target_id": "LAT-G-MORF-PRAES-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-POSSE",
+      "target_id": "LAT-G-MORF-PRAES-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-IMPF-INTRO",
+      "target_id": "LAT-G-MORF-IMPF-ESSE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-ESSE",
+      "target_id": "LAT-G-MORF-IMPF-ESSE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-IMPF-INTRO",
+      "target_id": "LAT-G-MORF-IMPF-C3B-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-CONJ3B-INTRO",
+      "target_id": "LAT-G-MORF-IMPF-C3B-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-IMPF-ESSE",
+      "target_id": "LAT-G-MORF-IMPF-POSSE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-POSSE",
+      "target_id": "LAT-G-MORF-IMPF-POSSE",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-MORF-IMPF-C1C2-ACT",
+      "target_id": "LAT-G-MORF-IMPF-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-IMPF-C3C4-ACT",
+      "target_id": "LAT-G-MORF-IMPF-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-IMPF-C3B-ACT",
+      "target_id": "LAT-G-MORF-IMPF-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-IMPF-ESSE",
+      "target_id": "LAT-G-MORF-IMPF-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-IMPF-POSSE",
+      "target_id": "LAT-G-MORF-IMPF-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-INTRO",
+      "target_id": "LAT-G-MORF-IMPF-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-STAMT-INTRO",
+      "target_id": "LAT-G-MORF-PERF-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-TEMPUS-INTRO",
+      "target_id": "LAT-G-MORF-PERF-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-MODUS-INTRO",
+      "target_id": "LAT-G-MORF-PERF-INTRO",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-INTRO",
+      "target_id": "LAT-G-MORF-PERF-UITG",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-PERS-UITG",
+      "target_id": "LAT-G-MORF-PERF-UITG",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-INTRO",
+      "target_id": "LAT-G-MORF-PERF-STAMT-V",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-INTRO",
+      "target_id": "LAT-G-MORF-PERF-STAMT-U",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-INTRO",
+      "target_id": "LAT-G-MORF-PERF-STAMT-S",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-INTRO",
+      "target_id": "LAT-G-MORF-PERF-STAMT-OV",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-UITG",
+      "target_id": "LAT-G-MORF-PERF-C1-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-STAMT-V",
+      "target_id": "LAT-G-MORF-PERF-C1-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-CONJ1-INTRO",
+      "target_id": "LAT-G-MORF-PERF-C1-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-UITG",
+      "target_id": "LAT-G-MORF-PERF-C2-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-STAMT-U",
+      "target_id": "LAT-G-MORF-PERF-C2-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-CONJ2-INTRO",
+      "target_id": "LAT-G-MORF-PERF-C2-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-UITG",
+      "target_id": "LAT-G-MORF-PERF-C3-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-STAMT-S",
+      "target_id": "LAT-G-MORF-PERF-C3-ACT",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-MORF-CONJ3-INTRO",
+      "target_id": "LAT-G-MORF-PERF-C3-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-UITG",
+      "target_id": "LAT-G-MORF-PERF-C4-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-STAMT-V",
+      "target_id": "LAT-G-MORF-PERF-C4-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-CONJ4-INTRO",
+      "target_id": "LAT-G-MORF-PERF-C4-ACT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-UITG",
+      "target_id": "LAT-G-MORF-PERF-ESSE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-ESSE",
+      "target_id": "LAT-G-MORF-PERF-ESSE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-C1-ACT",
+      "target_id": "LAT-G-MORF-PERF-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-C2-ACT",
+      "target_id": "LAT-G-MORF-PERF-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-C3-ACT",
+      "target_id": "LAT-G-MORF-PERF-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-C4-ACT",
+      "target_id": "LAT-G-MORF-PERF-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-ESSE",
+      "target_id": "LAT-G-MORF-PERF-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
     }
   ]
 }

@@ -31,9 +31,9 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 | A1-04 | 3e declinatie — consonantstammen + i-stammen basis | 10 | done |
 | A1-05 | Adjectieven bonus-type en fortis-type | 7 | done |
 | A1-06 | Werkwoord-concepten — conjugatie-intro, persoon, tempus, modus | 6 | done |
-| A1-07 | Praesens indicativus actief — 4 conjugaties + esse | ~15 | todo |
-| A1-08 | Imperfectum indicativus actief | ~8 | todo |
-| A1-09 | Perfectum indicativus actief — inclusief stamtijdentypen | ~12 | todo |
+| A1-07 | Praesens indicativus actief — 4 conjugaties + esse | 5 | done |
+| A1-08 | Imperfectum indicativus actief | 4 | done |
+| A1-09 | Perfectum indicativus actief — inclusief stamtijdentypen | 12 | done |
 | A1-10 | Plusquamperfectum indicativus actief | ~5 | todo |
 | A1-11 | Imperativus + infinitivus praesens actief | ~6 | todo |
 | A1-12 | Pronomina — persoonlijk, bezittelijk, aanwijzend begin | ~12 | todo |
