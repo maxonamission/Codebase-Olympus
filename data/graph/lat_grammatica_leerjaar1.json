@@ -330,7 +330,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-STAM-001",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-STAM"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Hoe bepaal je de stam van een 2e-declinatiewoord?",
+          "antwoord": "haal -i van de genitivus singularis af",
+          "feedback": "De stam vind je door -i van de genitivus singularis af te halen. Bijv. domin-i → stam domin-.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-STAM-002",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-STAM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Wat is de stam van 'servus, servi'?",
+          "antwoord": "serv-",
+          "feedback": "Genitivus serv-i → stam serv-. Aan deze stam plak je de naamvalsuitgangen.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-STAM-003",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-STAM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Wat is de stam van 'ager, agri'?",
+          "antwoord": "agr-",
+          "feedback": "Genitivus agr-i → stam agr-. Let op: de -e- uit de nominativus 'ager' valt weg. De genitivus toont de ware stam.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-DECL2-MASC",
@@ -343,7 +389,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-MASC-001",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-MASC"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Wat is het modelwoord voor het -us-patroon van de 2e declinatie?",
+          "antwoord": "dominus, -i (m.)",
+          "feedback": "Dominus, -i (m.) is het modelwoord voor het hoofdpatroon van de 2e declinatie masculinum.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-MASC-002",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-MASC"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de accusativus enkelvoud van 'amicus'.",
+          "antwoord": "amicum",
+          "feedback": "De accusativus singularis van -us woorden eindigt op -um: amicus → amicum.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-MASC-003",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-MASC"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de dativus meervoud van 'amicus'.",
+          "antwoord": "amicis",
+          "feedback": "De dativus meervoud van de 2e declinatie eindigt op -īs: amicus → amicīs.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-DECL2-ER",
@@ -356,7 +448,68 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-ER-001",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-ER"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wat is het verschil tussen 'puer, pueri' en 'ager, agri'?",
+          "antwoord": "puer behoudt de -e- in de stam (puer-), ager verliest de -e- (agr-)",
+          "feedback": "Bij puer, pueri blijft de -e- in alle vormen (stam puer-). Bij ager, agri valt de -e- weg (stam agr-). De genitivus toont de ware stam.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-ER-002",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-ER"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de genitivus meervoud van 'ager'.",
+          "antwoord": "agrorum",
+          "feedback": "De stam van ager is agr- (genitivus agri). Gen. pl.: agr- + -ōrum = agrōrum.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-ER-003",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-ER"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de accusativus enkelvoud van 'puer'.",
+          "antwoord": "puerum",
+          "feedback": "De stam van puer is puer- (genitivus pueri). Acc. sg.: puer- + -um = puerum.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-ER-004",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-ER"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.9,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de ablativus enkelvoud van 'ager'.",
+          "antwoord": "agro",
+          "feedback": "Stam agr- + uitgang -ō = agrō. Let op: niet 'agero' — de -e- uit de nominativus valt weg.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-DECL2-NEUT",
@@ -369,7 +522,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-NEUT-001",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-NEUT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Wat is de neutrumregel?",
+          "antwoord": "bij neutra zijn nominativus en accusativus altijd gelijk; in het meervoud eindigen ze op -a",
+          "feedback": "De neutrumregel: nom. = acc. in alle numeri. In het meervoud eindigen nom. en acc. altijd op -a.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-NEUT-002",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-NEUT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de accusativus meervoud van 'bellum'.",
+          "antwoord": "bella",
+          "feedback": "Neutrumregel: acc. pl. = nom. pl. Bij neutra van de 2e declinatie is dat -a: bellum → bella.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-NEUT-003",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-NEUT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de nominativus meervoud van 'templum'.",
+          "antwoord": "templa",
+          "feedback": "Neutrumregel: nom. pl. van neutra eindigt op -a: templum → templa. Niet verwarren met 1e declinatie femininum -a (sg.).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-DECL2-PARAD",
@@ -382,7 +581,87 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-PARAD-001",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-PARAD"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welke twee naamvallen van de 2e declinatie enkelvoud hebben dezelfde uitgang -o?",
+          "antwoord": "dativus singularis en ablativus singularis",
+          "feedback": "De dativus en ablativus singularis van de 2e declinatie eindigen beiden op -ō. Context bepaalt de functie.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-PARAD-002",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-PARAD"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Ontleed 'dominorum' volledig.",
+          "antwoord": "genitivus pluralis, 2e declinatie",
+          "feedback": "Domin-ōrum: stam domin- + uitgang -ōrum = genitivus pluralis van de 2e declinatie.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-PARAD-003",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-PARAD"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 1.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 35,
+          "stimulus": "Ontleed 'agris' volledig.",
+          "antwoord": [
+            "dativus pluralis of ablativus pluralis, 2e declinatie"
+          ],
+          "feedback": "Agr-īs: stam agr- (van ager, agri) + uitgang -īs = dativus of ablativus pluralis van de 2e declinatie.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-PARAD-004",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-PARAD"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Verbuig 'bellum' in de genitivus singularis en meervoud.",
+          "antwoord": "belli, bellorum",
+          "feedback": "Gen. sg. bell-i, gen. pl. bell-ōrum. Bij neutra volgt de genitivus hetzelfde patroon als bij masculina.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-DECL2-PARAD-005",
+          "knoop_ids": [
+            "LAT-G-MORF-DECL2-PARAD"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 1.5,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 35,
+          "stimulus": "Ontleed 'bella' volledig. Geef alle mogelijke analyses.",
+          "antwoord": [
+            "nominativus pluralis neutrum of accusativus pluralis neutrum, 2e declinatie"
+          ],
+          "feedback": "'Bella' kan nom. pl. of acc. pl. zijn (neutrumregel). Niet verwarren met 1e-declinatie nom. sg. fem. — 'bella' als neutrum pl. van 'bellum'.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-GEN-D3",
