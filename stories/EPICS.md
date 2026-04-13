@@ -100,6 +100,7 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 | A4-05 | Grieks frequentieband F01 — top-75 woorden | 75 | done |
 | A4-06 | Grieks frequentieband F02 — woorden 76-150 | 75 | done |
 | A4-07 | Prerequisite-edges vocabulaire → grammatica | 21 edges | done |
+| A4-08 | Enrichment-edges voor onverbuigbare vocabulaire (bijwoorden, voegwoorden, partikels) | 46 edges | done |
 
 ---
 
