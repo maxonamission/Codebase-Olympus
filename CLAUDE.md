@@ -28,6 +28,17 @@ Lees voor de volledige context:
 - Tests: pytest. Schrijf tests voor de knowledge graph (cycle detection, orphan detection, topologische sortering) en het learner model (BKT updates, SM-2 scheduling).
 - Git commits: conventionele commits, Nederlands in commit messages.
 
+## Output en sessie-management
+
+De API heeft een idle timeout (~60s). Voorkom timeouts door:
+
+- **Werk in kleine stappen.** Eén story per keer, niet meerdere stories in één response. Commit na elke afgeronde story.
+- **Genereer grote JSON via scripts, niet inline.** Schrijf een Python-script dat de knopen genereert, valideert en opslaat. Toon de samenvatting (aantal knopen, edges, validatie-uitkomst), niet de volledige JSON.
+- **Beperk tool-output.** Gebruik `| tail -N` of `| head -N` bij lange commando-output. Toon alleen relevante delen van testresultaten.
+- **Splits grote bestanden.** Lees bestanden met `offset` en `limit`, niet in één keer als ze >150 regels zijn.
+- **Geen volledige bestanden herhalen.** Bij edits: toon alleen wat er veranderd is, niet het hele bestand.
+- **Commit vroeg en vaak.** Na elke story of logische eenheid. Niet wachten tot het einde van een sessie.
+
 ## Domeinkennis
 
 - De CvTE-minimumlijsten (Latijn en Grieks) definiëren de scope van de grammatica.
