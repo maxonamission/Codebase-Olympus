@@ -163,8 +163,8 @@ Audio-laag voor multi-modale taalverwerving. Gefaseerd: TTS in fase 3, STT in fa
 
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
-| B1-01 | TTS-evaluatie Latijn — Poeta ex Machina en alternatieven | — | todo |
-| B1-02 | TTS-evaluatie Grieks — Erasmiaans en alternatieven | — | todo |
+| B1-01 | TTS-evaluatie Latijn — Poeta ex Machina en alternatieven | — | done |
+| B1-02 | TTS-evaluatie Grieks — Erasmiaans en alternatieven | — | done |
 | B1-03 | TTS-pipeline bouwen — audio-generatiescript | — | todo |
 | B1-04 | Audio genereren — Latijn V-knopen F01-F03 | ~300 bestanden | todo |
 | B1-05 | Audio genereren — Grieks V-knopen F01-F02 | ~150 bestanden | todo |
