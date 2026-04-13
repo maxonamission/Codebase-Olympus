@@ -1,0 +1,485 @@
+{
+  "knopen": [],
+  "edges": [
+    {
+      "source_id": "LAT-G-MORF-NAAMVAL-INTRO",
+      "target_id": "GRC-G-MORF-NAAMVAL-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.7
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL-INTRO",
+      "target_id": "GRC-G-MORF-DECL-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.6
+    },
+    {
+      "source_id": "LAT-G-MORF-GENUS-INTRO",
+      "target_id": "GRC-G-MORF-GENUS-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.7
+    },
+    {
+      "source_id": "LAT-G-MORF-NUMERUS-INTRO",
+      "target_id": "GRC-G-MORF-NUMERUS-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.8
+    },
+    {
+      "source_id": "LAT-G-SYNT-NOM-FUNCTIE",
+      "target_id": "GRC-G-SYNT-NOM-FUNCTIE",
+      "type": "transfer",
+      "encompassing_weight": 0.7
+    },
+    {
+      "source_id": "LAT-G-SYNT-ACC-FUNCTIE",
+      "target_id": "GRC-G-SYNT-ACC-FUNCTIE",
+      "type": "transfer",
+      "encompassing_weight": 0.6
+    },
+    {
+      "source_id": "LAT-G-SYNT-GEN-FUNCTIE",
+      "target_id": "GRC-G-SYNT-GEN-FUNCTIE",
+      "type": "transfer",
+      "encompassing_weight": 0.6
+    },
+    {
+      "source_id": "LAT-G-SYNT-DAT-FUNCTIE",
+      "target_id": "GRC-G-SYNT-DAT-FUNCTIE",
+      "type": "transfer",
+      "encompassing_weight": 0.6
+    },
+    {
+      "source_id": "LAT-G-SYNT-VOC-FUNCTIE",
+      "target_id": "GRC-G-SYNT-VOC-FUNCTIE",
+      "type": "transfer",
+      "encompassing_weight": 0.8
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL1-INTRO",
+      "target_id": "GRC-G-MORF-DECL1-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL2-INTRO",
+      "target_id": "GRC-G-MORF-DECL2-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-G-MORF-DECL3-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-NOM-D1",
+      "target_id": "GRC-G-MORF-NOM-D1",
+      "type": "transfer",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-GEN-D1",
+      "target_id": "GRC-G-MORF-GEN-D1",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DAT-D1",
+      "target_id": "GRC-G-MORF-DAT-D1",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-ACC-D1",
+      "target_id": "GRC-G-MORF-ACC-D1",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-NOM-D2",
+      "target_id": "GRC-G-MORF-NOM-D2",
+      "type": "transfer",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-GEN-D2",
+      "target_id": "GRC-G-MORF-GEN-D2",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DAT-D2",
+      "target_id": "GRC-G-MORF-DAT-D2",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-ACC-D2",
+      "target_id": "GRC-G-MORF-ACC-D2",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-NOM-D3",
+      "target_id": "GRC-G-MORF-NOM-D3",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-GEN-D3",
+      "target_id": "GRC-G-MORF-GEN-D3",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DAT-D3",
+      "target_id": "GRC-G-MORF-DAT-D3",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-ACC-D3",
+      "target_id": "GRC-G-MORF-ACC-D3",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL1-PARAD",
+      "target_id": "GRC-G-MORF-DECL1-PARAD",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL2-PARAD",
+      "target_id": "GRC-G-MORF-DECL2-PARAD",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL3-PARAD",
+      "target_id": "GRC-G-MORF-DECL3-PARAD",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-ADJ-CONGR",
+      "target_id": "GRC-G-SYNT-ADJ-CONGR",
+      "type": "transfer",
+      "encompassing_weight": 0.7
+    },
+    {
+      "source_id": "LAT-G-SYNT-PREP-ACC",
+      "target_id": "GRC-G-SYNT-PREP-ACC",
+      "type": "transfer",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-SYNT-WRDVLG",
+      "target_id": "GRC-G-SYNT-WRDVLG",
+      "type": "transfer",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-G-MORF-CONJ-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.6
+    },
+    {
+      "source_id": "LAT-G-MORF-TEMPUS-INTRO",
+      "target_id": "GRC-G-MORF-TEMPUS-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.7
+    },
+    {
+      "source_id": "LAT-G-MORF-PERSOON-INTRO",
+      "target_id": "GRC-G-MORF-PERSOON-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.8
+    },
+    {
+      "source_id": "LAT-G-MORF-DIATH-INTRO",
+      "target_id": "GRC-G-MORF-DIATH-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.6
+    },
+    {
+      "source_id": "LAT-G-MORF-CONJ1-INTRO",
+      "target_id": "GRC-G-MORF-PRAES-THEM",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-CONJ2-INTRO",
+      "target_id": "GRC-G-MORF-CONTR-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-CONJ3-INTRO",
+      "target_id": "GRC-G-MORF-THEM-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-CONJ4-INTRO",
+      "target_id": "GRC-G-MORF-PRAES-THEM",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-INTRO",
+      "target_id": "GRC-G-MORF-PRAES-THEM",
+      "type": "transfer",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-C1-ACT",
+      "target_id": "GRC-G-MORF-PRAES-THEM",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-C2-ACT",
+      "target_id": "GRC-G-MORF-CONTR-E",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-C3-ACT",
+      "target_id": "GRC-G-MORF-PRAES-THEM",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-C4-ACT",
+      "target_id": "GRC-G-MORF-PRAES-THEM",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-ESSE",
+      "target_id": "GRC-G-MORF-PRAES-EIMI",
+      "type": "transfer",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-POSSE",
+      "target_id": "GRC-G-MORF-PRAES-EIMI",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-PARAD",
+      "target_id": "GRC-G-MORF-PRAES-PARAD",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-INF-PRAES-ACT",
+      "target_id": "GRC-G-MORF-INF-PRAES",
+      "type": "transfer",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-IMPF-INTRO",
+      "target_id": "GRC-G-MORF-IMPF-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-IMPF-C1C2-ACT",
+      "target_id": "GRC-G-MORF-IMPF-THEM",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-IMPF-C3C4-ACT",
+      "target_id": "GRC-G-MORF-IMPF-THEM",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-IMPF-C3B-ACT",
+      "target_id": "GRC-G-MORF-IMPF-THEM",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-IMPF-ESSE",
+      "target_id": "GRC-G-MORF-IMPF-EIMI",
+      "type": "transfer",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-MORF-IMPF-PARAD",
+      "target_id": "GRC-G-MORF-IMPF-PARAD",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-IMPF-INTRO",
+      "target_id": "GRC-G-MORF-AUGMENT",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-INTRO",
+      "target_id": "GRC-G-MORF-AOR-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-PARAD",
+      "target_id": "GRC-G-MORF-AOR-PARAD",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-MORF-PERF-UITG",
+      "target_id": "GRC-G-MORF-AOR-UIT",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-MORF-STAMT-INTRO",
+      "target_id": "GRC-G-MORF-STAMTIJD",
+      "type": "transfer",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-PERS-UITG",
+      "target_id": "GRC-G-MORF-UIT-SEC",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-CONJ-STAM",
+      "target_id": "GRC-G-MORF-STAMTIJD",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "LAT-G-MORF-DECL2-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "LAT-G-MORF-DECL1-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "GRC-G-MORF-DECL3-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-MYT-TROJE",
+      "target_id": "LAT-G-SYNT-ACC-FUNCTIE",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-MYT-TROJE",
+      "target_id": "GRC-G-SYNT-ACC-FUNCTIE",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-MYT-ZEUS",
+      "target_id": "GRC-V-F01-THEOS",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-MYT-INTRO",
+      "target_id": "LAT-V-F01-DEUS",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-MYT-TROJE",
+      "target_id": "LAT-V-F01-BELLUM",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-MYT-HERAKL",
+      "target_id": "GRC-V-F01-ANER",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-INTRO",
+      "target_id": "LAT-G-SYNT-ABL-FUNCTIE",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "LAT-G-MORF-DECL3-INTRO",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "LAT-V-F01-REX",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-FAMIL",
+      "target_id": "LAT-G-SYNT-GEN-FUNCTIE",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-FAMIL",
+      "target_id": "LAT-G-SYNT-DAT-FUNCTIE",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-DOMUS",
+      "target_id": "LAT-G-SYNT-PREP-ACC",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-DOMUS",
+      "target_id": "LAT-G-SYNT-PREP-ABL",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-POLIS",
+      "target_id": "GRC-G-SYNT-GEN-FUNCTIE",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-POLIS",
+      "target_id": "GRC-V-F01-POLIS",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-AGORA",
+      "target_id": "GRC-G-SYNT-DAT-FUNCTIE",
+      "type": "transfer",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-FAMIL",
+      "target_id": "LAT-V-F01-PATER",
+      "type": "transfer",
+      "encompassing_weight": 0.3
+    }
+  ]
+}
