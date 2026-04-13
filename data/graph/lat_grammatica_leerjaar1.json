@@ -994,6 +994,166 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-PREP-INTRO",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Voorzetsels: overzicht",
+      "titel_terminologie": "praepositiones",
+      "beschrijving": "Voorzetsels (praepositiones) staan voor een naamwoord en bepalen welke naamval dat naamwoord krijgt: accusativus (richting, doel) of ablativus (plaats, oorsprong, middel).",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-PREP-IN",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "In met accusativus en ablativus",
+      "beschrijving": "Het voorzetsel 'in' heeft twee naamvallen: in + accusativus = richting ('naar binnen'), in + ablativus = plaats ('in, op'). Bijv. in urbem (acc) vs. in urbe (abl).",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-PREP-RICHT",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Voorzetsels van richting en doel",
+      "beschrijving": "Voorzetsels die richting of doel uitdrukken met accusativus: ad (naar, bij), per (door, langs), inter (tussen). Bijv. ad urbem (naar de stad), per silvam (door het bos).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-PREP-TIJD",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Voorzetsels van tijd",
+      "beschrijving": "Voorzetsels die tijd uitdrukken met accusativus: ante (vóór), post (na). Bijv. ante bellum (vóór de oorlog), post cenam (na het eten).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-PREP-HERK",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Voorzetsels van herkomst en scheiding",
+      "beschrijving": "Voorzetsels die herkomst of scheiding uitdrukken met ablativus: ex/e (uit), de (van...af, over), ab/a (van...weg, door). Bijv. ex urbe (uit de stad), ab amico (door een vriend).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-PREP-OVERIG",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Overige voorzetsels met ablativus",
+      "beschrijving": "Veelgebruikte voorzetsels met ablativus: cum (met), sine (zonder), pro (voor, in plaats van). Bijv. cum amicis (met vrienden), sine aqua (zonder water).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-GEZEGDE",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Gezegde",
+      "titel_terminologie": "praedicatum",
+      "beschrijving": "Het gezegde (praedicatum) is het zinsdeel dat uitdrukt wat het onderwerp doet of is. In het Latijn is de persoonsvorm de kern van het gezegde.",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-NWG",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Naamwoordelijk gezegde",
+      "titel_terminologie": "praedicatum nominale",
+      "beschrijving": "Het naamwoordelijk gezegde bestaat uit een koppelwerkwoord (esse) + naamdeel in de nominativus: puer bonus est (de jongen is goed). Het naamdeel is congruent met het onderwerp.",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-BIJV-BEP",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Bijvoeglijke bepaling",
+      "beschrijving": "De bijvoeglijke bepaling geeft nadere informatie over een zelfstandig naamwoord: een adjectief (puella bona), een genitivus (liber pueri) of een bijstelling (Marcus, filius regis).",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-BIJW-BEP",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Bijwoordelijke bepaling",
+      "beschrijving": "De bijwoordelijke bepaling geeft nadere informatie over het gezegde: plaats (in urbe), tijd (post cenam), middel (gladio) of wijze (cum cura). Vaak een voorzetselgroep of kale ablativus.",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-BEPVZ",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Voorzetselgroep als zinsdeel",
+      "beschrijving": "Een voorzetselgroep (voorzetsel + naamwoord in de juiste naamval) functioneert als bijwoordelijke bepaling. Bijv. in horto (in de tuin) = bepaling van plaats.",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-HOOFDBIJ",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Hoofdzin en bijzin",
+      "beschrijving": "Een hoofdzin kan zelfstandig staan; een bijzin is afhankelijk en wordt ingeleid door een voegwoord (quod, quia, cum, ut, si) of betrekkelijk voornaamwoord (qui, quae, quod).",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-ACI-INTRO",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Accusativus cum infinitivo (AcI)",
+      "titel_terminologie": "accusativus cum infinitivo",
+      "beschrijving": "De AcI is een constructie met een accusativus (onderwerp) + infinitivus (gezegde): dicit puellam venire (hij zegt dat het meisje komt). Komt voor na verba dicendi en sentiendi.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
     }
   ],
   "edges": [
@@ -2100,6 +2260,198 @@
       "target_id": "LAT-G-MORF-PRON-AANW",
       "type": "prerequisite",
       "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-NAAMVAL-INTRO",
+      "target_id": "LAT-G-SYNT-PREP-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-PREP-INTRO",
+      "target_id": "LAT-G-SYNT-PREP-ACC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-PREP-INTRO",
+      "target_id": "LAT-G-SYNT-PREP-ABL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-PREP-ACC",
+      "target_id": "LAT-G-SYNT-PREP-IN",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-PREP-ABL",
+      "target_id": "LAT-G-SYNT-PREP-IN",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-PREP-ACC",
+      "target_id": "LAT-G-SYNT-PREP-RICHT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-PREP-ACC",
+      "target_id": "LAT-G-SYNT-PREP-TIJD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-PREP-ABL",
+      "target_id": "LAT-G-SYNT-PREP-HERK",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-PREP-ABL",
+      "target_id": "LAT-G-SYNT-PREP-OVERIG",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-ACC-FUNCTIE",
+      "target_id": "LAT-G-SYNT-PREP-RICHT",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ABL-FUNCTIE",
+      "target_id": "LAT-G-SYNT-PREP-HERK",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ABL-FUNCTIE",
+      "target_id": "LAT-G-SYNT-PREP-OVERIG",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ACC-FUNCTIE",
+      "target_id": "LAT-G-SYNT-PREP-IN",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ABL-FUNCTIE",
+      "target_id": "LAT-G-SYNT-PREP-IN",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-G-SYNT-GEZEGDE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-INTRO",
+      "target_id": "LAT-G-SYNT-GEZEGDE",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-GEZEGDE",
+      "target_id": "LAT-G-SYNT-NWG",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-PRAES-ESSE",
+      "target_id": "LAT-G-SYNT-NWG",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-NOM-FUNCTIE",
+      "target_id": "LAT-G-SYNT-NWG",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-G-SYNT-BIJV-BEP",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-ADJ-CONGR",
+      "target_id": "LAT-G-SYNT-BIJV-BEP",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-GEN-FUNCTIE",
+      "target_id": "LAT-G-SYNT-BIJV-BEP",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-G-SYNT-BIJW-BEP",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-ABL-FUNCTIE",
+      "target_id": "LAT-G-SYNT-BIJW-BEP",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-PREP-INTRO",
+      "target_id": "LAT-G-SYNT-BEPVZ",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-SYNT-BIJW-BEP",
+      "target_id": "LAT-G-SYNT-BEPVZ",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-GEZEGDE",
+      "target_id": "LAT-G-SYNT-HOOFDBIJ",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-WRDVLG",
+      "target_id": "LAT-G-SYNT-HOOFDBIJ",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-HOOFDBIJ",
+      "target_id": "LAT-G-SYNT-ACI-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-ACC-FUNCTIE",
+      "target_id": "LAT-G-SYNT-ACI-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-INF-INTRO",
+      "target_id": "LAT-G-SYNT-ACI-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-SYNT-SUBJ",
+      "target_id": "LAT-G-SYNT-ACI-INTRO",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
     }
   ]
 }

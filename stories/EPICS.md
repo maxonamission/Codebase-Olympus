@@ -20,7 +20,7 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 **Doel:** Methode-onafhankelijke grammaticale kern van klas 1, gebaseerd op de CvTE-minimumlijst gefilterd op wat alle methoden gemeen hebben.
 **Geschat:** ~150 knopen
 **Afhankelijkheden:** Geen (bouwt voort op bestaande PoC)
-**Status:** in progress
+**Status:** done
 **Bestand:** `data/graph/lat_grammatica_leerjaar1.json`
 
 | Story | Titel | Knopen | Status |
@@ -37,9 +37,9 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 | A1-10 | Plusquamperfectum indicativus actief | 5 | done |
 | A1-11 | Imperativus + infinitivus praesens actief | 5 | done |
 | A1-12 | Pronomina — persoonlijk, bezittelijk, aanwijzend begin | 11 | done |
-| A1-13 | Voorzetsels met accusativus en ablativus | ~8 | todo |
-| A1-14 | Basissyntaxis — woordvolgorde, congruentie, ontkenning, vraagzinnen | ~12 | todo |
-| A1-15 | Review en prerequisite-edge validatie voor heel epic A1 | — | todo |
+| A1-13 | Voorzetsels met accusativus en ablativus | 6 | done |
+| A1-14 | Basissyntaxis — woordvolgorde, congruentie, ontkenning, vraagzinnen | 7 | done |
+| A1-15 | Review en prerequisite-edge validatie voor heel epic A1 | — | done |
 
 ---
 
