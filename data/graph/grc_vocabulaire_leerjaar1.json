@@ -12,7 +12,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-EIMI.wav"
     },
     {
       "id": "GRC-V-F01-KAI",
@@ -26,7 +27,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-KAI.wav"
     },
     {
       "id": "GRC-V-F01-ARTIC",
@@ -40,7 +42,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-ARTIC.wav"
     },
     {
       "id": "GRC-V-F01-AUTOS",
@@ -54,7 +57,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-AUTOS.wav"
     },
     {
       "id": "GRC-V-F01-DE",
@@ -68,7 +72,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-DE.wav"
     },
     {
       "id": "GRC-V-F01-HOUTOS",
@@ -82,7 +87,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-HOUTOS.wav"
     },
     {
       "id": "GRC-V-F01-EGO",
@@ -96,7 +102,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-EGO.wav"
     },
     {
       "id": "GRC-V-F01-OU",
@@ -110,7 +117,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-OU.wav"
     },
     {
       "id": "GRC-V-F01-TIS",
@@ -124,7 +132,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-TIS.wav"
     },
     {
       "id": "GRC-V-F01-EN",
@@ -138,7 +147,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-EN.wav"
     },
     {
       "id": "GRC-V-F01-ECHO",
@@ -152,7 +162,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-ECHO.wav"
     },
     {
       "id": "GRC-V-F01-LEGO",
@@ -166,7 +177,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-LEGO.wav"
     },
     {
       "id": "GRC-V-F01-GIGNM",
@@ -180,7 +192,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-GIGNM.wav"
     },
     {
       "id": "GRC-V-F01-POIEO",
@@ -194,7 +207,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-POIEO.wav"
     },
     {
       "id": "GRC-V-F01-HOS",
@@ -208,7 +222,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-HOS.wav"
     },
     {
       "id": "GRC-V-F01-ALLA",
@@ -222,7 +237,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-ALLA.wav"
     },
     {
       "id": "GRC-V-F01-GAR",
@@ -236,7 +252,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-GAR.wav"
     },
     {
       "id": "GRC-V-F01-EK",
@@ -250,7 +267,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-EK.wav"
     },
     {
       "id": "GRC-V-F01-PROS",
@@ -264,7 +282,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-PROS.wav"
     },
     {
       "id": "GRC-V-F01-EPI",
@@ -278,7 +297,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-EPI.wav"
     },
     {
       "id": "GRC-V-F01-SU",
@@ -292,7 +312,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-SU.wav"
     },
     {
       "id": "GRC-V-F01-EKEINO",
@@ -306,7 +327,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-EKEINO.wav"
     },
     {
       "id": "GRC-V-F01-THEOS",
@@ -320,7 +342,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "religie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-THEOS.wav"
     },
     {
       "id": "GRC-V-F01-ANTHRO",
@@ -334,7 +357,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-ANTHRO.wav"
     },
     {
       "id": "GRC-V-F01-POLIS",
@@ -348,7 +372,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-POLIS.wav"
     },
     {
       "id": "GRC-V-F01-LOGOS",
@@ -362,7 +387,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-LOGOS.wav"
     },
     {
       "id": "GRC-V-F01-GE",
@@ -376,7 +402,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-GE.wav"
     },
     {
       "id": "GRC-V-F01-ANER",
@@ -390,7 +417,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-ANER.wav"
     },
     {
       "id": "GRC-V-F01-PATER",
@@ -404,7 +432,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-PATER.wav"
     },
     {
       "id": "GRC-V-F01-BASILE",
@@ -418,7 +447,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-BASILE.wav"
     },
     {
       "id": "GRC-V-F01-MEGAS",
@@ -432,7 +462,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-MEGAS.wav"
     },
     {
       "id": "GRC-V-F01-POLUS",
@@ -446,7 +477,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-POLUS.wav"
     },
     {
       "id": "GRC-V-F01-AGATHO",
@@ -460,7 +492,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-AGATHO.wav"
     },
     {
       "id": "GRC-V-F01-PAS",
@@ -474,7 +507,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-PAS.wav"
     },
     {
       "id": "GRC-V-F01-KATA",
@@ -488,7 +522,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-KATA.wav"
     },
     {
       "id": "GRC-V-F01-PERI",
@@ -502,7 +537,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-PERI.wav"
     },
     {
       "id": "GRC-V-F01-META",
@@ -516,7 +552,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-META.wav"
     },
     {
       "id": "GRC-V-F01-DIA",
@@ -530,7 +567,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-DIA.wav"
     },
     {
       "id": "GRC-V-F01-PARA",
@@ -544,7 +582,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-PARA.wav"
     },
     {
       "id": "GRC-V-F01-HUPO",
@@ -558,7 +597,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-HUPO.wav"
     },
     {
       "id": "GRC-V-F01-APO",
@@ -572,7 +612,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-APO.wav"
     },
     {
       "id": "GRC-V-F01-EIS",
@@ -586,7 +627,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-EIS.wav"
     },
     {
       "id": "GRC-V-F01-SUN",
@@ -600,7 +642,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-SUN.wav"
     },
     {
       "id": "GRC-V-F01-GIGNSK",
@@ -614,7 +657,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-GIGNSK.wav"
     },
     {
       "id": "GRC-V-F01-BAINO",
@@ -628,7 +672,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-BAINO.wav"
     },
     {
       "id": "GRC-V-F01-PHERO",
@@ -642,7 +687,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-PHERO.wav"
     },
     {
       "id": "GRC-V-F01-ERCHOM",
@@ -656,7 +702,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-ERCHOM.wav"
     },
     {
       "id": "GRC-V-F01-HORAO",
@@ -670,7 +717,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-HORAO.wav"
     },
     {
       "id": "GRC-V-F01-DIDOMI",
@@ -684,7 +732,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-DIDOMI.wav"
     },
     {
       "id": "GRC-V-F01-GRAPHO",
@@ -698,7 +747,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-GRAPHO.wav"
     },
     {
       "id": "GRC-V-F01-AGO",
@@ -712,7 +762,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-AGO.wav"
     },
     {
       "id": "GRC-V-F01-PEMPO",
@@ -726,7 +777,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-PEMPO.wav"
     },
     {
       "id": "GRC-V-F01-TITHEM",
@@ -740,7 +792,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-TITHEM.wav"
     },
     {
       "id": "GRC-V-F01-MACHE",
@@ -754,7 +807,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-MACHE.wav"
     },
     {
       "id": "GRC-V-F01-PSYCHE",
@@ -768,7 +822,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-PSYCHE.wav"
     },
     {
       "id": "GRC-V-F01-ARCHE",
@@ -782,7 +837,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-ARCHE.wav"
     },
     {
       "id": "GRC-V-F01-DIKE",
@@ -796,7 +852,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-DIKE.wav"
     },
     {
       "id": "GRC-V-F01-NESOS",
@@ -810,7 +867,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-NESOS.wav"
     },
     {
       "id": "GRC-V-F01-HODOS",
@@ -824,7 +882,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-HODOS.wav"
     },
     {
       "id": "GRC-V-F01-HIPPOS",
@@ -838,7 +897,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-HIPPOS.wav"
     },
     {
       "id": "GRC-V-F01-STRTGS",
@@ -852,7 +912,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-STRTGS.wav"
     },
     {
       "id": "GRC-V-F01-THALAT",
@@ -866,7 +927,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-THALAT.wav"
     },
     {
       "id": "GRC-V-F01-METER",
@@ -880,7 +942,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-METER.wav"
     },
     {
       "id": "GRC-V-F01-PAIS",
@@ -894,7 +957,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-PAIS.wav"
     },
     {
       "id": "GRC-V-F01-NUX",
@@ -908,7 +972,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "tijd",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-NUX.wav"
     },
     {
       "id": "GRC-V-F01-PHOBOS",
@@ -922,7 +987,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-PHOBOS.wav"
     },
     {
       "id": "GRC-V-F01-ERGON",
@@ -936,7 +1002,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-ERGON.wav"
     },
     {
       "id": "GRC-V-F01-KALOS",
@@ -950,7 +1017,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-KALOS.wav"
     },
     {
       "id": "GRC-V-F01-KAKOS",
@@ -964,7 +1032,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-KAKOS.wav"
     },
     {
       "id": "GRC-V-F01-NEOS",
@@ -978,7 +1047,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-NEOS.wav"
     },
     {
       "id": "GRC-V-F01-MIKROS",
@@ -992,7 +1062,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-MIKROS.wav"
     },
     {
       "id": "GRC-V-F01-SOPHOS",
@@ -1006,7 +1077,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-SOPHOS.wav"
     },
     {
       "id": "GRC-V-F01-DEINOS",
@@ -1020,7 +1092,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-DEINOS.wav"
     },
     {
       "id": "GRC-V-F01-MEN",
@@ -1034,7 +1107,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-MEN.wav"
     },
     {
       "id": "GRC-V-F01-OUN",
@@ -1048,7 +1122,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F01-OUN.wav"
     },
     {
       "id": "GRC-V-F02-LAMBAN",
@@ -1062,7 +1137,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-LAMBAN.wav"
     },
     {
       "id": "GRC-V-F02-HEURSK",
@@ -1076,7 +1152,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-HEURSK.wav"
     },
     {
       "id": "GRC-V-F02-AKOUO",
@@ -1090,7 +1167,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-AKOUO.wav"
     },
     {
       "id": "GRC-V-F02-PHEUGO",
@@ -1104,7 +1182,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-PHEUGO.wav"
     },
     {
       "id": "GRC-V-F02-BALLO",
@@ -1118,7 +1197,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-BALLO.wav"
     },
     {
       "id": "GRC-V-F02-KELEUO",
@@ -1132,7 +1212,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-KELEUO.wav"
     },
     {
       "id": "GRC-V-F02-LEIPO",
@@ -1146,7 +1227,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-LEIPO.wav"
     },
     {
       "id": "GRC-V-F02-MANTHN",
@@ -1160,7 +1242,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-MANTHN.wav"
     },
     {
       "id": "GRC-V-F02-PEITHO",
@@ -1174,7 +1257,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-PEITHO.wav"
     },
     {
       "id": "GRC-V-F02-TREPO",
@@ -1188,7 +1272,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-TREPO.wav"
     },
     {
       "id": "GRC-V-F02-TRECHO",
@@ -1202,7 +1287,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-TRECHO.wav"
     },
     {
       "id": "GRC-V-F02-NOMIZO",
@@ -1216,7 +1302,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-NOMIZO.wav"
     },
     {
       "id": "GRC-V-F02-BOULOM",
@@ -1230,7 +1317,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-BOULOM.wav"
     },
     {
       "id": "GRC-V-F02-DEIKNU",
@@ -1244,7 +1332,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-DEIKNU.wav"
     },
     {
       "id": "GRC-V-F02-PHILEO",
@@ -1258,7 +1347,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-PHILEO.wav"
     },
     {
       "id": "GRC-V-F02-NIKAO",
@@ -1272,7 +1362,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-NIKAO.wav"
     },
     {
       "id": "GRC-V-F02-TIMAO",
@@ -1286,7 +1377,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-TIMAO.wav"
     },
     {
       "id": "GRC-V-F02-ZETEO",
@@ -1300,7 +1392,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-ZETEO.wav"
     },
     {
       "id": "GRC-V-F02-DOKEO",
@@ -1314,7 +1407,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-DOKEO.wav"
     },
     {
       "id": "GRC-V-F02-STRATO",
@@ -1328,7 +1422,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-STRATO.wav"
     },
     {
       "id": "GRC-V-F02-DEMOS",
@@ -1342,7 +1437,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-DEMOS.wav"
     },
     {
       "id": "GRC-V-F02-NOMOS",
@@ -1356,7 +1452,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-NOMOS.wav"
     },
     {
       "id": "GRC-V-F02-POLEMO",
@@ -1370,7 +1467,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-POLEMO.wav"
     },
     {
       "id": "GRC-V-F02-TOPOS",
@@ -1384,7 +1482,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-TOPOS.wav"
     },
     {
       "id": "GRC-V-F02-CHRONO",
@@ -1398,7 +1497,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "tijd",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-CHRONO.wav"
     },
     {
       "id": "GRC-V-F02-BIOS",
@@ -1412,7 +1512,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-BIOS.wav"
     },
     {
       "id": "GRC-V-F02-OIKOS",
@@ -1426,7 +1527,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-OIKOS.wav"
     },
     {
       "id": "GRC-V-F02-DORON",
@@ -1440,7 +1542,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-DORON.wav"
     },
     {
       "id": "GRC-V-F02-HOPLON",
@@ -1454,7 +1557,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-HOPLON.wav"
     },
     {
       "id": "GRC-V-F02-HIERON",
@@ -1468,7 +1572,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "religie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-HIERON.wav"
     },
     {
       "id": "GRC-V-F02-BIBLIO",
@@ -1482,7 +1587,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-BIBLIO.wav"
     },
     {
       "id": "GRC-V-F02-TEKNON",
@@ -1496,7 +1602,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-TEKNON.wav"
     },
     {
       "id": "GRC-V-F02-PHILOS",
@@ -1510,7 +1617,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-PHILOS.wav"
     },
     {
       "id": "GRC-V-F02-DOULOS",
@@ -1524,7 +1632,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-DOULOS.wav"
     },
     {
       "id": "GRC-V-F02-AGORA",
@@ -1538,7 +1647,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-AGORA.wav"
     },
     {
       "id": "GRC-V-F02-TECHNE",
@@ -1552,7 +1662,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-TECHNE.wav"
     },
     {
       "id": "GRC-V-F02-ARETE",
@@ -1566,7 +1677,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-ARETE.wav"
     },
     {
       "id": "GRC-V-F02-EIRENE",
@@ -1580,7 +1692,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-EIRENE.wav"
     },
     {
       "id": "GRC-V-F02-SOPHIA",
@@ -1594,7 +1707,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-SOPHIA.wav"
     },
     {
       "id": "GRC-V-F02-CHORA",
@@ -1608,7 +1722,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-CHORA.wav"
     },
     {
       "id": "GRC-V-F02-THANAT",
@@ -1622,7 +1737,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-THANAT.wav"
     },
     {
       "id": "GRC-V-F02-HUDOR",
@@ -1636,7 +1752,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-HUDOR.wav"
     },
     {
       "id": "GRC-V-F02-SOMA",
@@ -1650,7 +1767,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-SOMA.wav"
     },
     {
       "id": "GRC-V-F02-ONOMA",
@@ -1664,7 +1782,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "communicatie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-ONOMA.wav"
     },
     {
       "id": "GRC-V-F02-GUNE",
@@ -1678,7 +1797,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "familie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-GUNE.wav"
     },
     {
       "id": "GRC-V-F02-CHEIR",
@@ -1692,7 +1812,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-CHEIR.wav"
     },
     {
       "id": "GRC-V-F02-NAUS",
@@ -1706,7 +1827,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "beweging",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-NAUS.wav"
     },
     {
       "id": "GRC-V-F02-STRTTS",
@@ -1720,7 +1842,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-STRTTS.wav"
     },
     {
       "id": "GRC-V-F02-POLITS",
@@ -1734,7 +1857,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-POLITS.wav"
     },
     {
       "id": "GRC-V-F02-KRITIS",
@@ -1748,7 +1872,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-KRITIS.wav"
     },
     {
       "id": "GRC-V-F02-HELIOS",
@@ -1762,7 +1887,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-HELIOS.wav"
     },
     {
       "id": "GRC-V-F02-POTAMO",
@@ -1776,7 +1902,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "natuur",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-POTAMO.wav"
     },
     {
       "id": "GRC-V-F02-XENOS",
@@ -1790,7 +1917,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-XENOS.wav"
     },
     {
       "id": "GRC-V-F02-DIKAIO",
@@ -1804,7 +1932,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-DIKAIO.wav"
     },
     {
       "id": "GRC-V-F02-AXIOS",
@@ -1818,7 +1947,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-AXIOS.wav"
     },
     {
       "id": "GRC-V-F02-PHILAD",
@@ -1832,7 +1962,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "emotie",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-PHILAD.wav"
     },
     {
       "id": "GRC-V-F02-ISCHUR",
@@ -1846,7 +1977,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-ISCHUR.wav"
     },
     {
       "id": "GRC-V-F02-SOPHRN",
@@ -1860,7 +1992,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-SOPHRN.wav"
     },
     {
       "id": "GRC-V-F02-ANDREI",
@@ -1874,7 +2007,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-ANDREI.wav"
     },
     {
       "id": "GRC-V-F02-EITA",
@@ -1888,7 +2022,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-EITA.wav"
     },
     {
       "id": "GRC-V-F02-EDE",
@@ -1902,7 +2037,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-EDE.wav"
     },
     {
       "id": "GRC-V-F02-NUN",
@@ -1916,7 +2052,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-NUN.wav"
     },
     {
       "id": "GRC-V-F02-ME",
@@ -1930,7 +2067,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-ME.wav"
     },
     {
       "id": "GRC-V-F02-AEI",
@@ -1944,7 +2082,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": null,
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-AEI.wav"
     },
     {
       "id": "GRC-V-F02-OINOS",
@@ -1958,7 +2097,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "voedsel",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-OINOS.wav"
     },
     {
       "id": "GRC-V-F02-SITOS",
@@ -1972,7 +2112,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "voedsel",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-SITOS.wav"
     },
     {
       "id": "GRC-V-F02-ARTOS",
@@ -1986,7 +2127,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "voedsel",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-ARTOS.wav"
     },
     {
       "id": "GRC-V-F02-KEPHAL",
@@ -2000,7 +2142,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-KEPHAL.wav"
     },
     {
       "id": "GRC-V-F02-OPHTHL",
@@ -2014,7 +2157,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-OPHTHL.wav"
     },
     {
       "id": "GRC-V-F02-HAIMA",
@@ -2028,7 +2172,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "lichaam",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-HAIMA.wav"
     },
     {
       "id": "GRC-V-F02-AGON",
@@ -2042,7 +2187,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "oorlog",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-AGON.wav"
     },
     {
       "id": "GRC-V-F02-TEICHO",
@@ -2056,7 +2202,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "gebouwen",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-TEICHO.wav"
     },
     {
       "id": "GRC-V-F02-ETHNOS",
@@ -2070,7 +2217,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-ETHNOS.wav"
     },
     {
       "id": "GRC-V-F02-ALETHE",
@@ -2084,7 +2232,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "onderwijs",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-ALETHE.wav"
     },
     {
       "id": "GRC-V-F02-ELEUTH",
@@ -2098,7 +2247,8 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "semantisch_cluster": "politiek",
-      "items": []
+      "items": [],
+      "audio_ref": "GRC-V-F02-ELEUTH.wav"
     }
   ],
   "edges": [
