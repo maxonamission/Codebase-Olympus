@@ -1628,7 +1628,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-MODUS-INTRO-001",
+          "knoop_ids": [
+            "LAT-G-MORF-MODUS-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke drie modi kent het Latijnse werkwoord?",
+          "antwoord": "indicativus, imperativus, conjunctivus",
+          "feedback": "De indicativus (werkelijkheid), imperativus (bevel) en conjunctivus (wens/mogelijkheid). In klas 1 staat de indicativus centraal.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-MODUS-INTRO-002",
+          "knoop_ids": [
+            "LAT-G-MORF-MODUS-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Welke modus gebruik je om een feit of werkelijkheid uit te drukken?",
+          "antwoord": "indicativus",
+          "feedback": "De indicativus is de modus van de werkelijkheid: 'hij loopt', 'zij heeft geschreven'.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-DIATH-INTRO",
@@ -1691,7 +1722,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-CONJ-HERKEN-001",
+          "knoop_ids": [
+            "LAT-G-MORF-CONJ-HERKEN"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Hoe herken je de conjugatie aan de infinitivus?",
+          "antwoord": "-are (1e), -ēre (2e), -ĕre (3e), -ire (4e)",
+          "feedback": "Infinitivusuitgangen: -āre = 1e (amāre), -ēre = 2e (monēre), -ĕre = 3e (regĕre), -īre = 4e (audīre).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-CONJ-HERKEN-002",
+          "knoop_ids": [
+            "LAT-G-MORF-CONJ-HERKEN"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Tot welke conjugatie hoort 'audire'?",
+          "antwoord": "de 4e conjugatie",
+          "feedback": "Audīre eindigt op -īre: 4e conjugatie. Vergelijk: amāre (1e), monēre (2e), regĕre (3e).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-CONJ-HERKEN-003",
+          "knoop_ids": [
+            "LAT-G-MORF-CONJ-HERKEN"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Tot welke conjugatie hoort 'monere' (met lange e)?",
+          "antwoord": "de 2e conjugatie",
+          "feedback": "Monēre (lange -ē-) hoort bij de 2e conjugatie. Let op: regĕre (korte -ĕ-) is 3e conjugatie.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRAES-INTRO",
@@ -1704,7 +1781,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-INTRO-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Hoe wordt het praesens indicativus actief gevormd?",
+          "antwoord": "praesens-stam + persoonsuitgang",
+          "feedback": "Vorming: praesensstam (= infinitivus minus uitgang) + persoonsuitgangen (-o/-m, -s, -t, -mus, -tis, -nt).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-INTRO-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke zes persoonsuitgangen heeft het praesens actief?",
+          "antwoord": "-o/-m, -s, -t, -mus, -tis, -nt",
+          "feedback": "De standaard persoonsuitgangen: -o (1e sg.), -s (2e sg.), -t (3e sg.), -mus (1e pl.), -tis (2e pl.), -nt (3e pl.).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PERS-UITG",
@@ -1729,7 +1837,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C3B-ACT-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C3B-ACT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wat is de gemengde conjugatie?",
+          "antwoord": "werkwoorden met infinitivus op -ĕre maar 1e sg. op -io (zoals capio)",
+          "feedback": "De gemengde conjugatie (3b) lijkt op de 3e conj. (inf. -ĕre) maar heeft -io in de 1e sg. en -iu-nt in de 3e pl.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C3B-ACT-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C3B-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'capere' in de 1e persoon enkelvoud praesens.",
+          "antwoord": "capio",
+          "feedback": "Gemengde conj.: stam cap- + -i- + -o = capio (niet *capo). De -i- onderscheidt het van de 3e conj.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C3B-ACT-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C3B-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'capere' in de 3e persoon meervoud praesens.",
+          "antwoord": "capiunt",
+          "feedback": "Gemengde conj.: cap- + -iu- + -nt = capiunt (net als 4e conj. audiunt).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRAES-POSSE",
@@ -1741,7 +1895,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-POSSE-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-POSSE"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Hoe is 'posse' samengesteld?",
+          "antwoord": "pot- + esse (kunnen = machtig-zijn)",
+          "feedback": "Posse = pot- + esse. De -t- wordt -s- voor een s: pot+sum → possum, pot+es → potes.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-POSSE-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-POSSE"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'posse' in de 1e persoon enkelvoud praesens.",
+          "antwoord": "possum",
+          "feedback": "Pot- + sum = possum (t → s voor s). Vergelijk: potes (pot+es), potest (pot+est).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-POSSE-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-POSSE"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'posse' in de 3e persoon meervoud praesens.",
+          "antwoord": "possunt",
+          "feedback": "Pot- + sunt = possunt (t → s voor s).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRAES-PARAD",
@@ -1753,7 +1953,68 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-PARAD-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-PARAD"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Ontleed 'regunt' volledig.",
+          "antwoord": "3e persoon meervoud praesens indicativus actief, 3e conjugatie",
+          "feedback": "Reg-u-nt: stam reg- + bindklinker -u- + uitgang -nt. De -u- voor -nt is kenmerkend voor de 3e conj.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-PARAD-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-PARAD"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 1.1,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Ontleed 'audiunt' volledig.",
+          "antwoord": "3e persoon meervoud praesens indicativus actief, 4e conjugatie",
+          "feedback": "Aud-iu-nt: stam aud- + -iu- + -nt. Vergelijk capiunt (gem. conj.) — dezelfde uitgang.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-PARAD-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-PARAD"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 1.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 35,
+          "stimulus": "Welke conjugatie is 'monemus'? Leg uit.",
+          "antwoord": "2e conjugatie — stam mon- + stamklinker -e- + uitgang -mus",
+          "feedback": "De lange -e- is kenmerkend voor de 2e conjugatie. Vergelijk: amamus (1e, -a-), regimus (3e, -i-).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-PARAD-004",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-PARAD"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke twee conjugaties lijken op elkaar in de 3e pers. mv. (-iunt)?",
+          "antwoord": "de 4e conjugatie en de gemengde conjugatie",
+          "feedback": "Zowel 4e conj. (audiunt) als gem. conj. (capiunt) hebben -iunt in de 3e pers. pl.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-IMPF-ESSE",

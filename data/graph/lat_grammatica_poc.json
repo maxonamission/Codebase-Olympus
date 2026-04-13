@@ -96,7 +96,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-CONJ-INTRO-001",
+          "knoop_ids": [
+            "LAT-G-MORF-CONJ-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Hoeveel conjugaties kent het Latijn (inclusief de gemengde)?",
+          "antwoord": "5 (4 reguliere + de gemengde conjugatie)",
+          "feedback": "Het Latijn kent vier reguliere conjugaties plus de gemengde conjugatie (soms '3b' genoemd).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-CONJ-INTRO-002",
+          "knoop_ids": [
+            "LAT-G-MORF-CONJ-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Wat is een conjugatie?",
+          "antwoord": "een groep werkwoorden met hetzelfde vervoegingspatroon",
+          "feedback": "Een conjugatie is een groep werkwoorden die dezelfde persoonsuitgangen en stamklinkers delen.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-TEMPUS-INTRO",
@@ -1360,7 +1391,68 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C1-ACT-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C1-ACT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Welke persoon en getal is 'amat'?",
+          "antwoord": "3e persoon enkelvoud praesens",
+          "feedback": "Am-a-t: stam am- + stamklinker -a- + uitgang -t = 3e persoon singularis.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C1-ACT-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C1-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'amare' in de 1e persoon enkelvoud praesens.",
+          "antwoord": "amo",
+          "feedback": "1e conjugatie: stam am- + -o = amo. De stamklinker -a- valt weg voor -o.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C1-ACT-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C1-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'amare' in de 3e persoon meervoud praesens.",
+          "antwoord": "amant",
+          "feedback": "1e conjugatie: stam am- + -a- + -nt = amant.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C1-ACT-004",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C1-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'laudare' in de 2e persoon enkelvoud praesens.",
+          "antwoord": "laudas",
+          "feedback": "1e conjugatie: stam laud- + -a- + -s = laudas.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRAES-C2-ACT",
@@ -1372,7 +1464,68 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C2-ACT-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C2-ACT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Welke persoon en getal is 'monet'?",
+          "antwoord": "3e persoon enkelvoud praesens",
+          "feedback": "Mon-e-t: stam mon- + stamklinker -e- + uitgang -t = 3e persoon singularis.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C2-ACT-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C2-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'monere' in de 1e persoon enkelvoud praesens.",
+          "antwoord": "moneo",
+          "feedback": "2e conjugatie: stam mon- + -e- + -o = moneo. De stamklinker blijft (anders dan bij 1e conj.).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C2-ACT-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C2-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'monere' in de 1e persoon meervoud praesens.",
+          "antwoord": "monemus",
+          "feedback": "2e conjugatie: stam mon- + -e- + -mus = monemus.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C2-ACT-004",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C2-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'habere' in de 3e persoon meervoud praesens.",
+          "antwoord": "habent",
+          "feedback": "2e conjugatie: stam hab- + -e- + -nt = habent.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRAES-C3-ACT",
@@ -1384,7 +1537,68 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C3-ACT-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C3-ACT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Welke persoon en getal is 'regit'?",
+          "antwoord": "3e persoon enkelvoud praesens",
+          "feedback": "Reg-i-t: stam reg- + bindklinker -i- + uitgang -t. Bij de 3e conj. varieert de bindklinker.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C3-ACT-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C3-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'regere' in de 1e persoon enkelvoud praesens.",
+          "antwoord": "rego",
+          "feedback": "3e conjugatie: stam reg- + -o = rego (geen bindklinker voor -o).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C3-ACT-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C3-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'regere' in de 3e persoon meervoud praesens.",
+          "antwoord": "regunt",
+          "feedback": "3e conjugatie: stam reg- + -u- + -nt = regunt. Let op: -u- als bindklinker voor -nt.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C3-ACT-004",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C3-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'ducere' in de 2e persoon meervoud praesens.",
+          "antwoord": "ducitis",
+          "feedback": "3e conjugatie: stam duc- + -i- + -tis = ducitis.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRAES-C4-ACT",
@@ -1396,7 +1610,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C4-ACT-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C4-ACT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Welke persoon en getal is 'audit'?",
+          "antwoord": "3e persoon enkelvoud praesens",
+          "feedback": "Aud-i-t: stam aud- + stamklinker -i- + uitgang -t = 3e persoon singularis.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C4-ACT-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C4-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'audire' in de 1e persoon enkelvoud praesens.",
+          "antwoord": "audio",
+          "feedback": "4e conjugatie: stam aud- + -i- + -o = audio.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-C4-ACT-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-C4-ACT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'audire' in de 3e persoon meervoud praesens.",
+          "antwoord": "audiunt",
+          "feedback": "4e conjugatie: stam aud- + -iu- + -nt = audiunt. Let op: -iu- voor -nt (net als 3e conj.).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-PRAES-ESSE",
@@ -1408,7 +1668,68 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-ESSE-001",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-ESSE"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Vervoeg 'esse' volledig in het praesens.",
+          "antwoord": "sum, es, est, sumus, estis, sunt",
+          "feedback": "Esse is onregelmatig: sum, es, est, sumus, estis, sunt. De stam wisselt tussen s- en es-.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-ESSE-002",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-ESSE"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Welke persoon en getal is 'sunt'?",
+          "antwoord": "3e persoon meervoud praesens",
+          "feedback": "Sunt = 3e persoon pluralis van esse (zij zijn).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-ESSE-003",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-ESSE"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de 1e persoon meervoud van 'esse'.",
+          "antwoord": "sumus",
+          "feedback": "Esse praesens: sumus (wij zijn). Let op: stam su- + -mus.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-PRAES-ESSE-004",
+          "knoop_ids": [
+            "LAT-G-MORF-PRAES-ESSE"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Geef de 2e persoon enkelvoud van 'esse'.",
+          "antwoord": "es",
+          "feedback": "Esse praesens: es (jij bent). De kortste vorm van het paradigma.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-INF-PRAES-ACT",
