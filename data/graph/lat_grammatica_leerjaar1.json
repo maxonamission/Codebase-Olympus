@@ -1,0 +1,405 @@
+{
+  "knopen": [
+    {
+      "id": "LAT-G-SYNT-VOC-FUNCTIE",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Functie van de vocativus",
+      "titel_terminologie": "casus vocativus",
+      "beschrijving": "De vocativus als naamval van de aanspreekvorm: wordt gebruikt om iemand direct aan te spreken, bijv. 'Marce!' Vaak gelijk aan de nominativus, behalve bij de 2e declinatie sg. (-e).",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-STAM-INTRO",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Wat is een woordstam?",
+      "titel_terminologie": "stirps",
+      "beschrijving": "De woordstam is het onveranderlijke deel van een woord dat de basisbetekenis draagt. Bij verbuiging en vervoeging blijft de stam gelijk; alleen de uitgang verandert.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-UIT-INTRO",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Wat is een uitgang?",
+      "titel_terminologie": "terminatio",
+      "beschrijving": "De uitgang is het veranderlijke deel achter de woordstam. Bij zelfstandige naamwoorden drukt de uitgang naamval en getal uit; bij werkwoorden persoon, getal en tijd.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-SUBJ",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Onderwerp",
+      "titel_terminologie": "subiectum",
+      "beschrijving": "Het onderwerp (subiectum) is het zinsdeel dat aangeeft wie of wat de handeling verricht. Staat in het Latijn in de nominativus en is congruent met de persoonsvorm.",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-OBJDIR",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Lijdend voorwerp",
+      "titel_terminologie": "obiectum directum",
+      "beschrijving": "Het lijdend voorwerp (obiectum directum) is het zinsdeel dat de handeling ondergaat. Staat in het Latijn in de accusativus, bijv. 'puellam videt' (hij ziet het meisje).",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-SYNT-OBJIND",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Meewerkend voorwerp",
+      "titel_terminologie": "obiectum indirectum",
+      "beschrijving": "Het meewerkend voorwerp (obiectum indirectum) is het zinsdeel dat aangeeft aan wie of voor wie de handeling plaatsvindt. Staat in het Latijn in de dativus, bijv. 'puellae dat' (hij geeft aan het meisje).",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-VOC-D1",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Vocativus 1e declinatie",
+      "titel_terminologie": "vocativus declinationis primae",
+      "beschrijving": "De vocativus van de 1e declinatie is gelijk aan de nominativus: sg. -a, pl. -ae. Bijv. puella! (meisje!), puellae! (meisjes!).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL1-STAM",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Stam bepalen 1e declinatie",
+      "titel_terminologie": "stirps declinationis primae",
+      "beschrijving": "De stam van een 1e-declinatiewoord vind je door -ae van de genitivus singularis af te halen. Bijv. puell-ae → stam puell-. Aan deze stam plak je de naamvalsuitgangen.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL1-MASC",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Masculina 1e declinatie",
+      "titel_terminologie": "masculina declinationis primae",
+      "beschrijving": "Enkele mannelijke woorden volgen de 1e declinatie: nauta (zeeman), poeta (dichter), pirata (piraat), agricola (boer). Ze verbuigen identiek aan feminina maar zijn masculinum.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL1-PARAD",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Paradigma 1e declinatie",
+      "titel_terminologie": "paradigma declinationis primae",
+      "beschrijving": "Het volledige verbuigingsoverzicht van de 1e declinatie. Modelwoord: puella, -ae (v.) — alle zes naamvallen in enkelvoud en meervoud.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL2-STAM",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Stam bepalen 2e declinatie",
+      "titel_terminologie": "stirps declinationis secundae",
+      "beschrijving": "De stam van een 2e-declinatiewoord vind je door -i van de genitivus singularis af te halen. Bijv. domin-i → stam domin-, bell-i → stam bell-.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL2-MASC",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Masculinum 2e declinatie (-us)",
+      "titel_terminologie": "masculina in -us",
+      "beschrijving": "Het hoofdpatroon van de 2e declinatie masculinum: nominativus sg. op -us (dominus, servus, amicus). Modelwoord: dominus, -i (m.).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL2-ER",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Masculinum 2e declinatie (-er)",
+      "titel_terminologie": "masculina in -er",
+      "beschrijving": "Variant van de 2e declinatie: nominativus sg. op -er. Twee subtypen: puer, pueri (stam behoudt -e-) en ager, agri (stam verliest -e-). Genitivus toont de ware stam.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL2-NEUT",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Neutrum 2e declinatie (-um)",
+      "titel_terminologie": "neutra in -um",
+      "beschrijving": "Neutra van de 2e declinatie: nominativus sg. op -um (bellum, templum). Neutrumregel: nom.=acc. in alle numeri; pl. nom./acc. altijd op -a.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "LAT-G-MORF-DECL2-PARAD",
+      "type": "G",
+      "taal": "lat",
+      "titel_nl": "Paradigma 2e declinatie",
+      "titel_terminologie": "paradigma declinationis secundae",
+      "beschrijving": "Het volledige verbuigingsoverzicht van de 2e declinatie. Modelwoorden: dominus, -i (m.) en bellum, -i (n.) — alle zes naamvallen in enkelvoud en meervoud.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "LAT-G-MORF-NAAMVAL-INTRO",
+      "target_id": "LAT-G-SYNT-VOC-FUNCTIE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL-INTRO",
+      "target_id": "LAT-G-MORF-STAM-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-STAM-INTRO",
+      "target_id": "LAT-G-MORF-UIT-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-G-SYNT-SUBJ",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-G-SYNT-OBJDIR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
+      "target_id": "LAT-G-SYNT-OBJIND",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-NOM-FUNCTIE",
+      "target_id": "LAT-G-SYNT-SUBJ",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-ACC-FUNCTIE",
+      "target_id": "LAT-G-SYNT-OBJDIR",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-SYNT-DAT-FUNCTIE",
+      "target_id": "LAT-G-SYNT-OBJIND",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL1-INTRO",
+      "target_id": "LAT-G-MORF-VOC-D1",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-SYNT-VOC-FUNCTIE",
+      "target_id": "LAT-G-MORF-VOC-D1",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-STAM-INTRO",
+      "target_id": "LAT-G-MORF-DECL1-STAM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL1-INTRO",
+      "target_id": "LAT-G-MORF-DECL1-STAM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL1-INTRO",
+      "target_id": "LAT-G-MORF-DECL1-MASC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-GENUS-INTRO",
+      "target_id": "LAT-G-MORF-DECL1-MASC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-NOM-D1",
+      "target_id": "LAT-G-MORF-DECL1-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-GEN-D1",
+      "target_id": "LAT-G-MORF-DECL1-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DAT-D1",
+      "target_id": "LAT-G-MORF-DECL1-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-ACC-D1",
+      "target_id": "LAT-G-MORF-DECL1-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-ABL-D1",
+      "target_id": "LAT-G-MORF-DECL1-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-VOC-D1",
+      "target_id": "LAT-G-MORF-DECL1-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-STAM-INTRO",
+      "target_id": "LAT-G-MORF-DECL2-STAM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL2-INTRO",
+      "target_id": "LAT-G-MORF-DECL2-STAM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL2-INTRO",
+      "target_id": "LAT-G-MORF-DECL2-MASC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL2-MASC",
+      "target_id": "LAT-G-MORF-DECL2-ER",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL2-STAM",
+      "target_id": "LAT-G-MORF-DECL2-ER",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL2-INTRO",
+      "target_id": "LAT-G-MORF-DECL2-NEUT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-GENUS-INTRO",
+      "target_id": "LAT-G-MORF-DECL2-NEUT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-NOM-D2",
+      "target_id": "LAT-G-MORF-DECL2-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-GEN-D2",
+      "target_id": "LAT-G-MORF-DECL2-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DAT-D2",
+      "target_id": "LAT-G-MORF-DECL2-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-ACC-D2",
+      "target_id": "LAT-G-MORF-DECL2-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-ABL-D2",
+      "target_id": "LAT-G-MORF-DECL2-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-VOC-D2",
+      "target_id": "LAT-G-MORF-DECL2-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    }
+  ]
+}

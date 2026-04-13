@@ -20,14 +20,14 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 **Doel:** Methode-onafhankelijke grammaticale kern van klas 1, gebaseerd op de CvTE-minimumlijst gefilterd op wat alle methoden gemeen hebben.
 **Geschat:** ~150 knopen
 **Afhankelijkheden:** Geen (bouwt voort op bestaande PoC)
-**Status:** todo
+**Status:** in progress
 **Bestand:** `data/graph/lat_grammatica_leerjaar1.json`
 
 | Story | Titel | Knopen | Status |
 |-------|-------|--------|--------|
-| A1-01 | Conceptknopen en naamvalsysteem | ~15 | todo |
-| A1-02 | 1e declinatie — alle naamvallen + paradigma | ~10 | todo |
-| A1-03 | 2e declinatie — o-stammen masculinum + neutrum | ~12 | todo |
+| A1-01 | Conceptknopen en naamvalsysteem | 6 | done |
+| A1-02 | 1e declinatie — alle naamvallen + paradigma | 4 | done |
+| A1-03 | 2e declinatie — o-stammen masculinum + neutrum | 5 | done |
 | A1-04 | 3e declinatie — consonantstammen + i-stammen basis | ~15 | todo |
 | A1-05 | Adjectieven bonus-type en fortis-type | ~10 | todo |
 | A1-06 | Werkwoord-concepten — conjugatie-intro, persoon, tempus, modus | ~10 | todo |
