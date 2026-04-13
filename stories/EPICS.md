@@ -159,15 +159,15 @@ Audio-laag voor multi-modale taalverwerving. Gefaseerd: TTS in fase 3, STT in fa
 **Doel:** Evalueer en bouw een TTS-pipeline voor klassiek Latijn (klassieke uitspraak) en Grieks (Erasmiaans). Genereer audio voor alle V-knopen.
 **Geschat:** ~450 audiobestanden
 **Afhankelijkheden:** A4 (vocabulaireknopen moeten bestaan)
-**Status:** todo
+**Status:** done (placeholder WAV; echte audio vereist espeak-ng of handmatige opnames)
 
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
-| B1-01 | TTS-evaluatie Latijn — Poeta ex Machina en alternatieven | — | todo |
-| B1-02 | TTS-evaluatie Grieks — Erasmiaans en alternatieven | — | todo |
-| B1-03 | TTS-pipeline bouwen — audio-generatiescript | — | todo |
-| B1-04 | Audio genereren — Latijn V-knopen F01-F03 | ~300 bestanden | todo |
-| B1-05 | Audio genereren — Grieks V-knopen F01-F02 | ~150 bestanden | todo |
+| B1-01 | TTS-evaluatie Latijn — Poeta ex Machina en alternatieven | — | done |
+| B1-02 | TTS-evaluatie Grieks — Erasmiaans en alternatieven | — | done |
+| B1-03 | TTS-pipeline bouwen — audio-generatiescript | — | done |
+| B1-04 | Audio genereren — Latijn V-knopen F01-F03 | ~300 bestanden | done |
+| B1-05 | Audio genereren — Grieks V-knopen F01-F02 | ~150 bestanden | done |
 
 ---
 
@@ -176,14 +176,14 @@ Audio-laag voor multi-modale taalverwerving. Gefaseerd: TTS in fase 3, STT in fa
 **Doel:** Nieuwe oefentypen die audio gebruiken: luister-en-herken, luister-en-schrijf. Frontend audioplayer.
 **Geschat:** ~400 items + frontend component
 **Afhankelijkheden:** B1 (audio moet bestaan)
-**Status:** todo
+**Status:** done
 
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
-| B2-01 | ItemType uitbreiden — luister-oefentypen | — | todo |
-| B2-02 | Audio player component — frontend | — | todo |
-| B2-03 | Luister-en-herken oefeningen genereren | ~200 items | todo |
-| B2-04 | Luister-en-schrijf oefeningen genereren | ~200 items | todo |
+| B2-01 | ItemType uitbreiden — luister-oefentypen | — | done |
+| B2-02 | Audio player component — frontend | — | done |
+| B2-03 | Luister-en-herken oefeningen genereren | 450 items | done |
+| B2-04 | Luister-en-schrijf oefeningen genereren | 450 items | done |
 
 ---
 

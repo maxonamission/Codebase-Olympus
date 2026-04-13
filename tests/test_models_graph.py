@@ -8,6 +8,7 @@ from gymnasium_classica.models.graph import (
     EdgeType,
     GraphData,
     Item,
+    ItemType,
     KennisKnoop,
     PrerequisiteEdge,
 )
@@ -193,6 +194,67 @@ class TestItem:
             sample_item_data["bron"] = bron
             item = Item(**sample_item_data)
             assert item.bron == bron
+
+
+class TestLuisterItemTypes:
+    """Tests for the luister_herkenning and luister_productie ItemType values."""
+
+    @pytest.fixture
+    def base_item_data(self) -> dict:
+        return {
+            "id": "ITEM-LUISTER-001",
+            "knoop_ids": ["LAT-V-F01-SUM"],
+            "richting": "receptief",
+            "moeilijkheid_initieel": -0.3,
+            "discriminatie_initieel": 1.0,
+            "verwachte_tijd_sec": 20,
+            "stimulus": "Luister en kies de juiste vertaling.",
+            "antwoord": "zijn",
+            "feedback": "sum = zijn",
+            "bron": "handmatig",
+            "audio_ref": "LAT-V-F01-SUM.wav",
+        }
+
+    def test_luister_herkenning_valid(self, base_item_data):
+        base_item_data["type"] = "luister_herkenning"
+        item = Item(**base_item_data)
+        assert item.type == ItemType.LUISTER_HERKENNING
+
+    def test_luister_productie_valid(self, base_item_data):
+        base_item_data["type"] = "luister_productie"
+        base_item_data["richting"] = "productief"
+        item = Item(**base_item_data)
+        assert item.type == ItemType.LUISTER_PRODUCTIE
+
+    def test_luister_herkenning_enum_value(self):
+        assert ItemType.LUISTER_HERKENNING == "luister_herkenning"
+        assert ItemType.LUISTER_HERKENNING.value == "luister_herkenning"
+
+    def test_luister_productie_enum_value(self):
+        assert ItemType.LUISTER_PRODUCTIE == "luister_productie"
+        assert ItemType.LUISTER_PRODUCTIE.value == "luister_productie"
+
+    def test_all_item_types_present(self):
+        expected = {
+            "herkenning", "productie", "analyse", "synthese",
+            "contextueel", "offline_schrijven",
+            "luister_herkenning", "luister_productie",
+        }
+        actual = {t.value for t in ItemType}
+        assert actual == expected
+
+    def test_luister_item_with_audio_ref(self, base_item_data):
+        base_item_data["type"] = "luister_herkenning"
+        item = Item(**base_item_data)
+        assert item.audio_ref == "LAT-V-F01-SUM.wav"
+
+    def test_existing_item_types_unchanged(self, base_item_data):
+        """Ensure existing item types still work — no breaking change."""
+        for existing_type in ["herkenning", "productie", "analyse",
+                              "synthese", "contextueel", "offline_schrijven"]:
+            base_item_data["type"] = existing_type
+            item = Item(**base_item_data)
+            assert item.type == existing_type
 
 
 class TestGraphData:
