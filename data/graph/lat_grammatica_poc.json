@@ -1468,7 +1468,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D12-INTRO-001",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D12-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Hoe staat een adjectief als 'bonus' in het woordenboek?",
+          "antwoord": "bonus, -a, -um (drie uitgangen: m., f., n.)",
+          "feedback": "Adjectieven van de 1e/2e declinatie worden opgegeven met drie nominativusvormen: bonus (m.), bona (f.), bonum (n.).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D12-INTRO-002",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D12-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welke declinatie volgt het femininum van 'bonus'?",
+          "antwoord": "de 1e declinatie",
+          "feedback": "Het femininum (bona) volgt de 1e declinatie (a-stam). Het masculinum en neutrum volgen de 2e declinatie.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-ADJ-D12-VERBG",
@@ -1480,7 +1511,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D12-VERBG-001",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D12-VERBG"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Verbuig 'bonus' in de accusativus enkelvoud voor alle drie genera.",
+          "antwoord": "bonum (m.), bonam (f.), bonum (n.)",
+          "feedback": "Masc. en neutr. volgen 2e decl. (-um), fem. volgt 1e decl. (-am). Acc. sg. masc. = neutr. bij dit type.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D12-VERBG-002",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D12-VERBG"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de genitivus meervoud van 'bonus' (alle genera).",
+          "antwoord": "bonorum (m./n.), bonarum (f.)",
+          "feedback": "Masc./neutr. gen. pl. -orum (2e decl.), fem. gen. pl. -arum (1e decl.).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D12-VERBG-003",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D12-VERBG"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wat is de ablativus enkelvoud femininum van 'magnus, -a, -um'?",
+          "antwoord": "magna",
+          "feedback": "Het femininum volgt de 1e declinatie: abl. sg. op -ā. Magna (met lange a).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-ADJ-CONGR",
@@ -1492,7 +1569,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-SYNT-ADJ-CONGR-001",
+          "knoop_ids": [
+            "LAT-G-SYNT-ADJ-CONGR"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wat is congruentie bij adjectieven?",
+          "antwoord": "het adjectief neemt genus, numerus en casus over van het zelfstandig naamwoord",
+          "feedback": "Congruentie betekent dat het adjectief zich aanpast aan het zelfstandig naamwoord in genus, numerus en casus.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-ADJ-CONGR-002",
+          "knoop_ids": [
+            "LAT-G-SYNT-ADJ-CONGR"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 35,
+          "stimulus": "'Puella bona cantat.' — waarom staat 'bona' in deze vorm?",
+          "antwoord": "puella is femininum sg. nominativus, dus het adjectief wordt bona (fem. sg. nom.)",
+          "feedback": "Het adjectief congrueert: puella = fem. sg. nom., dus bonus → bona.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-SYNT-ADJ-CONGR-003",
+          "knoop_ids": [
+            "LAT-G-SYNT-ADJ-CONGR"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Welke vorm van 'bonus' past bij 'bellum' (acc. sg.)?",
+          "antwoord": "bonum",
+          "feedback": "Bellum is neutrum: acc. sg. neutrum van bonus = bonum. Neutrumregel: nom.=acc.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-SYNT-PREP-ACC",

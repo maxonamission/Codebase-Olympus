@@ -1280,7 +1280,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-INTRO-001",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke twee hoofdgroepen adjectieven kent het Latijn?",
+          "antwoord": "type bonus (1e/2e declinatie) en type fortis (3e declinatie)",
+          "feedback": "Adjectieven volgen de 1e/2e declinatie (bonus, -a, -um) of de 3e declinatie (fortis, -e).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-INTRO-002",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Wat moet een Latijns adjectief overnemen van het zelfstandig naamwoord?",
+          "antwoord": "genus, numerus en casus",
+          "feedback": "Een adjectief congrueert met het zelfstandig naamwoord in genus (geslacht), numerus (getal) en casus (naamval).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-ADJ-D3-INTRO",
@@ -1292,7 +1323,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D3-INTRO-001",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D3-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke drie subtypen adjectieven van de 3e declinatie bestaan er?",
+          "antwoord": "drieuitgangig (acer), tweeuitgangig (fortis), eenuitgangig (prudens)",
+          "feedback": "De 3e-declinatieadjectieven hebben drie subtypen: 3-uitgangig (acer, acris, acre), 2-uitgangig (fortis, -e), 1-uitgangig (prudens, -ntis).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D3-INTRO-002",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D3-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welk subtype 3e-declinatieadjectief komt het meest voor?",
+          "antwoord": "tweeuitgangig (fortis-type)",
+          "feedback": "Het tweeuitgangig type (fortis, -e) is het meest voorkomend. Eén vorm voor m.+f., één voor n.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-ADJ-D3-3EIND",
@@ -1304,7 +1366,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D3-3EIND-001",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D3-3EIND"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Hoeveel nominativusvormen heeft een drieuitgangig adjectief?",
+          "antwoord": "drie: een voor masculinum, femininum en neutrum",
+          "feedback": "Drieuitgangig: acer (m.), acris (f.), acre (n.). Drie aparte nominativusvormen.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D3-3EIND-002",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D3-3EIND"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de nominativus enkelvoud van 'acer' voor alle genera.",
+          "antwoord": "acer (m.), acris (f.), acre (n.)",
+          "feedback": "Acer heeft drie vormen: acer (m.), acris (f.), acre (n.). Alleen de nom. sg. verschilt per genus.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D3-3EIND-003",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D3-3EIND"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de ablativus enkelvoud van 'acer'.",
+          "antwoord": "acri",
+          "feedback": "3e-declinatie adjectieven volgen het i-stampatroon: abl. sg. op -i: acr- + -i = acri.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-ADJ-D3-2EIND",
@@ -1316,7 +1424,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D3-2EIND-001",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D3-2EIND"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Hoe staat een tweeuitgangig adjectief in het woordenboek?",
+          "antwoord": "fortis, -e (twee vormen: m./f. en n.)",
+          "feedback": "Tweeuitgangig: fortis (m.+f.), forte (n.). Het woordenboek geeft de tweede vorm na een komma.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D3-2EIND-002",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D3-2EIND"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Geef de genitivus enkelvoud van 'fortis'.",
+          "antwoord": "fortis",
+          "feedback": "Gen. sg. van fortis is fortis (gelijk aan de nom. sg. m./f.). Stam: fort-.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D3-2EIND-003",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D3-2EIND"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de nominativus meervoud neutrum van 'fortis, -e'.",
+          "antwoord": "fortia",
+          "feedback": "Neutra i-stammen: nom. pl. op -ia: fort- + -ia = fortia.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-ADJ-D3-1EIND",
@@ -1328,7 +1482,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D3-1EIND-001",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D3-1EIND"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Hoe herken je de stam van een eenuitgangig adjectief?",
+          "antwoord": "via de genitivus: prudens, prudent-is → stam prudent-",
+          "feedback": "Bij eenuitgangige adjectieven heeft de nom. sg. één vorm voor alle genera. De genitivus toont de stam.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D3-1EIND-002",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D3-1EIND"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de accusativus enkelvoud masculinum van 'prudens, prudentis'.",
+          "antwoord": "prudentem",
+          "feedback": "Stam prudent- + uitgang -em = prudentem (m./f.). Bij neutrum: prudens (nom.=acc.).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D3-1EIND-003",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D3-1EIND"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de genitivus meervoud van 'prudens, prudentis'.",
+          "antwoord": "prudentium",
+          "feedback": "I-stampatroon: gen. pl. op -ium: prudent- + -ium = prudentium.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-ADJ-D3-VERBG",
@@ -1340,7 +1540,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D3-VERBG-001",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D3-VERBG"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welk stampatroon volgen 3e-declinatie adjectieven: consonantstam of i-stam?",
+          "antwoord": "i-stam",
+          "feedback": "Alle 3e-declinatie adjectieven volgen het i-stampatroon: abl. sg. -i, gen. pl. -ium, nom./acc. pl. n. -ia.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-D3-VERBG-002",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-D3-VERBG"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de ablativus enkelvoud en genitivus meervoud van 'fortis, -e'.",
+          "antwoord": "forti, fortium",
+          "feedback": "I-stampatroon: abl. sg. fort-i, gen. pl. fort-ium.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-ADJ-COMPAR",
@@ -1353,7 +1584,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-COMPAR-001",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-COMPAR"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Noem de drie trappen van vergelijking in het Latijn.",
+          "antwoord": "positivus, comparativus, superlativus",
+          "feedback": "De drie gradus: positivus (stellend, fortis), comparativus (vergrotend, fortior), superlativus (overtreffend, fortissimus).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-ADJ-COMPAR-002",
+          "knoop_ids": [
+            "LAT-G-MORF-ADJ-COMPAR"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wat zijn de uitgangen van de comparativus?",
+          "antwoord": "-ior (m./f.) en -ius (n.)",
+          "feedback": "De comparativus wordt gevormd met -ior (m./f.) en -ius (n.): fortis → fortior, fortius.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "LAT-G-MORF-MODUS-INTRO",
