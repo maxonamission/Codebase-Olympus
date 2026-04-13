@@ -16,14 +16,17 @@ from uuid import uuid4
 import networkx as nx
 
 from gymnasium_classica.diagnostic.conditional_completion import apply_fallback
-from gymnasium_classica.models.graph import KennisKnoop
+from gymnasium_classica.models.graph import ItemType, KennisKnoop
 from gymnasium_classica.models.learner import (
     LearnerModel,
     MasterySource,
+    OfflineAssignment,
     ResponseType,
+    SelfReportResponse,
     SessionRecord,
 )
 from gymnasium_classica.scheduling.bkt import (
+    SELF_REPORT_BKT_PARAMS,
     propagate_practice_correct,
     update_knoop_state,
 )
@@ -92,6 +95,8 @@ class SessionResult:
     nodes_introduced: list[str] = field(default_factory=list)
     nodes_reviewed: list[str] = field(default_factory=list)
     mastery_changes: dict[str, tuple[float, float]] = field(default_factory=dict)
+    offline_assignments: list[OfflineAssignment] = field(default_factory=list)
+    follow_ups: list[OfflineAssignment] = field(default_factory=list)
 
 
 def _get_state_posterior(learner: LearnerModel, knoop_id: str) -> float:
@@ -216,6 +221,73 @@ def _process_response(
             apply_fallback(learner, graph, knoop_id)
 
 
+def _collect_offline_items(
+    graph: nx.DiGraph,
+    session_node_ids: set[str],
+    now: datetime,
+) -> list[OfflineAssignment]:
+    """Identify offline_schrijven items for nodes practiced in this session."""
+    assignments: list[OfflineAssignment] = []
+    for node_id in session_node_ids:
+        if node_id not in graph.nodes:
+            continue
+        knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+        for item in knoop.items:
+            if item.type == ItemType.OFFLINE_SCHRIJVEN:
+                assignments.append(
+                    OfflineAssignment(
+                        knoop_id=node_id,
+                        item_id=item.id,
+                        assigned_at=now,
+                    )
+                )
+    return assignments
+
+
+def _pending_follow_ups(learner: LearnerModel) -> list[OfflineAssignment]:
+    """Return uncompleted offline assignments that need a follow-up question."""
+    return [a for a in learner.pending_offline_assignments if not a.completed]
+
+
+def process_self_report(
+    learner: LearnerModel,
+    assignment: OfflineAssignment,
+    response: SelfReportResponse,
+) -> None:
+    """Process a self-reported outcome for an offline writing assignment.
+
+    Maps SelfReportResponse to a BKT-compatible correct/incorrect and
+    updates the learner state using SELF_REPORT_BKT_PARAMS (higher P(G)
+    and P(S) to reflect reduced confidence in self-reported results).
+
+    - CORRECT → BKT correct
+    - PARTIAL → BKT correct (but the higher P(G)=0.35 tempers the update)
+    - INCORRECT → BKT incorrect
+    """
+    correct_for_bkt = response in (
+        SelfReportResponse.CORRECT,
+        SelfReportResponse.PARTIAL,
+    )
+    bkt_response = ResponseType.CORRECT if correct_for_bkt else ResponseType.INCORRECT
+
+    update_knoop_state(
+        learner,
+        assignment.knoop_id,
+        bkt_response,
+        params=SELF_REPORT_BKT_PARAMS,
+    )
+
+    # Mark mastery source as self-report
+    state = learner.knoop_states[assignment.knoop_id]
+    state.source = MasterySource.SELF_REPORT
+
+    # Mark assignment as completed
+    assignment.completed = True
+
+    # Track self-report ratio
+    learner.self_report_count += 1
+
+
 def run_session(
     learner: LearnerModel,
     graph: nx.DiGraph,
@@ -233,6 +305,10 @@ def run_session(
         session_id = str(uuid4())[:8]
 
     result = SessionResult(session_id=session_id, started_at=now)
+
+    # Surface pending offline assignments as follow-ups for this session
+    result.follow_ups = _pending_follow_ups(learner)
+
     ni_state = NonInterferenceState()
     session_node_ids: set[str] = set()
     session_type_counts: dict[str, int] = {}
@@ -309,6 +385,15 @@ def run_session(
 
             # Remove selected from current candidates to avoid re-selection
             candidates = [(s, k) for s, k in candidates if k.id != knoop_id]
+
+    # Schedule offline assignments at end of session
+    new_offline = _collect_offline_items(graph, session_node_ids, now)
+    # Avoid duplicating assignments already pending for the same item
+    existing_item_ids = {a.item_id for a in learner.pending_offline_assignments}
+    for assignment in new_offline:
+        if assignment.item_id not in existing_item_ids:
+            learner.pending_offline_assignments.append(assignment)
+            result.offline_assignments.append(assignment)
 
     # Record session in learner history
     result.ended_at = now

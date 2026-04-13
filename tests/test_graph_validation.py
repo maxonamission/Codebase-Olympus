@@ -4,6 +4,7 @@ import pytest
 
 from gymnasium_classica.graph.loader import load_graph_from_dict
 from gymnasium_classica.graph.validation import (
+    _prerequisite_enrichment_subgraph,
     check_connectivity,
     detect_cycles,
     find_leaf_nodes,
@@ -31,6 +32,12 @@ class TestDetectCycles:
         assert "LAT-G-MORF-NOM-D1" in cycle_members
         assert "LAT-G-MORF-NOM-D2" in cycle_members
         assert "LAT-G-MORF-NOM-D3" in cycle_members
+
+    def test_bidirectional_transfer_no_cycles(self, bidirectional_transfer_graph_data):
+        """Bidirectional transfer edges should NOT be detected as cycles."""
+        g = load_graph_from_dict(bidirectional_transfer_graph_data)
+        cycles = detect_cycles(g)
+        assert cycles == []
 
 
 class TestFindOrphanNodes:
@@ -182,3 +189,39 @@ class TestValidateGraph:
         # All nodes have empty items, so each should generate a warning
         item_warnings = [w for w in report.warnings if "has no items" in w]
         assert len(item_warnings) == 5
+
+    def test_bidirectional_transfer_valid(self, bidirectional_transfer_graph_data):
+        """A graph with bidirectional transfer edges should be valid."""
+        g = load_graph_from_dict(bidirectional_transfer_graph_data)
+        report = validate_graph(g)
+        assert report.is_valid is True
+        assert report.cycles == []
+        assert report.transfer_edge_count == 4
+        assert report.topological_order is not None
+
+    def test_transfer_edge_count(self, bidirectional_transfer_graph_data):
+        g = load_graph_from_dict(bidirectional_transfer_graph_data)
+        report = validate_graph(g)
+        assert report.edge_count == 6  # 2 prerequisite + 4 transfer
+        assert report.transfer_edge_count == 4
+
+
+class TestPrerequisiteEnrichmentSubgraph:
+    """Tests for the _prerequisite_enrichment_subgraph helper."""
+
+    def test_excludes_transfer_edges(self, bidirectional_transfer_graph_data):
+        g = load_graph_from_dict(bidirectional_transfer_graph_data)
+        sub = _prerequisite_enrichment_subgraph(g)
+        assert sub.number_of_edges() == 2  # only prerequisite edges
+        assert sub.number_of_nodes() == 4  # all nodes preserved
+
+    def test_preserves_prerequisite_edges(self, sample_graph_data):
+        g = load_graph_from_dict(sample_graph_data)
+        sub = _prerequisite_enrichment_subgraph(g)
+        assert sub.number_of_edges() == g.number_of_edges()  # no transfer edges to remove
+
+    def test_does_not_modify_original(self, bidirectional_transfer_graph_data):
+        g = load_graph_from_dict(bidirectional_transfer_graph_data)
+        original_edges = g.number_of_edges()
+        _prerequisite_enrichment_subgraph(g)
+        assert g.number_of_edges() == original_edges

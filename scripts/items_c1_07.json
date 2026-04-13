@@ -1,0 +1,625 @@
+{
+  "LAT-G-MORF-IMPF-INTRO": [
+    {
+      "id": "ITEM-LAT-G-MORF-IMPF-INTRO-001",
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-INTRO"
+      ],
+      "type": "herkenning",
+      "richting": "receptief",
+      "moeilijkheid_initieel": -0.3,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Hoe wordt het imperfectum gevormd?",
+      "antwoord": "praesensstam + -ba- + persoonsuitgang",
+      "feedback": "Het imperfectum wordt gevormd met het tussenvoegsel -ba-: ama-ba-m, mone-ba-m.",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-IMPF-INTRO-002",
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-INTRO"
+      ],
+      "type": "herkenning",
+      "richting": "receptief",
+      "moeilijkheid_initieel": -0.5,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 12,
+      "stimulus": "Welke handeling drukt het imperfectum uit?",
+      "antwoord": "een onvoltooide of voortdurende handeling in het verleden",
+      "feedback": "Het imperfectum beschrijft iets dat gaande was of herhaald werd: \"hij liep\" (niet \"hij heeft gelopen\").",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-IMPF-C1C2-ACT": [
+    {
+      "id": "ITEM-LAT-G-MORF-IMPF-C1C2-ACT-001",
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-C1C2-ACT"
+      ],
+      "type": "herkenning",
+      "richting": "receptief",
+      "moeilijkheid_initieel": -0.2,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 10,
+      "stimulus": "Welke persoon en getal is \"amabat\"?",
+      "antwoord": "3e persoon enkelvoud imperfectum",
+      "feedback": "Ama-ba-t: stam ama- + -ba- + -t = 3e pers. sg. imperfectum.",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-IMPF-C1C2-ACT-002",
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-C1C2-ACT"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.5,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Vervoeg \"amare\" in de 1e persoon enkelvoud imperfectum.",
+      "antwoord": "amabam",
+      "feedback": "1e conj.: stam ama- + -ba- + -m = amabam.",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-IMPF-C1C2-ACT-003",
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-C1C2-ACT"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.6,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Vervoeg \"monere\" in de 3e persoon meervoud imperfectum.",
+      "antwoord": "monebant",
+      "feedback": "2e conj.: stam mone- + -ba- + -nt = monebant.",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-IMPF-C3C4-ACT": [
+    {
+      "id": "ITEM-LAT-G-MORF-IMPF-C3C4-ACT-001",
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-C3C4-ACT"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.6,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Vervoeg \"regere\" in de 1e persoon enkelvoud imperfectum.",
+      "antwoord": "regebam",
+      "feedback": "3e conj.: stam rege- + -ba- + -m = regebam. Let op: bindklinker -e- voor -ba-.",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-IMPF-C3C4-ACT-002",
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-C3C4-ACT"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.7,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Vervoeg \"audire\" in de 2e persoon enkelvoud imperfectum.",
+      "antwoord": "audiebas",
+      "feedback": "4e conj.: stam audi- + -eba- + -s = audiebas.",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-IMPF-C3B-ACT": [
+    {
+      "id": "ITEM-LAT-G-MORF-IMPF-C3B-ACT-001",
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-C3B-ACT"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.7,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Vervoeg \"capere\" in de 1e persoon enkelvoud imperfectum.",
+      "antwoord": "capiebam",
+      "feedback": "Gem. conj.: stam capi- + -eba- + -m = capiebam (als 4e conj.).",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-IMPF-C3B-ACT-002",
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-C3B-ACT"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.7,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Vervoeg \"capere\" in de 3e persoon meervoud imperfectum.",
+      "antwoord": "capiebant",
+      "feedback": "Gem. conj.: capi- + -eba- + -nt = capiebant.",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-IMPF-ESSE": [
+    {
+      "id": "ITEM-LAT-G-MORF-IMPF-ESSE-001",
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-ESSE"
+      ],
+      "type": "herkenning",
+      "richting": "receptief",
+      "moeilijkheid_initieel": 0.0,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Vervoeg \"esse\" volledig in het imperfectum.",
+      "antwoord": "eram, eras, erat, eramus, eratis, erant",
+      "feedback": "Esse imperfectum: eram, eras, erat, eramus, eratis, erant. Stam er- + standaarduitgangen.",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-IMPF-ESSE-002",
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-ESSE"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.3,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 10,
+      "stimulus": "Geef de 3e persoon meervoud imperfectum van \"esse\".",
+      "antwoord": "erant",
+      "feedback": "Esse impf.: erant (zij waren).",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-IMPF-POSSE": [
+    {
+      "id": "ITEM-LAT-G-MORF-IMPF-POSSE-001",
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-POSSE"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.6,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Geef de 1e persoon enkelvoud imperfectum van \"posse\".",
+      "antwoord": "poteram",
+      "feedback": "Posse impf.: pot- + eram = poteram (ik kon).",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-IMPF-POSSE-002",
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-POSSE"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.5,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Geef de 3e persoon enkelvoud imperfectum van \"posse\".",
+      "antwoord": "poterat",
+      "feedback": "Posse impf.: pot- + erat = poterat (hij/zij kon).",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-IMPF-PARAD": [
+    {
+      "id": "ITEM-LAT-G-MORF-IMPF-PARAD-001",
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-PARAD"
+      ],
+      "type": "analyse",
+      "richting": "receptief",
+      "moeilijkheid_initieel": 1.0,
+      "discriminatie_initieel": 1.2,
+      "verwachte_tijd_sec": 30,
+      "stimulus": "Ontleed \"audiebamus\" volledig.",
+      "antwoord": "1e persoon meervoud imperfectum indicativus actief, 4e conjugatie",
+      "feedback": "Audi-eba-mus: stam audi- + impf.-kenmerk -eba- + uitgang -mus.",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-IMPF-PARAD-002",
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-PARAD"
+      ],
+      "type": "herkenning",
+      "richting": "receptief",
+      "moeilijkheid_initieel": 0.0,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 12,
+      "stimulus": "Wat is het kenmerk waarmee je het imperfectum herkent in een werkwoordsvorm?",
+      "antwoord": "-ba-",
+      "feedback": "Het tussenvoegsel -ba- is het herkenningsteken van het imperfectum: amabam, monebat, regebant.",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-PERF-INTRO": [
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-INTRO-001",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-INTRO"
+      ],
+      "type": "herkenning",
+      "richting": "receptief",
+      "moeilijkheid_initieel": -0.2,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Hoe wordt het perfectum gevormd?",
+      "antwoord": "perfectumstam + perfectumuitgangen",
+      "feedback": "Het perfectum gebruikt een aparte stam (niet de praesensstam) + eigen uitgangen: -i, -isti, -it, -imus, -istis, -erunt.",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-INTRO-002",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-INTRO"
+      ],
+      "type": "herkenning",
+      "richting": "receptief",
+      "moeilijkheid_initieel": -0.4,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 12,
+      "stimulus": "Wat drukt het perfectum uit?",
+      "antwoord": "een voltooide handeling",
+      "feedback": "Het perfectum beschrijft iets dat is afgerond: \"hij heeft gelopen\" of \"hij liep\" (voltooid).",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-PERF-UITG": [
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-UITG-001",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-UITG"
+      ],
+      "type": "herkenning",
+      "richting": "receptief",
+      "moeilijkheid_initieel": -0.1,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Noem de zes perfectumuitgangen.",
+      "antwoord": "-i, -isti, -it, -imus, -istis, -erunt",
+      "feedback": "De perfectumuitgangen zijn uniek: -i, -isti, -it, -imus, -istis, -erunt/-ere.",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-UITG-002",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-UITG"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.5,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Geef de 2e persoon enkelvoud perfectum van \"amavi\".",
+      "antwoord": "amavisti",
+      "feedback": "Perfectumstam amav- + uitgang -isti = amavisti.",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-PERF-STAMT-V": [
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-STAMT-V-001",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-STAMT-V"
+      ],
+      "type": "herkenning",
+      "richting": "receptief",
+      "moeilijkheid_initieel": 0.0,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 12,
+      "stimulus": "Bij welke conjugaties komt perfectumvorming op -v- voor?",
+      "antwoord": "vooral 1e (amavi) en 4e (audivi)",
+      "feedback": "De -v-stam is typisch voor de 1e conj. (amavi) en 4e conj. (audivi), ook bij delevi (2e).",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-STAMT-V-002",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-STAMT-V"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.4,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Geef de perfectumstam van \"audire\".",
+      "antwoord": "audiv-",
+      "feedback": "Audire → perfectum audivi → stam audiv-.",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-PERF-STAMT-U": [
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-STAMT-U-001",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-STAMT-U"
+      ],
+      "type": "herkenning",
+      "richting": "receptief",
+      "moeilijkheid_initieel": 0.0,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 12,
+      "stimulus": "Bij welke conjugatie komt perfectumvorming op -u- vooral voor?",
+      "antwoord": "de 2e conjugatie (monui, docui)",
+      "feedback": "De -u-stam is typisch voor de 2e conj.: monui, docui, habui, rapui.",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-STAMT-U-002",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-STAMT-U"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.5,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Geef de perfectumstam van \"monere\".",
+      "antwoord": "monu-",
+      "feedback": "Monere → perfectum monui → stam monu-.",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-PERF-STAMT-S": [
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-STAMT-S-001",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-STAMT-S"
+      ],
+      "type": "herkenning",
+      "richting": "receptief",
+      "moeilijkheid_initieel": 0.2,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Hoe wordt een s-perfectum gevormd?",
+      "antwoord": "stam + -s- (bijv. dixi, scripsi)",
+      "feedback": "Bij het s-perfectum voegt de stam -s- toe, vaak met klankverandering: dic- → dix-i, scrib- → scrips-i.",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-STAMT-S-002",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-STAMT-S"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.7,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Geef het perfectum 1e sg. van \"dicere\".",
+      "antwoord": "dixi",
+      "feedback": "Dic- + -s- + -i → dixi (de c+s wordt x).",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-PERF-STAMT-OV": [
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-STAMT-OV-001",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-STAMT-OV"
+      ],
+      "type": "herkenning",
+      "richting": "receptief",
+      "moeilijkheid_initieel": 0.3,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Noem twee manieren van onregelmatige perfectumvorming.",
+      "antwoord": "reduplicatie (cucurri) en stamwisseling (veni, feci)",
+      "feedback": "Onregelmatige perfecta: reduplicatie (cucurri, cecidi) of stamwisseling (venire→veni, facere→feci).",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-STAMT-OV-002",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-STAMT-OV"
+      ],
+      "type": "herkenning",
+      "richting": "receptief",
+      "moeilijkheid_initieel": 0.1,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Wat is reduplicatie bij perfectumvorming?",
+      "antwoord": "herhaling van de beginklank: curro → cucurri",
+      "feedback": "Bij reduplicatie wordt de eerste lettergreep herhaald: curro→cucurri, do→dedi, cado→cecidi.",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-PERF-C1-ACT": [
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-C1-ACT-001",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-C1-ACT"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.6,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Vervoeg \"amare\" in de 3e persoon meervoud perfectum.",
+      "antwoord": "amaverunt",
+      "feedback": "Perfectumstam amav- + uitgang -erunt = amaverunt.",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-C1-ACT-002",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-C1-ACT"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.5,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Vervoeg \"laudare\" in de 1e persoon enkelvoud perfectum.",
+      "antwoord": "laudavi",
+      "feedback": "1e conj. v-perfectum: laudav- + -i = laudavi.",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-PERF-C2-ACT": [
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-C2-ACT-001",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-C2-ACT"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.5,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Vervoeg \"monere\" in de 1e persoon enkelvoud perfectum.",
+      "antwoord": "monui",
+      "feedback": "2e conj. u-perfectum: monu- + -i = monui.",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-C2-ACT-002",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-C2-ACT"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.6,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Vervoeg \"habere\" in de 3e persoon enkelvoud perfectum.",
+      "antwoord": "habuit",
+      "feedback": "Perfectumstam habu- + -it = habuit.",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-PERF-C3-ACT": [
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-C3-ACT-001",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-C3-ACT"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.7,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Vervoeg \"regere\" in de 1e persoon enkelvoud perfectum.",
+      "antwoord": "rexi",
+      "feedback": "3e conj. s-perfectum: reg- + -s- + -i → rexi (g+s=x).",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-C3-ACT-002",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-C3-ACT"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.8,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Vervoeg \"scribere\" in de 1e persoon enkelvoud perfectum.",
+      "antwoord": "scripsi",
+      "feedback": "3e conj. s-perfectum: scrib- + -s- + -i → scripsi (b+s=ps).",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-PERF-C4-ACT": [
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-C4-ACT-001",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-C4-ACT"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.5,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Vervoeg \"audire\" in de 1e persoon enkelvoud perfectum.",
+      "antwoord": "audivi",
+      "feedback": "4e conj. v-perfectum: audiv- + -i = audivi.",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-C4-ACT-002",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-C4-ACT"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.7,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Vervoeg \"audire\" in de 2e persoon meervoud perfectum.",
+      "antwoord": "audivistis",
+      "feedback": "Perfectumstam audiv- + -istis = audivistis.",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-PERF-ESSE": [
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-ESSE-001",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-ESSE"
+      ],
+      "type": "herkenning",
+      "richting": "receptief",
+      "moeilijkheid_initieel": 0.0,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 10,
+      "stimulus": "Wat is de perfectumstam van \"esse\"?",
+      "antwoord": "fu-",
+      "feedback": "Esse perfectum: fui, fuisti, fuit, fuimus, fuistis, fuerunt. Stam fu-.",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-ESSE-002",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-ESSE"
+      ],
+      "type": "productie",
+      "richting": "productief",
+      "moeilijkheid_initieel": 0.4,
+      "discriminatie_initieel": 1.0,
+      "verwachte_tijd_sec": 15,
+      "stimulus": "Geef de 3e persoon meervoud perfectum van \"esse\".",
+      "antwoord": "fuerunt",
+      "feedback": "Perfectumstam fu- + -erunt = fuerunt (zij zijn geweest).",
+      "bron": "handmatig"
+    }
+  ],
+  "LAT-G-MORF-PERF-PARAD": [
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-PARAD-001",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-PARAD"
+      ],
+      "type": "analyse",
+      "richting": "receptief",
+      "moeilijkheid_initieel": 1.1,
+      "discriminatie_initieel": 1.2,
+      "verwachte_tijd_sec": 30,
+      "stimulus": "Ontleed \"monuistis\" volledig.",
+      "antwoord": "2e persoon meervoud perfectum indicativus actief, 2e conjugatie",
+      "feedback": "Monu-istis: perfectumstam monu- (u-perf.) + uitgang -istis = 2e pers. pl. perf.",
+      "bron": "handmatig"
+    },
+    {
+      "id": "ITEM-LAT-G-MORF-PERF-PARAD-002",
+      "knoop_ids": [
+        "LAT-G-MORF-PERF-PARAD"
+      ],
+      "type": "analyse",
+      "richting": "receptief",
+      "moeilijkheid_initieel": 1.2,
+      "discriminatie_initieel": 1.2,
+      "verwachte_tijd_sec": 30,
+      "stimulus": "Ontleed \"dixerunt\" volledig.",
+      "antwoord": "3e persoon meervoud perfectum indicativus actief, 3e conjugatie",
+      "feedback": "Dix-erunt: perfectumstam dix- (s-perf. van dicere) + -erunt = 3e pers. pl. perf.",
+      "bron": "handmatig"
+    }
+  ]
+}

@@ -25,6 +25,11 @@ DEFAULT_P_TRANSIT = 0.10  # Conservative for classical languages
 DEFAULT_P_GUESS = 0.20  # Reasonable for 5-option morphology recognition
 DEFAULT_P_SLIP = 0.05  # Low — experienced students rarely make careless errors
 
+# Self-report BKT parameters: higher P(G) and P(S) to reflect reduced confidence
+# in self-reported results vs. objectively verified (online or OCR) responses.
+SELF_REPORT_P_GUESS = 0.35
+SELF_REPORT_P_SLIP = 0.15
+
 # Practice propagation (smaller than diagnostic to reflect incremental learning)
 PRACTICE_ENCOMPASSING_BOOST = 0.10
 PRACTICE_SIBLING_FACTOR = 0.3
@@ -41,6 +46,13 @@ class BKTParams:
     p_transit: float = DEFAULT_P_TRANSIT
     p_guess: float = DEFAULT_P_GUESS
     p_slip: float = DEFAULT_P_SLIP
+
+
+SELF_REPORT_BKT_PARAMS = BKTParams(
+    p_transit=DEFAULT_P_TRANSIT,
+    p_guess=SELF_REPORT_P_GUESS,
+    p_slip=SELF_REPORT_P_SLIP,
+)
 
 
 def bkt_update_posterior(

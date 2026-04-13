@@ -16,6 +16,7 @@ class ValidationReport:
     is_valid: bool = True
     node_count: int = 0
     edge_count: int = 0
+    transfer_edge_count: int = 0
     root_nodes: list[str] = field(default_factory=list)
     leaf_nodes: list[str] = field(default_factory=list)
     cycles: list[list[str]] = field(default_factory=list)
@@ -27,9 +28,30 @@ class ValidationReport:
     errors: list[str] = field(default_factory=list)
 
 
+def _prerequisite_enrichment_subgraph(graph: nx.DiGraph) -> nx.DiGraph:
+    """Return a view of the graph with only prerequisite and enrichment edges.
+
+    Transfer edges are excluded because they represent bidirectional
+    cross-linguistic connections and are not subject to DAG constraints.
+    """
+    sub = graph.copy()
+    transfer_edges = [
+        (u, v)
+        for u, v in sub.edges
+        if sub.edges[u, v].get("edge") and sub.edges[u, v]["edge"].type == "transfer"
+    ]
+    sub.remove_edges_from(transfer_edges)
+    return sub
+
+
 def detect_cycles(graph: nx.DiGraph) -> list[list[str]]:
-    """Return all simple cycles in the graph (empty list if DAG)."""
-    return list(nx.simple_cycles(graph))
+    """Return all simple cycles in the prerequisite+enrichment subgraph.
+
+    Transfer edges are excluded from cycle detection because they
+    represent bidirectional cross-linguistic connections.
+    """
+    sub = _prerequisite_enrichment_subgraph(graph)
+    return list(nx.simple_cycles(sub))
 
 
 def find_orphan_nodes(graph: nx.DiGraph) -> list[str]:
@@ -71,10 +93,15 @@ def check_connectivity(graph: nx.DiGraph) -> tuple[int, list[str]]:
 
 
 def topological_sort(graph: nx.DiGraph) -> Optional[list[str]]:
-    """Return a topological ordering, or None if the graph has cycles."""
-    if not nx.is_directed_acyclic_graph(graph):
+    """Return a topological ordering of the prerequisite+enrichment subgraph.
+
+    Transfer edges are excluded because they may be bidirectional.
+    Returns None if the prerequisite+enrichment subgraph has cycles.
+    """
+    sub = _prerequisite_enrichment_subgraph(graph)
+    if not nx.is_directed_acyclic_graph(sub):
         return None
-    return list(nx.topological_sort(graph))
+    return list(nx.topological_sort(sub))
 
 
 def validate_edge_weights(graph: nx.DiGraph) -> list[str]:
@@ -121,8 +148,13 @@ def validate_graph(graph: nx.DiGraph) -> ValidationReport:
     report = ValidationReport()
     report.node_count = graph.number_of_nodes()
     report.edge_count = graph.number_of_edges()
+    report.transfer_edge_count = sum(
+        1
+        for _, _, data in graph.edges(data=True)
+        if data.get("edge") and data["edge"].type == "transfer"
+    )
 
-    # 1. Cycles
+    # 1. Cycles (prerequisite+enrichment only; transfer edges excluded)
     report.cycles = detect_cycles(graph)
     if report.cycles:
         report.is_valid = False
