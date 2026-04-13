@@ -5755,6 +5755,54 @@
       "target_id": "LAT-V-F03-STATUA",
       "type": "prerequisite",
       "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL-INTRO",
+      "target_id": "LAT-V-F01-MANUS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL-INTRO",
+      "target_id": "LAT-V-F02-DOMUS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL-INTRO",
+      "target_id": "LAT-V-F02-SENATUS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL-INTRO",
+      "target_id": "LAT-V-F03-EXERCIT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL-INTRO",
+      "target_id": "LAT-V-F03-ADVENTU",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL-INTRO",
+      "target_id": "LAT-V-F01-RES",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-DECL-INTRO",
+      "target_id": "LAT-V-F01-DIES",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-G-MORF-PRON-INTRO",
+      "target_id": "LAT-V-F02-NIHIL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
     }
   ]
 }

@@ -2845,6 +2845,84 @@
       "target_id": "GRC-V-F02-ELEUTH",
       "type": "prerequisite",
       "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-V-F01-EN",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-V-F01-EK",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-V-F01-EIS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-V-F01-PROS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-V-F01-EPI",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-V-F01-KATA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-V-F01-PERI",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-V-F01-META",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-V-F01-DIA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-V-F01-PARA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-V-F01-HUPO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-V-F01-APO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-SYNT-PREP-INTRO",
+      "target_id": "GRC-V-F01-SUN",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
     }
   ]
 }
