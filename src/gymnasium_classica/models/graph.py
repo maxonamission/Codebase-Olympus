@@ -85,6 +85,10 @@ class Item(BaseModel):
     antwoord: Union[str, list[str]]
     feedback: str
     bron: Bron
+    audio_ref: Optional[str] = Field(
+        default=None,
+        description="Path to audio file in data/audio/, e.g. LAT-V-F01-ESSE.mp3",
+    )
 
 
 class KennisKnoop(BaseModel):
@@ -104,6 +108,10 @@ class KennisKnoop(BaseModel):
     content_ref: Optional[str] = Field(
         default=None,
         description="Path to markdown content file in data/content/, e.g. LAT-G-MORF-NOM-D1.md",
+    )
+    pronunciation: Optional[str] = Field(
+        default=None,
+        description="IPA phonetic transcription of the lemma/title, e.g. /pu.ˈel.la/",
     )
     semantisch_cluster: Optional[str] = Field(
         default=None,
