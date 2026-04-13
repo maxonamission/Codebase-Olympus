@@ -56,6 +56,8 @@ class ItemType(StrEnum):
     SYNTHESE = "synthese"
     CONTEXTUEEL = "contextueel"
     OFFLINE_SCHRIJVEN = "offline_schrijven"
+    LUISTER_HERKENNING = "luister_herkenning"
+    LUISTER_PRODUCTIE = "luister_productie"
 
 
 class VerificatieMethode(StrEnum):
