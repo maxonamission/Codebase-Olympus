@@ -6,8 +6,8 @@
       "taal": "lat",
       "titel_nl": "Functie van de vocativus",
       "titel_terminologie": "casus vocativus",
-      "beschrijving": "De vocativus is de naamval van de aanspreekvorm. Wordt gebruikt om iemand direct aan te spreken, bijv. 'Marce!' (Marcus!). Vaak gelijk aan de nominativus, behalve bij de 2e declinatie sg. (-e).",
-      "bloom_niveau": "kennis",
+      "beschrijving": "De vocativus als naamval van de aanspreekvorm: wordt gebruikt om iemand direct aan te spreken, bijv. 'Marce!' Vaak gelijk aan de nominativus, behalve bij de 2e declinatie sg. (-e).",
+      "bloom_niveau": "begrip",
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
@@ -123,8 +123,8 @@
       "taal": "lat",
       "titel_nl": "Paradigma 1e declinatie",
       "titel_terminologie": "paradigma declinationis primae",
-      "beschrijving": "Het volledige verbuigingsoverzicht van de 1e declinatie (puella, -ae). Synthese van alle zes naamvallen in enkelvoud en meervoud tot één paradigma.",
-      "bloom_niveau": "synthese",
+      "beschrijving": "Het volledige verbuigingsoverzicht van de 1e declinatie. Modelwoord: puella, -ae (v.) — alle zes naamvallen in enkelvoud en meervoud.",
+      "bloom_niveau": "toepassing",
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
@@ -175,7 +175,7 @@
       "taal": "lat",
       "titel_nl": "Neutrum 2e declinatie (-um)",
       "titel_terminologie": "neutra in -um",
-      "beschrijving": "Neutra van de 2e declinatie: nominativus sg. op -um (bellum, templum). Neutrumregel: nom.=acc. in alle nummers; pl. nom./acc. altijd op -a.",
+      "beschrijving": "Neutra van de 2e declinatie: nominativus sg. op -um (bellum, templum). Neutrumregel: nom.=acc. in alle numeri; pl. nom./acc. altijd op -a.",
       "bloom_niveau": "toepassing",
       "fase": "onderbouw_1",
       "toetsbaar": true,
@@ -188,8 +188,8 @@
       "taal": "lat",
       "titel_nl": "Paradigma 2e declinatie",
       "titel_terminologie": "paradigma declinationis secundae",
-      "beschrijving": "Het volledige verbuigingsoverzicht van de 2e declinatie: dominus (m.) en bellum (n.). Synthese van alle zes naamvallen in enkelvoud en meervoud.",
-      "bloom_niveau": "synthese",
+      "beschrijving": "Het volledige verbuigingsoverzicht van de 2e declinatie. Modelwoorden: dominus, -i (m.) en bellum, -i (n.) — alle zes naamvallen in enkelvoud en meervoud.",
+      "bloom_niveau": "toepassing",
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
@@ -201,85 +201,85 @@
       "source_id": "LAT-G-MORF-NAAMVAL-INTRO",
       "target_id": "LAT-G-SYNT-VOC-FUNCTIE",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.3
     },
     {
       "source_id": "LAT-G-MORF-DECL-INTRO",
       "target_id": "LAT-G-MORF-STAM-INTRO",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.3
     },
     {
       "source_id": "LAT-G-MORF-STAM-INTRO",
       "target_id": "LAT-G-MORF-UIT-INTRO",
       "type": "prerequisite",
-      "encompassing_weight": 0.7
+      "encompassing_weight": 0.5
     },
     {
       "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
       "target_id": "LAT-G-SYNT-SUBJ",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.3
     },
     {
       "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
       "target_id": "LAT-G-SYNT-OBJDIR",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.3
     },
     {
       "source_id": "LAT-G-SYNT-ZINSDEEL-INTRO",
       "target_id": "LAT-G-SYNT-OBJIND",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.3
     },
     {
       "source_id": "LAT-G-SYNT-NOM-FUNCTIE",
       "target_id": "LAT-G-SYNT-SUBJ",
       "type": "enrichment",
-      "encompassing_weight": 0.3
+      "encompassing_weight": 0.2
     },
     {
       "source_id": "LAT-G-SYNT-ACC-FUNCTIE",
       "target_id": "LAT-G-SYNT-OBJDIR",
       "type": "enrichment",
-      "encompassing_weight": 0.3
+      "encompassing_weight": 0.2
     },
     {
       "source_id": "LAT-G-SYNT-DAT-FUNCTIE",
       "target_id": "LAT-G-SYNT-OBJIND",
       "type": "enrichment",
-      "encompassing_weight": 0.3
+      "encompassing_weight": 0.2
     },
     {
       "source_id": "LAT-G-MORF-DECL1-INTRO",
       "target_id": "LAT-G-MORF-VOC-D1",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.3
     },
     {
       "source_id": "LAT-G-SYNT-VOC-FUNCTIE",
       "target_id": "LAT-G-MORF-VOC-D1",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.4
     },
     {
       "source_id": "LAT-G-MORF-STAM-INTRO",
       "target_id": "LAT-G-MORF-DECL1-STAM",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.4
     },
     {
       "source_id": "LAT-G-MORF-DECL1-INTRO",
       "target_id": "LAT-G-MORF-DECL1-STAM",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.3
     },
     {
       "source_id": "LAT-G-MORF-DECL1-INTRO",
       "target_id": "LAT-G-MORF-DECL1-MASC",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.3
     },
     {
       "source_id": "LAT-G-MORF-GENUS-INTRO",
@@ -327,37 +327,37 @@
       "source_id": "LAT-G-MORF-STAM-INTRO",
       "target_id": "LAT-G-MORF-DECL2-STAM",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.4
     },
     {
       "source_id": "LAT-G-MORF-DECL2-INTRO",
       "target_id": "LAT-G-MORF-DECL2-STAM",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.3
     },
     {
       "source_id": "LAT-G-MORF-DECL2-INTRO",
       "target_id": "LAT-G-MORF-DECL2-MASC",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.3
     },
     {
       "source_id": "LAT-G-MORF-DECL2-MASC",
       "target_id": "LAT-G-MORF-DECL2-ER",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.4
     },
     {
       "source_id": "LAT-G-MORF-DECL2-STAM",
       "target_id": "LAT-G-MORF-DECL2-ER",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.4
     },
     {
       "source_id": "LAT-G-MORF-DECL2-INTRO",
       "target_id": "LAT-G-MORF-DECL2-NEUT",
       "type": "prerequisite",
-      "encompassing_weight": 0.5
+      "encompassing_weight": 0.3
     },
     {
       "source_id": "LAT-G-MORF-GENUS-INTRO",
