@@ -56,9 +56,9 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 | A2-01 | Conceptknopen Grieks — lidwoord, naamvalsysteem | 11 | done |
 | A2-02 | 1e declinatie (α/η-stammen) | 10 | done |
 | A2-03 | 2e declinatie (ο-stammen) | 10 | done |
-| A2-04 | 3e declinatie introductie — via adjectieven πᾶς, σώφρων | ~8 | todo |
-| A2-05 | Adjectieven α/ο-stam en medeklinkerstam | ~8 | todo |
-| A2-06 | Praesens indicativus actief — thematisch + contracta + εἰμί | ~12 | todo |
+| A2-04 | 3e declinatie introductie — via adjectieven πᾶς, σώφρων | 8 | done |
+| A2-05 | Adjectieven α/ο-stam en medeklinkerstam | 8 | done |
+| A2-06 | Praesens indicativus actief — thematisch + contracta + εἰμί | 12 | done |
 | A2-07 | Imperfectum indicativus actief — augment | ~8 | todo |
 | A2-08 | Aoristus introductie — sigmatisch + thematisch | ~10 | todo |
 | A2-09 | Pronomina — persoonlijk, bezittelijk, aanwijzend | ~10 | todo |

@@ -371,6 +371,342 @@
       "toetsbaar": true,
       "pensum_jaren": [],
       "items": []
+    },
+    {
+      "id": "GRC-G-MORF-DECL3-INTRO",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "De derde declinatie",
+      "beschrijving": "Overzicht van de 3e declinatie (medeklinkerstammen). Grote variatie in nominativus; stam af te leiden uit de genitivus sg. op -ος.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-DECL3-KONS",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Consonantstammen",
+      "beschrijving": "Consonantstammen: occlusief (κ/γ/χ, π/β/φ, τ/δ/θ), nasaal (ν), liquida (ρ), sibilant (σ/ς). Nominativus met of zonder -ς.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-NOM-D3",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Nominativus 3e declinatie",
+      "beschrijving": "Sigmatische nominativus (φύλαξ < φυλακ-ς) en asigmatische (σώφρων met klinkerverlenging). Pl. -ες (m./f.), -α (n.).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-GEN-D3",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Genitivus 3e declinatie",
+      "beschrijving": "De genitivus sg. (-ος) en pl. (-ων) van de 3e declinatie. De genitivus onthult de stam.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-DAT-D3",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Dativus 3e declinatie",
+      "beschrijving": "De dativus sg. (-ι) en pl. (-σι(ν)) van de 3e declinatie, met stamveranderingen.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-ACC-D3",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Accusativus 3e declinatie",
+      "beschrijving": "De accusativus sg. (-α bij m./f., = nom. bij n.) en pl. (-ας/-α) van de 3e declinatie.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-VOC-D3",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Vocativus 3e declinatie",
+      "beschrijving": "De vocativus van de 3e declinatie: vaak gelijk aan de kale stam.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-DECL3-PARAD",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Paradigma 3e declinatie",
+      "beschrijving": "Basisparadigma's van de 3e declinatie: σώφρων en πᾶς/πᾶσα/πᾶν in alle naamvallen.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-ADJ-INTRO",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Bijvoeglijke naamwoorden",
+      "beschrijving": "Overzicht Griekse adjectieven: α/ο-stam (drie/twee uitgangen) en medeklinkerstam typen.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-ADJ-D12-3U",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "α/ο-stam drie uitgangen",
+      "beschrijving": "Adjectieven als ἀγαθός, -ή, -όν: m. volgt 2e decl., f. volgt 1e decl., n. volgt 2e decl.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-ADJ-D12-2U",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "α/ο-stam twee uitgangen",
+      "beschrijving": "Adjectieven als βάρβαρος, -ον: m./f. identiek (2e decl.), n. apart.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-ADJ-D3",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "3e-declinatie adjectieven",
+      "beschrijving": "σώφρων-type (twee uitgangen) en ἀληθής-type (twee uitgangen op -ης, -ες).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-ADJ-MEGAS",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "μέγας en πολύς",
+      "beschrijving": "Onregelmatige adjectieven: mix van 1e/2e en 3e declinatie-uitgangen.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-ADJ-VERBG",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Verbuiging adjectieven",
+      "beschrijving": "Paradigmaoverzicht: alle typen adjectieven met hun verbuigingspatronen.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-SYNT-ADJ-CONGR",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Congruentie adjectief",
+      "beschrijving": "Het bijvoeglijk naamwoord stemt overeen met het zelfstandig naamwoord in genus, numerus en casus.",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-SYNT-ADJ-ATTRIB",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Attributief en predicatief",
+      "beschrijving": "Positie t.o.v. het lidwoord: attributief (ὁ ἀγαθὸς ἄνθρωπος) vs. predicatief (ἀγαθὸς ὁ ἄνθρωπος).",
+      "bloom_niveau": "begrip",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-CONJ-INTRO",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Het Griekse werkwoordssysteem",
+      "beschrijving": "Overzicht: thematische (-ω) en athematische (-μι) verba. Vervoegd naar persoon, getal, tijd, wijs en diathese.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-TEMPUS-INTRO",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Werkwoordstijden",
+      "beschrijving": "Overzicht van de Griekse werkwoordstijden: praesens, imperfectum, aoristus, futurum, perfectum.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-PERSOON-INTRO",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Persoonsvormen",
+      "beschrijving": "De zes persoonsvormen: 1e, 2e en 3e persoon enkelvoud en meervoud. Primaire uitgangen voor het praesens.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-DIATH-INTRO",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Diathesen",
+      "beschrijving": "De drie genera verbi: activum, medium en passivum. Medium en passivum delen praesens-vormen.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-THEM-INTRO",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Thematische werkwoorden",
+      "beschrijving": "Overzicht thematische vervoeging: stam + thematische klinker (ο/ε) + uitgang. Regulier en contracta.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-PRAES-THEM",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Praesens ind. act. thematisch",
+      "beschrijving": "Alle zes vormen van het praesens ind. act. thematisch: λύω, λύεις, λύει, λύομεν, λύετε, λύουσι(ν).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-CONTR-INTRO",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Verba contracta",
+      "beschrijving": "Contracta: werkwoorden met stam op α of ε. De stamklinker contracteert met de thematische klinker.",
+      "bloom_niveau": "kennis",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-CONTR-A",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "α-contracta praesens actief",
+      "beschrijving": "Praesens ind. act. van α-contracta: τιμάω → τιμῶ. Contractieregels: α+ε→ᾱ, α+ο→ω, α+ει→ᾳ.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-CONTR-E",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "ε-contracta praesens actief",
+      "beschrijving": "Praesens ind. act. van ε-contracta: ποιέω → ποιῶ. Contractieregels: ε+ε→ει, ε+ο→ου, ε+ω→ω.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-PRAES-EIMI",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "εἰμί",
+      "beschrijving": "Het onregelmatige werkwoord εἰμί (zijn): εἰμί, εἶ, ἐστί(ν), ἐσμέν, ἐστέ, εἰσί(ν). Enclitisch.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-INF-PRAES",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Infinitief praesens actief",
+      "beschrijving": "Infinitief praesens actief: -ειν (thematisch), -ᾶν (α-contr.), -εῖν (ε-contr.), εἶναι (εἰμί).",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
+    },
+    {
+      "id": "GRC-G-MORF-PRAES-PARAD",
+      "type": "G",
+      "taal": "grc",
+      "titel_nl": "Paradigma praesens actief",
+      "beschrijving": "Paradigma's praesens ind. act.: λύω (thematisch), τιμῶ (α-contr.), ποιῶ (ε-contr.), εἰμί naast elkaar.",
+      "bloom_niveau": "toepassing",
+      "fase": "onderbouw_1",
+      "toetsbaar": true,
+      "pensum_jaren": [],
+      "items": []
     }
   ],
   "edges": [
@@ -464,7 +800,6 @@
       "type": "prerequisite",
       "encompassing_weight": 0.5
     },
-
     {
       "source_id": "GRC-G-MORF-DECL-INTRO",
       "target_id": "GRC-G-MORF-DECL1-INTRO",
@@ -609,7 +944,6 @@
       "type": "prerequisite",
       "encompassing_weight": 0.3
     },
-
     {
       "source_id": "GRC-G-MORF-DECL-INTRO",
       "target_id": "GRC-G-MORF-DECL2-INTRO",
@@ -747,6 +1081,348 @@
       "target_id": "GRC-G-MORF-DECL2-PARAD",
       "type": "prerequisite",
       "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL-INTRO",
+      "target_id": "GRC-G-MORF-DECL3-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-MORF-NOM-D1",
+      "target_id": "GRC-G-MORF-DECL3-INTRO",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-MORF-NOM-D2",
+      "target_id": "GRC-G-MORF-DECL3-INTRO",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-G-MORF-DECL3-KONS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-G-MORF-NOM-D3",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-G-MORF-GEN-D3",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-G-MORF-DAT-D3",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-G-MORF-ACC-D3",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-INTRO",
+      "target_id": "GRC-G-MORF-VOC-D3",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-SYNT-NOM-FUNCTIE",
+      "target_id": "GRC-G-MORF-NOM-D3",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-SYNT-GEN-FUNCTIE",
+      "target_id": "GRC-G-MORF-GEN-D3",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-SYNT-DAT-FUNCTIE",
+      "target_id": "GRC-G-MORF-DAT-D3",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-SYNT-ACC-FUNCTIE",
+      "target_id": "GRC-G-MORF-ACC-D3",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-SYNT-VOC-FUNCTIE",
+      "target_id": "GRC-G-MORF-VOC-D3",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-MORF-NOM-D3",
+      "target_id": "GRC-G-MORF-DECL3-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-GEN-D3",
+      "target_id": "GRC-G-MORF-DECL3-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DAT-D3",
+      "target_id": "GRC-G-MORF-DECL3-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-ACC-D3",
+      "target_id": "GRC-G-MORF-DECL3-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-VOC-D3",
+      "target_id": "GRC-G-MORF-DECL3-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-KONS",
+      "target_id": "GRC-G-MORF-DECL3-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-NOM-D1",
+      "target_id": "GRC-G-MORF-ADJ-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-NOM-D2",
+      "target_id": "GRC-G-MORF-ADJ-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-ADJ-INTRO",
+      "target_id": "GRC-G-MORF-ADJ-D12-3U",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-G-MORF-ADJ-INTRO",
+      "target_id": "GRC-G-MORF-ADJ-D12-2U",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-G-MORF-ADJ-INTRO",
+      "target_id": "GRC-G-MORF-ADJ-D3",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-MORF-DECL3-PARAD",
+      "target_id": "GRC-G-MORF-ADJ-D3",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-MORF-ADJ-D12-3U",
+      "target_id": "GRC-G-MORF-ADJ-MEGAS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-ADJ-D3",
+      "target_id": "GRC-G-MORF-ADJ-MEGAS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-ADJ-D12-3U",
+      "target_id": "GRC-G-MORF-ADJ-VERBG",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-ADJ-D12-2U",
+      "target_id": "GRC-G-MORF-ADJ-VERBG",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-ADJ-D3",
+      "target_id": "GRC-G-MORF-ADJ-VERBG",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-ADJ-MEGAS",
+      "target_id": "GRC-G-MORF-ADJ-VERBG",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-MORF-ADJ-VERBG",
+      "target_id": "GRC-G-SYNT-ADJ-CONGR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-MORF-GENUS-INTRO",
+      "target_id": "GRC-G-SYNT-ADJ-CONGR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-ADJ-VERBG",
+      "target_id": "GRC-G-SYNT-ADJ-ATTRIB",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-MORF-LIDW-VERBG",
+      "target_id": "GRC-G-SYNT-ADJ-ATTRIB",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-FONL-KOMBI-LEESV",
+      "target_id": "GRC-G-MORF-TEMPUS-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-NUMERUS-INTRO",
+      "target_id": "GRC-G-MORF-PERSOON-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-PERSOON-INTRO",
+      "target_id": "GRC-G-MORF-CONJ-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-MORF-TEMPUS-INTRO",
+      "target_id": "GRC-G-MORF-CONJ-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-G-MORF-DIATH-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-G-MORF-THEM-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-MORF-CONJ-INTRO",
+      "target_id": "GRC-G-MORF-PRAES-EIMI",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-MORF-THEM-INTRO",
+      "target_id": "GRC-G-MORF-PRAES-THEM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-G-MORF-THEM-INTRO",
+      "target_id": "GRC-G-MORF-CONTR-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "GRC-G-MORF-CONTR-INTRO",
+      "target_id": "GRC-G-MORF-CONTR-A",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-G-MORF-CONTR-INTRO",
+      "target_id": "GRC-G-MORF-CONTR-E",
+      "type": "prerequisite",
+      "encompassing_weight": 0.5
+    },
+    {
+      "source_id": "GRC-G-MORF-PRAES-THEM",
+      "target_id": "GRC-G-MORF-CONTR-A",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-PRAES-THEM",
+      "target_id": "GRC-G-MORF-CONTR-E",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-PRAES-THEM",
+      "target_id": "GRC-G-MORF-INF-PRAES",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONTR-A",
+      "target_id": "GRC-G-MORF-INF-PRAES",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-MORF-CONTR-E",
+      "target_id": "GRC-G-MORF-INF-PRAES",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-MORF-PRAES-EIMI",
+      "target_id": "GRC-G-MORF-INF-PRAES",
+      "type": "prerequisite",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "GRC-G-MORF-PRAES-THEM",
+      "target_id": "GRC-G-MORF-PRAES-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONTR-A",
+      "target_id": "GRC-G-MORF-PRAES-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-CONTR-E",
+      "target_id": "GRC-G-MORF-PRAES-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "GRC-G-MORF-PRAES-EIMI",
+      "target_id": "GRC-G-MORF-PRAES-PARAD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
     }
   ]
 }
