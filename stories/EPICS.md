@@ -108,17 +108,17 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 **Doel:** Gedeelde (SHA-C-*) cultuurknopen voor leerjaar 1.
 **Geschat:** ~70 knopen
 **Afhankelijkheden:** Geen (maar enrichment-edges naar A1/A2/A4)
-**Status:** todo
+**Status:** done
 **Bestand:** `data/graph/sha_cultuur_leerjaar1.json`
 
 | Story | Titel | Knopen | Status |
 |-------|-------|--------|--------|
-| A5-01 | Mythologie — Olympische goden, helden, Troje, Odysseus | ~20 | todo |
-| A5-02 | Romeins dagelijks leven — familia, domus, school, eten, slavernij | ~15 | todo |
-| A5-03 | Geschiedenis basis — Romulus, Republiek, legioenen, forum | ~15 | todo |
-| A5-04 | Grieks dagelijks leven — polis, agora, gymnasium, symposium | ~10 | todo |
-| A5-05 | Taal en schrift — Latijns alfabet, Grieks alfabet, inscripties | ~5 | todo |
-| A5-06 | Prerequisite-edges cultuur → taal/integratie | — | todo |
+| A5-01 | Mythologie — Olympische goden, helden, Troje, Odysseus | 20 | done |
+| A5-02 | Romeins dagelijks leven — familia, domus, school, eten, slavernij | 15 | done |
+| A5-03 | Geschiedenis basis — Romulus, Republiek, legioenen, forum | 15 | done |
+| A5-04 | Grieks dagelijks leven — polis, agora, gymnasium, symposium | 10 | done |
+| A5-05 | Taal en schrift — Latijns alfabet, Grieks alfabet, inscripties | 5 | done |
+| A5-06 | Prerequisite-edges cultuur → taal/integratie | 11 edges | done |
 
 ---
 
