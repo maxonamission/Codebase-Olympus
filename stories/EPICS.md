@@ -93,9 +93,9 @@ Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
 
 | Story | Titel | Knopen | Status |
 |-------|-------|--------|--------|
-| A4-01 | Strategie en bronnen — DCC Latin/Greek Core, cluster-definitie | — | todo |
-| A4-02 | Latijn frequentieband F01 — top-100 woorden | ~100 | todo |
-| A4-03 | Latijn frequentieband F02 — woorden 101-200 | ~100 | todo |
+| A4-01 | Strategie en bronnen — DCC Latin/Greek Core, cluster-definitie | — | done |
+| A4-02 | Latijn frequentieband F01 — top-100 woorden | 100 | done |
+| A4-03 | Latijn frequentieband F02 — woorden 101-200 | 100 | done |
 | A4-04 | Latijn frequentieband F03 — woorden 201-300 | ~100 | todo |
 | A4-05 | Grieks frequentieband F01 — top-75 woorden | ~75 | todo |
 | A4-06 | Grieks frequentieband F02 — woorden 76-150 | ~75 | todo |
