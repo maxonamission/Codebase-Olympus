@@ -180,8 +180,8 @@ Audio-laag voor multi-modale taalverwerving. Gefaseerd: TTS in fase 3, STT in fa
 
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
-| B2-01 | ItemType uitbreiden — luister-oefentypen | — | todo |
-| B2-02 | Audio player component — frontend | — | todo |
+| B2-01 | ItemType uitbreiden — luister-oefentypen | — | done |
+| B2-02 | Audio player component — frontend | — | done |
 | B2-03 | Luister-en-herken oefeningen genereren | ~200 items | todo |
 | B2-04 | Luister-en-schrijf oefeningen genereren | ~200 items | todo |
 
