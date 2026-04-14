@@ -35,4 +35,6 @@ uv.lock
 data/worksheets/*.pdf
 
 # SQLite databases
-data/*.db
+*.db
+*.db-wal
+*.db-shm

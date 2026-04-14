@@ -1,47 +1,86 @@
-"""FastAPI application entry point.
+"""FastAPI application: startup, CORS, health endpoint.
 
 Start with: uvicorn gymnasium_classica.api.app:app --reload
 """
 
+import sqlite3
+from contextlib import asynccontextmanager
 from pathlib import Path
+from typing import Optional
 
+import networkx as nx
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from gymnasium_classica.api.database import init_db
+from gymnasium_classica.api.routes.auth import router as auth_router
+from gymnasium_classica.api.routes.intake import router as intake_router
+from gymnasium_classica.api.routes.progress import router as progress_router
+from gymnasium_classica.api.routes.session import router as session_router
 from gymnasium_classica.graph.loader import load_graph
 
-DATA_DIR = Path(__file__).resolve().parents[3] / "data"
-
-app = FastAPI(
-    title="Gymnasium Classica API",
-    version="0.1.0",
-    description="Adaptief leersysteem voor Latijn en Grieks",
-)
-
-# CORS: allow Vite dev server (localhost:5173) and same-origin production
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+GRAPH_DIR = Path("data/graph")
 
 
-@app.on_event("startup")
-async def startup():
-    """Load knowledge graph into app state at startup."""
-    graph_dir = DATA_DIR / "graph"
-    app.state.graph = load_graph(graph_dir)
-    node_count = app.state.graph.number_of_nodes()
-    edge_count = app.state.graph.number_of_edges()
-    print(f"Graph loaded: {node_count} nodes, {edge_count} edges")
+def create_app(
+    graph_dir: Path = GRAPH_DIR,
+    db_path: Optional[Path] = None,
+) -> FastAPI:
+    """Create and configure the FastAPI application.
+
+    Parameters:
+        graph_dir: Path to directory with knowledge graph JSON files.
+        db_path: Path to the SQLite database file. None uses the default.
+    """
+
+    @asynccontextmanager
+    async def lifespan(application: FastAPI):
+        application.state.graph = load_graph(graph_dir)
+        if db_path is not None:
+            application.state.db = init_db(db_path)
+        else:
+            application.state.db = init_db()
+        yield
+        db: sqlite3.Connection = application.state.db
+        db.close()
+
+    application = FastAPI(
+        title="Gymnasium Classica API",
+        version="0.1.0",
+        description="Adaptief leersysteem voor Latijn en Grieks",
+        lifespan=lifespan,
+    )
+
+    # CORS: allow Vite dev server and wildcard for development
+    application.add_middleware(
+        CORSMiddleware,
+        allow_origins=[
+            "http://localhost:5173",
+            "http://127.0.0.1:5173",
+            "*",
+        ],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+
+    application.include_router(auth_router)
+    application.include_router(session_router)
+    application.include_router(progress_router)
+    application.include_router(intake_router)
+
+    @application.get("/health")
+    async def health():
+        """Health check: returns node/edge counts from the loaded graph."""
+        graph: nx.DiGraph = application.state.graph
+        return {
+            "status": "ok",
+            "graph_nodes": graph.number_of_nodes(),
+            "graph_edges": graph.number_of_edges(),
+        }
+
+    return application
 
 
-@app.get("/health")
-async def health():
-    """Health check endpoint."""
-    return {"status": "ok"}
+# Default app instance for uvicorn
+app = create_app()
