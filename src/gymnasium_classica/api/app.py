@@ -1,4 +1,7 @@
-"""FastAPI application: startup, CORS, health endpoint."""
+"""FastAPI application: startup, CORS, health endpoint.
+
+Start with: uvicorn gymnasium_classica.api.app:app --reload
+"""
 
 import sqlite3
 from contextlib import asynccontextmanager
@@ -44,12 +47,18 @@ def create_app(
     application = FastAPI(
         title="Gymnasium Classica API",
         version="0.1.0",
+        description="Adaptief leersysteem voor Latijn en Grieks",
         lifespan=lifespan,
     )
 
+    # CORS: allow Vite dev server and wildcard for development
     application.add_middleware(
         CORSMiddleware,
-        allow_origins=["*"],
+        allow_origins=[
+            "http://localhost:5173",
+            "http://127.0.0.1:5173",
+            "*",
+        ],
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
