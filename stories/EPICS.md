@@ -192,14 +192,14 @@ Audio-laag voor multi-modale taalverwerving. Gefaseerd: TTS in fase 3, STT in fa
 **Doel:** Spraakherkenning voor mondelinge oefeningen en examensimulatie. AVG-conforme verwerking.
 **Geschat:** STT-pipeline + mondelinge oefentypen
 **Afhankelijkheden:** B1 (referentie-audio), fase 5
-**Status:** todo
+**Status:** done (stub-implementatie; echte STT niet haalbaar voor klassieke talen in huidige fase)
 
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
-| B3-01 | STT-evaluatie — Whisper vs. Voxtral | — | todo |
-| B3-02 | STT-pipeline bouwen — transcriptie-module | — | todo |
-| B3-03 | Mondelinge oefentypen — spreek-na en beantwoord mondeling | — | todo |
-| B3-04 | Privacy-implementatie — spraakdata AVG-conform | — | todo |
+| B3-01 | STT-evaluatie — Whisper vs. Voxtral | — | done |
+| B3-02 | STT-pipeline bouwen — transcriptie-module | — | done |
+| B3-03 | Mondelinge oefentypen — spreek-na en beantwoord mondeling | — | done |
+| B3-04 | Privacy-implementatie — spraakdata AVG-conform | — | done |
 
 ---
 
@@ -208,7 +208,7 @@ Audio-laag voor multi-modale taalverwerving. Gefaseerd: TTS in fase 3, STT in fa
 **Doel:** Foneem-niveau uitspraakbeoordeling met MFA. Per-foneem feedback.
 **Geschat:** Scoring model + feedback-integratie
 **Afhankelijkheden:** B3 (STT moet werken)
-**Status:** todo
+**Status:** geparkeerd (STT voor klassieke talen onvoldoende betrouwbaar)
 
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
@@ -366,18 +366,18 @@ De engine naar een webapplicatie brengen. Zie `docs/Prompt_spoor_d.md` voor de v
 **Doel:** REST API die de sessie-engine wraps. SQLite persistence. Auth.
 **Geschat:** 8 stories
 **Afhankelijkheden:** Geen (bouwt op bestaande engine)
-**Status:** todo
+**Status:** done
 
 | Story | Titel | Status |
 |-------|-------|--------|
-| D1-01 | Project setup: FastAPI + uvicorn + SQLite | todo |
-| D1-02 | Auth endpoints: register + login | todo |
-| D1-03 | Database CRUD: users + learner_models | todo |
-| D1-04 | SessionManager: stapsgewijs sessie-protocol | todo |
-| D1-05 | Session endpoints: start + answer | todo |
-| D1-06 | Session endpoint: summary | todo |
-| D1-07 | Progress endpoints | todo |
-| D1-08 | Intake endpoints | todo |
+| D1-01 | Project setup: FastAPI + uvicorn + SQLite | done |
+| D1-02 | Auth endpoints: register + login | done |
+| D1-03 | Database CRUD: users + learner_models | done |
+| D1-04 | SessionManager: stapsgewijs sessie-protocol | done |
+| D1-05 | Session endpoints: start + answer | done |
+| D1-06 | Session endpoint: summary | done |
+| D1-07 | Progress endpoints | done |
+| D1-08 | Intake endpoints | done |
 
 ---
 
