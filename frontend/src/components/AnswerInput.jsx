@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import GreekInput from './GreekInput'
 
 const MC_TYPES = ['herkenning', 'luister_herkenning']
 const TEXT_TYPES = ['productie', 'luister_productie']
@@ -9,6 +10,7 @@ export default function AnswerInput({ question, onAnswer, disabled }) {
   const itemType = question.item_type
   const isMultipleChoice = MC_TYPES.includes(itemType) && question.options?.length > 0
   const isTextInput = TEXT_TYPES.includes(itemType)
+  const isGreek = question.knoop_id?.startsWith('GRC-')
 
   function handleMcSelect(option) {
     if (disabled) return
@@ -53,16 +55,26 @@ export default function AnswerInput({ question, onAnswer, disabled }) {
         <form onSubmit={handleTextSubmit}>
           <div className="form-group">
             <label htmlFor="answer-text">Jouw antwoord:</label>
-            <input
-              id="answer-text"
-              type="text"
-              value={textAnswer}
-              onChange={(e) => setTextAnswer(e.target.value)}
-              placeholder="Typ je antwoord..."
-              disabled={disabled}
-              autoFocus
-              autoComplete="off"
-            />
+            {isGreek ? (
+              <GreekInput
+                id="answer-text"
+                value={textAnswer}
+                onChange={setTextAnswer}
+                placeholder="Typ je antwoord in het Grieks..."
+                disabled={disabled}
+              />
+            ) : (
+              <input
+                id="answer-text"
+                type="text"
+                value={textAnswer}
+                onChange={(e) => setTextAnswer(e.target.value)}
+                placeholder="Typ je antwoord..."
+                disabled={disabled}
+                autoFocus
+                autoComplete="off"
+              />
+            )}
           </div>
           <button
             type="submit"

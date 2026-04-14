@@ -597,3 +597,141 @@ h2 {
   width: 3.5rem;
   text-align: right;
 }
+
+/* Greek input */
+.greek-input-wrapper {
+  width: 100%;
+}
+
+.greek-input-field {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.greek-input-field input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.1rem;
+  font-family: 'Noto Serif', 'Times New Roman', serif;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.greek-input-field input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.15);
+}
+
+.greek-toggle-btn {
+  padding: 0.5rem 0.625rem;
+  font-size: 0.95rem;
+  font-family: 'Noto Serif', 'Times New Roman', serif;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-muted);
+  white-space: nowrap;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.greek-toggle-btn:hover {
+  border-color: var(--primary);
+}
+
+.greek-toggle-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* Soft keyboard */
+.greek-keyboard {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.greek-diacritics {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 0.375rem;
+  padding-bottom: 0.375rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.greek-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.gk-key {
+  min-width: 2rem;
+  height: 2.25rem;
+  padding: 0 0.25rem;
+  font-size: 1rem;
+  font-family: 'Noto Serif', 'Times New Roman', serif;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.1s;
+}
+
+.gk-key:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.gk-key:active {
+  transform: scale(0.95);
+}
+
+.gk-diacritic {
+  min-width: 2.25rem;
+  font-size: 1.1rem;
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.gk-diacritic:hover {
+  background: #fbbf24;
+  border-color: #fbbf24;
+  color: #fff;
+}
+
+.gk-shift,
+.gk-backspace {
+  min-width: 2.75rem;
+  font-size: 1.1rem;
+}
+
+.gk-shift.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.gk-space {
+  flex: 1;
+  max-width: 12rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.greek-bottom-row {
+  justify-content: center;
+}
