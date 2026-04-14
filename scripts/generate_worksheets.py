@@ -41,12 +41,32 @@ MARGIN = 20 * mm
 CONTENT_WIDTH = PAGE_WIDTH - 2 * MARGIN
 
 # Font paths (DejaVu Sans supports Latin + Greek + diacritics)
-_FONT_DIR = Path("/usr/share/fonts/truetype/dejavu")
-_FONT_REGULAR = _FONT_DIR / "DejaVuSans.ttf"
-_FONT_BOLD = _FONT_DIR / "DejaVuSans-Bold.ttf"
+# Search common locations across Linux, macOS, and Windows
+_FONT_SEARCH_PATHS = [
+    Path("/usr/share/fonts/truetype/dejavu"),          # Linux (Debian/Ubuntu)
+    Path("/usr/share/fonts/dejavu-sans-fonts"),         # Linux (Fedora/RHEL)
+    Path("/usr/share/fonts/TTF"),                       # Linux (Arch)
+    Path("/opt/homebrew/share/fonts/dejavu"),           # macOS (Homebrew ARM)
+    Path("/usr/local/share/fonts/dejavu"),              # macOS (Homebrew Intel)
+    Path("C:/Windows/Fonts"),                           # Windows (system fonts)
+]
+
+
+def _find_font(name: str) -> Path | None:
+    """Search for a font file across common system font directories."""
+    for font_dir in _FONT_SEARCH_PATHS:
+        candidate = font_dir / name
+        if candidate.exists():
+            return candidate
+    return None
+
+
+_FONT_REGULAR = _find_font("DejaVuSans.ttf")
+_FONT_BOLD = _find_font("DejaVuSans-Bold.ttf")
 
 FONT_NAME = "DejaVuSans"
 FONT_NAME_BOLD = "DejaVuSans-Bold"
+_USE_CUSTOM_FONT = _FONT_REGULAR is not None
 
 # Greek writing practice: line height for ruled lines
 WRITING_LINE_HEIGHT = 10 * mm
@@ -54,10 +74,18 @@ WRITING_LINES_PER_LETTER = 3
 
 
 def _register_fonts() -> None:
-    """Register DejaVu Sans (regular + bold) for Unicode support."""
+    """Register DejaVu Sans (regular + bold) for Unicode support.
+
+    Falls back to Helvetica (built-in, no Unicode) if DejaVu is not found.
+    """
+    global FONT_NAME, FONT_NAME_BOLD, _USE_CUSTOM_FONT
+    if not _USE_CUSTOM_FONT:
+        FONT_NAME = "Helvetica"
+        FONT_NAME_BOLD = "Helvetica-Bold"
+        return
     if FONT_NAME not in pdfmetrics.getRegisteredFontNames():
         pdfmetrics.registerFont(TTFont(FONT_NAME, str(_FONT_REGULAR)))
-    if FONT_NAME_BOLD not in pdfmetrics.getRegisteredFontNames():
+    if _FONT_BOLD and FONT_NAME_BOLD not in pdfmetrics.getRegisteredFontNames():
         pdfmetrics.registerFont(TTFont(FONT_NAME_BOLD, str(_FONT_BOLD)))
 
 

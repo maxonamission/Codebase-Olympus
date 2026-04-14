@@ -61,7 +61,7 @@ Elke knoop heeft een type (G/V/C/I), prerequisite-edges met encompassing weights
 
 ### Vereisten
 
-- Python 3.11 (niet 3.13)
+- **Python 3.11** (niet 3.10 of lager — `StrEnum` is vereist; niet 3.13)
 - [uv](https://docs.astral.sh/uv/) als package manager
 - Node.js 18+ (voor de frontend)
 
@@ -69,14 +69,25 @@ Elke knoop heeft een type (G/V/C/I), prerequisite-edges met encompassing weights
 
 ```bash
 uv venv .venv --python 3.11
+
+# Activeer de virtual environment:
+# Linux/macOS:
 source .venv/bin/activate
+# Windows (Command Prompt):
+# .venv\Scripts\activate
+# Windows (PowerShell):
+# .venv\Scripts\Activate.ps1
+
+# Controleer dat Python 3.11 actief is:
+python --version   # Moet 3.11.x tonen
+
 uv pip install -e ".[dev]"
 
 # Verifieer: valideer de knowledge graph
 python scripts/validate_graph.py data/graph/
 
 # Verifieer: draai tests
-pytest tests/ -q
+python -m pytest tests/ -q
 ```
 
 ### Frontend
