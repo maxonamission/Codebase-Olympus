@@ -405,10 +405,114 @@ De engine naar een webapplicatie brengen. Zie `docs/Prompt_spoor_d.md` voor de v
 **Doel:** Alles draait samen. Dev server, seed data, end-to-end test.
 **Geschat:** 3 stories
 **Afhankelijkheden:** D1 + D2 compleet
-**Status:** todo
+**Status:** done
 
 | Story | Titel | Status |
 |-------|-------|--------|
-| D3-01 | Dev server script + CORS + proxy | todo |
-| D3-02 | Seed script: test-user met intake | todo |
-| D3-03 | End-to-end smoke test + pilot guide | todo |
+| D3-01 | Dev server script + CORS + proxy | done |
+| D3-02 | Seed script: test-user met intake | done |
+| D3-03 | End-to-end smoke test + pilot guide | done |
+
+---
+---
+
+## Roadmap — toekomstige epics
+
+Uitwerking in stories volgt per epic wanneer deze opgepakt wordt.
+
+---
+
+## Epic E1: Pilot-ready — de eerste echte leerling
+
+**Doel:** Het systeem klaar maken zodat een echte leerling (niet de ontwikkelaar) er dagelijks mee kan werken. Bugs vinden, UX valideren, eerste learner data verzamelen.
+**Afhankelijkheden:** D compleet (MVP draait)
+**Status:** todo
+
+Scope:
+- End-to-end walkthrough met een testleerling (niet de developer)
+- Methode-mapping completeren: Fortuna volledig (alle hoofdstukken), SPQR uitbreiden
+- Bugfixes uit eerste gebruikerstest
+- UX-verbeteringen op basis van observatie (waar haakt de leerling af?)
+- Monitoring: logging van sessie-data voor analyse
+- Feedbackformulier integreren (simpel: Google Form of in-app)
+
+---
+
+## Epic E2: Echte TTS-audio
+
+**Doel:** Placeholder audio vervangen door echte uitspraak. Klassiek Latijn en Erasmiaans Grieks.
+**Afhankelijkheden:** B1 done (pipeline staat), E1 (prioriteit op basis van pilot-feedback)
+**Status:** todo
+
+Scope:
+- espeak-ng configureren voor klassiek Latijn (of alternatief uit B1-01 evaluatie)
+- Erasmiaans Grieks: handmatige opnames overwegen (samenwerking Addisco-docenten?)
+- Audio genereren voor alle 450 V-knopen
+- Kwaliteitscheck: steekproef door classicus
+- audio_ref velden updaten van placeholder naar definitief
+
+---
+
+## Epic E3: Items en content voor Grieks + vocabulaire
+
+**Doel:** C1/C2 dekken alleen Latijnse grammatica. Grieks en vocabulaire hebben ook items en content nodig voor een volwaardige ervaring.
+**Afhankelijkheden:** A2, A3 done (Griekse knopen bestaan)
+**Status:** todo
+
+Scope:
+- Items genereren voor GRC-G knopen (~100 knopen, ~400 items)
+- Items genereren voor GRC-alfabet knopen (~47 knopen, ~150 items)
+- Items genereren voor LAT-V en GRC-V knopen (~450 knopen, vocabulaire-drill)
+- Content schrijven voor GRC-G kernknopen (paradigmatabellen, uitleg)
+- Content schrijven voor cultuurknopen (SHA-C)
+
+---
+
+## Epic E4: Productie-deployment
+
+**Doel:** Van localhost naar een publiek toegankelijke applicatie. Single-server deployment, geen over-engineering.
+**Afhankelijkheden:** E1 done (pilot-bugs gefixt)
+**Status:** todo
+
+Scope:
+- VPS provisioning (Hetzner EU, conform AVG)
+- Docker Compose: backend + frontend + SQLite (of PostgreSQL migratie)
+- HTTPS via Let's Encrypt
+- CI/CD: GitHub Actions voor tests + deploy
+- Backup-strategie voor learner data
+- Domein + DNS
+- OAuth / SURFconext voor schoolaccounts (of uitstellen naar E5)
+
+---
+
+## Epic E5: Pensum-module — jaarlijks wisselende auteurs
+
+**Doel:** Het CE-pensum wisselt jaarlijks van auteur. Het systeem moet een jaarlijks te activeren module ondersteunen bovenop de vaste graph.
+**Afhankelijkheden:** E1 done, externe validatie door domeinpartner
+**Status:** todo
+
+Scope:
+- Pensum-datamodel: per examenjaar een set auteurspecifieke cultuurknopen + leesteksten
+- Pensum 2026 LTC: Seneca/Cicero (filosofie) — cultuurknopen + integratieknopen
+- Pensum 2026 GTC: Homerus (Odyssee) — cultuurknopen + leespassages
+- Pensum-selectie bij onboarding (User.examenjaar_ltc/gtc)
+- Scheduling engine: pensum-knopen activeren op basis van examenjaar
+- Syllabus-overlay: welke cultuurknopen zijn toetsbaar per examenjaar
+
+---
+
+## Epic E6: Leerjaar 2+ content uitbreiden
+
+**Doel:** De knowledge graph uitbreiden voorbij leerjaar 1 richting het volledige eindexamenprogramma.
+**Afhankelijkheden:** E1 + E5 done, IRT-kalibratie op pilot-data
+**Status:** todo
+
+Scope:
+- Latijnse grammatica leerjaar 2-3: passivum volledig, conjunctivus, participia, gerundium/gerundivum, AcI/NcI verdieping
+- Griekse grammatica leerjaar 2-3: medium volledig, aoristus passief, conjunctivus, optativus, participia
+- Latijnse grammatica bovenbouw: ablativus absolutus, indirecte rede, opeenvolging van tijden
+- Griekse grammatica bovenbouw: mi-verba, onregelmatige aoristus, indirecte rede
+- Vocabulaire uitbreiden: volledige CvTE-minimumlijst (~1500 LAT, ~1200 GRC)
+- Cultuur bovenbouw: filosofie (Stoa, Epicurisme), receptie en doorwerking
+- Metriek-subgraph: hexameter, elegisch distichon (cf. ontwerpkeuze 4)
+- Geschatte omvang: 2000-3000 extra knopen
