@@ -6,7 +6,7 @@ Adaptief leersysteem voor Latijn en Grieks op VWO-gymnasiumniveau. Bereidt leerl
 
 Het systeem combineert een knowledge graph met spaced repetition (SM-2), Bayesian Knowledge Tracing en Item Response Theory om een gepersonaliseerd leerpad te bieden. De kern: elke leerling krijgt exact de stof die hij nodig heeft, op het moment dat hij er klaar voor is.
 
-**Huidige staat:** MVP in ontwikkeling. De engine en knowledge graph zijn compleet, de webapplicatie is in aanbouw.
+**Huidige staat:** MVP compleet. Backend, frontend en engine draaien lokaal.
 
 ## Projectstructuur
 
@@ -17,7 +17,7 @@ src/gymnasium_classica/
 ├── schemas/          # ID-schema validatie
 ├── scheduling/       # BKT, SM-2, priority queue, sessie-orkestratie
 ├── diagnostic/       # Adaptieve intake (placement test)
-└── api/              # FastAPI backend (in ontwikkeling)
+└── api/              # FastAPI backend + SQLite persistence
 
 data/
 ├── graph/            # Knowledge graph: 800 knopen, 1280 edges
@@ -25,7 +25,7 @@ data/
 ├── audio/            # Audio (TTS placeholder bestanden)
 └── methode_mapping.json  # Schoolmethode → knoop-ID mapping
 
-frontend/             # React (Vite) frontend (in ontwikkeling)
+frontend/             # React (Vite) frontend
 scripts/              # CLI tools: validatie, sessie, audio, werkbladen
 tests/                # pytest (300+ tests)
 stories/              # Epic/story tracking (todo/doing/done)
@@ -57,25 +57,63 @@ Elke knoop heeft een type (G/V/C/I), prerequisite-edges met encompassing weights
 - **Sessie-orkestratie**: 30-minuten sessies in 4 fasen (warmup → nieuwe stof → verdieping → cooldown)
 - **Diagnostische intake**: adaptief placement test via topologische graph-traversal
 
-## Quickstart
+## Installatie
+
+### Vereisten
+
+- Python 3.11 (niet 3.13)
+- [uv](https://docs.astral.sh/uv/) als package manager
+- Node.js 18+ (voor de frontend)
+
+### Backend + engine
 
 ```bash
-# Vereisten: Python 3.11
 uv venv .venv --python 3.11
 source .venv/bin/activate
 uv pip install -e ".[dev]"
 
-# Valideer de knowledge graph
+# Verifieer: valideer de knowledge graph
 python scripts/validate_graph.py data/graph/
 
-# Draai een gesimuleerde sessie via CLI
-python scripts/run_session.py data/graph/lat_grammatica_poc.json --simulate
+# Verifieer: draai tests
+pytest tests/ -q
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+cd ..
+```
+
+### Webapplicatie draaien
+
+```bash
+# Start backend (FastAPI) + frontend (Vite) tegelijk
+python scripts/run_dev.py
+```
+
+De applicatie is dan beschikbaar op `http://localhost:5173`. De API draait op `http://localhost:8000`.
+
+### Test-user aanmaken
+
+```bash
+# Maak een test-user aan met Fortuna profiel (Latijn, hoofdstuk 3)
+python scripts/seed_dev.py
+```
+
+### CLI (zonder webapplicatie)
+
+```bash
+# Gesimuleerde sessie
+python scripts/run_session.py data/graph/ --simulate
 
 # Met diagnostische intake
 python scripts/run_session.py data/graph/ --simulate --intake fortuna 3
 
-# Tests
-pytest tests/ -q
+# Interactieve sessie (self-assessment)
+python scripts/run_session.py data/graph/ --learner mijn_voortgang.json
 ```
 
 ## Tech stack
