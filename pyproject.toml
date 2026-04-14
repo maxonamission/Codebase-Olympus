@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Adaptief leersysteem voor Latijn en Grieks op VWO-gymnasiumniveau"
 requires-python = ">=3.11,<3.13"
 dependencies = [
-    "pydantic>=2.6,<3",
+    "pydantic[email]>=2.6,<3",
     "networkx>=3.2,<4",
     "reportlab>=4.0,<5",
     "fastapi>=0.110",
@@ -16,6 +16,7 @@ dev = [
     "pytest>=8.0",
     "pytest-cov>=5.0",
     "ruff>=0.3",
+    "httpx>=0.27",
 ]
 
 [build-system]
