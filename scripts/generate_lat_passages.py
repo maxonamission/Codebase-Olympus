@@ -214,7 +214,191 @@ BATCH_1 = [
 # Batch 2: passages 6-10 — +genitivus/dativus/ablativus, voorzetsels, esse
 # ---------------------------------------------------------------------------
 
-BATCH_2: list[dict] = []
+BATCH_2: list[dict] = [
+    passage(
+        6, "De familie van de meester", 6, "gen_dat_abl_praes_esse",
+        zinnen=[
+            zin("Servus domini aquam portat.", "De slaaf van de meester draagt water.", [
+                w("Servus", "servus", "nom.sg.m — 2e decl.", "slaaf"),
+                w("domini", "dominus", "gen.sg.m — 2e decl.", "van de meester"),
+                w("aquam", "aqua", "acc.sg.f — 1e decl.", "water"),
+                w("portat", "porto", "praes.ind.act. 3sg — 1e conj.", "draagt"),
+            ]),
+            zin("Filia domini villam amat.", "De dochter van de meester houdt van de villa.", [
+                w("Filia", "filia", "nom.sg.f — 1e decl.", "dochter"),
+                w("domini", "dominus", "gen.sg.m — 2e decl.", "van de meester"),
+                w("villam", "villa", "acc.sg.f — 1e decl.", "villa/landhuis"),
+                w("amat", "amo", "praes.ind.act. 3sg — 1e conj.", "houdt van"),
+            ]),
+            zin("Filius domini equum habet.", "De zoon van de meester heeft een paard.", [
+                w("Filius", "filius", "nom.sg.m — 2e decl.", "zoon"),
+                w("domini", "dominus", "gen.sg.m — 2e decl.", "van de meester"),
+                w("equum", "equus", "acc.sg.m — 2e decl.", "paard"),
+                w("habet", "habeo", "praes.ind.act. 3sg — 2e conj.", "heeft"),
+            ]),
+        ],
+        knoop_ids=[
+            "LAT-G-MORF-NOM-D1", "LAT-G-MORF-NOM-D2",
+            "LAT-G-MORF-GEN-D2", "LAT-G-SYNT-GEN-FUNCTIE",
+            "LAT-G-MORF-ACC-D1", "LAT-G-MORF-ACC-D2",
+            "LAT-G-MORF-PRAES-C1-ACT", "LAT-G-MORF-PRAES-C2-ACT",
+            "LAT-V-F01-SERVUS", "LAT-V-F01-DOMINUS", "LAT-V-F01-AQUA",
+            "LAT-V-F02-PORTO", "LAT-V-F01-FILIA", "LAT-V-F02-VILLA",
+            "LAT-V-F01-AMO", "LAT-V-F01-FILIUS", "LAT-V-F02-EQUUS",
+            "LAT-V-F01-HABEO",
+        ],
+    ),
+    passage(
+        7, "De meester geeft", 7, "gen_dat_abl_praes_esse",
+        zinnen=[
+            zin("Dominus servo equum dat.", "De meester geeft de slaaf een paard.", [
+                w("Dominus", "dominus", "nom.sg.m — 2e decl.", "meester/heer"),
+                w("servo", "servus", "dat.sg.m — 2e decl.", "aan de slaaf"),
+                w("equum", "equus", "acc.sg.m — 2e decl.", "paard"),
+                w("dat", "do", "praes.ind.act. 3sg — onregelm.", "geeft"),
+            ]),
+            zin("Servus domino aquam portat.", "De slaaf brengt de meester water.", [
+                w("Servus", "servus", "nom.sg.m — 2e decl.", "slaaf"),
+                w("domino", "dominus", "dat.sg.m — 2e decl.", "aan de meester"),
+                w("aquam", "aqua", "acc.sg.f — 1e decl.", "water"),
+                w("portat", "porto", "praes.ind.act. 3sg — 1e conj.", "brengt"),
+            ]),
+            zin("Dominus filio villam dat.", "De meester geeft zijn zoon de villa.", [
+                w("Dominus", "dominus", "nom.sg.m — 2e decl.", "meester/heer"),
+                w("filio", "filius", "dat.sg.m — 2e decl.", "aan de zoon"),
+                w("villam", "villa", "acc.sg.f — 1e decl.", "villa/landhuis"),
+                w("dat", "do", "praes.ind.act. 3sg — onregelm.", "geeft"),
+            ]),
+        ],
+        knoop_ids=[
+            "LAT-G-MORF-NOM-D2", "LAT-G-MORF-DAT-D2",
+            "LAT-G-MORF-ACC-D1", "LAT-G-MORF-ACC-D2",
+            "LAT-G-SYNT-DAT-FUNCTIE", "LAT-G-SYNT-OBJIND",
+            "LAT-G-MORF-PRAES-C1-ACT",
+            "LAT-V-F01-DOMINUS", "LAT-V-F01-SERVUS", "LAT-V-F02-EQUUS",
+            "LAT-V-F01-DO", "LAT-V-F01-AQUA", "LAT-V-F02-PORTO",
+            "LAT-V-F01-FILIUS", "LAT-V-F02-VILLA",
+        ],
+    ),
+    passage(
+        8, "In het bos", 8, "gen_dat_abl_praes_esse",
+        zinnen=[
+            zin("Servus in silva est.", "De slaaf is in het bos.", [
+                w("Servus", "servus", "nom.sg.m — 2e decl.", "slaaf"),
+                w("in", "in", "voorzetsel + abl.", "in"),
+                w("silva", "silva", "abl.sg.f — 1e decl.", "bos"),
+                w("est", "sum", "praes.ind. 3sg — onregelm.", "is"),
+            ]),
+            zin("Puella in via aquam portat.", "Het meisje draagt water op de weg.", [
+                w("Puella", "puella", "nom.sg.f — 1e decl.", "meisje"),
+                w("in", "in", "voorzetsel + abl.", "op"),
+                w("via", "via", "abl.sg.f — 1e decl.", "weg"),
+                w("aquam", "aqua", "acc.sg.f — 1e decl.", "water"),
+                w("portat", "porto", "praes.ind.act. 3sg — 1e conj.", "draagt"),
+            ]),
+            zin("Filius cum servo in horto est.", "De zoon is met de slaaf in de tuin.", [
+                w("Filius", "filius", "nom.sg.m — 2e decl.", "zoon"),
+                w("cum", "cum", "voorzetsel + abl.", "met"),
+                w("servo", "servus", "abl.sg.m — 2e decl.", "slaaf"),
+                w("in", "in", "voorzetsel + abl.", "in"),
+                w("horto", "hortus", "abl.sg.m — 2e decl.", "tuin"),
+                w("est", "sum", "praes.ind. 3sg — onregelm.", "is"),
+            ]),
+        ],
+        knoop_ids=[
+            "LAT-G-MORF-NOM-D1", "LAT-G-MORF-NOM-D2",
+            "LAT-G-MORF-ABL-D1", "LAT-G-MORF-ABL-D2",
+            "LAT-G-MORF-ACC-D1",
+            "LAT-G-MORF-PRAES-ESSE", "LAT-G-MORF-PRAES-C1-ACT",
+            "LAT-G-SYNT-ABL-FUNCTIE", "LAT-G-SYNT-PREP-ABL",
+            "LAT-V-F01-SERVUS", "LAT-V-F01-IN", "LAT-V-F01-SILVA",
+            "LAT-V-F01-SUM", "LAT-V-F02-PUELLA", "LAT-V-F01-VIA",
+            "LAT-V-F01-AQUA", "LAT-V-F02-PORTO", "LAT-V-F01-FILIUS",
+            "LAT-V-F01-CUM", "LAT-V-F02-HORTUS",
+        ],
+    ),
+    passage(
+        9, "De boodschapper", 9, "gen_dat_abl_praes_esse",
+        zinnen=[
+            zin("Nuntius domini in via est.", "De boodschapper van de meester is op de weg.", [
+                w("Nuntius", "nuntius", "nom.sg.m — 2e decl.", "boodschapper"),
+                w("domini", "dominus", "gen.sg.m — 2e decl.", "van de meester"),
+                w("in", "in", "voorzetsel + abl.", "op"),
+                w("via", "via", "abl.sg.f — 1e decl.", "weg"),
+                w("est", "sum", "praes.ind. 3sg — onregelm.", "is"),
+            ]),
+            zin("Servus nuntio aquam dat.", "De slaaf geeft de boodschapper water.", [
+                w("Servus", "servus", "nom.sg.m — 2e decl.", "slaaf"),
+                w("nuntio", "nuntius", "dat.sg.m — 2e decl.", "aan de boodschapper"),
+                w("aquam", "aqua", "acc.sg.f — 1e decl.", "water"),
+                w("dat", "do", "praes.ind.act. 3sg — onregelm.", "geeft"),
+            ]),
+            zin("Dominus nuntium vocat.", "De meester roept de boodschapper.", [
+                w("Dominus", "dominus", "nom.sg.m — 2e decl.", "meester/heer"),
+                w("nuntium", "nuntius", "acc.sg.m — 2e decl.", "boodschapper"),
+                w("vocat", "voco", "praes.ind.act. 3sg — 1e conj.", "roept"),
+            ]),
+        ],
+        knoop_ids=[
+            "LAT-G-MORF-NOM-D2", "LAT-G-MORF-GEN-D2",
+            "LAT-G-MORF-DAT-D2", "LAT-G-MORF-ACC-D2",
+            "LAT-G-MORF-ABL-D1", "LAT-G-MORF-PRAES-ESSE",
+            "LAT-G-MORF-PRAES-C1-ACT",
+            "LAT-G-SYNT-GEN-FUNCTIE", "LAT-G-SYNT-DAT-FUNCTIE",
+            "LAT-G-SYNT-PREP-ABL",
+            "LAT-V-F02-NUNTIUS", "LAT-V-F01-DOMINUS", "LAT-V-F01-VIA",
+            "LAT-V-F01-SUM", "LAT-V-F01-SERVUS", "LAT-V-F01-AQUA",
+            "LAT-V-F01-DO", "LAT-V-F01-VOCO", "LAT-V-F01-IN",
+        ],
+    ),
+    passage(
+        10, "In de tuin van de meester", 10, "gen_dat_abl_praes_esse",
+        zinnen=[
+            zin("In horto domini servi sunt.", "In de tuin van de meester zijn slaven.", [
+                w("In", "in", "voorzetsel + abl.", "in"),
+                w("horto", "hortus", "abl.sg.m — 2e decl.", "tuin"),
+                w("domini", "dominus", "gen.sg.m — 2e decl.", "van de meester"),
+                w("servi", "servus", "nom.pl.m — 2e decl.", "slaven"),
+                w("sunt", "sum", "praes.ind. 3pl — onregelm.", "zijn"),
+            ]),
+            zin("Servus aquam ad villam portat.", "De slaaf draagt water naar de villa.", [
+                w("Servus", "servus", "nom.sg.m — 2e decl.", "slaaf"),
+                w("aquam", "aqua", "acc.sg.f — 1e decl.", "water"),
+                w("ad", "ad", "voorzetsel + acc.", "naar"),
+                w("villam", "villa", "acc.sg.f — 1e decl.", "villa/landhuis"),
+                w("portat", "porto", "praes.ind.act. 3sg — 1e conj.", "draagt"),
+            ]),
+            zin("Filia domini in villa est.", "De dochter van de meester is in de villa.", [
+                w("Filia", "filia", "nom.sg.f — 1e decl.", "dochter"),
+                w("domini", "dominus", "gen.sg.m — 2e decl.", "van de meester"),
+                w("in", "in", "voorzetsel + abl.", "in"),
+                w("villa", "villa", "abl.sg.f — 1e decl.", "villa/landhuis"),
+                w("est", "sum", "praes.ind. 3sg — onregelm.", "is"),
+            ]),
+            zin("Dominus filio equum dat.", "De meester geeft zijn zoon een paard.", [
+                w("Dominus", "dominus", "nom.sg.m — 2e decl.", "meester/heer"),
+                w("filio", "filius", "dat.sg.m — 2e decl.", "aan de zoon"),
+                w("equum", "equus", "acc.sg.m — 2e decl.", "paard"),
+                w("dat", "do", "praes.ind.act. 3sg — onregelm.", "geeft"),
+            ]),
+        ],
+        knoop_ids=[
+            "LAT-G-MORF-NOM-D1", "LAT-G-MORF-NOM-D2",
+            "LAT-G-MORF-GEN-D2", "LAT-G-MORF-DAT-D2",
+            "LAT-G-MORF-ACC-D1", "LAT-G-MORF-ACC-D2",
+            "LAT-G-MORF-ABL-D1", "LAT-G-MORF-ABL-D2",
+            "LAT-G-MORF-PRAES-ESSE", "LAT-G-MORF-PRAES-C1-ACT",
+            "LAT-G-SYNT-GEN-FUNCTIE", "LAT-G-SYNT-DAT-FUNCTIE",
+            "LAT-G-SYNT-ABL-FUNCTIE", "LAT-G-SYNT-PREP-ABL",
+            "LAT-G-SYNT-PREP-ACC", "LAT-G-MORF-NUMERUS-INTRO",
+            "LAT-V-F01-IN", "LAT-V-F02-HORTUS", "LAT-V-F01-DOMINUS",
+            "LAT-V-F01-SERVUS", "LAT-V-F01-SUM", "LAT-V-F01-AQUA",
+            "LAT-V-F01-AD", "LAT-V-F02-VILLA", "LAT-V-F02-PORTO",
+            "LAT-V-F01-FILIA", "LAT-V-F01-FILIUS", "LAT-V-F02-EQUUS",
+            "LAT-V-F01-DO",
+        ],
+    ),
+]
 
 # ---------------------------------------------------------------------------
 # Batch 3: passages 11-15 — +3e declinatie, imperfectum, adjectieven
