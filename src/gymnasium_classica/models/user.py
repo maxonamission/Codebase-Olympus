@@ -20,6 +20,11 @@ class SubscriptionStatus(StrEnum):
     EXPIRED = "expired"
 
 
+class LearningRoute(StrEnum):
+    GRAMMAR_FIRST = "grammar_first"
+    CONTEXT_FIRST = "context_first"
+
+
 class PronunciationLat(StrEnum):
     CLASSICAL = "classical"  # Restored classical pronunciation (default)
     ECCLESIASTICAL = "ecclesiastical"  # Church Latin
@@ -50,4 +55,5 @@ class User(BaseModel):
     examenjaar_gtc: Optional[int] = None
     pronunciation_preference_lat: PronunciationLat = PronunciationLat.CLASSICAL
     pronunciation_preference_grc: PronunciationGrc = PronunciationGrc.ERASMIAN
+    learning_route: LearningRoute = LearningRoute.GRAMMAR_FIRST
     created_at: datetime = Field(default_factory=datetime.now)

@@ -34,8 +34,11 @@ from gymnasium_classica.scheduling.non_interference import (
     NonInterferenceState,
     select_next,
 )
+from gymnasium_classica.models.passage import Passage
+from gymnasium_classica.models.user import LearningRoute
 from gymnasium_classica.scheduling.priority import (
     MASTERY_THRESHOLD,
+    PREREQ_READY_THRESHOLD,
     compute_urgency_scores,
     estimate_retention,
     forget_urgency,
@@ -69,6 +72,7 @@ PHASE_ORDER = [
 MAX_NEW_NODES = 2
 DEFAULT_ITEM_TIME_SEC = 30
 REVIEW_RETENTION_THRESHOLD = 0.85
+CONTEXT_FIRST_PREREQ_THRESHOLD = 0.25
 
 # Type alias for the answer callback
 AnswerFn = Callable[[str, KennisKnoop], tuple[ResponseType, int]]
@@ -143,6 +147,99 @@ def _candidates_for_new_material(
         # Combine readiness and pedagogical value
         score = 0.6 * ready + 0.4 * out_deg
         knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+        candidates.append((score, knoop))
+
+    candidates.sort(key=lambda x: x[0], reverse=True)
+    return candidates
+
+
+def select_passage(
+    learner: LearnerModel,
+    graph: nx.DiGraph,
+    passages: list[Passage],
+) -> Passage | None:
+    """Select a passage for context-first new-material phase.
+
+    Picks the best passage whose grammar/vocabulary nodes are at the
+    learner's knowledge frontier: not yet mastered, but reachable with
+    a relaxed prerequisite threshold (CONTEXT_FIRST_PREREQ_THRESHOLD).
+
+    Passages are scored by the number of exercised nodes that are both
+    unmastered and reachable. Higher difficulty passages are penalised
+    slightly to prefer accessible material first.
+
+    Returns None if no suitable passage is found.
+    """
+    best_passage: Passage | None = None
+    best_score = -1.0
+
+    for passage in passages:
+        reachable_unmastered = 0
+        total_relevant = 0
+
+        for knoop_id in passage.knoop_ids:
+            if knoop_id not in graph.nodes:
+                continue
+            total_relevant += 1
+            posterior = _get_state_posterior(learner, knoop_id)
+            if posterior >= MASTERY_THRESHOLD:
+                continue  # already mastered, doesn't count
+            ready = readiness_score(
+                knoop_id, learner, graph,
+                prereq_threshold=CONTEXT_FIRST_PREREQ_THRESHOLD,
+            )
+            if ready > 0.0:
+                reachable_unmastered += 1
+
+        if reachable_unmastered == 0:
+            continue
+
+        # Score: fraction of relevant nodes that are frontier nodes,
+        # with a small penalty for higher difficulty
+        coverage = reachable_unmastered / max(total_relevant, 1)
+        difficulty_penalty = (passage.moeilijkheid - 1) * 0.05
+        score = coverage - difficulty_penalty
+
+        if score > best_score:
+            best_score = score
+            best_passage = passage
+
+    return best_passage
+
+
+def _candidates_for_new_material_context_first(
+    learner: LearnerModel,
+    graph: nx.DiGraph,
+    passages: list[Passage],
+) -> list[tuple[float, KennisKnoop]]:
+    """New-material candidates for context-first route.
+
+    Selects a passage via select_passage(), then returns the passage's
+    grammar/vocabulary nodes as candidates with a relaxed prerequisite
+    threshold (0.25 instead of 0.75).
+    """
+    passage = select_passage(learner, graph, passages)
+    if passage is None:
+        return []
+
+    candidates = []
+    max_out_deg = max((graph.out_degree(n) for n in graph.nodes), default=1) or 1
+
+    for knoop_id in passage.knoop_ids:
+        if knoop_id not in graph.nodes:
+            continue
+        posterior = _get_state_posterior(learner, knoop_id)
+        if posterior >= MASTERY_THRESHOLD:
+            continue
+        ready = readiness_score(
+            knoop_id, learner, graph,
+            prereq_threshold=CONTEXT_FIRST_PREREQ_THRESHOLD,
+        )
+        if ready == 0.0:
+            continue
+        out_deg = graph.out_degree(knoop_id) / max_out_deg
+        score = 0.6 * ready + 0.4 * out_deg
+        knoop: KennisKnoop = graph.nodes[knoop_id]["knoop"]
         candidates.append((score, knoop))
 
     candidates.sort(key=lambda x: x[0], reverse=True)
@@ -294,15 +391,24 @@ def run_session(
     answer_fn: AnswerFn,
     session_id: str | None = None,
     now: datetime | None = None,
+    learning_route: LearningRoute = LearningRoute.GRAMMAR_FIRST,
+    passages: list[Passage] | None = None,
 ) -> SessionResult:
     """Orchestrate a complete 30-minute learning session.
 
     *answer_fn(knoop_id, knoop)* returns ``(ResponseType, response_time_ms)``.
+
+    When *learning_route* is CONTEXT_FIRST the new-material phase selects
+    a passage instead of picking grammar nodes topologically.  The
+    prerequisite gate is relaxed (threshold 0.25 instead of 0.75) for
+    nodes introduced via a passage.
     """
     if now is None:
         now = datetime.now()
     if session_id is None:
         session_id = str(uuid4())[:8]
+    if passages is None:
+        passages = []
 
     result = SessionResult(session_id=session_id, started_at=now)
 
@@ -319,7 +425,15 @@ def run_session(
         if phase == SessionPhase.WARMUP:
             candidates = _candidates_for_warmup(learner, graph, now)
         elif phase == SessionPhase.NEW_MATERIAL:
-            candidates = _candidates_for_new_material(learner, graph)
+            if (
+                learning_route == LearningRoute.CONTEXT_FIRST
+                and passages
+            ):
+                candidates = _candidates_for_new_material_context_first(
+                    learner, graph, passages
+                )
+            else:
+                candidates = _candidates_for_new_material(learner, graph)
         elif phase == SessionPhase.DEEPENING:
             candidates = _candidates_for_deepening(
                 learner, graph, result.nodes_introduced, now
