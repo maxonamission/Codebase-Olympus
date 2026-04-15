@@ -585,7 +585,182 @@ BATCH_3: list[dict] = [
 # Batch 4: passages 16-20 — +perfectum, pronomina, AcI-intro
 # ---------------------------------------------------------------------------
 
-BATCH_4: list[dict] = []
+BATCH_4: list[dict] = [
+    passage(
+        16, "De meester riep", 16, "perf_pron_aci",
+        zinnen=[
+            zin("Dominus servum vocavit.", "De meester heeft de slaaf geroepen.", [
+                w("Dominus", "dominus", "nom.sg.m — 2e decl.", "meester/heer"),
+                w("servum", "servus", "acc.sg.m — 2e decl.", "slaaf"),
+                w("vocavit", "voco", "perf.ind.act. 3sg — 1e conj.", "heeft geroepen/riep"),
+            ]),
+            zin("Servus aquam portavit.", "De slaaf heeft water gedragen.", [
+                w("Servus", "servus", "nom.sg.m — 2e decl.", "slaaf"),
+                w("aquam", "aqua", "acc.sg.f — 1e decl.", "water"),
+                w("portavit", "porto", "perf.ind.act. 3sg — 1e conj.", "heeft gedragen/droeg"),
+            ]),
+            zin("Filia dominum amavit.", "De dochter hield van de meester.", [
+                w("Filia", "filia", "nom.sg.f — 1e decl.", "dochter"),
+                w("dominum", "dominus", "acc.sg.m — 2e decl.", "meester/heer"),
+                w("amavit", "amo", "perf.ind.act. 3sg — 1e conj.", "hield van"),
+            ]),
+        ],
+        knoop_ids=[
+            "LAT-G-MORF-PERF-INTRO", "LAT-G-MORF-PERF-C1-ACT",
+            "LAT-G-MORF-PERF-UITG", "LAT-G-MORF-PERF-STAMT-V",
+            "LAT-G-MORF-NOM-D1", "LAT-G-MORF-NOM-D2",
+            "LAT-G-MORF-ACC-D1", "LAT-G-MORF-ACC-D2",
+            "LAT-V-F01-DOMINUS", "LAT-V-F01-SERVUS", "LAT-V-F01-VOCO",
+            "LAT-V-F01-AQUA", "LAT-V-F02-PORTO", "LAT-V-F01-FILIA",
+            "LAT-V-F01-AMO",
+        ],
+    ),
+    passage(
+        17, "Ik en jij", 17, "perf_pron_aci",
+        zinnen=[
+            zin("Ego equum vocavi.", "Ik heb het paard geroepen.", [
+                w("Ego", "ego", "nom. — pers. vnw. 1sg", "ik"),
+                w("equum", "equus", "acc.sg.m — 2e decl.", "paard"),
+                w("vocavi", "voco", "perf.ind.act. 1sg — 1e conj.", "heb geroepen"),
+            ]),
+            zin("Tu servum laudavisti.", "Jij hebt de slaaf geprezen.", [
+                w("Tu", "tu", "nom. — pers. vnw. 2sg", "jij"),
+                w("servum", "servus", "acc.sg.m — 2e decl.", "slaaf"),
+                w("laudavisti", "laudo", "perf.ind.act. 2sg — 1e conj.", "hebt geprezen"),
+            ]),
+            zin("Dominus equum habuit.", "De meester heeft een paard gehad.", [
+                w("Dominus", "dominus", "nom.sg.m — 2e decl.", "meester/heer"),
+                w("equum", "equus", "acc.sg.m — 2e decl.", "paard"),
+                w("habuit", "habeo", "perf.ind.act. 3sg — 2e conj.", "heeft gehad"),
+            ]),
+        ],
+        knoop_ids=[
+            "LAT-G-MORF-PERF-INTRO", "LAT-G-MORF-PERF-C1-ACT",
+            "LAT-G-MORF-PERF-C2-ACT", "LAT-G-MORF-PERF-UITG",
+            "LAT-G-MORF-PERF-STAMT-V", "LAT-G-MORF-PERF-STAMT-U",
+            "LAT-G-MORF-PRON-INTRO", "LAT-G-MORF-PRON-PERS",
+            "LAT-G-MORF-PRON-EGO",
+            "LAT-V-F01-EGO", "LAT-V-F02-EQUUS", "LAT-V-F01-VOCO",
+            "LAT-V-F01-TU", "LAT-V-F01-SERVUS", "LAT-V-F02-LAUDO",
+            "LAT-V-F01-DOMINUS", "LAT-V-F01-HABEO",
+        ],
+    ),
+    passage(
+        18, "Deze en die", 18, "perf_pron_aci",
+        zinnen=[
+            zin("Hic servus dominum amat.", "Deze slaaf houdt van de meester.", [
+                w("Hic", "hic", "nom.sg.m — aanwijzend vnw.", "deze"),
+                w("servus", "servus", "nom.sg.m — 2e decl.", "slaaf"),
+                w("dominum", "dominus", "acc.sg.m — 2e decl.", "meester/heer"),
+                w("amat", "amo", "praes.ind.act. 3sg — 1e conj.", "houdt van"),
+            ]),
+            zin("Ille servus dominum timet.", "Die slaaf vreest de meester.", [
+                w("Ille", "ille", "nom.sg.m — aanwijzend vnw.", "die/gene"),
+                w("servus", "servus", "nom.sg.m — 2e decl.", "slaaf"),
+                w("dominum", "dominus", "acc.sg.m — 2e decl.", "meester/heer"),
+                w("timet", "timeo", "praes.ind.act. 3sg — 2e conj.", "vreest"),
+            ]),
+            zin("Hic aquam portat, ille equum habet.", "Deze draagt water, die heeft een paard.", [
+                w("Hic", "hic", "nom.sg.m — aanwijzend vnw.", "deze"),
+                w("aquam", "aqua", "acc.sg.f — 1e decl.", "water"),
+                w("portat", "porto", "praes.ind.act. 3sg — 1e conj.", "draagt"),
+                w("ille", "ille", "nom.sg.m — aanwijzend vnw.", "die/gene"),
+                w("equum", "equus", "acc.sg.m — 2e decl.", "paard"),
+                w("habet", "habeo", "praes.ind.act. 3sg — 2e conj.", "heeft"),
+            ]),
+        ],
+        knoop_ids=[
+            "LAT-G-MORF-PRON-INTRO", "LAT-G-MORF-PRON-HIC",
+            "LAT-G-MORF-PRON-ILLE", "LAT-G-MORF-PRON-AANW",
+            "LAT-G-MORF-NOM-D2", "LAT-G-MORF-ACC-D1",
+            "LAT-G-MORF-ACC-D2",
+            "LAT-G-MORF-PRAES-C1-ACT", "LAT-G-MORF-PRAES-C2-ACT",
+            "LAT-V-F01-HIC", "LAT-V-F01-ILLE", "LAT-V-F01-SERVUS",
+            "LAT-V-F01-DOMINUS", "LAT-V-F01-AMO", "LAT-V-F01-TIMEO",
+            "LAT-V-F01-AQUA", "LAT-V-F02-PORTO", "LAT-V-F02-EQUUS",
+            "LAT-V-F01-HABEO",
+        ],
+    ),
+    passage(
+        19, "Een verhaal van oorlog", 19, "perf_pron_aci",
+        zinnen=[
+            zin("Rex milites ad urbem misit.", "De koning stuurde soldaten naar de stad.", [
+                w("Rex", "rex", "nom.sg.m — 3e decl.", "koning"),
+                w("milites", "miles", "acc.pl.m — 3e decl.", "soldaten"),
+                w("ad", "ad", "voorzetsel + acc.", "naar"),
+                w("urbem", "urbs", "acc.sg.f — 3e decl.", "stad"),
+                w("misit", "mitto", "perf.ind.act. 3sg — 3e conj.", "stuurde/zond"),
+            ]),
+            zin("Milites hostes vicerunt.", "De soldaten hebben de vijanden overwonnen.", [
+                w("Milites", "miles", "nom.pl.m — 3e decl.", "soldaten"),
+                w("hostes", "hostis", "acc.pl.m — 3e decl.", "vijanden"),
+                w("vicerunt", "vinco", "perf.ind.act. 3pl — 3e conj.", "hebben overwonnen"),
+            ]),
+            zin("Cives regem laudaverunt.", "De burgers prezen de koning.", [
+                w("Cives", "civis", "nom.pl.m — 3e decl.", "burgers"),
+                w("regem", "rex", "acc.sg.m — 3e decl.", "koning"),
+                w("laudaverunt", "laudo", "perf.ind.act. 3pl — 1e conj.", "prezen"),
+            ]),
+        ],
+        knoop_ids=[
+            "LAT-G-MORF-PERF-INTRO", "LAT-G-MORF-PERF-C1-ACT",
+            "LAT-G-MORF-PERF-C3-ACT", "LAT-G-MORF-PERF-UITG",
+            "LAT-G-MORF-PERF-STAMT-S", "LAT-G-MORF-PERF-STAMT-V",
+            "LAT-G-MORF-NOM-D3", "LAT-G-MORF-ACC-D3",
+            "LAT-G-MORF-NUMERUS-INTRO",
+            "LAT-G-SYNT-PREP-ACC",
+            "LAT-V-F01-REX", "LAT-V-F01-MILES", "LAT-V-F01-AD",
+            "LAT-V-F01-URBS", "LAT-V-F01-MITTO", "LAT-V-F01-HOSTIS",
+            "LAT-V-F02-VINCO", "LAT-V-F01-CIVIS", "LAT-V-F02-LAUDO",
+        ],
+    ),
+    passage(
+        20, "De meester ziet dat…", 20, "perf_pron_aci",
+        zinnen=[
+            zin("Dominus servum aquam portare videt.", "De meester ziet dat de slaaf water draagt.", [
+                w("Dominus", "dominus", "nom.sg.m — 2e decl.", "meester/heer"),
+                w("servum", "servus", "acc.sg.m — 2e decl. (AcI-subject)", "slaaf"),
+                w("aquam", "aqua", "acc.sg.f — 1e decl.", "water"),
+                w("portare", "porto", "inf.praes.act. — 1e conj.", "dragen"),
+                w("videt", "video", "praes.ind.act. 3sg — 2e conj.", "ziet"),
+            ]),
+            zin("Pater filium bonum esse dicit.", "De vader zegt dat zijn zoon goed is.", [
+                w("Pater", "pater", "nom.sg.m — 3e decl.", "vader"),
+                w("filium", "filius", "acc.sg.m — 2e decl. (AcI-subject)", "zoon"),
+                w("bonum", "bonus", "acc.sg.m — adj. D1/D2 (AcI-predicaat)", "goed"),
+                w("esse", "sum", "inf.praes. — onregelm.", "zijn"),
+                w("dicit", "dico", "praes.ind.act. 3sg — 3e conj.", "zegt"),
+            ]),
+            zin("Rex hostes venire timet.", "De koning vreest dat de vijanden komen.", [
+                w("Rex", "rex", "nom.sg.m — 3e decl.", "koning"),
+                w("hostes", "hostis", "acc.pl.m — 3e decl. (AcI-subject)", "vijanden"),
+                w("venire", "venio", "inf.praes.act. — 4e conj.", "komen"),
+                w("timet", "timeo", "praes.ind.act. 3sg — 2e conj.", "vreest"),
+            ]),
+            zin("Milites urbem magnam esse sciunt.", "De soldaten weten dat de stad groot is.", [
+                w("Milites", "miles", "nom.pl.m — 3e decl.", "soldaten"),
+                w("urbem", "urbs", "acc.sg.f — 3e decl. (AcI-subject)", "stad"),
+                w("magnam", "magnus", "acc.sg.f — adj. D1/D2 (AcI-predicaat)", "groot"),
+                w("esse", "sum", "inf.praes. — onregelm.", "zijn"),
+                w("sciunt", "scio", "praes.ind.act. 3pl — 4e conj.", "weten"),
+            ]),
+        ],
+        knoop_ids=[
+            "LAT-G-SYNT-ACI-INTRO", "LAT-G-MORF-INF-PRAES-ACT",
+            "LAT-G-MORF-INF-INTRO",
+            "LAT-G-MORF-NOM-D2", "LAT-G-MORF-NOM-D3",
+            "LAT-G-MORF-ACC-D1", "LAT-G-MORF-ACC-D2", "LAT-G-MORF-ACC-D3",
+            "LAT-G-MORF-PRAES-C2-ACT", "LAT-G-MORF-PRAES-ESSE",
+            "LAT-G-MORF-ADJ-D12-VERBG", "LAT-G-SYNT-ADJ-CONGR",
+            "LAT-V-F01-DOMINUS", "LAT-V-F01-SERVUS", "LAT-V-F01-AQUA",
+            "LAT-V-F02-PORTO", "LAT-V-F01-VIDEO", "LAT-V-F01-PATER",
+            "LAT-V-F01-FILIUS", "LAT-V-F01-BONUS", "LAT-V-F01-SUM",
+            "LAT-V-F01-DICO", "LAT-V-F01-REX", "LAT-V-F01-HOSTIS",
+            "LAT-V-F01-VENIO", "LAT-V-F01-TIMEO", "LAT-V-F01-MILES",
+            "LAT-V-F01-URBS", "LAT-V-F01-MAGNUS", "LAT-V-F02-SCIO",
+        ],
+    ),
+]
 
 # ---------------------------------------------------------------------------
 # Main
