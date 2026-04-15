@@ -57,6 +57,7 @@ class AnswerRequest(BaseModel):
 class FeedbackResponse(BaseModel):
     knoop_id: str
     correct: bool
+    response_type: str = Field(description="The original response: correct, slow_correct, or incorrect")
     mastery_before: float
     mastery_after: float
 

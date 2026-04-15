@@ -113,6 +113,7 @@ async def submit_answer(
         feedback=FeedbackResponse(
             knoop_id=result.feedback.knoop_id,
             correct=result.feedback.correct,
+            response_type=result.feedback.response_type,
             mastery_before=result.feedback.mastery_before,
             mastery_after=result.feedback.mastery_after,
         ),

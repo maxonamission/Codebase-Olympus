@@ -355,6 +355,10 @@ h2 {
   border-left: 4px solid var(--success);
 }
 
+.feedback-slow {
+  border-left: 4px solid var(--warning, #e6a817);
+}
+
 .feedback-incorrect {
   border-left: 4px solid var(--error);
 }
@@ -373,6 +377,10 @@ h2 {
 
 .feedback-correct .feedback-icon {
   color: var(--success);
+}
+
+.feedback-slow .feedback-icon {
+  color: var(--warning, #e6a817);
 }
 
 .feedback-incorrect .feedback-icon {
