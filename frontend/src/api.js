@@ -66,3 +66,14 @@ export function getProgressOverview() {
 export function getGraphData() {
   return apiFetch('/progress/graph');
 }
+
+export function getUserProfile() {
+  return apiFetch('/user/profile');
+}
+
+export function updateLearningRoute(learningRoute) {
+  return apiFetch('/user/learning-route', {
+    method: 'PUT',
+    body: JSON.stringify({ learning_route: learningRoute }),
+  });
+}

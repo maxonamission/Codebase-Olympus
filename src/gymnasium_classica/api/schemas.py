@@ -188,3 +188,16 @@ class IntakeAnswerResponse(BaseModel):
     next_question: Optional[IntakeQuestionResponse] = None
     finished: bool = False
     converged: bool = False
+
+
+# -- User settings --
+
+
+class UpdateLearningRouteRequest(BaseModel):
+    learning_route: str = Field(description="'grammar_first' or 'context_first'")
+
+
+class UserProfileResponse(BaseModel):
+    user_id: str
+    email: str
+    learning_route: str
