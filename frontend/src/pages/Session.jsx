@@ -51,7 +51,7 @@ export default function Session() {
 
       setFeedback(data.feedback)
 
-      if (data.session_ended) {
+      if (data.session_finished) {
         const summaryData = await getSessionSummary(sessionId)
         setSummary(summaryData)
       } else {

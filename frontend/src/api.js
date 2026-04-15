@@ -49,9 +49,8 @@ export function submitAnswer(sessionId, { responseType, responseTimeMs, answer }
     method: 'POST',
     body: JSON.stringify({
       session_id: sessionId,
-      response_type: responseType,
+      response: responseType,
       response_time_ms: responseTimeMs,
-      answer,
     }),
   });
 }
