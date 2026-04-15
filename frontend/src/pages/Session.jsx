@@ -12,6 +12,7 @@ export default function Session() {
   const navigate = useNavigate()
   const [sessionId, setSessionId] = useState(null)
   const [question, setQuestion] = useState(null)
+  const [pendingQuestion, setPendingQuestion] = useState(null)
   const [feedback, setFeedback] = useState(null)
   const [summary, setSummary] = useState(null)
   const [error, setError] = useState('')
@@ -52,15 +53,26 @@ export default function Session() {
       setFeedback(data.feedback)
 
       if (data.session_finished) {
-        const summaryData = await getSessionSummary(sessionId)
-        setSummary(summaryData)
-      } else {
-        setQuestion(data.next_question)
+        // Session is done — fetch summary but keep feedback visible first
+        setPendingQuestion(null)
+        try {
+          const summaryData = await getSessionSummary(sessionId)
+          // Don't show summary yet — wait for "Volgende" click
+          setPendingQuestion({ _summary: summaryData })
+        } catch {
+          setPendingQuestion({ _summary: { items_count: progress.current, message: 'Sessie afgerond.' } })
+        }
+      } else if (data.next_question) {
+        // Store the next question but don't show it yet — wait for "Volgende"
+        setPendingQuestion(data.next_question)
         setProgress((prev) => ({
           ...prev,
           current: prev.current + 1,
           total: data.estimated_total || prev.total,
         }))
+      } else {
+        // No next question and not finished — session ended unexpectedly
+        setPendingQuestion(null)
       }
     } catch (err) {
       setError(err.message)
@@ -70,7 +82,18 @@ export default function Session() {
   }
 
   function handleNext() {
+    if (pendingQuestion?._summary) {
+      // Show summary
+      setSummary(pendingQuestion._summary)
+    } else if (pendingQuestion) {
+      // Show next question
+      setQuestion(pendingQuestion)
+    } else {
+      // No more questions — show a simple end screen
+      setSummary({ items_count: progress.current, message: 'Sessie afgerond.' })
+    }
     setFeedback(null)
+    setPendingQuestion(null)
     questionStartTime.current = Date.now()
   }
 
@@ -103,6 +126,16 @@ export default function Session() {
 
   return (
     <div className="page session-page">
+      <div className="session-header">
+        <button className="btn-link session-back" onClick={() => {
+          if (confirm('Weet je zeker dat je de sessie wilt stoppen?')) {
+            navigate('/dashboard')
+          }
+        }}>
+          ← Dashboard
+        </button>
+      </div>
+
       {question && (
         <>
           <PhaseIndicator currentPhase={question.phase} />
@@ -110,15 +143,15 @@ export default function Session() {
 
           {error && <div className="error-message">{error}</div>}
 
-          <QuestionCard question={question} />
+          {!feedback && <QuestionCard question={question} />}
 
           {feedback ? (
-            <>
+            <div className="feedback-section">
               <FeedbackCard feedback={feedback} />
-              <button className="btn btn-primary" onClick={handleNext}>
-                Volgende
+              <button className="btn btn-primary btn-next" onClick={handleNext}>
+                {pendingQuestion?._summary ? 'Bekijk resultaten' : 'Volgende vraag'}
               </button>
-            </>
+            </div>
           ) : (
             <AnswerInput
               question={question}
