@@ -71,8 +71,13 @@ export default function Session() {
           total: data.estimated_total || prev.total,
         }))
       } else {
-        // No next question and not finished — session ended unexpectedly
-        setPendingQuestion(null)
+        // No next question and not explicitly finished — session ended (no more candidates)
+        try {
+          const summaryData = await getSessionSummary(sessionId)
+          setPendingQuestion({ _summary: summaryData })
+        } catch {
+          setPendingQuestion({ _summary: { items_count: progress.current } })
+        }
       }
     } catch (err) {
       setError(err.message)
