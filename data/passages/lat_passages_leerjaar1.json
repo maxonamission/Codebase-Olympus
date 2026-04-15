@@ -1,0 +1,64 @@
+{
+  "passages": [
+    {
+      "id": "LAT-P-001",
+      "taal": "lat",
+      "titel": "De boerin en de slavin",
+      "tekst": "Agricola puellam videt. Puella aquam portat. Ancilla agricolam salutat.",
+      "annotaties": [
+        {"woord": "Agricola", "lemma": "agricola", "naamval": "nom.sg", "vertaling": "de boer"},
+        {"woord": "puellam", "lemma": "puella", "naamval": "acc.sg", "vertaling": "het meisje"},
+        {"woord": "videt", "lemma": "videre", "naamval": "praes.ind.act.3sg", "vertaling": "ziet"},
+        {"woord": "Puella", "lemma": "puella", "naamval": "nom.sg", "vertaling": "het meisje"},
+        {"woord": "aquam", "lemma": "aqua", "naamval": "acc.sg", "vertaling": "water"},
+        {"woord": "portat", "lemma": "portare", "naamval": "praes.ind.act.3sg", "vertaling": "draagt"},
+        {"woord": "Ancilla", "lemma": "ancilla", "naamval": "nom.sg", "vertaling": "de slavin"},
+        {"woord": "agricolam", "lemma": "agricola", "naamval": "acc.sg", "vertaling": "de boer"},
+        {"woord": "salutat", "lemma": "salutare", "naamval": "praes.ind.act.3sg", "vertaling": "groet"}
+      ],
+      "knoop_ids": ["LAT-G-MORF-NOM-D1", "LAT-G-MORF-ACC-D1", "LAT-G-SYNT-SVO"],
+      "moeilijkheid": 1
+    },
+    {
+      "id": "LAT-P-002",
+      "taal": "lat",
+      "titel": "Domina en de tuin",
+      "tekst": "Domina in horto ambulat. Rosam pulchram spectat. Serva dominam vocat.",
+      "annotaties": [
+        {"woord": "Domina", "lemma": "domina", "naamval": "nom.sg", "vertaling": "de meesteres"},
+        {"woord": "in", "lemma": "in", "naamval": null, "vertaling": "in"},
+        {"woord": "horto", "lemma": "hortus", "naamval": "abl.sg", "vertaling": "de tuin"},
+        {"woord": "ambulat", "lemma": "ambulare", "naamval": "praes.ind.act.3sg", "vertaling": "wandelt"},
+        {"woord": "Rosam", "lemma": "rosa", "naamval": "acc.sg", "vertaling": "de roos"},
+        {"woord": "pulchram", "lemma": "pulcher", "naamval": "acc.sg.f", "vertaling": "mooie"},
+        {"woord": "spectat", "lemma": "spectare", "naamval": "praes.ind.act.3sg", "vertaling": "bekijkt"},
+        {"woord": "Serva", "lemma": "serva", "naamval": "nom.sg", "vertaling": "de slavin"},
+        {"woord": "dominam", "lemma": "domina", "naamval": "acc.sg", "vertaling": "de meesteres"},
+        {"woord": "vocat", "lemma": "vocare", "naamval": "praes.ind.act.3sg", "vertaling": "roept"}
+      ],
+      "knoop_ids": ["LAT-G-MORF-NOM-D1", "LAT-G-MORF-ACC-D1", "LAT-G-MORF-ABL-D2"],
+      "moeilijkheid": 2
+    },
+    {
+      "id": "LAT-P-003",
+      "taal": "lat",
+      "titel": "De soldaat in het kamp",
+      "tekst": "Miles gladium portat. Centurio militem laudat. In castris magna cena paratur.",
+      "annotaties": [
+        {"woord": "Miles", "lemma": "miles", "naamval": "nom.sg", "vertaling": "de soldaat"},
+        {"woord": "gladium", "lemma": "gladius", "naamval": "acc.sg", "vertaling": "het zwaard"},
+        {"woord": "portat", "lemma": "portare", "naamval": "praes.ind.act.3sg", "vertaling": "draagt"},
+        {"woord": "Centurio", "lemma": "centurio", "naamval": "nom.sg", "vertaling": "de centurio"},
+        {"woord": "militem", "lemma": "miles", "naamval": "acc.sg", "vertaling": "de soldaat"},
+        {"woord": "laudat", "lemma": "laudare", "naamval": "praes.ind.act.3sg", "vertaling": "prijst"},
+        {"woord": "In", "lemma": "in", "naamval": null, "vertaling": "in"},
+        {"woord": "castris", "lemma": "castra", "naamval": "abl.pl", "vertaling": "het kamp"},
+        {"woord": "magna", "lemma": "magnus", "naamval": "nom.sg.f", "vertaling": "grote"},
+        {"woord": "cena", "lemma": "cena", "naamval": "nom.sg", "vertaling": "maaltijd"},
+        {"woord": "paratur", "lemma": "parare", "naamval": "praes.ind.pass.3sg", "vertaling": "wordt bereid"}
+      ],
+      "knoop_ids": ["LAT-G-MORF-NOM-D3", "LAT-G-MORF-ACC-D2", "LAT-G-SYNT-PASS"],
+      "moeilijkheid": 3
+    }
+  ]
+}
