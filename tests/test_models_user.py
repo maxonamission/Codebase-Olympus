@@ -6,7 +6,13 @@ from uuid import UUID
 import pytest
 from pydantic import ValidationError
 
-from gymnasium_classica.models.user import Plan, Subscription, SubscriptionStatus, User
+from gymnasium_classica.models.user import (
+    LearningRoute,
+    Plan,
+    Subscription,
+    SubscriptionStatus,
+    User,
+)
 
 
 class TestSubscription:
@@ -78,3 +84,49 @@ class TestUser:
         user2 = User(**dumped)
         assert user.email == user2.email
         assert user.examenjaar_ltc == user2.examenjaar_ltc
+
+
+class TestLearningRoute:
+    """Tests for the LearningRoute enum and User integration (E7-01)."""
+
+    def test_enum_values(self):
+        assert LearningRoute.GRAMMAR_FIRST == "grammar_first"
+        assert LearningRoute.CONTEXT_FIRST == "context_first"
+
+    def test_default_is_grammar_first(self):
+        user = User(email="test@example.com")
+        assert user.learning_route == LearningRoute.GRAMMAR_FIRST
+
+    def test_set_context_first(self):
+        user = User(email="test@example.com", learning_route="context_first")
+        assert user.learning_route == LearningRoute.CONTEXT_FIRST
+
+    def test_invalid_route_rejected(self):
+        with pytest.raises(ValidationError):
+            User(email="test@example.com", learning_route="unknown_route")
+
+    def test_existing_user_unaffected(self):
+        """Existing user without learning_route gets the default."""
+        data = {"email": "old@example.com"}
+        user = User(**data)
+        assert user.learning_route == LearningRoute.GRAMMAR_FIRST
+
+    def test_roundtrip_with_route(self):
+        user = User(email="test@example.com", learning_route="context_first")
+        dumped = user.model_dump()
+        user2 = User(**dumped)
+        assert user2.learning_route == LearningRoute.CONTEXT_FIRST
+
+    def test_route_switch_no_data_loss(self):
+        """Switching route preserves all other user fields."""
+        user = User(
+            email="test@example.com",
+            examenjaar_ltc=2027,
+            learning_route="grammar_first",
+        )
+        dumped = user.model_dump()
+        dumped["learning_route"] = "context_first"
+        user2 = User(**dumped)
+        assert user2.learning_route == LearningRoute.CONTEXT_FIRST
+        assert user2.examenjaar_ltc == 2027
+        assert user2.email == "test@example.com"
