@@ -75,13 +75,20 @@ def readiness_score(
     knoop_id: str,
     learner: LearnerModel,
     graph: nx.DiGraph,
+    prereq_threshold: float | None = None,
 ) -> float:
     """Readiness for an unmastered node: minimum posterior of all prerequisites.
 
     Returns 1.0 if no prerequisites exist.
-    Returns 0.0 if any prerequisite is below PREREQ_READY_THRESHOLD.
+    Returns 0.0 if any prerequisite is below *prereq_threshold*.
     Returns 0.0 for already-mastered nodes (not relevant as "new material").
+
+    The *prereq_threshold* parameter allows context-first scheduling to
+    relax the gate (e.g. 0.25 instead of the default 0.75).
     """
+    if prereq_threshold is None:
+        prereq_threshold = PREREQ_READY_THRESHOLD
+
     state = learner.knoop_states.get(knoop_id)
     if state and state.posterior_mastery >= MASTERY_THRESHOLD:
         return 0.0  # Already mastered — not a "new material" candidate
@@ -94,7 +101,7 @@ def readiness_score(
     for pred_id in predecessors:
         pred_state = learner.knoop_states.get(pred_id)
         posterior = pred_state.posterior_mastery if pred_state else 0.0
-        if posterior < PREREQ_READY_THRESHOLD:
+        if posterior < prereq_threshold:
             return 0.0  # Hard gate: prerequisite not met
         min_posterior = min(min_posterior, posterior)
 

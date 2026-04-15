@@ -22,6 +22,8 @@ from gymnasium_classica.models.learner import (
     ResponseType,
     SessionRecord,
 )
+from gymnasium_classica.models.passage import Passage
+from gymnasium_classica.models.user import LearningRoute
 from gymnasium_classica.scheduling.bkt import propagate_practice_correct, update_knoop_state
 from gymnasium_classica.scheduling.non_interference import NonInterferenceState, select_next
 from gymnasium_classica.scheduling.priority import MASTERY_THRESHOLD, compute_urgency_scores
@@ -34,6 +36,7 @@ from gymnasium_classica.scheduling.session import (
     _candidates_for_cooldown,
     _candidates_for_deepening,
     _candidates_for_new_material,
+    _candidates_for_new_material_context_first,
     _candidates_for_warmup,
     _collect_offline_items,
     _get_state_posterior,
@@ -117,6 +120,8 @@ class _SessionState:
     phases_completed: list[str] = field(default_factory=list)
     finished: bool = False
     ended_at: datetime | None = None
+    learning_route: LearningRoute = LearningRoute.GRAMMAR_FIRST
+    passages: list[Passage] = field(default_factory=list)
 
 
 def _generate_self_assess_prompt(knoop: KennisKnoop) -> str:
@@ -175,13 +180,21 @@ class SessionManager:
         learner: LearnerModel,
         graph: nx.DiGraph,
         now: datetime | None = None,
+        learning_route: LearningRoute = LearningRoute.GRAMMAR_FIRST,
+        passages: list[Passage] | None = None,
     ) -> tuple[str, Question | None]:
         """Start a new session. Returns (session_id, first_question).
 
         first_question is None if the graph has no actionable candidates.
+
+        When *learning_route* is CONTEXT_FIRST and *passages* are provided,
+        the new-material phase selects a passage instead of topological
+        grammar nodes.
         """
         if now is None:
             now = datetime.now()
+        if passages is None:
+            passages = []
 
         session_id = uuid4().hex[:12]
         state = _SessionState(
@@ -190,6 +203,8 @@ class SessionManager:
             learner=learner,
             graph=graph,
             started_at=now,
+            learning_route=learning_route,
+            passages=passages,
         )
         self._sessions[session_id] = state
 
@@ -336,6 +351,13 @@ class SessionManager:
         if phase == SessionPhase.WARMUP:
             return _candidates_for_warmup(state.learner, state.graph, now)
         elif phase == SessionPhase.NEW_MATERIAL:
+            if (
+                state.learning_route == LearningRoute.CONTEXT_FIRST
+                and state.passages
+            ):
+                return _candidates_for_new_material_context_first(
+                    state.learner, state.graph, state.passages
+                )
             return _candidates_for_new_material(state.learner, state.graph)
         elif phase == SessionPhase.DEEPENING:
             return _candidates_for_deepening(
