@@ -1,16 +1,34 @@
+const FEEDBACK_MESSAGES = {
+  correct: {
+    icon: '\u2713',
+    label: 'Goed!',
+    className: 'feedback-correct',
+  },
+  slow_correct: {
+    icon: '\u2713',
+    label: 'Correct, maar oefen dit nog.',
+    className: 'feedback-slow',
+  },
+  incorrect: {
+    icon: '\u2717',
+    label: 'Helaas, dat is niet juist.',
+    className: 'feedback-incorrect',
+  },
+}
+
 export default function FeedbackCard({ feedback }) {
-  const { correct, explanation, correct_answer, mastery_before, mastery_after } = feedback
+  const { response_type, correct_answer, explanation, mastery_before, mastery_after } = feedback
+
+  const msg = FEEDBACK_MESSAGES[response_type] || FEEDBACK_MESSAGES[feedback.correct ? 'correct' : 'incorrect']
 
   return (
-    <div className={`card feedback-card ${correct ? 'feedback-correct' : 'feedback-incorrect'}`}>
+    <div className={`card feedback-card ${msg.className}`}>
       <div className="feedback-header">
-        <span className="feedback-icon">{correct ? '\u2713' : '\u2717'}</span>
-        <span className="feedback-label">
-          {correct ? 'Goed!' : 'Helaas, dat is niet juist.'}
-        </span>
+        <span className="feedback-icon">{msg.icon}</span>
+        <span className="feedback-label">{msg.label}</span>
       </div>
 
-      {!correct && correct_answer && (
+      {!feedback.correct && correct_answer && (
         <p className="feedback-answer">
           <strong>Juiste antwoord:</strong> {correct_answer}
         </p>

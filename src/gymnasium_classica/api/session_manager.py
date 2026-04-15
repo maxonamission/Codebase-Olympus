@@ -63,6 +63,7 @@ class Feedback:
 
     knoop_id: str
     correct: bool
+    response_type: str  # "correct", "slow_correct", or "incorrect"
     mastery_before: float
     mastery_after: float
 
@@ -252,6 +253,7 @@ class SessionManager:
         feedback = Feedback(
             knoop_id=knoop_id,
             correct=is_correct,
+            response_type=response.value,
             mastery_before=round(before, 3),
             mastery_after=round(after, 3),
         )
