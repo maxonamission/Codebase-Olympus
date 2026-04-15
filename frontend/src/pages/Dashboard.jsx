@@ -107,9 +107,14 @@ export default function Dashboard() {
         )}
       </div>
 
-      <button className="btn btn-primary" onClick={handleStartSession}>
-        Start sessie
-      </button>
+      <div className="dashboard-actions">
+        <button className="btn btn-primary" onClick={handleStartSession}>
+          Start sessie
+        </button>
+        <button className="btn btn-secondary" onClick={() => navigate('/graph')}>
+          Bekijk knowledge graph
+        </button>
+      </div>
     </div>
   )
 }

@@ -9,10 +9,14 @@ from gymnasium_classica.api.auth import get_current_user_id
 from gymnasium_classica.api.database import load_learner_model
 from gymnasium_classica.api.schemas import (
     DomainProgress,
+    GraphDataResponse,
+    GraphEdge,
+    GraphNode,
     ItemHistoryEntry,
     KnoopProgressResponse,
     ProgressOverviewResponse,
 )
+from gymnasium_classica.models.graph import PrerequisiteEdge
 from gymnasium_classica.models.graph import KennisKnoop
 from gymnasium_classica.models.learner import LearnerModel
 from gymnasium_classica.scheduling.priority import MASTERY_THRESHOLD
@@ -167,3 +171,46 @@ async def knoop_progress(
             for ir in state.item_history
         ],
     )
+
+
+@router.get("/graph", response_model=GraphDataResponse)
+async def graph_data(
+    request: Request,
+    user_id: str = Depends(get_current_user_id),
+):
+    """Return the full knowledge graph with per-node mastery for visualisation."""
+    db = request.app.state.db
+    graph: nx.DiGraph = request.app.state.graph
+    learner = load_learner_model(db, user_id)
+
+    nodes = []
+    for node_id in graph.nodes:
+        knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+        mastery = 0.0
+        status = "unseen"
+        if learner:
+            state = learner.knoop_states.get(node_id)
+            if state:
+                mastery = state.posterior_mastery
+                if mastery >= MASTERY_THRESHOLD:
+                    status = "mastered"
+                elif mastery >= _IN_PROGRESS_FLOOR:
+                    status = "in_progress"
+        nodes.append(GraphNode(
+            id=node_id,
+            titel=knoop.titel_nl,
+            type=knoop.type.value,
+            taal=knoop.taal.value if hasattr(knoop.taal, 'value') else str(knoop.taal),
+            mastery=round(mastery, 3),
+            status=status,
+        ))
+
+    edges = []
+    for u, v in graph.edges:
+        edge_data = graph.edges[u, v].get("edge")
+        edge_type = "prerequisite"
+        if isinstance(edge_data, PrerequisiteEdge):
+            edge_type = edge_data.type.value
+        edges.append(GraphEdge(source=u, target=v, type=edge_type))
+
+    return GraphDataResponse(nodes=nodes, edges=edges)
