@@ -118,6 +118,20 @@ class _SessionState:
     ended_at: datetime | None = None
 
 
+def _generate_self_assess_prompt(knoop: KennisKnoop) -> str:
+    """Generate a self-assessment prompt based on the node type."""
+    t = knoop.type.value
+    titel = knoop.titel_nl
+    if t == "G":
+        return f"Kun je het volgende uitleggen of opschrijven: {titel}?"
+    elif t == "V":
+        return f"Ken je de betekenis van dit woord: {titel}?"
+    elif t == "C":
+        return f"Kun je het volgende uitleggen: {titel}?"
+    else:
+        return f"Beheers je het volgende concept: {titel}?"
+
+
 def _knoop_to_question(knoop: KennisKnoop, phase: SessionPhase) -> Question:
     """Convert a KennisKnoop to a Question for the API."""
     items = []
@@ -129,11 +143,17 @@ def _knoop_to_question(knoop: KennisKnoop, phase: SessionPhase) -> Question:
             "feedback": item.feedback,
             "verwachte_tijd_sec": item.verwachte_tijd_sec,
         })
+
+    if knoop.items:
+        stimulus = knoop.items[0].stimulus
+    else:
+        stimulus = _generate_self_assess_prompt(knoop)
+
     return Question(
         knoop_id=knoop.id,
         titel=knoop.titel_nl,
         beschrijving=knoop.beschrijving,
-        stimulus=knoop.items[0].stimulus if knoop.items else knoop.beschrijving,
+        stimulus=stimulus,
         phase=phase.value,
         items=items,
     )

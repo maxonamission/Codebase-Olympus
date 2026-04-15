@@ -6,6 +6,7 @@ const TEXT_TYPES = ['productie', 'luister_productie']
 
 export default function AnswerInput({ question, onAnswer, disabled }) {
   const [textAnswer, setTextAnswer] = useState('')
+  const [showAnswer, setShowAnswer] = useState(false)
 
   const itemType = question.item_type
   const isMultipleChoice = MC_TYPES.includes(itemType) && question.options?.length > 0
@@ -88,31 +89,50 @@ export default function AnswerInput({ question, onAnswer, disabled }) {
     )
   }
 
-  // Fallback: self-assessment for all other types
+  // Fallback: self-assessment with reveal step
+  if (!showAnswer) {
+    return (
+      <div className="answer-input">
+        <p className="answer-instruction">Denk na over het antwoord en klik dan op &quot;Toon antwoord&quot;.</p>
+        <button
+          className="btn btn-primary"
+          onClick={() => setShowAnswer(true)}
+          disabled={disabled}
+        >
+          Toon antwoord
+        </button>
+      </div>
+    )
+  }
+
   return (
     <div className="answer-input">
-      <p className="answer-instruction">Hoe ging het?</p>
+      <div className="model-answer">
+        <p className="answer-label">Antwoord:</p>
+        <p className="answer-text">{question.beschrijving}</p>
+      </div>
+      <p className="answer-instruction">Hoe goed kwam jouw antwoord overeen?</p>
       <div className="self-assess-options">
         <button
           className="btn self-assess self-assess-correct"
-          onClick={() => handleSelfAssess('correct')}
+          onClick={() => { handleSelfAssess('correct'); setShowAnswer(false); }}
           disabled={disabled}
         >
-          Goed
+          Goed — ik wist het
         </button>
         <button
           className="btn self-assess self-assess-slow"
-          onClick={() => handleSelfAssess('slow_correct')}
+          onClick={() => { handleSelfAssess('slow_correct'); setShowAnswer(false); }}
           disabled={disabled}
         >
-          Te langzaam
+          Twijfel — ik moest nadenken
         </button>
         <button
           className="btn self-assess self-assess-incorrect"
-          onClick={() => handleSelfAssess('incorrect')}
+          onClick={() => { handleSelfAssess('incorrect'); setShowAnswer(false); }}
           disabled={disabled}
         >
-          Fout
+          Fout — ik wist het niet
         </button>
       </div>
     </div>
