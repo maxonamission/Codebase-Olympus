@@ -1,0 +1,499 @@
+{
+  "passages": [
+    {
+      "id": "LAT-PASS-LJ1-001",
+      "titel_nl": "Puella en de slaaf",
+      "niveau": 1,
+      "complexiteit_label": "nom_acc_praes_d12_c12",
+      "zinnen": [
+        {
+          "latijn": "Puella aquam portat.",
+          "vertaling_nl": "Het meisje draagt water.",
+          "woorden": [
+            {
+              "vorm": "Puella",
+              "lemma": "puella",
+              "morfologie": "nom.sg.f — 1e decl.",
+              "vertaling_nl": "meisje"
+            },
+            {
+              "vorm": "aquam",
+              "lemma": "aqua",
+              "morfologie": "acc.sg.f — 1e decl.",
+              "vertaling_nl": "water"
+            },
+            {
+              "vorm": "portat",
+              "lemma": "porto",
+              "morfologie": "praes.ind.act. 3sg — 1e conj.",
+              "vertaling_nl": "draagt"
+            }
+          ]
+        },
+        {
+          "latijn": "Servus equum videt.",
+          "vertaling_nl": "De slaaf ziet het paard.",
+          "woorden": [
+            {
+              "vorm": "Servus",
+              "lemma": "servus",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "slaaf"
+            },
+            {
+              "vorm": "equum",
+              "lemma": "equus",
+              "morfologie": "acc.sg.m — 2e decl.",
+              "vertaling_nl": "paard"
+            },
+            {
+              "vorm": "videt",
+              "lemma": "video",
+              "morfologie": "praes.ind.act. 3sg — 2e conj.",
+              "vertaling_nl": "ziet"
+            }
+          ]
+        }
+      ],
+      "knoop_ids": [
+        "LAT-G-MORF-NOM-D1",
+        "LAT-G-MORF-NOM-D2",
+        "LAT-G-MORF-ACC-D1",
+        "LAT-G-MORF-ACC-D2",
+        "LAT-G-MORF-PRAES-C1-ACT",
+        "LAT-G-MORF-PRAES-C2-ACT",
+        "LAT-V-F02-PUELLA",
+        "LAT-V-F01-AQUA",
+        "LAT-V-F02-PORTO",
+        "LAT-V-F01-SERVUS",
+        "LAT-V-F02-EQUUS",
+        "LAT-V-F01-VIDEO"
+      ]
+    },
+    {
+      "id": "LAT-PASS-LJ1-002",
+      "titel_nl": "De meester roept",
+      "niveau": 2,
+      "complexiteit_label": "nom_acc_praes_d12_c12",
+      "zinnen": [
+        {
+          "latijn": "Dominus servum vocat.",
+          "vertaling_nl": "De meester roept de slaaf.",
+          "woorden": [
+            {
+              "vorm": "Dominus",
+              "lemma": "dominus",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "meester/heer"
+            },
+            {
+              "vorm": "servum",
+              "lemma": "servus",
+              "morfologie": "acc.sg.m — 2e decl.",
+              "vertaling_nl": "slaaf"
+            },
+            {
+              "vorm": "vocat",
+              "lemma": "voco",
+              "morfologie": "praes.ind.act. 3sg — 1e conj.",
+              "vertaling_nl": "roept"
+            }
+          ]
+        },
+        {
+          "latijn": "Servus dominum timet.",
+          "vertaling_nl": "De slaaf vreest de meester.",
+          "woorden": [
+            {
+              "vorm": "Servus",
+              "lemma": "servus",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "slaaf"
+            },
+            {
+              "vorm": "dominum",
+              "lemma": "dominus",
+              "morfologie": "acc.sg.m — 2e decl.",
+              "vertaling_nl": "meester/heer"
+            },
+            {
+              "vorm": "timet",
+              "lemma": "timeo",
+              "morfologie": "praes.ind.act. 3sg — 2e conj.",
+              "vertaling_nl": "vreest"
+            }
+          ]
+        },
+        {
+          "latijn": "Filia aquam portat.",
+          "vertaling_nl": "De dochter draagt water.",
+          "woorden": [
+            {
+              "vorm": "Filia",
+              "lemma": "filia",
+              "morfologie": "nom.sg.f — 1e decl.",
+              "vertaling_nl": "dochter"
+            },
+            {
+              "vorm": "aquam",
+              "lemma": "aqua",
+              "morfologie": "acc.sg.f — 1e decl.",
+              "vertaling_nl": "water"
+            },
+            {
+              "vorm": "portat",
+              "lemma": "porto",
+              "morfologie": "praes.ind.act. 3sg — 1e conj.",
+              "vertaling_nl": "draagt"
+            }
+          ]
+        }
+      ],
+      "knoop_ids": [
+        "LAT-G-MORF-NOM-D1",
+        "LAT-G-MORF-NOM-D2",
+        "LAT-G-MORF-ACC-D1",
+        "LAT-G-MORF-ACC-D2",
+        "LAT-G-MORF-PRAES-C1-ACT",
+        "LAT-G-MORF-PRAES-C2-ACT",
+        "LAT-V-F01-DOMINUS",
+        "LAT-V-F01-SERVUS",
+        "LAT-V-F01-VOCO",
+        "LAT-V-F01-TIMEO",
+        "LAT-V-F01-FILIA",
+        "LAT-V-F01-AQUA",
+        "LAT-V-F02-PORTO"
+      ]
+    },
+    {
+      "id": "LAT-PASS-LJ1-003",
+      "titel_nl": "Bij de villa",
+      "niveau": 3,
+      "complexiteit_label": "nom_acc_praes_d12_c12",
+      "zinnen": [
+        {
+          "latijn": "Servi villam vident.",
+          "vertaling_nl": "De slaven zien de villa.",
+          "woorden": [
+            {
+              "vorm": "Servi",
+              "lemma": "servus",
+              "morfologie": "nom.pl.m — 2e decl.",
+              "vertaling_nl": "slaven"
+            },
+            {
+              "vorm": "villam",
+              "lemma": "villa",
+              "morfologie": "acc.sg.f — 1e decl.",
+              "vertaling_nl": "villa/landhuis"
+            },
+            {
+              "vorm": "vident",
+              "lemma": "video",
+              "morfologie": "praes.ind.act. 3pl — 2e conj.",
+              "vertaling_nl": "zien"
+            }
+          ]
+        },
+        {
+          "latijn": "Puellae aquam portant.",
+          "vertaling_nl": "De meisjes dragen water.",
+          "woorden": [
+            {
+              "vorm": "Puellae",
+              "lemma": "puella",
+              "morfologie": "nom.pl.f — 1e decl.",
+              "vertaling_nl": "meisjes"
+            },
+            {
+              "vorm": "aquam",
+              "lemma": "aqua",
+              "morfologie": "acc.sg.f — 1e decl.",
+              "vertaling_nl": "water"
+            },
+            {
+              "vorm": "portant",
+              "lemma": "porto",
+              "morfologie": "praes.ind.act. 3pl — 1e conj.",
+              "vertaling_nl": "dragen"
+            }
+          ]
+        },
+        {
+          "latijn": "Dominus filium amat.",
+          "vertaling_nl": "De meester houdt van zijn zoon.",
+          "woorden": [
+            {
+              "vorm": "Dominus",
+              "lemma": "dominus",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "meester/heer"
+            },
+            {
+              "vorm": "filium",
+              "lemma": "filius",
+              "morfologie": "acc.sg.m — 2e decl.",
+              "vertaling_nl": "zoon"
+            },
+            {
+              "vorm": "amat",
+              "lemma": "amo",
+              "morfologie": "praes.ind.act. 3sg — 1e conj.",
+              "vertaling_nl": "houdt van"
+            }
+          ]
+        }
+      ],
+      "knoop_ids": [
+        "LAT-G-MORF-NOM-D1",
+        "LAT-G-MORF-NOM-D2",
+        "LAT-G-MORF-ACC-D1",
+        "LAT-G-MORF-ACC-D2",
+        "LAT-G-MORF-PRAES-C1-ACT",
+        "LAT-G-MORF-PRAES-C2-ACT",
+        "LAT-G-MORF-NUMERUS-INTRO",
+        "LAT-V-F01-SERVUS",
+        "LAT-V-F02-VILLA",
+        "LAT-V-F01-VIDEO",
+        "LAT-V-F02-PUELLA",
+        "LAT-V-F01-AQUA",
+        "LAT-V-F02-PORTO",
+        "LAT-V-F01-DOMINUS",
+        "LAT-V-F01-FILIUS",
+        "LAT-V-F01-AMO"
+      ]
+    },
+    {
+      "id": "LAT-PASS-LJ1-004",
+      "titel_nl": "Zoon en dochter",
+      "niveau": 4,
+      "complexiteit_label": "nom_acc_praes_d12_c12",
+      "zinnen": [
+        {
+          "latijn": "Filius equum habet.",
+          "vertaling_nl": "De zoon heeft een paard.",
+          "woorden": [
+            {
+              "vorm": "Filius",
+              "lemma": "filius",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "zoon"
+            },
+            {
+              "vorm": "equum",
+              "lemma": "equus",
+              "morfologie": "acc.sg.m — 2e decl.",
+              "vertaling_nl": "paard"
+            },
+            {
+              "vorm": "habet",
+              "lemma": "habeo",
+              "morfologie": "praes.ind.act. 3sg — 2e conj.",
+              "vertaling_nl": "heeft"
+            }
+          ]
+        },
+        {
+          "latijn": "Filia silvam amat.",
+          "vertaling_nl": "De dochter houdt van het bos.",
+          "woorden": [
+            {
+              "vorm": "Filia",
+              "lemma": "filia",
+              "morfologie": "nom.sg.f — 1e decl.",
+              "vertaling_nl": "dochter"
+            },
+            {
+              "vorm": "silvam",
+              "lemma": "silva",
+              "morfologie": "acc.sg.f — 1e decl.",
+              "vertaling_nl": "bos"
+            },
+            {
+              "vorm": "amat",
+              "lemma": "amo",
+              "morfologie": "praes.ind.act. 3sg — 1e conj.",
+              "vertaling_nl": "houdt van"
+            }
+          ]
+        },
+        {
+          "latijn": "Servus filium et filiam vocat.",
+          "vertaling_nl": "De slaaf roept de zoon en de dochter.",
+          "woorden": [
+            {
+              "vorm": "Servus",
+              "lemma": "servus",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "slaaf"
+            },
+            {
+              "vorm": "filium",
+              "lemma": "filius",
+              "morfologie": "acc.sg.m — 2e decl.",
+              "vertaling_nl": "zoon"
+            },
+            {
+              "vorm": "et",
+              "lemma": "et",
+              "morfologie": "nevenschikkend voegwoord",
+              "vertaling_nl": "en"
+            },
+            {
+              "vorm": "filiam",
+              "lemma": "filia",
+              "morfologie": "acc.sg.f — 1e decl.",
+              "vertaling_nl": "dochter"
+            },
+            {
+              "vorm": "vocat",
+              "lemma": "voco",
+              "morfologie": "praes.ind.act. 3sg — 1e conj.",
+              "vertaling_nl": "roept"
+            }
+          ]
+        }
+      ],
+      "knoop_ids": [
+        "LAT-G-MORF-NOM-D1",
+        "LAT-G-MORF-NOM-D2",
+        "LAT-G-MORF-ACC-D1",
+        "LAT-G-MORF-ACC-D2",
+        "LAT-G-MORF-PRAES-C1-ACT",
+        "LAT-G-MORF-PRAES-C2-ACT",
+        "LAT-V-F01-FILIUS",
+        "LAT-V-F02-EQUUS",
+        "LAT-V-F01-HABEO",
+        "LAT-V-F01-FILIA",
+        "LAT-V-F01-SILVA",
+        "LAT-V-F01-AMO",
+        "LAT-V-F01-SERVUS",
+        "LAT-V-F01-ET",
+        "LAT-V-F01-VOCO"
+      ]
+    },
+    {
+      "id": "LAT-PASS-LJ1-005",
+      "titel_nl": "Jongens en meisjes",
+      "niveau": 5,
+      "complexiteit_label": "nom_acc_praes_d12_c12",
+      "zinnen": [
+        {
+          "latijn": "Pueri equos amant.",
+          "vertaling_nl": "De jongens houden van de paarden.",
+          "woorden": [
+            {
+              "vorm": "Pueri",
+              "lemma": "puer",
+              "morfologie": "nom.pl.m — 2e decl.",
+              "vertaling_nl": "jongens"
+            },
+            {
+              "vorm": "equos",
+              "lemma": "equus",
+              "morfologie": "acc.pl.m — 2e decl.",
+              "vertaling_nl": "paarden"
+            },
+            {
+              "vorm": "amant",
+              "lemma": "amo",
+              "morfologie": "praes.ind.act. 3pl — 1e conj.",
+              "vertaling_nl": "houden van"
+            }
+          ]
+        },
+        {
+          "latijn": "Puellae viam vident.",
+          "vertaling_nl": "De meisjes zien de weg.",
+          "woorden": [
+            {
+              "vorm": "Puellae",
+              "lemma": "puella",
+              "morfologie": "nom.pl.f — 1e decl.",
+              "vertaling_nl": "meisjes"
+            },
+            {
+              "vorm": "viam",
+              "lemma": "via",
+              "morfologie": "acc.sg.f — 1e decl.",
+              "vertaling_nl": "weg"
+            },
+            {
+              "vorm": "vident",
+              "lemma": "video",
+              "morfologie": "praes.ind.act. 3pl — 2e conj.",
+              "vertaling_nl": "zien"
+            }
+          ]
+        },
+        {
+          "latijn": "Dominus servos vocat.",
+          "vertaling_nl": "De meester roept de slaven.",
+          "woorden": [
+            {
+              "vorm": "Dominus",
+              "lemma": "dominus",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "meester/heer"
+            },
+            {
+              "vorm": "servos",
+              "lemma": "servus",
+              "morfologie": "acc.pl.m — 2e decl.",
+              "vertaling_nl": "slaven"
+            },
+            {
+              "vorm": "vocat",
+              "lemma": "voco",
+              "morfologie": "praes.ind.act. 3sg — 1e conj.",
+              "vertaling_nl": "roept"
+            }
+          ]
+        },
+        {
+          "latijn": "Servi dominum timent.",
+          "vertaling_nl": "De slaven vrezen de meester.",
+          "woorden": [
+            {
+              "vorm": "Servi",
+              "lemma": "servus",
+              "morfologie": "nom.pl.m — 2e decl.",
+              "vertaling_nl": "slaven"
+            },
+            {
+              "vorm": "dominum",
+              "lemma": "dominus",
+              "morfologie": "acc.sg.m — 2e decl.",
+              "vertaling_nl": "meester/heer"
+            },
+            {
+              "vorm": "timent",
+              "lemma": "timeo",
+              "morfologie": "praes.ind.act. 3pl — 2e conj.",
+              "vertaling_nl": "vrezen"
+            }
+          ]
+        }
+      ],
+      "knoop_ids": [
+        "LAT-G-MORF-NOM-D1",
+        "LAT-G-MORF-NOM-D2",
+        "LAT-G-MORF-ACC-D1",
+        "LAT-G-MORF-ACC-D2",
+        "LAT-G-MORF-PRAES-C1-ACT",
+        "LAT-G-MORF-PRAES-C2-ACT",
+        "LAT-G-MORF-NUMERUS-INTRO",
+        "LAT-V-F02-PUER",
+        "LAT-V-F02-EQUUS",
+        "LAT-V-F01-AMO",
+        "LAT-V-F02-PUELLA",
+        "LAT-V-F01-VIA",
+        "LAT-V-F01-VIDEO",
+        "LAT-V-F01-DOMINUS",
+        "LAT-V-F01-SERVUS",
+        "LAT-V-F01-VOCO",
+        "LAT-V-F01-TIMEO"
+      ]
+    }
+  ]
+}
