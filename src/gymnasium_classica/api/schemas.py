@@ -127,6 +127,29 @@ class KnoopProgressResponse(BaseModel):
     item_history: list[ItemHistoryEntry]
 
 
+# -- Graph visualisation --
+
+
+class GraphNode(BaseModel):
+    id: str
+    titel: str
+    type: str
+    taal: str
+    mastery: float
+    status: str  # "mastered", "in_progress", "unseen"
+
+
+class GraphEdge(BaseModel):
+    source: str
+    target: str
+    type: str  # "prerequisite", "enrichment", "transfer"
+
+
+class GraphDataResponse(BaseModel):
+    nodes: list[GraphNode]
+    edges: list[GraphEdge]
+
+
 # -- Intake --
 
 

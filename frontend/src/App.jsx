@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import Session from './pages/Session'
+import GraphView from './pages/GraphView'
 
 function ProtectedRoute({ children }) {
   const token = localStorage.getItem('token')
@@ -28,6 +29,14 @@ export default function App() {
         element={
           <ProtectedRoute>
             <Session />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/graph"
+        element={
+          <ProtectedRoute>
+            <GraphView />
           </ProtectedRoute>
         }
       />

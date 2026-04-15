@@ -62,3 +62,7 @@ export function getSessionSummary(sessionId) {
 export function getProgressOverview() {
   return apiFetch('/progress/overview');
 }
+
+export function getGraphData() {
+  return apiFetch('/progress/graph');
+}
