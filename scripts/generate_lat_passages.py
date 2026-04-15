@@ -404,7 +404,182 @@ BATCH_2: list[dict] = [
 # Batch 3: passages 11-15 — +3e declinatie, imperfectum, adjectieven
 # ---------------------------------------------------------------------------
 
-BATCH_3: list[dict] = []
+BATCH_3: list[dict] = [
+    passage(
+        11, "De koning en de soldaat", 11, "decl3_impf_adj",
+        zinnen=[
+            zin("Rex militem vocat.", "De koning roept de soldaat.", [
+                w("Rex", "rex", "nom.sg.m — 3e decl.", "koning"),
+                w("militem", "miles", "acc.sg.m — 3e decl.", "soldaat"),
+                w("vocat", "voco", "praes.ind.act. 3sg — 1e conj.", "roept"),
+            ]),
+            zin("Miles regem timet.", "De soldaat vreest de koning.", [
+                w("Miles", "miles", "nom.sg.m — 3e decl.", "soldaat"),
+                w("regem", "rex", "acc.sg.m — 3e decl.", "koning"),
+                w("timet", "timeo", "praes.ind.act. 3sg — 2e conj.", "vreest"),
+            ]),
+            zin("Rex urbem magnam habet.", "De koning heeft een grote stad.", [
+                w("Rex", "rex", "nom.sg.m — 3e decl.", "koning"),
+                w("urbem", "urbs", "acc.sg.f — 3e decl.", "stad"),
+                w("magnam", "magnus", "acc.sg.f — adj. D1/D2", "groot"),
+                w("habet", "habeo", "praes.ind.act. 3sg — 2e conj.", "heeft"),
+            ]),
+        ],
+        knoop_ids=[
+            "LAT-G-MORF-NOM-D3", "LAT-G-MORF-ACC-D3",
+            "LAT-G-MORF-DECL3-INTRO",
+            "LAT-G-MORF-PRAES-C1-ACT", "LAT-G-MORF-PRAES-C2-ACT",
+            "LAT-G-MORF-ADJ-D12-INTRO", "LAT-G-MORF-ADJ-D12-VERBG",
+            "LAT-G-SYNT-ADJ-CONGR",
+            "LAT-V-F01-REX", "LAT-V-F01-MILES", "LAT-V-F01-VOCO",
+            "LAT-V-F01-TIMEO", "LAT-V-F01-URBS", "LAT-V-F01-MAGNUS",
+            "LAT-V-F01-HABEO",
+        ],
+    ),
+    passage(
+        12, "Vader en moeder", 12, "decl3_impf_adj",
+        zinnen=[
+            zin("Pater bonus est.", "De vader is goed.", [
+                w("Pater", "pater", "nom.sg.m — 3e decl.", "vader"),
+                w("bonus", "bonus", "nom.sg.m — adj. D1/D2", "goed"),
+                w("est", "sum", "praes.ind. 3sg — onregelm.", "is"),
+            ]),
+            zin("Mater filiam amat.", "De moeder houdt van haar dochter.", [
+                w("Mater", "mater", "nom.sg.f — 3e decl.", "moeder"),
+                w("filiam", "filia", "acc.sg.f — 1e decl.", "dochter"),
+                w("amat", "amo", "praes.ind.act. 3sg — 1e conj.", "houdt van"),
+            ]),
+            zin("Filius patrem magnum videt.", "De zoon ziet zijn grote vader.", [
+                w("Filius", "filius", "nom.sg.m — 2e decl.", "zoon"),
+                w("patrem", "pater", "acc.sg.m — 3e decl.", "vader"),
+                w("magnum", "magnus", "acc.sg.m — adj. D1/D2", "groot"),
+                w("videt", "video", "praes.ind.act. 3sg — 2e conj.", "ziet"),
+            ]),
+        ],
+        knoop_ids=[
+            "LAT-G-MORF-NOM-D3", "LAT-G-MORF-ACC-D3",
+            "LAT-G-MORF-NOM-D2", "LAT-G-MORF-ACC-D1",
+            "LAT-G-MORF-PRAES-ESSE", "LAT-G-MORF-PRAES-C1-ACT",
+            "LAT-G-MORF-PRAES-C2-ACT",
+            "LAT-G-MORF-ADJ-D12-INTRO", "LAT-G-MORF-ADJ-D12-VERBG",
+            "LAT-G-SYNT-ADJ-CONGR",
+            "LAT-V-F01-PATER", "LAT-V-F01-BONUS", "LAT-V-F01-SUM",
+            "LAT-V-F01-MATER", "LAT-V-F01-FILIA", "LAT-V-F01-AMO",
+            "LAT-V-F01-FILIUS", "LAT-V-F01-MAGNUS", "LAT-V-F01-VIDEO",
+        ],
+    ),
+    passage(
+        13, "Vroeger op het landgoed", 13, "decl3_impf_adj",
+        zinnen=[
+            zin("Olim dominus servum habebat.", "Vroeger had de meester een slaaf.", [
+                w("Olim", "olim", "bijwoord", "vroeger/eens"),
+                w("dominus", "dominus", "nom.sg.m — 2e decl.", "meester/heer"),
+                w("servum", "servus", "acc.sg.m — 2e decl.", "slaaf"),
+                w("habebat", "habeo", "impf.ind.act. 3sg — 2e conj.", "had"),
+            ]),
+            zin("Servus in villa aquam portabat.", "De slaaf droeg water in de villa.", [
+                w("Servus", "servus", "nom.sg.m — 2e decl.", "slaaf"),
+                w("in", "in", "voorzetsel + abl.", "in"),
+                w("villa", "villa", "abl.sg.f — 1e decl.", "villa/landhuis"),
+                w("aquam", "aqua", "acc.sg.f — 1e decl.", "water"),
+                w("portabat", "porto", "impf.ind.act. 3sg — 1e conj.", "droeg"),
+            ]),
+            zin("Filia domini equum amabat.", "De dochter van de meester hield van het paard.", [
+                w("Filia", "filia", "nom.sg.f — 1e decl.", "dochter"),
+                w("domini", "dominus", "gen.sg.m — 2e decl.", "van de meester"),
+                w("equum", "equus", "acc.sg.m — 2e decl.", "paard"),
+                w("amabat", "amo", "impf.ind.act. 3sg — 1e conj.", "hield van"),
+            ]),
+        ],
+        knoop_ids=[
+            "LAT-G-MORF-IMPF-INTRO", "LAT-G-MORF-IMPF-C1C2-ACT",
+            "LAT-G-MORF-NOM-D1", "LAT-G-MORF-NOM-D2",
+            "LAT-G-MORF-ACC-D1", "LAT-G-MORF-ACC-D2",
+            "LAT-G-MORF-ABL-D1", "LAT-G-MORF-GEN-D2",
+            "LAT-G-SYNT-PREP-ABL",
+            "LAT-V-F02-OLIM", "LAT-V-F01-DOMINUS", "LAT-V-F01-SERVUS",
+            "LAT-V-F01-HABEO", "LAT-V-F02-VILLA", "LAT-V-F01-AQUA",
+            "LAT-V-F02-PORTO", "LAT-V-F01-FILIA", "LAT-V-F02-EQUUS",
+            "LAT-V-F01-AMO", "LAT-V-F01-IN",
+        ],
+    ),
+    passage(
+        14, "Burgers en de koning", 14, "decl3_impf_adj",
+        zinnen=[
+            zin("Multi cives in urbe sunt.", "Veel burgers zijn in de stad.", [
+                w("Multi", "multus", "nom.pl.m — adj. D1/D2", "veel"),
+                w("cives", "civis", "nom.pl.m — 3e decl.", "burgers"),
+                w("in", "in", "voorzetsel + abl.", "in"),
+                w("urbe", "urbs", "abl.sg.f — 3e decl.", "stad"),
+                w("sunt", "sum", "praes.ind. 3pl — onregelm.", "zijn"),
+            ]),
+            zin("Rex bonus cives amat.", "De goede koning houdt van de burgers.", [
+                w("Rex", "rex", "nom.sg.m — 3e decl.", "koning"),
+                w("bonus", "bonus", "nom.sg.m — adj. D1/D2", "goed"),
+                w("cives", "civis", "acc.pl.m — 3e decl.", "burgers"),
+                w("amat", "amo", "praes.ind.act. 3sg — 1e conj.", "houdt van"),
+            ]),
+            zin("Milites urbem magnam tenent.", "De soldaten bezetten de grote stad.", [
+                w("Milites", "miles", "nom.pl.m — 3e decl.", "soldaten"),
+                w("urbem", "urbs", "acc.sg.f — 3e decl.", "stad"),
+                w("magnam", "magnus", "acc.sg.f — adj. D1/D2", "groot"),
+                w("tenent", "teneo", "praes.ind.act. 3pl — 2e conj.", "bezetten/houden"),
+            ]),
+        ],
+        knoop_ids=[
+            "LAT-G-MORF-NOM-D3", "LAT-G-MORF-ACC-D3",
+            "LAT-G-MORF-ABL-D3", "LAT-G-MORF-DECL3-INTRO",
+            "LAT-G-MORF-PRAES-ESSE", "LAT-G-MORF-PRAES-C1-ACT",
+            "LAT-G-MORF-PRAES-C2-ACT", "LAT-G-MORF-NUMERUS-INTRO",
+            "LAT-G-MORF-ADJ-D12-INTRO", "LAT-G-MORF-ADJ-D12-VERBG",
+            "LAT-G-SYNT-ADJ-CONGR", "LAT-G-SYNT-PREP-ABL",
+            "LAT-V-F01-MULTUS", "LAT-V-F01-CIVIS", "LAT-V-F01-URBS",
+            "LAT-V-F01-SUM", "LAT-V-F01-REX", "LAT-V-F01-BONUS",
+            "LAT-V-F01-AMO", "LAT-V-F01-MILES", "LAT-V-F01-MAGNUS",
+            "LAT-V-F01-TENEO", "LAT-V-F01-IN",
+        ],
+    ),
+    passage(
+        15, "Tijd van oorlog", 15, "decl3_impf_adj",
+        zinnen=[
+            zin("Tempus belli erat.", "Het was tijd van oorlog.", [
+                w("Tempus", "tempus", "nom.sg.n — 3e decl.", "tijd"),
+                w("belli", "bellum", "gen.sg.n — 2e decl.", "van oorlog"),
+                w("erat", "sum", "impf.ind. 3sg — onregelm.", "was"),
+            ]),
+            zin("Milites in via erant.", "De soldaten waren op de weg.", [
+                w("Milites", "miles", "nom.pl.m — 3e decl.", "soldaten"),
+                w("in", "in", "voorzetsel + abl.", "op"),
+                w("via", "via", "abl.sg.f — 1e decl.", "weg"),
+                w("erant", "sum", "impf.ind. 3pl — onregelm.", "waren"),
+            ]),
+            zin("Rex multos milites habebat.", "De koning had veel soldaten.", [
+                w("Rex", "rex", "nom.sg.m — 3e decl.", "koning"),
+                w("multos", "multus", "acc.pl.m — adj. D1/D2", "veel"),
+                w("milites", "miles", "acc.pl.m — 3e decl.", "soldaten"),
+                w("habebat", "habeo", "impf.ind.act. 3sg — 2e conj.", "had"),
+            ]),
+            zin("Cives hostes timebant.", "De burgers vreesden de vijanden.", [
+                w("Cives", "civis", "nom.pl.m — 3e decl.", "burgers"),
+                w("hostes", "hostis", "acc.pl.m — 3e decl.", "vijanden"),
+                w("timebant", "timeo", "impf.ind.act. 3pl — 2e conj.", "vreesden"),
+            ]),
+        ],
+        knoop_ids=[
+            "LAT-G-MORF-NOM-D3", "LAT-G-MORF-ACC-D3",
+            "LAT-G-MORF-GEN-D2", "LAT-G-MORF-ABL-D1",
+            "LAT-G-MORF-DECL3-INTRO", "LAT-G-MORF-DECL3-CONS",
+            "LAT-G-MORF-IMPF-INTRO", "LAT-G-MORF-IMPF-C1C2-ACT",
+            "LAT-G-MORF-IMPF-ESSE", "LAT-G-MORF-NUMERUS-INTRO",
+            "LAT-G-MORF-ADJ-D12-VERBG",
+            "LAT-G-SYNT-GEN-FUNCTIE", "LAT-G-SYNT-PREP-ABL",
+            "LAT-V-F01-TEMPUS", "LAT-V-F01-BELLUM", "LAT-V-F01-SUM",
+            "LAT-V-F01-MILES", "LAT-V-F01-VIA", "LAT-V-F01-IN",
+            "LAT-V-F01-REX", "LAT-V-F01-MULTUS", "LAT-V-F01-HABEO",
+            "LAT-V-F01-CIVIS", "LAT-V-F01-HOSTIS", "LAT-V-F01-TIMEO",
+        ],
+    ),
+]
 
 # ---------------------------------------------------------------------------
 # Batch 4: passages 16-20 — +perfectum, pronomina, AcI-intro

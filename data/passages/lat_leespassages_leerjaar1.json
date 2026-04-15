@@ -1161,6 +1161,614 @@
         "LAT-V-F02-EQUUS",
         "LAT-V-F01-DO"
       ]
+    },
+    {
+      "id": "LAT-PASS-LJ1-011",
+      "titel_nl": "De koning en de soldaat",
+      "niveau": 11,
+      "complexiteit_label": "decl3_impf_adj",
+      "zinnen": [
+        {
+          "latijn": "Rex militem vocat.",
+          "vertaling_nl": "De koning roept de soldaat.",
+          "woorden": [
+            {
+              "vorm": "Rex",
+              "lemma": "rex",
+              "morfologie": "nom.sg.m — 3e decl.",
+              "vertaling_nl": "koning"
+            },
+            {
+              "vorm": "militem",
+              "lemma": "miles",
+              "morfologie": "acc.sg.m — 3e decl.",
+              "vertaling_nl": "soldaat"
+            },
+            {
+              "vorm": "vocat",
+              "lemma": "voco",
+              "morfologie": "praes.ind.act. 3sg — 1e conj.",
+              "vertaling_nl": "roept"
+            }
+          ]
+        },
+        {
+          "latijn": "Miles regem timet.",
+          "vertaling_nl": "De soldaat vreest de koning.",
+          "woorden": [
+            {
+              "vorm": "Miles",
+              "lemma": "miles",
+              "morfologie": "nom.sg.m — 3e decl.",
+              "vertaling_nl": "soldaat"
+            },
+            {
+              "vorm": "regem",
+              "lemma": "rex",
+              "morfologie": "acc.sg.m — 3e decl.",
+              "vertaling_nl": "koning"
+            },
+            {
+              "vorm": "timet",
+              "lemma": "timeo",
+              "morfologie": "praes.ind.act. 3sg — 2e conj.",
+              "vertaling_nl": "vreest"
+            }
+          ]
+        },
+        {
+          "latijn": "Rex urbem magnam habet.",
+          "vertaling_nl": "De koning heeft een grote stad.",
+          "woorden": [
+            {
+              "vorm": "Rex",
+              "lemma": "rex",
+              "morfologie": "nom.sg.m — 3e decl.",
+              "vertaling_nl": "koning"
+            },
+            {
+              "vorm": "urbem",
+              "lemma": "urbs",
+              "morfologie": "acc.sg.f — 3e decl.",
+              "vertaling_nl": "stad"
+            },
+            {
+              "vorm": "magnam",
+              "lemma": "magnus",
+              "morfologie": "acc.sg.f — adj. D1/D2",
+              "vertaling_nl": "groot"
+            },
+            {
+              "vorm": "habet",
+              "lemma": "habeo",
+              "morfologie": "praes.ind.act. 3sg — 2e conj.",
+              "vertaling_nl": "heeft"
+            }
+          ]
+        }
+      ],
+      "knoop_ids": [
+        "LAT-G-MORF-NOM-D3",
+        "LAT-G-MORF-ACC-D3",
+        "LAT-G-MORF-DECL3-INTRO",
+        "LAT-G-MORF-PRAES-C1-ACT",
+        "LAT-G-MORF-PRAES-C2-ACT",
+        "LAT-G-MORF-ADJ-D12-INTRO",
+        "LAT-G-MORF-ADJ-D12-VERBG",
+        "LAT-G-SYNT-ADJ-CONGR",
+        "LAT-V-F01-REX",
+        "LAT-V-F01-MILES",
+        "LAT-V-F01-VOCO",
+        "LAT-V-F01-TIMEO",
+        "LAT-V-F01-URBS",
+        "LAT-V-F01-MAGNUS",
+        "LAT-V-F01-HABEO"
+      ]
+    },
+    {
+      "id": "LAT-PASS-LJ1-012",
+      "titel_nl": "Vader en moeder",
+      "niveau": 12,
+      "complexiteit_label": "decl3_impf_adj",
+      "zinnen": [
+        {
+          "latijn": "Pater bonus est.",
+          "vertaling_nl": "De vader is goed.",
+          "woorden": [
+            {
+              "vorm": "Pater",
+              "lemma": "pater",
+              "morfologie": "nom.sg.m — 3e decl.",
+              "vertaling_nl": "vader"
+            },
+            {
+              "vorm": "bonus",
+              "lemma": "bonus",
+              "morfologie": "nom.sg.m — adj. D1/D2",
+              "vertaling_nl": "goed"
+            },
+            {
+              "vorm": "est",
+              "lemma": "sum",
+              "morfologie": "praes.ind. 3sg — onregelm.",
+              "vertaling_nl": "is"
+            }
+          ]
+        },
+        {
+          "latijn": "Mater filiam amat.",
+          "vertaling_nl": "De moeder houdt van haar dochter.",
+          "woorden": [
+            {
+              "vorm": "Mater",
+              "lemma": "mater",
+              "morfologie": "nom.sg.f — 3e decl.",
+              "vertaling_nl": "moeder"
+            },
+            {
+              "vorm": "filiam",
+              "lemma": "filia",
+              "morfologie": "acc.sg.f — 1e decl.",
+              "vertaling_nl": "dochter"
+            },
+            {
+              "vorm": "amat",
+              "lemma": "amo",
+              "morfologie": "praes.ind.act. 3sg — 1e conj.",
+              "vertaling_nl": "houdt van"
+            }
+          ]
+        },
+        {
+          "latijn": "Filius patrem magnum videt.",
+          "vertaling_nl": "De zoon ziet zijn grote vader.",
+          "woorden": [
+            {
+              "vorm": "Filius",
+              "lemma": "filius",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "zoon"
+            },
+            {
+              "vorm": "patrem",
+              "lemma": "pater",
+              "morfologie": "acc.sg.m — 3e decl.",
+              "vertaling_nl": "vader"
+            },
+            {
+              "vorm": "magnum",
+              "lemma": "magnus",
+              "morfologie": "acc.sg.m — adj. D1/D2",
+              "vertaling_nl": "groot"
+            },
+            {
+              "vorm": "videt",
+              "lemma": "video",
+              "morfologie": "praes.ind.act. 3sg — 2e conj.",
+              "vertaling_nl": "ziet"
+            }
+          ]
+        }
+      ],
+      "knoop_ids": [
+        "LAT-G-MORF-NOM-D3",
+        "LAT-G-MORF-ACC-D3",
+        "LAT-G-MORF-NOM-D2",
+        "LAT-G-MORF-ACC-D1",
+        "LAT-G-MORF-PRAES-ESSE",
+        "LAT-G-MORF-PRAES-C1-ACT",
+        "LAT-G-MORF-PRAES-C2-ACT",
+        "LAT-G-MORF-ADJ-D12-INTRO",
+        "LAT-G-MORF-ADJ-D12-VERBG",
+        "LAT-G-SYNT-ADJ-CONGR",
+        "LAT-V-F01-PATER",
+        "LAT-V-F01-BONUS",
+        "LAT-V-F01-SUM",
+        "LAT-V-F01-MATER",
+        "LAT-V-F01-FILIA",
+        "LAT-V-F01-AMO",
+        "LAT-V-F01-FILIUS",
+        "LAT-V-F01-MAGNUS",
+        "LAT-V-F01-VIDEO"
+      ]
+    },
+    {
+      "id": "LAT-PASS-LJ1-013",
+      "titel_nl": "Vroeger op het landgoed",
+      "niveau": 13,
+      "complexiteit_label": "decl3_impf_adj",
+      "zinnen": [
+        {
+          "latijn": "Olim dominus servum habebat.",
+          "vertaling_nl": "Vroeger had de meester een slaaf.",
+          "woorden": [
+            {
+              "vorm": "Olim",
+              "lemma": "olim",
+              "morfologie": "bijwoord",
+              "vertaling_nl": "vroeger/eens"
+            },
+            {
+              "vorm": "dominus",
+              "lemma": "dominus",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "meester/heer"
+            },
+            {
+              "vorm": "servum",
+              "lemma": "servus",
+              "morfologie": "acc.sg.m — 2e decl.",
+              "vertaling_nl": "slaaf"
+            },
+            {
+              "vorm": "habebat",
+              "lemma": "habeo",
+              "morfologie": "impf.ind.act. 3sg — 2e conj.",
+              "vertaling_nl": "had"
+            }
+          ]
+        },
+        {
+          "latijn": "Servus in villa aquam portabat.",
+          "vertaling_nl": "De slaaf droeg water in de villa.",
+          "woorden": [
+            {
+              "vorm": "Servus",
+              "lemma": "servus",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "slaaf"
+            },
+            {
+              "vorm": "in",
+              "lemma": "in",
+              "morfologie": "voorzetsel + abl.",
+              "vertaling_nl": "in"
+            },
+            {
+              "vorm": "villa",
+              "lemma": "villa",
+              "morfologie": "abl.sg.f — 1e decl.",
+              "vertaling_nl": "villa/landhuis"
+            },
+            {
+              "vorm": "aquam",
+              "lemma": "aqua",
+              "morfologie": "acc.sg.f — 1e decl.",
+              "vertaling_nl": "water"
+            },
+            {
+              "vorm": "portabat",
+              "lemma": "porto",
+              "morfologie": "impf.ind.act. 3sg — 1e conj.",
+              "vertaling_nl": "droeg"
+            }
+          ]
+        },
+        {
+          "latijn": "Filia domini equum amabat.",
+          "vertaling_nl": "De dochter van de meester hield van het paard.",
+          "woorden": [
+            {
+              "vorm": "Filia",
+              "lemma": "filia",
+              "morfologie": "nom.sg.f — 1e decl.",
+              "vertaling_nl": "dochter"
+            },
+            {
+              "vorm": "domini",
+              "lemma": "dominus",
+              "morfologie": "gen.sg.m — 2e decl.",
+              "vertaling_nl": "van de meester"
+            },
+            {
+              "vorm": "equum",
+              "lemma": "equus",
+              "morfologie": "acc.sg.m — 2e decl.",
+              "vertaling_nl": "paard"
+            },
+            {
+              "vorm": "amabat",
+              "lemma": "amo",
+              "morfologie": "impf.ind.act. 3sg — 1e conj.",
+              "vertaling_nl": "hield van"
+            }
+          ]
+        }
+      ],
+      "knoop_ids": [
+        "LAT-G-MORF-IMPF-INTRO",
+        "LAT-G-MORF-IMPF-C1C2-ACT",
+        "LAT-G-MORF-NOM-D1",
+        "LAT-G-MORF-NOM-D2",
+        "LAT-G-MORF-ACC-D1",
+        "LAT-G-MORF-ACC-D2",
+        "LAT-G-MORF-ABL-D1",
+        "LAT-G-MORF-GEN-D2",
+        "LAT-G-SYNT-PREP-ABL",
+        "LAT-V-F02-OLIM",
+        "LAT-V-F01-DOMINUS",
+        "LAT-V-F01-SERVUS",
+        "LAT-V-F01-HABEO",
+        "LAT-V-F02-VILLA",
+        "LAT-V-F01-AQUA",
+        "LAT-V-F02-PORTO",
+        "LAT-V-F01-FILIA",
+        "LAT-V-F02-EQUUS",
+        "LAT-V-F01-AMO",
+        "LAT-V-F01-IN"
+      ]
+    },
+    {
+      "id": "LAT-PASS-LJ1-014",
+      "titel_nl": "Burgers en de koning",
+      "niveau": 14,
+      "complexiteit_label": "decl3_impf_adj",
+      "zinnen": [
+        {
+          "latijn": "Multi cives in urbe sunt.",
+          "vertaling_nl": "Veel burgers zijn in de stad.",
+          "woorden": [
+            {
+              "vorm": "Multi",
+              "lemma": "multus",
+              "morfologie": "nom.pl.m — adj. D1/D2",
+              "vertaling_nl": "veel"
+            },
+            {
+              "vorm": "cives",
+              "lemma": "civis",
+              "morfologie": "nom.pl.m — 3e decl.",
+              "vertaling_nl": "burgers"
+            },
+            {
+              "vorm": "in",
+              "lemma": "in",
+              "morfologie": "voorzetsel + abl.",
+              "vertaling_nl": "in"
+            },
+            {
+              "vorm": "urbe",
+              "lemma": "urbs",
+              "morfologie": "abl.sg.f — 3e decl.",
+              "vertaling_nl": "stad"
+            },
+            {
+              "vorm": "sunt",
+              "lemma": "sum",
+              "morfologie": "praes.ind. 3pl — onregelm.",
+              "vertaling_nl": "zijn"
+            }
+          ]
+        },
+        {
+          "latijn": "Rex bonus cives amat.",
+          "vertaling_nl": "De goede koning houdt van de burgers.",
+          "woorden": [
+            {
+              "vorm": "Rex",
+              "lemma": "rex",
+              "morfologie": "nom.sg.m — 3e decl.",
+              "vertaling_nl": "koning"
+            },
+            {
+              "vorm": "bonus",
+              "lemma": "bonus",
+              "morfologie": "nom.sg.m — adj. D1/D2",
+              "vertaling_nl": "goed"
+            },
+            {
+              "vorm": "cives",
+              "lemma": "civis",
+              "morfologie": "acc.pl.m — 3e decl.",
+              "vertaling_nl": "burgers"
+            },
+            {
+              "vorm": "amat",
+              "lemma": "amo",
+              "morfologie": "praes.ind.act. 3sg — 1e conj.",
+              "vertaling_nl": "houdt van"
+            }
+          ]
+        },
+        {
+          "latijn": "Milites urbem magnam tenent.",
+          "vertaling_nl": "De soldaten bezetten de grote stad.",
+          "woorden": [
+            {
+              "vorm": "Milites",
+              "lemma": "miles",
+              "morfologie": "nom.pl.m — 3e decl.",
+              "vertaling_nl": "soldaten"
+            },
+            {
+              "vorm": "urbem",
+              "lemma": "urbs",
+              "morfologie": "acc.sg.f — 3e decl.",
+              "vertaling_nl": "stad"
+            },
+            {
+              "vorm": "magnam",
+              "lemma": "magnus",
+              "morfologie": "acc.sg.f — adj. D1/D2",
+              "vertaling_nl": "groot"
+            },
+            {
+              "vorm": "tenent",
+              "lemma": "teneo",
+              "morfologie": "praes.ind.act. 3pl — 2e conj.",
+              "vertaling_nl": "bezetten/houden"
+            }
+          ]
+        }
+      ],
+      "knoop_ids": [
+        "LAT-G-MORF-NOM-D3",
+        "LAT-G-MORF-ACC-D3",
+        "LAT-G-MORF-ABL-D3",
+        "LAT-G-MORF-DECL3-INTRO",
+        "LAT-G-MORF-PRAES-ESSE",
+        "LAT-G-MORF-PRAES-C1-ACT",
+        "LAT-G-MORF-PRAES-C2-ACT",
+        "LAT-G-MORF-NUMERUS-INTRO",
+        "LAT-G-MORF-ADJ-D12-INTRO",
+        "LAT-G-MORF-ADJ-D12-VERBG",
+        "LAT-G-SYNT-ADJ-CONGR",
+        "LAT-G-SYNT-PREP-ABL",
+        "LAT-V-F01-MULTUS",
+        "LAT-V-F01-CIVIS",
+        "LAT-V-F01-URBS",
+        "LAT-V-F01-SUM",
+        "LAT-V-F01-REX",
+        "LAT-V-F01-BONUS",
+        "LAT-V-F01-AMO",
+        "LAT-V-F01-MILES",
+        "LAT-V-F01-MAGNUS",
+        "LAT-V-F01-TENEO",
+        "LAT-V-F01-IN"
+      ]
+    },
+    {
+      "id": "LAT-PASS-LJ1-015",
+      "titel_nl": "Tijd van oorlog",
+      "niveau": 15,
+      "complexiteit_label": "decl3_impf_adj",
+      "zinnen": [
+        {
+          "latijn": "Tempus belli erat.",
+          "vertaling_nl": "Het was tijd van oorlog.",
+          "woorden": [
+            {
+              "vorm": "Tempus",
+              "lemma": "tempus",
+              "morfologie": "nom.sg.n — 3e decl.",
+              "vertaling_nl": "tijd"
+            },
+            {
+              "vorm": "belli",
+              "lemma": "bellum",
+              "morfologie": "gen.sg.n — 2e decl.",
+              "vertaling_nl": "van oorlog"
+            },
+            {
+              "vorm": "erat",
+              "lemma": "sum",
+              "morfologie": "impf.ind. 3sg — onregelm.",
+              "vertaling_nl": "was"
+            }
+          ]
+        },
+        {
+          "latijn": "Milites in via erant.",
+          "vertaling_nl": "De soldaten waren op de weg.",
+          "woorden": [
+            {
+              "vorm": "Milites",
+              "lemma": "miles",
+              "morfologie": "nom.pl.m — 3e decl.",
+              "vertaling_nl": "soldaten"
+            },
+            {
+              "vorm": "in",
+              "lemma": "in",
+              "morfologie": "voorzetsel + abl.",
+              "vertaling_nl": "op"
+            },
+            {
+              "vorm": "via",
+              "lemma": "via",
+              "morfologie": "abl.sg.f — 1e decl.",
+              "vertaling_nl": "weg"
+            },
+            {
+              "vorm": "erant",
+              "lemma": "sum",
+              "morfologie": "impf.ind. 3pl — onregelm.",
+              "vertaling_nl": "waren"
+            }
+          ]
+        },
+        {
+          "latijn": "Rex multos milites habebat.",
+          "vertaling_nl": "De koning had veel soldaten.",
+          "woorden": [
+            {
+              "vorm": "Rex",
+              "lemma": "rex",
+              "morfologie": "nom.sg.m — 3e decl.",
+              "vertaling_nl": "koning"
+            },
+            {
+              "vorm": "multos",
+              "lemma": "multus",
+              "morfologie": "acc.pl.m — adj. D1/D2",
+              "vertaling_nl": "veel"
+            },
+            {
+              "vorm": "milites",
+              "lemma": "miles",
+              "morfologie": "acc.pl.m — 3e decl.",
+              "vertaling_nl": "soldaten"
+            },
+            {
+              "vorm": "habebat",
+              "lemma": "habeo",
+              "morfologie": "impf.ind.act. 3sg — 2e conj.",
+              "vertaling_nl": "had"
+            }
+          ]
+        },
+        {
+          "latijn": "Cives hostes timebant.",
+          "vertaling_nl": "De burgers vreesden de vijanden.",
+          "woorden": [
+            {
+              "vorm": "Cives",
+              "lemma": "civis",
+              "morfologie": "nom.pl.m — 3e decl.",
+              "vertaling_nl": "burgers"
+            },
+            {
+              "vorm": "hostes",
+              "lemma": "hostis",
+              "morfologie": "acc.pl.m — 3e decl.",
+              "vertaling_nl": "vijanden"
+            },
+            {
+              "vorm": "timebant",
+              "lemma": "timeo",
+              "morfologie": "impf.ind.act. 3pl — 2e conj.",
+              "vertaling_nl": "vreesden"
+            }
+          ]
+        }
+      ],
+      "knoop_ids": [
+        "LAT-G-MORF-NOM-D3",
+        "LAT-G-MORF-ACC-D3",
+        "LAT-G-MORF-GEN-D2",
+        "LAT-G-MORF-ABL-D1",
+        "LAT-G-MORF-DECL3-INTRO",
+        "LAT-G-MORF-DECL3-CONS",
+        "LAT-G-MORF-IMPF-INTRO",
+        "LAT-G-MORF-IMPF-C1C2-ACT",
+        "LAT-G-MORF-IMPF-ESSE",
+        "LAT-G-MORF-NUMERUS-INTRO",
+        "LAT-G-MORF-ADJ-D12-VERBG",
+        "LAT-G-SYNT-GEN-FUNCTIE",
+        "LAT-G-SYNT-PREP-ABL",
+        "LAT-V-F01-TEMPUS",
+        "LAT-V-F01-BELLUM",
+        "LAT-V-F01-SUM",
+        "LAT-V-F01-MILES",
+        "LAT-V-F01-VIA",
+        "LAT-V-F01-IN",
+        "LAT-V-F01-REX",
+        "LAT-V-F01-MULTUS",
+        "LAT-V-F01-HABEO",
+        "LAT-V-F01-CIVIS",
+        "LAT-V-F01-HOSTIS",
+        "LAT-V-F01-TIMEO"
+      ]
     }
   ]
 }
