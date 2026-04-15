@@ -7,13 +7,15 @@ export default function QuestionCard({ question }) {
       {beschrijving && (
         <p className="question-description">{beschrijving}</p>
       )}
-      <div className="question-stimulus">
-        {typeof stimulus === 'string' ? (
-          <p>{stimulus}</p>
-        ) : (
-          <p>{stimulus?.text || JSON.stringify(stimulus)}</p>
-        )}
-      </div>
+      {stimulus && (
+        <div className="question-stimulus">
+          {typeof stimulus === 'string' ? (
+            <p>{stimulus}</p>
+          ) : stimulus?.text ? (
+            <p>{stimulus.text}</p>
+          ) : null}
+        </div>
+      )}
     </div>
   )
 }
