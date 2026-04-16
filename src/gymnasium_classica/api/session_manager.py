@@ -41,6 +41,7 @@ from gymnasium_classica.scheduling.session import (
     _collect_offline_items,
     _get_state_posterior,
     _process_response,
+    select_passage,
 )
 from gymnasium_classica.scheduling.sm2 import sm2_update
 
@@ -122,6 +123,8 @@ class _SessionState:
     ended_at: datetime | None = None
     learning_route: LearningRoute = LearningRoute.GRAMMAR_FIRST
     passages: list[Passage] = field(default_factory=list)
+    current_passage: Passage | None = None
+    passage_presented: bool = False
 
 
 def _generate_self_assess_prompt(knoop: KennisKnoop) -> str:
@@ -136,6 +139,30 @@ def _generate_self_assess_prompt(knoop: KennisKnoop) -> str:
         return f"Kun je het volgende uitleggen: {titel}?"
     else:
         return f"Beheers je het volgende concept: {titel}?"
+
+
+def _passage_to_question(passage: Passage, phase: SessionPhase) -> Question:
+    """Convert a Passage to a Question for the API.
+
+    The stimulus is a dict with type="passage" so the frontend can
+    distinguish it from a regular knoop question and render the
+    PassageReader component.
+    """
+    return Question(
+        knoop_id=passage.id,
+        titel=passage.titel,
+        beschrijving="Lees de passage en probeer de tekst te begrijpen.",
+        stimulus={
+            "type": "passage",
+            "passage_id": passage.id,
+            "taal": passage.taal.value,
+            "tekst": passage.tekst,
+            "annotaties": [a.model_dump() for a in passage.annotaties],
+            "knoop_ids": passage.knoop_ids,
+            "moeilijkheid": passage.moeilijkheid,
+        },
+        phase=phase.value,
+    )
 
 
 def _knoop_to_question(knoop: KennisKnoop, phase: SessionPhase) -> Question:
@@ -227,15 +254,48 @@ class SessionManager:
 
         Raises KeyError if session_id is unknown.
         Raises ValueError if session is already finished or no question is pending.
+
+        For passage questions (context-first reading step), BKT is skipped:
+        the passage is not a knowledge node, so no mastery update occurs.
+        The response is acknowledged and the session advances to the
+        grammar scaffolding nodes from that passage.
         """
         state = self._sessions[session_id]
         if state.finished:
             raise ValueError(f"Session {session_id} is already finished")
-        if state.current_knoop is None:
-            raise ValueError(f"No pending question for session {session_id}")
 
         if now is None:
             now = datetime.now()
+
+        # --- Passage question handling (no BKT) ---
+        if state.current_knoop is None and state.current_passage is not None:
+            passage = state.current_passage
+            state.items_presented += 1
+            # Don't consume time budget for the passage reading step;
+            # the full NEW_MATERIAL budget is reserved for the grammar
+            # scaffolding nodes that follow.
+
+            feedback = Feedback(
+                knoop_id=passage.id,
+                correct=True,
+                response_type="passage_read",
+                mastery_before=0.0,
+                mastery_after=0.0,
+            )
+
+            # Advance to grammar scaffolding (next call to _advance
+            # will compute candidates for the passage's nodes)
+            next_q = self._advance(state, now)
+
+            if next_q is None:
+                self._finalize_session(state, now)
+                return AnswerResult(feedback=feedback, session_finished=True)
+
+            return AnswerResult(feedback=feedback, next_question=next_q)
+
+        # --- Normal knoop question handling ---
+        if state.current_knoop is None:
+            raise ValueError(f"No pending question for session {session_id}")
 
         knoop = state.current_knoop
         knoop_id = knoop.id
@@ -310,9 +370,35 @@ class SessionManager:
         """Find the next question, advancing phases as needed.
 
         Returns None when no more questions are available.
+
+        For context-first sessions, the new-material phase first presents
+        a passage (reading step), then scaffolds the grammar nodes from
+        that passage as individual questions.
         """
         while state.phase_index < len(PHASE_ORDER):
             phase = PHASE_ORDER[state.phase_index]
+
+            # Context-first: present passage before grammar scaffolding
+            if (
+                phase == SessionPhase.NEW_MATERIAL
+                and state.learning_route == LearningRoute.CONTEXT_FIRST
+                and state.passages
+                and not state.passage_presented
+            ):
+                passage = select_passage(
+                    state.learner, state.graph, state.passages
+                )
+                if passage is not None:
+                    state.current_passage = passage
+                    state.passage_presented = True
+                    state.current_knoop = None
+                    # Don't set budget_remaining here: the passage is a
+                    # reading step, not a timed item.  When _advance is
+                    # called again after the passage answer, the normal
+                    # "budget <= 0" check will initialise the phase with
+                    # grammar candidates and the full time budget.
+                    return _passage_to_question(passage, phase)
+                # No suitable passage → fall through to normal flow
 
             # If we haven't computed candidates for this phase yet, do so now
             if not state.candidates and state.budget_remaining <= 0:

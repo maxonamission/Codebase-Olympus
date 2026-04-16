@@ -4,7 +4,7 @@ import networkx as nx
 from fastapi import APIRouter, Depends, HTTPException, Request
 
 from gymnasium_classica.api.auth import get_current_user_id
-from gymnasium_classica.api.database import load_learner_model, save_learner_model
+from gymnasium_classica.api.database import get_user, load_learner_model, save_learner_model
 from gymnasium_classica.api.schemas import (
     AnswerRequest,
     AnswerResponse,
@@ -52,9 +52,14 @@ async def start_session(
     request: Request,
     user_id: str = Depends(get_current_user_id),
 ):
-    """Start a new learning session. Returns session_id and the first question."""
+    """Start a new learning session. Returns session_id and the first question.
+
+    Automatically uses the user's learning_route preference and loads
+    passages from the server when the route is context_first.
+    """
     db = request.app.state.db
     graph: nx.DiGraph = request.app.state.graph
+    passages = getattr(request.app.state, "passages", [])
 
     # Load or create learner model
     learner = load_learner_model(db, user_id)
@@ -63,7 +68,21 @@ async def start_session(
 
         learner = LearnerModel(user_id=UUID(user_id))
 
-    session_id, question = session_manager.start_session(user_id, learner, graph)
+    # Read the user's learning route preference
+    from gymnasium_classica.models.user import LearningRoute
+
+    user = get_user(db, user_id)
+    learning_route = (
+        user.learning_route if user is not None else LearningRoute.GRAMMAR_FIRST
+    )
+
+    session_id, question = session_manager.start_session(
+        user_id,
+        learner,
+        graph,
+        learning_route=learning_route,
+        passages=passages,
+    )
 
     # Persist learner model after session start
     save_learner_model(db, learner)
