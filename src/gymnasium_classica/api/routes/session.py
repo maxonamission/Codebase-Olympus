@@ -44,6 +44,7 @@ def _question_to_response(q: Question | None) -> QuestionResponse | None:
             )
             for item in q.items
         ],
+        scaffolding_content=q.scaffolding_content,
     )
 
 

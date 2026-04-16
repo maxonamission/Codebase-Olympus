@@ -41,6 +41,10 @@ class QuestionResponse(BaseModel):
     stimulus: str | dict
     phase: str
     items: list[ItemInfo] = Field(default_factory=list)
+    scaffolding_content: Optional[str] = Field(
+        default=None,
+        description="Markdown grammar explanation for context-first scaffolding",
+    )
 
 
 class StartSessionResponse(BaseModel):
