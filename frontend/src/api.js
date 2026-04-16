@@ -18,6 +18,12 @@ export async function apiFetch(path, options = {}) {
   });
 
   if (!response.ok) {
+    if (response.status === 401) {
+      // Token is invalid or expired — clear it and redirect to login
+      localStorage.removeItem('token');
+      window.location.href = '/login';
+      throw new Error('Sessie verlopen. Log opnieuw in.');
+    }
     const body = await response.json().catch(() => ({}));
     const message = body.detail || `Fout: ${response.status}`;
     throw new Error(message);
