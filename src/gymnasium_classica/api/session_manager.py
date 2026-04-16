@@ -138,6 +138,11 @@ def _generate_self_assess_prompt(knoop: KennisKnoop) -> str:
     if t == "G":
         return f"Kun je het volgende uitleggen of opschrijven: {titel}?"
     elif t == "V":
+        # V-node titles have format "lemma — translation". Show only the lemma
+        # as the prompt so the learner has to recall the translation.
+        if " — " in titel:
+            lemma = titel.split(" — ")[0].strip()
+            return f"Wat betekent: {lemma}?"
         return f"Ken je de betekenis van dit woord: {titel}?"
     elif t == "C":
         return f"Kun je het volgende uitleggen: {titel}?"
@@ -219,13 +224,18 @@ def _knoop_to_question(
     else:
         stimulus = _generate_self_assess_prompt(knoop)
 
+    # For V-nodes: show only the lemma in the title, hide the translation
+    titel = knoop.titel_nl
+    if knoop.type.value == "V" and " — " in titel and not knoop.items:
+        titel = titel.split(" — ")[0].strip()
+
     content = None
     if include_scaffolding:
         content = _load_scaffolding_content(knoop, content_dir)
 
     return Question(
         knoop_id=knoop.id,
-        titel=knoop.titel_nl,
+        titel=titel,
         beschrijving=knoop.beschrijving,
         stimulus=stimulus,
         phase=phase.value,
