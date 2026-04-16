@@ -576,6 +576,763 @@
         "GRC-V-F01-KALOS",
         "GRC-V-F01-ARTIC"
       ]
+    },
+    {
+      "id": "GRC-PASS-LJ1-006",
+      "titel_nl": "De ziel en het recht",
+      "niveau": 6,
+      "complexiteit_label": "d1_eta_gen_d2",
+      "zinnen": [
+        {
+          "grieks": "ἡ ψυχὴ ἀγαθή ἐστιν.",
+          "vertaling_nl": "De ziel is goed.",
+          "woorden": [
+            {
+              "vorm": "ἡ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.sg.f — lidwoord",
+              "vertaling_nl": "de"
+            },
+            {
+              "vorm": "ψυχὴ",
+              "lemma": "ψυχή",
+              "morfologie": "nom.sg.f — 1e decl. (η-type)",
+              "vertaling_nl": "ziel"
+            },
+            {
+              "vorm": "ἀγαθή",
+              "lemma": "ἀγαθός",
+              "morfologie": "nom.sg.f — adj. D1/D2",
+              "vertaling_nl": "goed"
+            },
+            {
+              "vorm": "ἐστιν",
+              "lemma": "εἰμί",
+              "morfologie": "praes.ind. 3sg",
+              "vertaling_nl": "is"
+            }
+          ]
+        },
+        {
+          "grieks": "ἡ δίκη καλή ἐστιν.",
+          "vertaling_nl": "Het recht is mooi/rechtvaardig.",
+          "woorden": [
+            {
+              "vorm": "ἡ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.sg.f — lidwoord",
+              "vertaling_nl": "het"
+            },
+            {
+              "vorm": "δίκη",
+              "lemma": "δίκη",
+              "morfologie": "nom.sg.f — 1e decl. (η-type)",
+              "vertaling_nl": "recht"
+            },
+            {
+              "vorm": "καλή",
+              "lemma": "καλός",
+              "morfologie": "nom.sg.f — adj. D1/D2",
+              "vertaling_nl": "mooi"
+            },
+            {
+              "vorm": "ἐστιν",
+              "lemma": "εἰμί",
+              "morfologie": "praes.ind. 3sg",
+              "vertaling_nl": "is"
+            }
+          ]
+        },
+        {
+          "grieks": "ἡ ψυχὴ τοῦ ἀνθρώπου ἀγαθή ἐστιν.",
+          "vertaling_nl": "De ziel van de mens is goed.",
+          "woorden": [
+            {
+              "vorm": "ἡ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.sg.f — lidwoord",
+              "vertaling_nl": "de"
+            },
+            {
+              "vorm": "ψυχὴ",
+              "lemma": "ψυχή",
+              "morfologie": "nom.sg.f — 1e decl. (η-type)",
+              "vertaling_nl": "ziel"
+            },
+            {
+              "vorm": "τοῦ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "gen.sg.m — lidwoord",
+              "vertaling_nl": "van de"
+            },
+            {
+              "vorm": "ἀνθρώπου",
+              "lemma": "ἄνθρωπος",
+              "morfologie": "gen.sg.m — 2e decl.",
+              "vertaling_nl": "mens"
+            },
+            {
+              "vorm": "ἀγαθή",
+              "lemma": "ἀγαθός",
+              "morfologie": "nom.sg.f — adj. D1/D2",
+              "vertaling_nl": "goed"
+            },
+            {
+              "vorm": "ἐστιν",
+              "lemma": "εἰμί",
+              "morfologie": "praes.ind. 3sg",
+              "vertaling_nl": "is"
+            }
+          ]
+        }
+      ],
+      "knoop_ids": [
+        "GRC-G-MORF-NOM-D1",
+        "GRC-G-MORF-DECL1-INTRO",
+        "GRC-G-MORF-DECL1-ETA",
+        "GRC-G-MORF-GEN-D2",
+        "GRC-G-MORF-PRAES-EIMI",
+        "GRC-G-MORF-LIDW-INTRO",
+        "GRC-G-MORF-ADJ-D12-2U",
+        "GRC-G-SYNT-GEN-FUNCTIE",
+        "GRC-V-F01-PSYCHE",
+        "GRC-V-F01-AGATHO",
+        "GRC-V-F01-EIMI",
+        "GRC-V-F01-DIKE",
+        "GRC-V-F01-KALOS",
+        "GRC-V-F01-ANTHRO",
+        "GRC-V-F01-ARTIC"
+      ]
+    },
+    {
+      "id": "GRC-PASS-LJ1-007",
+      "titel_nl": "Het land en de strateeg",
+      "niveau": 7,
+      "complexiteit_label": "d1_alfa_omega_verba",
+      "zinnen": [
+        {
+          "grieks": "ἡ χώρα καλή ἐστιν.",
+          "vertaling_nl": "Het land is mooi.",
+          "woorden": [
+            {
+              "vorm": "ἡ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.sg.f — lidwoord",
+              "vertaling_nl": "het"
+            },
+            {
+              "vorm": "χώρα",
+              "lemma": "χώρα",
+              "morfologie": "nom.sg.f — 1e decl. (α-type)",
+              "vertaling_nl": "land"
+            },
+            {
+              "vorm": "καλή",
+              "lemma": "καλός",
+              "morfologie": "nom.sg.f — adj. D1/D2",
+              "vertaling_nl": "mooi"
+            },
+            {
+              "vorm": "ἐστιν",
+              "lemma": "εἰμί",
+              "morfologie": "praes.ind. 3sg",
+              "vertaling_nl": "is"
+            }
+          ]
+        },
+        {
+          "grieks": "ὁ ἄνθρωπος τὴν χώραν ἔχει.",
+          "vertaling_nl": "De mens heeft het land.",
+          "woorden": [
+            {
+              "vorm": "ὁ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.sg.m — lidwoord",
+              "vertaling_nl": "de"
+            },
+            {
+              "vorm": "ἄνθρωπος",
+              "lemma": "ἄνθρωπος",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "mens"
+            },
+            {
+              "vorm": "τὴν",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "acc.sg.f — lidwoord",
+              "vertaling_nl": "het"
+            },
+            {
+              "vorm": "χώραν",
+              "lemma": "χώρα",
+              "morfologie": "acc.sg.f — 1e decl. (α-type)",
+              "vertaling_nl": "land"
+            },
+            {
+              "vorm": "ἔχει",
+              "lemma": "ἔχω",
+              "morfologie": "praes.ind.act. 3sg — -ω verb",
+              "vertaling_nl": "heeft"
+            }
+          ]
+        },
+        {
+          "grieks": "ὁ στρατηγὸς τοὺς δούλους πέμπει.",
+          "vertaling_nl": "De strateeg stuurt de slaven.",
+          "woorden": [
+            {
+              "vorm": "ὁ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.sg.m — lidwoord",
+              "vertaling_nl": "de"
+            },
+            {
+              "vorm": "στρατηγὸς",
+              "lemma": "στρατηγός",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "strateeg/veldheer"
+            },
+            {
+              "vorm": "τοὺς",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "acc.pl.m — lidwoord",
+              "vertaling_nl": "de"
+            },
+            {
+              "vorm": "δούλους",
+              "lemma": "δοῦλος",
+              "morfologie": "acc.pl.m — 2e decl.",
+              "vertaling_nl": "slaven"
+            },
+            {
+              "vorm": "πέμπει",
+              "lemma": "πέμπω",
+              "morfologie": "praes.ind.act. 3sg — -ω verb",
+              "vertaling_nl": "stuurt"
+            }
+          ]
+        }
+      ],
+      "knoop_ids": [
+        "GRC-G-MORF-NOM-D1",
+        "GRC-G-MORF-ACC-D1",
+        "GRC-G-MORF-DECL1-INTRO",
+        "GRC-G-MORF-DECL1-ALFA",
+        "GRC-G-MORF-NOM-D2",
+        "GRC-G-MORF-ACC-D2",
+        "GRC-G-MORF-PRAES-EIMI",
+        "GRC-G-MORF-PRAES-THEM",
+        "GRC-G-MORF-LIDW-INTRO",
+        "GRC-G-MORF-LIDW-VERBG",
+        "GRC-V-F02-CHORA",
+        "GRC-V-F01-KALOS",
+        "GRC-V-F01-EIMI",
+        "GRC-V-F01-ANTHRO",
+        "GRC-V-F01-ECHO",
+        "GRC-V-F01-STRTGS",
+        "GRC-V-F02-DOULOS",
+        "GRC-V-F01-PEMPO",
+        "GRC-V-F01-ARTIC"
+      ]
+    },
+    {
+      "id": "GRC-PASS-LJ1-008",
+      "titel_nl": "Het paard van de strateeg",
+      "niveau": 8,
+      "complexiteit_label": "gen_d12",
+      "zinnen": [
+        {
+          "grieks": "ὁ ἵππος τοῦ στρατηγοῦ καλός ἐστιν.",
+          "vertaling_nl": "Het paard van de strateeg is mooi.",
+          "woorden": [
+            {
+              "vorm": "ὁ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.sg.m — lidwoord",
+              "vertaling_nl": "het"
+            },
+            {
+              "vorm": "ἵππος",
+              "lemma": "ἵππος",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "paard"
+            },
+            {
+              "vorm": "τοῦ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "gen.sg.m — lidwoord",
+              "vertaling_nl": "van de"
+            },
+            {
+              "vorm": "στρατηγοῦ",
+              "lemma": "στρατηγός",
+              "morfologie": "gen.sg.m — 2e decl.",
+              "vertaling_nl": "strateeg"
+            },
+            {
+              "vorm": "καλός",
+              "lemma": "καλός",
+              "morfologie": "nom.sg.m — adj. D1/D2",
+              "vertaling_nl": "mooi"
+            },
+            {
+              "vorm": "ἐστιν",
+              "lemma": "εἰμί",
+              "morfologie": "praes.ind. 3sg",
+              "vertaling_nl": "is"
+            }
+          ]
+        },
+        {
+          "grieks": "τὸ ἔργον τοῦ δούλου ἀγαθόν ἐστιν.",
+          "vertaling_nl": "Het werk van de slaaf is goed.",
+          "woorden": [
+            {
+              "vorm": "τὸ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.sg.n — lidwoord",
+              "vertaling_nl": "het"
+            },
+            {
+              "vorm": "ἔργον",
+              "lemma": "ἔργον",
+              "morfologie": "nom.sg.n — 2e decl.",
+              "vertaling_nl": "werk"
+            },
+            {
+              "vorm": "τοῦ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "gen.sg.m — lidwoord",
+              "vertaling_nl": "van de"
+            },
+            {
+              "vorm": "δούλου",
+              "lemma": "δοῦλος",
+              "morfologie": "gen.sg.m — 2e decl.",
+              "vertaling_nl": "slaaf"
+            },
+            {
+              "vorm": "ἀγαθόν",
+              "lemma": "ἀγαθός",
+              "morfologie": "nom.sg.n — adj. D1/D2",
+              "vertaling_nl": "goed"
+            },
+            {
+              "vorm": "ἐστιν",
+              "lemma": "εἰμί",
+              "morfologie": "praes.ind. 3sg",
+              "vertaling_nl": "is"
+            }
+          ]
+        },
+        {
+          "grieks": "ἡ τέχνη τῆς μάχης δεινή ἐστιν.",
+          "vertaling_nl": "De kunst van de strijd is indrukwekkend.",
+          "woorden": [
+            {
+              "vorm": "ἡ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.sg.f — lidwoord",
+              "vertaling_nl": "de"
+            },
+            {
+              "vorm": "τέχνη",
+              "lemma": "τέχνη",
+              "morfologie": "nom.sg.f — 1e decl. (η-type)",
+              "vertaling_nl": "kunst/vaardigheid"
+            },
+            {
+              "vorm": "τῆς",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "gen.sg.f — lidwoord",
+              "vertaling_nl": "van de"
+            },
+            {
+              "vorm": "μάχης",
+              "lemma": "μάχη",
+              "morfologie": "gen.sg.f — 1e decl. (η-type)",
+              "vertaling_nl": "strijd"
+            },
+            {
+              "vorm": "δεινή",
+              "lemma": "δεινός",
+              "morfologie": "nom.sg.f — adj. D1/D2",
+              "vertaling_nl": "indrukwekkend"
+            },
+            {
+              "vorm": "ἐστιν",
+              "lemma": "εἰμί",
+              "morfologie": "praes.ind. 3sg",
+              "vertaling_nl": "is"
+            }
+          ]
+        }
+      ],
+      "knoop_ids": [
+        "GRC-G-MORF-GEN-D1",
+        "GRC-G-MORF-GEN-D2",
+        "GRC-G-MORF-NOM-D1",
+        "GRC-G-MORF-NOM-D2",
+        "GRC-G-MORF-DECL1-ETA",
+        "GRC-G-MORF-DECL2-MASC",
+        "GRC-G-MORF-DECL2-NEUT",
+        "GRC-G-MORF-PRAES-EIMI",
+        "GRC-G-MORF-LIDW-INTRO",
+        "GRC-G-MORF-LIDW-VERBG",
+        "GRC-G-MORF-ADJ-D12-2U",
+        "GRC-G-SYNT-GEN-FUNCTIE",
+        "GRC-V-F01-HIPPOS",
+        "GRC-V-F01-STRTGS",
+        "GRC-V-F01-KALOS",
+        "GRC-V-F01-EIMI",
+        "GRC-V-F01-ERGON",
+        "GRC-V-F02-DOULOS",
+        "GRC-V-F01-AGATHO",
+        "GRC-V-F02-TECHNE",
+        "GRC-V-F01-MACHE",
+        "GRC-V-F01-DEINOS",
+        "GRC-V-F01-ARTIC"
+      ]
+    },
+    {
+      "id": "GRC-PASS-LJ1-009",
+      "titel_nl": "De mens brengt een geschenk",
+      "niveau": 9,
+      "complexiteit_label": "dat_d12",
+      "zinnen": [
+        {
+          "grieks": "ὁ ἄνθρωπος τῷ δούλῳ δῶρον φέρει.",
+          "vertaling_nl": "De mens brengt de slaaf een geschenk.",
+          "woorden": [
+            {
+              "vorm": "ὁ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.sg.m — lidwoord",
+              "vertaling_nl": "de"
+            },
+            {
+              "vorm": "ἄνθρωπος",
+              "lemma": "ἄνθρωπος",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "mens"
+            },
+            {
+              "vorm": "τῷ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "dat.sg.m — lidwoord",
+              "vertaling_nl": "aan de"
+            },
+            {
+              "vorm": "δούλῳ",
+              "lemma": "δοῦλος",
+              "morfologie": "dat.sg.m — 2e decl.",
+              "vertaling_nl": "slaaf"
+            },
+            {
+              "vorm": "δῶρον",
+              "lemma": "δῶρον",
+              "morfologie": "acc.sg.n — 2e decl.",
+              "vertaling_nl": "geschenk"
+            },
+            {
+              "vorm": "φέρει",
+              "lemma": "φέρω",
+              "morfologie": "praes.ind.act. 3sg — -ω verb",
+              "vertaling_nl": "brengt"
+            }
+          ]
+        },
+        {
+          "grieks": "ὁ στρατηγὸς τοῖς δούλοις λέγει.",
+          "vertaling_nl": "De strateeg spreekt tot de slaven.",
+          "woorden": [
+            {
+              "vorm": "ὁ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.sg.m — lidwoord",
+              "vertaling_nl": "de"
+            },
+            {
+              "vorm": "στρατηγὸς",
+              "lemma": "στρατηγός",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "strateeg"
+            },
+            {
+              "vorm": "τοῖς",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "dat.pl.m — lidwoord",
+              "vertaling_nl": "tot/aan de"
+            },
+            {
+              "vorm": "δούλοις",
+              "lemma": "δοῦλος",
+              "morfologie": "dat.pl.m — 2e decl.",
+              "vertaling_nl": "slaven"
+            },
+            {
+              "vorm": "λέγει",
+              "lemma": "λέγω",
+              "morfologie": "praes.ind.act. 3sg — -ω verb",
+              "vertaling_nl": "spreekt"
+            }
+          ]
+        },
+        {
+          "grieks": "ὁ δοῦλος τῷ ἀνθρώπῳ τὸν ἵππον ἄγει.",
+          "vertaling_nl": "De slaaf leidt het paard naar de mens.",
+          "woorden": [
+            {
+              "vorm": "ὁ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.sg.m — lidwoord",
+              "vertaling_nl": "de"
+            },
+            {
+              "vorm": "δοῦλος",
+              "lemma": "δοῦλος",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "slaaf"
+            },
+            {
+              "vorm": "τῷ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "dat.sg.m — lidwoord",
+              "vertaling_nl": "aan/naar de"
+            },
+            {
+              "vorm": "ἀνθρώπῳ",
+              "lemma": "ἄνθρωπος",
+              "morfologie": "dat.sg.m — 2e decl.",
+              "vertaling_nl": "mens"
+            },
+            {
+              "vorm": "τὸν",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "acc.sg.m — lidwoord",
+              "vertaling_nl": "het"
+            },
+            {
+              "vorm": "ἵππον",
+              "lemma": "ἵππος",
+              "morfologie": "acc.sg.m — 2e decl.",
+              "vertaling_nl": "paard"
+            },
+            {
+              "vorm": "ἄγει",
+              "lemma": "ἄγω",
+              "morfologie": "praes.ind.act. 3sg — -ω verb",
+              "vertaling_nl": "leidt"
+            }
+          ]
+        }
+      ],
+      "knoop_ids": [
+        "GRC-G-MORF-DAT-D2",
+        "GRC-G-MORF-NOM-D2",
+        "GRC-G-MORF-ACC-D2",
+        "GRC-G-MORF-DECL2-MASC",
+        "GRC-G-MORF-PRAES-THEM",
+        "GRC-G-MORF-LIDW-VERBG",
+        "GRC-G-SYNT-DAT-FUNCTIE",
+        "GRC-V-F01-ANTHRO",
+        "GRC-V-F02-DOULOS",
+        "GRC-V-F02-DORON",
+        "GRC-V-F01-PHERO",
+        "GRC-V-F01-STRTGS",
+        "GRC-V-F01-LEGO",
+        "GRC-V-F01-HIPPOS",
+        "GRC-V-F01-AGO",
+        "GRC-V-F01-ARTIC"
+      ]
+    },
+    {
+      "id": "GRC-PASS-LJ1-010",
+      "titel_nl": "De strateeg schrijft een rede",
+      "niveau": 10,
+      "complexiteit_label": "d12_omega_gen_dat",
+      "zinnen": [
+        {
+          "grieks": "ὁ στρατηγὸς λόγον γράφει.",
+          "vertaling_nl": "De strateeg schrijft een rede.",
+          "woorden": [
+            {
+              "vorm": "ὁ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.sg.m — lidwoord",
+              "vertaling_nl": "de"
+            },
+            {
+              "vorm": "στρατηγὸς",
+              "lemma": "στρατηγός",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "strateeg"
+            },
+            {
+              "vorm": "λόγον",
+              "lemma": "λόγος",
+              "morfologie": "acc.sg.m — 2e decl.",
+              "vertaling_nl": "rede/woord"
+            },
+            {
+              "vorm": "γράφει",
+              "lemma": "γράφω",
+              "morfologie": "praes.ind.act. 3sg — -ω verb",
+              "vertaling_nl": "schrijft"
+            }
+          ]
+        },
+        {
+          "grieks": "ὁ δοῦλος τὸν λόγον τοῦ στρατηγοῦ φέρει.",
+          "vertaling_nl": "De slaaf brengt de rede van de strateeg.",
+          "woorden": [
+            {
+              "vorm": "ὁ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.sg.m — lidwoord",
+              "vertaling_nl": "de"
+            },
+            {
+              "vorm": "δοῦλος",
+              "lemma": "δοῦλος",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "slaaf"
+            },
+            {
+              "vorm": "τὸν",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "acc.sg.m — lidwoord",
+              "vertaling_nl": "de"
+            },
+            {
+              "vorm": "λόγον",
+              "lemma": "λόγος",
+              "morfologie": "acc.sg.m — 2e decl.",
+              "vertaling_nl": "rede/woord"
+            },
+            {
+              "vorm": "τοῦ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "gen.sg.m — lidwoord",
+              "vertaling_nl": "van de"
+            },
+            {
+              "vorm": "στρατηγοῦ",
+              "lemma": "στρατηγός",
+              "morfologie": "gen.sg.m — 2e decl.",
+              "vertaling_nl": "strateeg"
+            },
+            {
+              "vorm": "φέρει",
+              "lemma": "φέρω",
+              "morfologie": "praes.ind.act. 3sg — -ω verb",
+              "vertaling_nl": "brengt"
+            }
+          ]
+        },
+        {
+          "grieks": "ὁ ἄνθρωπος τὸν λόγον λέγει.",
+          "vertaling_nl": "De mens spreekt de rede uit.",
+          "woorden": [
+            {
+              "vorm": "ὁ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.sg.m — lidwoord",
+              "vertaling_nl": "de"
+            },
+            {
+              "vorm": "ἄνθρωπος",
+              "lemma": "ἄνθρωπος",
+              "morfologie": "nom.sg.m — 2e decl.",
+              "vertaling_nl": "mens"
+            },
+            {
+              "vorm": "τὸν",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "acc.sg.m — lidwoord",
+              "vertaling_nl": "de"
+            },
+            {
+              "vorm": "λόγον",
+              "lemma": "λόγος",
+              "morfologie": "acc.sg.m — 2e decl.",
+              "vertaling_nl": "rede/woord"
+            },
+            {
+              "vorm": "λέγει",
+              "lemma": "λέγω",
+              "morfologie": "praes.ind.act. 3sg — -ω verb",
+              "vertaling_nl": "spreekt"
+            }
+          ]
+        },
+        {
+          "grieks": "τὰ ἔργα τῶν δούλων καλά ἐστιν.",
+          "vertaling_nl": "De werken van de slaven zijn mooi.",
+          "woorden": [
+            {
+              "vorm": "τὰ",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "nom.pl.n — lidwoord",
+              "vertaling_nl": "de"
+            },
+            {
+              "vorm": "ἔργα",
+              "lemma": "ἔργον",
+              "morfologie": "nom.pl.n — 2e decl.",
+              "vertaling_nl": "werken"
+            },
+            {
+              "vorm": "τῶν",
+              "lemma": "ὁ/ἡ/τό",
+              "morfologie": "gen.pl.m — lidwoord",
+              "vertaling_nl": "van de"
+            },
+            {
+              "vorm": "δούλων",
+              "lemma": "δοῦλος",
+              "morfologie": "gen.pl.m — 2e decl.",
+              "vertaling_nl": "slaven"
+            },
+            {
+              "vorm": "καλά",
+              "lemma": "καλός",
+              "morfologie": "nom.pl.n — adj. D1/D2",
+              "vertaling_nl": "mooi"
+            },
+            {
+              "vorm": "ἐστιν",
+              "lemma": "εἰμί",
+              "morfologie": "praes.ind. 3sg (neutr.pl.!)",
+              "vertaling_nl": "zijn"
+            }
+          ]
+        }
+      ],
+      "knoop_ids": [
+        "GRC-G-MORF-NOM-D2",
+        "GRC-G-MORF-ACC-D2",
+        "GRC-G-MORF-GEN-D2",
+        "GRC-G-MORF-DECL2-MASC",
+        "GRC-G-MORF-DECL2-NEUT",
+        "GRC-G-MORF-NUMERUS-INTRO",
+        "GRC-G-MORF-PRAES-EIMI",
+        "GRC-G-MORF-PRAES-THEM",
+        "GRC-G-MORF-LIDW-VERBG",
+        "GRC-G-SYNT-GEN-FUNCTIE",
+        "GRC-G-MORF-ADJ-D12-2U",
+        "GRC-V-F01-STRTGS",
+        "GRC-V-F01-LOGOS",
+        "GRC-V-F01-GRAPHO",
+        "GRC-V-F02-DOULOS",
+        "GRC-V-F01-PHERO",
+        "GRC-V-F01-ANTHRO",
+        "GRC-V-F01-LEGO",
+        "GRC-V-F01-ERGON",
+        "GRC-V-F01-KALOS",
+        "GRC-V-F01-EIMI",
+        "GRC-V-F01-ARTIC"
+      ]
     }
   ]
 }
