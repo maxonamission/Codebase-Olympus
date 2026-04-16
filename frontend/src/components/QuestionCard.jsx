@@ -1,10 +1,10 @@
-export default function QuestionCard({ question }) {
+export default function QuestionCard({ question, showDescription = true }) {
   const { titel, beschrijving, stimulus } = question
 
   return (
     <div className="card question-card">
       <h2 className="question-title">{titel}</h2>
-      {beschrijving && (
+      {showDescription && beschrijving && (
         <p className="question-description">{beschrijving}</p>
       )}
       {stimulus && (
