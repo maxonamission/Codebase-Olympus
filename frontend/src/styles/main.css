@@ -1076,3 +1076,15 @@ h2 {
 .route-current strong {
   color: var(--primary);
 }
+
+.passage-hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0.75rem 0 0.25rem;
+  font-style: italic;
+}
+
+.passage-done-btn {
+  margin-top: 1rem;
+  width: 100%;
+}
