@@ -498,6 +498,23 @@ class SessionManager:
                 )
             return _candidates_for_new_material(state.learner, state.graph)
         elif phase == SessionPhase.DEEPENING:
+            # Context-first: deepen on passage-related nodes, not random urgency
+            if (
+                state.learning_route == LearningRoute.CONTEXT_FIRST
+                and state.current_passage
+            ):
+                candidates = []
+                for knoop_id in state.current_passage.knoop_ids:
+                    if knoop_id not in state.graph.nodes:
+                        continue
+                    if knoop_id in state.session_node_ids:
+                        continue  # already practiced this session
+                    knoop = state.graph.nodes[knoop_id]["knoop"]
+                    posterior = _get_state_posterior(state.learner, knoop_id)
+                    if posterior < MASTERY_THRESHOLD:
+                        candidates.append((0.8, knoop))
+                if candidates:
+                    return candidates
             return _candidates_for_deepening(
                 state.learner, state.graph, state.nodes_introduced, now
             )
