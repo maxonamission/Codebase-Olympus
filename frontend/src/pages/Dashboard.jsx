@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { getProgressOverview } from '../api'
+import { getProgressOverview, getUserProfile, updateSettings } from '../api'
+
+const ROUTE_LABELS = {
+  context_first: 'Beginnen met lezen',
+  grammar_first: 'Beginnen met grammatica',
+}
 
 const DOMAIN_LABELS = {
   G: 'Grammatica',
@@ -29,12 +34,18 @@ export default function Dashboard() {
   const [overview, setOverview] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
+  const [learningRoute, setLearningRoute] = useState(null)
+  const [switchingRoute, setSwitchingRoute] = useState(false)
 
   useEffect(() => {
     async function load() {
       try {
-        const data = await getProgressOverview()
+        const [data, profile] = await Promise.all([
+          getProgressOverview(),
+          getUserProfile(),
+        ])
         setOverview(data)
+        setLearningRoute(profile.learning_route)
       } catch (err) {
         setError(err.message)
       } finally {
@@ -43,6 +54,19 @@ export default function Dashboard() {
     }
     load()
   }, [])
+
+  async function handleToggleRoute() {
+    const newRoute = learningRoute === 'grammar_first' ? 'context_first' : 'grammar_first'
+    setSwitchingRoute(true)
+    try {
+      await updateSettings(newRoute)
+      setLearningRoute(newRoute)
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setSwitchingRoute(false)
+    }
+  }
 
   function handleLogout() {
     localStorage.removeItem('token')
@@ -106,6 +130,26 @@ export default function Dashboard() {
           <p className="text-muted">Nog geen voortgang. Start je eerste sessie!</p>
         )}
       </div>
+
+      {learningRoute && (
+        <div className="card dashboard-settings">
+          <h2>Leerroute</h2>
+          <div className="route-current">
+            Huidige route: <strong>{ROUTE_LABELS[learningRoute] || learningRoute}</strong>
+          </div>
+          <button
+            className="btn btn-secondary"
+            onClick={handleToggleRoute}
+            disabled={switchingRoute}
+            style={{ width: '100%' }}
+          >
+            {switchingRoute
+              ? 'Wijzigen...'
+              : `Wissel naar ${ROUTE_LABELS[learningRoute === 'grammar_first' ? 'context_first' : 'grammar_first']}`
+            }
+          </button>
+        </div>
+      )}
 
       <div className="dashboard-actions">
         <button className="btn btn-primary" onClick={handleStartSession}>
