@@ -526,19 +526,19 @@ Scope:
 Beide routes leiden tot mastery op dezelfde knopen — het verschil is de volgorde en de presentatievorm. SM-2 en BKT werken per knoop en zijn route-onafhankelijk. Wisselen tussen routes verstoort de scheduling niet.
 
 **Afhankelijkheden:** E1 (pilot-feedback), A1+A2 (grammaticaknopen bestaan)
-**Status:** todo
+**Status:** done
 
 **Belangrijke ontwerpbeslissing:** de context-first route relaxt de prerequisite-gate. In grammar-first moet een leerling de 1e declinatie beheersen voordat voorzetsels aan bod komen. In context-first kan een passage met voorzetsels worden aangeboden terwijl de declinatie nog niet volledig beheerst is — de passage IS de introductie, met scaffolding.
 
-| Story | Titel | Scope |
-|-------|-------|-------|
-| E7-01 | Route-keuze model en User-uitbreiding | User.learning_route enum, onboarding, settings |
-| E7-02 | Leespassages als content-type | PassageContent model, per-woord annotaties |
-| E7-03 | Eerste set leespassages — Latijn onderbouw | ~20 passages oplopend in complexiteit |
-| E7-04 | Eerste set leespassages — Grieks onderbouw | ~15 passages na alfabet |
-| E7-05 | Context-first scheduling strategie | Passage-gedreven knoop-selectie, relaxed prereq-gate |
-| E7-06 | Sessie-orkestratie met passages | Passage → begrip-check → scaffolding → oefening |
-| E7-07 | Frontend: passage-lezer component | Per-woord annotaties, grammatica-popup bij klik |
-| E7-08 | Frontend: route-selectie en onboarding | Keuze-scherm, uitleg per route, wisseloptie |
-| E7-09 | Grammatica-scaffolding bij passages | Inline uitleg + mini-oefening bij onbekende grammatica |
-| E7-10 | Validatie: vergelijk leeruitkomsten beide routes | Route-tracking, mastery-progressie per sessie |
+| Story | Titel | Status |
+|-------|-------|--------|
+| E7-01 | Route-keuze model en User-uitbreiding | done |
+| E7-02 | Leespassages als content-type | done |
+| E7-03 | Eerste set leespassages — Latijn onderbouw (~20 passages) | done |
+| E7-04 | Eerste set leespassages — Grieks onderbouw (~15 passages) | done |
+| E7-05 | Context-first scheduling strategie | done |
+| E7-06 | Sessie-orkestratie met passages | done |
+| E7-07 | Frontend: passage-lezer component | done |
+| E7-08 | Frontend: route-selectie en onboarding | done |
+| E7-09 | Grammatica-scaffolding bij passages | done |
+| E7-10 | Validatie: vergelijk leeruitkomsten beide routes | done |
