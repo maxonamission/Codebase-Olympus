@@ -177,7 +177,10 @@ export default function Session() {
             />
           ) : (
             <>
-              <QuestionCard question={question} />
+              <QuestionCard
+                question={question}
+                showDescription={question.items && question.items.length > 0}
+              />
               <AnswerInput
                 question={question}
                 onAnswer={handleAnswer}

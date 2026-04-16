@@ -176,6 +176,7 @@ def select_passage(
     for passage in passages:
         reachable_unmastered = 0
         total_relevant = 0
+        passage_knoop_set = set(passage.knoop_ids)
 
         for knoop_id in passage.knoop_ids:
             if knoop_id not in graph.nodes:
@@ -184,12 +185,24 @@ def select_passage(
             posterior = _get_state_posterior(learner, knoop_id)
             if posterior >= MASTERY_THRESHOLD:
                 continue  # already mastered, doesn't count
-            ready = readiness_score(
-                knoop_id, learner, graph,
-                prereq_threshold=CONTEXT_FIRST_PREREQ_THRESHOLD,
-            )
-            if ready > 0.0:
+
+            # In context-first, a node is reachable if:
+            # 1. It has no prerequisites (root node), OR
+            # 2. Its prerequisites pass the relaxed threshold, OR
+            # 3. All its prerequisites are also in this passage
+            #    (the passage introduces them together)
+            preds = list(graph.predecessors(knoop_id))
+            if not preds:
                 reachable_unmastered += 1
+            elif all(p in passage_knoop_set for p in preds):
+                reachable_unmastered += 1
+            else:
+                ready = readiness_score(
+                    knoop_id, learner, graph,
+                    prereq_threshold=CONTEXT_FIRST_PREREQ_THRESHOLD,
+                )
+                if ready > 0.0:
+                    reachable_unmastered += 1
 
         if reachable_unmastered == 0:
             continue
