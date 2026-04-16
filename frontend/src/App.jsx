@@ -3,6 +3,7 @@ import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import Session from './pages/Session'
 import GraphView from './pages/GraphView'
+import RouteSelect from './pages/RouteSelect'
 
 function ProtectedRoute({ children }) {
   const token = localStorage.getItem('token')
@@ -37,6 +38,14 @@ export default function App() {
         element={
           <ProtectedRoute>
             <GraphView />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/route-select"
+        element={
+          <ProtectedRoute>
+            <RouteSelect />
           </ProtectedRoute>
         }
       />

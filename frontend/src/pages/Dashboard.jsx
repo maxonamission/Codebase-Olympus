@@ -114,6 +114,9 @@ export default function Dashboard() {
         <button className="btn btn-secondary" onClick={() => navigate('/graph')}>
           Bekijk knowledge graph
         </button>
+        <button className="btn btn-secondary" onClick={() => navigate('/route-select')}>
+          Leerroute instellen
+        </button>
       </div>
     </div>
   )

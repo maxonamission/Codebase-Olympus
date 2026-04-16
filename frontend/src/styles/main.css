@@ -897,3 +897,182 @@ h2 {
   gap: 0.75rem;
   flex-wrap: wrap;
 }
+
+/* ── PassageReader (E7-07) ── */
+
+.passage-reader {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 1rem 0;
+}
+
+.passage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+}
+
+.passage-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.passage-difficulty {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.passage-difficulty-label {
+  font-size: 0.75rem;
+}
+
+.passage-text {
+  font-size: 1.15rem;
+  line-height: 2;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.passage-word-wrapper {
+  position: relative;
+}
+
+.passage-word--annotated {
+  cursor: pointer;
+  border-bottom: 1px dotted var(--text-muted);
+  transition: background 0.15s;
+}
+
+.passage-word--annotated:hover {
+  background: rgba(44, 82, 130, 0.08);
+}
+
+.passage-word--unknown {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  font-weight: 500;
+}
+
+.passage-word--active {
+  background: rgba(44, 82, 130, 0.12);
+  border-radius: 2px;
+}
+
+.passage-popup {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  padding: 0.65rem 0.85rem;
+  min-width: 180px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.85rem;
+}
+
+.passage-popup-row {
+  display: block;
+}
+
+.passage-popup-row strong {
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-right: 0.3rem;
+}
+
+.passage-popup-link {
+  margin-top: 0.3rem;
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.passage-popup-link:hover {
+  color: var(--primary-hover);
+}
+
+/* ── Route-selectie (E7-08) ── */
+
+.route-select-page {
+  max-width: 540px;
+}
+
+.route-select-intro {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.route-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.route-option {
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.route-option:hover {
+  border-color: var(--primary);
+}
+
+.route-option--selected {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(44, 82, 130, 0.15);
+}
+
+.route-option-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+}
+
+.route-option-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.route-confirm-btn {
+  width: 100%;
+}
+
+.route-current {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: rgba(44, 82, 130, 0.06);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.route-current strong {
+  color: var(--primary);
+}

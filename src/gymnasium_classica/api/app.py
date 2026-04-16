@@ -17,6 +17,7 @@ from gymnasium_classica.api.routes.auth import router as auth_router
 from gymnasium_classica.api.routes.intake import router as intake_router
 from gymnasium_classica.api.routes.progress import router as progress_router
 from gymnasium_classica.api.routes.session import router as session_router
+from gymnasium_classica.api.routes.user import router as user_router
 from gymnasium_classica.graph.loader import load_graph
 
 GRAPH_DIR = Path("data/graph")
@@ -69,6 +70,7 @@ def create_app(
     application.include_router(session_router)
     application.include_router(progress_router)
     application.include_router(intake_router)
+    application.include_router(user_router)
 
     @application.get("/health")
     async def health():
