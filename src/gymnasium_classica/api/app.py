@@ -19,24 +19,32 @@ from gymnasium_classica.api.routes.progress import router as progress_router
 from gymnasium_classica.api.routes.session import router as session_router
 from gymnasium_classica.api.routes.user import router as user_router
 from gymnasium_classica.graph.loader import load_graph
+from gymnasium_classica.passages.loader import load_passages
 
 GRAPH_DIR = Path("data/graph")
+PASSAGES_DIR = Path("data/passages")
 
 
 def create_app(
     graph_dir: Path = GRAPH_DIR,
     db_path: Optional[Path] = None,
+    passages_dir: Path = PASSAGES_DIR,
 ) -> FastAPI:
     """Create and configure the FastAPI application.
 
     Parameters:
         graph_dir: Path to directory with knowledge graph JSON files.
         db_path: Path to the SQLite database file. None uses the default.
+        passages_dir: Path to directory with passage JSON files.
     """
 
     @asynccontextmanager
     async def lifespan(application: FastAPI):
         application.state.graph = load_graph(graph_dir)
+        if passages_dir.is_dir():
+            application.state.passages = load_passages(passages_dir)
+        else:
+            application.state.passages = []
         if db_path is not None:
             application.state.db = init_db(db_path)
         else:

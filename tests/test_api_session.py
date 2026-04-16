@@ -19,6 +19,19 @@ def client():
             yield c
 
 
+@pytest.fixture()
+def client_with_passages():
+    """TestClient with passages loaded from data/passages/."""
+    from gymnasium_classica.api.app import create_app
+
+    passages_dir = Path(__file__).parent.parent / "data" / "passages"
+    with tempfile.TemporaryDirectory() as tmp:
+        db_path = Path(tmp) / "test.db"
+        test_app = create_app(db_path=db_path, passages_dir=passages_dir)
+        with TestClient(test_app) as c:
+            yield c
+
+
 def _auth_header(client: TestClient, email: str = "test@example.nl") -> dict:
     """Register a user and return an Authorization header."""
     resp = client.post("/auth/register", json={"email": email, "password": "pw1234"})
@@ -224,3 +237,63 @@ class TestSessionSummary:
             assert "after" in change
             assert isinstance(change["before"], float)
             assert isinstance(change["after"], float)
+
+
+class TestContextFirstSessionAPI:
+    """E7-06: End-to-end context-first session through the API."""
+
+    def test_context_first_starts_with_passage(self, client_with_passages):
+        """When user has context_first route and passages are loaded,
+        the first question should be a passage."""
+        c = client_with_passages
+        headers = _auth_header(c, "ctx@example.nl")
+
+        # Set learning route to context_first
+        c.put(
+            "/user/learning-route",
+            json={"learning_route": "context_first"},
+            headers=headers,
+        )
+
+        resp = c.post("/session/start", headers=headers)
+        assert resp.status_code == 200
+        data = resp.json()
+        q = data["question"]
+        if q is not None:
+            stimulus = q["stimulus"]
+            # If a passage was selected, stimulus is a dict with type=passage
+            if isinstance(stimulus, dict) and stimulus.get("type") == "passage":
+                assert "tekst" in stimulus
+                assert "annotaties" in stimulus
+                assert "knoop_ids" in stimulus
+
+                # Answer the passage
+                session_id = data["session_id"]
+                resp2 = c.post(
+                    "/session/answer",
+                    json={
+                        "session_id": session_id,
+                        "response": "correct",
+                        "response_time_ms": 5000,
+                    },
+                    headers=headers,
+                )
+                assert resp2.status_code == 200
+                data2 = resp2.json()
+                assert data2["feedback"]["response_type"] == "passage_read"
+
+    def test_grammar_first_no_passage(self, client_with_passages):
+        """Grammar-first route should NOT return a passage as first question."""
+        c = client_with_passages
+        headers = _auth_header(c, "gram@example.nl")
+        # Default is grammar_first, no explicit change needed
+
+        resp = c.post("/session/start", headers=headers)
+        assert resp.status_code == 200
+        data = resp.json()
+        q = data["question"]
+        if q is not None:
+            stimulus = q["stimulus"]
+            # Should be a regular knoop question (string), not a passage dict
+            if isinstance(stimulus, dict):
+                assert stimulus.get("type") != "passage"

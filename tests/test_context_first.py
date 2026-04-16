@@ -306,7 +306,8 @@ class TestRunSessionContextFirst:
 
 
 class TestSessionManagerContextFirst:
-    def test_start_with_context_first(self):
+    def test_start_with_context_first_presents_passage(self):
+        """Context-first session starts with a passage question."""
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
         learner.knoop_states["LAT-G-MORF-ROOT"] = KnoopState(
@@ -322,12 +323,12 @@ class TestSessionManagerContextFirst:
             passages=passages,
         )
         assert session_id is not None
-        # Question should come from passage-linked nodes
-        if question is not None:
-            assert question.knoop_id in [
-                "LAT-G-MORF-CHILDA", "LAT-G-MORF-CHILDC",
-                "LAT-G-MORF-ROOT", "LAT-G-MORF-CHILDB",
-            ]
+        assert question is not None
+        # First question should be the passage itself
+        assert question.knoop_id == "LAT-P-T01"
+        assert isinstance(question.stimulus, dict)
+        assert question.stimulus["type"] == "passage"
+        assert question.stimulus["tekst"] == "Puella cantat."
 
     def test_start_grammar_first_default(self):
         """Default (grammar_first) SessionManager still works."""
@@ -344,7 +345,89 @@ class TestSessionManagerContextFirst:
         )
         assert session_id is not None
 
-    def test_submit_answer_context_first(self):
+    def test_passage_then_grammar_scaffolding(self):
+        """After answering the passage, grammar nodes from it are presented."""
+        g = _build_test_graph()
+        learner = LearnerModel(user_id=uuid4())
+        learner.knoop_states["LAT-G-MORF-ROOT"] = KnoopState(
+            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
+        )
+        passages = [_make_passage()]
+        mgr = SessionManager()
+        session_id, q1 = mgr.start_session(
+            user_id=str(uuid4()),
+            learner=learner,
+            graph=g,
+            learning_route=LearningRoute.CONTEXT_FIRST,
+            passages=passages,
+        )
+        assert q1 is not None
+        assert q1.knoop_id == "LAT-P-T01"  # passage first
+
+        # Answer the passage question
+        result = mgr.submit_answer(session_id, ResponseType.CORRECT, 3000)
+        assert result.feedback.response_type == "passage_read"
+
+        # Next question should be a grammar node from the passage
+        q2 = result.next_question
+        if q2 is not None:
+            assert q2.knoop_id in ["LAT-G-MORF-CHILDA", "LAT-G-MORF-CHILDC"]
+            assert isinstance(q2.stimulus, str)  # not a dict (normal knoop question)
+
+    def test_bkt_not_applied_to_passage(self):
+        """BKT updates should NOT happen on the passage ID."""
+        g = _build_test_graph()
+        learner = LearnerModel(user_id=uuid4())
+        learner.knoop_states["LAT-G-MORF-ROOT"] = KnoopState(
+            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
+        )
+        passages = [_make_passage()]
+        mgr = SessionManager()
+        session_id, q1 = mgr.start_session(
+            user_id=str(uuid4()),
+            learner=learner,
+            graph=g,
+            learning_route=LearningRoute.CONTEXT_FIRST,
+            passages=passages,
+        )
+        # Answer the passage
+        mgr.submit_answer(session_id, ResponseType.CORRECT, 2000)
+
+        # Passage ID should NOT appear in learner's knoop_states
+        assert "LAT-P-T01" not in learner.knoop_states
+
+    def test_bkt_applied_to_grammar_nodes(self):
+        """BKT updates DO happen on the grammar nodes after passage."""
+        g = _build_test_graph()
+        learner = LearnerModel(user_id=uuid4())
+        learner.knoop_states["LAT-G-MORF-ROOT"] = KnoopState(
+            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
+        )
+        passages = [_make_passage()]
+        mgr = SessionManager()
+        session_id, q1 = mgr.start_session(
+            user_id=str(uuid4()),
+            learner=learner,
+            graph=g,
+            learning_route=LearningRoute.CONTEXT_FIRST,
+            passages=passages,
+        )
+        # Answer passage
+        result1 = mgr.submit_answer(session_id, ResponseType.CORRECT, 2000)
+        if result1.next_question is not None:
+            grammar_id = result1.next_question.knoop_id
+            before = learner.knoop_states.get(grammar_id)
+            before_val = before.posterior_mastery if before else 0.10
+
+            # Answer the grammar node correctly
+            result2 = mgr.submit_answer(session_id, ResponseType.CORRECT, 2000)
+            after_val = learner.knoop_states[grammar_id].posterior_mastery
+
+            # Mastery should have increased (BKT applied)
+            assert after_val > before_val
+
+    def test_submit_answer_passage_then_complete(self):
+        """Full flow: passage → grammar nodes → session completes."""
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
         learner.knoop_states["LAT-G-MORF-ROOT"] = KnoopState(
@@ -359,8 +442,14 @@ class TestSessionManagerContextFirst:
             learning_route=LearningRoute.CONTEXT_FIRST,
             passages=passages,
         )
-        if question is not None:
-            result = mgr.submit_answer(
-                session_id, ResponseType.CORRECT, 2000
-            )
-            assert result.feedback.correct is True
+        # Walk through all questions until session finishes
+        steps = 0
+        while question is not None and steps < 50:
+            result = mgr.submit_answer(session_id, ResponseType.CORRECT, 2000)
+            question = result.next_question
+            steps += 1
+            if result.session_finished:
+                break
+
+        summary = mgr.get_summary(session_id)
+        assert summary.total_items >= 1  # at least the passage was presented
