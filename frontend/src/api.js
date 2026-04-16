@@ -77,3 +77,10 @@ export function updateLearningRoute(learningRoute) {
     body: JSON.stringify({ learning_route: learningRoute }),
   });
 }
+
+export function updateSettings(learningRoute) {
+  return apiFetch('/auth/settings', {
+    method: 'POST',
+    body: JSON.stringify({ learning_route: learningRoute }),
+  });
+}

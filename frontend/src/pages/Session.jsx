@@ -7,6 +7,20 @@ import QuestionCard from '../components/QuestionCard'
 import AnswerInput from '../components/AnswerInput'
 import FeedbackCard from '../components/FeedbackCard'
 import SessionSummary from '../components/SessionSummary'
+import PassageReader from '../components/PassageReader'
+
+/**
+ * Detect whether a question is a passage reading step.
+ * The backend sends stimulus as a dict with type="passage" for passages.
+ */
+function isPassageQuestion(question) {
+  return (
+    question &&
+    typeof question.stimulus === 'object' &&
+    question.stimulus !== null &&
+    question.stimulus.type === 'passage'
+  )
+}
 
 export default function Session() {
   const navigate = useNavigate()
@@ -148,8 +162,6 @@ export default function Session() {
 
           {error && <div className="error-message">{error}</div>}
 
-          {!feedback && <QuestionCard question={question} />}
-
           {feedback ? (
             <div className="feedback-section">
               <FeedbackCard feedback={feedback} />
@@ -157,12 +169,21 @@ export default function Session() {
                 {pendingQuestion?._summary ? 'Bekijk resultaten' : 'Volgende vraag'}
               </button>
             </div>
-          ) : (
-            <AnswerInput
-              question={question}
-              onAnswer={handleAnswer}
-              disabled={submitting}
+          ) : isPassageQuestion(question) ? (
+            <PassageReader
+              passage={{ ...question.stimulus, titel: question.titel }}
+              masteredIds={new Set()}
+              onDoneReading={() => handleAnswer('correct', null)}
             />
+          ) : (
+            <>
+              <QuestionCard question={question} />
+              <AnswerInput
+                question={question}
+                onAnswer={handleAnswer}
+                disabled={submitting}
+              />
+            </>
           )}
         </>
       )}

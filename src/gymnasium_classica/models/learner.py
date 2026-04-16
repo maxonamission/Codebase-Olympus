@@ -63,6 +63,13 @@ class OfflineAssignment(BaseModel):
     completed: bool = False
 
 
+class RouteSwitch(BaseModel):
+    """A record of a learning route change."""
+
+    timestamp: datetime
+    route: str = Field(description="'grammar_first' or 'context_first'")
+
+
 class SessionRecord(BaseModel):
     """A record of a single study session."""
 
@@ -71,6 +78,10 @@ class SessionRecord(BaseModel):
     ended_at: Optional[datetime] = None
     items_reviewed: list[str] = Field(
         default_factory=list, description="List of item IDs reviewed in this session"
+    )
+    learning_route: Optional[str] = Field(
+        default=None,
+        description="The learning route active during this session",
     )
 
 
@@ -81,6 +92,7 @@ class LearnerModel(BaseModel):
     knoop_states: dict[str, KnoopState] = Field(default_factory=dict)
     session_history: list[SessionRecord] = Field(default_factory=list)
     pending_offline_assignments: list[OfflineAssignment] = Field(default_factory=list)
+    route_history: list[RouteSwitch] = Field(default_factory=list)
     self_report_count: int = Field(default=0, ge=0)
     ocr_verified_count: int = Field(default=0, ge=0)
     intake_completed: bool = False

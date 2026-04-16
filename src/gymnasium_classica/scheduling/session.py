@@ -517,6 +517,7 @@ def run_session(
             started_at=now,
             ended_at=now,
             items_reviewed=[item.knoop_id for item in result.items],
+            learning_route=learning_route.value,
         )
     )
 

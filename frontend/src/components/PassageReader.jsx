@@ -7,8 +7,9 @@ import { useState, useRef, useEffect } from 'react'
  *   passage     — { id, taal, titel, tekst, annotaties, knoop_ids, moeilijkheid }
  *   masteredIds — Set<string> of mastered knoop IDs (for highlighting unknown grammar)
  *   onKnoopClick — optional callback(knoopId) when user clicks "Bekijk grammatica"
+ *   onDoneReading — optional callback() when user clicks "Ik heb gelezen"
  */
-export default function PassageReader({ passage, masteredIds = new Set(), onKnoopClick }) {
+export default function PassageReader({ passage, masteredIds = new Set(), onKnoopClick, onDoneReading }) {
   const [activeWord, setActiveWord] = useState(null)
   const popupRef = useRef(null)
 
@@ -27,7 +28,9 @@ export default function PassageReader({ passage, masteredIds = new Set(), onKnoo
 
   if (!passage) return null
 
-  // Build a lookup from surface form → annotation (by position)
+  // Build a lookup: map each annotation to its knoop_ids via naamval/lemma.
+  // For per-word mastery we check all passage knoop_ids — a word is "unknown"
+  // when its mastery is below the threshold (0.25).
   const words = passage.tekst.split(/(\s+)/)
 
   // Match words to annotations in order
@@ -51,7 +54,9 @@ export default function PassageReader({ passage, masteredIds = new Set(), onKnoo
       }
     }
 
-    // Determine if grammar is unknown: check if any linked knoop is NOT mastered
+    // Per-word mastery: a word is "unknown" when any of the passage's
+    // linked grammar nodes is not in the mastered set.  This highlights
+    // words whose underlying grammar the learner hasn't acquired yet.
     const isUnknown = annotation && passage.knoop_ids
       ? passage.knoop_ids.some(kid => !masteredIds.has(kid))
       : false
@@ -140,6 +145,14 @@ export default function PassageReader({ passage, masteredIds = new Set(), onKnoo
           )
         })}
       </div>
+
+      <p className="passage-hint">Klik op een woord voor de vertaling en grammatica.</p>
+
+      {onDoneReading && (
+        <button className="btn btn-primary passage-done-btn" onClick={onDoneReading}>
+          Ik heb gelezen — ga verder
+        </button>
+      )}
     </div>
   )
 }

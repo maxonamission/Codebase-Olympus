@@ -41,6 +41,10 @@ class QuestionResponse(BaseModel):
     stimulus: str | dict
     phase: str
     items: list[ItemInfo] = Field(default_factory=list)
+    scaffolding_content: Optional[str] = Field(
+        default=None,
+        description="Markdown grammar explanation for context-first scaffolding",
+    )
 
 
 class StartSessionResponse(BaseModel):
@@ -97,6 +101,16 @@ class DomainProgress(BaseModel):
     unseen: int
 
 
+class SessionMasteryEntry(BaseModel):
+    """Mastery snapshot after a single session."""
+
+    session_id: str
+    timestamp: str
+    learning_route: Optional[str] = None
+    nodes_practiced: int
+    mastered_after: int
+
+
 class ProgressOverviewResponse(BaseModel):
     total_nodes: int
     mastered: int
@@ -105,6 +119,10 @@ class ProgressOverviewResponse(BaseModel):
     domains: dict[str, DomainProgress]
     streak_days: int
     intake_completed: bool
+    session_progression: list[SessionMasteryEntry] = Field(
+        default_factory=list,
+        description="Mastery progression per session, for route comparison",
+    )
 
 
 class ItemHistoryEntry(BaseModel):

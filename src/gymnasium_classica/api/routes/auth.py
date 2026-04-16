@@ -1,13 +1,32 @@
-"""Auth routes: register and login."""
+"""Auth routes: register, login, and settings."""
 
 import sqlite3
 
-from fastapi import APIRouter, HTTPException, Request
+from fastapi import APIRouter, Depends, HTTPException, Request
 
-from gymnasium_classica.api.auth import generate_token, hash_password, verify_password
-from gymnasium_classica.api.database import create_user, get_user_by_email
-from gymnasium_classica.api.schemas import AuthResponse, LoginRequest, RegisterRequest
-from gymnasium_classica.models.user import User
+from gymnasium_classica.api.auth import (
+    generate_token,
+    get_current_user_id,
+    hash_password,
+    verify_password,
+)
+from gymnasium_classica.api.database import (
+    create_user,
+    get_user,
+    get_user_by_email,
+    load_learner_model,
+    save_learner_model,
+    update_user,
+)
+from gymnasium_classica.api.schemas import (
+    AuthResponse,
+    LoginRequest,
+    RegisterRequest,
+    UpdateLearningRouteRequest,
+    UserProfileResponse,
+)
+from gymnasium_classica.models.learner import LearnerModel, RouteSwitch
+from gymnasium_classica.models.user import LearningRoute, User
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -56,3 +75,50 @@ async def login(body: LoginRequest, request: Request):
     db.commit()
 
     return AuthResponse(user_id=row["id"], token=token)
+
+
+@router.post("/settings", response_model=UserProfileResponse)
+async def update_settings(
+    body: UpdateLearningRouteRequest,
+    request: Request,
+    user_id: str = Depends(get_current_user_id),
+):
+    """Update user settings (currently: learning_route).
+
+    POST /auth/settings { learning_route: "grammar_first" | "context_first" }
+    """
+    db: sqlite3.Connection = request.app.state.db
+
+    try:
+        route = LearningRoute(body.learning_route)
+    except ValueError:
+        raise HTTPException(
+            status_code=422,
+            detail=f"Invalid learning_route: {body.learning_route!r}. "
+            "Must be 'grammar_first' or 'context_first'.",
+        )
+
+    user = get_user(db, user_id)
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    user.learning_route = route
+    update_user(db, user)
+
+    # Track the route switch in the learner model
+    from datetime import datetime
+    from uuid import UUID
+
+    learner = load_learner_model(db, user_id)
+    if learner is None:
+        learner = LearnerModel(user_id=UUID(user_id))
+    learner.route_history.append(
+        RouteSwitch(timestamp=datetime.now(), route=route.value)
+    )
+    save_learner_model(db, learner)
+
+    return UserProfileResponse(
+        user_id=str(user.id),
+        email=user.email,
+        learning_route=user.learning_route.value,
+    )

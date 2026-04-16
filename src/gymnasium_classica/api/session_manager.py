@@ -10,10 +10,13 @@ request/response protocol:
 
 from dataclasses import dataclass, field
 from datetime import datetime
+from pathlib import Path
 from typing import Optional
 from uuid import uuid4
 
 import networkx as nx
+
+CONTENT_DIR = Path("data/content")
 
 from gymnasium_classica.models.graph import KennisKnoop
 from gymnasium_classica.models.learner import (
@@ -59,6 +62,7 @@ class Question:
     stimulus: str | dict
     phase: str
     items: list[dict] = field(default_factory=list)
+    scaffolding_content: str | None = None
 
 
 @dataclass
@@ -165,8 +169,41 @@ def _passage_to_question(passage: Passage, phase: SessionPhase) -> Question:
     )
 
 
-def _knoop_to_question(knoop: KennisKnoop, phase: SessionPhase) -> Question:
-    """Convert a KennisKnoop to a Question for the API."""
+def _load_scaffolding_content(
+    knoop: KennisKnoop,
+    content_dir: Path = CONTENT_DIR,
+) -> str | None:
+    """Load markdown scaffolding content for a knowledge node.
+
+    Looks for ``data/content/{knoop.id}.md`` (or the explicit
+    ``content_ref`` path if set).  Returns the markdown string,
+    or None when no content file exists.
+    """
+    if knoop.content_ref:
+        path = Path(knoop.content_ref)
+        if not path.is_absolute():
+            path = content_dir.parent.parent / knoop.content_ref
+    else:
+        path = content_dir / f"{knoop.id}.md"
+
+    if path.is_file():
+        return path.read_text(encoding="utf-8")
+    return None
+
+
+def _knoop_to_question(
+    knoop: KennisKnoop,
+    phase: SessionPhase,
+    include_scaffolding: bool = False,
+    content_dir: Path = CONTENT_DIR,
+) -> Question:
+    """Convert a KennisKnoop to a Question for the API.
+
+    When *include_scaffolding* is True (context-first scaffolding after
+    a passage), the markdown content from ``data/content/`` is attached
+    as ``scaffolding_content`` so the frontend can show an inline
+    grammar explanation.
+    """
     items = []
     for item in knoop.items:
         items.append({
@@ -182,6 +219,10 @@ def _knoop_to_question(knoop: KennisKnoop, phase: SessionPhase) -> Question:
     else:
         stimulus = _generate_self_assess_prompt(knoop)
 
+    content = None
+    if include_scaffolding:
+        content = _load_scaffolding_content(knoop, content_dir)
+
     return Question(
         knoop_id=knoop.id,
         titel=knoop.titel_nl,
@@ -189,6 +230,7 @@ def _knoop_to_question(knoop: KennisKnoop, phase: SessionPhase) -> Question:
         stimulus=stimulus,
         phase=phase.value,
         items=items,
+        scaffolding_content=content,
     )
 
 
@@ -420,7 +462,17 @@ class SessionManager:
 
                 state.current_knoop = selected
                 state.current_before = _get_state_posterior(state.learner, selected.id)
-                return _knoop_to_question(selected, phase)
+
+                # Include scaffolding content for context-first grammar
+                # nodes presented after a passage reading step.
+                scaffolding = (
+                    state.passage_presented
+                    and state.learning_route == LearningRoute.CONTEXT_FIRST
+                    and phase == SessionPhase.NEW_MATERIAL
+                )
+                return _knoop_to_question(
+                    selected, phase, include_scaffolding=scaffolding
+                )
 
             # Phase exhausted — record and move on
             state.phases_completed.append(phase.value)
@@ -469,5 +521,6 @@ class SessionManager:
                 started_at=state.started_at,
                 ended_at=now,
                 items_reviewed=list(state.session_node_ids),
+                learning_route=state.learning_route.value,
             )
         )
