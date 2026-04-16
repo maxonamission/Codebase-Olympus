@@ -521,5 +521,6 @@ class SessionManager:
                 started_at=state.started_at,
                 ended_at=now,
                 items_reviewed=list(state.session_node_ids),
+                learning_route=state.learning_route.value,
             )
         )

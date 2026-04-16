@@ -10,7 +10,14 @@ from gymnasium_classica.api.auth import (
     hash_password,
     verify_password,
 )
-from gymnasium_classica.api.database import create_user, get_user, get_user_by_email, update_user
+from gymnasium_classica.api.database import (
+    create_user,
+    get_user,
+    get_user_by_email,
+    load_learner_model,
+    save_learner_model,
+    update_user,
+)
 from gymnasium_classica.api.schemas import (
     AuthResponse,
     LoginRequest,
@@ -18,6 +25,7 @@ from gymnasium_classica.api.schemas import (
     UpdateLearningRouteRequest,
     UserProfileResponse,
 )
+from gymnasium_classica.models.learner import LearnerModel, RouteSwitch
 from gymnasium_classica.models.user import LearningRoute, User
 
 router = APIRouter(prefix="/auth", tags=["auth"])
@@ -96,6 +104,18 @@ async def update_settings(
 
     user.learning_route = route
     update_user(db, user)
+
+    # Track the route switch in the learner model
+    from datetime import datetime
+    from uuid import UUID
+
+    learner = load_learner_model(db, user_id)
+    if learner is None:
+        learner = LearnerModel(user_id=UUID(user_id))
+    learner.route_history.append(
+        RouteSwitch(timestamp=datetime.now(), route=route.value)
+    )
+    save_learner_model(db, learner)
 
     return UserProfileResponse(
         user_id=str(user.id),

@@ -15,6 +15,7 @@ from gymnasium_classica.api.schemas import (
     ItemHistoryEntry,
     KnoopProgressResponse,
     ProgressOverviewResponse,
+    SessionMasteryEntry,
 )
 from gymnasium_classica.models.graph import PrerequisiteEdge
 from gymnasium_classica.models.graph import KennisKnoop
@@ -49,6 +50,44 @@ def _compute_streak(learner: LearnerModel) -> int:
         day -= timedelta(days=1)
 
     return streak
+
+
+def _compute_session_progression(
+    learner: LearnerModel,
+    graph: nx.DiGraph,
+) -> list[SessionMasteryEntry]:
+    """Compute mastery progression per session for route comparison.
+
+    For each session in the learner's history, counts how many nodes
+    were practiced and how many total nodes are mastered at that point
+    in time (cumulative).  The learning_route field allows filtering
+    by route on the frontend/analytics side.
+    """
+    entries: list[SessionMasteryEntry] = []
+    # Track cumulative mastered count by replaying session order.
+    # Since we don't have per-session snapshots of all posteriors,
+    # we use the current mastery state and the session's items_reviewed
+    # as a proxy: nodes_practiced = len(items_reviewed).
+    # mastered_after = cumulative mastered nodes up to and including this session.
+    seen_mastered: set[str] = set()
+
+    for rec in learner.session_history:
+        for node_id in rec.items_reviewed:
+            state = learner.knoop_states.get(node_id)
+            if state and state.posterior_mastery >= MASTERY_THRESHOLD:
+                seen_mastered.add(node_id)
+
+        entries.append(
+            SessionMasteryEntry(
+                session_id=rec.session_id,
+                timestamp=rec.started_at.isoformat() if rec.started_at else "",
+                learning_route=rec.learning_route,
+                nodes_practiced=len(rec.items_reviewed),
+                mastered_after=len(seen_mastered),
+            )
+        )
+
+    return entries
 
 
 @router.get("/overview", response_model=ProgressOverviewResponse)
@@ -105,6 +144,9 @@ async def progress_overview(
             in_progress += 1
             domains[d].in_progress += 1
 
+    # Build session mastery progression for route comparison
+    session_progression = _compute_session_progression(learner, graph)
+
     return ProgressOverviewResponse(
         total_nodes=graph.number_of_nodes(),
         mastered=mastered,
@@ -113,6 +155,7 @@ async def progress_overview(
         domains=domains,
         streak_days=_compute_streak(learner),
         intake_completed=learner.intake_completed,
+        session_progression=session_progression,
     )
 
 
