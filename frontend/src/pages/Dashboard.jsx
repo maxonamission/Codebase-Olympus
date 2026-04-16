@@ -86,9 +86,9 @@ export default function Dashboard() {
   }
 
   const domains = overview?.domains || {}
-  const totalMastered = overview?.total_mastered || 0
+  const totalMastered = overview?.mastered || 0
   const totalNodes = overview?.total_nodes || 0
-  const streak = overview?.streak || 0
+  const streak = overview?.streak_days || 0
   const totalPct = totalNodes > 0 ? Math.round((totalMastered / totalNodes) * 100) : 0
 
   return (
