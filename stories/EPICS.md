@@ -414,6 +414,50 @@ De engine naar een webapplicatie brengen. Zie `docs/Prompt_spoor_d.md` voor de v
 | D3-03 | End-to-end smoke test + pilot guide | done |
 
 ---
+
+## Spoor F — Content-ontsluiting en kwaliteitsverbetering
+
+Bestaand materiaal (markdowns, audio, MC-opties, vocab-metadata) daadwerkelijk naar de leerling krijgen, en dekkingsgaten dichten waar dat leerrendement oplevert. Focus op wat al in `data/` staat maar niet bereikt wordt.
+
+### Uitvoervolgorde
+
+1. **F1-11** eerst — dekkingsrapport geeft baseline
+2. **F1-01** en **F1-03** — frontend-pipeline werkend (scaffolding + structured stimulus); blokkerend voor rest
+3. **F1-04** — audio pipeline
+4. **F1-02**, **F1-05**, **F1-06** — parallel, bouwen voort op 01/03
+5. **F1-07**, **F1-08** — content-uitbreiding, na pipeline
+6. **F1-09**, **F1-10** — opschoning, kan altijd
+
+---
+
+## Epic F1: Content-ontsluiting en kwaliteitsverbetering
+
+**Doel:** Het gat dichten tussen aanwezig materiaal en wat de leerling daadwerkelijk ziet. Frontend-pipeline voor `scaffolding_content`, structured stimulus (MC-opties, hints) en audio-playback; vocab-metadata ontsluiten; content-dekking van LAT-G opschalen; cultuurknopen oefenbaar maken; dode data opruimen; permanente monitoring via dekkingsrapport.
+**Geschat:** 11 stories
+**Afhankelijkheden:** D1 + D2 compleet (engine en frontend draaien)
+**Status:** todo
+
+| Story | Titel | Status |
+|-------|-------|--------|
+| F1-01 | Frontend ScaffoldingPanel — render `scaffolding_content` als markdown | todo |
+| F1-02 | Scaffolding ook in grammar-first (opt-in) bij eerste introductie | todo |
+| F1-03 | Frontend rendert structured stimulus (instruction / hint / options) | todo |
+| F1-04 | AudioPlayer component + afspelen van `audio_ref` in luister-items | todo |
+| F1-05 | Woordkaart — toon structured vocab-metadata uit vocab_sources | todo |
+| F1-06 | `content_ref` expliciet zetten in alle graph-JSONs + validator | todo |
+| F1-07 | LAT-G content-dekking verhogen naar hot-path ≥ 80 % | todo |
+| F1-08 | Cultuurknopen oefenbaar maken (items + korte markdown) | todo |
+| F1-09 | Ontsluit of verwijder `vocabulaire_clusters.json` | todo |
+| F1-10 | Opschonen passages — merge `lat_passages_leerjaar1.json` | todo |
+| F1-11 | Content-dekkingsrapport — script + CI-check | todo |
+
+**Verhouding tot andere epics:**
+- F1 overlapt niet met **A-spoor** (graph-structuur) — die is af.
+- F1-04 vult de frontend-kant aan die B2 voorondersteld had; echte audio komt later via **E2**.
+- F1-07/F1-08 raken aan **C2** (LAT-G-content) en **E3** (GRC-G + SHA-C items/content). F1 levert eerst de pipeline en basis-oefenbaarheid; E3 kan verdiepend Grieks-materiaal toevoegen.
+- F1 is pilot-kritisch: zonder F1-01, F1-03 en F1-04 blijft veel van het gegenereerde materiaal onzichtbaar voor de leerling en is een **E1**-pilot minder waardevol.
+
+---
 ---
 
 ## Roadmap — toekomstige epics
