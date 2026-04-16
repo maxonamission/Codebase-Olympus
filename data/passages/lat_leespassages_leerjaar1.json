@@ -2,57 +2,45 @@
   "passages": [
     {
       "id": "LAT-PASS-LJ1-001",
-      "titel_nl": "Puella en de slaaf",
-      "niveau": 1,
-      "complexiteit_label": "nom_acc_praes_d12_c12",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "Puella en de slaaf",
+      "tekst": "Puella aquam portat. Servus equum videt.",
+      "annotaties": [
         {
-          "latijn": "Puella aquam portat.",
-          "vertaling_nl": "Het meisje draagt water.",
-          "woorden": [
-            {
-              "vorm": "Puella",
-              "lemma": "puella",
-              "morfologie": "nom.sg.f — 1e decl.",
-              "vertaling_nl": "meisje"
-            },
-            {
-              "vorm": "aquam",
-              "lemma": "aqua",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "water"
-            },
-            {
-              "vorm": "portat",
-              "lemma": "porto",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "draagt"
-            }
-          ]
+          "woord": "Puella",
+          "lemma": "puella",
+          "naamval": "nom.sg.f — 1e decl.",
+          "vertaling": "meisje"
         },
         {
-          "latijn": "Servus equum videt.",
-          "vertaling_nl": "De slaaf ziet het paard.",
-          "woorden": [
-            {
-              "vorm": "Servus",
-              "lemma": "servus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "equum",
-              "lemma": "equus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "paard"
-            },
-            {
-              "vorm": "videt",
-              "lemma": "video",
-              "morfologie": "praes.ind.act. 3sg — 2e conj.",
-              "vertaling_nl": "ziet"
-            }
-          ]
+          "woord": "aquam",
+          "lemma": "aqua",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "water"
+        },
+        {
+          "woord": "portat",
+          "lemma": "porto",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "draagt"
+        },
+        {
+          "woord": "Servus",
+          "lemma": "servus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "slaaf"
+        },
+        {
+          "woord": "equum",
+          "lemma": "equus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "paard"
+        },
+        {
+          "woord": "videt",
+          "lemma": "video",
+          "naamval": "praes.ind.act. 3sg — 2e conj.",
+          "vertaling": "ziet"
         }
       ],
       "knoop_ids": [
@@ -68,85 +56,68 @@
         "LAT-V-F01-SERVUS",
         "LAT-V-F02-EQUUS",
         "LAT-V-F01-VIDEO"
-      ]
+      ],
+      "moeilijkheid": 1
     },
     {
       "id": "LAT-PASS-LJ1-002",
-      "titel_nl": "De meester roept",
-      "niveau": 2,
-      "complexiteit_label": "nom_acc_praes_d12_c12",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "De meester roept",
+      "tekst": "Dominus servum vocat. Servus dominum timet. Filia aquam portat.",
+      "annotaties": [
         {
-          "latijn": "Dominus servum vocat.",
-          "vertaling_nl": "De meester roept de slaaf.",
-          "woorden": [
-            {
-              "vorm": "Dominus",
-              "lemma": "dominus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "servum",
-              "lemma": "servus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "vocat",
-              "lemma": "voco",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "roept"
-            }
-          ]
+          "woord": "Dominus",
+          "lemma": "dominus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
         },
         {
-          "latijn": "Servus dominum timet.",
-          "vertaling_nl": "De slaaf vreest de meester.",
-          "woorden": [
-            {
-              "vorm": "Servus",
-              "lemma": "servus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "dominum",
-              "lemma": "dominus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "timet",
-              "lemma": "timeo",
-              "morfologie": "praes.ind.act. 3sg — 2e conj.",
-              "vertaling_nl": "vreest"
-            }
-          ]
+          "woord": "servum",
+          "lemma": "servus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "slaaf"
         },
         {
-          "latijn": "Filia aquam portat.",
-          "vertaling_nl": "De dochter draagt water.",
-          "woorden": [
-            {
-              "vorm": "Filia",
-              "lemma": "filia",
-              "morfologie": "nom.sg.f — 1e decl.",
-              "vertaling_nl": "dochter"
-            },
-            {
-              "vorm": "aquam",
-              "lemma": "aqua",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "water"
-            },
-            {
-              "vorm": "portat",
-              "lemma": "porto",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "draagt"
-            }
-          ]
+          "woord": "vocat",
+          "lemma": "voco",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "roept"
+        },
+        {
+          "woord": "Servus",
+          "lemma": "servus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "slaaf"
+        },
+        {
+          "woord": "dominum",
+          "lemma": "dominus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
+        },
+        {
+          "woord": "timet",
+          "lemma": "timeo",
+          "naamval": "praes.ind.act. 3sg — 2e conj.",
+          "vertaling": "vreest"
+        },
+        {
+          "woord": "Filia",
+          "lemma": "filia",
+          "naamval": "nom.sg.f — 1e decl.",
+          "vertaling": "dochter"
+        },
+        {
+          "woord": "aquam",
+          "lemma": "aqua",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "water"
+        },
+        {
+          "woord": "portat",
+          "lemma": "porto",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "draagt"
         }
       ],
       "knoop_ids": [
@@ -163,85 +134,68 @@
         "LAT-V-F01-FILIA",
         "LAT-V-F01-AQUA",
         "LAT-V-F02-PORTO"
-      ]
+      ],
+      "moeilijkheid": 2
     },
     {
       "id": "LAT-PASS-LJ1-003",
-      "titel_nl": "Bij de villa",
-      "niveau": 3,
-      "complexiteit_label": "nom_acc_praes_d12_c12",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "Bij de villa",
+      "tekst": "Servi villam vident. Puellae aquam portant. Dominus filium amat.",
+      "annotaties": [
         {
-          "latijn": "Servi villam vident.",
-          "vertaling_nl": "De slaven zien de villa.",
-          "woorden": [
-            {
-              "vorm": "Servi",
-              "lemma": "servus",
-              "morfologie": "nom.pl.m — 2e decl.",
-              "vertaling_nl": "slaven"
-            },
-            {
-              "vorm": "villam",
-              "lemma": "villa",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "villa/landhuis"
-            },
-            {
-              "vorm": "vident",
-              "lemma": "video",
-              "morfologie": "praes.ind.act. 3pl — 2e conj.",
-              "vertaling_nl": "zien"
-            }
-          ]
+          "woord": "Servi",
+          "lemma": "servus",
+          "naamval": "nom.pl.m — 2e decl.",
+          "vertaling": "slaven"
         },
         {
-          "latijn": "Puellae aquam portant.",
-          "vertaling_nl": "De meisjes dragen water.",
-          "woorden": [
-            {
-              "vorm": "Puellae",
-              "lemma": "puella",
-              "morfologie": "nom.pl.f — 1e decl.",
-              "vertaling_nl": "meisjes"
-            },
-            {
-              "vorm": "aquam",
-              "lemma": "aqua",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "water"
-            },
-            {
-              "vorm": "portant",
-              "lemma": "porto",
-              "morfologie": "praes.ind.act. 3pl — 1e conj.",
-              "vertaling_nl": "dragen"
-            }
-          ]
+          "woord": "villam",
+          "lemma": "villa",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "villa/landhuis"
         },
         {
-          "latijn": "Dominus filium amat.",
-          "vertaling_nl": "De meester houdt van zijn zoon.",
-          "woorden": [
-            {
-              "vorm": "Dominus",
-              "lemma": "dominus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "filium",
-              "lemma": "filius",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "zoon"
-            },
-            {
-              "vorm": "amat",
-              "lemma": "amo",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "houdt van"
-            }
-          ]
+          "woord": "vident",
+          "lemma": "video",
+          "naamval": "praes.ind.act. 3pl — 2e conj.",
+          "vertaling": "zien"
+        },
+        {
+          "woord": "Puellae",
+          "lemma": "puella",
+          "naamval": "nom.pl.f — 1e decl.",
+          "vertaling": "meisjes"
+        },
+        {
+          "woord": "aquam",
+          "lemma": "aqua",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "water"
+        },
+        {
+          "woord": "portant",
+          "lemma": "porto",
+          "naamval": "praes.ind.act. 3pl — 1e conj.",
+          "vertaling": "dragen"
+        },
+        {
+          "woord": "Dominus",
+          "lemma": "dominus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
+        },
+        {
+          "woord": "filium",
+          "lemma": "filius",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "zoon"
+        },
+        {
+          "woord": "amat",
+          "lemma": "amo",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "houdt van"
         }
       ],
       "knoop_ids": [
@@ -261,97 +215,80 @@
         "LAT-V-F01-DOMINUS",
         "LAT-V-F01-FILIUS",
         "LAT-V-F01-AMO"
-      ]
+      ],
+      "moeilijkheid": 3
     },
     {
       "id": "LAT-PASS-LJ1-004",
-      "titel_nl": "Zoon en dochter",
-      "niveau": 4,
-      "complexiteit_label": "nom_acc_praes_d12_c12",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "Zoon en dochter",
+      "tekst": "Filius equum habet. Filia silvam amat. Servus filium et filiam vocat.",
+      "annotaties": [
         {
-          "latijn": "Filius equum habet.",
-          "vertaling_nl": "De zoon heeft een paard.",
-          "woorden": [
-            {
-              "vorm": "Filius",
-              "lemma": "filius",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "zoon"
-            },
-            {
-              "vorm": "equum",
-              "lemma": "equus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "paard"
-            },
-            {
-              "vorm": "habet",
-              "lemma": "habeo",
-              "morfologie": "praes.ind.act. 3sg — 2e conj.",
-              "vertaling_nl": "heeft"
-            }
-          ]
+          "woord": "Filius",
+          "lemma": "filius",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "zoon"
         },
         {
-          "latijn": "Filia silvam amat.",
-          "vertaling_nl": "De dochter houdt van het bos.",
-          "woorden": [
-            {
-              "vorm": "Filia",
-              "lemma": "filia",
-              "morfologie": "nom.sg.f — 1e decl.",
-              "vertaling_nl": "dochter"
-            },
-            {
-              "vorm": "silvam",
-              "lemma": "silva",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "bos"
-            },
-            {
-              "vorm": "amat",
-              "lemma": "amo",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "houdt van"
-            }
-          ]
+          "woord": "equum",
+          "lemma": "equus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "paard"
         },
         {
-          "latijn": "Servus filium et filiam vocat.",
-          "vertaling_nl": "De slaaf roept de zoon en de dochter.",
-          "woorden": [
-            {
-              "vorm": "Servus",
-              "lemma": "servus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "filium",
-              "lemma": "filius",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "zoon"
-            },
-            {
-              "vorm": "et",
-              "lemma": "et",
-              "morfologie": "nevenschikkend voegwoord",
-              "vertaling_nl": "en"
-            },
-            {
-              "vorm": "filiam",
-              "lemma": "filia",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "dochter"
-            },
-            {
-              "vorm": "vocat",
-              "lemma": "voco",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "roept"
-            }
-          ]
+          "woord": "habet",
+          "lemma": "habeo",
+          "naamval": "praes.ind.act. 3sg — 2e conj.",
+          "vertaling": "heeft"
+        },
+        {
+          "woord": "Filia",
+          "lemma": "filia",
+          "naamval": "nom.sg.f — 1e decl.",
+          "vertaling": "dochter"
+        },
+        {
+          "woord": "silvam",
+          "lemma": "silva",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "bos"
+        },
+        {
+          "woord": "amat",
+          "lemma": "amo",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "houdt van"
+        },
+        {
+          "woord": "Servus",
+          "lemma": "servus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "slaaf"
+        },
+        {
+          "woord": "filium",
+          "lemma": "filius",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "zoon"
+        },
+        {
+          "woord": "et",
+          "lemma": "et",
+          "naamval": "nevenschikkend voegwoord",
+          "vertaling": "en"
+        },
+        {
+          "woord": "filiam",
+          "lemma": "filia",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "dochter"
+        },
+        {
+          "woord": "vocat",
+          "lemma": "voco",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "roept"
         }
       ],
       "knoop_ids": [
@@ -370,109 +307,86 @@
         "LAT-V-F01-SERVUS",
         "LAT-V-F01-ET",
         "LAT-V-F01-VOCO"
-      ]
+      ],
+      "moeilijkheid": 4
     },
     {
       "id": "LAT-PASS-LJ1-005",
-      "titel_nl": "Jongens en meisjes",
-      "niveau": 5,
-      "complexiteit_label": "nom_acc_praes_d12_c12",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "Jongens en meisjes",
+      "tekst": "Pueri equos amant. Puellae viam vident. Dominus servos vocat. Servi dominum timent.",
+      "annotaties": [
         {
-          "latijn": "Pueri equos amant.",
-          "vertaling_nl": "De jongens houden van de paarden.",
-          "woorden": [
-            {
-              "vorm": "Pueri",
-              "lemma": "puer",
-              "morfologie": "nom.pl.m — 2e decl.",
-              "vertaling_nl": "jongens"
-            },
-            {
-              "vorm": "equos",
-              "lemma": "equus",
-              "morfologie": "acc.pl.m — 2e decl.",
-              "vertaling_nl": "paarden"
-            },
-            {
-              "vorm": "amant",
-              "lemma": "amo",
-              "morfologie": "praes.ind.act. 3pl — 1e conj.",
-              "vertaling_nl": "houden van"
-            }
-          ]
+          "woord": "Pueri",
+          "lemma": "puer",
+          "naamval": "nom.pl.m — 2e decl.",
+          "vertaling": "jongens"
         },
         {
-          "latijn": "Puellae viam vident.",
-          "vertaling_nl": "De meisjes zien de weg.",
-          "woorden": [
-            {
-              "vorm": "Puellae",
-              "lemma": "puella",
-              "morfologie": "nom.pl.f — 1e decl.",
-              "vertaling_nl": "meisjes"
-            },
-            {
-              "vorm": "viam",
-              "lemma": "via",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "weg"
-            },
-            {
-              "vorm": "vident",
-              "lemma": "video",
-              "morfologie": "praes.ind.act. 3pl — 2e conj.",
-              "vertaling_nl": "zien"
-            }
-          ]
+          "woord": "equos",
+          "lemma": "equus",
+          "naamval": "acc.pl.m — 2e decl.",
+          "vertaling": "paarden"
         },
         {
-          "latijn": "Dominus servos vocat.",
-          "vertaling_nl": "De meester roept de slaven.",
-          "woorden": [
-            {
-              "vorm": "Dominus",
-              "lemma": "dominus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "servos",
-              "lemma": "servus",
-              "morfologie": "acc.pl.m — 2e decl.",
-              "vertaling_nl": "slaven"
-            },
-            {
-              "vorm": "vocat",
-              "lemma": "voco",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "roept"
-            }
-          ]
+          "woord": "amant",
+          "lemma": "amo",
+          "naamval": "praes.ind.act. 3pl — 1e conj.",
+          "vertaling": "houden van"
         },
         {
-          "latijn": "Servi dominum timent.",
-          "vertaling_nl": "De slaven vrezen de meester.",
-          "woorden": [
-            {
-              "vorm": "Servi",
-              "lemma": "servus",
-              "morfologie": "nom.pl.m — 2e decl.",
-              "vertaling_nl": "slaven"
-            },
-            {
-              "vorm": "dominum",
-              "lemma": "dominus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "timent",
-              "lemma": "timeo",
-              "morfologie": "praes.ind.act. 3pl — 2e conj.",
-              "vertaling_nl": "vrezen"
-            }
-          ]
+          "woord": "Puellae",
+          "lemma": "puella",
+          "naamval": "nom.pl.f — 1e decl.",
+          "vertaling": "meisjes"
+        },
+        {
+          "woord": "viam",
+          "lemma": "via",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "weg"
+        },
+        {
+          "woord": "vident",
+          "lemma": "video",
+          "naamval": "praes.ind.act. 3pl — 2e conj.",
+          "vertaling": "zien"
+        },
+        {
+          "woord": "Dominus",
+          "lemma": "dominus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
+        },
+        {
+          "woord": "servos",
+          "lemma": "servus",
+          "naamval": "acc.pl.m — 2e decl.",
+          "vertaling": "slaven"
+        },
+        {
+          "woord": "vocat",
+          "lemma": "voco",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "roept"
+        },
+        {
+          "woord": "Servi",
+          "lemma": "servus",
+          "naamval": "nom.pl.m — 2e decl.",
+          "vertaling": "slaven"
+        },
+        {
+          "woord": "dominum",
+          "lemma": "dominus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
+        },
+        {
+          "woord": "timent",
+          "lemma": "timeo",
+          "naamval": "praes.ind.act. 3pl — 2e conj.",
+          "vertaling": "vrezen"
         }
       ],
       "knoop_ids": [
@@ -493,103 +407,86 @@
         "LAT-V-F01-SERVUS",
         "LAT-V-F01-VOCO",
         "LAT-V-F01-TIMEO"
-      ]
+      ],
+      "moeilijkheid": 5
     },
     {
       "id": "LAT-PASS-LJ1-006",
-      "titel_nl": "De familie van de meester",
-      "niveau": 6,
-      "complexiteit_label": "gen_dat_abl_praes_esse",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "De familie van de meester",
+      "tekst": "Servus domini aquam portat. Filia domini villam amat. Filius domini equum habet.",
+      "annotaties": [
         {
-          "latijn": "Servus domini aquam portat.",
-          "vertaling_nl": "De slaaf van de meester draagt water.",
-          "woorden": [
-            {
-              "vorm": "Servus",
-              "lemma": "servus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "domini",
-              "lemma": "dominus",
-              "morfologie": "gen.sg.m — 2e decl.",
-              "vertaling_nl": "van de meester"
-            },
-            {
-              "vorm": "aquam",
-              "lemma": "aqua",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "water"
-            },
-            {
-              "vorm": "portat",
-              "lemma": "porto",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "draagt"
-            }
-          ]
+          "woord": "Servus",
+          "lemma": "servus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "slaaf"
         },
         {
-          "latijn": "Filia domini villam amat.",
-          "vertaling_nl": "De dochter van de meester houdt van de villa.",
-          "woorden": [
-            {
-              "vorm": "Filia",
-              "lemma": "filia",
-              "morfologie": "nom.sg.f — 1e decl.",
-              "vertaling_nl": "dochter"
-            },
-            {
-              "vorm": "domini",
-              "lemma": "dominus",
-              "morfologie": "gen.sg.m — 2e decl.",
-              "vertaling_nl": "van de meester"
-            },
-            {
-              "vorm": "villam",
-              "lemma": "villa",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "villa/landhuis"
-            },
-            {
-              "vorm": "amat",
-              "lemma": "amo",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "houdt van"
-            }
-          ]
+          "woord": "domini",
+          "lemma": "dominus",
+          "naamval": "gen.sg.m — 2e decl.",
+          "vertaling": "van de meester"
         },
         {
-          "latijn": "Filius domini equum habet.",
-          "vertaling_nl": "De zoon van de meester heeft een paard.",
-          "woorden": [
-            {
-              "vorm": "Filius",
-              "lemma": "filius",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "zoon"
-            },
-            {
-              "vorm": "domini",
-              "lemma": "dominus",
-              "morfologie": "gen.sg.m — 2e decl.",
-              "vertaling_nl": "van de meester"
-            },
-            {
-              "vorm": "equum",
-              "lemma": "equus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "paard"
-            },
-            {
-              "vorm": "habet",
-              "lemma": "habeo",
-              "morfologie": "praes.ind.act. 3sg — 2e conj.",
-              "vertaling_nl": "heeft"
-            }
-          ]
+          "woord": "aquam",
+          "lemma": "aqua",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "water"
+        },
+        {
+          "woord": "portat",
+          "lemma": "porto",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "draagt"
+        },
+        {
+          "woord": "Filia",
+          "lemma": "filia",
+          "naamval": "nom.sg.f — 1e decl.",
+          "vertaling": "dochter"
+        },
+        {
+          "woord": "domini",
+          "lemma": "dominus",
+          "naamval": "gen.sg.m — 2e decl.",
+          "vertaling": "van de meester"
+        },
+        {
+          "woord": "villam",
+          "lemma": "villa",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "villa/landhuis"
+        },
+        {
+          "woord": "amat",
+          "lemma": "amo",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "houdt van"
+        },
+        {
+          "woord": "Filius",
+          "lemma": "filius",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "zoon"
+        },
+        {
+          "woord": "domini",
+          "lemma": "dominus",
+          "naamval": "gen.sg.m — 2e decl.",
+          "vertaling": "van de meester"
+        },
+        {
+          "woord": "equum",
+          "lemma": "equus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "paard"
+        },
+        {
+          "woord": "habet",
+          "lemma": "habeo",
+          "naamval": "praes.ind.act. 3sg — 2e conj.",
+          "vertaling": "heeft"
         }
       ],
       "knoop_ids": [
@@ -611,103 +508,86 @@
         "LAT-V-F01-FILIUS",
         "LAT-V-F02-EQUUS",
         "LAT-V-F01-HABEO"
-      ]
+      ],
+      "moeilijkheid": 5
     },
     {
       "id": "LAT-PASS-LJ1-007",
-      "titel_nl": "De meester geeft",
-      "niveau": 7,
-      "complexiteit_label": "gen_dat_abl_praes_esse",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "De meester geeft",
+      "tekst": "Dominus servo equum dat. Servus domino aquam portat. Dominus filio villam dat.",
+      "annotaties": [
         {
-          "latijn": "Dominus servo equum dat.",
-          "vertaling_nl": "De meester geeft de slaaf een paard.",
-          "woorden": [
-            {
-              "vorm": "Dominus",
-              "lemma": "dominus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "servo",
-              "lemma": "servus",
-              "morfologie": "dat.sg.m — 2e decl.",
-              "vertaling_nl": "aan de slaaf"
-            },
-            {
-              "vorm": "equum",
-              "lemma": "equus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "paard"
-            },
-            {
-              "vorm": "dat",
-              "lemma": "do",
-              "morfologie": "praes.ind.act. 3sg — onregelm.",
-              "vertaling_nl": "geeft"
-            }
-          ]
+          "woord": "Dominus",
+          "lemma": "dominus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
         },
         {
-          "latijn": "Servus domino aquam portat.",
-          "vertaling_nl": "De slaaf brengt de meester water.",
-          "woorden": [
-            {
-              "vorm": "Servus",
-              "lemma": "servus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "domino",
-              "lemma": "dominus",
-              "morfologie": "dat.sg.m — 2e decl.",
-              "vertaling_nl": "aan de meester"
-            },
-            {
-              "vorm": "aquam",
-              "lemma": "aqua",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "water"
-            },
-            {
-              "vorm": "portat",
-              "lemma": "porto",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "brengt"
-            }
-          ]
+          "woord": "servo",
+          "lemma": "servus",
+          "naamval": "dat.sg.m — 2e decl.",
+          "vertaling": "aan de slaaf"
         },
         {
-          "latijn": "Dominus filio villam dat.",
-          "vertaling_nl": "De meester geeft zijn zoon de villa.",
-          "woorden": [
-            {
-              "vorm": "Dominus",
-              "lemma": "dominus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "filio",
-              "lemma": "filius",
-              "morfologie": "dat.sg.m — 2e decl.",
-              "vertaling_nl": "aan de zoon"
-            },
-            {
-              "vorm": "villam",
-              "lemma": "villa",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "villa/landhuis"
-            },
-            {
-              "vorm": "dat",
-              "lemma": "do",
-              "morfologie": "praes.ind.act. 3sg — onregelm.",
-              "vertaling_nl": "geeft"
-            }
-          ]
+          "woord": "equum",
+          "lemma": "equus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "paard"
+        },
+        {
+          "woord": "dat",
+          "lemma": "do",
+          "naamval": "praes.ind.act. 3sg — onregelm.",
+          "vertaling": "geeft"
+        },
+        {
+          "woord": "Servus",
+          "lemma": "servus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "slaaf"
+        },
+        {
+          "woord": "domino",
+          "lemma": "dominus",
+          "naamval": "dat.sg.m — 2e decl.",
+          "vertaling": "aan de meester"
+        },
+        {
+          "woord": "aquam",
+          "lemma": "aqua",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "water"
+        },
+        {
+          "woord": "portat",
+          "lemma": "porto",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "brengt"
+        },
+        {
+          "woord": "Dominus",
+          "lemma": "dominus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
+        },
+        {
+          "woord": "filio",
+          "lemma": "filius",
+          "naamval": "dat.sg.m — 2e decl.",
+          "vertaling": "aan de zoon"
+        },
+        {
+          "woord": "villam",
+          "lemma": "villa",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "villa/landhuis"
+        },
+        {
+          "woord": "dat",
+          "lemma": "do",
+          "naamval": "praes.ind.act. 3sg — onregelm.",
+          "vertaling": "geeft"
         }
       ],
       "knoop_ids": [
@@ -726,121 +606,104 @@
         "LAT-V-F02-PORTO",
         "LAT-V-F01-FILIUS",
         "LAT-V-F02-VILLA"
-      ]
+      ],
+      "moeilijkheid": 5
     },
     {
       "id": "LAT-PASS-LJ1-008",
-      "titel_nl": "In het bos",
-      "niveau": 8,
-      "complexiteit_label": "gen_dat_abl_praes_esse",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "In het bos",
+      "tekst": "Servus in silva est. Puella in via aquam portat. Filius cum servo in horto est.",
+      "annotaties": [
         {
-          "latijn": "Servus in silva est.",
-          "vertaling_nl": "De slaaf is in het bos.",
-          "woorden": [
-            {
-              "vorm": "Servus",
-              "lemma": "servus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "in",
-              "lemma": "in",
-              "morfologie": "voorzetsel + abl.",
-              "vertaling_nl": "in"
-            },
-            {
-              "vorm": "silva",
-              "lemma": "silva",
-              "morfologie": "abl.sg.f — 1e decl.",
-              "vertaling_nl": "bos"
-            },
-            {
-              "vorm": "est",
-              "lemma": "sum",
-              "morfologie": "praes.ind. 3sg — onregelm.",
-              "vertaling_nl": "is"
-            }
-          ]
+          "woord": "Servus",
+          "lemma": "servus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "slaaf"
         },
         {
-          "latijn": "Puella in via aquam portat.",
-          "vertaling_nl": "Het meisje draagt water op de weg.",
-          "woorden": [
-            {
-              "vorm": "Puella",
-              "lemma": "puella",
-              "morfologie": "nom.sg.f — 1e decl.",
-              "vertaling_nl": "meisje"
-            },
-            {
-              "vorm": "in",
-              "lemma": "in",
-              "morfologie": "voorzetsel + abl.",
-              "vertaling_nl": "op"
-            },
-            {
-              "vorm": "via",
-              "lemma": "via",
-              "morfologie": "abl.sg.f — 1e decl.",
-              "vertaling_nl": "weg"
-            },
-            {
-              "vorm": "aquam",
-              "lemma": "aqua",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "water"
-            },
-            {
-              "vorm": "portat",
-              "lemma": "porto",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "draagt"
-            }
-          ]
+          "woord": "in",
+          "lemma": "in",
+          "naamval": "voorzetsel + abl.",
+          "vertaling": "in"
         },
         {
-          "latijn": "Filius cum servo in horto est.",
-          "vertaling_nl": "De zoon is met de slaaf in de tuin.",
-          "woorden": [
-            {
-              "vorm": "Filius",
-              "lemma": "filius",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "zoon"
-            },
-            {
-              "vorm": "cum",
-              "lemma": "cum",
-              "morfologie": "voorzetsel + abl.",
-              "vertaling_nl": "met"
-            },
-            {
-              "vorm": "servo",
-              "lemma": "servus",
-              "morfologie": "abl.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "in",
-              "lemma": "in",
-              "morfologie": "voorzetsel + abl.",
-              "vertaling_nl": "in"
-            },
-            {
-              "vorm": "horto",
-              "lemma": "hortus",
-              "morfologie": "abl.sg.m — 2e decl.",
-              "vertaling_nl": "tuin"
-            },
-            {
-              "vorm": "est",
-              "lemma": "sum",
-              "morfologie": "praes.ind. 3sg — onregelm.",
-              "vertaling_nl": "is"
-            }
-          ]
+          "woord": "silva",
+          "lemma": "silva",
+          "naamval": "abl.sg.f — 1e decl.",
+          "vertaling": "bos"
+        },
+        {
+          "woord": "est",
+          "lemma": "sum",
+          "naamval": "praes.ind. 3sg — onregelm.",
+          "vertaling": "is"
+        },
+        {
+          "woord": "Puella",
+          "lemma": "puella",
+          "naamval": "nom.sg.f — 1e decl.",
+          "vertaling": "meisje"
+        },
+        {
+          "woord": "in",
+          "lemma": "in",
+          "naamval": "voorzetsel + abl.",
+          "vertaling": "op"
+        },
+        {
+          "woord": "via",
+          "lemma": "via",
+          "naamval": "abl.sg.f — 1e decl.",
+          "vertaling": "weg"
+        },
+        {
+          "woord": "aquam",
+          "lemma": "aqua",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "water"
+        },
+        {
+          "woord": "portat",
+          "lemma": "porto",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "draagt"
+        },
+        {
+          "woord": "Filius",
+          "lemma": "filius",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "zoon"
+        },
+        {
+          "woord": "cum",
+          "lemma": "cum",
+          "naamval": "voorzetsel + abl.",
+          "vertaling": "met"
+        },
+        {
+          "woord": "servo",
+          "lemma": "servus",
+          "naamval": "abl.sg.m — 2e decl.",
+          "vertaling": "slaaf"
+        },
+        {
+          "woord": "in",
+          "lemma": "in",
+          "naamval": "voorzetsel + abl.",
+          "vertaling": "in"
+        },
+        {
+          "woord": "horto",
+          "lemma": "hortus",
+          "naamval": "abl.sg.m — 2e decl.",
+          "vertaling": "tuin"
+        },
+        {
+          "woord": "est",
+          "lemma": "sum",
+          "naamval": "praes.ind. 3sg — onregelm.",
+          "vertaling": "is"
         }
       ],
       "knoop_ids": [
@@ -864,103 +727,86 @@
         "LAT-V-F01-FILIUS",
         "LAT-V-F01-CUM",
         "LAT-V-F02-HORTUS"
-      ]
+      ],
+      "moeilijkheid": 5
     },
     {
       "id": "LAT-PASS-LJ1-009",
-      "titel_nl": "De boodschapper",
-      "niveau": 9,
-      "complexiteit_label": "gen_dat_abl_praes_esse",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "De boodschapper",
+      "tekst": "Nuntius domini in via est. Servus nuntio aquam dat. Dominus nuntium vocat.",
+      "annotaties": [
         {
-          "latijn": "Nuntius domini in via est.",
-          "vertaling_nl": "De boodschapper van de meester is op de weg.",
-          "woorden": [
-            {
-              "vorm": "Nuntius",
-              "lemma": "nuntius",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "boodschapper"
-            },
-            {
-              "vorm": "domini",
-              "lemma": "dominus",
-              "morfologie": "gen.sg.m — 2e decl.",
-              "vertaling_nl": "van de meester"
-            },
-            {
-              "vorm": "in",
-              "lemma": "in",
-              "morfologie": "voorzetsel + abl.",
-              "vertaling_nl": "op"
-            },
-            {
-              "vorm": "via",
-              "lemma": "via",
-              "morfologie": "abl.sg.f — 1e decl.",
-              "vertaling_nl": "weg"
-            },
-            {
-              "vorm": "est",
-              "lemma": "sum",
-              "morfologie": "praes.ind. 3sg — onregelm.",
-              "vertaling_nl": "is"
-            }
-          ]
+          "woord": "Nuntius",
+          "lemma": "nuntius",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "boodschapper"
         },
         {
-          "latijn": "Servus nuntio aquam dat.",
-          "vertaling_nl": "De slaaf geeft de boodschapper water.",
-          "woorden": [
-            {
-              "vorm": "Servus",
-              "lemma": "servus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "nuntio",
-              "lemma": "nuntius",
-              "morfologie": "dat.sg.m — 2e decl.",
-              "vertaling_nl": "aan de boodschapper"
-            },
-            {
-              "vorm": "aquam",
-              "lemma": "aqua",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "water"
-            },
-            {
-              "vorm": "dat",
-              "lemma": "do",
-              "morfologie": "praes.ind.act. 3sg — onregelm.",
-              "vertaling_nl": "geeft"
-            }
-          ]
+          "woord": "domini",
+          "lemma": "dominus",
+          "naamval": "gen.sg.m — 2e decl.",
+          "vertaling": "van de meester"
         },
         {
-          "latijn": "Dominus nuntium vocat.",
-          "vertaling_nl": "De meester roept de boodschapper.",
-          "woorden": [
-            {
-              "vorm": "Dominus",
-              "lemma": "dominus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "nuntium",
-              "lemma": "nuntius",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "boodschapper"
-            },
-            {
-              "vorm": "vocat",
-              "lemma": "voco",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "roept"
-            }
-          ]
+          "woord": "in",
+          "lemma": "in",
+          "naamval": "voorzetsel + abl.",
+          "vertaling": "op"
+        },
+        {
+          "woord": "via",
+          "lemma": "via",
+          "naamval": "abl.sg.f — 1e decl.",
+          "vertaling": "weg"
+        },
+        {
+          "woord": "est",
+          "lemma": "sum",
+          "naamval": "praes.ind. 3sg — onregelm.",
+          "vertaling": "is"
+        },
+        {
+          "woord": "Servus",
+          "lemma": "servus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "slaaf"
+        },
+        {
+          "woord": "nuntio",
+          "lemma": "nuntius",
+          "naamval": "dat.sg.m — 2e decl.",
+          "vertaling": "aan de boodschapper"
+        },
+        {
+          "woord": "aquam",
+          "lemma": "aqua",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "water"
+        },
+        {
+          "woord": "dat",
+          "lemma": "do",
+          "naamval": "praes.ind.act. 3sg — onregelm.",
+          "vertaling": "geeft"
+        },
+        {
+          "woord": "Dominus",
+          "lemma": "dominus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
+        },
+        {
+          "woord": "nuntium",
+          "lemma": "nuntius",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "boodschapper"
+        },
+        {
+          "woord": "vocat",
+          "lemma": "voco",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "roept"
         }
       ],
       "knoop_ids": [
@@ -983,151 +829,128 @@
         "LAT-V-F01-DO",
         "LAT-V-F01-VOCO",
         "LAT-V-F01-IN"
-      ]
+      ],
+      "moeilijkheid": 5
     },
     {
       "id": "LAT-PASS-LJ1-010",
-      "titel_nl": "In de tuin van de meester",
-      "niveau": 10,
-      "complexiteit_label": "gen_dat_abl_praes_esse",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "In de tuin van de meester",
+      "tekst": "In horto domini servi sunt. Servus aquam ad villam portat. Filia domini in villa est. Dominus filio equum dat.",
+      "annotaties": [
         {
-          "latijn": "In horto domini servi sunt.",
-          "vertaling_nl": "In de tuin van de meester zijn slaven.",
-          "woorden": [
-            {
-              "vorm": "In",
-              "lemma": "in",
-              "morfologie": "voorzetsel + abl.",
-              "vertaling_nl": "in"
-            },
-            {
-              "vorm": "horto",
-              "lemma": "hortus",
-              "morfologie": "abl.sg.m — 2e decl.",
-              "vertaling_nl": "tuin"
-            },
-            {
-              "vorm": "domini",
-              "lemma": "dominus",
-              "morfologie": "gen.sg.m — 2e decl.",
-              "vertaling_nl": "van de meester"
-            },
-            {
-              "vorm": "servi",
-              "lemma": "servus",
-              "morfologie": "nom.pl.m — 2e decl.",
-              "vertaling_nl": "slaven"
-            },
-            {
-              "vorm": "sunt",
-              "lemma": "sum",
-              "morfologie": "praes.ind. 3pl — onregelm.",
-              "vertaling_nl": "zijn"
-            }
-          ]
+          "woord": "In",
+          "lemma": "in",
+          "naamval": "voorzetsel + abl.",
+          "vertaling": "in"
         },
         {
-          "latijn": "Servus aquam ad villam portat.",
-          "vertaling_nl": "De slaaf draagt water naar de villa.",
-          "woorden": [
-            {
-              "vorm": "Servus",
-              "lemma": "servus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "aquam",
-              "lemma": "aqua",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "water"
-            },
-            {
-              "vorm": "ad",
-              "lemma": "ad",
-              "morfologie": "voorzetsel + acc.",
-              "vertaling_nl": "naar"
-            },
-            {
-              "vorm": "villam",
-              "lemma": "villa",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "villa/landhuis"
-            },
-            {
-              "vorm": "portat",
-              "lemma": "porto",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "draagt"
-            }
-          ]
+          "woord": "horto",
+          "lemma": "hortus",
+          "naamval": "abl.sg.m — 2e decl.",
+          "vertaling": "tuin"
         },
         {
-          "latijn": "Filia domini in villa est.",
-          "vertaling_nl": "De dochter van de meester is in de villa.",
-          "woorden": [
-            {
-              "vorm": "Filia",
-              "lemma": "filia",
-              "morfologie": "nom.sg.f — 1e decl.",
-              "vertaling_nl": "dochter"
-            },
-            {
-              "vorm": "domini",
-              "lemma": "dominus",
-              "morfologie": "gen.sg.m — 2e decl.",
-              "vertaling_nl": "van de meester"
-            },
-            {
-              "vorm": "in",
-              "lemma": "in",
-              "morfologie": "voorzetsel + abl.",
-              "vertaling_nl": "in"
-            },
-            {
-              "vorm": "villa",
-              "lemma": "villa",
-              "morfologie": "abl.sg.f — 1e decl.",
-              "vertaling_nl": "villa/landhuis"
-            },
-            {
-              "vorm": "est",
-              "lemma": "sum",
-              "morfologie": "praes.ind. 3sg — onregelm.",
-              "vertaling_nl": "is"
-            }
-          ]
+          "woord": "domini",
+          "lemma": "dominus",
+          "naamval": "gen.sg.m — 2e decl.",
+          "vertaling": "van de meester"
         },
         {
-          "latijn": "Dominus filio equum dat.",
-          "vertaling_nl": "De meester geeft zijn zoon een paard.",
-          "woorden": [
-            {
-              "vorm": "Dominus",
-              "lemma": "dominus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "filio",
-              "lemma": "filius",
-              "morfologie": "dat.sg.m — 2e decl.",
-              "vertaling_nl": "aan de zoon"
-            },
-            {
-              "vorm": "equum",
-              "lemma": "equus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "paard"
-            },
-            {
-              "vorm": "dat",
-              "lemma": "do",
-              "morfologie": "praes.ind.act. 3sg — onregelm.",
-              "vertaling_nl": "geeft"
-            }
-          ]
+          "woord": "servi",
+          "lemma": "servus",
+          "naamval": "nom.pl.m — 2e decl.",
+          "vertaling": "slaven"
+        },
+        {
+          "woord": "sunt",
+          "lemma": "sum",
+          "naamval": "praes.ind. 3pl — onregelm.",
+          "vertaling": "zijn"
+        },
+        {
+          "woord": "Servus",
+          "lemma": "servus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "slaaf"
+        },
+        {
+          "woord": "aquam",
+          "lemma": "aqua",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "water"
+        },
+        {
+          "woord": "ad",
+          "lemma": "ad",
+          "naamval": "voorzetsel + acc.",
+          "vertaling": "naar"
+        },
+        {
+          "woord": "villam",
+          "lemma": "villa",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "villa/landhuis"
+        },
+        {
+          "woord": "portat",
+          "lemma": "porto",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "draagt"
+        },
+        {
+          "woord": "Filia",
+          "lemma": "filia",
+          "naamval": "nom.sg.f — 1e decl.",
+          "vertaling": "dochter"
+        },
+        {
+          "woord": "domini",
+          "lemma": "dominus",
+          "naamval": "gen.sg.m — 2e decl.",
+          "vertaling": "van de meester"
+        },
+        {
+          "woord": "in",
+          "lemma": "in",
+          "naamval": "voorzetsel + abl.",
+          "vertaling": "in"
+        },
+        {
+          "woord": "villa",
+          "lemma": "villa",
+          "naamval": "abl.sg.f — 1e decl.",
+          "vertaling": "villa/landhuis"
+        },
+        {
+          "woord": "est",
+          "lemma": "sum",
+          "naamval": "praes.ind. 3sg — onregelm.",
+          "vertaling": "is"
+        },
+        {
+          "woord": "Dominus",
+          "lemma": "dominus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
+        },
+        {
+          "woord": "filio",
+          "lemma": "filius",
+          "naamval": "dat.sg.m — 2e decl.",
+          "vertaling": "aan de zoon"
+        },
+        {
+          "woord": "equum",
+          "lemma": "equus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "paard"
+        },
+        {
+          "woord": "dat",
+          "lemma": "do",
+          "naamval": "praes.ind.act. 3sg — onregelm.",
+          "vertaling": "geeft"
         }
       ],
       "knoop_ids": [
@@ -1160,91 +983,74 @@
         "LAT-V-F01-FILIUS",
         "LAT-V-F02-EQUUS",
         "LAT-V-F01-DO"
-      ]
+      ],
+      "moeilijkheid": 5
     },
     {
       "id": "LAT-PASS-LJ1-011",
-      "titel_nl": "De koning en de soldaat",
-      "niveau": 11,
-      "complexiteit_label": "decl3_impf_adj",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "De koning en de soldaat",
+      "tekst": "Rex militem vocat. Miles regem timet. Rex urbem magnam habet.",
+      "annotaties": [
         {
-          "latijn": "Rex militem vocat.",
-          "vertaling_nl": "De koning roept de soldaat.",
-          "woorden": [
-            {
-              "vorm": "Rex",
-              "lemma": "rex",
-              "morfologie": "nom.sg.m — 3e decl.",
-              "vertaling_nl": "koning"
-            },
-            {
-              "vorm": "militem",
-              "lemma": "miles",
-              "morfologie": "acc.sg.m — 3e decl.",
-              "vertaling_nl": "soldaat"
-            },
-            {
-              "vorm": "vocat",
-              "lemma": "voco",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "roept"
-            }
-          ]
+          "woord": "Rex",
+          "lemma": "rex",
+          "naamval": "nom.sg.m — 3e decl.",
+          "vertaling": "koning"
         },
         {
-          "latijn": "Miles regem timet.",
-          "vertaling_nl": "De soldaat vreest de koning.",
-          "woorden": [
-            {
-              "vorm": "Miles",
-              "lemma": "miles",
-              "morfologie": "nom.sg.m — 3e decl.",
-              "vertaling_nl": "soldaat"
-            },
-            {
-              "vorm": "regem",
-              "lemma": "rex",
-              "morfologie": "acc.sg.m — 3e decl.",
-              "vertaling_nl": "koning"
-            },
-            {
-              "vorm": "timet",
-              "lemma": "timeo",
-              "morfologie": "praes.ind.act. 3sg — 2e conj.",
-              "vertaling_nl": "vreest"
-            }
-          ]
+          "woord": "militem",
+          "lemma": "miles",
+          "naamval": "acc.sg.m — 3e decl.",
+          "vertaling": "soldaat"
         },
         {
-          "latijn": "Rex urbem magnam habet.",
-          "vertaling_nl": "De koning heeft een grote stad.",
-          "woorden": [
-            {
-              "vorm": "Rex",
-              "lemma": "rex",
-              "morfologie": "nom.sg.m — 3e decl.",
-              "vertaling_nl": "koning"
-            },
-            {
-              "vorm": "urbem",
-              "lemma": "urbs",
-              "morfologie": "acc.sg.f — 3e decl.",
-              "vertaling_nl": "stad"
-            },
-            {
-              "vorm": "magnam",
-              "lemma": "magnus",
-              "morfologie": "acc.sg.f — adj. D1/D2",
-              "vertaling_nl": "groot"
-            },
-            {
-              "vorm": "habet",
-              "lemma": "habeo",
-              "morfologie": "praes.ind.act. 3sg — 2e conj.",
-              "vertaling_nl": "heeft"
-            }
-          ]
+          "woord": "vocat",
+          "lemma": "voco",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "roept"
+        },
+        {
+          "woord": "Miles",
+          "lemma": "miles",
+          "naamval": "nom.sg.m — 3e decl.",
+          "vertaling": "soldaat"
+        },
+        {
+          "woord": "regem",
+          "lemma": "rex",
+          "naamval": "acc.sg.m — 3e decl.",
+          "vertaling": "koning"
+        },
+        {
+          "woord": "timet",
+          "lemma": "timeo",
+          "naamval": "praes.ind.act. 3sg — 2e conj.",
+          "vertaling": "vreest"
+        },
+        {
+          "woord": "Rex",
+          "lemma": "rex",
+          "naamval": "nom.sg.m — 3e decl.",
+          "vertaling": "koning"
+        },
+        {
+          "woord": "urbem",
+          "lemma": "urbs",
+          "naamval": "acc.sg.f — 3e decl.",
+          "vertaling": "stad"
+        },
+        {
+          "woord": "magnam",
+          "lemma": "magnus",
+          "naamval": "acc.sg.f — adj. D1/D2",
+          "vertaling": "groot"
+        },
+        {
+          "woord": "habet",
+          "lemma": "habeo",
+          "naamval": "praes.ind.act. 3sg — 2e conj.",
+          "vertaling": "heeft"
         }
       ],
       "knoop_ids": [
@@ -1263,91 +1069,74 @@
         "LAT-V-F01-URBS",
         "LAT-V-F01-MAGNUS",
         "LAT-V-F01-HABEO"
-      ]
+      ],
+      "moeilijkheid": 5
     },
     {
       "id": "LAT-PASS-LJ1-012",
-      "titel_nl": "Vader en moeder",
-      "niveau": 12,
-      "complexiteit_label": "decl3_impf_adj",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "Vader en moeder",
+      "tekst": "Pater bonus est. Mater filiam amat. Filius patrem magnum videt.",
+      "annotaties": [
         {
-          "latijn": "Pater bonus est.",
-          "vertaling_nl": "De vader is goed.",
-          "woorden": [
-            {
-              "vorm": "Pater",
-              "lemma": "pater",
-              "morfologie": "nom.sg.m — 3e decl.",
-              "vertaling_nl": "vader"
-            },
-            {
-              "vorm": "bonus",
-              "lemma": "bonus",
-              "morfologie": "nom.sg.m — adj. D1/D2",
-              "vertaling_nl": "goed"
-            },
-            {
-              "vorm": "est",
-              "lemma": "sum",
-              "morfologie": "praes.ind. 3sg — onregelm.",
-              "vertaling_nl": "is"
-            }
-          ]
+          "woord": "Pater",
+          "lemma": "pater",
+          "naamval": "nom.sg.m — 3e decl.",
+          "vertaling": "vader"
         },
         {
-          "latijn": "Mater filiam amat.",
-          "vertaling_nl": "De moeder houdt van haar dochter.",
-          "woorden": [
-            {
-              "vorm": "Mater",
-              "lemma": "mater",
-              "morfologie": "nom.sg.f — 3e decl.",
-              "vertaling_nl": "moeder"
-            },
-            {
-              "vorm": "filiam",
-              "lemma": "filia",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "dochter"
-            },
-            {
-              "vorm": "amat",
-              "lemma": "amo",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "houdt van"
-            }
-          ]
+          "woord": "bonus",
+          "lemma": "bonus",
+          "naamval": "nom.sg.m — adj. D1/D2",
+          "vertaling": "goed"
         },
         {
-          "latijn": "Filius patrem magnum videt.",
-          "vertaling_nl": "De zoon ziet zijn grote vader.",
-          "woorden": [
-            {
-              "vorm": "Filius",
-              "lemma": "filius",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "zoon"
-            },
-            {
-              "vorm": "patrem",
-              "lemma": "pater",
-              "morfologie": "acc.sg.m — 3e decl.",
-              "vertaling_nl": "vader"
-            },
-            {
-              "vorm": "magnum",
-              "lemma": "magnus",
-              "morfologie": "acc.sg.m — adj. D1/D2",
-              "vertaling_nl": "groot"
-            },
-            {
-              "vorm": "videt",
-              "lemma": "video",
-              "morfologie": "praes.ind.act. 3sg — 2e conj.",
-              "vertaling_nl": "ziet"
-            }
-          ]
+          "woord": "est",
+          "lemma": "sum",
+          "naamval": "praes.ind. 3sg — onregelm.",
+          "vertaling": "is"
+        },
+        {
+          "woord": "Mater",
+          "lemma": "mater",
+          "naamval": "nom.sg.f — 3e decl.",
+          "vertaling": "moeder"
+        },
+        {
+          "woord": "filiam",
+          "lemma": "filia",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "dochter"
+        },
+        {
+          "woord": "amat",
+          "lemma": "amo",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "houdt van"
+        },
+        {
+          "woord": "Filius",
+          "lemma": "filius",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "zoon"
+        },
+        {
+          "woord": "patrem",
+          "lemma": "pater",
+          "naamval": "acc.sg.m — 3e decl.",
+          "vertaling": "vader"
+        },
+        {
+          "woord": "magnum",
+          "lemma": "magnus",
+          "naamval": "acc.sg.m — adj. D1/D2",
+          "vertaling": "groot"
+        },
+        {
+          "woord": "videt",
+          "lemma": "video",
+          "naamval": "praes.ind.act. 3sg — 2e conj.",
+          "vertaling": "ziet"
         }
       ],
       "knoop_ids": [
@@ -1370,109 +1159,92 @@
         "LAT-V-F01-FILIUS",
         "LAT-V-F01-MAGNUS",
         "LAT-V-F01-VIDEO"
-      ]
+      ],
+      "moeilijkheid": 5
     },
     {
       "id": "LAT-PASS-LJ1-013",
-      "titel_nl": "Vroeger op het landgoed",
-      "niveau": 13,
-      "complexiteit_label": "decl3_impf_adj",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "Vroeger op het landgoed",
+      "tekst": "Olim dominus servum habebat. Servus in villa aquam portabat. Filia domini equum amabat.",
+      "annotaties": [
         {
-          "latijn": "Olim dominus servum habebat.",
-          "vertaling_nl": "Vroeger had de meester een slaaf.",
-          "woorden": [
-            {
-              "vorm": "Olim",
-              "lemma": "olim",
-              "morfologie": "bijwoord",
-              "vertaling_nl": "vroeger/eens"
-            },
-            {
-              "vorm": "dominus",
-              "lemma": "dominus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "servum",
-              "lemma": "servus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "habebat",
-              "lemma": "habeo",
-              "morfologie": "impf.ind.act. 3sg — 2e conj.",
-              "vertaling_nl": "had"
-            }
-          ]
+          "woord": "Olim",
+          "lemma": "olim",
+          "naamval": "bijwoord",
+          "vertaling": "vroeger/eens"
         },
         {
-          "latijn": "Servus in villa aquam portabat.",
-          "vertaling_nl": "De slaaf droeg water in de villa.",
-          "woorden": [
-            {
-              "vorm": "Servus",
-              "lemma": "servus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "in",
-              "lemma": "in",
-              "morfologie": "voorzetsel + abl.",
-              "vertaling_nl": "in"
-            },
-            {
-              "vorm": "villa",
-              "lemma": "villa",
-              "morfologie": "abl.sg.f — 1e decl.",
-              "vertaling_nl": "villa/landhuis"
-            },
-            {
-              "vorm": "aquam",
-              "lemma": "aqua",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "water"
-            },
-            {
-              "vorm": "portabat",
-              "lemma": "porto",
-              "morfologie": "impf.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "droeg"
-            }
-          ]
+          "woord": "dominus",
+          "lemma": "dominus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
         },
         {
-          "latijn": "Filia domini equum amabat.",
-          "vertaling_nl": "De dochter van de meester hield van het paard.",
-          "woorden": [
-            {
-              "vorm": "Filia",
-              "lemma": "filia",
-              "morfologie": "nom.sg.f — 1e decl.",
-              "vertaling_nl": "dochter"
-            },
-            {
-              "vorm": "domini",
-              "lemma": "dominus",
-              "morfologie": "gen.sg.m — 2e decl.",
-              "vertaling_nl": "van de meester"
-            },
-            {
-              "vorm": "equum",
-              "lemma": "equus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "paard"
-            },
-            {
-              "vorm": "amabat",
-              "lemma": "amo",
-              "morfologie": "impf.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "hield van"
-            }
-          ]
+          "woord": "servum",
+          "lemma": "servus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "slaaf"
+        },
+        {
+          "woord": "habebat",
+          "lemma": "habeo",
+          "naamval": "impf.ind.act. 3sg — 2e conj.",
+          "vertaling": "had"
+        },
+        {
+          "woord": "Servus",
+          "lemma": "servus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "slaaf"
+        },
+        {
+          "woord": "in",
+          "lemma": "in",
+          "naamval": "voorzetsel + abl.",
+          "vertaling": "in"
+        },
+        {
+          "woord": "villa",
+          "lemma": "villa",
+          "naamval": "abl.sg.f — 1e decl.",
+          "vertaling": "villa/landhuis"
+        },
+        {
+          "woord": "aquam",
+          "lemma": "aqua",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "water"
+        },
+        {
+          "woord": "portabat",
+          "lemma": "porto",
+          "naamval": "impf.ind.act. 3sg — 1e conj.",
+          "vertaling": "droeg"
+        },
+        {
+          "woord": "Filia",
+          "lemma": "filia",
+          "naamval": "nom.sg.f — 1e decl.",
+          "vertaling": "dochter"
+        },
+        {
+          "woord": "domini",
+          "lemma": "dominus",
+          "naamval": "gen.sg.m — 2e decl.",
+          "vertaling": "van de meester"
+        },
+        {
+          "woord": "equum",
+          "lemma": "equus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "paard"
+        },
+        {
+          "woord": "amabat",
+          "lemma": "amo",
+          "naamval": "impf.ind.act. 3sg — 1e conj.",
+          "vertaling": "hield van"
         }
       ],
       "knoop_ids": [
@@ -1496,109 +1268,92 @@
         "LAT-V-F02-EQUUS",
         "LAT-V-F01-AMO",
         "LAT-V-F01-IN"
-      ]
+      ],
+      "moeilijkheid": 5
     },
     {
       "id": "LAT-PASS-LJ1-014",
-      "titel_nl": "Burgers en de koning",
-      "niveau": 14,
-      "complexiteit_label": "decl3_impf_adj",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "Burgers en de koning",
+      "tekst": "Multi cives in urbe sunt. Rex bonus cives amat. Milites urbem magnam tenent.",
+      "annotaties": [
         {
-          "latijn": "Multi cives in urbe sunt.",
-          "vertaling_nl": "Veel burgers zijn in de stad.",
-          "woorden": [
-            {
-              "vorm": "Multi",
-              "lemma": "multus",
-              "morfologie": "nom.pl.m — adj. D1/D2",
-              "vertaling_nl": "veel"
-            },
-            {
-              "vorm": "cives",
-              "lemma": "civis",
-              "morfologie": "nom.pl.m — 3e decl.",
-              "vertaling_nl": "burgers"
-            },
-            {
-              "vorm": "in",
-              "lemma": "in",
-              "morfologie": "voorzetsel + abl.",
-              "vertaling_nl": "in"
-            },
-            {
-              "vorm": "urbe",
-              "lemma": "urbs",
-              "morfologie": "abl.sg.f — 3e decl.",
-              "vertaling_nl": "stad"
-            },
-            {
-              "vorm": "sunt",
-              "lemma": "sum",
-              "morfologie": "praes.ind. 3pl — onregelm.",
-              "vertaling_nl": "zijn"
-            }
-          ]
+          "woord": "Multi",
+          "lemma": "multus",
+          "naamval": "nom.pl.m — adj. D1/D2",
+          "vertaling": "veel"
         },
         {
-          "latijn": "Rex bonus cives amat.",
-          "vertaling_nl": "De goede koning houdt van de burgers.",
-          "woorden": [
-            {
-              "vorm": "Rex",
-              "lemma": "rex",
-              "morfologie": "nom.sg.m — 3e decl.",
-              "vertaling_nl": "koning"
-            },
-            {
-              "vorm": "bonus",
-              "lemma": "bonus",
-              "morfologie": "nom.sg.m — adj. D1/D2",
-              "vertaling_nl": "goed"
-            },
-            {
-              "vorm": "cives",
-              "lemma": "civis",
-              "morfologie": "acc.pl.m — 3e decl.",
-              "vertaling_nl": "burgers"
-            },
-            {
-              "vorm": "amat",
-              "lemma": "amo",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "houdt van"
-            }
-          ]
+          "woord": "cives",
+          "lemma": "civis",
+          "naamval": "nom.pl.m — 3e decl.",
+          "vertaling": "burgers"
         },
         {
-          "latijn": "Milites urbem magnam tenent.",
-          "vertaling_nl": "De soldaten bezetten de grote stad.",
-          "woorden": [
-            {
-              "vorm": "Milites",
-              "lemma": "miles",
-              "morfologie": "nom.pl.m — 3e decl.",
-              "vertaling_nl": "soldaten"
-            },
-            {
-              "vorm": "urbem",
-              "lemma": "urbs",
-              "morfologie": "acc.sg.f — 3e decl.",
-              "vertaling_nl": "stad"
-            },
-            {
-              "vorm": "magnam",
-              "lemma": "magnus",
-              "morfologie": "acc.sg.f — adj. D1/D2",
-              "vertaling_nl": "groot"
-            },
-            {
-              "vorm": "tenent",
-              "lemma": "teneo",
-              "morfologie": "praes.ind.act. 3pl — 2e conj.",
-              "vertaling_nl": "bezetten/houden"
-            }
-          ]
+          "woord": "in",
+          "lemma": "in",
+          "naamval": "voorzetsel + abl.",
+          "vertaling": "in"
+        },
+        {
+          "woord": "urbe",
+          "lemma": "urbs",
+          "naamval": "abl.sg.f — 3e decl.",
+          "vertaling": "stad"
+        },
+        {
+          "woord": "sunt",
+          "lemma": "sum",
+          "naamval": "praes.ind. 3pl — onregelm.",
+          "vertaling": "zijn"
+        },
+        {
+          "woord": "Rex",
+          "lemma": "rex",
+          "naamval": "nom.sg.m — 3e decl.",
+          "vertaling": "koning"
+        },
+        {
+          "woord": "bonus",
+          "lemma": "bonus",
+          "naamval": "nom.sg.m — adj. D1/D2",
+          "vertaling": "goed"
+        },
+        {
+          "woord": "cives",
+          "lemma": "civis",
+          "naamval": "acc.pl.m — 3e decl.",
+          "vertaling": "burgers"
+        },
+        {
+          "woord": "amat",
+          "lemma": "amo",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "houdt van"
+        },
+        {
+          "woord": "Milites",
+          "lemma": "miles",
+          "naamval": "nom.pl.m — 3e decl.",
+          "vertaling": "soldaten"
+        },
+        {
+          "woord": "urbem",
+          "lemma": "urbs",
+          "naamval": "acc.sg.f — 3e decl.",
+          "vertaling": "stad"
+        },
+        {
+          "woord": "magnam",
+          "lemma": "magnus",
+          "naamval": "acc.sg.f — adj. D1/D2",
+          "vertaling": "groot"
+        },
+        {
+          "woord": "tenent",
+          "lemma": "teneo",
+          "naamval": "praes.ind.act. 3pl — 2e conj.",
+          "vertaling": "bezetten/houden"
         }
       ],
       "knoop_ids": [
@@ -1625,121 +1380,98 @@
         "LAT-V-F01-MAGNUS",
         "LAT-V-F01-TENEO",
         "LAT-V-F01-IN"
-      ]
+      ],
+      "moeilijkheid": 5
     },
     {
       "id": "LAT-PASS-LJ1-015",
-      "titel_nl": "Tijd van oorlog",
-      "niveau": 15,
-      "complexiteit_label": "decl3_impf_adj",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "Tijd van oorlog",
+      "tekst": "Tempus belli erat. Milites in via erant. Rex multos milites habebat. Cives hostes timebant.",
+      "annotaties": [
         {
-          "latijn": "Tempus belli erat.",
-          "vertaling_nl": "Het was tijd van oorlog.",
-          "woorden": [
-            {
-              "vorm": "Tempus",
-              "lemma": "tempus",
-              "morfologie": "nom.sg.n — 3e decl.",
-              "vertaling_nl": "tijd"
-            },
-            {
-              "vorm": "belli",
-              "lemma": "bellum",
-              "morfologie": "gen.sg.n — 2e decl.",
-              "vertaling_nl": "van oorlog"
-            },
-            {
-              "vorm": "erat",
-              "lemma": "sum",
-              "morfologie": "impf.ind. 3sg — onregelm.",
-              "vertaling_nl": "was"
-            }
-          ]
+          "woord": "Tempus",
+          "lemma": "tempus",
+          "naamval": "nom.sg.n — 3e decl.",
+          "vertaling": "tijd"
         },
         {
-          "latijn": "Milites in via erant.",
-          "vertaling_nl": "De soldaten waren op de weg.",
-          "woorden": [
-            {
-              "vorm": "Milites",
-              "lemma": "miles",
-              "morfologie": "nom.pl.m — 3e decl.",
-              "vertaling_nl": "soldaten"
-            },
-            {
-              "vorm": "in",
-              "lemma": "in",
-              "morfologie": "voorzetsel + abl.",
-              "vertaling_nl": "op"
-            },
-            {
-              "vorm": "via",
-              "lemma": "via",
-              "morfologie": "abl.sg.f — 1e decl.",
-              "vertaling_nl": "weg"
-            },
-            {
-              "vorm": "erant",
-              "lemma": "sum",
-              "morfologie": "impf.ind. 3pl — onregelm.",
-              "vertaling_nl": "waren"
-            }
-          ]
+          "woord": "belli",
+          "lemma": "bellum",
+          "naamval": "gen.sg.n — 2e decl.",
+          "vertaling": "van oorlog"
         },
         {
-          "latijn": "Rex multos milites habebat.",
-          "vertaling_nl": "De koning had veel soldaten.",
-          "woorden": [
-            {
-              "vorm": "Rex",
-              "lemma": "rex",
-              "morfologie": "nom.sg.m — 3e decl.",
-              "vertaling_nl": "koning"
-            },
-            {
-              "vorm": "multos",
-              "lemma": "multus",
-              "morfologie": "acc.pl.m — adj. D1/D2",
-              "vertaling_nl": "veel"
-            },
-            {
-              "vorm": "milites",
-              "lemma": "miles",
-              "morfologie": "acc.pl.m — 3e decl.",
-              "vertaling_nl": "soldaten"
-            },
-            {
-              "vorm": "habebat",
-              "lemma": "habeo",
-              "morfologie": "impf.ind.act. 3sg — 2e conj.",
-              "vertaling_nl": "had"
-            }
-          ]
+          "woord": "erat",
+          "lemma": "sum",
+          "naamval": "impf.ind. 3sg — onregelm.",
+          "vertaling": "was"
         },
         {
-          "latijn": "Cives hostes timebant.",
-          "vertaling_nl": "De burgers vreesden de vijanden.",
-          "woorden": [
-            {
-              "vorm": "Cives",
-              "lemma": "civis",
-              "morfologie": "nom.pl.m — 3e decl.",
-              "vertaling_nl": "burgers"
-            },
-            {
-              "vorm": "hostes",
-              "lemma": "hostis",
-              "morfologie": "acc.pl.m — 3e decl.",
-              "vertaling_nl": "vijanden"
-            },
-            {
-              "vorm": "timebant",
-              "lemma": "timeo",
-              "morfologie": "impf.ind.act. 3pl — 2e conj.",
-              "vertaling_nl": "vreesden"
-            }
-          ]
+          "woord": "Milites",
+          "lemma": "miles",
+          "naamval": "nom.pl.m — 3e decl.",
+          "vertaling": "soldaten"
+        },
+        {
+          "woord": "in",
+          "lemma": "in",
+          "naamval": "voorzetsel + abl.",
+          "vertaling": "op"
+        },
+        {
+          "woord": "via",
+          "lemma": "via",
+          "naamval": "abl.sg.f — 1e decl.",
+          "vertaling": "weg"
+        },
+        {
+          "woord": "erant",
+          "lemma": "sum",
+          "naamval": "impf.ind. 3pl — onregelm.",
+          "vertaling": "waren"
+        },
+        {
+          "woord": "Rex",
+          "lemma": "rex",
+          "naamval": "nom.sg.m — 3e decl.",
+          "vertaling": "koning"
+        },
+        {
+          "woord": "multos",
+          "lemma": "multus",
+          "naamval": "acc.pl.m — adj. D1/D2",
+          "vertaling": "veel"
+        },
+        {
+          "woord": "milites",
+          "lemma": "miles",
+          "naamval": "acc.pl.m — 3e decl.",
+          "vertaling": "soldaten"
+        },
+        {
+          "woord": "habebat",
+          "lemma": "habeo",
+          "naamval": "impf.ind.act. 3sg — 2e conj.",
+          "vertaling": "had"
+        },
+        {
+          "woord": "Cives",
+          "lemma": "civis",
+          "naamval": "nom.pl.m — 3e decl.",
+          "vertaling": "burgers"
+        },
+        {
+          "woord": "hostes",
+          "lemma": "hostis",
+          "naamval": "acc.pl.m — 3e decl.",
+          "vertaling": "vijanden"
+        },
+        {
+          "woord": "timebant",
+          "lemma": "timeo",
+          "naamval": "impf.ind.act. 3pl — 2e conj.",
+          "vertaling": "vreesden"
         }
       ],
       "knoop_ids": [
@@ -1768,85 +1500,68 @@
         "LAT-V-F01-CIVIS",
         "LAT-V-F01-HOSTIS",
         "LAT-V-F01-TIMEO"
-      ]
+      ],
+      "moeilijkheid": 5
     },
     {
       "id": "LAT-PASS-LJ1-016",
-      "titel_nl": "De meester riep",
-      "niveau": 16,
-      "complexiteit_label": "perf_pron_aci",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "De meester riep",
+      "tekst": "Dominus servum vocavit. Servus aquam portavit. Filia dominum amavit.",
+      "annotaties": [
         {
-          "latijn": "Dominus servum vocavit.",
-          "vertaling_nl": "De meester heeft de slaaf geroepen.",
-          "woorden": [
-            {
-              "vorm": "Dominus",
-              "lemma": "dominus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "servum",
-              "lemma": "servus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "vocavit",
-              "lemma": "voco",
-              "morfologie": "perf.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "heeft geroepen/riep"
-            }
-          ]
+          "woord": "Dominus",
+          "lemma": "dominus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
         },
         {
-          "latijn": "Servus aquam portavit.",
-          "vertaling_nl": "De slaaf heeft water gedragen.",
-          "woorden": [
-            {
-              "vorm": "Servus",
-              "lemma": "servus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "aquam",
-              "lemma": "aqua",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "water"
-            },
-            {
-              "vorm": "portavit",
-              "lemma": "porto",
-              "morfologie": "perf.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "heeft gedragen/droeg"
-            }
-          ]
+          "woord": "servum",
+          "lemma": "servus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "slaaf"
         },
         {
-          "latijn": "Filia dominum amavit.",
-          "vertaling_nl": "De dochter hield van de meester.",
-          "woorden": [
-            {
-              "vorm": "Filia",
-              "lemma": "filia",
-              "morfologie": "nom.sg.f — 1e decl.",
-              "vertaling_nl": "dochter"
-            },
-            {
-              "vorm": "dominum",
-              "lemma": "dominus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "amavit",
-              "lemma": "amo",
-              "morfologie": "perf.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "hield van"
-            }
-          ]
+          "woord": "vocavit",
+          "lemma": "voco",
+          "naamval": "perf.ind.act. 3sg — 1e conj.",
+          "vertaling": "heeft geroepen/riep"
+        },
+        {
+          "woord": "Servus",
+          "lemma": "servus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "slaaf"
+        },
+        {
+          "woord": "aquam",
+          "lemma": "aqua",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "water"
+        },
+        {
+          "woord": "portavit",
+          "lemma": "porto",
+          "naamval": "perf.ind.act. 3sg — 1e conj.",
+          "vertaling": "heeft gedragen/droeg"
+        },
+        {
+          "woord": "Filia",
+          "lemma": "filia",
+          "naamval": "nom.sg.f — 1e decl.",
+          "vertaling": "dochter"
+        },
+        {
+          "woord": "dominum",
+          "lemma": "dominus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
+        },
+        {
+          "woord": "amavit",
+          "lemma": "amo",
+          "naamval": "perf.ind.act. 3sg — 1e conj.",
+          "vertaling": "hield van"
         }
       ],
       "knoop_ids": [
@@ -1865,85 +1580,68 @@
         "LAT-V-F02-PORTO",
         "LAT-V-F01-FILIA",
         "LAT-V-F01-AMO"
-      ]
+      ],
+      "moeilijkheid": 5
     },
     {
       "id": "LAT-PASS-LJ1-017",
-      "titel_nl": "Ik en jij",
-      "niveau": 17,
-      "complexiteit_label": "perf_pron_aci",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "Ik en jij",
+      "tekst": "Ego equum vocavi. Tu servum laudavisti. Dominus equum habuit.",
+      "annotaties": [
         {
-          "latijn": "Ego equum vocavi.",
-          "vertaling_nl": "Ik heb het paard geroepen.",
-          "woorden": [
-            {
-              "vorm": "Ego",
-              "lemma": "ego",
-              "morfologie": "nom. — pers. vnw. 1sg",
-              "vertaling_nl": "ik"
-            },
-            {
-              "vorm": "equum",
-              "lemma": "equus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "paard"
-            },
-            {
-              "vorm": "vocavi",
-              "lemma": "voco",
-              "morfologie": "perf.ind.act. 1sg — 1e conj.",
-              "vertaling_nl": "heb geroepen"
-            }
-          ]
+          "woord": "Ego",
+          "lemma": "ego",
+          "naamval": "nom. — pers. vnw. 1sg",
+          "vertaling": "ik"
         },
         {
-          "latijn": "Tu servum laudavisti.",
-          "vertaling_nl": "Jij hebt de slaaf geprezen.",
-          "woorden": [
-            {
-              "vorm": "Tu",
-              "lemma": "tu",
-              "morfologie": "nom. — pers. vnw. 2sg",
-              "vertaling_nl": "jij"
-            },
-            {
-              "vorm": "servum",
-              "lemma": "servus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "laudavisti",
-              "lemma": "laudo",
-              "morfologie": "perf.ind.act. 2sg — 1e conj.",
-              "vertaling_nl": "hebt geprezen"
-            }
-          ]
+          "woord": "equum",
+          "lemma": "equus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "paard"
         },
         {
-          "latijn": "Dominus equum habuit.",
-          "vertaling_nl": "De meester heeft een paard gehad.",
-          "woorden": [
-            {
-              "vorm": "Dominus",
-              "lemma": "dominus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "equum",
-              "lemma": "equus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "paard"
-            },
-            {
-              "vorm": "habuit",
-              "lemma": "habeo",
-              "morfologie": "perf.ind.act. 3sg — 2e conj.",
-              "vertaling_nl": "heeft gehad"
-            }
-          ]
+          "woord": "vocavi",
+          "lemma": "voco",
+          "naamval": "perf.ind.act. 1sg — 1e conj.",
+          "vertaling": "heb geroepen"
+        },
+        {
+          "woord": "Tu",
+          "lemma": "tu",
+          "naamval": "nom. — pers. vnw. 2sg",
+          "vertaling": "jij"
+        },
+        {
+          "woord": "servum",
+          "lemma": "servus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "slaaf"
+        },
+        {
+          "woord": "laudavisti",
+          "lemma": "laudo",
+          "naamval": "perf.ind.act. 2sg — 1e conj.",
+          "vertaling": "hebt geprezen"
+        },
+        {
+          "woord": "Dominus",
+          "lemma": "dominus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
+        },
+        {
+          "woord": "equum",
+          "lemma": "equus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "paard"
+        },
+        {
+          "woord": "habuit",
+          "lemma": "habeo",
+          "naamval": "perf.ind.act. 3sg — 2e conj.",
+          "vertaling": "heeft gehad"
         }
       ],
       "knoop_ids": [
@@ -1964,115 +1662,98 @@
         "LAT-V-F02-LAUDO",
         "LAT-V-F01-DOMINUS",
         "LAT-V-F01-HABEO"
-      ]
+      ],
+      "moeilijkheid": 5
     },
     {
       "id": "LAT-PASS-LJ1-018",
-      "titel_nl": "Deze en die",
-      "niveau": 18,
-      "complexiteit_label": "perf_pron_aci",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "Deze en die",
+      "tekst": "Hic servus dominum amat. Ille servus dominum timet. Hic aquam portat, ille equum habet.",
+      "annotaties": [
         {
-          "latijn": "Hic servus dominum amat.",
-          "vertaling_nl": "Deze slaaf houdt van de meester.",
-          "woorden": [
-            {
-              "vorm": "Hic",
-              "lemma": "hic",
-              "morfologie": "nom.sg.m — aanwijzend vnw.",
-              "vertaling_nl": "deze"
-            },
-            {
-              "vorm": "servus",
-              "lemma": "servus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "dominum",
-              "lemma": "dominus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "amat",
-              "lemma": "amo",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "houdt van"
-            }
-          ]
+          "woord": "Hic",
+          "lemma": "hic",
+          "naamval": "nom.sg.m — aanwijzend vnw.",
+          "vertaling": "deze"
         },
         {
-          "latijn": "Ille servus dominum timet.",
-          "vertaling_nl": "Die slaaf vreest de meester.",
-          "woorden": [
-            {
-              "vorm": "Ille",
-              "lemma": "ille",
-              "morfologie": "nom.sg.m — aanwijzend vnw.",
-              "vertaling_nl": "die/gene"
-            },
-            {
-              "vorm": "servus",
-              "lemma": "servus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "dominum",
-              "lemma": "dominus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "timet",
-              "lemma": "timeo",
-              "morfologie": "praes.ind.act. 3sg — 2e conj.",
-              "vertaling_nl": "vreest"
-            }
-          ]
+          "woord": "servus",
+          "lemma": "servus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "slaaf"
         },
         {
-          "latijn": "Hic aquam portat, ille equum habet.",
-          "vertaling_nl": "Deze draagt water, die heeft een paard.",
-          "woorden": [
-            {
-              "vorm": "Hic",
-              "lemma": "hic",
-              "morfologie": "nom.sg.m — aanwijzend vnw.",
-              "vertaling_nl": "deze"
-            },
-            {
-              "vorm": "aquam",
-              "lemma": "aqua",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "water"
-            },
-            {
-              "vorm": "portat",
-              "lemma": "porto",
-              "morfologie": "praes.ind.act. 3sg — 1e conj.",
-              "vertaling_nl": "draagt"
-            },
-            {
-              "vorm": "ille",
-              "lemma": "ille",
-              "morfologie": "nom.sg.m — aanwijzend vnw.",
-              "vertaling_nl": "die/gene"
-            },
-            {
-              "vorm": "equum",
-              "lemma": "equus",
-              "morfologie": "acc.sg.m — 2e decl.",
-              "vertaling_nl": "paard"
-            },
-            {
-              "vorm": "habet",
-              "lemma": "habeo",
-              "morfologie": "praes.ind.act. 3sg — 2e conj.",
-              "vertaling_nl": "heeft"
-            }
-          ]
+          "woord": "dominum",
+          "lemma": "dominus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
+        },
+        {
+          "woord": "amat",
+          "lemma": "amo",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "houdt van"
+        },
+        {
+          "woord": "Ille",
+          "lemma": "ille",
+          "naamval": "nom.sg.m — aanwijzend vnw.",
+          "vertaling": "die/gene"
+        },
+        {
+          "woord": "servus",
+          "lemma": "servus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "slaaf"
+        },
+        {
+          "woord": "dominum",
+          "lemma": "dominus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
+        },
+        {
+          "woord": "timet",
+          "lemma": "timeo",
+          "naamval": "praes.ind.act. 3sg — 2e conj.",
+          "vertaling": "vreest"
+        },
+        {
+          "woord": "Hic",
+          "lemma": "hic",
+          "naamval": "nom.sg.m — aanwijzend vnw.",
+          "vertaling": "deze"
+        },
+        {
+          "woord": "aquam",
+          "lemma": "aqua",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "water"
+        },
+        {
+          "woord": "portat",
+          "lemma": "porto",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "draagt"
+        },
+        {
+          "woord": "ille",
+          "lemma": "ille",
+          "naamval": "nom.sg.m — aanwijzend vnw.",
+          "vertaling": "die/gene"
+        },
+        {
+          "woord": "equum",
+          "lemma": "equus",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "paard"
+        },
+        {
+          "woord": "habet",
+          "lemma": "habeo",
+          "naamval": "praes.ind.act. 3sg — 2e conj.",
+          "vertaling": "heeft"
         }
       ],
       "knoop_ids": [
@@ -2095,97 +1776,80 @@
         "LAT-V-F02-PORTO",
         "LAT-V-F02-EQUUS",
         "LAT-V-F01-HABEO"
-      ]
+      ],
+      "moeilijkheid": 5
     },
     {
       "id": "LAT-PASS-LJ1-019",
-      "titel_nl": "Een verhaal van oorlog",
-      "niveau": 19,
-      "complexiteit_label": "perf_pron_aci",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "Een verhaal van oorlog",
+      "tekst": "Rex milites ad urbem misit. Milites hostes vicerunt. Cives regem laudaverunt.",
+      "annotaties": [
         {
-          "latijn": "Rex milites ad urbem misit.",
-          "vertaling_nl": "De koning stuurde soldaten naar de stad.",
-          "woorden": [
-            {
-              "vorm": "Rex",
-              "lemma": "rex",
-              "morfologie": "nom.sg.m — 3e decl.",
-              "vertaling_nl": "koning"
-            },
-            {
-              "vorm": "milites",
-              "lemma": "miles",
-              "morfologie": "acc.pl.m — 3e decl.",
-              "vertaling_nl": "soldaten"
-            },
-            {
-              "vorm": "ad",
-              "lemma": "ad",
-              "morfologie": "voorzetsel + acc.",
-              "vertaling_nl": "naar"
-            },
-            {
-              "vorm": "urbem",
-              "lemma": "urbs",
-              "morfologie": "acc.sg.f — 3e decl.",
-              "vertaling_nl": "stad"
-            },
-            {
-              "vorm": "misit",
-              "lemma": "mitto",
-              "morfologie": "perf.ind.act. 3sg — 3e conj.",
-              "vertaling_nl": "stuurde/zond"
-            }
-          ]
+          "woord": "Rex",
+          "lemma": "rex",
+          "naamval": "nom.sg.m — 3e decl.",
+          "vertaling": "koning"
         },
         {
-          "latijn": "Milites hostes vicerunt.",
-          "vertaling_nl": "De soldaten hebben de vijanden overwonnen.",
-          "woorden": [
-            {
-              "vorm": "Milites",
-              "lemma": "miles",
-              "morfologie": "nom.pl.m — 3e decl.",
-              "vertaling_nl": "soldaten"
-            },
-            {
-              "vorm": "hostes",
-              "lemma": "hostis",
-              "morfologie": "acc.pl.m — 3e decl.",
-              "vertaling_nl": "vijanden"
-            },
-            {
-              "vorm": "vicerunt",
-              "lemma": "vinco",
-              "morfologie": "perf.ind.act. 3pl — 3e conj.",
-              "vertaling_nl": "hebben overwonnen"
-            }
-          ]
+          "woord": "milites",
+          "lemma": "miles",
+          "naamval": "acc.pl.m — 3e decl.",
+          "vertaling": "soldaten"
         },
         {
-          "latijn": "Cives regem laudaverunt.",
-          "vertaling_nl": "De burgers prezen de koning.",
-          "woorden": [
-            {
-              "vorm": "Cives",
-              "lemma": "civis",
-              "morfologie": "nom.pl.m — 3e decl.",
-              "vertaling_nl": "burgers"
-            },
-            {
-              "vorm": "regem",
-              "lemma": "rex",
-              "morfologie": "acc.sg.m — 3e decl.",
-              "vertaling_nl": "koning"
-            },
-            {
-              "vorm": "laudaverunt",
-              "lemma": "laudo",
-              "morfologie": "perf.ind.act. 3pl — 1e conj.",
-              "vertaling_nl": "prezen"
-            }
-          ]
+          "woord": "ad",
+          "lemma": "ad",
+          "naamval": "voorzetsel + acc.",
+          "vertaling": "naar"
+        },
+        {
+          "woord": "urbem",
+          "lemma": "urbs",
+          "naamval": "acc.sg.f — 3e decl.",
+          "vertaling": "stad"
+        },
+        {
+          "woord": "misit",
+          "lemma": "mitto",
+          "naamval": "perf.ind.act. 3sg — 3e conj.",
+          "vertaling": "stuurde/zond"
+        },
+        {
+          "woord": "Milites",
+          "lemma": "miles",
+          "naamval": "nom.pl.m — 3e decl.",
+          "vertaling": "soldaten"
+        },
+        {
+          "woord": "hostes",
+          "lemma": "hostis",
+          "naamval": "acc.pl.m — 3e decl.",
+          "vertaling": "vijanden"
+        },
+        {
+          "woord": "vicerunt",
+          "lemma": "vinco",
+          "naamval": "perf.ind.act. 3pl — 3e conj.",
+          "vertaling": "hebben overwonnen"
+        },
+        {
+          "woord": "Cives",
+          "lemma": "civis",
+          "naamval": "nom.pl.m — 3e decl.",
+          "vertaling": "burgers"
+        },
+        {
+          "woord": "regem",
+          "lemma": "rex",
+          "naamval": "acc.sg.m — 3e decl.",
+          "vertaling": "koning"
+        },
+        {
+          "woord": "laudaverunt",
+          "lemma": "laudo",
+          "naamval": "perf.ind.act. 3pl — 1e conj.",
+          "vertaling": "prezen"
         }
       ],
       "knoop_ids": [
@@ -2208,151 +1872,128 @@
         "LAT-V-F02-VINCO",
         "LAT-V-F01-CIVIS",
         "LAT-V-F02-LAUDO"
-      ]
+      ],
+      "moeilijkheid": 5
     },
     {
       "id": "LAT-PASS-LJ1-020",
-      "titel_nl": "De meester ziet dat…",
-      "niveau": 20,
-      "complexiteit_label": "perf_pron_aci",
-      "zinnen": [
+      "taal": "lat",
+      "titel": "De meester ziet dat…",
+      "tekst": "Dominus servum aquam portare videt. Pater filium bonum esse dicit. Rex hostes venire timet. Milites urbem magnam esse sciunt.",
+      "annotaties": [
         {
-          "latijn": "Dominus servum aquam portare videt.",
-          "vertaling_nl": "De meester ziet dat de slaaf water draagt.",
-          "woorden": [
-            {
-              "vorm": "Dominus",
-              "lemma": "dominus",
-              "morfologie": "nom.sg.m — 2e decl.",
-              "vertaling_nl": "meester/heer"
-            },
-            {
-              "vorm": "servum",
-              "lemma": "servus",
-              "morfologie": "acc.sg.m — 2e decl. (AcI-subject)",
-              "vertaling_nl": "slaaf"
-            },
-            {
-              "vorm": "aquam",
-              "lemma": "aqua",
-              "morfologie": "acc.sg.f — 1e decl.",
-              "vertaling_nl": "water"
-            },
-            {
-              "vorm": "portare",
-              "lemma": "porto",
-              "morfologie": "inf.praes.act. — 1e conj.",
-              "vertaling_nl": "dragen"
-            },
-            {
-              "vorm": "videt",
-              "lemma": "video",
-              "morfologie": "praes.ind.act. 3sg — 2e conj.",
-              "vertaling_nl": "ziet"
-            }
-          ]
+          "woord": "Dominus",
+          "lemma": "dominus",
+          "naamval": "nom.sg.m — 2e decl.",
+          "vertaling": "meester/heer"
         },
         {
-          "latijn": "Pater filium bonum esse dicit.",
-          "vertaling_nl": "De vader zegt dat zijn zoon goed is.",
-          "woorden": [
-            {
-              "vorm": "Pater",
-              "lemma": "pater",
-              "morfologie": "nom.sg.m — 3e decl.",
-              "vertaling_nl": "vader"
-            },
-            {
-              "vorm": "filium",
-              "lemma": "filius",
-              "morfologie": "acc.sg.m — 2e decl. (AcI-subject)",
-              "vertaling_nl": "zoon"
-            },
-            {
-              "vorm": "bonum",
-              "lemma": "bonus",
-              "morfologie": "acc.sg.m — adj. D1/D2 (AcI-predicaat)",
-              "vertaling_nl": "goed"
-            },
-            {
-              "vorm": "esse",
-              "lemma": "sum",
-              "morfologie": "inf.praes. — onregelm.",
-              "vertaling_nl": "zijn"
-            },
-            {
-              "vorm": "dicit",
-              "lemma": "dico",
-              "morfologie": "praes.ind.act. 3sg — 3e conj.",
-              "vertaling_nl": "zegt"
-            }
-          ]
+          "woord": "servum",
+          "lemma": "servus",
+          "naamval": "acc.sg.m — 2e decl. (AcI-subject)",
+          "vertaling": "slaaf"
         },
         {
-          "latijn": "Rex hostes venire timet.",
-          "vertaling_nl": "De koning vreest dat de vijanden komen.",
-          "woorden": [
-            {
-              "vorm": "Rex",
-              "lemma": "rex",
-              "morfologie": "nom.sg.m — 3e decl.",
-              "vertaling_nl": "koning"
-            },
-            {
-              "vorm": "hostes",
-              "lemma": "hostis",
-              "morfologie": "acc.pl.m — 3e decl. (AcI-subject)",
-              "vertaling_nl": "vijanden"
-            },
-            {
-              "vorm": "venire",
-              "lemma": "venio",
-              "morfologie": "inf.praes.act. — 4e conj.",
-              "vertaling_nl": "komen"
-            },
-            {
-              "vorm": "timet",
-              "lemma": "timeo",
-              "morfologie": "praes.ind.act. 3sg — 2e conj.",
-              "vertaling_nl": "vreest"
-            }
-          ]
+          "woord": "aquam",
+          "lemma": "aqua",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "water"
         },
         {
-          "latijn": "Milites urbem magnam esse sciunt.",
-          "vertaling_nl": "De soldaten weten dat de stad groot is.",
-          "woorden": [
-            {
-              "vorm": "Milites",
-              "lemma": "miles",
-              "morfologie": "nom.pl.m — 3e decl.",
-              "vertaling_nl": "soldaten"
-            },
-            {
-              "vorm": "urbem",
-              "lemma": "urbs",
-              "morfologie": "acc.sg.f — 3e decl. (AcI-subject)",
-              "vertaling_nl": "stad"
-            },
-            {
-              "vorm": "magnam",
-              "lemma": "magnus",
-              "morfologie": "acc.sg.f — adj. D1/D2 (AcI-predicaat)",
-              "vertaling_nl": "groot"
-            },
-            {
-              "vorm": "esse",
-              "lemma": "sum",
-              "morfologie": "inf.praes. — onregelm.",
-              "vertaling_nl": "zijn"
-            },
-            {
-              "vorm": "sciunt",
-              "lemma": "scio",
-              "morfologie": "praes.ind.act. 3pl — 4e conj.",
-              "vertaling_nl": "weten"
-            }
-          ]
+          "woord": "portare",
+          "lemma": "porto",
+          "naamval": "inf.praes.act. — 1e conj.",
+          "vertaling": "dragen"
+        },
+        {
+          "woord": "videt",
+          "lemma": "video",
+          "naamval": "praes.ind.act. 3sg — 2e conj.",
+          "vertaling": "ziet"
+        },
+        {
+          "woord": "Pater",
+          "lemma": "pater",
+          "naamval": "nom.sg.m — 3e decl.",
+          "vertaling": "vader"
+        },
+        {
+          "woord": "filium",
+          "lemma": "filius",
+          "naamval": "acc.sg.m — 2e decl. (AcI-subject)",
+          "vertaling": "zoon"
+        },
+        {
+          "woord": "bonum",
+          "lemma": "bonus",
+          "naamval": "acc.sg.m — adj. D1/D2 (AcI-predicaat)",
+          "vertaling": "goed"
+        },
+        {
+          "woord": "esse",
+          "lemma": "sum",
+          "naamval": "inf.praes. — onregelm.",
+          "vertaling": "zijn"
+        },
+        {
+          "woord": "dicit",
+          "lemma": "dico",
+          "naamval": "praes.ind.act. 3sg — 3e conj.",
+          "vertaling": "zegt"
+        },
+        {
+          "woord": "Rex",
+          "lemma": "rex",
+          "naamval": "nom.sg.m — 3e decl.",
+          "vertaling": "koning"
+        },
+        {
+          "woord": "hostes",
+          "lemma": "hostis",
+          "naamval": "acc.pl.m — 3e decl. (AcI-subject)",
+          "vertaling": "vijanden"
+        },
+        {
+          "woord": "venire",
+          "lemma": "venio",
+          "naamval": "inf.praes.act. — 4e conj.",
+          "vertaling": "komen"
+        },
+        {
+          "woord": "timet",
+          "lemma": "timeo",
+          "naamval": "praes.ind.act. 3sg — 2e conj.",
+          "vertaling": "vreest"
+        },
+        {
+          "woord": "Milites",
+          "lemma": "miles",
+          "naamval": "nom.pl.m — 3e decl.",
+          "vertaling": "soldaten"
+        },
+        {
+          "woord": "urbem",
+          "lemma": "urbs",
+          "naamval": "acc.sg.f — 3e decl. (AcI-subject)",
+          "vertaling": "stad"
+        },
+        {
+          "woord": "magnam",
+          "lemma": "magnus",
+          "naamval": "acc.sg.f — adj. D1/D2 (AcI-predicaat)",
+          "vertaling": "groot"
+        },
+        {
+          "woord": "esse",
+          "lemma": "sum",
+          "naamval": "inf.praes. — onregelm.",
+          "vertaling": "zijn"
+        },
+        {
+          "woord": "sciunt",
+          "lemma": "scio",
+          "naamval": "praes.ind.act. 3pl — 4e conj.",
+          "vertaling": "weten"
         }
       ],
       "knoop_ids": [
@@ -2386,7 +2027,8 @@
         "LAT-V-F01-URBS",
         "LAT-V-F01-MAGNUS",
         "LAT-V-F02-SCIO"
-      ]
+      ],
+      "moeilijkheid": 5
     }
   ]
 }
