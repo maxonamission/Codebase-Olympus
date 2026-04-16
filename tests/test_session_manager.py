@@ -591,23 +591,14 @@ class TestContextFirstRoute:
 
 
 class TestOfflineAssignmentCollection:
-    """OFFLINE_SCHRIJVEN-items horen na de sessie in pending_offline_assignments.
+    """OFFLINE_SCHRIJVEN-items komen na de sessie in pending_offline_assignments.
 
-    Gemarkeerd als xfail: ``SessionManager._finalize_session`` gooit de
-    return-waarde van ``_collect_offline_items`` weg.  ``run_session`` in
-    ``scheduling/session.py`` doet dit wel correct (zie
-    ``test_offline_scheduling.py``).  Deze test fungeert als regressie-vangnet
-    voor als de bug in SessionManager verholpen wordt.
+    Contract: bij ``_finalize_session`` worden alle offline-items van de
+    aangeraakte knopen toegevoegd aan ``learner.pending_offline_assignments``,
+    met deduplicatie op ``item_id``. Analoog aan ``run_session`` in
+    ``scheduling/session.py``.
     """
 
-    @pytest.mark.xfail(
-        reason=(
-            "SessionManager._finalize_session roept _collect_offline_items "
-            "aan maar gebruikt het resultaat niet; zie scheduling/session.py "
-            "voor de correcte implementatie."
-        ),
-        strict=True,
-    )
     def test_offline_item_ends_up_in_pending(self):
         now = datetime(2026, 4, 16, 10, 0, 0)
         graph, learner = _graph_with_offline_item()
@@ -619,6 +610,22 @@ class TestOfflineAssignmentCollection:
             a.item_id == "ITEM-OFFLINE-D1-001"
             for a in learner.pending_offline_assignments
         )
+
+    def test_offline_item_not_duplicated_across_sessions(self):
+        """Een tweede sessie op dezelfde knoop voegt niet nog een assignment toe."""
+        now = datetime(2026, 4, 16, 10, 0, 0)
+        graph, learner = _graph_with_offline_item()
+        mgr = SessionManager()
+
+        for _ in range(2):
+            session_id, q = mgr.start_session("user1", learner, graph, now=now)
+            _drive_session_to_completion(mgr, session_id, q, now)
+
+        matching = [
+            a for a in learner.pending_offline_assignments
+            if a.item_id == "ITEM-OFFLINE-D1-001"
+        ]
+        assert len(matching) == 1
 
 
 class TestSessionHistoryRecorded:

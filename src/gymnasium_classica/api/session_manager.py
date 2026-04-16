@@ -538,8 +538,17 @@ class SessionManager:
         state.finished = True
         state.ended_at = now
 
-        # Collect offline assignments
-        _collect_offline_items(state.graph, state.session_node_ids, now)
+        # Collect offline assignments and attach them to the learner,
+        # deduplicating on item_id against already-pending assignments.
+        new_offline = _collect_offline_items(
+            state.graph, state.session_node_ids, now
+        )
+        existing_item_ids = {
+            a.item_id for a in state.learner.pending_offline_assignments
+        }
+        for assignment in new_offline:
+            if assignment.item_id not in existing_item_ids:
+                state.learner.pending_offline_assignments.append(assignment)
 
         # Record session in learner model
         state.learner.session_history.append(
