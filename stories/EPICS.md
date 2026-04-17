@@ -495,6 +495,10 @@ Scope:
 - Kwaliteitscheck: steekproef door classicus
 - audio_ref velden updaten van placeholder naar definitief
 
+Bronnen en leads:
+- **espeak-ng** — <https://github.com/espeak-ng/espeak-ng> — open-source formant-synth met ingebouwde Latijnse stem (`la`) en Oud-Grieks (`grc`). GPLv3. Command-line en libary. Macron-support voor lange klinkers via IPA of via [[lengte]]-markers werkt voor klassieke uitspraak; kwaliteit is robotisch maar goed genoeg voor woord-niveau drill.
+- Overwegen ná B1-01 evaluatie: Piper (neural, hogere kwaliteit, geen Latijnse stem out-of-the-box), Coqui TTS (fine-tune vereist), Poeta ex Machina (klassiek-specifiek maar beperkte API).
+
 ---
 
 ## Epic E3: Items en content voor Grieks + vocabulaire
