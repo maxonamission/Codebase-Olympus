@@ -80,6 +80,85 @@ class TestProgressOverview:
             assert dp["total"] == dp["mastered"] + dp["in_progress"] + dp["unseen"]
 
 
+class TestClusterProgress:
+    def test_clusters_no_learner_model(self, client):
+        """New user: every cluster has 0 mastered, totals reflect graph V-knopen."""
+        _, headers = _auth_header(client, "clusters_new@example.nl")
+        resp = client.get("/progress/clusters", headers=headers)
+        assert resp.status_code == 200
+        data = resp.json()
+        assert "clusters" in data
+        assert isinstance(data["clusters"], list)
+        # At least one cluster should exist in the seed data file
+        assert len(data["clusters"]) > 0
+
+        for c in data["clusters"]:
+            assert {"label", "beschrijving", "total", "mastered",
+                    "in_progress", "unseen", "mastered_pct"} <= set(c.keys())
+            assert c["mastered"] == 0
+            assert c["in_progress"] == 0
+            assert c["unseen"] == c["total"]
+            assert c["mastered_pct"] == 0.0
+
+    def test_clusters_include_known_labels(self, client):
+        """The known semantic cluster labels appear in the response."""
+        _, headers = _auth_header(client, "clusters_labels@example.nl")
+        data = client.get("/progress/clusters", headers=headers).json()
+        labels = {c["label"] for c in data["clusters"]}
+        assert {"familie", "oorlog", "beweging", "communicatie"} <= labels
+
+    def test_clusters_counts_match_graph(self, client):
+        """Per-cluster totals match the number of V-knopen carrying that label."""
+        _, headers = _auth_header(client, "clusters_counts@example.nl")
+        graph = client.app.state.graph
+        expected: dict[str, int] = {}
+        for node_id in graph.nodes:
+            knoop = graph.nodes[node_id]["knoop"]
+            if knoop.type.value != "V" or not knoop.semantisch_cluster:
+                continue
+            expected[knoop.semantisch_cluster] = expected.get(
+                knoop.semantisch_cluster, 0) + 1
+
+        data = client.get("/progress/clusters", headers=headers).json()
+        for c in data["clusters"]:
+            assert c["total"] == expected.get(c["label"], 0), c["label"]
+
+    def test_clusters_reflect_mastery(self, client):
+        """Mastering one V-knoop in a cluster bumps that cluster's counters."""
+        user_id, headers = _auth_header(client, "clusters_mastery@example.nl")
+        db = client.app.state.db
+        graph = client.app.state.graph
+
+        target_label = None
+        target_node = None
+        for node_id in graph.nodes:
+            knoop = graph.nodes[node_id]["knoop"]
+            if knoop.type.value == "V" and knoop.semantisch_cluster:
+                target_label = knoop.semantisch_cluster
+                target_node = node_id
+                break
+        assert target_node is not None, "Seed data must contain a clustered V-knoop"
+
+        learner = LearnerModel(user_id=UUID(user_id))
+        learner.knoop_states[target_node] = KnoopState(
+            knoop_id=target_node,
+            posterior_mastery=0.9,
+            source=MasterySource.PRACTICE,
+        )
+        save_learner_model(db, learner)
+
+        data = client.get("/progress/clusters", headers=headers).json()
+        by_label = {c["label"]: c for c in data["clusters"]}
+        cluster = by_label[target_label]
+        assert cluster["mastered"] >= 1
+        assert cluster["mastered_pct"] > 0.0
+        assert cluster["unseen"] == cluster["total"] - cluster["mastered"] - cluster["in_progress"]
+
+    def test_clusters_requires_auth(self, client):
+        resp = client.get("/progress/clusters")
+        assert resp.status_code == 422
+
+
 class TestKnoopProgress:
     def test_knoop_not_found(self, client):
         _, headers = _auth_header(client, "knoop404@example.nl")

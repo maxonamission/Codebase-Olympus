@@ -2029,6 +2029,256 @@
         "LAT-V-F02-SCIO"
       ],
       "moeilijkheid": 5
+    },
+    {
+      "id": "LAT-PASS-LJ1-021",
+      "taal": "lat",
+      "titel": "De boerin en de slavin",
+      "tekst": "Agricola puellam videt. Puella aquam portat. Ancilla agricolam salutat.",
+      "annotaties": [
+        {
+          "woord": "Agricola",
+          "lemma": "agricola",
+          "naamval": "nom.sg.m — 1e decl.",
+          "vertaling": "boer"
+        },
+        {
+          "woord": "puellam",
+          "lemma": "puella",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "meisje"
+        },
+        {
+          "woord": "videt",
+          "lemma": "video",
+          "naamval": "praes.ind.act. 3sg — 2e conj.",
+          "vertaling": "ziet"
+        },
+        {
+          "woord": "Puella",
+          "lemma": "puella",
+          "naamval": "nom.sg.f — 1e decl.",
+          "vertaling": "meisje"
+        },
+        {
+          "woord": "aquam",
+          "lemma": "aqua",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "water"
+        },
+        {
+          "woord": "portat",
+          "lemma": "porto",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "draagt"
+        },
+        {
+          "woord": "Ancilla",
+          "lemma": "ancilla",
+          "naamval": "nom.sg.f — 1e decl.",
+          "vertaling": "slavin"
+        },
+        {
+          "woord": "agricolam",
+          "lemma": "agricola",
+          "naamval": "acc.sg.m — 1e decl.",
+          "vertaling": "boer"
+        },
+        {
+          "woord": "salutat",
+          "lemma": "saluto",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "groet"
+        }
+      ],
+      "knoop_ids": [
+        "LAT-G-MORF-NOM-D1",
+        "LAT-G-MORF-ACC-D1",
+        "LAT-G-MORF-PRAES-C1-ACT",
+        "LAT-G-MORF-PRAES-C2-ACT",
+        "LAT-V-F02-PUELLA",
+        "LAT-V-F01-AQUA",
+        "LAT-V-F02-PORTO",
+        "LAT-V-F01-VIDEO"
+      ],
+      "moeilijkheid": 1
+    },
+    {
+      "id": "LAT-PASS-LJ1-022",
+      "taal": "lat",
+      "titel": "Domina en de tuin",
+      "tekst": "Domina in horto ambulat. Rosam pulchram spectat. Serva dominam vocat.",
+      "annotaties": [
+        {
+          "woord": "Domina",
+          "lemma": "domina",
+          "naamval": "nom.sg.f — 1e decl.",
+          "vertaling": "meesteres"
+        },
+        {
+          "woord": "in",
+          "lemma": "in",
+          "naamval": "voorzetsel + abl.",
+          "vertaling": "in"
+        },
+        {
+          "woord": "horto",
+          "lemma": "hortus",
+          "naamval": "abl.sg.m — 2e decl.",
+          "vertaling": "tuin"
+        },
+        {
+          "woord": "ambulat",
+          "lemma": "ambulo",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "wandelt"
+        },
+        {
+          "woord": "Rosam",
+          "lemma": "rosa",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "roos"
+        },
+        {
+          "woord": "pulchram",
+          "lemma": "pulcher",
+          "naamval": "acc.sg.f — adj. D1/D2",
+          "vertaling": "mooie"
+        },
+        {
+          "woord": "spectat",
+          "lemma": "specto",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "bekijkt"
+        },
+        {
+          "woord": "Serva",
+          "lemma": "serva",
+          "naamval": "nom.sg.f — 1e decl.",
+          "vertaling": "slavin"
+        },
+        {
+          "woord": "dominam",
+          "lemma": "domina",
+          "naamval": "acc.sg.f — 1e decl.",
+          "vertaling": "meesteres"
+        },
+        {
+          "woord": "vocat",
+          "lemma": "voco",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "roept"
+        }
+      ],
+      "knoop_ids": [
+        "LAT-G-MORF-NOM-D1",
+        "LAT-G-MORF-ACC-D1",
+        "LAT-G-MORF-ABL-D2",
+        "LAT-G-MORF-PRAES-C1-ACT",
+        "LAT-G-MORF-ADJ-D12-VERBG",
+        "LAT-G-SYNT-ADJ-CONGR",
+        "LAT-G-SYNT-PREP-ABL",
+        "LAT-V-F01-IN",
+        "LAT-V-F02-HORTUS",
+        "LAT-V-F02-PULCHER",
+        "LAT-V-F03-SPECTO",
+        "LAT-V-F01-VOCO"
+      ],
+      "moeilijkheid": 2
+    },
+    {
+      "id": "LAT-PASS-LJ1-023",
+      "taal": "lat",
+      "titel": "De soldaat in het kamp",
+      "tekst": "Miles gladium portat. Centurio militem laudat. In castris magna cena paratur.",
+      "annotaties": [
+        {
+          "woord": "Miles",
+          "lemma": "miles",
+          "naamval": "nom.sg.m — 3e decl.",
+          "vertaling": "soldaat"
+        },
+        {
+          "woord": "gladium",
+          "lemma": "gladius",
+          "naamval": "acc.sg.m — 2e decl.",
+          "vertaling": "zwaard"
+        },
+        {
+          "woord": "portat",
+          "lemma": "porto",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "draagt"
+        },
+        {
+          "woord": "Centurio",
+          "lemma": "centurio",
+          "naamval": "nom.sg.m — 3e decl.",
+          "vertaling": "centurio"
+        },
+        {
+          "woord": "militem",
+          "lemma": "miles",
+          "naamval": "acc.sg.m — 3e decl.",
+          "vertaling": "soldaat"
+        },
+        {
+          "woord": "laudat",
+          "lemma": "laudo",
+          "naamval": "praes.ind.act. 3sg — 1e conj.",
+          "vertaling": "prijst"
+        },
+        {
+          "woord": "In",
+          "lemma": "in",
+          "naamval": "voorzetsel + abl.",
+          "vertaling": "in"
+        },
+        {
+          "woord": "castris",
+          "lemma": "castra",
+          "naamval": "abl.pl.n — 2e decl.",
+          "vertaling": "kamp"
+        },
+        {
+          "woord": "magna",
+          "lemma": "magnus",
+          "naamval": "nom.sg.f — adj. D1/D2",
+          "vertaling": "grote"
+        },
+        {
+          "woord": "cena",
+          "lemma": "cena",
+          "naamval": "nom.sg.f — 1e decl.",
+          "vertaling": "maaltijd"
+        },
+        {
+          "woord": "paratur",
+          "lemma": "paro",
+          "naamval": "praes.ind.pass. 3sg — 1e conj.",
+          "vertaling": "wordt bereid"
+        }
+      ],
+      "knoop_ids": [
+        "LAT-G-MORF-NOM-D1",
+        "LAT-G-MORF-NOM-D3",
+        "LAT-G-MORF-ACC-D2",
+        "LAT-G-MORF-ACC-D3",
+        "LAT-G-MORF-ABL-D2",
+        "LAT-G-MORF-PRAES-C1-ACT",
+        "LAT-G-MORF-ADJ-D12-VERBG",
+        "LAT-G-SYNT-ADJ-CONGR",
+        "LAT-G-SYNT-PREP-ABL",
+        "LAT-V-F01-IN",
+        "LAT-V-F01-MILES",
+        "LAT-V-F02-GLADIUS",
+        "LAT-V-F02-PORTO",
+        "LAT-V-F02-LAUDO",
+        "LAT-V-F02-CASTRA",
+        "LAT-V-F01-MAGNUS",
+        "LAT-V-F02-CENA"
+      ],
+      "moeilijkheid": 3
     }
   ]
 }

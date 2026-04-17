@@ -79,6 +79,10 @@ export function getProgressOverview() {
   return apiFetch('/progress/overview');
 }
 
+export function getClusterProgress() {
+  return apiFetch('/progress/clusters');
+}
+
 export function getGraphData() {
   return apiFetch('/progress/graph');
 }

@@ -176,6 +176,24 @@ class ProgressOverviewResponse(BaseModel):
     )
 
 
+class ClusterProgress(BaseModel):
+    """Progress in a single semantic vocabulary cluster."""
+
+    label: str
+    beschrijving: str
+    total: int
+    mastered: int
+    in_progress: int
+    unseen: int
+    mastered_pct: float
+
+
+class ClustersResponse(BaseModel):
+    """Per-cluster vocabulary progress for the dashboard."""
+
+    clusters: list[ClusterProgress]
+
+
 class ItemHistoryEntry(BaseModel):
     timestamp: str
     item_id: str
