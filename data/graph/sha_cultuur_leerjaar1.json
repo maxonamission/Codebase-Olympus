@@ -2170,7 +2170,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-LIT-INTRO-001",
+          "knoop_ids": [
+            "SHA-C-LIT-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welk schriftsysteem ligt aan de basis van het moderne Europese schrift?",
+            "options": [
+              "Het Chinese schrift",
+              "Het Egyptische hiërogliefenschrift",
+              "Het Griekse alfabet (via het Latijnse)",
+              "Het spijkerschrift"
+            ]
+          },
+          "antwoord": "Het Griekse alfabet (via het Latijnse)",
+          "feedback": "Het Griekse alfabet vormt, via het Latijnse, de basis van vrijwel alle moderne Europese schriften.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-LIT-GRALF",
@@ -2182,7 +2206,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-LIT-GRALF-001",
+          "knoop_ids": [
+            "SHA-C-LIT-GRALF"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welk schrift vormt de directe bron van het Griekse alfabet?",
+            "options": [
+              "Lineair B",
+              "Het Fenicische schrift",
+              "Het Etruskische schrift",
+              "Het Aramese schrift"
+            ]
+          },
+          "antwoord": "Het Fenicische schrift",
+          "feedback": "De Grieken ontleenden rond 800 v.Chr. hun alfabet aan het Fenicische schrift en voegden klinkertekens toe.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-LIT-LTALF",
@@ -2194,7 +2242,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-LIT-LTALF-001",
+          "knoop_ids": [
+            "SHA-C-LIT-LTALF"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Via welk volk is het Griekse alfabet bij de Romeinen terechtgekomen?",
+            "options": [
+              "De Galliërs",
+              "De Feniciërs",
+              "De Etrusken",
+              "De Karthagers"
+            ]
+          },
+          "antwoord": "De Etrusken",
+          "feedback": "De Romeinen namen het alfabet over van de Etrusken, die het op hun beurt uit het Griekse schrift hadden.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-LIT-INSCR",
@@ -2206,7 +2278,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-LIT-INSCR-001",
+          "knoop_ids": [
+            "SHA-C-LIT-INSCR"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke van de volgende is een voorbeeld van een inscriptie?",
+            "options": [
+              "Een perkamenten wetboek",
+              "Een grafsteen met tekst",
+              "Een papyrusrol",
+              "Een mondelinge overlevering"
+            ]
+          },
+          "antwoord": "Een grafsteen met tekst",
+          "feedback": "Inscripties zijn teksten in duurzaam materiaal — steen, brons of keramiek — zoals grafstenen, wetten of eerbewijzen.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-LIT-SCHRF",
@@ -2218,7 +2314,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-LIT-SCHRF-001",
+          "knoop_ids": [
+            "SHA-C-LIT-SCHRF"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welk van deze materialen werd in de oudheid NIET gebruikt om op te schrijven?",
+            "options": [
+              "Papyrus",
+              "Wastafels",
+              "Perkament",
+              "Papier"
+            ]
+          },
+          "antwoord": "Papier",
+          "feedback": "Papier kwam pas na de oudheid in Europa in gebruik. In de klassieke wereld schreef men op papyrus, wastafels of perkament.",
+          "bron": "handmatig"
+        }
+      ]
     }
   ],
   "edges": [
