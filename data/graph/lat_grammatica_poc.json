@@ -10,6 +10,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-NAAMVAL-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-NAAMVAL-INTRO-001",
@@ -53,6 +54,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-DECL-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-DECL-INTRO-001",
@@ -96,6 +98,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-CONJ-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-CONJ-INTRO-001",
@@ -139,6 +142,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-TEMPUS-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-TEMPUS-INTRO-001",
@@ -184,6 +188,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-SYNT-ZINSDEEL-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-SYNT-ZINSDEEL-INTRO-001",
@@ -246,6 +251,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-GENUS-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-GENUS-INTRO-001",
@@ -292,6 +298,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-NUMERUS-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-NUMERUS-INTRO-001",
@@ -338,6 +345,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-PERSOON-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-PERSOON-INTRO-001",
@@ -381,6 +389,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-DECL1-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-DECL1-INTRO-001",
@@ -737,6 +746,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-DECL2-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-DECL2-INTRO-001",
@@ -1145,6 +1155,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-SYNT-NOM-FUNCTIE.md",
       "items": [
         {
           "id": "ITEM-LAT-G-SYNT-NOM-FUNCTIE-001",
@@ -1838,6 +1849,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-PRAES-ESSE.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-PRAES-ESSE-001",
@@ -2003,6 +2015,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-IMPF-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-IMPF-INTRO-001",
@@ -2224,6 +2237,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-ADJ-D12-VERBG.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-ADJ-D12-VERBG-001",
@@ -2477,6 +2491,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-SYNT-OVEREENK.md",
       "items": [
         {
           "id": "ITEM-LAT-G-SYNT-OVEREENK-001",
@@ -2507,6 +2522,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-SYNT-WRDVLG.md",
       "items": [
         {
           "id": "ITEM-LAT-G-SYNT-WRDVLG-001",
@@ -2537,6 +2553,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-SYNT-ONTK.md",
       "items": [
         {
           "id": "ITEM-LAT-G-SYNT-ONTK-001",
@@ -2597,6 +2614,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-SYNT-VRAAGZIN.md",
       "items": [
         {
           "id": "ITEM-LAT-G-SYNT-VRAAGZIN-001",
@@ -2657,6 +2675,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-DECL3-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-DECL3-INTRO-001",

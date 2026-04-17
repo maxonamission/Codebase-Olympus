@@ -403,6 +403,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-DECL1-PARAD.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-DECL1-PARAD-001",
@@ -815,6 +816,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-DECL2-PARAD.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-DECL2-PARAD-001",
@@ -1275,6 +1277,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-DECL3-CONS.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-DECL3-CONS-001",
@@ -1506,6 +1509,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-DECL3-PARAD.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-DECL3-PARAD-001",
@@ -1633,6 +1637,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-ADJ-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-ADJ-INTRO-001",
@@ -1676,6 +1681,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-ADJ-D3-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-ADJ-D3-INTRO-001",
@@ -2340,6 +2346,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-PRAES-PARAD.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-PRAES-PARAD-001",
@@ -2627,6 +2634,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-IMPF-PARAD.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-IMPF-PARAD-001",
@@ -2705,6 +2713,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-PERF-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-PERF-INTRO-001",
@@ -3263,6 +3272,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-PERF-PARAD.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-PERF-PARAD-001",
@@ -3579,6 +3589,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-PLQPF-PARAD.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-PLQPF-PARAD-001",
@@ -3640,6 +3651,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-IMPER-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-IMPER-INTRO-001",
@@ -3877,6 +3889,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-PRON-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-PRON-INTRO-001",
@@ -3964,6 +3977,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-PRON-EGO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-PRON-EGO-001",
@@ -4022,6 +4036,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-PRON-IS.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-PRON-IS-001",
@@ -4387,6 +4402,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-SYNT-PREP-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-SYNT-PREP-INTRO-001",
@@ -4430,6 +4446,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-SYNT-PREP-IN.md",
       "items": [
         {
           "id": "ITEM-LAT-G-SYNT-PREP-IN-001",
