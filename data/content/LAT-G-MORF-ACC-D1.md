@@ -4,55 +4,62 @@ laatst_bijgewerkt: 2026-04-17
 auteur: handmatig
 ---
 
-# Accusativus 1e declinatie
+# De accusativus bij woorden van de 1e groep
 
-## Overzicht
+## Waar gaat het over?
 
-De accusativus is vooral de naamval van het **lijdend voorwerp**: hij
-beantwoordt de vraag *wie* of *wat* bij een transitief werkwoord.  Voor
-woorden van de 1e declinatie (a-stammen) gebruik je de uitgangen
-**-am** (enkelvoud) en **-ās** (meervoud).
+De **accusativus** (de vierde naamval) gebruik je vooral voor het
+**lijdend voorwerp** in een zin: dat is wie of wat je ziet, hoort,
+draagt, noem maar op.
 
-Modelwoord: **puella, puellae** (v.) — meisje.
+Een woord van de **1e groep** (dat zijn woorden die in het woordenboek
+eindigen op **-a, -ae**, zoals *puella, puellae* — meisje) krijgt in
+de accusativus deze uitgangen:
 
-## Vormen
+| Wanneer   | Uitgang | Voorbeeld      |
+|-----------|---------|----------------|
+| Enkelvoud | **-am**   | puell-**am** (één meisje) |
+| Meervoud  | **-ās**   | puell-**ās** (meerdere meisjes) |
 
-| Getal     | Uitgang | Voorbeeld      |
-|-----------|---------|---------------|
-| Enkelvoud | **-am**   | puell-**am**    |
-| Meervoud  | **-ās**   | puell-**ās**    |
-
-## In context
+## Voorbeelden uit Latijnse zinnen
 
 - *Agricola **puellam** videt.* — De boer ziet **het meisje**.
 - *Nauta **puellās** salutat.* — De zeeman groet **de meisjes**.
 - *Ancilla **rosam** portat.* — De dienares draagt **een roos**.
 
-De accusativus treedt ook op na veel voorzetsels — zie
-[Voorzetsels met accusativus](LAT-G-SYNT-PREP-ACC.md).
+In elk voorbeeld zie je: eerst iemand die iets doet (de **boer**, de
+**zeeman**, de **dienares**), dan wat of wie dat hij doet (**het meisje**,
+**de meisjes**, **een roos**). Dat tweede deel staat in de accusativus.
 
-## Herkenningstip
+## Hoe herken je 'm?
 
-- Een 1e-declinatiewoord op **-am** staat (buiten een enkele uitzondering
-  bij voorzetsels) in de accusativus enkelvoud.
-- Een 1e-declinatiewoord op **-ās** is accusativus meervoud — niet te
-  verwarren met genitivus enkelvoud op -ae of nominativus meervoud op -ae.
+- Een woord dat eindigt op **-am** is meestal enkelvoud accusativus.
+- Een woord dat eindigt op **-ās** is meestal meervoud accusativus.
 
-## Veelgemaakte fouten
+> Let op: zoek altijd eerst het werkwoord. De accusativus hoort bij het
+> werkwoord — hij vertelt jou *wie* of *wat* erbij hoort.
 
-- **-am** verwisselen met de bijvoeglijke uitgang *-am* van een adjectief:
-  let erop dat het adjectief congrueert met zijn zelfstandig naamwoord
-  (*puellam pulchram*, niet *puellam pulchrae*).
-- **-ās** lezen als genitivus of nominativus meervoud — beide hebben
-  in de 1e declinatie de uitgang -ae, niet -ās.
-- De accusativus-macron (ā) vergeten te hóren: in klassieke uitspraak is
-  de **-ā** van de ablativus lang en van de accusativus kort.  Schrijf je
-  zonder macrons, onthoud het verschil tussen puellam (acc.) en puellā
-  (abl.) in klank.
+## Waar gaat het vaak mis?
 
-## Verwant
+- **-ās** en **-ae** verwarren.  *-ae* is de genitivus enkelvoud *of* de
+  nominativus meervoud; *-ās* is de accusativus meervoud.  Leer ze goed
+  uit elkaar.
+- Vergeten dat het bijvoeglijk naamwoord meeverandert: je schrijft
+  *puellam pulchram* (het **mooie** meisje), niet *puellam pulchra*.
 
-- [Paradigma 1e declinatie](LAT-G-MORF-DECL1-PARAD.md) — volledige tabel
-- [Functie van de accusativus](LAT-G-SYNT-ACC-FUNCTIE.md) — alle
-  gebruiksgevallen
-- [Lijdend voorwerp](LAT-G-SYNT-OBJDIR.md) — syntactische rol
+## Begrippen uit deze uitleg
+
+- **accusativus** — de vierde naamval; meestal voor het lijdend voorwerp.
+- **lijdend voorwerp** — het zinsdeel dat antwoord geeft op de vraag
+  *wie?* of *wat?* bij het werkwoord.
+- **1e groep (1e declinatie)** — een groep Latijnse woorden die allemaal
+  op dezelfde manier verbuigen; ze eindigen in het woordenboek op
+  **-a, -ae** (bv. *puella, puellae*).
+- **enkelvoud / meervoud** — één versus meer dan één.
+
+## Verder lezen
+
+- [Volledig paradigma 1e declinatie](LAT-G-MORF-DECL1-PARAD.md) —
+  alle naamvallen op een rij
+- [Wat doet de accusativus allemaal?](LAT-G-SYNT-ACC-FUNCTIE.md)
+- [Lijdend voorwerp](LAT-G-SYNT-OBJDIR.md)
