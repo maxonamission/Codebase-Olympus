@@ -143,6 +143,7 @@ class _SessionState:
     finished: bool = False
     ended_at: datetime | None = None
     learning_route: LearningRoute = LearningRoute.GRAMMAR_FIRST
+    show_grammar_scaffolding: bool = True
     passages: list[Passage] = field(default_factory=list)
     current_passage: Passage | None = None
     passage_presented: bool = False
@@ -222,6 +223,43 @@ def _grade_and_record(
         now=now,
     )
     return response, item_response
+
+
+def _should_scaffold(
+    state: "_SessionState",
+    knoop: KennisKnoop,
+    phase: SessionPhase,
+) -> bool:
+    """Decide whether to attach markdown-scaffolding to the next question.
+
+    Rules (both routes):
+
+    * Only during :class:`SessionPhase.NEW_MATERIAL`.
+    * Only on the **first** introduction of the knoop for this learner —
+      i.e. the knoop has no :class:`ItemResponse` entries in
+      ``KnoopState.item_history`` yet.  This prevents scaffolding from
+      re-appearing on SM-2 reviews.
+
+    Path-specific gating:
+
+    * **context-first**: scaffolding appears on grammar nodes that follow
+      a passage reading step (existing behaviour, preserved).
+    * **grammar-first**: opt-in via ``User.show_grammar_scaffolding``.
+      The flag is threaded through on :meth:`SessionManager.start_session`
+      and stored on ``_SessionState.show_grammar_scaffolding``.
+    """
+    if phase != SessionPhase.NEW_MATERIAL:
+        return False
+
+    knoop_state = state.learner.knoop_states.get(knoop.id)
+    never_presented = knoop_state is None or len(knoop_state.item_history) == 0
+    if not never_presented:
+        return False
+
+    if state.learning_route == LearningRoute.CONTEXT_FIRST:
+        return state.passage_presented
+    # grammar-first
+    return state.show_grammar_scaffolding
 
 
 def _passage_to_question(passage: Passage, phase: SessionPhase) -> Question:
@@ -388,6 +426,7 @@ class SessionManager:
         now: datetime | None = None,
         learning_route: LearningRoute = LearningRoute.GRAMMAR_FIRST,
         passages: list[Passage] | None = None,
+        show_grammar_scaffolding: bool = True,
     ) -> tuple[str, Question | None]:
         """Start a new session. Returns (session_id, first_question).
 
@@ -396,6 +435,12 @@ class SessionManager:
         When *learning_route* is CONTEXT_FIRST and *passages* are provided,
         the new-material phase selects a passage instead of topological
         grammar nodes.
+
+        *show_grammar_scaffolding* is the grammar-first-only opt-in
+        (from ``User.show_grammar_scaffolding``): when True, the first
+        introduction of a G-knoop in grammar-first includes its markdown
+        scaffolding content.  Ignored on the context-first path, which
+        always shows scaffolding after a passage.
         """
         if now is None:
             now = datetime.now()
@@ -410,6 +455,7 @@ class SessionManager:
             graph=graph,
             started_at=now,
             learning_route=learning_route,
+            show_grammar_scaffolding=show_grammar_scaffolding,
             passages=passages,
         )
         self._sessions[session_id] = state
@@ -656,13 +702,7 @@ class SessionManager:
                 state.current_knoop = selected
                 state.current_before = _get_state_posterior(state.learner, selected.id)
 
-                # Include scaffolding content for context-first grammar
-                # nodes presented after a passage reading step.
-                scaffolding = (
-                    state.passage_presented
-                    and state.learning_route == LearningRoute.CONTEXT_FIRST
-                    and phase == SessionPhase.NEW_MATERIAL
-                )
+                scaffolding = _should_scaffold(state, selected, phase)
                 return _knoop_to_question(
                     selected, phase, include_scaffolding=scaffolding
                 )

@@ -81,6 +81,9 @@ async def start_session(
     learning_route = (
         user.learning_route if user is not None else LearningRoute.GRAMMAR_FIRST
     )
+    show_grammar_scaffolding = (
+        user.show_grammar_scaffolding if user is not None else True
+    )
 
     session_id, question = session_manager.start_session(
         user_id,
@@ -88,6 +91,7 @@ async def start_session(
         graph,
         learning_route=learning_route,
         passages=passages,
+        show_grammar_scaffolding=show_grammar_scaffolding,
     )
 
     # Persist learner model after session start

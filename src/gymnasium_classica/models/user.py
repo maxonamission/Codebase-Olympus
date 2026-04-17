@@ -56,4 +56,14 @@ class User(BaseModel):
     pronunciation_preference_lat: PronunciationLat = PronunciationLat.CLASSICAL
     pronunciation_preference_grc: PronunciationGrc = PronunciationGrc.ERASMIAN
     learning_route: LearningRoute = LearningRoute.GRAMMAR_FIRST
+    show_grammar_scaffolding: bool = Field(
+        default=True,
+        description=(
+            "Opt-in: grammar-first learners zien markdown-uitleg bij de "
+            "eerste introductie van een G-knoop.  Context-first leerlingen "
+            "krijgen altijd scaffolding na een passage — deze flag raakt "
+            "alleen grammar-first.  Bestaande users krijgen True bij de "
+            "eerste laad-actie dankzij de Pydantic-default."
+        ),
+    )
     created_at: datetime = Field(default_factory=datetime.now)
