@@ -8,68 +8,78 @@ auteur: handmatig
 
 ## Waar gaat het over?
 
-De **accusativus** (de vierde naamval) heb je al leren kennen als de
-naamval van het **lijdend voorwerp**. Maar de accusativus kan in het
-Latijn nog een paar andere dingen doen. Je ziet hem vooral daar waar
-iets of iemand in de richting van het werkwoord wijst: een doelwit,
-een bestemming, een stuk tijd dat iets duurt.
+De **accusativus** (de vierde naamval) is de naamval van het
+**lijdend voorwerp**. Maar dat is niet het enige: de accusativus
+kan ook de **richting** aangeven, een **tijdsduur** of
+**uitgestrektheid**, en hij verschijnt bijna altijd na bepaalde
+voorzetsels.
 
-## Typische gebruiksgevallen
+## Waar gebruik je 'm voor?
 
-1. **Lijdend voorwerp** — wie of wat ondergaat de handeling?
+### 1. Lijdend voorwerp
 
-   *Dominus **servum** vocat.* — De heer roept **de slaaf**.
+Dé naamval voor wat of wie de handeling ondergaat.
 
-2. **Richting naar een plaats** — bij stad- en eilandnamen of bij
-   *domum* (naar huis) staat de richting in de accusativus, zonder
-   voorzetsel.
+- *Dominus **servum** vocat.* — De heer roept **de slaaf**.
 
-   *Caesar **Romam** festinat.* — Caesar haast zich **naar Rome**.
+### 2. Richting naar een stad of eiland
 
-3. **Tijdsduur** — hoelang duurt iets?
+Bij namen van steden en kleine eilanden en bij *domum* (naar huis)
+staat de richting in de accusativus, zonder voorzetsel.
 
-   *Decem **annos** in Graecia mansit.* — Hij bleef **tien jaar**
-   in Griekenland.
+- *Caesar **Romam** contendit.* — Caesar haast zich **naar Rome**.
 
-4. **Uitgestrektheid** — hoe lang of hoe hoog is iets?
+### 3. Tijdsduur: hoe lang iets duurt
 
-   *Murus **decem pedes** altus est.* — De muur is **tien voet**
-   hoog.
+Zonder voorzetsel.
 
-5. **Uitroep** — een acc. zonder werkwoord, vaak met *o* of *heu*.
+- *Puer **tres horas** dormit.* — De jongen slaapt **drie uur lang**.
 
-   *O **fortunatos agricolas**!* — O **gelukkige boeren**!
+### 4. Uitgestrektheid: hoe lang, hoe hoog, hoe breed
 
-6. **Na bepaalde voorzetsels** — *ad, in* (richting), *per, propter,
-   trans, ante, post* vragen om een accusativus.
+- *Murus **decem pedes** altus est.* — De muur is **tien voet** hoog.
 
-   *Per **silvam** ambulat.* — Hij wandelt **door het bos**.
+### 5. Uitroep
+
+Een accusativus zonder werkwoord, vaak met *o* of *heu*.
+
+- *O **fortunatos agricolas**!* — O **gelukkige boeren**!
+
+### 6. Na veel voorzetsels
+
+*ad* (naar), *in* (naar, een beweging in), *per* (door), *ante*
+(voor), *post* (na), *contra* (tegen), *trans, propter*.
+
+- *Milites **ad urbem** veniunt.* — De soldaten komen **naar de
+  stad**.
 
 ## Hoe herken je 'm?
 
-- Zoek eerst het werkwoord; de accusativus hoort meestal bij dat
-  werkwoord als lijdend voorwerp.
-- Staat er een voorzetsel als *ad, in, per*? Dan volgt vaak een
-  accusativus.
-- Zie je een tijd- of plaatsaanduiding zonder voorzetsel? Denk aan
-  tijdsduur of richting.
+- Vraag bij het werkwoord: *wie?* of *wat?* — het antwoord staat
+  meestal in de accusativus.
+- Eindigt een woord op **-um** (2e groep, onzijdig), **-am** (1e
+  groep), **-ās** of **-ōs** (meervouden)? Grote kans op accusativus.
+- Staat er een voorzetsel vóór zoals *ad, per, in* (beweging)? Dan
+  volgt een accusativus.
 
-> Let op: *in* + accusativus betekent *naar binnen/naar toe*,
-> *in* + ablativus betekent *in, op* (plaats waar). Verwar ze niet.
+> Let op: *in* + accusativus = *naar binnen* (richting), *in* +
+> ablativus = *binnenin* (plaats). De naamval bepaalt de betekenis.
 
 ## Begrippen uit deze uitleg
 
-- **accusativus** — de vierde naamval; naamval van lijdend voorwerp,
-  richting, tijdsduur en uitroep.
-- **lijdend voorwerp** — het zinsdeel dat antwoord geeft op *wie?* of
-  *wat?* bij het werkwoord.
-- **tijdsduur** — de tijdspanne waarover iets plaatsvindt
-  (hoelang?).
-- **richting** — de plaats waarheen iemand of iets beweegt
-  (waarheen?).
+- **accusativus** — de vierde naamval.
+- **lijdend voorwerp** — antwoord op *wie?* of *wat?* bij het
+  werkwoord.
+- **richting** — waarheen iets of iemand gaat; bij steden zonder
+  voorzetsel.
+- **tijdsduur** — hoe lang een handeling duurt.
+- **uitgestrektheid** — hoe lang/hoog/breed iets is.
 
 ## Verder lezen
 
-- [De accusativus bij woorden van de 1e groep](LAT-G-MORF-ACC-D1.md)
-- [Lijdend voorwerp](LAT-G-SYNT-OBJDIR.md)
-- [Voorzetsels met accusativus](LAT-G-SYNT-PREP-INTRO.md)
+- [Accusativus 1e declinatie](LAT-G-MORF-ACC-D1.md) — vormen op een
+  rij
+- [Functie van de nominativus](LAT-G-SYNT-NOM-FUNCTIE.md) — onderwerp
+  versus lijdend voorwerp
+- [Voorzetsels inleiding](LAT-G-SYNT-PREP-INTRO.md) — welke naamval
+  na welk voorzetsel

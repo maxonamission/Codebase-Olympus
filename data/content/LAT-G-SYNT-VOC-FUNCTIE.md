@@ -8,66 +8,72 @@ auteur: handmatig
 
 ## Waar gaat het over?
 
-De **vocativus** (de aanspreekvorm) is de naamval die je gebruikt
-wanneer je iemand direct **aanspreekt**. Je roept of noemt iemand
-bij naam of met een aanspreektitel. In bijna alle gevallen ziet de
-vocativus er hetzelfde uit als de nominativus — er is één belangrijke
-uitzondering.
+De **vocativus** is de **aanspreekvorm**: je gebruikt hem als je
+iemand direct toespreekt. In het Nederlands doen we dat zonder
+aparte vorm ("Marcus, kom hier!"), maar het Latijn heeft bij een
+groep woorden écht een eigen uitgang. Meestal ziet de vocativus er
+hetzelfde uit als de nominativus — behalve bij woorden van de 2e
+groep op *-us* of *-ius*.
 
-## Typische gebruiksgevallen
+## Waar gebruik je 'm voor?
 
-1. **Aanspreken bij naam** — je roept of noemt iemand rechtstreeks.
+### 1. Iemand bij naam aanspreken
 
-   ***Marce***, *veni!* — **Marcus**, kom!
+- ***Marce**, veni huc!* — **Marcus**, kom hier!
 
-2. **Aanspreken met een functie of titel** — meester, vriend,
-   soldaat.
+### 2. Iemand bij functie of rol aanspreken
 
-   *Salve, **magister**!* — Gegroet, **meester**!
+Rollen (slaaf, leraar, vriend) krijgen ook een vocativus.
 
-3. **Aanspreken van een groep** — dan gebruik je de vocativus
-   meervoud, die altijd gelijk is aan de nominativus meervoud.
+- ***Serve**, aperī ianuam!* — **Slaaf**, open de deur!
 
-   *Audite, **amici**!* — Luister, **vrienden**!
+### 3. Een groep aanspreken
 
-4. **Bijzondere vorm bij 2e declinatie enkelvoud** — woorden op
-   *-us* krijgen in de vocativus enkelvoud een **-e**; woorden op
-   *-ius* eindigen op **-i**.
+De vocativus meervoud is altijd gelijk aan de nominativus meervoud.
 
-   *O **serve**, labora!* — O **slaaf**, werk!
+- ***Amicī**, audīte!* — **Vrienden**, luister!
 
-   ***Fili*** *mi, veni!* — **Mijn zoon**, kom!
+### 4. Bijzondere vorm bij 2e declinatie enkelvoud
 
-5. **In combinatie met bijwoorden zoals *o* of *heu*** — versterken
-   de aanspreking.
+Woorden op *-us* krijgen in de vocativus enkelvoud een **-e**;
+woorden op *-ius* eindigen op **-ī**.
 
-   *O **Romane**, memento!* — O **Romein**, denk eraan!
+- *O **serve**, labora!* — O **slaaf**, werk!
+- ***Fili*** *mi, veni!* — **Mijn zoon**, kom!
+
+### 5. Bij uitroepen, met *o*
+
+Vooral in poëzie en bij plechtige toon staat *o* ervoor.
+
+- *O **Romane**, memento!* — O **Romein**, denk eraan!
 
 ## Hoe herken je 'm?
 
-- Staat er een zelfstandig naamwoord **alleen**, zonder dat het
-  onderwerp of lijdend voorwerp is, en richt de spreker zich
-  duidelijk tot iemand? Dan is het een vocativus.
-- Vaak staat de vocativus tussen komma's of aan het begin van de
-  zin, soms met *o* ervoor.
-- Zie je een 2e-declinatie-woord op **-e** (*serve, Marce*)? Dat is
-  de vocativus enkelvoud.
+- De vocativus staat vaak **apart** in de zin, tussen komma's of
+  aan het begin. Hij is geen onderwerp en geen lijdend voorwerp.
+- 2e groep (*-us*) krijgt **-e**: *dominus → domine*, *servus →
+  serve*.
+- 2e groep (*-ius*) krijgt **-ī**: *filius → filī*, *Vergilius →
+  Vergilī*.
+- In alle andere groepen is de vocativus gelijk aan de nominativus.
 
-> Let op: alleen bij de 2e declinatie enkelvoud (woorden op *-us*
-> en *-ius*) verschilt de vocativus van de nominativus. In alle
-> andere gevallen zijn ze gelijk in vorm.
+> Let op: ook al ziet de vocativus er vaak hetzelfde uit als de
+> nominativus, de **functie** is totaal anders. De nominativus is
+> het onderwerp; de vocativus is de aanspreekvorm — hij spreekt
+> buiten de zinsbouw om.
 
 ## Begrippen uit deze uitleg
 
-- **vocativus** — de aanspreekvorm; naamval waarmee je iemand
-  direct aanspreekt.
-- **aanspreekvorm** — het zinsdeel waarmee je iemand aanroept of
-  rechtstreeks aanspreekt.
-- **2e declinatie** — groep woorden die in het woordenboek eindigen
-  op *-us, -i* of *-er, -i*.
+- **vocativus** — de aanspreekvorm.
+- **aanspreekvorm** — de vorm waarmee je iemand direct toespreekt.
+- **2e groep / 2e declinatie** — woorden op *-us, -ī* of *-er, -ī*
+  (bv. *dominus, servus, puer*).
 
 ## Verder lezen
 
-- [De vocativus bij woorden van de 1e groep](LAT-G-MORF-VOC-D1.md)
-- [Functie van de nominativus](LAT-G-SYNT-NOM-FUNCTIE.md)
-- [Overzicht declinatie 2](LAT-G-MORF-DECL2-PARAD.md)
+- [Functie van de nominativus](LAT-G-SYNT-NOM-FUNCTIE.md) — onderwerp
+  versus aanspreekvorm
+- [Woordvolgorde](LAT-G-SYNT-WRDVLG.md) — waar staat de vocativus
+  in de zin?
+- [Paradigma 2e declinatie](LAT-G-MORF-DECL2-PARAD.md) — vormen op
+  een rij

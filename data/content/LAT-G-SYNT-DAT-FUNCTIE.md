@@ -8,67 +8,81 @@ auteur: handmatig
 
 ## Waar gaat het over?
 
-De **dativus** (de derde naamval) is de naamval die aangeeft *aan wie*
-of *voor wie* iets gebeurt. Als er iemand profiteert van de
-handeling, of als iemand iets krijgt, dan staat die persoon in de
-dativus. Je vertaalt de dativus vrijwel altijd met *aan* of *voor*.
+De **dativus** (de derde naamval) is vooral de naamval van het
+**meewerkend voorwerp**: *de heer geeft een boek **aan het
+meisje***. Je vertaalt een dativus in het Nederlands meestal met
+*aan* of *voor*. Daarnaast heeft de dativus nog een paar typisch
+Latijnse taken: hij kan *belang* aangeven, *bezit* uitdrukken of
+*doel* benoemen.
 
-## Typische gebruiksgevallen
+## Waar gebruik je 'm voor?
 
-1. **Meewerkend voorwerp** — aan wie of voor wie doet het onderwerp
-   iets?
+### 1. Meewerkend voorwerp
 
-   *Magister **puero** librum dat.* — De leraar geeft het boek
-   **aan de jongen**.
+*Aan wie* of *voor wie* gebeurt er iets? Vooral bij werkwoorden van
+geven, zeggen, tonen: *dare, dicere, monstrare*.
 
-2. **Belang (dativus commodi)** — ten gunste van wie gebeurt iets?
+- *Dominus **puellae** librum dat.* — De heer geeft het boek **aan
+  het meisje**.
 
-   *Non **scholae**, sed **vitae** discimus.* — We leren niet
-   **voor de school**, maar **voor het leven**.
+### 2. Belang (dativus commodi)
 
-3. **Bezitter (dativus possessivus)** — bij het werkwoord *esse*
-   staat de bezitter in de dativus.
+*In wiens voordeel* (of nadeel) gebeurt iets?
 
-   *Liber **mihi** est.* — Ik heb een boek
-   (letterlijk: een boek is **aan mij**).
+- *Non scholae, sed **vitae** discimus.* — We leren niet **voor
+  school**, maar **voor het leven**.
 
-4. **Doel (dativus finalis)** — waartoe dient iets?
+### 3. Bezit (dativus possessivus)
 
-   *Hoc **auxilio** venit.* — Dit dient **tot hulp**.
+In combinatie met *esse* drukt de dativus bezit uit: "aan mij is X"
+= "ik heb X".
 
-5. **Bij bepaalde werkwoorden** — *parere, imperare, placere,
-   credere, nocere* en andere krijgen een dativus in plaats van een
-   accusativus.
+- ***Mihi** est liber.* — Ik heb een boek.
 
-   *Milites **duci** parent.* — De soldaten gehoorzamen **aan de
-   aanvoerder**.
+### 4. Doel (dativus finalis)
+
+*Waartoe* dient iets? Vaak korte staande uitdrukkingen.
+
+- *Hoc **auxilio** venit.* — Dit dient **tot hulp**.
+
+### 5. Bij bepaalde werkwoorden
+
+*parere* (gehoorzamen), *imperare* (bevelen), *placere* (bevallen),
+*credere* (geloven), *nocere* (schaden) vragen een dativus waar het
+Nederlands een lijdend voorwerp heeft.
+
+- *Milites **duci** parent.* — De soldaten gehoorzamen **de
+  aanvoerder**.
 
 ## Hoe herken je 'm?
 
-- Vraag: *aan wie?* of *voor wie?* Het antwoord staat in de
-  dativus.
-- Zie je het werkwoord *esse* in combinatie met een dativus? Denk
-  aan een dativus possessivus: iemand *heeft* iets.
-- De uitgangen **-ae** (1e decl. sg), **-o** (2e decl. sg) en **-is**
-  (1e en 2e decl. pl) vallen vaak samen met andere naamvallen.
-  Gebruik de zinsbouw om te kiezen.
+- Vraag bij het werkwoord: *aan wie?* of *voor wie?* — het antwoord
+  staat in de dativus.
+- Uitgangen: **-ae** (1e groep enk.), **-ō** (2e groep enk.), **-ī**
+  (3e groep enk.), **-īs** of **-ibus** (meervouden).
+- De dativus staat vaak náást het lijdend voorwerp. Zoek er twee:
+  een in de accusativus (*wat* wordt gegeven) en een in de dativus
+  (*aan wie*).
+- Zie je *esse* met een dativus? Denk aan een dativus possessivus.
 
-> Let op: *puellae* kan dativus enkelvoud, genitivus enkelvoud of
-> nominativus meervoud zijn. Kijk goed naar het werkwoord en de
-> context om te beslissen welke functie bedoeld is.
+> Let op: **-ae** kan ook genitivus enkelvoud of nominativus meervoud
+> zijn (1e groep). Kijk naar het werkwoord: "geven/zeggen/tonen"
+> wijst vaak naar de dativus.
 
 ## Begrippen uit deze uitleg
 
-- **dativus** — de derde naamval; naamval van het *aan/voor*-idee.
-- **meewerkend voorwerp** — het zinsdeel dat aangeeft aan wie of
-  voor wie de handeling gebeurt.
-- **dativus possessivus** — dativus van bezit; *aan X is Y* betekent
-  *X heeft Y*.
-- **dativus commodi** — dativus van belang; wie heeft er voordeel
-  bij.
+- **dativus** — de derde naamval; meestal vertaald met *aan* of
+  *voor*.
+- **meewerkend voorwerp** — aan/voor wie de handeling gebeurt.
+- **dativus commodi** — in wiens voordeel of nadeel iets gebeurt.
+- **dativus possessivus** — *mihi est X* = "ik heb X".
+- **dativus finalis** — waartoe iets dient.
 
 ## Verder lezen
 
-- [De dativus bij woorden van de 1e groep](LAT-G-MORF-DAT-D1.md)
-- [Het werkwoord esse](LAT-G-MORF-ESSE-PRAES.md)
-- [Functie van de accusativus](LAT-G-SYNT-ACC-FUNCTIE.md)
+- [Functie van de accusativus](LAT-G-SYNT-ACC-FUNCTIE.md) — lijdend
+  versus meewerkend voorwerp
+- [Functie van de genitivus](LAT-G-SYNT-GEN-FUNCTIE.md) — ander
+  soort bezit
+- [Volgorde in de zin](LAT-G-SYNT-WRDVLG.md) — waar staat de
+  dativus?

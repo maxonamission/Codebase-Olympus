@@ -8,67 +8,82 @@ auteur: handmatig
 
 ## Waar gaat het over?
 
-De **genitivus** (de tweede naamval) is de naamval van het **van-**.
-Hij koppelt twee zelfstandig naamwoorden aan elkaar: van wie is iets,
-waaruit bestaat iets, waarvan spreek je? Je vertaalt de genitivus
-daarom meestal met *van* of met een bezittelijke vorm.
+De **genitivus** (de tweede naamval) is vooral de naamval van
+**bezit**: *het boek **van het meisje***. Maar hij doet meer dan
+dat. Hij geeft ook aan waarvan iets een deel is, wat voor
+eigenschap iemand heeft, en hij kan binnen een zelfstandig
+naamwoord zélf onderwerp of lijdend voorwerp zijn. Je vertaalt een
+genitivus in het Nederlands meestal met *van* of met een bezittelijk
+voornaamwoord.
 
-## Typische gebruiksgevallen
+## Waar gebruik je 'm voor?
 
-1. **Bezit (genitivus possessivus)** — van wie is iets?
+### 1. Bezit (genitivus possessivus)
 
-   *Liber **puellae** est.* — Het boek is **van het meisje**.
+*Van wie* is iets? De genitivus antwoordt.
 
-2. **Deel van een geheel (genitivus partitivus)** — bij hoeveelheden
-   en superlatieven staat het geheel in de genitivus.
+- *Liber **puellae** est.* — Het boek is **van het meisje**.
 
-   *Multi **militum** vulnerati sunt.* — Velen **van de soldaten**
-   zijn gewond.
+### 2. Deel van een geheel (genitivus partitivus)
 
-3. **Eigenschap (genitivus qualitatis)** — vaak met een bijvoeglijk
-   naamwoord erbij.
+Na woorden als *pars* (deel), *multi* (veel), *nemo* (niemand) en
+bij superlatieven (*optimus, maximus*).
 
-   *Vir **magnae virtutis** est.* — Hij is een man **van grote
-   dapperheid**.
+- *Pars **militum** fugit.* — Een deel **van de soldaten** vlucht.
 
-4. **Lijdend voorwerp bij een zelfstandig naamwoord (genitivus
-   obiectivus)** — het woord waar de handeling op gericht is.
+### 3. Eigenschap (genitivus qualitatis)
 
-   *Amor **patriae** nos movet.* — De liefde **voor het vaderland**
-   beweegt ons.
+*Wat voor iemand/iets* is het? Meestal samen met een bijvoeglijk
+naamwoord.
 
-5. **Onderwerp bij een zelfstandig naamwoord (genitivus
-   subiectivus)** — diegene die de handeling uitvoert.
+- *Vir **magnae virtutis** est.* — Hij is een man **van grote
+  dapperheid**.
 
-   *Timor **hostium** magnus erat.* — De angst **van de vijanden**
-   was groot.
+### 4. Bij bepaalde bijvoeglijke naamwoorden
+
+*plenus* (vol), *cupidus* (begerig) en *memor* (gedenkend) vragen
+om een genitivus.
+
+- *Urbs plena **hostium** est.* — De stad is vol **vijanden**.
+
+### 5. Onderwerp of lijdend voorwerp bij een zelfstandig naamwoord
+
+Een genitivus bij een zelfstandig naamwoord kan de **subiectivus**
+zijn (wie de handeling uitvoert) of de **obiectivus** (waarop de
+handeling gericht is).
+
+- *Amor **patriae** nos movet.* — De liefde **voor het vaderland**
+  beweegt ons. (obiectivus)
+- *Timor **hostium** magnus erat.* — De angst **van de vijanden**
+  was groot. (kan beide zijn)
 
 ## Hoe herken je 'm?
 
-- Vraag: *van wie?* of *waarvan?* Het antwoord staat meestal in de
-  genitivus.
-- Bij woorden als *multi, pars, nemo* en superlatieven (bv.
-  *optimus*) hoort vaak een partitieve genitivus.
-- De genitivus staat dicht bij het zelfstandig naamwoord waar hij
-  bij hoort, meestal ervóór of erachter.
+- Vraag bij een zelfstandig naamwoord: *van wie?* of *waarvan?* —
+  het antwoord staat in de genitivus.
+- Uitgangen: **-ae** (1e groep enk.), **-ī** (2e groep enk.), **-is**
+  (3e groep enk.), **-ōrum / -ārum / -um** (meervouden).
+- De genitivus staat bijna altijd vlák bij het zelfstandig naamwoord
+  waar hij bij hoort — vertaal ze samen.
 
-> Let op: *amor patriae* is dubbelzinnig. Het kan betekenen *de
-> liefde voor het vaderland* (obiectivus) of *de liefde van het
-> vaderland* (subiectivus). De context bepaalt welke vertaling
-> klopt.
+> Let op: *amor patriae* is dubbelzinnig — *de liefde voor het
+> vaderland* (obiectivus) of *de liefde van het vaderland*
+> (subiectivus). De context beslist. En **-ae** kan ook nominativus
+> meervoud of dativus enkelvoud zijn.
 
 ## Begrippen uit deze uitleg
 
-- **genitivus** — de tweede naamval; geeft meestal een *van*-relatie
-  aan.
+- **genitivus** — de tweede naamval; meestal vertaald met *van*.
 - **possessivus** — van bezit; *van wie?*
-- **partitivus** — van een deel; het geheel staat in de genitivus.
+- **partitivus** — deel van een grotere groep; het geheel staat in
+  de genitivus.
 - **qualitatis** — van eigenschap; beschrijft *hoedanig*.
-- **obiectivus / subiectivus** — genitivus die als lijdend voorwerp
-  of als onderwerp bij een zelfstandig naamwoord hoort.
+- **obiectivus / subiectivus** — genitivus als lijdend voorwerp of
+  als onderwerp bij een zelfstandig naamwoord.
 
 ## Verder lezen
 
-- [De genitivus bij woorden van de 1e groep](LAT-G-MORF-GEN-D1.md)
-- [Overzicht declinatie 1](LAT-G-MORF-DECL1-PARAD.md)
-- [Functie van de nominativus](LAT-G-SYNT-NOM-FUNCTIE.md)
+- [Genitivus 1e declinatie](LAT-G-MORF-GEN-D1.md) — vormen op een rij
+- [Functie van de dativus](LAT-G-SYNT-DAT-FUNCTIE.md) — bezit via
+  *mihi est*
+- [Overeenkomst bijvoeglijk naamwoord](LAT-G-SYNT-OVEREENK.md)
