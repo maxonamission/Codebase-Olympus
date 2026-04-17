@@ -1,11 +1,12 @@
 """Validation functions for the knowledge graph."""
 
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Optional
 
 import networkx as nx
 
-from gymnasium_classica.models.graph import PrerequisiteEdge
+from gymnasium_classica.models.graph import KennisKnoop, PrerequisiteEdge
 from gymnasium_classica.schemas.id_schema import validate_knoop_id
 
 
@@ -132,7 +133,38 @@ def validate_node_ids(graph: nx.DiGraph) -> list[str]:
     return errors
 
 
-def validate_graph(graph: nx.DiGraph) -> ValidationReport:
+def validate_content_refs(graph: nx.DiGraph, repo_root: Path) -> list[str]:
+    """Check that every knoop's ``content_ref`` points at an existing file.
+
+    Relative paths are resolved against *repo_root*.  Absolute paths are
+    used as-is.  Knopen without a ``content_ref`` are ignored — the
+    loader falls back to ``data/content/{id}.md`` in that case, which is
+    checked separately by the content-coverage script.
+
+    Returns:
+        A list of error messages for dangling references. Empty if all
+        ``content_ref`` values resolve to existing files.
+    """
+    errors: list[str] = []
+    for node_id in graph.nodes:
+        knoop: KennisKnoop | None = graph.nodes[node_id].get("knoop")
+        if knoop is None or knoop.content_ref is None:
+            continue
+        ref_path = Path(knoop.content_ref)
+        resolved = ref_path if ref_path.is_absolute() else repo_root / ref_path
+        if not resolved.is_file():
+            errors.append(
+                f"Knoop {node_id}: content_ref {knoop.content_ref!r} "
+                f"verwijst naar niet-bestaand bestand ({resolved})."
+            )
+    return errors
+
+
+def validate_graph(
+    graph: nx.DiGraph,
+    *,
+    content_root: Optional[Path] = None,
+) -> ValidationReport:
     """Run all validation checks on a knowledge graph.
 
     Checks:
@@ -144,6 +176,14 @@ def validate_graph(graph: nx.DiGraph) -> ValidationReport:
       6. Edge weight validation
       7. Node ID format validation
       8. Nodes without items (warning)
+      9. content_ref existence (only when *content_root* is supplied)
+
+    Args:
+        graph: The NetworkX DiGraph to validate.
+        content_root: Optional repo-root Path against which relative
+            ``content_ref`` paths are resolved.  When None, the
+            content_ref check is skipped (useful for pure in-memory
+            unit tests).
     """
     report = ValidationReport()
     report.node_count = graph.number_of_nodes()
@@ -202,5 +242,12 @@ def validate_graph(graph: nx.DiGraph) -> ValidationReport:
         knoop = graph.nodes[node_id].get("knoop")
         if knoop and not knoop.items:
             report.warnings.append(f"Node {node_id} has no items")
+
+    # 9. content_ref existence (opt-in)
+    if content_root is not None:
+        content_errors = validate_content_refs(graph, content_root)
+        if content_errors:
+            report.is_valid = False
+            report.errors.extend(content_errors)
 
     return report

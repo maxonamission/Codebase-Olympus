@@ -1,5 +1,7 @@
 """Tests for graph validation: cycles, orphans, connectivity, topological sort."""
 
+import copy
+
 import pytest
 
 from gymnasium_classica.graph.loader import load_graph_from_dict
@@ -11,6 +13,7 @@ from gymnasium_classica.graph.validation import (
     find_orphan_nodes,
     find_root_nodes,
     topological_sort,
+    validate_content_refs,
     validate_graph,
 )
 
@@ -225,3 +228,56 @@ class TestPrerequisiteEnrichmentSubgraph:
         original_edges = g.number_of_edges()
         _prerequisite_enrichment_subgraph(g)
         assert g.number_of_edges() == original_edges
+
+
+class TestValidateContentRefs:
+    """Controleert dat dangling content_ref-paden als fout worden gemeld."""
+
+    def test_missing_content_file_is_reported(self, sample_graph_data, tmp_path):
+        data = copy.deepcopy(sample_graph_data)
+        data["knopen"][0]["content_ref"] = "data/content/DOES-NOT-EXIST.md"
+        g = load_graph_from_dict(data)
+
+        errors = validate_content_refs(g, tmp_path)
+        assert len(errors) == 1
+        assert "DOES-NOT-EXIST.md" in errors[0]
+        assert data["knopen"][0]["id"] in errors[0]
+
+    def test_existing_content_file_is_accepted(self, sample_graph_data, tmp_path):
+        (tmp_path / "data" / "content").mkdir(parents=True)
+        (tmp_path / "data" / "content" / "foo.md").write_text("# hi\n", encoding="utf-8")
+
+        data = copy.deepcopy(sample_graph_data)
+        data["knopen"][0]["content_ref"] = "data/content/foo.md"
+        g = load_graph_from_dict(data)
+
+        errors = validate_content_refs(g, tmp_path)
+        assert errors == []
+
+    def test_no_content_ref_is_ignored(self, sample_graph_data, tmp_path):
+        """Knopen zonder content_ref worden overgeslagen (ID-fallback)."""
+        g = load_graph_from_dict(sample_graph_data)
+        assert validate_content_refs(g, tmp_path) == []
+
+    def test_validate_graph_bubbles_up_content_errors(
+        self, sample_graph_data, tmp_path
+    ):
+        """`validate_graph` markeert ontbrekende content als fout."""
+        data = copy.deepcopy(sample_graph_data)
+        data["knopen"][0]["content_ref"] = "data/content/DOES-NOT-EXIST.md"
+        g = load_graph_from_dict(data)
+
+        report = validate_graph(g, content_root=tmp_path)
+        assert report.is_valid is False
+        assert any("DOES-NOT-EXIST.md" in err for err in report.errors)
+
+    def test_validate_graph_without_content_root_skips_check(
+        self, sample_graph_data, tmp_path
+    ):
+        """Zonder content_root blijft content_ref ongecontroleerd."""
+        data = copy.deepcopy(sample_graph_data)
+        data["knopen"][0]["content_ref"] = "data/content/DOES-NOT-EXIST.md"
+        g = load_graph_from_dict(data)
+
+        report = validate_graph(g)
+        assert report.is_valid is True

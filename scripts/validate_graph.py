@@ -15,7 +15,8 @@ def main() -> None:
 
     path = Path(sys.argv[1])
     graph = load_graph(path)
-    report = validate_graph(graph)
+    repo_root = Path(__file__).resolve().parent.parent
+    report = validate_graph(graph, content_root=repo_root)
 
     print(f"=== Validation Report: {path.name} ===")
     print(f"Nodes:      {report.node_count}")
