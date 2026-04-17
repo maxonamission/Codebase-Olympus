@@ -458,6 +458,27 @@ Bestaand materiaal (markdowns, audio, MC-opties, vocab-metadata) daadwerkelijk n
 - F1 is pilot-kritisch: zonder F1-01, F1-03 en F1-04 blijft veel van het gegenereerde materiaal onzichtbaar voor de leerling en is een **E1**-pilot minder waardevol.
 
 ---
+
+## Epic F2: Mentor-dashboard
+
+**Doel:** Mentoren/docenten concreet kunnen coachen op basis van wat leerlingen letterlijk typen/kiezen. Bouwt voort op de telemetry die F1-12 neerlegt (`ItemResponse.answer_text` + `correct_answer` snapshot in `KnoopState.item_history`) en brengt fout-classificatie (track C) binnen reach.
+**Geschat:** 4 stories (uitbreidbaar)
+**Afhankelijkheden:** F1-12 (data), nieuwe mentor-rol op user-model
+**Status:** draft — skeletten in `stories/epic-f2-mentor-dashboard/todo/`
+
+| Story | Titel | Status |
+|-------|-------|--------|
+| F2-01 | Mentor-rol + leerling-koppeling in user-model | draft |
+| F2-02 | Laatste foute antwoorden per leerling per knoop | draft |
+| F2-03 | Struikelpunten-overzicht per leerling | draft |
+| F2-04 | Fout-classificatie (spelling / naamval / synoniem / macron) — track C kern | draft |
+
+**Verhouding tot andere epics:**
+- **B8** (mentor-portfolio) richt zich op offline werk + OCR; F2 op online oefen-telemetrie. Toekomstige mentor-UI mag beide verzamelen.
+- **F2-04** is de reguliere instap voor track C en breidt `scheduling/grading.py` uit zonder bestaande callers te raken.
+- Blokkeert niet, maar activeert waarde die F1-12 sinds april 2026 al verzamelt.
+
+---
 ---
 
 ## Roadmap — toekomstige epics
