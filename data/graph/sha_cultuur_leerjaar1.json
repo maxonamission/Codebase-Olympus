@@ -10,7 +10,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-INTRO-001",
+          "knoop_ids": [
+            "SHA-C-MYT-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat bedoelt men met 'klassieke mythologie'?",
+            "options": [
+              "Wetenschappelijk onderzoek naar de natuur",
+              "De verzameling Grieks-Romeinse verhalen over goden en helden",
+              "Een systeem van wetten uit Rome",
+              "Een stroming in de Griekse filosofie"
+            ]
+          },
+          "antwoord": "De verzameling Grieks-Romeinse verhalen over goden en helden",
+          "feedback": "Mythologie is het geheel van overgeleverde Grieks-Romeinse verhalen over goden, helden en de oorsprong van de wereld.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-SCHEP",
@@ -22,7 +46,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-SCHEP-001",
+          "knoop_ids": [
+            "SHA-C-MYT-SCHEP"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke godengeneratie ging volgens de scheppingsmythe vooraf aan de Olympische goden?",
+            "options": [
+              "De Titanen",
+              "De Giganten",
+              "De halfgoden",
+              "De Muzen"
+            ]
+          },
+          "antwoord": "De Titanen",
+          "feedback": "De Titanen heersten vóór de Olympiërs; na de Titanomachie namen Zeus en zijn broers en zussen de macht over.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-OLYMP",
@@ -34,7 +82,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-OLYMP-001",
+          "knoop_ids": [
+            "SHA-C-MYT-OLYMP"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Hoeveel Olympische hoofdgoden telt men traditioneel?",
+            "options": [
+              "Zes",
+              "Negen",
+              "Twaalf",
+              "Zestien"
+            ]
+          },
+          "antwoord": "Twaalf",
+          "feedback": "Het klassieke pantheon op de Olympus bestaat uit twaalf hoofdgoden.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-ZEUS",
@@ -46,7 +118,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-ZEUS-001",
+          "knoop_ids": [
+            "SHA-C-MYT-ZEUS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is de Latijnse naam van Zeus?",
+            "options": [
+              "Mars",
+              "Jupiter",
+              "Neptunus",
+              "Mercurius"
+            ]
+          },
+          "antwoord": "Jupiter",
+          "feedback": "Zeus heet in het Latijn Jupiter: oppergod, heerser van de hemel en de bliksem.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-HERA",
@@ -58,7 +154,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-HERA-001",
+          "knoop_ids": [
+            "SHA-C-MYT-HERA"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Waarvan is Hera / Juno godin?",
+            "options": [
+              "Jacht en maan",
+              "Huwelijk en gezin",
+              "Liefde en schoonheid",
+              "Wijsheid"
+            ]
+          },
+          "antwoord": "Huwelijk en gezin",
+          "feedback": "Hera / Juno is de godin van het huwelijk en het gezin, bekend om haar jaloezie op Zeus' minnaressen.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-POSEID",
@@ -70,7 +190,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-POSEID-001",
+          "knoop_ids": [
+            "SHA-C-MYT-POSEID"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Over welk domein heerst Poseidon / Neptunus?",
+            "options": [
+              "De onderwereld",
+              "De zee",
+              "De hemel",
+              "De oogst"
+            ]
+          },
+          "antwoord": "De zee",
+          "feedback": "Poseidon / Neptunus is de god van de zee, aardbevingen en paarden.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-ATHENA",
@@ -82,7 +226,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-ATHENA-001",
+          "knoop_ids": [
+            "SHA-C-MYT-ATHENA"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Waarvan is Athena / Minerva vooral godin?",
+            "options": [
+              "Jacht en maan",
+              "Liefde en schoonheid",
+              "Wijsheid, strategie en handwerk",
+              "Vuur en smeedkunst"
+            ]
+          },
+          "antwoord": "Wijsheid, strategie en handwerk",
+          "feedback": "Athena / Minerva is de godin van wijsheid, strategisch oorlogvoeren en handwerk; zij beschermt Athene.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-APOLLO",
@@ -94,7 +262,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-APOLLO-001",
+          "knoop_ids": [
+            "SHA-C-MYT-APOLLO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Met welk orakel is Apollo vooral verbonden?",
+            "options": [
+              "Dodona",
+              "Olympia",
+              "Delphi",
+              "Eleusis"
+            ]
+          },
+          "antwoord": "Delphi",
+          "feedback": "Apollo sprak via de Pythia in zijn orakel te Delphi.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-ARTEM",
@@ -106,7 +298,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-ARTEM-001",
+          "knoop_ids": [
+            "SHA-C-MYT-ARTEM"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is de familierelatie tussen Artemis en Apollo?",
+            "options": [
+              "Moeder en zoon",
+              "Echtgenoten",
+              "Tweelingzus en -broer",
+              "Nicht en neef"
+            ]
+          },
+          "antwoord": "Tweelingzus en -broer",
+          "feedback": "Artemis en Apollo zijn een tweeling, kinderen van Zeus en Leto.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-APHROD",
@@ -118,7 +334,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-APHROD-001",
+          "knoop_ids": [
+            "SHA-C-MYT-APHROD"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke rol speelt Aphrodite / Venus in het Parisoordeel?",
+            "options": [
+              "Zij veroordeelt Paris",
+              "Zij belooft Paris de mooiste vrouw, Helena",
+              "Zij geeft Paris macht over Azië",
+              "Zij is afwezig"
+            ]
+          },
+          "antwoord": "Zij belooft Paris de mooiste vrouw, Helena",
+          "feedback": "Aphrodite wint het Parisoordeel door Paris de mooiste vrouw ter wereld (Helena) te beloven — de aanleiding voor de Trojaanse Oorlog.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-HERMES",
@@ -130,7 +370,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-HERMES-001",
+          "knoop_ids": [
+            "SHA-C-MYT-HERMES"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke hoofdfunctie heeft Hermes / Mercurius?",
+            "options": [
+              "Oorlogsgod",
+              "Boodschapper van de goden en beschermer van reizigers",
+              "Heerser van de onderwereld",
+              "God van de oogst"
+            ]
+          },
+          "antwoord": "Boodschapper van de goden en beschermer van reizigers",
+          "feedback": "Hermes / Mercurius is de boodschapper van de goden en beschermt reizigers en handelaren.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-ARES",
@@ -142,7 +406,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-ARES-001",
+          "knoop_ids": [
+            "SHA-C-MYT-ARES"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is de Latijnse naam van Ares?",
+            "options": [
+              "Mars",
+              "Vulcanus",
+              "Mercurius",
+              "Jupiter"
+            ]
+          },
+          "antwoord": "Mars",
+          "feedback": "Ares heet in het Latijn Mars. Bij de Romeinen was hij populairder dan Ares bij de Grieken — Mars geldt als stamvader van Romulus en Remus.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-HEPHAI",
@@ -154,7 +442,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-HEPHAI-001",
+          "knoop_ids": [
+            "SHA-C-MYT-HEPHAI"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Waarvan is Hephaistos / Vulcanus god?",
+            "options": [
+              "Medicijnen",
+              "Vuur en smeedkunst",
+              "Wijn",
+              "Scheepvaart"
+            ]
+          },
+          "antwoord": "Vuur en smeedkunst",
+          "feedback": "Hephaistos / Vulcanus is de god van het vuur en de smeedkunst; hij smeedt de wapens van de goden.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-DEMETR",
@@ -166,7 +478,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-DEMETR-001",
+          "knoop_ids": [
+            "SHA-C-MYT-DEMETR"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke mythe verklaart volgens de Grieken het verloop van de seizoenen?",
+            "options": [
+              "Herakles en de Nemeïsche leeuw",
+              "Demeter en de roof van Persephone",
+              "Apollo en Daphne",
+              "Orpheus en Eurydice"
+            ]
+          },
+          "antwoord": "Demeter en de roof van Persephone",
+          "feedback": "Demeters rouw om haar dochter Persephone (geroofd door Hades) verklaart de winter; haar terugkeer brengt de lente.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-HADES",
@@ -178,7 +514,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-HADES-001",
+          "knoop_ids": [
+            "SHA-C-MYT-HADES"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Over welk domein heerst Hades / Pluto?",
+            "options": [
+              "De hemel",
+              "De zee",
+              "De onderwereld",
+              "De bergen"
+            ]
+          },
+          "antwoord": "De onderwereld",
+          "feedback": "Hades / Pluto is heerser van de onderwereld. Als broer van Zeus hoort hij niet bij de twaalf Olympiërs.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-HELD",
@@ -190,7 +550,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-HELD-001",
+          "knoop_ids": [
+            "SHA-C-MYT-HELD"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is kenmerkend voor een Griekse held?",
+            "options": [
+              "Hij is volledig sterfelijk en gewoon",
+              "Hij is halfgod of sterveling met goddelijke hulp",
+              "Hij is priester",
+              "Hij is altijd koning"
+            ]
+          },
+          "antwoord": "Hij is halfgod of sterveling met goddelijke hulp",
+          "feedback": "Griekse helden zijn vaak halfgoden of stervelingen die met goddelijke bijstand buitengewone daden verrichten.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-HERAKL",
@@ -202,7 +586,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-HERAKL-001",
+          "knoop_ids": [
+            "SHA-C-MYT-HERAKL"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Waarvoor is Herakles / Hercules vooral beroemd?",
+            "options": [
+              "De twaalf werken",
+              "Het stichten van Rome",
+              "Het bedwingen van Troje",
+              "Het doden van de Minotaurus"
+            ]
+          },
+          "antwoord": "De twaalf werken",
+          "feedback": "Herakles / Hercules voerde de twaalf werken uit als boetedoening, opgelegd door Eurystheus.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-THESEU",
@@ -214,7 +622,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-THESEU-001",
+          "knoop_ids": [
+            "SHA-C-MYT-THESEU"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welk monster doodde Theseus in het labyrint?",
+            "options": [
+              "De Cycloop",
+              "De Minotaurus",
+              "Medusa",
+              "De Hydra"
+            ]
+          },
+          "antwoord": "De Minotaurus",
+          "feedback": "Theseus doodde de Minotaurus in het labyrint van Kreta, met de hulp van Ariadnes draad.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-TROJE",
@@ -226,7 +658,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-TROJE-001",
+          "knoop_ids": [
+            "SHA-C-MYT-TROJE"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat was volgens de mythe de directe aanleiding voor de Trojaanse Oorlog?",
+            "options": [
+              "Een hongersnood in Griekenland",
+              "De ontvoering van Helena door Paris",
+              "Een Perzische invasie",
+              "Een aardbeving op Troje"
+            ]
+          },
+          "antwoord": "De ontvoering van Helena door Paris",
+          "feedback": "Paris ontvoerde Helena, de vrouw van Menelaos, uit Sparta. Dat bracht de Griekse vorsten ertoe tegen Troje ten strijde te trekken.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-ODYSS",
@@ -238,7 +694,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-ODYSS-001",
+          "knoop_ids": [
+            "SHA-C-MYT-ODYSS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Hoeveel jaar duurde Odysseus' thuisreis naar Ithaka volgens de Odyssee?",
+            "options": [
+              "Drie jaar",
+              "Zeven jaar",
+              "Tien jaar",
+              "Twintig jaar"
+            ]
+          },
+          "antwoord": "Tien jaar",
+          "feedback": "De Odyssee beschrijft Odysseus' tienjarige thuisreis na de val van Troje.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-INTRO",
@@ -782,96 +1262,521 @@
     }
   ],
   "edges": [
-    {"source_id": "SHA-C-MYT-INTRO", "target_id": "SHA-C-MYT-SCHEP", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-MYT-SCHEP", "target_id": "SHA-C-MYT-OLYMP", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-ZEUS", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-HERA", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-POSEID", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-ATHENA", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-APOLLO", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-ARTEM", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-APHROD", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-HERMES", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-ARES", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-HEPHAI", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-DEMETR", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-HADES", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-INTRO", "target_id": "SHA-C-MYT-HELD", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-MYT-HELD", "target_id": "SHA-C-MYT-HERAKL", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-HELD", "target_id": "SHA-C-MYT-THESEU", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-INTRO", "target_id": "SHA-C-MYT-TROJE", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-MYT-TROJE", "target_id": "SHA-C-MYT-ODYSS", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-HELD", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-TROJE", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-MYT-HELD", "target_id": "SHA-C-MYT-TROJE", "type": "enrichment", "encompassing_weight": 0.2},
-
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-FAMIL", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-POL-FAMIL", "target_id": "SHA-C-POL-PATER", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-POL-FAMIL", "target_id": "SHA-C-POL-MATER", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-POL-FAMIL", "target_id": "SHA-C-POL-LIBERI", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-POL-FAMIL", "target_id": "SHA-C-POL-SERVUS", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-DOMUS", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-DOMUS", "target_id": "SHA-C-POL-INSULA", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-LUDUS", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-CENA", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-KLEED", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-THERM", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-LARES", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-PATRON", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-OTIUM", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-FAMIL", "target_id": "SHA-C-POL-DOMUS", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-DOMUS", "target_id": "SHA-C-POL-CENA", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-DOMUS", "target_id": "SHA-C-POL-LARES", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-SERVUS", "target_id": "SHA-C-POL-PATRON", "type": "enrichment", "encompassing_weight": 0.2},
-
-    {"source_id": "SHA-C-GES-INTRO", "target_id": "SHA-C-GES-STICHT", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-GES-STICHT", "target_id": "SHA-C-GES-KONIG", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-GES-KONIG", "target_id": "SHA-C-GES-REPUB", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-GES-SENAAT", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-GES-CONSUL", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-GES-COMITI", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-GES-PATRIC", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-GES-LEGIO", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-CONSUL", "target_id": "SHA-C-GES-MAGIST", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-CONSUL", "target_id": "SHA-C-GES-CURSUS", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-LEGIO", "target_id": "SHA-C-GES-CENTUR", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-GES-INTRO", "target_id": "SHA-C-GES-FORUM", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-INTRO", "target_id": "SHA-C-GES-VIA", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-GES-PROVNC", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-SENAAT", "target_id": "SHA-C-GES-CURSUS", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-GES-MAGIST", "target_id": "SHA-C-GES-CURSUS", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-GES-LEGIO", "target_id": "SHA-C-GES-PROVNC", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-GES-FORUM", "type": "enrichment", "encompassing_weight": 0.2},
-
-    {"source_id": "SHA-C-POL-GRIEK", "target_id": "SHA-C-POL-POLIS", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-POL-POLIS", "target_id": "SHA-C-POL-AGORA", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-POLIS", "target_id": "SHA-C-POL-ACROP", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-POLIS", "target_id": "SHA-C-POL-DEMOC", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-GRIEK", "target_id": "SHA-C-POL-GYMNA", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-GRIEK", "target_id": "SHA-C-POL-SYMPO", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-GRIEK", "target_id": "SHA-C-POL-THEAT", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-GRIEK", "target_id": "SHA-C-POL-OLYMP", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-GRIEK", "target_id": "SHA-C-POL-OIKOS", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-POLIS", "target_id": "SHA-C-POL-GYMNA", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-POLIS", "target_id": "SHA-C-POL-THEAT", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-AGORA", "target_id": "SHA-C-POL-DEMOC", "type": "enrichment", "encompassing_weight": 0.2},
-
-    {"source_id": "SHA-C-LIT-INTRO", "target_id": "SHA-C-LIT-GRALF", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-LIT-INTRO", "target_id": "SHA-C-LIT-LTALF", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-LIT-GRALF", "target_id": "SHA-C-LIT-LTALF", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-LIT-INTRO", "target_id": "SHA-C-LIT-INSCR", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-LIT-INTRO", "target_id": "SHA-C-LIT-SCHRF", "type": "prerequisite", "encompassing_weight": 0.3},
-
-    {"source_id": "SHA-C-MYT-ARES", "target_id": "SHA-C-GES-STICHT", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-POL-LARES", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-MYT-ATHENA", "target_id": "SHA-C-POL-ACROP", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-MYT-ZEUS", "target_id": "SHA-C-POL-OLYMP", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-POL-PATRON", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-POL-DEMOC", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-GES-FORUM", "target_id": "SHA-C-POL-AGORA", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-LUDUS", "target_id": "SHA-C-POL-GYMNA", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-LIT-GRALF", "target_id": "GRC-G-FONL-ALFA-INTRO", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-LUDUS", "target_id": "LAT-G-MORF-DECL-INTRO", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-GYMNA", "target_id": "GRC-G-FONL-KOMBI-LEESV", "type": "enrichment", "encompassing_weight": 0.2}
+    {
+      "source_id": "SHA-C-MYT-INTRO",
+      "target_id": "SHA-C-MYT-SCHEP",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-MYT-SCHEP",
+      "target_id": "SHA-C-MYT-OLYMP",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-ZEUS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-HERA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-POSEID",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-ATHENA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-APOLLO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-ARTEM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-APHROD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-HERMES",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-ARES",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-HEPHAI",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-DEMETR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-HADES",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-INTRO",
+      "target_id": "SHA-C-MYT-HELD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-MYT-HELD",
+      "target_id": "SHA-C-MYT-HERAKL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-HELD",
+      "target_id": "SHA-C-MYT-THESEU",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-INTRO",
+      "target_id": "SHA-C-MYT-TROJE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-MYT-TROJE",
+      "target_id": "SHA-C-MYT-ODYSS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-HELD",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-TROJE",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-MYT-HELD",
+      "target_id": "SHA-C-MYT-TROJE",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-FAMIL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-POL-FAMIL",
+      "target_id": "SHA-C-POL-PATER",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-POL-FAMIL",
+      "target_id": "SHA-C-POL-MATER",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-POL-FAMIL",
+      "target_id": "SHA-C-POL-LIBERI",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-POL-FAMIL",
+      "target_id": "SHA-C-POL-SERVUS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-DOMUS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-DOMUS",
+      "target_id": "SHA-C-POL-INSULA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-LUDUS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-CENA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-KLEED",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-THERM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-LARES",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-PATRON",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-OTIUM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-FAMIL",
+      "target_id": "SHA-C-POL-DOMUS",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-DOMUS",
+      "target_id": "SHA-C-POL-CENA",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-DOMUS",
+      "target_id": "SHA-C-POL-LARES",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-SERVUS",
+      "target_id": "SHA-C-POL-PATRON",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-INTRO",
+      "target_id": "SHA-C-GES-STICHT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-GES-STICHT",
+      "target_id": "SHA-C-GES-KONIG",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-GES-KONIG",
+      "target_id": "SHA-C-GES-REPUB",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-GES-SENAAT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-GES-CONSUL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-GES-COMITI",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-GES-PATRIC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-GES-LEGIO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-CONSUL",
+      "target_id": "SHA-C-GES-MAGIST",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-CONSUL",
+      "target_id": "SHA-C-GES-CURSUS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-LEGIO",
+      "target_id": "SHA-C-GES-CENTUR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-GES-INTRO",
+      "target_id": "SHA-C-GES-FORUM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-INTRO",
+      "target_id": "SHA-C-GES-VIA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-GES-PROVNC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-SENAAT",
+      "target_id": "SHA-C-GES-CURSUS",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-MAGIST",
+      "target_id": "SHA-C-GES-CURSUS",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-LEGIO",
+      "target_id": "SHA-C-GES-PROVNC",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-GES-FORUM",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-GRIEK",
+      "target_id": "SHA-C-POL-POLIS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-POL-POLIS",
+      "target_id": "SHA-C-POL-AGORA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-POLIS",
+      "target_id": "SHA-C-POL-ACROP",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-POLIS",
+      "target_id": "SHA-C-POL-DEMOC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-GRIEK",
+      "target_id": "SHA-C-POL-GYMNA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-GRIEK",
+      "target_id": "SHA-C-POL-SYMPO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-GRIEK",
+      "target_id": "SHA-C-POL-THEAT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-GRIEK",
+      "target_id": "SHA-C-POL-OLYMP",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-GRIEK",
+      "target_id": "SHA-C-POL-OIKOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-POLIS",
+      "target_id": "SHA-C-POL-GYMNA",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-POLIS",
+      "target_id": "SHA-C-POL-THEAT",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-AGORA",
+      "target_id": "SHA-C-POL-DEMOC",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-LIT-INTRO",
+      "target_id": "SHA-C-LIT-GRALF",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-LIT-INTRO",
+      "target_id": "SHA-C-LIT-LTALF",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-LIT-GRALF",
+      "target_id": "SHA-C-LIT-LTALF",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-LIT-INTRO",
+      "target_id": "SHA-C-LIT-INSCR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-LIT-INTRO",
+      "target_id": "SHA-C-LIT-SCHRF",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-MYT-ARES",
+      "target_id": "SHA-C-GES-STICHT",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-POL-LARES",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-MYT-ATHENA",
+      "target_id": "SHA-C-POL-ACROP",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-MYT-ZEUS",
+      "target_id": "SHA-C-POL-OLYMP",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-POL-PATRON",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-POL-DEMOC",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-FORUM",
+      "target_id": "SHA-C-POL-AGORA",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-LUDUS",
+      "target_id": "SHA-C-POL-GYMNA",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-LIT-GRALF",
+      "target_id": "GRC-G-FONL-ALFA-INTRO",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-LUDUS",
+      "target_id": "LAT-G-MORF-DECL-INTRO",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-GYMNA",
+      "target_id": "GRC-G-FONL-KOMBI-LEESV",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    }
   ]
 }
