@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { getProgressOverview, getUserProfile, updateSettings } from '../api'
+import { getClusterProgress, getProgressOverview, getUserProfile, updateSettings } from '../api'
 
 const ROUTE_LABELS = {
   context_first: 'Beginnen met lezen',
@@ -29,9 +29,22 @@ function DomainBar({ domain, mastered, total }) {
   )
 }
 
+function ClusterBar({ label, beschrijving, mastered, total, masteredPct }) {
+  return (
+    <div className="domain-row cluster-row" title={beschrijving}>
+      <span className="domain-label cluster-label">{label}</span>
+      <div className="domain-track">
+        <div className="domain-fill" style={{ width: `${masteredPct}%` }} />
+      </div>
+      <span className="domain-count">{mastered}/{total}</span>
+    </div>
+  )
+}
+
 export default function Dashboard() {
   const navigate = useNavigate()
   const [overview, setOverview] = useState(null)
+  const [clusters, setClusters] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [learningRoute, setLearningRoute] = useState(null)
@@ -40,12 +53,14 @@ export default function Dashboard() {
   useEffect(() => {
     async function load() {
       try {
-        const [data, profile] = await Promise.all([
+        const [data, profile, clusterData] = await Promise.all([
           getProgressOverview(),
           getUserProfile(),
+          getClusterProgress().catch(() => ({ clusters: [] })),
         ])
         setOverview(data)
         setLearningRoute(profile.learning_route)
+        setClusters(clusterData.clusters || [])
       } catch (err) {
         setError(err.message)
       } finally {
@@ -130,6 +145,24 @@ export default function Dashboard() {
           <p className="text-muted">Nog geen voortgang. Start je eerste sessie!</p>
         )}
       </div>
+
+      {clusters.some(c => c.total > 0) && (
+        <div className="card dashboard-clusters">
+          <h2>Vocabulaire per thema</h2>
+          {clusters
+            .filter(c => c.total > 0)
+            .map(c => (
+              <ClusterBar
+                key={c.label}
+                label={c.label}
+                beschrijving={c.beschrijving}
+                mastered={c.mastered}
+                total={c.total}
+                masteredPct={c.mastered_pct}
+              />
+            ))}
+        </div>
+      )}
 
       {learningRoute && (
         <div className="card dashboard-settings">

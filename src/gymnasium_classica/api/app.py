@@ -3,6 +3,7 @@
 Start with: uvicorn gymnasium_classica.api.app:app --reload
 """
 
+import json
 import sqlite3
 from contextlib import asynccontextmanager
 from pathlib import Path
@@ -25,6 +26,7 @@ from gymnasium_classica.passages.loader import load_passages
 GRAPH_DIR = Path("data/graph")
 PASSAGES_DIR = Path("data/passages")
 AUDIO_DIR = Path("data/audio")
+CLUSTERS_FILE = Path("data/vocabulaire_clusters.json")
 
 _AUDIO_MEDIA_TYPES = {
     ".wav": "audio/wav",
@@ -32,11 +34,24 @@ _AUDIO_MEDIA_TYPES = {
 }
 
 
+def _load_clusters(path: Path) -> list[dict]:
+    """Load semantic vocabulary cluster definitions from JSON.
+
+    Returns an empty list when the file is missing so tests and dev
+    environments without the data file still start cleanly.
+    """
+    if not path.is_file():
+        return []
+    raw = json.loads(path.read_text("utf-8"))
+    return list(raw.get("clusters", []))
+
+
 def create_app(
     graph_dir: Path = GRAPH_DIR,
     db_path: Optional[Path] = None,
     passages_dir: Path = PASSAGES_DIR,
     audio_dir: Path = AUDIO_DIR,
+    clusters_file: Path = CLUSTERS_FILE,
 ) -> FastAPI:
     """Create and configure the FastAPI application.
 
@@ -45,6 +60,7 @@ def create_app(
         db_path: Path to the SQLite database file. None uses the default.
         passages_dir: Path to directory with passage JSON files.
         audio_dir: Path to directory served as read-only audio on /audio.
+        clusters_file: Path to the semantic vocabulary clusters JSON file.
     """
 
     @asynccontextmanager
@@ -54,6 +70,7 @@ def create_app(
             application.state.passages = load_passages(passages_dir)
         else:
             application.state.passages = []
+        application.state.clusters = _load_clusters(clusters_file)
         if db_path is not None:
             application.state.db = init_db(db_path)
         else:
