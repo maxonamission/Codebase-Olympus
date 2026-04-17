@@ -62,8 +62,22 @@ class StartSessionResponse(BaseModel):
 
 class AnswerRequest(BaseModel):
     session_id: str
-    response: str = Field(description="correct, incorrect, or slow_correct")
     response_time_ms: int = Field(ge=0)
+    response: Optional[str] = Field(
+        default=None,
+        description=(
+            "Self-assessment outcome: correct, incorrect, or slow_correct. "
+            "Required when answer_text is not provided."
+        ),
+    )
+    answer_text: Optional[str] = Field(
+        default=None,
+        description=(
+            "Raw answer the learner typed or selected.  When provided, "
+            "the server grades it against the current item and ignores "
+            "response."
+        ),
+    )
 
 
 class FeedbackResponse(BaseModel):

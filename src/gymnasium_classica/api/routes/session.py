@@ -114,18 +114,32 @@ async def submit_answer(
     if state.user_id != user_id:
         raise HTTPException(status_code=403, detail="Not your session")
 
-    # Validate response type
-    try:
-        response = ResponseType(body.response)
-    except ValueError:
+    # Either answer_text (server grades) or response (self-assess) is required.
+    if body.answer_text is None and body.response is None:
         raise HTTPException(
             status_code=422,
-            detail=f"Invalid response: {body.response!r}. Must be correct, incorrect, or slow_correct.",
+            detail="Either 'answer_text' or 'response' must be provided.",
         )
+
+    response: ResponseType | None = None
+    if body.response is not None:
+        try:
+            response = ResponseType(body.response)
+        except ValueError:
+            raise HTTPException(
+                status_code=422,
+                detail=(
+                    f"Invalid response: {body.response!r}. "
+                    "Must be correct, incorrect, or slow_correct."
+                ),
+            )
 
     try:
         result = session_manager.submit_answer(
-            body.session_id, response, body.response_time_ms
+            body.session_id,
+            response,
+            body.response_time_ms,
+            answer_text=body.answer_text,
         )
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))

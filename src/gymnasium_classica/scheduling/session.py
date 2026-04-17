@@ -18,6 +18,7 @@ import networkx as nx
 from gymnasium_classica.diagnostic.conditional_completion import apply_fallback
 from gymnasium_classica.models.graph import ItemType, KennisKnoop
 from gymnasium_classica.models.learner import (
+    ItemResponse,
     LearnerModel,
     MasterySource,
     OfflineAssignment,
@@ -314,8 +315,15 @@ def _process_response(
     knoop_id: str,
     response: ResponseType,
     now: datetime,
+    *,
+    item_response: ItemResponse | None = None,
 ) -> None:
-    """Run BKT update, SM-2 update, and conditional completion check."""
+    """Run BKT update, SM-2 update, and conditional completion check.
+
+    When *item_response* is supplied, it is appended to the
+    ``KnoopState.item_history`` so mentors and future error-pattern
+    analysis can inspect what the learner actually typed/selected.
+    """
     # BKT
     update_knoop_state(learner, knoop_id, response)
     if response in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT):
@@ -329,6 +337,11 @@ def _process_response(
     if response == ResponseType.INCORRECT:
         if state.source == MasterySource.DIAGNOSTIC:
             apply_fallback(learner, graph, knoop_id)
+
+    # Record the raw attempt (optional; callers pass None when they
+    # don't have a literal answer, e.g. self-assess paths in run_session)
+    if item_response is not None:
+        state.item_history.append(item_response)
 
 
 def _collect_offline_items(

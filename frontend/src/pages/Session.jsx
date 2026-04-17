@@ -58,12 +58,18 @@ export default function Session() {
     setError('')
     const responseTimeMs = Date.now() - questionStartTime.current
 
+    // 'selected' (MC) and 'typed' (text) carry a literal answer — the
+    // server grades it.  Self-assess responses ('correct', 'slow_correct',
+    // 'incorrect') go through as-is.
+    const payload = { responseTimeMs }
+    if (responseType === 'selected' || responseType === 'typed') {
+      payload.answerText = answer
+    } else {
+      payload.response = responseType
+    }
+
     try {
-      const data = await submitAnswer(sessionId, {
-        responseType,
-        responseTimeMs,
-        answer,
-      })
+      const data = await submitAnswer(sessionId, payload)
 
       setFeedback(data.feedback)
 
