@@ -1350,3 +1350,39 @@ h2 {
 .scaffolding-content tbody tr:nth-child(even) {
   background: #fafbfc;
 }
+
+/* Audio player — boven de opties/input bij luister-items */
+.audio-player {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.audio-play,
+.audio-replay {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.9rem;
+  padding: 0.35rem 0.8rem;
+  min-width: 6rem;
+}
+
+.audio-play:hover:not(:disabled),
+.audio-replay:hover:not(:disabled) {
+  border-color: var(--primary);
+  background: rgba(44, 82, 130, 0.06);
+}
+
+.audio-error {
+  width: 100%;
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: var(--error);
+}

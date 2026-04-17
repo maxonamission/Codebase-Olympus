@@ -9,8 +9,9 @@ from pathlib import Path
 from typing import Optional
 
 import networkx as nx
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 
 from gymnasium_classica.api.database import init_db
 from gymnasium_classica.api.routes.auth import router as auth_router
@@ -23,12 +24,19 @@ from gymnasium_classica.passages.loader import load_passages
 
 GRAPH_DIR = Path("data/graph")
 PASSAGES_DIR = Path("data/passages")
+AUDIO_DIR = Path("data/audio")
+
+_AUDIO_MEDIA_TYPES = {
+    ".wav": "audio/wav",
+    ".mp3": "audio/mpeg",
+}
 
 
 def create_app(
     graph_dir: Path = GRAPH_DIR,
     db_path: Optional[Path] = None,
     passages_dir: Path = PASSAGES_DIR,
+    audio_dir: Path = AUDIO_DIR,
 ) -> FastAPI:
     """Create and configure the FastAPI application.
 
@@ -36,6 +44,7 @@ def create_app(
         graph_dir: Path to directory with knowledge graph JSON files.
         db_path: Path to the SQLite database file. None uses the default.
         passages_dir: Path to directory with passage JSON files.
+        audio_dir: Path to directory served as read-only audio on /audio.
     """
 
     @asynccontextmanager
@@ -89,6 +98,28 @@ def create_app(
             "graph_nodes": graph.number_of_nodes(),
             "graph_edges": graph.number_of_edges(),
         }
+
+    @application.get("/audio/{filename}")
+    async def serve_audio(filename: str) -> FileResponse:
+        """Serve a read-only audio file from *audio_dir*.
+
+        Restrictions:
+          * Filename cannot contain path separators or ``..`` — blocks
+            directory traversal.
+          * Only ``.wav`` and ``.mp3`` extensions are served; other
+            files return 404 even if present on disk.
+          * Unknown files return 404.
+        """
+        if "/" in filename or "\\" in filename or ".." in filename:
+            raise HTTPException(status_code=404)
+        suffix = Path(filename).suffix.lower()
+        media_type = _AUDIO_MEDIA_TYPES.get(suffix)
+        if media_type is None:
+            raise HTTPException(status_code=404)
+        path = audio_dir / filename
+        if not path.is_file():
+            raise HTTPException(status_code=404)
+        return FileResponse(path, media_type=media_type)
 
     return application
 
