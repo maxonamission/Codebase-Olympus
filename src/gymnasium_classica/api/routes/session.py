@@ -45,6 +45,11 @@ def _question_to_response(q: Question | None) -> QuestionResponse | None:
             for item in q.items
         ],
         scaffolding_content=q.scaffolding_content,
+        item_type=q.item_type,
+        instruction=q.instruction,
+        options=q.options,
+        hint=q.hint,
+        audio_ref=q.audio_ref,
     )
 
 

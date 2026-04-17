@@ -63,6 +63,15 @@ class Question:
     phase: str
     items: list[dict] = field(default_factory=list)
     scaffolding_content: str | None = None
+    # Promoted from the first item for frontend convenience. Populated by
+    # `_knoop_to_question` so the React components can read a flat shape
+    # (question.item_type / question.options / ...) without having to dig
+    # into `question.items[0].stimulus`.
+    item_type: str | None = None
+    instruction: str | None = None
+    options: list[str] | None = None
+    hint: str | None = None
+    audio_ref: str | None = None
 
 
 @dataclass
@@ -233,6 +242,8 @@ def _knoop_to_question(
     if include_scaffolding:
         content = _load_scaffolding_content(knoop, content_dir)
 
+    item_type, instruction, options, hint, audio_ref = _promote_first_item(knoop)
+
     return Question(
         knoop_id=knoop.id,
         titel=titel,
@@ -241,7 +252,58 @@ def _knoop_to_question(
         phase=phase.value,
         items=items,
         scaffolding_content=content,
+        item_type=item_type,
+        instruction=instruction,
+        options=options,
+        hint=hint,
+        audio_ref=audio_ref,
     )
+
+
+def _promote_first_item(
+    knoop: KennisKnoop,
+) -> tuple[str | None, str | None, list[str] | None, str | None, str | None]:
+    """Extract structured stimulus fields from the first item, if present.
+
+    The frontend expects a flat Question shape: ``question.item_type``,
+    ``question.options``, ``question.instruction``, ``question.hint``,
+    ``question.audio_ref``.  This helper pulls those out of the first
+    item so the React components don't need to understand the nested
+    ``items[0].stimulus`` structure.
+
+    Returns (item_type, instruction, options, hint, audio_ref).  Every
+    field is None when the knoop has no items or when the field is
+    absent on the first item.
+    """
+    if not knoop.items:
+        return None, None, None, None, None
+
+    first = knoop.items[0]
+    item_type = first.type.value
+    audio_ref = first.audio_ref
+
+    instruction: str | None = None
+    options: list[str] | None = None
+    hint: str | None = None
+
+    stim = first.stimulus
+    if isinstance(stim, dict):
+        raw_instruction = stim.get("instruction")
+        if isinstance(raw_instruction, str):
+            instruction = raw_instruction
+        raw_options = stim.get("options")
+        if isinstance(raw_options, list) and all(isinstance(o, str) for o in raw_options):
+            options = list(raw_options)
+        raw_hint = stim.get("hint")
+        if isinstance(raw_hint, str):
+            hint = raw_hint
+        # audio_ref on the stimulus-dict wins over the item-level field
+        # because generated vocabulary items put the filename there.
+        stim_audio = stim.get("audio_ref")
+        if isinstance(stim_audio, str):
+            audio_ref = stim_audio
+
+    return item_type, instruction, options, hint, audio_ref
 
 
 class SessionManager:
