@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import AudioPlayer from './AudioPlayer'
 import GreekInput from './GreekInput'
 
 const MC_TYPES = ['herkenning', 'luister_herkenning']
@@ -12,6 +13,7 @@ export default function AnswerInput({ question, onAnswer, disabled }) {
   const isMultipleChoice = MC_TYPES.includes(itemType) && question.options?.length > 0
   const isTextInput = TEXT_TYPES.includes(itemType)
   const isGreek = question.knoop_id?.startsWith('GRC-')
+  const audioSrc = question.audio_ref ? `/audio/${question.audio_ref}` : null
 
   function handleMcSelect(option) {
     if (disabled) return
@@ -33,6 +35,7 @@ export default function AnswerInput({ question, onAnswer, disabled }) {
   if (isMultipleChoice) {
     return (
       <div className="answer-input">
+        {audioSrc && <AudioPlayer src={audioSrc} label="Luister naar de opname" />}
         <p className="answer-instruction">{question.instruction || 'Kies het juiste antwoord:'}</p>
         <div className="mc-options">
           {question.options.map((option, i) => (
@@ -53,6 +56,7 @@ export default function AnswerInput({ question, onAnswer, disabled }) {
   if (isTextInput) {
     return (
       <div className="answer-input">
+        {audioSrc && <AudioPlayer src={audioSrc} label="Luister naar de opname" />}
         {question.instruction && (
           <p className="answer-instruction">{question.instruction}</p>
         )}
