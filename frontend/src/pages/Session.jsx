@@ -9,6 +9,7 @@ import FeedbackCard from '../components/FeedbackCard'
 import SessionSummary from '../components/SessionSummary'
 import PassageReader from '../components/PassageReader'
 import ScaffoldingPanel from '../components/ScaffoldingPanel'
+import WoordKaart from '../components/WoordKaart'
 
 /**
  * Detect whether a question is a passage reading step.
@@ -172,6 +173,9 @@ export default function Session() {
           {feedback ? (
             <div className="feedback-section">
               <FeedbackCard feedback={feedback} />
+              {question.vocab_metadata && (
+                <WoordKaart metadata={question.vocab_metadata} />
+              )}
               <button className="btn btn-primary btn-next" onClick={handleNext}>
                 {pendingQuestion?._summary ? 'Bekijk resultaten' : 'Volgende vraag'}
               </button>

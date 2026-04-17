@@ -14,9 +14,11 @@ from gymnasium_classica.api.schemas import (
     QuestionResponse,
     SessionSummaryResponse,
     StartSessionResponse,
+    VocabMetadata,
 )
 from gymnasium_classica.api.session_manager import Question, SessionManager
 from gymnasium_classica.models.learner import LearnerModel, ResponseType
+from gymnasium_classica.vocab.loader import VocabEntry
 
 router = APIRouter(prefix="/session", tags=["session"])
 
@@ -24,10 +26,36 @@ router = APIRouter(prefix="/session", tags=["session"])
 session_manager = SessionManager()
 
 
-def _question_to_response(q: Question | None) -> QuestionResponse | None:
-    """Convert internal Question to API QuestionResponse."""
+def _vocab_entry_to_metadata(entry: VocabEntry) -> VocabMetadata:
+    """Map compact VocabEntry fields to the self-explanatory wire schema."""
+    return VocabMetadata(
+        lemma=entry.lemma,
+        part_of_speech=entry.pos,
+        conjugation=entry.conj,
+        forms=entry.gen,
+        meaning=entry.mean,
+        cluster=entry.cl,
+    )
+
+
+def _question_to_response(
+    q: Question | None,
+    vocab_metadata: dict[str, VocabEntry] | None = None,
+) -> QuestionResponse | None:
+    """Convert internal Question to API QuestionResponse.
+
+    *vocab_metadata* is the knoop-ID-keyed lookup from
+    :func:`gymnasium_classica.vocab.loader.load_vocab_metadata`.  When
+    the question is about a V-knoop and a matching entry exists, the
+    structured metadata is attached on ``vocab_metadata``.
+    """
     if q is None:
         return None
+    metadata: VocabMetadata | None = None
+    if vocab_metadata:
+        entry = vocab_metadata.get(q.knoop_id)
+        if entry is not None:
+            metadata = _vocab_entry_to_metadata(entry)
     return QuestionResponse(
         knoop_id=q.knoop_id,
         titel=q.titel,
@@ -45,6 +73,7 @@ def _question_to_response(q: Question | None) -> QuestionResponse | None:
             for item in q.items
         ],
         scaffolding_content=q.scaffolding_content,
+        vocab_metadata=metadata,
         item_type=q.item_type,
         instruction=q.instruction,
         options=q.options,
@@ -97,9 +126,10 @@ async def start_session(
     # Persist learner model after session start
     save_learner_model(db, learner)
 
+    vocab_metadata = getattr(request.app.state, "vocab_metadata", {})
     return StartSessionResponse(
         session_id=session_id,
-        question=_question_to_response(question),
+        question=_question_to_response(question, vocab_metadata),
     )
 
 
@@ -152,6 +182,7 @@ async def submit_answer(
     db = request.app.state.db
     save_learner_model(db, state.learner)
 
+    vocab_metadata = getattr(request.app.state, "vocab_metadata", {})
     return AnswerResponse(
         feedback=FeedbackResponse(
             knoop_id=result.feedback.knoop_id,
@@ -160,7 +191,7 @@ async def submit_answer(
             mastery_before=result.feedback.mastery_before,
             mastery_after=result.feedback.mastery_after,
         ),
-        next_question=_question_to_response(result.next_question),
+        next_question=_question_to_response(result.next_question, vocab_metadata),
         session_finished=result.session_finished,
     )
 

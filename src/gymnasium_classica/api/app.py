@@ -21,10 +21,12 @@ from gymnasium_classica.api.routes.session import router as session_router
 from gymnasium_classica.api.routes.user import router as user_router
 from gymnasium_classica.graph.loader import load_graph
 from gymnasium_classica.passages.loader import load_passages
+from gymnasium_classica.vocab.loader import load_vocab_metadata
 
 GRAPH_DIR = Path("data/graph")
 PASSAGES_DIR = Path("data/passages")
 AUDIO_DIR = Path("data/audio")
+VOCAB_SOURCES_DIR = Path("data/vocab_sources")
 
 _AUDIO_MEDIA_TYPES = {
     ".wav": "audio/wav",
@@ -37,6 +39,7 @@ def create_app(
     db_path: Optional[Path] = None,
     passages_dir: Path = PASSAGES_DIR,
     audio_dir: Path = AUDIO_DIR,
+    vocab_sources_dir: Path = VOCAB_SOURCES_DIR,
 ) -> FastAPI:
     """Create and configure the FastAPI application.
 
@@ -45,6 +48,7 @@ def create_app(
         db_path: Path to the SQLite database file. None uses the default.
         passages_dir: Path to directory with passage JSON files.
         audio_dir: Path to directory served as read-only audio on /audio.
+        vocab_sources_dir: Path to directory with structured vocab metadata.
     """
 
     @asynccontextmanager
@@ -54,6 +58,10 @@ def create_app(
             application.state.passages = load_passages(passages_dir)
         else:
             application.state.passages = []
+        if vocab_sources_dir.is_dir():
+            application.state.vocab_metadata = load_vocab_metadata(vocab_sources_dir)
+        else:
+            application.state.vocab_metadata = {}
         if db_path is not None:
             application.state.db = init_db(db_path)
         else:
