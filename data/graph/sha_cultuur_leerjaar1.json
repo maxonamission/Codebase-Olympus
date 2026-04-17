@@ -10,7 +10,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-INTRO-001",
+          "knoop_ids": [
+            "SHA-C-MYT-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat bedoelt men met 'klassieke mythologie'?",
+            "options": [
+              "Wetenschappelijk onderzoek naar de natuur",
+              "De verzameling Grieks-Romeinse verhalen over goden en helden",
+              "Een systeem van wetten uit Rome",
+              "Een stroming in de Griekse filosofie"
+            ]
+          },
+          "antwoord": "De verzameling Grieks-Romeinse verhalen over goden en helden",
+          "feedback": "Mythologie is het geheel van overgeleverde Grieks-Romeinse verhalen over goden, helden en de oorsprong van de wereld.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-SCHEP",
@@ -22,7 +46,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-SCHEP-001",
+          "knoop_ids": [
+            "SHA-C-MYT-SCHEP"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke godengeneratie ging volgens de scheppingsmythe vooraf aan de Olympische goden?",
+            "options": [
+              "De Titanen",
+              "De Giganten",
+              "De halfgoden",
+              "De Muzen"
+            ]
+          },
+          "antwoord": "De Titanen",
+          "feedback": "De Titanen heersten vóór de Olympiërs; na de Titanomachie namen Zeus en zijn broers en zussen de macht over.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-OLYMP",
@@ -34,7 +82,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-OLYMP-001",
+          "knoop_ids": [
+            "SHA-C-MYT-OLYMP"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Hoeveel Olympische hoofdgoden telt men traditioneel?",
+            "options": [
+              "Zes",
+              "Negen",
+              "Twaalf",
+              "Zestien"
+            ]
+          },
+          "antwoord": "Twaalf",
+          "feedback": "Het klassieke pantheon op de Olympus bestaat uit twaalf hoofdgoden.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-ZEUS",
@@ -46,7 +118,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-ZEUS-001",
+          "knoop_ids": [
+            "SHA-C-MYT-ZEUS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is de Latijnse naam van Zeus?",
+            "options": [
+              "Mars",
+              "Jupiter",
+              "Neptunus",
+              "Mercurius"
+            ]
+          },
+          "antwoord": "Jupiter",
+          "feedback": "Zeus heet in het Latijn Jupiter: oppergod, heerser van de hemel en de bliksem.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-HERA",
@@ -58,7 +154,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-HERA-001",
+          "knoop_ids": [
+            "SHA-C-MYT-HERA"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Waarvan is Hera / Juno godin?",
+            "options": [
+              "Jacht en maan",
+              "Huwelijk en gezin",
+              "Liefde en schoonheid",
+              "Wijsheid"
+            ]
+          },
+          "antwoord": "Huwelijk en gezin",
+          "feedback": "Hera / Juno is de godin van het huwelijk en het gezin, bekend om haar jaloezie op Zeus' minnaressen.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-POSEID",
@@ -70,7 +190,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-POSEID-001",
+          "knoop_ids": [
+            "SHA-C-MYT-POSEID"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Over welk domein heerst Poseidon / Neptunus?",
+            "options": [
+              "De onderwereld",
+              "De zee",
+              "De hemel",
+              "De oogst"
+            ]
+          },
+          "antwoord": "De zee",
+          "feedback": "Poseidon / Neptunus is de god van de zee, aardbevingen en paarden.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-ATHENA",
@@ -82,7 +226,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-ATHENA-001",
+          "knoop_ids": [
+            "SHA-C-MYT-ATHENA"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Waarvan is Athena / Minerva vooral godin?",
+            "options": [
+              "Jacht en maan",
+              "Liefde en schoonheid",
+              "Wijsheid, strategie en handwerk",
+              "Vuur en smeedkunst"
+            ]
+          },
+          "antwoord": "Wijsheid, strategie en handwerk",
+          "feedback": "Athena / Minerva is de godin van wijsheid, strategisch oorlogvoeren en handwerk; zij beschermt Athene.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-APOLLO",
@@ -94,7 +262,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-APOLLO-001",
+          "knoop_ids": [
+            "SHA-C-MYT-APOLLO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Met welk orakel is Apollo vooral verbonden?",
+            "options": [
+              "Dodona",
+              "Olympia",
+              "Delphi",
+              "Eleusis"
+            ]
+          },
+          "antwoord": "Delphi",
+          "feedback": "Apollo sprak via de Pythia in zijn orakel te Delphi.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-ARTEM",
@@ -106,7 +298,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-ARTEM-001",
+          "knoop_ids": [
+            "SHA-C-MYT-ARTEM"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is de familierelatie tussen Artemis en Apollo?",
+            "options": [
+              "Moeder en zoon",
+              "Echtgenoten",
+              "Tweelingzus en -broer",
+              "Nicht en neef"
+            ]
+          },
+          "antwoord": "Tweelingzus en -broer",
+          "feedback": "Artemis en Apollo zijn een tweeling, kinderen van Zeus en Leto.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-APHROD",
@@ -118,7 +334,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-APHROD-001",
+          "knoop_ids": [
+            "SHA-C-MYT-APHROD"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke rol speelt Aphrodite / Venus in het Parisoordeel?",
+            "options": [
+              "Zij veroordeelt Paris",
+              "Zij belooft Paris de mooiste vrouw, Helena",
+              "Zij geeft Paris macht over Azië",
+              "Zij is afwezig"
+            ]
+          },
+          "antwoord": "Zij belooft Paris de mooiste vrouw, Helena",
+          "feedback": "Aphrodite wint het Parisoordeel door Paris de mooiste vrouw ter wereld (Helena) te beloven — de aanleiding voor de Trojaanse Oorlog.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-HERMES",
@@ -130,7 +370,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-HERMES-001",
+          "knoop_ids": [
+            "SHA-C-MYT-HERMES"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke hoofdfunctie heeft Hermes / Mercurius?",
+            "options": [
+              "Oorlogsgod",
+              "Boodschapper van de goden en beschermer van reizigers",
+              "Heerser van de onderwereld",
+              "God van de oogst"
+            ]
+          },
+          "antwoord": "Boodschapper van de goden en beschermer van reizigers",
+          "feedback": "Hermes / Mercurius is de boodschapper van de goden en beschermt reizigers en handelaren.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-ARES",
@@ -142,7 +406,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-ARES-001",
+          "knoop_ids": [
+            "SHA-C-MYT-ARES"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is de Latijnse naam van Ares?",
+            "options": [
+              "Mars",
+              "Vulcanus",
+              "Mercurius",
+              "Jupiter"
+            ]
+          },
+          "antwoord": "Mars",
+          "feedback": "Ares heet in het Latijn Mars. Bij de Romeinen was hij populairder dan Ares bij de Grieken — Mars geldt als stamvader van Romulus en Remus.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-HEPHAI",
@@ -154,7 +442,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-HEPHAI-001",
+          "knoop_ids": [
+            "SHA-C-MYT-HEPHAI"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Waarvan is Hephaistos / Vulcanus god?",
+            "options": [
+              "Medicijnen",
+              "Vuur en smeedkunst",
+              "Wijn",
+              "Scheepvaart"
+            ]
+          },
+          "antwoord": "Vuur en smeedkunst",
+          "feedback": "Hephaistos / Vulcanus is de god van het vuur en de smeedkunst; hij smeedt de wapens van de goden.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-DEMETR",
@@ -166,7 +478,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-DEMETR-001",
+          "knoop_ids": [
+            "SHA-C-MYT-DEMETR"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke mythe verklaart volgens de Grieken het verloop van de seizoenen?",
+            "options": [
+              "Herakles en de Nemeïsche leeuw",
+              "Demeter en de roof van Persephone",
+              "Apollo en Daphne",
+              "Orpheus en Eurydice"
+            ]
+          },
+          "antwoord": "Demeter en de roof van Persephone",
+          "feedback": "Demeters rouw om haar dochter Persephone (geroofd door Hades) verklaart de winter; haar terugkeer brengt de lente.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-HADES",
@@ -178,7 +514,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-HADES-001",
+          "knoop_ids": [
+            "SHA-C-MYT-HADES"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Over welk domein heerst Hades / Pluto?",
+            "options": [
+              "De hemel",
+              "De zee",
+              "De onderwereld",
+              "De bergen"
+            ]
+          },
+          "antwoord": "De onderwereld",
+          "feedback": "Hades / Pluto is heerser van de onderwereld. Als broer van Zeus hoort hij niet bij de twaalf Olympiërs.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-HELD",
@@ -190,7 +550,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-HELD-001",
+          "knoop_ids": [
+            "SHA-C-MYT-HELD"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is kenmerkend voor een Griekse held?",
+            "options": [
+              "Hij is volledig sterfelijk en gewoon",
+              "Hij is halfgod of sterveling met goddelijke hulp",
+              "Hij is priester",
+              "Hij is altijd koning"
+            ]
+          },
+          "antwoord": "Hij is halfgod of sterveling met goddelijke hulp",
+          "feedback": "Griekse helden zijn vaak halfgoden of stervelingen die met goddelijke bijstand buitengewone daden verrichten.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-HERAKL",
@@ -202,7 +586,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-HERAKL-001",
+          "knoop_ids": [
+            "SHA-C-MYT-HERAKL"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Waarvoor is Herakles / Hercules vooral beroemd?",
+            "options": [
+              "De twaalf werken",
+              "Het stichten van Rome",
+              "Het bedwingen van Troje",
+              "Het doden van de Minotaurus"
+            ]
+          },
+          "antwoord": "De twaalf werken",
+          "feedback": "Herakles / Hercules voerde de twaalf werken uit als boetedoening, opgelegd door Eurystheus.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-THESEU",
@@ -214,7 +622,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-THESEU-001",
+          "knoop_ids": [
+            "SHA-C-MYT-THESEU"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welk monster doodde Theseus in het labyrint?",
+            "options": [
+              "De Cycloop",
+              "De Minotaurus",
+              "Medusa",
+              "De Hydra"
+            ]
+          },
+          "antwoord": "De Minotaurus",
+          "feedback": "Theseus doodde de Minotaurus in het labyrint van Kreta, met de hulp van Ariadnes draad.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-TROJE",
@@ -226,7 +658,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-TROJE-001",
+          "knoop_ids": [
+            "SHA-C-MYT-TROJE"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat was volgens de mythe de directe aanleiding voor de Trojaanse Oorlog?",
+            "options": [
+              "Een hongersnood in Griekenland",
+              "De ontvoering van Helena door Paris",
+              "Een Perzische invasie",
+              "Een aardbeving op Troje"
+            ]
+          },
+          "antwoord": "De ontvoering van Helena door Paris",
+          "feedback": "Paris ontvoerde Helena, de vrouw van Menelaos, uit Sparta. Dat bracht de Griekse vorsten ertoe tegen Troje ten strijde te trekken.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-MYT-ODYSS",
@@ -238,7 +694,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-MYT-ODYSS-001",
+          "knoop_ids": [
+            "SHA-C-MYT-ODYSS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Hoeveel jaar duurde Odysseus' thuisreis naar Ithaka volgens de Odyssee?",
+            "options": [
+              "Drie jaar",
+              "Zeven jaar",
+              "Tien jaar",
+              "Twintig jaar"
+            ]
+          },
+          "antwoord": "Tien jaar",
+          "feedback": "De Odyssee beschrijft Odysseus' tienjarige thuisreis na de val van Troje.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-INTRO",
@@ -250,7 +730,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-INTRO-001",
+          "knoop_ids": [
+            "SHA-C-POL-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke onderwerpen vallen onder 'Romeins dagelijks leven'?",
+            "options": [
+              "Alleen politiek en oorlog",
+              "Gezin, wonen, voeding en onderwijs",
+              "Alleen religie",
+              "Uitsluitend bouwkunst"
+            ]
+          },
+          "antwoord": "Gezin, wonen, voeding en onderwijs",
+          "feedback": "Romeins dagelijks leven beslaat gezin, wonen, onderwijs, voeding en sociale verhoudingen.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-FAMIL",
@@ -262,7 +766,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-FAMIL-001",
+          "knoop_ids": [
+            "SHA-C-POL-FAMIL"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is de Romeinse familia in juridische zin?",
+            "options": [
+              "Alleen vader, moeder en kinderen",
+              "Het huishouden onder gezag van de paterfamilias (inclusief slaven)",
+              "Een militaire eenheid",
+              "Een religieus genootschap"
+            ]
+          },
+          "antwoord": "Het huishouden onder gezag van de paterfamilias (inclusief slaven)",
+          "feedback": "De familia is de juridische huishoudeenheid onder de paterfamilias — inclusief vrouw, kinderen, vrijgelatenen en slaven.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-PATER",
@@ -274,7 +802,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-PATER-001",
+          "knoop_ids": [
+            "SHA-C-POL-PATER"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat houdt de patria potestas in?",
+            "options": [
+              "Militair opperbevel van een consul",
+              "Absolute juridische macht van de paterfamilias over het huishouden",
+              "Het stemrecht in de comitia",
+              "De macht van de Senaat over de provincies"
+            ]
+          },
+          "antwoord": "Absolute juridische macht van de paterfamilias over het huishouden",
+          "feedback": "Patria potestas is de absolute juridische macht van de paterfamilias over zijn huishouden, inclusief recht over leven en dood.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-MATER",
@@ -286,7 +838,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-MATER-001",
+          "knoop_ids": [
+            "SHA-C-POL-MATER"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is de kerntaak van de materfamilias?",
+            "options": [
+              "Aanvoerder van het leger",
+              "Het huishouden leiden en de kinderen opvoeden",
+              "Het bestuur van een provincie",
+              "Debatten in de Senaat"
+            ]
+          },
+          "antwoord": "Het huishouden leiden en de kinderen opvoeden",
+          "feedback": "De materfamilias leidt het huishouden en voedt de kinderen op; ze heeft geen juridische, maar wel sociale invloed.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-LIBERI",
@@ -298,7 +874,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-LIBERI-001",
+          "knoop_ids": [
+            "SHA-C-POL-LIBERI"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke toga droeg een vrijgeboren Romeins kind?",
+            "options": [
+              "Toga virilis",
+              "Toga picta",
+              "Toga praetexta",
+              "Toga candida"
+            ]
+          },
+          "antwoord": "Toga praetexta",
+          "feedback": "Vrijgeboren kinderen droegen de toga praetexta met purperen zoom; bij volwassenwording ruilden jongens die voor de witte toga virilis.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-SERVUS",
@@ -310,7 +910,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-SERVUS-001",
+          "knoop_ids": [
+            "SHA-C-POL-SERVUS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Hoe heet de vrijlating van een Romeinse slaaf?",
+            "options": [
+              "Manumissio",
+              "Patrocinium",
+              "Adoptio",
+              "Emancipatio"
+            ]
+          },
+          "antwoord": "Manumissio",
+          "feedback": "De formele vrijlating van een slaaf heet manumissio; de vrijgelatene (libertus) bleef via het patronaat verbonden aan zijn voormalige eigenaar.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-DOMUS",
@@ -322,7 +946,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-DOMUS-001",
+          "knoop_ids": [
+            "SHA-C-POL-DOMUS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke ruimte vormt het centrum van de Romeinse domus?",
+            "options": [
+              "De bibliotheek",
+              "Het atrium",
+              "De stal",
+              "De keuken"
+            ]
+          },
+          "antwoord": "Het atrium",
+          "feedback": "Het atrium met impluvium is het centrale ontvangstdeel van de domus.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-INSULA",
@@ -334,7 +982,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-INSULA-001",
+          "knoop_ids": [
+            "SHA-C-POL-INSULA"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wie woonden typisch in een insula?",
+            "options": [
+              "Uitsluitend senatoren",
+              "De gewone, minder welgestelde Romeinse bevolking",
+              "Alleen slaven",
+              "Alleen soldaten"
+            ]
+          },
+          "antwoord": "De gewone, minder welgestelde Romeinse bevolking",
+          "feedback": "Insulae waren huurkazernes voor gewone burgers; meerdere verdiepingen, kleine appartementen, brandgevaar.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-LUDUS",
@@ -346,7 +1018,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-LUDUS-001",
+          "knoop_ids": [
+            "SHA-C-POL-LUDUS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat was de ludus in het Romeinse onderwijs?",
+            "options": [
+              "De retoricaschool",
+              "De basisschool",
+              "Een senaatsgebouw",
+              "Een tempel"
+            ]
+          },
+          "antwoord": "De basisschool",
+          "feedback": "De ludus is de basisschool (lezen, schrijven, rekenen). Daarna volgen grammaticus en rhetor.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-CENA",
@@ -358,7 +1054,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-CENA-001",
+          "knoop_ids": [
+            "SHA-C-POL-CENA"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "In welke ruimte at men de cena?",
+            "options": [
+              "Atrium",
+              "Peristylium",
+              "Triclinium",
+              "Tablinum"
+            ]
+          },
+          "antwoord": "Triclinium",
+          "feedback": "De cena werd geserveerd in het triclinium, waar men liggend op aanligbedden at.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-KLEED",
@@ -370,7 +1090,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-KLEED-001",
+          "knoop_ids": [
+            "SHA-C-POL-KLEED"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welk kledingstuk was typisch voor de mannelijke Romeinse burger?",
+            "options": [
+              "Tunica",
+              "Stola",
+              "Toga",
+              "Palla"
+            ]
+          },
+          "antwoord": "Toga",
+          "feedback": "De toga is het kenmerkende kledingstuk van de mannelijke burger; de stola is voor de vrouw, de tunica een onderkleed voor iedereen.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-THERM",
@@ -382,7 +1126,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-THERM-001",
+          "knoop_ids": [
+            "SHA-C-POL-THERM"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke ruimte hoort NIET bij de Romeinse thermen?",
+            "options": [
+              "Frigidarium",
+              "Tepidarium",
+              "Caldarium",
+              "Tablinum"
+            ]
+          },
+          "antwoord": "Tablinum",
+          "feedback": "Frigidarium (koud), tepidarium (lauw) en caldarium (heet) zijn onderdelen van de thermen. Het tablinum is een kamer in de domus.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-LARES",
@@ -394,7 +1162,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-LARES-001",
+          "knoop_ids": [
+            "SHA-C-POL-LARES"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Waar in de domus werden offers gebracht aan Lares en Penates?",
+            "options": [
+              "Bij het lararium",
+              "In het tablinum",
+              "In de taberna",
+              "In het atrium bij de deur"
+            ]
+          },
+          "antwoord": "Bij het lararium",
+          "feedback": "Bij het lararium, het huisaltaar, brachten Romeinen dagelijks offers aan de Lares (beschermgeesten) en Penates (voorraadgoden).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-PATRON",
@@ -406,7 +1198,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-PATRON-001",
+          "knoop_ids": [
+            "SHA-C-POL-PATRON"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat kenmerkt de relatie tussen patronus en cliens?",
+            "options": [
+              "Eenzijdige dienstbaarheid van de cliens",
+              "Wederzijdse verplichtingen van bescherming en dienstverlening",
+              "Uitsluitend familiebanden",
+              "Alleen militaire trouw"
+            ]
+          },
+          "antwoord": "Wederzijdse verplichtingen van bescherming en dienstverlening",
+          "feedback": "Patronus en cliens zijn wederzijds verplicht: de patronus biedt bescherming en juridische steun, de cliens verleent eer en diensten.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-OTIUM",
@@ -418,7 +1234,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-OTIUM-001",
+          "knoop_ids": [
+            "SHA-C-POL-OTIUM"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is het tegenovergestelde begrip van otium?",
+            "options": [
+              "Imperium",
+              "Negotium",
+              "Virtus",
+              "Libertas"
+            ]
+          },
+          "antwoord": "Negotium",
+          "feedback": "Otium (vrije tijd, studie) staat tegenover negotium (werk, handel, openbaar leven).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-GES-INTRO",
@@ -430,7 +1270,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-GES-INTRO-001",
+          "knoop_ids": [
+            "SHA-C-GES-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke driedeling is gebruikelijk voor de Romeinse geschiedenis?",
+            "options": [
+              "Koningschap, Republiek, Keizerrijk",
+              "Alleen Republiek en Keizerrijk",
+              "Vier dynastieën",
+              "Zeven eeuwen"
+            ]
+          },
+          "antwoord": "Koningschap, Republiek, Keizerrijk",
+          "feedback": "Men onderscheidt koningschap (753-509 v.Chr.), Republiek (509-27 v.Chr.) en Keizerrijk (27 v.Chr.-476 n.Chr.).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-GES-STICHT",
@@ -442,7 +1306,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-GES-STICHT-001",
+          "knoop_ids": [
+            "SHA-C-GES-STICHT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "In welk jaar stichtte Romulus volgens de mythe Rome?",
+            "options": [
+              "509 v.Chr.",
+              "753 v.Chr.",
+              "27 v.Chr.",
+              "476 n.Chr."
+            ]
+          },
+          "antwoord": "753 v.Chr.",
+          "feedback": "Volgens de stichtingsmythe sticht Romulus Rome in 753 v.Chr.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-GES-KONIG",
@@ -454,7 +1342,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-GES-KONIG-001",
+          "knoop_ids": [
+            "SHA-C-GES-KONIG"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wie was de laatste koning van Rome?",
+            "options": [
+              "Romulus",
+              "Numa Pompilius",
+              "Tarquinius Superbus",
+              "Servius Tullius"
+            ]
+          },
+          "antwoord": "Tarquinius Superbus",
+          "feedback": "Tarquinius Superbus werd in 509 v.Chr. verdreven; daarna begon de Republiek.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-GES-REPUB",
@@ -466,7 +1378,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-GES-REPUB-001",
+          "knoop_ids": [
+            "SHA-C-GES-REPUB"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "In welk jaar begon de Romeinse Republiek?",
+            "options": [
+              "753 v.Chr.",
+              "509 v.Chr.",
+              "27 v.Chr.",
+              "146 v.Chr."
+            ]
+          },
+          "antwoord": "509 v.Chr.",
+          "feedback": "Na de verdrijving van Tarquinius Superbus in 509 v.Chr. begon de res publica.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-GES-SENAAT",
@@ -478,7 +1414,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-GES-SENAAT-001",
+          "knoop_ids": [
+            "SHA-C-GES-SENAAT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Waaruit bestonden de leden van de Senaat voornamelijk?",
+            "options": [
+              "Zittende magistraten",
+              "Oud-magistraten",
+              "Legeraanvoerders",
+              "Patronen uit het volk"
+            ]
+          },
+          "antwoord": "Oud-magistraten",
+          "feedback": "De Senaat bestond uit oud-magistraten (circa 300, later 600) die het buitenlands beleid en de financiën aanstuurden.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-GES-CONSUL",
@@ -490,7 +1450,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-GES-CONSUL-001",
+          "knoop_ids": [
+            "SHA-C-GES-CONSUL"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Hoeveel consuls werden jaarlijks gekozen?",
+            "options": [
+              "Een",
+              "Twee",
+              "Vier",
+              "Tien"
+            ]
+          },
+          "antwoord": "Twee",
+          "feedback": "Twee consuls werden jaarlijks gekozen; collegialiteit gold als waarborg tegen machtsmisbruik.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-GES-MAGIST",
@@ -502,7 +1486,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-GES-MAGIST-001",
+          "knoop_ids": [
+            "SHA-C-GES-MAGIST"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke magistraat was verantwoordelijk voor de rechtspraak?",
+            "options": [
+              "Praetor",
+              "Censor",
+              "Aedilis",
+              "Quaestor"
+            ]
+          },
+          "antwoord": "Praetor",
+          "feedback": "De praetor sprak recht. Censor doet volkstelling en zedentoezicht, aedilis openbare werken, quaestor financiën.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-GES-COMITI",
@@ -514,7 +1522,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-GES-COMITI-001",
+          "knoop_ids": [
+            "SHA-C-GES-COMITI"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat was de comitia centuriata?",
+            "options": [
+              "Een rechtbank",
+              "Een volksvergadering die magistraten koos en oorlog verklaarde",
+              "Een tempel",
+              "Een legerformatie"
+            ]
+          },
+          "antwoord": "Een volksvergadering die magistraten koos en oorlog verklaarde",
+          "feedback": "De comitia centuriata koos de hoge magistraten (consul, praetor) en besloot over oorlog en vrede.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-GES-PATRIC",
@@ -526,7 +1558,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-GES-PATRIC-001",
+          "knoop_ids": [
+            "SHA-C-GES-PATRIC"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke magistratuur bevochten de plebejers tijdens de standenstrijd?",
+            "options": [
+              "Consul suffectus",
+              "Tribunus plebis",
+              "Dictator",
+              "Imperator"
+            ]
+          },
+          "antwoord": "Tribunus plebis",
+          "feedback": "De plebejers verwierven het recht op eigen tribuni plebis, die hun belangen beschermden met het vetorecht.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-GES-LEGIO",
@@ -538,7 +1594,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-GES-LEGIO-001",
+          "knoop_ids": [
+            "SHA-C-GES-LEGIO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Uit hoeveel soldaten bestond een Romeins legioen ongeveer?",
+            "options": [
+              "500",
+              "1.000",
+              "5.000",
+              "20.000"
+            ]
+          },
+          "antwoord": "5.000",
+          "feedback": "Een legioen telde ongeveer 5.000 milites, opgedeeld in cohorten en centuriae.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-GES-CENTUR",
@@ -550,7 +1630,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-GES-CENTUR-001",
+          "knoop_ids": [
+            "SHA-C-GES-CENTUR"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Hoeveel soldaten commandeerde een centurio?",
+            "options": [
+              "20",
+              "50",
+              "80",
+              "500"
+            ]
+          },
+          "antwoord": "80",
+          "feedback": "Een centurio voerde het bevel over een centuria van circa 80 man; in de praktijk dus minder dan honderd.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-GES-FORUM",
@@ -562,7 +1666,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-GES-FORUM-001",
+          "knoop_ids": [
+            "SHA-C-GES-FORUM"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is het Forum Romanum?",
+            "options": [
+              "Een amfitheater",
+              "Het politieke, religieuze en commerciële hart van Rome",
+              "Een havenstad",
+              "Een militair kamp"
+            ]
+          },
+          "antwoord": "Het politieke, religieuze en commerciële hart van Rome",
+          "feedback": "Het Forum Romanum is het politieke, religieuze en economische centrum van de stad, met de Curia (Senaat) en tempels.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-GES-VIA",
@@ -574,7 +1702,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-GES-VIA-001",
+          "knoop_ids": [
+            "SHA-C-GES-VIA"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke weg geldt als prototype van het Romeinse wegennet?",
+            "options": [
+              "Via Flaminia",
+              "Via Latina",
+              "Via Appia",
+              "Via Aemilia"
+            ]
+          },
+          "antwoord": "Via Appia",
+          "feedback": "De Via Appia (aangelegd vanaf 312 v.Chr.) geldt als prototype van de Romeinse wegen.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-GES-CURSUS",
@@ -586,7 +1738,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-GES-CURSUS-001",
+          "knoop_ids": [
+            "SHA-C-GES-CURSUS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is de cursus honorum?",
+            "options": [
+              "Een militaire graad",
+              "Een religieuze processie",
+              "De vaste politieke carrièreladder",
+              "Een onderwijsprogramma"
+            ]
+          },
+          "antwoord": "De vaste politieke carrièreladder",
+          "feedback": "De cursus honorum is de vaste volgorde quaestor → aedilis → praetor → consul, met minimumleeftijden per ambt.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-GES-PROVNC",
@@ -598,7 +1774,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-GES-PROVNC-001",
+          "knoop_ids": [
+            "SHA-C-GES-PROVNC"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke functionaris bestuurde een Romeinse provincie?",
+            "options": [
+              "Een dictator",
+              "Een tribunus plebis",
+              "Een proconsul of propraetor",
+              "Een censor"
+            ]
+          },
+          "antwoord": "Een proconsul of propraetor",
+          "feedback": "Een provincie werd bestuurd door een proconsul of propraetor: een oud-magistraat met verlengd imperium.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-GRIEK",
@@ -610,7 +1810,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-GRIEK-001",
+          "knoop_ids": [
+            "SHA-C-POL-GRIEK"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke sociale eenheid staat centraal in het Griekse leven?",
+            "options": [
+              "Het koninkrijk",
+              "De polis",
+              "De familia",
+              "Het legioen"
+            ]
+          },
+          "antwoord": "De polis",
+          "feedback": "In de Griekse wereld is de polis — de stadstaat — de kern van politiek, religie en samenleving.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-POLIS",
@@ -622,7 +1846,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-POLIS-001",
+          "knoop_ids": [
+            "SHA-C-POL-POLIS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is een polis?",
+            "options": [
+              "Een stadstaat met eigen bestuur en wetten",
+              "Een tempelcomplex",
+              "Een militair kamp",
+              "Een Romeinse kolonie"
+            ]
+          },
+          "antwoord": "Een stadstaat met eigen bestuur en wetten",
+          "feedback": "De polis is een onafhankelijke stadstaat met eigen wetten, bestuur en identiteit.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-AGORA",
@@ -634,7 +1882,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-AGORA-001",
+          "knoop_ids": [
+            "SHA-C-POL-AGORA"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat was de hoofdfunctie van de agora?",
+            "options": [
+              "Begraafplaats",
+              "Uitsluitend een militaire basis",
+              "Markt- en ontmoetingsplaats en politiek centrum",
+              "Een heilig bos"
+            ]
+          },
+          "antwoord": "Markt- en ontmoetingsplaats en politiek centrum",
+          "feedback": "De agora was het centrale plein: markt, ontmoetingsplaats en politiek centrum (volksvergadering).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-ACROP",
@@ -646,7 +1918,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-ACROP-001",
+          "knoop_ids": [
+            "SHA-C-POL-ACROP"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke tempel op de Atheense Acropolis is gewijd aan Athena?",
+            "options": [
+              "Het Erechtheion",
+              "Het Parthenon",
+              "De Tholos",
+              "Het Hephaisteion"
+            ]
+          },
+          "antwoord": "Het Parthenon",
+          "feedback": "Het Parthenon op de Acropolis van Athene is gewijd aan Athena Parthenos.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-DEMOC",
@@ -658,7 +1954,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-DEMOC-001",
+          "knoop_ids": [
+            "SHA-C-POL-DEMOC"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Door wie is de Atheense democratie grotendeels ingevoerd?",
+            "options": [
+              "Solon",
+              "Perikles",
+              "Kleisthenes",
+              "Themistokles"
+            ]
+          },
+          "antwoord": "Kleisthenes",
+          "feedback": "Kleisthenes voerde rond 508 v.Chr. de democratische hervormingen door die de directe democratie in Athene vestigden.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-GYMNA",
@@ -670,7 +1990,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-GYMNA-001",
+          "knoop_ids": [
+            "SHA-C-POL-GYMNA"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat deed men vooral in het Griekse gymnasium?",
+            "options": [
+              "Handel drijven",
+              "Lichaamstraining én intellectuele vorming",
+              "Strafprocessen voeren",
+              "Begrafenissen voorbereiden"
+            ]
+          },
+          "antwoord": "Lichaamstraining én intellectuele vorming",
+          "feedback": "Het gymnasium was trainingsplaats voor atletiek én voor intellectuele en filosofische vorming.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-SYMPO",
@@ -682,7 +2026,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-SYMPO-001",
+          "knoop_ids": [
+            "SHA-C-POL-SYMPO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wie namen typisch deel aan een symposion?",
+            "options": [
+              "Mannelijke burgers",
+              "Alleen slaven",
+              "Uitsluitend priesters",
+              "Alleen buitenlanders"
+            ]
+          },
+          "antwoord": "Mannelijke burgers",
+          "feedback": "Een symposion was een drinkgelag voor mannelijke burgers, met muziek, poëzie en filosofisch gesprek.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-THEAT",
@@ -694,7 +2062,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-THEAT-001",
+          "knoop_ids": [
+            "SHA-C-POL-THEAT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Ter ere van welke god werd het Griekse theater georganiseerd?",
+            "options": [
+              "Apollo",
+              "Zeus",
+              "Dionysos",
+              "Hermes"
+            ]
+          },
+          "antwoord": "Dionysos",
+          "feedback": "De tragedies en komedies werden opgevoerd tijdens de feesten voor Dionysos.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-OLYMP",
@@ -706,7 +2098,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-OLYMP-001",
+          "knoop_ids": [
+            "SHA-C-POL-OLYMP"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Waar en om de hoeveel jaar werden de Olympische Spelen gehouden?",
+            "options": [
+              "Athene, jaarlijks",
+              "Olympia, elke vier jaar",
+              "Delphi, elke vier jaar",
+              "Sparta, elke acht jaar"
+            ]
+          },
+          "antwoord": "Olympia, elke vier jaar",
+          "feedback": "De Olympische Spelen vonden elke vier jaar plaats in Olympia, ter ere van Zeus, met een heilige wapenstilstand.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-OIKOS",
@@ -718,7 +2134,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-OIKOS-001",
+          "knoop_ids": [
+            "SHA-C-POL-OIKOS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is de oikos?",
+            "options": [
+              "Een tempel",
+              "Een Griekse marktplaats",
+              "Het Griekse huishouden als economische en sociale eenheid",
+              "De volksvergadering"
+            ]
+          },
+          "antwoord": "Het Griekse huishouden als economische en sociale eenheid",
+          "feedback": "De oikos is het huishouden onder de kyrios — de economische en sociale basiseenheid van de Griekse samenleving.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-LIT-INTRO",
@@ -730,7 +2170,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-LIT-INTRO-001",
+          "knoop_ids": [
+            "SHA-C-LIT-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welk schriftsysteem ligt aan de basis van het moderne Europese schrift?",
+            "options": [
+              "Het Chinese schrift",
+              "Het Egyptische hiërogliefenschrift",
+              "Het Griekse alfabet (via het Latijnse)",
+              "Het spijkerschrift"
+            ]
+          },
+          "antwoord": "Het Griekse alfabet (via het Latijnse)",
+          "feedback": "Het Griekse alfabet vormt, via het Latijnse, de basis van vrijwel alle moderne Europese schriften.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-LIT-GRALF",
@@ -742,7 +2206,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-LIT-GRALF-001",
+          "knoop_ids": [
+            "SHA-C-LIT-GRALF"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welk schrift vormt de directe bron van het Griekse alfabet?",
+            "options": [
+              "Lineair B",
+              "Het Fenicische schrift",
+              "Het Etruskische schrift",
+              "Het Aramese schrift"
+            ]
+          },
+          "antwoord": "Het Fenicische schrift",
+          "feedback": "De Grieken ontleenden rond 800 v.Chr. hun alfabet aan het Fenicische schrift en voegden klinkertekens toe.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-LIT-LTALF",
@@ -754,7 +2242,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-LIT-LTALF-001",
+          "knoop_ids": [
+            "SHA-C-LIT-LTALF"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Via welk volk is het Griekse alfabet bij de Romeinen terechtgekomen?",
+            "options": [
+              "De Galliërs",
+              "De Feniciërs",
+              "De Etrusken",
+              "De Karthagers"
+            ]
+          },
+          "antwoord": "De Etrusken",
+          "feedback": "De Romeinen namen het alfabet over van de Etrusken, die het op hun beurt uit het Griekse schrift hadden.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-LIT-INSCR",
@@ -766,7 +2278,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-LIT-INSCR-001",
+          "knoop_ids": [
+            "SHA-C-LIT-INSCR"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke van de volgende is een voorbeeld van een inscriptie?",
+            "options": [
+              "Een perkamenten wetboek",
+              "Een grafsteen met tekst",
+              "Een papyrusrol",
+              "Een mondelinge overlevering"
+            ]
+          },
+          "antwoord": "Een grafsteen met tekst",
+          "feedback": "Inscripties zijn teksten in duurzaam materiaal — steen, brons of keramiek — zoals grafstenen, wetten of eerbewijzen.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-LIT-SCHRF",
@@ -778,100 +2314,549 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-LIT-SCHRF-001",
+          "knoop_ids": [
+            "SHA-C-LIT-SCHRF"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welk van deze materialen werd in de oudheid NIET gebruikt om op te schrijven?",
+            "options": [
+              "Papyrus",
+              "Wastafels",
+              "Perkament",
+              "Papier"
+            ]
+          },
+          "antwoord": "Papier",
+          "feedback": "Papier kwam pas na de oudheid in Europa in gebruik. In de klassieke wereld schreef men op papyrus, wastafels of perkament.",
+          "bron": "handmatig"
+        }
+      ]
     }
   ],
   "edges": [
-    {"source_id": "SHA-C-MYT-INTRO", "target_id": "SHA-C-MYT-SCHEP", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-MYT-SCHEP", "target_id": "SHA-C-MYT-OLYMP", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-ZEUS", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-HERA", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-POSEID", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-ATHENA", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-APOLLO", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-ARTEM", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-APHROD", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-HERMES", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-ARES", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-HEPHAI", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-DEMETR", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-HADES", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-INTRO", "target_id": "SHA-C-MYT-HELD", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-MYT-HELD", "target_id": "SHA-C-MYT-HERAKL", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-HELD", "target_id": "SHA-C-MYT-THESEU", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-INTRO", "target_id": "SHA-C-MYT-TROJE", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-MYT-TROJE", "target_id": "SHA-C-MYT-ODYSS", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-HELD", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-MYT-TROJE", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-MYT-HELD", "target_id": "SHA-C-MYT-TROJE", "type": "enrichment", "encompassing_weight": 0.2},
-
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-FAMIL", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-POL-FAMIL", "target_id": "SHA-C-POL-PATER", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-POL-FAMIL", "target_id": "SHA-C-POL-MATER", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-POL-FAMIL", "target_id": "SHA-C-POL-LIBERI", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-POL-FAMIL", "target_id": "SHA-C-POL-SERVUS", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-DOMUS", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-DOMUS", "target_id": "SHA-C-POL-INSULA", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-LUDUS", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-CENA", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-KLEED", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-THERM", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-LARES", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-PATRON", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-INTRO", "target_id": "SHA-C-POL-OTIUM", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-FAMIL", "target_id": "SHA-C-POL-DOMUS", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-DOMUS", "target_id": "SHA-C-POL-CENA", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-DOMUS", "target_id": "SHA-C-POL-LARES", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-SERVUS", "target_id": "SHA-C-POL-PATRON", "type": "enrichment", "encompassing_weight": 0.2},
-
-    {"source_id": "SHA-C-GES-INTRO", "target_id": "SHA-C-GES-STICHT", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-GES-STICHT", "target_id": "SHA-C-GES-KONIG", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-GES-KONIG", "target_id": "SHA-C-GES-REPUB", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-GES-SENAAT", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-GES-CONSUL", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-GES-COMITI", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-GES-PATRIC", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-GES-LEGIO", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-CONSUL", "target_id": "SHA-C-GES-MAGIST", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-CONSUL", "target_id": "SHA-C-GES-CURSUS", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-LEGIO", "target_id": "SHA-C-GES-CENTUR", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-GES-INTRO", "target_id": "SHA-C-GES-FORUM", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-INTRO", "target_id": "SHA-C-GES-VIA", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-GES-PROVNC", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-GES-SENAAT", "target_id": "SHA-C-GES-CURSUS", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-GES-MAGIST", "target_id": "SHA-C-GES-CURSUS", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-GES-LEGIO", "target_id": "SHA-C-GES-PROVNC", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-GES-FORUM", "type": "enrichment", "encompassing_weight": 0.2},
-
-    {"source_id": "SHA-C-POL-GRIEK", "target_id": "SHA-C-POL-POLIS", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-POL-POLIS", "target_id": "SHA-C-POL-AGORA", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-POLIS", "target_id": "SHA-C-POL-ACROP", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-POLIS", "target_id": "SHA-C-POL-DEMOC", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-GRIEK", "target_id": "SHA-C-POL-GYMNA", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-GRIEK", "target_id": "SHA-C-POL-SYMPO", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-GRIEK", "target_id": "SHA-C-POL-THEAT", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-GRIEK", "target_id": "SHA-C-POL-OLYMP", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-GRIEK", "target_id": "SHA-C-POL-OIKOS", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-POL-POLIS", "target_id": "SHA-C-POL-GYMNA", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-POLIS", "target_id": "SHA-C-POL-THEAT", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-AGORA", "target_id": "SHA-C-POL-DEMOC", "type": "enrichment", "encompassing_weight": 0.2},
-
-    {"source_id": "SHA-C-LIT-INTRO", "target_id": "SHA-C-LIT-GRALF", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-C-LIT-INTRO", "target_id": "SHA-C-LIT-LTALF", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-LIT-GRALF", "target_id": "SHA-C-LIT-LTALF", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-LIT-INTRO", "target_id": "SHA-C-LIT-INSCR", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-C-LIT-INTRO", "target_id": "SHA-C-LIT-SCHRF", "type": "prerequisite", "encompassing_weight": 0.3},
-
-    {"source_id": "SHA-C-MYT-ARES", "target_id": "SHA-C-GES-STICHT", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-MYT-OLYMP", "target_id": "SHA-C-POL-LARES", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-MYT-ATHENA", "target_id": "SHA-C-POL-ACROP", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-MYT-ZEUS", "target_id": "SHA-C-POL-OLYMP", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-POL-PATRON", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-GES-REPUB", "target_id": "SHA-C-POL-DEMOC", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-GES-FORUM", "target_id": "SHA-C-POL-AGORA", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-LUDUS", "target_id": "SHA-C-POL-GYMNA", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-LIT-GRALF", "target_id": "GRC-G-FONL-ALFA-INTRO", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-LUDUS", "target_id": "LAT-G-MORF-DECL-INTRO", "type": "enrichment", "encompassing_weight": 0.2},
-    {"source_id": "SHA-C-POL-GYMNA", "target_id": "GRC-G-FONL-KOMBI-LEESV", "type": "enrichment", "encompassing_weight": 0.2}
+    {
+      "source_id": "SHA-C-MYT-INTRO",
+      "target_id": "SHA-C-MYT-SCHEP",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-MYT-SCHEP",
+      "target_id": "SHA-C-MYT-OLYMP",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-ZEUS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-HERA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-POSEID",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-ATHENA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-APOLLO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-ARTEM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-APHROD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-HERMES",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-ARES",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-HEPHAI",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-DEMETR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-HADES",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-INTRO",
+      "target_id": "SHA-C-MYT-HELD",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-MYT-HELD",
+      "target_id": "SHA-C-MYT-HERAKL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-HELD",
+      "target_id": "SHA-C-MYT-THESEU",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-INTRO",
+      "target_id": "SHA-C-MYT-TROJE",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-MYT-TROJE",
+      "target_id": "SHA-C-MYT-ODYSS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-HELD",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-MYT-TROJE",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-MYT-HELD",
+      "target_id": "SHA-C-MYT-TROJE",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-FAMIL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-POL-FAMIL",
+      "target_id": "SHA-C-POL-PATER",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-POL-FAMIL",
+      "target_id": "SHA-C-POL-MATER",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-POL-FAMIL",
+      "target_id": "SHA-C-POL-LIBERI",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-POL-FAMIL",
+      "target_id": "SHA-C-POL-SERVUS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-DOMUS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-DOMUS",
+      "target_id": "SHA-C-POL-INSULA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-LUDUS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-CENA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-KLEED",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-THERM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-LARES",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-PATRON",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-INTRO",
+      "target_id": "SHA-C-POL-OTIUM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-FAMIL",
+      "target_id": "SHA-C-POL-DOMUS",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-DOMUS",
+      "target_id": "SHA-C-POL-CENA",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-DOMUS",
+      "target_id": "SHA-C-POL-LARES",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-SERVUS",
+      "target_id": "SHA-C-POL-PATRON",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-INTRO",
+      "target_id": "SHA-C-GES-STICHT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-GES-STICHT",
+      "target_id": "SHA-C-GES-KONIG",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-GES-KONIG",
+      "target_id": "SHA-C-GES-REPUB",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-GES-SENAAT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-GES-CONSUL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-GES-COMITI",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-GES-PATRIC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-GES-LEGIO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-CONSUL",
+      "target_id": "SHA-C-GES-MAGIST",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-CONSUL",
+      "target_id": "SHA-C-GES-CURSUS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-LEGIO",
+      "target_id": "SHA-C-GES-CENTUR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-GES-INTRO",
+      "target_id": "SHA-C-GES-FORUM",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-INTRO",
+      "target_id": "SHA-C-GES-VIA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-GES-PROVNC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-GES-SENAAT",
+      "target_id": "SHA-C-GES-CURSUS",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-MAGIST",
+      "target_id": "SHA-C-GES-CURSUS",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-LEGIO",
+      "target_id": "SHA-C-GES-PROVNC",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-GES-FORUM",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-GRIEK",
+      "target_id": "SHA-C-POL-POLIS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-POL-POLIS",
+      "target_id": "SHA-C-POL-AGORA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-POLIS",
+      "target_id": "SHA-C-POL-ACROP",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-POLIS",
+      "target_id": "SHA-C-POL-DEMOC",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-GRIEK",
+      "target_id": "SHA-C-POL-GYMNA",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-GRIEK",
+      "target_id": "SHA-C-POL-SYMPO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-GRIEK",
+      "target_id": "SHA-C-POL-THEAT",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-GRIEK",
+      "target_id": "SHA-C-POL-OLYMP",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-GRIEK",
+      "target_id": "SHA-C-POL-OIKOS",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-POL-POLIS",
+      "target_id": "SHA-C-POL-GYMNA",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-POLIS",
+      "target_id": "SHA-C-POL-THEAT",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-AGORA",
+      "target_id": "SHA-C-POL-DEMOC",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-LIT-INTRO",
+      "target_id": "SHA-C-LIT-GRALF",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-C-LIT-INTRO",
+      "target_id": "SHA-C-LIT-LTALF",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-LIT-GRALF",
+      "target_id": "SHA-C-LIT-LTALF",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-LIT-INTRO",
+      "target_id": "SHA-C-LIT-INSCR",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-LIT-INTRO",
+      "target_id": "SHA-C-LIT-SCHRF",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-C-MYT-ARES",
+      "target_id": "SHA-C-GES-STICHT",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-MYT-OLYMP",
+      "target_id": "SHA-C-POL-LARES",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-MYT-ATHENA",
+      "target_id": "SHA-C-POL-ACROP",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-MYT-ZEUS",
+      "target_id": "SHA-C-POL-OLYMP",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-POL-PATRON",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-REPUB",
+      "target_id": "SHA-C-POL-DEMOC",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-GES-FORUM",
+      "target_id": "SHA-C-POL-AGORA",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-LUDUS",
+      "target_id": "SHA-C-POL-GYMNA",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-LIT-GRALF",
+      "target_id": "GRC-G-FONL-ALFA-INTRO",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-LUDUS",
+      "target_id": "LAT-G-MORF-DECL-INTRO",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    },
+    {
+      "source_id": "SHA-C-POL-GYMNA",
+      "target_id": "GRC-G-FONL-KOMBI-LEESV",
+      "type": "enrichment",
+      "encompassing_weight": 0.2
+    }
   ]
 }
