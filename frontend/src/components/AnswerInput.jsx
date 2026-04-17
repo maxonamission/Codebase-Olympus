@@ -33,7 +33,7 @@ export default function AnswerInput({ question, onAnswer, disabled }) {
   if (isMultipleChoice) {
     return (
       <div className="answer-input">
-        <p className="answer-instruction">Kies het juiste antwoord:</p>
+        <p className="answer-instruction">{question.instruction || 'Kies het juiste antwoord:'}</p>
         <div className="mc-options">
           {question.options.map((option, i) => (
             <button
@@ -53,6 +53,9 @@ export default function AnswerInput({ question, onAnswer, disabled }) {
   if (isTextInput) {
     return (
       <div className="answer-input">
+        {question.instruction && (
+          <p className="answer-instruction">{question.instruction}</p>
+        )}
         <form onSubmit={handleTextSubmit}>
           <div className="form-group">
             <label htmlFor="answer-text">Jouw antwoord:</label>
@@ -75,6 +78,9 @@ export default function AnswerInput({ question, onAnswer, disabled }) {
                 autoFocus
                 autoComplete="off"
               />
+            )}
+            {question.hint && (
+              <p className="answer-hint">Hint (Nederlands): <strong>{question.hint}</strong></p>
             )}
           </div>
           <button

@@ -45,6 +45,14 @@ class QuestionResponse(BaseModel):
         default=None,
         description="Markdown grammar explanation for context-first scaffolding",
     )
+    # Promoted from the first item so the frontend can read a flat shape
+    # (question.item_type / question.options / ...) instead of digging into
+    # items[0].stimulus.
+    item_type: Optional[str] = None
+    instruction: Optional[str] = None
+    options: Optional[list[str]] = None
+    hint: Optional[str] = None
+    audio_ref: Optional[str] = None
 
 
 class StartSessionResponse(BaseModel):
