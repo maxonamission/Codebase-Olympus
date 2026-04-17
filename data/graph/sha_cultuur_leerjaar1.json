@@ -1810,7 +1810,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-GRIEK-001",
+          "knoop_ids": [
+            "SHA-C-POL-GRIEK"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke sociale eenheid staat centraal in het Griekse leven?",
+            "options": [
+              "Het koninkrijk",
+              "De polis",
+              "De familia",
+              "Het legioen"
+            ]
+          },
+          "antwoord": "De polis",
+          "feedback": "In de Griekse wereld is de polis — de stadstaat — de kern van politiek, religie en samenleving.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-POLIS",
@@ -1822,7 +1846,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-POLIS-001",
+          "knoop_ids": [
+            "SHA-C-POL-POLIS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is een polis?",
+            "options": [
+              "Een stadstaat met eigen bestuur en wetten",
+              "Een tempelcomplex",
+              "Een militair kamp",
+              "Een Romeinse kolonie"
+            ]
+          },
+          "antwoord": "Een stadstaat met eigen bestuur en wetten",
+          "feedback": "De polis is een onafhankelijke stadstaat met eigen wetten, bestuur en identiteit.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-AGORA",
@@ -1834,7 +1882,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-AGORA-001",
+          "knoop_ids": [
+            "SHA-C-POL-AGORA"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat was de hoofdfunctie van de agora?",
+            "options": [
+              "Begraafplaats",
+              "Uitsluitend een militaire basis",
+              "Markt- en ontmoetingsplaats en politiek centrum",
+              "Een heilig bos"
+            ]
+          },
+          "antwoord": "Markt- en ontmoetingsplaats en politiek centrum",
+          "feedback": "De agora was het centrale plein: markt, ontmoetingsplaats en politiek centrum (volksvergadering).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-ACROP",
@@ -1846,7 +1918,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-ACROP-001",
+          "knoop_ids": [
+            "SHA-C-POL-ACROP"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Welke tempel op de Atheense Acropolis is gewijd aan Athena?",
+            "options": [
+              "Het Erechtheion",
+              "Het Parthenon",
+              "De Tholos",
+              "Het Hephaisteion"
+            ]
+          },
+          "antwoord": "Het Parthenon",
+          "feedback": "Het Parthenon op de Acropolis van Athene is gewijd aan Athena Parthenos.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-DEMOC",
@@ -1858,7 +1954,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-DEMOC-001",
+          "knoop_ids": [
+            "SHA-C-POL-DEMOC"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Door wie is de Atheense democratie grotendeels ingevoerd?",
+            "options": [
+              "Solon",
+              "Perikles",
+              "Kleisthenes",
+              "Themistokles"
+            ]
+          },
+          "antwoord": "Kleisthenes",
+          "feedback": "Kleisthenes voerde rond 508 v.Chr. de democratische hervormingen door die de directe democratie in Athene vestigden.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-GYMNA",
@@ -1870,7 +1990,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-GYMNA-001",
+          "knoop_ids": [
+            "SHA-C-POL-GYMNA"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat deed men vooral in het Griekse gymnasium?",
+            "options": [
+              "Handel drijven",
+              "Lichaamstraining én intellectuele vorming",
+              "Strafprocessen voeren",
+              "Begrafenissen voorbereiden"
+            ]
+          },
+          "antwoord": "Lichaamstraining én intellectuele vorming",
+          "feedback": "Het gymnasium was trainingsplaats voor atletiek én voor intellectuele en filosofische vorming.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-SYMPO",
@@ -1882,7 +2026,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-SYMPO-001",
+          "knoop_ids": [
+            "SHA-C-POL-SYMPO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wie namen typisch deel aan een symposion?",
+            "options": [
+              "Mannelijke burgers",
+              "Alleen slaven",
+              "Uitsluitend priesters",
+              "Alleen buitenlanders"
+            ]
+          },
+          "antwoord": "Mannelijke burgers",
+          "feedback": "Een symposion was een drinkgelag voor mannelijke burgers, met muziek, poëzie en filosofisch gesprek.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-THEAT",
@@ -1894,7 +2062,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-THEAT-001",
+          "knoop_ids": [
+            "SHA-C-POL-THEAT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Ter ere van welke god werd het Griekse theater georganiseerd?",
+            "options": [
+              "Apollo",
+              "Zeus",
+              "Dionysos",
+              "Hermes"
+            ]
+          },
+          "antwoord": "Dionysos",
+          "feedback": "De tragedies en komedies werden opgevoerd tijdens de feesten voor Dionysos.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-OLYMP",
@@ -1906,7 +2098,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-OLYMP-001",
+          "knoop_ids": [
+            "SHA-C-POL-OLYMP"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Waar en om de hoeveel jaar werden de Olympische Spelen gehouden?",
+            "options": [
+              "Athene, jaarlijks",
+              "Olympia, elke vier jaar",
+              "Delphi, elke vier jaar",
+              "Sparta, elke acht jaar"
+            ]
+          },
+          "antwoord": "Olympia, elke vier jaar",
+          "feedback": "De Olympische Spelen vonden elke vier jaar plaats in Olympia, ter ere van Zeus, met een heilige wapenstilstand.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-POL-OIKOS",
@@ -1918,7 +2134,31 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-SHA-C-POL-OIKOS-001",
+          "knoop_ids": [
+            "SHA-C-POL-OIKOS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is de oikos?",
+            "options": [
+              "Een tempel",
+              "Een Griekse marktplaats",
+              "Het Griekse huishouden als economische en sociale eenheid",
+              "De volksvergadering"
+            ]
+          },
+          "antwoord": "Het Griekse huishouden als economische en sociale eenheid",
+          "feedback": "De oikos is het huishouden onder de kyrios — de economische en sociale basiseenheid van de Griekse samenleving.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "SHA-C-LIT-INTRO",
