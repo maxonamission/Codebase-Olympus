@@ -503,16 +503,50 @@ Bronnen en leads:
 
 ## Epic E3: Items en content voor Grieks + vocabulaire
 
-**Doel:** C1/C2 dekken alleen Latijnse grammatica. Grieks en vocabulaire hebben ook items en content nodig voor een volwaardige ervaring.
-**Afhankelijkheden:** A2, A3 done (Griekse knopen bestaan)
+**Doel:** C1/C2 dekken alleen Latijnse grammatica. Grieks en vocabulaire hebben ook items en content nodig voor een volwaardige ervaring. Parallelstructuur met C1 (items) en C2 (content) voor Latijn.
+**Geschat:** 19 stories, ~400 GRC-G-items, ~900 extra V-items, ~40 GRC-markdowns, ~60 SHA-C-markdowns
+**Afhankelijkheden:** A2, A3 done (Griekse knopen bestaan); F1-01 + F1-03 wenselijk (rendering werkt); F1-08 voor cultuur (items-basis)
 **Status:** todo
 
-Scope:
-- Items genereren voor GRC-G knopen (~100 knopen, ~400 items)
-- Items genereren voor GRC-alfabet knopen (~47 knopen, ~150 items)
-- Items genereren voor LAT-V en GRC-V knopen (~450 knopen, vocabulaire-drill)
-- Content schrijven voor GRC-G kernknopen (paradigmatabellen, uitleg)
-- Content schrijven voor cultuurknopen (SHA-C)
+### Items — GRC grammatica (analoog aan C1)
+
+| Story | Titel | Geschat | Status |
+|-------|-------|---------|--------|
+| E3-01 | Items voor GRC alfabet — restknopen (INTRO, groepen, diakritiek, combinaties) | ~60 items | todo |
+| E3-02 | Items voor GRC-conceptknopen (naamval/genus/declinatie/tempus-INTRO's) | ~25 items | todo |
+| E3-03 | Items voor GRC 1e declinatie (α/η-stammen) | ~30 items | todo |
+| E3-04 | Items voor GRC 2e declinatie (ο-stammen m/n) | ~30 items | todo |
+| E3-05 | Items voor GRC 3e declinatie (πᾶς, σώφρων) | ~25 items | todo |
+| E3-06 | Items voor GRC adjectieven (α/ο-stam + medeklinkerstam) | ~25 items | todo |
+| E3-07 | Items voor GRC praesens actief (thematisch + contracta + εἰμί) | ~40 items | todo |
+| E3-08 | Items voor GRC imperfectum + augment | ~30 items | todo |
+| E3-09 | Items voor GRC aoristus (sigmatisch + thematisch) | ~30 items | todo |
+| E3-10 | Items voor GRC pronomina (persoonlijk, bezittelijk, aanwijzend) | ~30 items | todo |
+| E3-11 | Items voor GRC voorzetsels + basissyntaxis | ~30 items | todo |
+| E3-12 | Validatie — dekking, IRT-params, oefentype-mix (GRC) | — | todo |
+
+### Content — GRC grammatica (analoog aan C2)
+
+| Story | Titel | Geschat | Status |
+|-------|-------|---------|--------|
+| E3-13 | Content voor GRC concept-INTRO knopen | ~10 bestanden | todo |
+| E3-14 | Content voor GRC declinatie-paradigma's | ~8 bestanden | todo |
+| E3-15 | Content voor GRC werkwoord-paradigma's | ~10 bestanden | todo |
+| E3-16 | Content voor GRC syntaxis | ~6 bestanden | todo |
+| E3-17 | Content voor GRC pronomina + adjectieven | ~6 bestanden | todo |
+
+### Cultuur en vocabulaire
+
+| Story | Titel | Geschat | Status |
+|-------|-------|---------|--------|
+| E3-18 | Content voor cultuurknopen (SHA-C) | ~60 bestanden | todo |
+| E3-19 | Vocabulaire — item-mix verrijken (NL↔lemma, stamtijd-items) | ~900 items | todo |
+
+**Verhouding tot andere epics:**
+- **F1-01 en F1-03** moeten draaien voordat GRC-items en -markdowns nut hebben op het scherm.
+- **F1-08** levert minimum-oefenbaarheid voor cultuurknopen; E3-18 voegt didactische verdieping toe.
+- **F1-11** dekkingsrapport geeft tussentijds voortgangsmeetpunt; E3-12 gebruikt ditzelfde script.
+- **E2** (echte TTS) is nodig voor audio-items: GRC-stem van espeak-ng is de lead.
 
 ---
 
