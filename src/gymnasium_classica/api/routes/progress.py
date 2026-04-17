@@ -8,6 +8,8 @@ from fastapi import APIRouter, Depends, HTTPException, Request
 from gymnasium_classica.api.auth import get_current_user_id
 from gymnasium_classica.api.database import load_learner_model
 from gymnasium_classica.api.schemas import (
+    ClusterProgress,
+    ClustersResponse,
     DomainProgress,
     GraphDataResponse,
     GraphEdge,
@@ -17,7 +19,7 @@ from gymnasium_classica.api.schemas import (
     ProgressOverviewResponse,
     SessionMasteryEntry,
 )
-from gymnasium_classica.models.graph import PrerequisiteEdge
+from gymnasium_classica.models.graph import KnoopType, PrerequisiteEdge
 from gymnasium_classica.models.graph import KennisKnoop
 from gymnasium_classica.models.learner import LearnerModel
 from gymnasium_classica.scheduling.priority import MASTERY_THRESHOLD
@@ -214,6 +216,70 @@ async def knoop_progress(
             for ir in state.item_history
         ],
     )
+
+
+@router.get("/clusters", response_model=ClustersResponse)
+async def progress_clusters(
+    request: Request,
+    user_id: str = Depends(get_current_user_id),
+):
+    """Return vocabulary progress grouped by semantic cluster.
+
+    Each cluster from ``data/vocabulaire_clusters.json`` is returned
+    together with the count of V-knopen that carry the matching
+    ``semantisch_cluster`` label and the learner's mastery status
+    for those nodes.
+    """
+    graph: nx.DiGraph = request.app.state.graph
+    cluster_defs: list[dict] = getattr(request.app.state, "clusters", []) or []
+
+    db = request.app.state.db
+    learner = load_learner_model(db, user_id)
+
+    nodes_per_cluster: dict[str, list[str]] = {
+        c["label"]: [] for c in cluster_defs
+    }
+    for node_id in graph.nodes:
+        knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+        if knoop.type != KnoopType.V:
+            continue
+        label = knoop.semantisch_cluster
+        if not label or label not in nodes_per_cluster:
+            continue
+        nodes_per_cluster[label].append(node_id)
+
+    results: list[ClusterProgress] = []
+    for c in cluster_defs:
+        label = c["label"]
+        node_ids = nodes_per_cluster.get(label, [])
+        total = len(node_ids)
+        mastered = 0
+        in_progress = 0
+        for node_id in node_ids:
+            state = None
+            if learner is not None:
+                state = learner.knoop_states.get(node_id)
+            if state is None or state.posterior_mastery < _IN_PROGRESS_FLOOR:
+                continue
+            if state.posterior_mastery >= MASTERY_THRESHOLD:
+                mastered += 1
+            else:
+                in_progress += 1
+        unseen = total - mastered - in_progress
+        pct = round(100.0 * mastered / total, 1) if total > 0 else 0.0
+        results.append(
+            ClusterProgress(
+                label=label,
+                beschrijving=c.get("beschrijving", ""),
+                total=total,
+                mastered=mastered,
+                in_progress=in_progress,
+                unseen=unseen,
+                mastered_pct=pct,
+            )
+        )
+
+    return ClustersResponse(clusters=results)
 
 
 @router.get("/graph", response_model=GraphDataResponse)
