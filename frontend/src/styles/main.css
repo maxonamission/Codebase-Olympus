@@ -1386,3 +1386,50 @@ h2 {
   font-size: 0.85rem;
   color: var(--error);
 }
+
+/* Woordkaart — structured vocab-metadata op het feedback-scherm */
+.woordkaart {
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: 6px;
+}
+
+.woordkaart-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.woordkaart-lemma {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--primary);
+}
+
+.woordkaart-pos {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.woordkaart-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.2rem 0.75rem;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.woordkaart-grid dt {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.woordkaart-grid dd {
+  margin: 0;
+  color: var(--text);
+}

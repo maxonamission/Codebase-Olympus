@@ -34,6 +34,31 @@ class ItemInfo(BaseModel):
     verwachte_tijd_sec: int
 
 
+class VocabMetadata(BaseModel):
+    """Structured lemma-metadata for V-knopen (F1-05).
+
+    Mirrors :class:`VocabEntry` in ``vocab/loader.py`` but uses full-word
+    field names so the frontend doesn't need to understand the compact
+    JSON-source vocabulary (``pos`` → ``part_of_speech`` etc.).
+    """
+
+    lemma: str
+    part_of_speech: str
+    conjugation: Optional[str] = None
+    forms: Optional[str] = Field(
+        default=None,
+        description=(
+            "For nouns/adjectives: genitive form.  For verbs: stamtijden. "
+            "For prepositions: governed case(s)."
+        ),
+    )
+    meaning: str
+    cluster: Optional[str] = Field(
+        default=None,
+        description="Semantisch cluster label, or None.",
+    )
+
+
 class QuestionResponse(BaseModel):
     knoop_id: str
     titel: str
@@ -44,6 +69,10 @@ class QuestionResponse(BaseModel):
     scaffolding_content: Optional[str] = Field(
         default=None,
         description="Markdown grammar explanation for context-first scaffolding",
+    )
+    vocab_metadata: Optional[VocabMetadata] = Field(
+        default=None,
+        description="Structured metadata for V-knopen (F1-05 — woordkaart).",
     )
     # Promoted from the first item so the frontend can read a flat shape
     # (question.item_type / question.options / ...) instead of digging into

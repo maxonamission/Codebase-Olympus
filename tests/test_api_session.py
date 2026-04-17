@@ -182,6 +182,53 @@ class TestSubmitAnswer:
         )
         assert resp.status_code == 422
 
+    def test_v_knoop_response_includes_vocab_metadata(self, client):
+        """F1-05: een V-knoop in de response krijgt vocab_metadata."""
+        from gymnasium_classica.api.routes.session import _question_to_response
+        from gymnasium_classica.api.session_manager import Question
+        from gymnasium_classica.vocab.loader import VocabEntry
+
+        lookup = {
+            "LAT-V-F01-SUM": VocabEntry(
+                lemma="sum",
+                id="SUM",
+                pos="verb",
+                conj="irreg",
+                gen="esse",
+                mean="zijn",
+                cl=None,
+            ),
+        }
+        q = Question(
+            knoop_id="LAT-V-F01-SUM",
+            titel="sum — zijn",
+            beschrijving="",
+            stimulus="Wat betekent sum?",
+            phase="warmup",
+        )
+        resp = _question_to_response(q, lookup)
+        assert resp is not None
+        assert resp.vocab_metadata is not None
+        assert resp.vocab_metadata.lemma == "sum"
+        assert resp.vocab_metadata.part_of_speech == "verb"
+        assert resp.vocab_metadata.forms == "esse"
+        assert resp.vocab_metadata.meaning == "zijn"
+
+    def test_non_v_knoop_response_has_no_vocab_metadata(self, client):
+        from gymnasium_classica.api.routes.session import _question_to_response
+        from gymnasium_classica.api.session_manager import Question
+
+        q = Question(
+            knoop_id="LAT-G-MORF-NOM-D1",
+            titel="Nominativus D1",
+            beschrijving="",
+            stimulus="",
+            phase="warmup",
+        )
+        resp = _question_to_response(q, {})
+        assert resp is not None
+        assert resp.vocab_metadata is None
+
     def test_answer_wrong_user(self, client):
         # User 1 starts a session
         h1 = _auth_header(client, "user1@example.nl")
