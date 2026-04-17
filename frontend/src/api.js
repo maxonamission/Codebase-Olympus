@@ -50,14 +50,24 @@ export function startSession() {
   return apiFetch('/session/start', { method: 'POST' });
 }
 
-export function submitAnswer(sessionId, { responseType, responseTimeMs, answer }) {
+/**
+ * Submit an answer to the current session question.
+ *
+ * Two shapes:
+ * - { answerText, responseTimeMs }: literal answer, server grades.
+ * - { response, responseTimeMs }: self-assess outcome ('correct',
+ *   'slow_correct' or 'incorrect').
+ */
+export function submitAnswer(sessionId, { answerText, response, responseTimeMs }) {
+  const body = {
+    session_id: sessionId,
+    response_time_ms: responseTimeMs,
+  };
+  if (answerText != null) body.answer_text = answerText;
+  if (response != null) body.response = response;
   return apiFetch('/session/answer', {
     method: 'POST',
-    body: JSON.stringify({
-      session_id: sessionId,
-      response: responseType,
-      response_time_ms: responseTimeMs,
-    }),
+    body: JSON.stringify(body),
   });
 }
 

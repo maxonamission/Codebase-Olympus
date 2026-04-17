@@ -18,8 +18,9 @@ import networkx as nx
 
 CONTENT_DIR = Path("data/content")
 
-from gymnasium_classica.models.graph import KennisKnoop
+from gymnasium_classica.models.graph import Item, KennisKnoop
 from gymnasium_classica.models.learner import (
+    ItemResponse,
     LearnerModel,
     OfflineAssignment,
     ResponseType,
@@ -46,7 +47,14 @@ from gymnasium_classica.scheduling.session import (
     _process_response,
     select_passage,
 )
+from gymnasium_classica.scheduling.grading import canonical_expected_answer, grade_answer
 from gymnasium_classica.scheduling.sm2 import sm2_update
+
+
+# Learners get the "slow_correct" label when they answer correctly but
+# took more than this factor times the item's expected duration.  Tuned
+# loosely; can be revisited when telemetry is available.
+SLOW_FACTOR: float = 1.5
 
 
 # -- Data classes for the step-by-step protocol --
@@ -157,6 +165,63 @@ def _generate_self_assess_prompt(knoop: KennisKnoop) -> str:
         return f"Kun je het volgende uitleggen: {titel}?"
     else:
         return f"Beheers je het volgende concept: {titel}?"
+
+
+def _build_item_response(
+    *,
+    item: Item | None,
+    knoop: KennisKnoop,
+    answer_text: str | None,
+    correct: bool,
+    response_time_ms: int,
+    now: datetime,
+) -> ItemResponse:
+    """Construct an ItemResponse snapshotting knoop/item state at attempt-time."""
+    return ItemResponse(
+        timestamp=now,
+        item_id=item.id if item is not None else f"{knoop.id}:self-assess",
+        correct=correct,
+        response_time_ms=response_time_ms,
+        answer_text=answer_text,
+        correct_answer=canonical_expected_answer(item) if item is not None else None,
+        item_type=item.type.value if item is not None else None,
+    )
+
+
+def _grade_and_record(
+    *,
+    item: Item,
+    knoop: KennisKnoop,
+    answer_text: str,
+    response_time_ms: int,
+    now: datetime,
+) -> tuple[ResponseType, ItemResponse]:
+    """Grade a literal answer and produce the ItemResponse to record.
+
+    Returns the derived ResponseType (with slow_correct when the learner
+    took longer than :data:`SLOW_FACTOR` × the item's expected duration)
+    and the ItemResponse that should be appended to item_history.
+    """
+    grading = grade_answer(answer_text, item, knoop.taal)
+    if grading.correct:
+        threshold_ms = int(SLOW_FACTOR * item.verwachte_tijd_sec * 1000)
+        response = (
+            ResponseType.SLOW_CORRECT
+            if response_time_ms > threshold_ms
+            else ResponseType.CORRECT
+        )
+    else:
+        response = ResponseType.INCORRECT
+
+    item_response = _build_item_response(
+        item=item,
+        knoop=knoop,
+        answer_text=answer_text,
+        correct=grading.correct,
+        response_time_ms=response_time_ms,
+        now=now,
+    )
+    return response, item_response
 
 
 def _passage_to_question(passage: Passage, phase: SessionPhase) -> Question:
@@ -360,19 +425,31 @@ class SessionManager:
     def submit_answer(
         self,
         session_id: str,
-        response: ResponseType,
+        response: ResponseType | None,
         response_time_ms: int,
         now: datetime | None = None,
+        *,
+        answer_text: str | None = None,
     ) -> AnswerResult:
         """Process an answer and return feedback + next question.
+
+        Two paths:
+
+        * *answer_text* is supplied → the server grades it against the
+          current knoop's first item via :func:`grade_answer` and derives
+          the ``ResponseType`` itself.  ``response`` may be ``None``.
+        * *answer_text* is ``None`` → this is a self-assessment outcome;
+          the caller tells us whether the learner reports themselves as
+          correct/slow_correct/incorrect and ``response`` is required.
+
+        Either way the raw answer and the expected answer at time of
+        attempt are snapshotted on the resulting ``ItemResponse``.
 
         Raises KeyError if session_id is unknown.
         Raises ValueError if session is already finished or no question is pending.
 
         For passage questions (context-first reading step), BKT is skipped:
         the passage is not a knowledge node, so no mastery update occurs.
-        The response is acknowledged and the session advances to the
-        grammar scaffolding nodes from that passage.
         """
         state = self._sessions[session_id]
         if state.finished:
@@ -415,8 +492,52 @@ class SessionManager:
         knoop_id = knoop.id
         before = state.current_before
 
+        # Derive the response from grading when a literal answer was
+        # supplied; otherwise trust the self-assess value from the caller.
+        item = knoop.items[0] if knoop.items else None
+        if answer_text is not None:
+            if item is None:
+                # No gradeable item on this knoop — fall back to incorrect.
+                response = ResponseType.INCORRECT
+                item_response = _build_item_response(
+                    item=None,
+                    knoop=knoop,
+                    answer_text=answer_text,
+                    correct=False,
+                    response_time_ms=response_time_ms,
+                    now=now,
+                )
+            else:
+                response, item_response = _grade_and_record(
+                    item=item,
+                    knoop=knoop,
+                    answer_text=answer_text,
+                    response_time_ms=response_time_ms,
+                    now=now,
+                )
+        else:
+            if response is None:
+                raise ValueError(
+                    "submit_answer requires either answer_text or response"
+                )
+            item_response = _build_item_response(
+                item=item,
+                knoop=knoop,
+                answer_text=None,
+                correct=response in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT),
+                response_time_ms=response_time_ms,
+                now=now,
+            )
+
         # Process the response (BKT + SM-2 + conditional completion)
-        _process_response(state.learner, state.graph, knoop_id, response, now)
+        _process_response(
+            state.learner,
+            state.graph,
+            knoop_id,
+            response,
+            now,
+            item_response=item_response,
+        )
         after = _get_state_posterior(state.learner, knoop_id)
 
         # Record results

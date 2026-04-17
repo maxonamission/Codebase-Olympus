@@ -136,6 +136,52 @@ class TestSubmitAnswer:
         )
         assert resp.status_code == 422
 
+    def test_answer_text_is_server_graded(self, client):
+        """F1-12: posting answer_text lets the server grade the response."""
+        headers = _auth_header(client)
+        start = client.post("/session/start", headers=headers).json()
+        session_id = start["session_id"]
+        q = start["question"]
+        if q is None:
+            pytest.skip("No question available in graph")
+
+        expected = None
+        if q.get("items"):
+            expected = q["items"][0].get("feedback")  # placeholder
+        # Use the first item's canonical expected answer via options/hint:
+        # easiest reliable hook is question.options when present (MC).
+        if q.get("options"):
+            expected = q["options"][0]  # not necessarily correct; see below
+
+        # We don't know the correct answer from the wire, so we post a
+        # deliberately-wrong answer and assert the server still accepts
+        # and grades it (incorrect).  That covers the contract.
+        resp = client.post(
+            "/session/answer",
+            json={
+                "session_id": session_id,
+                "answer_text": "this-is-definitely-not-correct-xyz",
+                "response_time_ms": 2000,
+            },
+            headers=headers,
+        )
+        assert resp.status_code == 200, resp.text
+        data = resp.json()
+        assert data["feedback"]["correct"] is False
+        assert data["feedback"]["response_type"] == "incorrect"
+
+    def test_answer_requires_response_or_answer_text(self, client):
+        headers = _auth_header(client)
+        start = client.post("/session/start", headers=headers).json()
+        session_id = start["session_id"]
+
+        resp = client.post(
+            "/session/answer",
+            json={"session_id": session_id, "response_time_ms": 1000},
+            headers=headers,
+        )
+        assert resp.status_code == 422
+
     def test_answer_wrong_user(self, client):
         # User 1 starts a session
         h1 = _auth_header(client, "user1@example.nl")

@@ -38,6 +38,24 @@ class ItemResponse(BaseModel):
     item_id: str
     correct: bool
     response_time_ms: int = Field(ge=0)
+    answer_text: Optional[str] = Field(
+        default=None,
+        description=(
+            "Raw answer the learner typed or selected.  None when the "
+            "response came from self-assessment (no literal answer)."
+        ),
+    )
+    correct_answer: Optional[str] = Field(
+        default=None,
+        description=(
+            "Snapshot of the expected answer at the time of the attempt, "
+            "so later analysis doesn't break when items are rewritten."
+        ),
+    )
+    item_type: Optional[str] = Field(
+        default=None,
+        description="ItemType value at attempt-time (herkenning, productie, ...).",
+    )
 
 
 class KnoopState(BaseModel):
