@@ -8,15 +8,15 @@ auteur: handmatig
 
 ## Waar gaat het over?
 
-De **ablativus** (de vijfde naamval) is de veelzijdigste naamval van
-het Latijn. Hij bestaat niet in het Nederlands, en vertaalt daarom ook
-niet met één vast woordje: afhankelijk van de context wordt het **met**,
-**door**, **vanaf**, **op**, of **in**. Je herkent de ablativus aan zijn
-rol in de zin én aan het voorzetsel dat ervoor staat.
+De **ablativus** (de vijfde naamval) is de veelzijdigste naamval
+van het Latijn. Hij bestaat niet in het Nederlands en vertaalt
+daarom niet met één vast woordje: afhankelijk van de context wordt
+het *met, door, vanaf, op, in* of *uit*. Je herkent de ablativus
+aan zijn rol in de zin én aan het voorzetsel dat ervoor staat.
 
 ## Waar gebruik je 'm voor?
 
-### 1. Middel (ablativus instrumenti)
+### 1. Middel (ablativus instrumentalis)
 
 **Waarmee** gebeurt iets? Geen voorzetsel nodig.
 
@@ -37,49 +37,56 @@ rol in de zin én aan het voorzetsel dat ervoor staat.
 
 ### 4. Tijd (ablativus temporis)
 
-**Wanneer** gebeurt iets? Zonder voorzetsel.
+**Wanneer** of binnen welke tijd gebeurt iets? Zonder voorzetsel.
 
-- ***Aestate** Romani ad mare eunt.* — **In de zomer** gaan de Romeinen
-  naar zee.
+- ***Aestate** Romani ad mare eunt.* — **In de zomer** gaan de
+  Romeinen naar zee.
 
 ### 5. Vanwaar (ablativus separativus)
 
-**Vanwaar** of **vanwaar vandaan**? Vaak met *ab*, *ex* of *de*.
+Vaak met *a/ab, e/ex, de*.
 
-- *Milites **ex urbe** veniunt.* — De soldaten komen **uit de stad**.
+- *Milites **ex urbe** veniunt.* — De soldaten komen **uit de
+  stad**.
 
-### 6. Na bepaalde voorzetsels
+### 6. Manier en begeleiding
 
-De voorzetsels *ab* (vanaf), *cum* (met), *de* (vanaf, over), *ex* (uit),
-*in* (binnenin), *sine* (zonder), *sub* (onder) vragen altijd om een
+**Hoe** of **met wie**? Met *cum* wijst het op gezelschap.
+
+- *Venit **cum amicis**.* — Hij komt **met vrienden**.
+
+### 7. Na bepaalde voorzetsels
+
+*ab* (vanaf), *cum* (met), *de* (vanaf, over), *ex* (uit), *in*
+(binnenin), *sine* (zonder), *sub* (onder) vragen altijd om een
 ablativus.
-
-- *Venio **cum amicis**.* — Ik kom **met vrienden**.
 
 ## Hoe herken je 'm?
 
-- Geen makkelijke vaste uitgang, maar let op: **-ā** (1e groep),
-  **-ō** (2e groep), **-e** of **-ī** (3e groep), **-īs** of **-ibus**
-  (meervouden).
-- Zie je een van deze voorzetsels — *ab, cum, de, ex, in (plaats), sine,
-  sub* — dan volgt een ablativus.
-- Vraag je af: *waarmee? waarom? waar? wanneer? waarvandaan?* Bij elk
-  van die vragen kom je bij de ablativus uit.
+- Uitgangen: **-ā** (1e groep), **-ō** (2e groep), **-e** of **-ī**
+  (3e groep), **-īs** of **-ibus** (meervouden).
+- Zie je een van de voorzetsels *ab, cum, de, ex, in (plaats),
+  sine, sub*? Dan volgt een ablativus.
+- Vraag je af: *waarmee? waarom? waar? wanneer? waarvandaan?* Bij
+  elk van die vragen kom je bij de ablativus uit.
 
-> Let op: *in* + ablativus = **binnenin** (plaats), *in* + accusativus =
-> **naar binnen** (richting). Dezelfde prepositie, andere betekenis.
+> Let op: *in* + ablativus = **binnenin** (plaats), *in* + accusativus
+> = **naar binnen** (richting). Dezelfde prepositie, andere
+> betekenis.
 
 ## Begrippen uit deze uitleg
 
 - **ablativus** — de vijfde naamval; bestaat niet in het Nederlands.
-- **middel (instrumenti)** — waarmee iets gedaan wordt.
-- **oorzaak (causae)** — waardoor iets gebeurt.
-- **separativus** — vanwaar iets komt of afkomstig is.
+- **instrumentalis** — ablativus van middel; *waarmee?*
+- **causae** — van oorzaak; *waardoor?*
+- **loci / temporis** — van plaats en tijd.
+- **separativus** — van scheiding; *waarvandaan?*
 
 ## Verder lezen
 
-- [Voorzetsels inleiding](LAT-G-SYNT-PREP-INTRO.md) — welke naamval bij
-  welk voorzetsel
-- [Voorzetsel *in*](LAT-G-SYNT-PREP-IN.md) — verschil acc. versus abl.
+- [Voorzetsels inleiding](LAT-G-SYNT-PREP-INTRO.md) — welke naamval
+  bij welk voorzetsel
+- [Voorzetsel *in*](LAT-G-SYNT-PREP-IN.md) — verschil acc. versus
+  abl.
 - [Functie van de accusativus](LAT-G-SYNT-ACC-FUNCTIE.md) — richting
   tegenover plaats
