@@ -8,6 +8,7 @@ import AnswerInput from '../components/AnswerInput'
 import FeedbackCard from '../components/FeedbackCard'
 import SessionSummary from '../components/SessionSummary'
 import PassageReader from '../components/PassageReader'
+import ScaffoldingPanel from '../components/ScaffoldingPanel'
 
 /**
  * Detect whether a question is a passage reading step.
@@ -177,6 +178,9 @@ export default function Session() {
             />
           ) : (
             <>
+              {question.scaffolding_content && (
+                <ScaffoldingPanel content={question.scaffolding_content} />
+              )}
               <QuestionCard
                 question={question}
                 showDescription={false}
