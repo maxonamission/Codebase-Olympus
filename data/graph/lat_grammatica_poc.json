@@ -448,6 +448,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-NOM-D1.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-NOM-D1-001",
@@ -509,6 +510,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-GEN-D1.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-GEN-D1-001",
@@ -569,6 +571,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-DAT-D1.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-DAT-D1-001",
@@ -627,6 +630,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-ACC-D1.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-ACC-D1-001",
@@ -685,6 +689,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-ABL-D1.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-ABL-D1-001",
@@ -805,6 +810,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-NOM-D2.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-NOM-D2-001",
@@ -865,6 +871,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-GEN-D2.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-GEN-D2-001",
@@ -923,6 +930,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-DAT-D2.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-DAT-D2-001",
@@ -981,6 +989,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-ACC-D2.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-ACC-D2-001",
@@ -1039,6 +1048,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-ABL-D2.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-ABL-D2-001",
@@ -1097,6 +1107,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-VOC-D2.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-VOC-D2-001",
@@ -1216,6 +1227,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-SYNT-ACC-FUNCTIE.md",
       "items": [
         {
           "id": "ITEM-LAT-G-SYNT-ACC-FUNCTIE-001",
@@ -1276,6 +1288,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-SYNT-GEN-FUNCTIE.md",
       "items": [
         {
           "id": "ITEM-LAT-G-SYNT-GEN-FUNCTIE-001",
@@ -1336,6 +1349,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-SYNT-DAT-FUNCTIE.md",
       "items": [
         {
           "id": "ITEM-LAT-G-SYNT-DAT-FUNCTIE-001",
@@ -1396,6 +1410,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-SYNT-ABL-FUNCTIE.md",
       "items": [
         {
           "id": "ITEM-LAT-G-SYNT-ABL-FUNCTIE-001",
@@ -1456,6 +1471,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-CONJ1-INTRO.md",
       "items": []
     },
     {
@@ -1468,6 +1484,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-CONJ2-INTRO.md",
       "items": []
     },
     {
@@ -1480,6 +1497,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-CONJ3-INTRO.md",
       "items": []
     },
     {
@@ -1492,6 +1510,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-CONJ4-INTRO.md",
       "items": []
     },
     {
@@ -1504,6 +1523,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-PRAES-C1-ACT.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C1-ACT-001",
@@ -1594,6 +1614,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-PRAES-C2-ACT.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C2-ACT-001",
@@ -1684,6 +1705,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-PRAES-C3-ACT.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C3-ACT-001",
@@ -1774,6 +1796,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-PRAES-C4-ACT.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C4-ACT-001",
@@ -1940,6 +1963,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-INF-PRAES-ACT.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-INF-PRAES-ACT-001",
@@ -2059,6 +2083,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-IMPF-C1C2-ACT.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-IMPF-C1C2-ACT-001",
@@ -2134,6 +2159,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-IMPF-C3C4-ACT.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-IMPF-C3C4-ACT-001",
@@ -2194,6 +2220,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-ADJ-D12-INTRO.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-ADJ-D12-INTRO-001",
@@ -2296,6 +2323,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-SYNT-ADJ-CONGR.md",
       "items": [
         {
           "id": "ITEM-LAT-G-SYNT-ADJ-CONGR-001",
@@ -2371,6 +2399,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-SYNT-PREP-ACC.md",
       "items": [
         {
           "id": "ITEM-LAT-G-SYNT-PREP-ACC-001",
@@ -2431,6 +2460,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-SYNT-PREP-ABL.md",
       "items": [
         {
           "id": "ITEM-LAT-G-SYNT-PREP-ABL-001",
@@ -2734,6 +2764,7 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
+      "content_ref": "data/content/LAT-G-MORF-NOM-D3.md",
       "items": [
         {
           "id": "ITEM-LAT-G-MORF-NOM-D3-001",
