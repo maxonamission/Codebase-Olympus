@@ -10,7 +10,41 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-NAAMVAL-INTRO-001",
+          "knoop_ids": [
+            "GRC-G-MORF-NAAMVAL-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -1.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Hoeveel naamvallen kent het Grieks?",
+          "antwoord": "5",
+          "feedback": "Het Grieks kent vijf naamvallen: nominativus, genitivus, dativus, accusativus en vocativus.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-NAAMVAL-INTRO-002",
+          "knoop_ids": [
+            "GRC-G-MORF-NAAMVAL-INTRO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Noem de vijf Griekse naamvallen in de conventionele volgorde.",
+          "antwoord": [
+            "nominativus, genitivus, dativus, accusativus, vocativus",
+            "nom, gen, dat, acc, voc"
+          ],
+          "feedback": "De conventionele volgorde is nominativus, genitivus, dativus, accusativus, vocativus — anders dan in het Latijn (zonder ablativus, met vocativus als aparte vorm).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-DECL-INTRO",
@@ -22,7 +56,45 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-DECL-INTRO-001",
+          "knoop_ids": [
+            "GRC-G-MORF-DECL-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke drie hoofdgroepen van declinaties onderscheidt men in het Grieks?",
+          "antwoord": [
+            "α/η-stammen, ο-stammen, medeklinkerstammen",
+            "eerste, tweede, derde declinatie"
+          ],
+          "feedback": "De drie hoofdgroepen zijn α/η-stammen (1e decl.), ο-stammen (2e decl.) en medeklinkerstammen (3e decl.).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-DECL-INTRO-002",
+          "knoop_ids": [
+            "GRC-G-MORF-DECL-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Tot welke declinatie behoort ἄνθρωπος?",
+          "antwoord": [
+            "tweede declinatie",
+            "ο-stammen",
+            "2e declinatie"
+          ],
+          "feedback": "ἄνθρωπος is een ο-stam (tweede declinatie) — de stam ἀνθρωπ- krijgt de kenmerkende ο/ε-klinker voor de uitgang.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-GENUS-INTRO",
@@ -34,7 +106,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-GENUS-INTRO-001",
+          "knoop_ids": [
+            "GRC-G-MORF-GENUS-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -1.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Welke drie genera kent het Grieks?",
+          "antwoord": [
+            "masculinum, femininum, neutrum",
+            "mannelijk, vrouwelijk, onzijdig"
+          ],
+          "feedback": "Het Grieks kent drie genera: masculinum, femininum en neutrum. Het lidwoord (ὁ, ἡ, τό) verraadt het genus.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-GENUS-INTRO-002",
+          "knoop_ids": [
+            "GRC-G-MORF-GENUS-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welk genus heeft ὁ λόγος?",
+          "antwoord": [
+            "masculinum",
+            "mannelijk"
+          ],
+          "feedback": "ὁ λόγος is masculinum — het lidwoord ὁ wijst op mannelijk genus, ook al eindigt het woord op -ος (niet automatisch m: vgl. ἡ ὁδός).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-NUMERUS-INTRO",
@@ -46,7 +155,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-NUMERUS-INTRO-001",
+          "knoop_ids": [
+            "GRC-G-MORF-NUMERUS-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -1.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Welke twee numeri worden in het schoolgrieks onderscheiden?",
+          "antwoord": [
+            "singularis en pluralis",
+            "enkelvoud en meervoud"
+          ],
+          "feedback": "In het schoolgrieks gebruiken we singularis (enkelvoud) en pluralis (meervoud). De klassieke dualis wordt niet bekend verondersteld.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-NUMERUS-INTRO-002",
+          "knoop_ids": [
+            "GRC-G-MORF-NUMERUS-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Is ἄνθρωποι singularis of pluralis?",
+          "antwoord": [
+            "pluralis",
+            "meervoud"
+          ],
+          "feedback": "ἄνθρωποι is pluralis (nominativus meervoud van ἄνθρωπος). De uitgang -οι signaleert meervoud in de ο-declinatie.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-LIDW-INTRO",
@@ -58,7 +204,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-LIDW-INTRO-001",
+          "knoop_ids": [
+            "GRC-G-MORF-LIDW-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.8,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Geef de drie nominatief singularis-vormen van het bepaald lidwoord.",
+          "antwoord": [
+            "ὁ, ἡ, τό",
+            "ὁ ἡ τό"
+          ],
+          "feedback": "Nom. sg. van het bepaald lidwoord: ὁ (m.), ἡ (f.), τό (n.). Er is geen onbepaald lidwoord in het Grieks.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-LIDW-INTRO-002",
+          "knoop_ids": [
+            "GRC-G-MORF-LIDW-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Heeft het Grieks een onbepaald lidwoord (zoals Nederlands 'een')?",
+          "antwoord": [
+            "nee",
+            "geen"
+          ],
+          "feedback": "Het Grieks kent geen onbepaald lidwoord. Een los substantief zonder bepaald lidwoord is meestal onbepaald: ἄνθρωπος = 'een mens'.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-LIDW-VERBG",
@@ -70,7 +253,41 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-LIDW-VERBG-001",
+          "knoop_ids": [
+            "GRC-G-MORF-LIDW-VERBG"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de genitivus pluralis van het lidwoord voor alle drie de genera.",
+          "antwoord": [
+            "τῶν",
+            "τῶν, τῶν, τῶν"
+          ],
+          "feedback": "Gen. pl. is voor alle drie de genera τῶν. In de gen. en dat. pluralis vallen m./f./n. samen.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-LIDW-VERBG-002",
+          "knoop_ids": [
+            "GRC-G-MORF-LIDW-VERBG"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef het lidwoord dat hoort bij ἀνθρώπῳ.",
+          "antwoord": "τῷ",
+          "feedback": "ἀνθρώπῳ is dat. sg. m. → lidwoord τῷ. De iota subscriptum onder de ω is typisch voor dat. sg. in de 2e declinatie.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-NOM-FUNCTIE",
@@ -574,7 +791,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-CONJ-INTRO-001",
+          "knoop_ids": [
+            "GRC-G-MORF-CONJ-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welke twee hoofdtypes van Griekse werkwoorden onderscheidt men?",
+          "antwoord": [
+            "thematisch (-ω) en athematisch (-μι)",
+            "thematische en athematische verba"
+          ],
+          "feedback": "Thematische verba eindigen in het praesens op -ω (γράφω); athematische op -μι (δίδωμι). Thematisch is veruit de grootste groep.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-CONJ-INTRO-002",
+          "knoop_ids": [
+            "GRC-G-MORF-CONJ-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Op welke vijf dimensies wordt een Grieks werkwoord vervoegd?",
+          "antwoord": [
+            "persoon, getal, tijd, wijs, diathese",
+            "persoon, numerus, tempus, modus, genus verbi"
+          ],
+          "feedback": "Een Griekse werkwoordsvorm draagt informatie over persoon, getal (numerus), tijd (tempus), wijs (modus) en diathese (genus verbi).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-TEMPUS-INTRO",
@@ -586,7 +840,41 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-TEMPUS-INTRO-001",
+          "knoop_ids": [
+            "GRC-G-MORF-TEMPUS-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke Griekse tijd drukt een eenmalige, afgeronde handeling in het verleden uit?",
+          "antwoord": "aoristus",
+          "feedback": "De aoristus noemt een eenmalige/afgeronde verleden handeling (punctueel). Het imperfectum drukt juist duur of herhaling uit.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-TEMPUS-INTRO-002",
+          "knoop_ids": [
+            "GRC-G-MORF-TEMPUS-INTRO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Noem de vijf werkwoordstijden die in leerjaar 1 aan bod komen.",
+          "antwoord": [
+            "praesens, imperfectum, aoristus, futurum, perfectum",
+            "presens, imperfectum, aoristus, futurum, perfectum"
+          ],
+          "feedback": "De vijf tijden zijn praesens, imperfectum, aoristus, futurum en perfectum. De aoristus is uniek voor het Grieks t.o.v. het Latijn.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-PERSOON-INTRO",
@@ -598,7 +886,41 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-PERSOON-INTRO-001",
+          "knoop_ids": [
+            "GRC-G-MORF-PERSOON-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 10,
+          "stimulus": "Hoeveel persoonsvormen heeft een Grieks werkwoord per tijd?",
+          "antwoord": "6",
+          "feedback": "Zes vormen: 1e/2e/3e persoon × singularis/pluralis. Een dualis bestaat, maar wordt in het schoolgrieks niet actief geleerd.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PERSOON-INTRO-002",
+          "knoop_ids": [
+            "GRC-G-MORF-PERSOON-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke persoon en welk getal is γράφομεν?",
+          "antwoord": [
+            "1e persoon pluralis",
+            "1e persoon meervoud"
+          ],
+          "feedback": "γράφομεν = 1e persoon pluralis praesens actief (uitgang -ομεν). De primaire uitgang -μεν markeert de 1e persoon meervoud.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-DIATH-INTRO",
@@ -610,7 +932,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-DIATH-INTRO-001",
+          "knoop_ids": [
+            "GRC-G-MORF-DIATH-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welke drie diathesen kent het Grieks?",
+          "antwoord": [
+            "activum, medium, passivum",
+            "actief, medium, passief"
+          ],
+          "feedback": "Het Grieks kent drie diathesen (genera verbi): activum, medium en passivum. Het medium ontbreekt in het Latijn.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-DIATH-INTRO-002",
+          "knoop_ids": [
+            "GRC-G-MORF-DIATH-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 18,
+          "stimulus": "Waarom vallen medium en passivum in het praesens formeel samen?",
+          "antwoord": [
+            "omdat ze in praesens, imperfectum en perfectum dezelfde uitgangen delen",
+            "de vormen zijn identiek; pas in aoristus/futurum verschillen ze"
+          ],
+          "feedback": "In praesens, imperfectum en perfectum delen medium en passivum dezelfde vormen. Alleen in aoristus en futurum krijgen ze aparte uitgangen.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-THEM-INTRO",
@@ -622,7 +981,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-THEM-INTRO-001",
+          "knoop_ids": [
+            "GRC-G-MORF-THEM-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke twee thematische klinkers komen afwisselend voor tussen stam en uitgang?",
+          "antwoord": [
+            "ο en ε",
+            "ο/ε"
+          ],
+          "feedback": "Thematische verba plakken een klinker ο of ε tussen stam en uitgang: ο vóór μ/ν (γράφομεν), ε elders (γράφετε).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-THEM-INTRO-002",
+          "knoop_ids": [
+            "GRC-G-MORF-THEM-INTRO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Splits γράφομεν in stam + thematische klinker + uitgang.",
+          "antwoord": [
+            "γραφ-ο-μεν",
+            "γραφ + ο + μεν"
+          ],
+          "feedback": "Stam γραφ- + thematische klinker -ο- + persoonsuitgang -μεν. Vóór de nasaal μ kiest het Grieks ο, niet ε.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-PRAES-THEM",
@@ -742,7 +1138,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-UIT-SEC-001",
+          "knoop_ids": [
+            "GRC-G-MORF-UIT-SEC"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Noem de zes secundaire uitgangen actief (thematisch).",
+          "antwoord": [
+            "-ον, -ες, -ε(ν), -ομεν, -ετε, -ον",
+            "-ον -ες -ε -ομεν -ετε -ον"
+          ],
+          "feedback": "Secundaire uitgangen actief: -ον, -ες, -ε(ν), -ομεν, -ετε, -ον. Let op: 1 sg. en 3 pl. zijn identiek (-ον).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-UIT-SEC-002",
+          "knoop_ids": [
+            "GRC-G-MORF-UIT-SEC"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "In welke twee werkwoordstijden gebruik je de secundaire uitgangen actief?",
+          "antwoord": [
+            "imperfectum en aoristus",
+            "imperfectum + aoristus"
+          ],
+          "feedback": "Secundaire uitgangen horen bij verleden tijden op een indicatieve stam: imperfectum en (sigma-)aoristus — allebei met augment.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-IMPF-THEM",
@@ -826,7 +1259,43 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-STAMTIJD-001",
+          "knoop_ids": [
+            "GRC-G-MORF-STAMTIJD"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke drie stammen onderscheiden we bij een regulier Grieks werkwoord in leerjaar 1?",
+          "antwoord": [
+            "praesensstam, aoriststam, perfectumstam",
+            "praesens-, aorist- en perfectumstam"
+          ],
+          "feedback": "Drie stammen: praesensstam (γραφ-), aoriststam (γραψ-) en perfectumstam (γεγραφ-). Elke stam levert eigen tijdsvormen.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-STAMTIJD-002",
+          "knoop_ids": [
+            "GRC-G-MORF-STAMTIJD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 60,
+          "stimulus": "Schrijf de eerste drie stamtijden van γράφω op (1 sg. praesens, 1 sg. aoristus, 1 sg. perfectum) en controleer in je grammaticaboek.",
+          "antwoord": "γράφω — ἔγραψα — γέγραφα",
+          "feedback": "γράφω → ἔγραψα (aorist σ-stam) → γέγραφα (perfectum met reduplicatie γε-). Het leren van stamtijden is de sleutel tot de aorist en het perfectum.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "γράφω, ἔγραψα, γέγραφα — drie stamtijden met augment/reduplicatie correct genoteerd"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-AOR-SIGMA",
