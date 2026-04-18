@@ -2912,7 +2912,180 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-THEM-001",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-THEM",
+            "GRC-G-MORF-PERSOON-INTRO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 1 sg. praesens actief van γράφω (= 'schrijven').",
+          "antwoord": "γράφω",
+          "feedback": "1 sg. van γράφω = γράφω (ik schrijf). Uitgang -ω op stam γραφ-.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-THEM-002",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-THEM",
+            "GRC-G-MORF-PERSOON-INTRO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 2 sg. praesens actief van γράφω (= 'schrijven').",
+          "antwoord": "γράφεις",
+          "feedback": "2 sg. van γράφω = γράφεις (jij schrijft). Uitgang -εις op stam γραφ-.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-THEM-003",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-THEM",
+            "GRC-G-MORF-PERSOON-INTRO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 3 sg. praesens actief van γράφω (= 'schrijven').",
+          "antwoord": "γράφει",
+          "feedback": "3 sg. van γράφω = γράφει (hij/zij schrijft). Uitgang -ει op stam γραφ-.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-THEM-004",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-THEM",
+            "GRC-G-MORF-PERSOON-INTRO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 1 pl. praesens actief van γράφω (= 'schrijven').",
+          "antwoord": "γράφομεν",
+          "feedback": "1 pl. van γράφω = γράφομεν (wij schrijven). Uitgang -ομεν op stam γραφ-.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-THEM-005",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-THEM",
+            "GRC-G-MORF-PERSOON-INTRO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 2 pl. praesens actief van γράφω (= 'schrijven').",
+          "antwoord": "γράφετε",
+          "feedback": "2 pl. van γράφω = γράφετε (jullie schrijven). Uitgang -ετε op stam γραφ-.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-THEM-006",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-THEM",
+            "GRC-G-MORF-PERSOON-INTRO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 3 pl. praesens actief van γράφω (= 'schrijven').",
+          "antwoord": "γράφουσι(ν)",
+          "feedback": "3 pl. van γράφω = γράφουσι(ν) (zij schrijven). Uitgang -ουσι(ν) op stam γραφ-.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-THEM-007",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-THEM",
+            "GRC-G-MORF-PERSOON-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke persoon en welk getal heeft λύεις?",
+          "antwoord": [
+            "2e persoon singularis",
+            "2e p. sg."
+          ],
+          "feedback": "λύεις = 2e persoon singularis praesens actief van λύω. De thematische klinker (ε/ο) zit tussen stam en uitgang.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-THEM-008",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-THEM",
+            "GRC-G-MORF-PERSOON-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke persoon en welk getal heeft λύομεν?",
+          "antwoord": [
+            "1e persoon pluralis",
+            "1e p. pl."
+          ],
+          "feedback": "λύομεν = 1e persoon pluralis praesens actief van λύω. De thematische klinker (ε/ο) zit tussen stam en uitgang.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-THEM-009",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-THEM",
+            "GRC-G-MORF-PERSOON-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke persoon en welk getal heeft λύουσι(ν)?",
+          "antwoord": [
+            "3e persoon pluralis",
+            "3e p. pl."
+          ],
+          "feedback": "λύουσι(ν) = 3e persoon pluralis praesens actief van λύω. De thematische klinker (ε/ο) zit tussen stam en uitgang.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-THEM-010",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-THEM",
+            "GRC-G-MORF-THEM-INTRO"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Splits λύομεν in stam + thematische klinker + persoonsuitgang.",
+          "antwoord": [
+            "λυ-ο-μεν",
+            "λυ + ο + μεν"
+          ],
+          "feedback": "λυ- (stam) + -ο- (thematische klinker vóór nasaal μ) + -μεν (1 pl. uitgang). Vóór σ/τ wordt het ε: λύ-ε-τε.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-CONTR-INTRO",
@@ -2924,7 +3097,41 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-CONTR-INTRO-001",
+          "knoop_ids": [
+            "GRC-G-MORF-CONTR-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.1,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke drie soorten verba contracta kent het praesens?",
+          "antwoord": [
+            "α-contracta, ε-contracta, ο-contracta",
+            "stammen op α, ε of ο"
+          ],
+          "feedback": "Drie stamklinkers contracteren met de thematische klinker: α (τιμάω), ε (ποιέω), ο (δηλόω). Lexicon-vorm toont altijd de ongecontracteerde 1 sg.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-CONTR-INTRO-002",
+          "knoop_ids": [
+            "GRC-G-MORF-CONTR-INTRO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de gecontracteerde 1 sg. praesens actief van δηλόω (voor-contractie: δηλό-ω).",
+          "antwoord": "δηλῶ",
+          "feedback": "Contractie ο+ω → ω (circumflex verplicht): δηλό-ω → δηλῶ. Dezelfde regel bij τιμάω → τιμῶ en ποιέω → ποιῶ.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-CONTR-A",
@@ -2936,7 +3143,119 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-CONTR-A-001",
+          "knoop_ids": [
+            "GRC-G-MORF-CONTR-A"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de gecontracteerde 1 sg. praesens actief van τιμάω (voor-contractie: τιμά-ω).",
+          "antwoord": "τιμῶ",
+          "feedback": "τιμά-ω → τιμῶ. Regel: α+ω → ω (circumflex).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-CONTR-A-002",
+          "knoop_ids": [
+            "GRC-G-MORF-CONTR-A"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de gecontracteerde 2 sg. praesens actief van τιμάω (voor-contractie: τιμά-εις).",
+          "antwoord": "τιμᾷς",
+          "feedback": "τιμά-εις → τιμᾷς. Regel: α+ει → ᾳ.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-CONTR-A-003",
+          "knoop_ids": [
+            "GRC-G-MORF-CONTR-A"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de gecontracteerde 3 sg. praesens actief van τιμάω (voor-contractie: τιμά-ει).",
+          "antwoord": "τιμᾷ",
+          "feedback": "τιμά-ει → τιμᾷ. Regel: α+ει → ᾳ.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-CONTR-A-004",
+          "knoop_ids": [
+            "GRC-G-MORF-CONTR-A"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de gecontracteerde 1 pl. praesens actief van τιμάω (voor-contractie: τιμά-ομεν).",
+          "antwoord": "τιμῶμεν",
+          "feedback": "τιμά-ομεν → τιμῶμεν. Regel: α+ο → ω (circumflex).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-CONTR-A-005",
+          "knoop_ids": [
+            "GRC-G-MORF-CONTR-A"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de gecontracteerde 2 pl. praesens actief van τιμάω (voor-contractie: τιμά-ετε).",
+          "antwoord": "τιμᾶτε",
+          "feedback": "τιμά-ετε → τιμᾶτε. Regel: α+ε → ᾱ (circumflex).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-CONTR-A-006",
+          "knoop_ids": [
+            "GRC-G-MORF-CONTR-A"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Naar welke klank contracteren α + ο in een α-contractum?",
+          "antwoord": [
+            "ω",
+            "lange ω"
+          ],
+          "feedback": "α+ο → ω (en α+ου → ω). Dit verklaart τιμῶμεν (< τιμά-ομεν) en τιμῶσι (< τιμά-ουσι).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-CONTR-A-007",
+          "knoop_ids": [
+            "GRC-G-MORF-CONTR-A"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Waarom heeft τιμᾷ een iota subscriptum en τιμᾶτε niet?",
+          "antwoord": [
+            "τιμᾷ < τιμά-ει (α+ει → ᾳ, iota blijft); τιμᾶτε < τιμά-ετε (α+ε → ᾱ, geen iota)",
+            "de ει brengt een iota mee, de losse ε niet"
+          ],
+          "feedback": "Contractieresultaat hangt af van de tweede klinker: α+ει behoudt de iota (subscript); α+ε levert een lange α zonder iota.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-CONTR-E",
@@ -2948,7 +3267,101 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-CONTR-E-001",
+          "knoop_ids": [
+            "GRC-G-MORF-CONTR-E"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de gecontracteerde 1 sg. praesens actief van ποιέω (voor-contractie: ποιέ-ω).",
+          "antwoord": "ποιῶ",
+          "feedback": "ποιέ-ω → ποιῶ. Regel: ε+ω → ω.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-CONTR-E-002",
+          "knoop_ids": [
+            "GRC-G-MORF-CONTR-E"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de gecontracteerde 2 sg. praesens actief van ποιέω (voor-contractie: ποιέ-εις).",
+          "antwoord": "ποιεῖς",
+          "feedback": "ποιέ-εις → ποιεῖς. Regel: ε+ει → ει (circumflex).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-CONTR-E-003",
+          "knoop_ids": [
+            "GRC-G-MORF-CONTR-E"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de gecontracteerde 3 sg. praesens actief van ποιέω (voor-contractie: ποιέ-ει).",
+          "antwoord": "ποιεῖ",
+          "feedback": "ποιέ-ει → ποιεῖ. Regel: ε+ει → ει (circumflex).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-CONTR-E-004",
+          "knoop_ids": [
+            "GRC-G-MORF-CONTR-E"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de gecontracteerde 1 pl. praesens actief van ποιέω (voor-contractie: ποιέ-ομεν).",
+          "antwoord": "ποιοῦμεν",
+          "feedback": "ποιέ-ομεν → ποιοῦμεν. Regel: ε+ο → ου.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-CONTR-E-005",
+          "knoop_ids": [
+            "GRC-G-MORF-CONTR-E"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de gecontracteerde 2 pl. praesens actief van ποιέω (voor-contractie: ποιέ-ετε).",
+          "antwoord": "ποιεῖτε",
+          "feedback": "ποιέ-ετε → ποιεῖτε. Regel: ε+ε → ει.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-CONTR-E-006",
+          "knoop_ids": [
+            "GRC-G-MORF-CONTR-E"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Naar welke klank contracteren ε + ο in een ε-contractum?",
+          "antwoord": [
+            "ου",
+            "lange ou"
+          ],
+          "feedback": "ε+ο → ου. Dit verklaart ποιοῦμεν (< ποιέ-ομεν) en ποιοῦσι (< ποιέ-ουσι).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-PRAES-EIMI",
@@ -2960,7 +3373,91 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-EIMI-001",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-EIMI"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de 1 sg. praesens van εἰμί ('ik ben').",
+          "antwoord": "εἰμί",
+          "feedback": "1 sg. = εἰμί. Enclitisch (verliest vaak zijn accent). Onregelmatig werkwoord, deels athematisch.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-EIMI-002",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-EIMI"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de 2 sg. praesens van εἰμί ('jij bent').",
+          "antwoord": "εἶ",
+          "feedback": "2 sg. = εἶ (korte vorm met circumflex). Niet te verwarren met het imperatief εἶ.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-EIMI-003",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-EIMI"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de 3 sg. praesens van εἰμί ('hij/zij is').",
+          "antwoord": [
+            "ἐστί",
+            "ἐστίν",
+            "ἐστί(ν)"
+          ],
+          "feedback": "3 sg. = ἐστί(ν) met bewegelijke ν. Enclitisch tenzij nadrukkelijk of aan het begin van de zin (dan ἔστι).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-EIMI-004",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-EIMI"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de 1 pl. praesens van εἰμί ('wij zijn').",
+          "antwoord": "ἐσμέν",
+          "feedback": "1 pl. = ἐσμέν. De stam ἐσ- is zichtbaar in het meervoud; in sg. 1/2 is de σ verdwenen.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-EIMI-005",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-EIMI"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de 3 pl. praesens van εἰμί ('zij zijn').",
+          "antwoord": [
+            "εἰσί",
+            "εἰσίν",
+            "εἰσί(ν)"
+          ],
+          "feedback": "3 pl. = εἰσί(ν) met bewegelijke ν. Compleet paradigma: εἰμί, εἶ, ἐστί(ν), ἐσμέν, ἐστέ, εἰσί(ν).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-INF-PRAES",
@@ -2972,7 +3469,68 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-INF-PRAES-001",
+          "knoop_ids": [
+            "GRC-G-MORF-INF-PRAES"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.1,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke uitgang heeft de infinitief praesens actief bij een thematisch werkwoord?",
+          "antwoord": "-ειν",
+          "feedback": "Inf. praes. act. thematisch = -ειν: λύειν, γράφειν. Contracta krijgen een gecontracteerde vorm (-ᾶν, -εῖν, -οῦν).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-INF-PRAES-002",
+          "knoop_ids": [
+            "GRC-G-MORF-INF-PRAES"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de infinitief praesens actief van γράφω.",
+          "antwoord": "γράφειν",
+          "feedback": "Inf. = γράφειν ('schrijven'). Stam γραφ- + uitgang -ειν.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-INF-PRAES-003",
+          "knoop_ids": [
+            "GRC-G-MORF-INF-PRAES"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de infinitief praesens actief van τιμάω (voor-contractie: τιμά-ειν).",
+          "antwoord": "τιμᾶν",
+          "feedback": "τιμά-ειν → τιμᾶν (α+ει verliest iota als de infinitief geen morfologische iota bevat). Vergelijk ποιεῖν (< ποιέ-ειν).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-INF-PRAES-004",
+          "knoop_ids": [
+            "GRC-G-MORF-INF-PRAES"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wat is de infinitief praesens van εἰμί?",
+          "antwoord": "εἶναι",
+          "feedback": "Inf. van εἰμί = εἶναι ('zijn'). Onregelmatig, eigen vorm buiten het -ειν-patroon.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-PRAES-PARAD",
@@ -2984,7 +3542,116 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-PARAD-001",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 90,
+          "stimulus": "Schrijf het volledige paradigma van λύω praesens ind. act. op (6 personen) en vergelijk met je grammaticaboek.",
+          "antwoord": "λύω, λύεις, λύει, λύομεν, λύετε, λύουσι(ν)",
+          "feedback": "Zes vormen: λύω / λύεις / λύει / λύομεν / λύετε / λύουσι(ν). Thematische klinker ο vóór μ/ν, ε elders.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "6 vormen van λύω met correcte accenten en bewegelijke ν in de 3 pl."
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-PARAD-002",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-PARAD"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Welke persoon en welk getal heeft ποιοῦμεν?",
+          "antwoord": [
+            "1e persoon pluralis",
+            "1 pl."
+          ],
+          "feedback": "ποιοῦμεν = 1 pl. praes. ind. act. van ποιέω (< ποιέ-ομεν; ε+ο → ου).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-PARAD-003",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-PARAD"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Welke persoon en welk getal heeft τιμᾷς?",
+          "antwoord": [
+            "2e persoon singularis",
+            "2 sg."
+          ],
+          "feedback": "τιμᾷς = 2 sg. praes. ind. act. van τιμάω (< τιμά-εις; α+ει → ᾳ, circumflex).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-PARAD-004",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-PARAD"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "In 'οἱ νεανίαι γράφουσι τοὺς λόγους' — welke persoon en getal heeft γράφουσι?",
+          "antwoord": [
+            "3e persoon pluralis",
+            "3 pl."
+          ],
+          "feedback": "γράφουσι = 3 pl. praes. ind. act. Congrueert met het onderwerp οἱ νεανίαι (nom. pl.).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-PARAD-005",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-PARAD"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Geef de 3 pl. praesens actief van τιμάω (voor-contractie: τιμά-ουσι).",
+          "antwoord": [
+            "τιμῶσι",
+            "τιμῶσιν",
+            "τιμῶσι(ν)"
+          ],
+          "feedback": "τιμά-ουσι → τιμῶσι(ν). Regel α+ου → ω (circumflex). Bewegelijke ν voor klinker of zineinde.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRAES-PARAD-006",
+          "knoop_ids": [
+            "GRC-G-MORF-PRAES-PARAD"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wat is aan het accent te zien dat ποιῶ, τιμῶ en δηλῶ contracta zijn?",
+          "antwoord": [
+            "een verplichte circumflex op de gecontracteerde lange klinker",
+            "circumflex op de ultima bij 1 sg."
+          ],
+          "feedback": "Contracta krijgen in de 1 sg. steeds een circumflex op de gecontracteerde ω — signaal dat daar twee klinkers zijn samengetrokken.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-IMPF-INTRO",
