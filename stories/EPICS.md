@@ -659,3 +659,42 @@ Beide routes leiden tot mastery op dezelfde knopen — het verschil is de volgor
 | E7-08 | Frontend: route-selectie en onboarding | done |
 | E7-09 | Grammatica-scaffolding bij passages | done |
 | E7-10 | Validatie: vergelijk leeruitkomsten beide routes | done |
+
+---
+
+## Epic OS: Ontwikkelstraat fase 1 — Python-baseline
+
+**Doel:** Een werkende, laaggewijze ontwikkelstraat die code-kwaliteit, teststatus en storystatus automatisch bewaakt, zodat dit niet meer afhangt van oplettendheid per sessie. Zes lagen: projecttemplate (buiten scope), pre-commit, Claude Code hooks, CI, geautomatiseerde review, gedeelde standaarden.
+
+**Scope:** Alleen Codebase-Olympus. Templatisering naar andere projecten (`my-templates/`) is een latere epic.
+
+**Afhankelijkheden:** Geen. Bouwt voort op bestaande `pyproject.toml`, `ruff`-config en pytest-suite (165 tests).
+
+**Status:** in uitvoering — OS-00 done, OS-01 t/m OS-08 in backlog
+
+**Epic-brede acceptatiecriteria:**
+- [ ] Alle vijf actieve lagen van de ontwikkelstraat hebben ten minste één werkende check
+- [ ] CI is groen op `main` na alle stories
+- [ ] Een "break-test" (opzettelijk falende code) wordt geblokkeerd op minstens twee lagen
+- [ ] Nieuwe story kan niet naar `done/` zonder dat AC afgevinkt zijn — geautomatiseerd
+- [ ] Ontwikkelstraat-werkwijze gedocumenteerd in `CLAUDE.md`
+
+| Story | Titel | Laag | Afhankelijk | Status |
+|-------|-------|------|-------------|--------|
+| OS-00 | Storyconventie herstellen (platte backlog/doing/done) | — | — | done |
+| OS-01 | Lint- en formatbasis afmaken (ruff strict) | 1 | — | backlog |
+| OS-02 | Type-checking toevoegen (mypy) | 1 | — | backlog |
+| OS-03 | Pre-commit hooks | 2 | OS-01, OS-02 | backlog |
+| OS-04 | CI baseline (GitHub Actions) | 4 | OS-01, OS-02 | backlog |
+| OS-05 | Claude Code hooks (PostToolUse + Stop) | 3 | OS-01 | backlog |
+| OS-06 | Storystatus- en AC-verificatie (script + hooks + CI) | 2 + 4 | OS-03, OS-04 | backlog |
+| OS-07 | Review-skills inbedden in workflow | 5 | — | backlog |
+| OS-08 | CLAUDE.md bijwerken met ontwikkelstraat-sectie | 6 | alle voorgaande | backlog |
+
+**Volgorde-advies:** OS-01 en OS-02 parallel (beide linter-achtig). OS-03 en OS-04 daarna; OS-06 bouwt op beide. OS-05 (Claude-hooks) kan vroeg, zodra OS-01 klaar is, omdat het de inner loop versnelt. OS-07 en OS-08 als laatste: eerst moet er iets zijn om te documenteren.
+
+**Niet-scope voor deze epic:**
+- Uitrol naar andere repos (voxtral-transcribe, toekomstige apps)
+- Template-repo `my-templates/` opzetten
+- `mypy --strict` op de hele bestaande codebase (baseline-aanpak volstaat)
+- Coverage-thresholds optrekken (wel rapporteren, niet blokkeren)
