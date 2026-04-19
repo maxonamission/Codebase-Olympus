@@ -1026,6 +1026,25 @@
           "antwoord": "dico",
           "feedback": "Het Latijnse woord is 'dico' (zeggen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-DICO-005",
+          "knoop_ids": [
+            "LAT-V-F01-DICO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "dico",
+            "translation": "zeggen"
+          },
+          "antwoord": "dixi",
+          "feedback": "Stamtijden van dico: dicere, dixi, dictum. De perfectum (1sg) is dixi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-DICO.wav"
@@ -1232,6 +1251,25 @@
           "antwoord": "do",
           "feedback": "Het Latijnse woord is 'do' (geven).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-DO-005",
+          "knoop_ids": [
+            "LAT-V-F01-DO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "do",
+            "translation": "geven"
+          },
+          "antwoord": "dedi",
+          "feedback": "Stamtijden van do: dare, dedi, datum. De perfectum (1sg) is dedi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-DO.wav"
@@ -1335,6 +1373,25 @@
           "antwoord": "facio",
           "feedback": "Het Latijnse woord is 'facio' (maken, doen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-FACIO-005",
+          "knoop_ids": [
+            "LAT-V-F01-FACIO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "facio",
+            "translation": "maken, doen"
+          },
+          "antwoord": "feci",
+          "feedback": "Stamtijden van facio: facere, feci, factum. De perfectum (1sg) is feci.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-FACIO.wav"
@@ -1438,6 +1495,25 @@
           "antwoord": "video",
           "feedback": "Het Latijnse woord is 'video' (zien).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-VIDEO-005",
+          "knoop_ids": [
+            "LAT-V-F01-VIDEO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "video",
+            "translation": "zien"
+          },
+          "antwoord": "vidi",
+          "feedback": "Stamtijden van video: videre, vidi, visum. De perfectum (1sg) is vidi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-VIDEO.wav"
@@ -1541,6 +1617,25 @@
           "antwoord": "habeo",
           "feedback": "Het Latijnse woord is 'habeo' (hebben).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-HABEO-005",
+          "knoop_ids": [
+            "LAT-V-F01-HABEO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "habeo",
+            "translation": "hebben"
+          },
+          "antwoord": "habui",
+          "feedback": "Stamtijden van habeo: habere, habui, habitum. De perfectum (1sg) is habui.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-HABEO.wav"
@@ -2468,6 +2563,25 @@
           "antwoord": "venio",
           "feedback": "Het Latijnse woord is 'venio' (komen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-VENIO-005",
+          "knoop_ids": [
+            "LAT-V-F01-VENIO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "venio",
+            "translation": "komen"
+          },
+          "antwoord": "veni",
+          "feedback": "Stamtijden van venio: venire, veni, ventum. De perfectum (1sg) is veni.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-VENIO.wav"
@@ -2571,6 +2685,25 @@
           "antwoord": "eo",
           "feedback": "Het Latijnse woord is 'eo' (gaan).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-EO-005",
+          "knoop_ids": [
+            "LAT-V-F01-EO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "eo",
+            "translation": "gaan"
+          },
+          "antwoord": "ii",
+          "feedback": "Stamtijden van eo: ire, ii, itum. De perfectum (1sg) is ii.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-EO.wav"
@@ -2674,6 +2807,25 @@
           "antwoord": "fero",
           "feedback": "Het Latijnse woord is 'fero' (dragen, brengen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-FERO-005",
+          "knoop_ids": [
+            "LAT-V-F01-FERO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "fero",
+            "translation": "dragen, brengen"
+          },
+          "antwoord": "tuli",
+          "feedback": "Stamtijden van fero: ferre, tuli, latum. De perfectum (1sg) is tuli.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-FERO.wav"
@@ -3189,6 +3341,25 @@
           "antwoord": "ago",
           "feedback": "Het Latijnse woord is 'ago' (doen, drijven, handelen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-AGO-005",
+          "knoop_ids": [
+            "LAT-V-F01-AGO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "ago",
+            "translation": "doen, drijven, handelen"
+          },
+          "antwoord": "egi",
+          "feedback": "Stamtijden van ago: agere, egi, actum. De perfectum (1sg) is egi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-AGO.wav"
@@ -3498,6 +3669,25 @@
           "antwoord": "peto",
           "feedback": "Het Latijnse woord is 'peto' (vragen, streven naar).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-PETO-005",
+          "knoop_ids": [
+            "LAT-V-F01-PETO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "peto",
+            "translation": "vragen, streven naar"
+          },
+          "antwoord": "petivi",
+          "feedback": "Stamtijden van peto: petere, petivi, petitum. De perfectum (1sg) is petivi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-PETO.wav"
@@ -3601,6 +3791,25 @@
           "antwoord": "capio",
           "feedback": "Het Latijnse woord is 'capio' (pakken, nemen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-CAPIO-005",
+          "knoop_ids": [
+            "LAT-V-F01-CAPIO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "capio",
+            "translation": "pakken, nemen"
+          },
+          "antwoord": "cepi",
+          "feedback": "Stamtijden van capio: capere, cepi, captum. De perfectum (1sg) is cepi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-CAPIO.wav"
@@ -4528,6 +4737,25 @@
           "antwoord": "teneo",
           "feedback": "Het Latijnse woord is 'teneo' (houden, vasthouden).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-TENEO-005",
+          "knoop_ids": [
+            "LAT-V-F01-TENEO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "teneo",
+            "translation": "houden, vasthouden"
+          },
+          "antwoord": "tenui",
+          "feedback": "Stamtijden van teneo: tenere, tenui, tentum. De perfectum (1sg) is tenui.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-TENEO.wav"
@@ -5352,6 +5580,25 @@
           "antwoord": "iubeo",
           "feedback": "Het Latijnse woord is 'iubeo' (bevelen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-IUBEO-005",
+          "knoop_ids": [
+            "LAT-V-F01-IUBEO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "iubeo",
+            "translation": "bevelen"
+          },
+          "antwoord": "iussi",
+          "feedback": "Stamtijden van iubeo: iubere, iussi, iussum. De perfectum (1sg) is iussi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-IUBEO.wav"
@@ -5661,6 +5908,25 @@
           "antwoord": "pono",
           "feedback": "Het Latijnse woord is 'pono' (plaatsen, leggen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-PONO-005",
+          "knoop_ids": [
+            "LAT-V-F01-PONO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "pono",
+            "translation": "plaatsen, leggen"
+          },
+          "antwoord": "posui",
+          "feedback": "Stamtijden van pono: ponere, posui, positum. De perfectum (1sg) is posui.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-PONO.wav"
@@ -5764,6 +6030,25 @@
           "antwoord": "duco",
           "feedback": "Het Latijnse woord is 'duco' (leiden, voeren).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-DUCO-005",
+          "knoop_ids": [
+            "LAT-V-F01-DUCO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "duco",
+            "translation": "leiden, voeren"
+          },
+          "antwoord": "duxi",
+          "feedback": "Stamtijden van duco: ducere, duxi, ductum. De perfectum (1sg) is duxi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-DUCO.wav"
@@ -7309,6 +7594,25 @@
           "antwoord": "mitto",
           "feedback": "Het Latijnse woord is 'mitto' (zenden, sturen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-MITTO-005",
+          "knoop_ids": [
+            "LAT-V-F01-MITTO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "mitto",
+            "translation": "zenden, sturen"
+          },
+          "antwoord": "misi",
+          "feedback": "Stamtijden van mitto: mittere, misi, missum. De perfectum (1sg) is misi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-MITTO.wav"
@@ -7412,6 +7716,25 @@
           "antwoord": "accipio",
           "feedback": "Het Latijnse woord is 'accipio' (ontvangen, aannemen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-ACCIPIO-005",
+          "knoop_ids": [
+            "LAT-V-F01-ACCIPIO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "accipio",
+            "translation": "ontvangen, aannemen"
+          },
+          "antwoord": "accepi",
+          "feedback": "Stamtijden van accipio: accipere, accepi, acceptum. De perfectum (1sg) is accepi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-ACCIPIO.wav"
@@ -7824,6 +8147,25 @@
           "antwoord": "voco",
           "feedback": "Het Latijnse woord is 'voco' (roepen, noemen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-VOCO-005",
+          "knoop_ids": [
+            "LAT-V-F01-VOCO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "voco",
+            "translation": "roepen, noemen"
+          },
+          "antwoord": "vocavi",
+          "feedback": "Stamtijden van voco: vocare, vocavi, vocatum. De perfectum (1sg) is vocavi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-VOCO.wav"
@@ -8030,6 +8372,25 @@
           "antwoord": "relinquo",
           "feedback": "Het Latijnse woord is 'relinquo' (achterlaten, verlaten).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-RELINQU-005",
+          "knoop_ids": [
+            "LAT-V-F01-RELINQU"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "relinquo",
+            "translation": "achterlaten, verlaten"
+          },
+          "antwoord": "reliqui",
+          "feedback": "Stamtijden van relinquo: relinquere, reliqui, relictum. De perfectum (1sg) is reliqui.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-RELINQU.wav"
@@ -8854,6 +9215,25 @@
           "antwoord": "amo",
           "feedback": "Het Latijnse woord is 'amo' (liefhebben, houden van).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-AMO-005",
+          "knoop_ids": [
+            "LAT-V-F01-AMO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "amo",
+            "translation": "liefhebben, houden van"
+          },
+          "antwoord": "amavi",
+          "feedback": "Stamtijden van amo: amare, amavi, amatum. De perfectum (1sg) is amavi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-AMO.wav"
@@ -9060,6 +9440,25 @@
           "antwoord": "credo",
           "feedback": "Het Latijnse woord is 'credo' (geloven, vertrouwen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-CREDO-005",
+          "knoop_ids": [
+            "LAT-V-F01-CREDO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "credo",
+            "translation": "geloven, vertrouwen"
+          },
+          "antwoord": "credidi",
+          "feedback": "Stamtijden van credo: credere, credidi, creditum. De perfectum (1sg) is credidi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-CREDO.wav"
@@ -9369,6 +9768,25 @@
           "antwoord": "timeo",
           "feedback": "Het Latijnse woord is 'timeo' (vrezen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F01-TIMEO-005",
+          "knoop_ids": [
+            "LAT-V-F01-TIMEO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "timeo",
+            "translation": "vrezen"
+          },
+          "antwoord": "timui",
+          "feedback": "Stamtijden van timeo: timere, timui, -. De perfectum (1sg) is timui.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F01-TIMEO.wav"
@@ -11635,6 +12053,25 @@
           "antwoord": "vinco",
           "feedback": "Het Latijnse woord is 'vinco' (overwinnen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F02-VINCO-005",
+          "knoop_ids": [
+            "LAT-V-F02-VINCO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "vinco",
+            "translation": "overwinnen"
+          },
+          "antwoord": "vici",
+          "feedback": "Stamtijden van vinco: vincere, vici, victum. De perfectum (1sg) is vici.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F02-VINCO.wav"
@@ -11944,6 +12381,25 @@
           "antwoord": "scio",
           "feedback": "Het Latijnse woord is 'scio' (weten).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F02-SCIO-005",
+          "knoop_ids": [
+            "LAT-V-F02-SCIO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "scio",
+            "translation": "weten"
+          },
+          "antwoord": "scivi",
+          "feedback": "Stamtijden van scio: scire, scivi, scitum. De perfectum (1sg) is scivi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F02-SCIO.wav"
@@ -12150,6 +12606,25 @@
           "antwoord": "gero",
           "feedback": "Het Latijnse woord is 'gero' (dragen, voeren).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F02-GERO-005",
+          "knoop_ids": [
+            "LAT-V-F02-GERO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "gero",
+            "translation": "dragen, voeren"
+          },
+          "antwoord": "gessi",
+          "feedback": "Stamtijden van gero: gerere, gessi, gestum. De perfectum (1sg) is gessi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F02-GERO.wav"
@@ -12665,6 +13140,25 @@
           "antwoord": "scribo",
           "feedback": "Het Latijnse woord is 'scribo' (schrijven).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F02-SCRIBO-005",
+          "knoop_ids": [
+            "LAT-V-F02-SCRIBO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "scribo",
+            "translation": "schrijven"
+          },
+          "antwoord": "scripsi",
+          "feedback": "Stamtijden van scribo: scribere, scripsi, scriptum. De perfectum (1sg) is scripsi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F02-SCRIBO.wav"
@@ -12768,6 +13262,25 @@
           "antwoord": "moveo",
           "feedback": "Het Latijnse woord is 'moveo' (bewegen, ontroeren).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F02-MOVEO-005",
+          "knoop_ids": [
+            "LAT-V-F02-MOVEO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "moveo",
+            "translation": "bewegen, ontroeren"
+          },
+          "antwoord": "movi",
+          "feedback": "Stamtijden van moveo: movere, movi, motum. De perfectum (1sg) is movi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F02-MOVEO.wav"
@@ -13283,6 +13796,25 @@
           "antwoord": "lego",
           "feedback": "Het Latijnse woord is 'lego' (lezen, verzamelen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F02-LEGO-005",
+          "knoop_ids": [
+            "LAT-V-F02-LEGO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "lego",
+            "translation": "lezen, verzamelen"
+          },
+          "antwoord": "legi",
+          "feedback": "Stamtijden van lego: legere, legi, lectum. De perfectum (1sg) is legi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F02-LEGO.wav"
@@ -13386,6 +13918,25 @@
           "antwoord": "pugno",
           "feedback": "Het Latijnse woord is 'pugno' (vechten).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F02-PUGNO-005",
+          "knoop_ids": [
+            "LAT-V-F02-PUGNO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "pugno",
+            "translation": "vechten"
+          },
+          "antwoord": "pugnavi",
+          "feedback": "Stamtijden van pugno: pugnare, pugnavi, pugnatum. De perfectum (1sg) is pugnavi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F02-PUGNO.wav"
@@ -14107,6 +14658,25 @@
           "antwoord": "rogo",
           "feedback": "Het Latijnse woord is 'rogo' (vragen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F02-ROGO-005",
+          "knoop_ids": [
+            "LAT-V-F02-ROGO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "rogo",
+            "translation": "vragen"
+          },
+          "antwoord": "rogavi",
+          "feedback": "Stamtijden van rogo: rogare, rogavi, rogatum. De perfectum (1sg) is rogavi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F02-ROGO.wav"
@@ -14210,6 +14780,25 @@
           "antwoord": "audio",
           "feedback": "Het Latijnse woord is 'audio' (horen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F02-AUDIO-005",
+          "knoop_ids": [
+            "LAT-V-F02-AUDIO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "audio",
+            "translation": "horen"
+          },
+          "antwoord": "audivi",
+          "feedback": "Stamtijden van audio: audire, audivi, auditum. De perfectum (1sg) is audivi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F02-AUDIO.wav"
@@ -14931,6 +15520,25 @@
           "antwoord": "porto",
           "feedback": "Het Latijnse woord is 'porto' (dragen, vervoeren).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F02-PORTO-005",
+          "knoop_ids": [
+            "LAT-V-F02-PORTO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "porto",
+            "translation": "dragen, vervoeren"
+          },
+          "antwoord": "portavi",
+          "feedback": "Stamtijden van porto: portare, portavi, portatum. De perfectum (1sg) is portavi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F02-PORTO.wav"
@@ -15240,6 +15848,25 @@
           "antwoord": "fugio",
           "feedback": "Het Latijnse woord is 'fugio' (vluchten).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F02-FUGIO-005",
+          "knoop_ids": [
+            "LAT-V-F02-FUGIO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "fugio",
+            "translation": "vluchten"
+          },
+          "antwoord": "fugi",
+          "feedback": "Stamtijden van fugio: fugere, fugi, fugitum. De perfectum (1sg) is fugi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F02-FUGIO.wav"
@@ -15652,6 +16279,25 @@
           "antwoord": "laudo",
           "feedback": "Het Latijnse woord is 'laudo' (prijzen, loven).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F02-LAUDO-005",
+          "knoop_ids": [
+            "LAT-V-F02-LAUDO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "laudo",
+            "translation": "prijzen, loven"
+          },
+          "antwoord": "laudavi",
+          "feedback": "Stamtijden van laudo: laudare, laudavi, laudatum. De perfectum (1sg) is laudavi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F02-LAUDO.wav"
@@ -17815,6 +18461,25 @@
           "antwoord": "clamo",
           "feedback": "Het Latijnse woord is 'clamo' (roepen, schreeuwen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F02-CLAMO-005",
+          "knoop_ids": [
+            "LAT-V-F02-CLAMO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "clamo",
+            "translation": "roepen, schreeuwen"
+          },
+          "antwoord": "clamavi",
+          "feedback": "Stamtijden van clamo: clamare, clamavi, clamatum. De perfectum (1sg) is clamavi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F02-CLAMO.wav"
@@ -22244,6 +22909,25 @@
           "antwoord": "vulnero",
           "feedback": "Het Latijnse woord is 'vulnero' (verwonden).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-VULNER-005",
+          "knoop_ids": [
+            "LAT-V-F03-VULNER"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "vulnero",
+            "translation": "verwonden"
+          },
+          "antwoord": "vulneravi",
+          "feedback": "Stamtijden van vulnero: vulnerare, vulneravi, vulneratum. De perfectum (1sg) is vulneravi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-VULNER.wav"
@@ -22347,6 +23031,25 @@
           "antwoord": "supero",
           "feedback": "Het Latijnse woord is 'supero' (overtreffen, overwinnen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-SUPERO-005",
+          "knoop_ids": [
+            "LAT-V-F03-SUPERO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "supero",
+            "translation": "overtreffen, overwinnen"
+          },
+          "antwoord": "superavi",
+          "feedback": "Stamtijden van supero: superare, superavi, superatum. De perfectum (1sg) is superavi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-SUPERO.wav"
@@ -22450,6 +23153,25 @@
           "antwoord": "orno",
           "feedback": "Het Latijnse woord is 'orno' (versieren, uitrusten).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-ORNO-005",
+          "knoop_ids": [
+            "LAT-V-F03-ORNO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "orno",
+            "translation": "versieren, uitrusten"
+          },
+          "antwoord": "ornavi",
+          "feedback": "Stamtijden van orno: ornare, ornavi, ornatum. De perfectum (1sg) is ornavi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-ORNO.wav"
@@ -22553,6 +23275,25 @@
           "antwoord": "narro",
           "feedback": "Het Latijnse woord is 'narro' (vertellen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-NARRO-005",
+          "knoop_ids": [
+            "LAT-V-F03-NARRO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "narro",
+            "translation": "vertellen"
+          },
+          "antwoord": "narravi",
+          "feedback": "Stamtijden van narro: narrare, narravi, narratum. De perfectum (1sg) is narravi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-NARRO.wav"
@@ -22656,6 +23397,25 @@
           "antwoord": "servo",
           "feedback": "Het Latijnse woord is 'servo' (bewaren, redden).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-SERVO-005",
+          "knoop_ids": [
+            "LAT-V-F03-SERVO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "servo",
+            "translation": "bewaren, redden"
+          },
+          "antwoord": "servavi",
+          "feedback": "Stamtijden van servo: servare, servavi, servatum. De perfectum (1sg) is servavi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-SERVO.wav"
@@ -22759,6 +23519,25 @@
           "antwoord": "specto",
           "feedback": "Het Latijnse woord is 'specto' (bekijken).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-SPECTO-005",
+          "knoop_ids": [
+            "LAT-V-F03-SPECTO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "specto",
+            "translation": "bekijken"
+          },
+          "antwoord": "spectavi",
+          "feedback": "Stamtijden van specto: spectare, spectavi, spectatum. De perfectum (1sg) is spectavi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-SPECTO.wav"
@@ -22862,6 +23641,25 @@
           "antwoord": "fugo",
           "feedback": "Het Latijnse woord is 'fugo' (op de vlucht jagen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-FUGO-005",
+          "knoop_ids": [
+            "LAT-V-F03-FUGO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "fugo",
+            "translation": "op de vlucht jagen"
+          },
+          "antwoord": "fugavi",
+          "feedback": "Stamtijden van fugo: fugare, fugavi, fugatum. De perfectum (1sg) is fugavi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-FUGO.wav"
@@ -22965,6 +23763,25 @@
           "antwoord": "ambulo",
           "feedback": "Het Latijnse woord is 'ambulo' (wandelen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-AMBULO-005",
+          "knoop_ids": [
+            "LAT-V-F03-AMBULO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "ambulo",
+            "translation": "wandelen"
+          },
+          "antwoord": "ambulavi",
+          "feedback": "Stamtijden van ambulo: ambulare, ambulavi, ambulatum. De perfectum (1sg) is ambulavi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-AMBULO.wav"
@@ -23068,6 +23885,25 @@
           "antwoord": "navigo",
           "feedback": "Het Latijnse woord is 'navigo' (varen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-NAVIGO-005",
+          "knoop_ids": [
+            "LAT-V-F03-NAVIGO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "navigo",
+            "translation": "varen"
+          },
+          "antwoord": "navigavi",
+          "feedback": "Stamtijden van navigo: navigare, navigavi, navigatum. De perfectum (1sg) is navigavi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-NAVIGO.wav"
@@ -23171,6 +24007,25 @@
           "antwoord": "habito",
           "feedback": "Het Latijnse woord is 'habito' (wonen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-HABITO-005",
+          "knoop_ids": [
+            "LAT-V-F03-HABITO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "habito",
+            "translation": "wonen"
+          },
+          "antwoord": "habitavi",
+          "feedback": "Stamtijden van habito: habitare, habitavi, habitatum. De perfectum (1sg) is habitavi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-HABITO.wav"
@@ -23274,6 +24129,25 @@
           "antwoord": "respondeo",
           "feedback": "Het Latijnse woord is 'respondeo' (antwoorden).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-RESPOND-005",
+          "knoop_ids": [
+            "LAT-V-F03-RESPOND"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "respondeo",
+            "translation": "antwoorden"
+          },
+          "antwoord": "respondi",
+          "feedback": "Stamtijden van respondeo: respondere, respondi, responsum. De perfectum (1sg) is respondi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-RESPOND.wav"
@@ -23377,6 +24251,25 @@
           "antwoord": "terreo",
           "feedback": "Het Latijnse woord is 'terreo' (verschrikken).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-TERREO-005",
+          "knoop_ids": [
+            "LAT-V-F03-TERREO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "terreo",
+            "translation": "verschrikken"
+          },
+          "antwoord": "terrui",
+          "feedback": "Stamtijden van terreo: terrere, terrui, territum. De perfectum (1sg) is terrui.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-TERREO.wav"
@@ -23480,6 +24373,25 @@
           "antwoord": "debeo",
           "feedback": "Het Latijnse woord is 'debeo' (moeten, verschuldigd zijn).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-DEBEO-005",
+          "knoop_ids": [
+            "LAT-V-F03-DEBEO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "debeo",
+            "translation": "moeten, verschuldigd zijn"
+          },
+          "antwoord": "debui",
+          "feedback": "Stamtijden van debeo: debere, debui, debitum. De perfectum (1sg) is debui.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-DEBEO.wav"
@@ -23583,6 +24495,25 @@
           "antwoord": "maneo",
           "feedback": "Het Latijnse woord is 'maneo' (blijven).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-MANEO-005",
+          "knoop_ids": [
+            "LAT-V-F03-MANEO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "maneo",
+            "translation": "blijven"
+          },
+          "antwoord": "mansi",
+          "feedback": "Stamtijden van maneo: manere, mansi, mansum. De perfectum (1sg) is mansi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-MANEO.wav"
@@ -23686,6 +24617,25 @@
           "antwoord": "ostendo",
           "feedback": "Het Latijnse woord is 'ostendo' (tonen, laten zien).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-OSTENDO-005",
+          "knoop_ids": [
+            "LAT-V-F03-OSTENDO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "ostendo",
+            "translation": "tonen, laten zien"
+          },
+          "antwoord": "ostendi",
+          "feedback": "Stamtijden van ostendo: ostendere, ostendi, ostentum. De perfectum (1sg) is ostendi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-OSTENDO.wav"
@@ -23789,6 +24739,25 @@
           "antwoord": "curro",
           "feedback": "Het Latijnse woord is 'curro' (rennen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-CURRO-005",
+          "knoop_ids": [
+            "LAT-V-F03-CURRO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "curro",
+            "translation": "rennen"
+          },
+          "antwoord": "cucurri",
+          "feedback": "Stamtijden van curro: currere, cucurri, cursum. De perfectum (1sg) is cucurri.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-CURRO.wav"
@@ -23892,6 +24861,25 @@
           "antwoord": "cado",
           "feedback": "Het Latijnse woord is 'cado' (vallen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-CADO-005",
+          "knoop_ids": [
+            "LAT-V-F03-CADO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "cado",
+            "translation": "vallen"
+          },
+          "antwoord": "cecidi",
+          "feedback": "Stamtijden van cado: cadere, cecidi, casum. De perfectum (1sg) is cecidi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-CADO.wav"
@@ -23995,6 +24983,25 @@
           "antwoord": "occido",
           "feedback": "Het Latijnse woord is 'occido' (doden).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-OCCIDO-005",
+          "knoop_ids": [
+            "LAT-V-F03-OCCIDO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "occido",
+            "translation": "doden"
+          },
+          "antwoord": "occidi",
+          "feedback": "Stamtijden van occido: occidere, occidi, occisum. De perfectum (1sg) is occidi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-OCCIDO.wav"
@@ -24098,6 +25105,25 @@
           "antwoord": "disco",
           "feedback": "Het Latijnse woord is 'disco' (leren).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-DISCO-005",
+          "knoop_ids": [
+            "LAT-V-F03-DISCO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "disco",
+            "translation": "leren"
+          },
+          "antwoord": "didici",
+          "feedback": "Stamtijden van disco: discere, didici, -. De perfectum (1sg) is didici.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-DISCO.wav"
@@ -24201,6 +25227,25 @@
           "antwoord": "educo",
           "feedback": "Het Latijnse woord is 'educo' (naar buiten leiden).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-EDUCO-005",
+          "knoop_ids": [
+            "LAT-V-F03-EDUCO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "educo",
+            "translation": "naar buiten leiden"
+          },
+          "antwoord": "eduxi",
+          "feedback": "Stamtijden van educo: educere, eduxi, eductum. De perfectum (1sg) is eduxi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-EDUCO.wav"
@@ -24304,6 +25349,25 @@
           "antwoord": "constituo",
           "feedback": "Het Latijnse woord is 'constituo' (besluiten, opstellen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-CONSTIT-005",
+          "knoop_ids": [
+            "LAT-V-F03-CONSTIT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "constituo",
+            "translation": "besluiten, opstellen"
+          },
+          "antwoord": "constitui",
+          "feedback": "Stamtijden van constituo: constituere, constitui, constitutum. De perfectum (1sg) is constitui.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-CONSTIT.wav"
@@ -24407,6 +25471,25 @@
           "antwoord": "defendo",
           "feedback": "Het Latijnse woord is 'defendo' (verdedigen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-DEFENDO-005",
+          "knoop_ids": [
+            "LAT-V-F03-DEFENDO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "defendo",
+            "translation": "verdedigen"
+          },
+          "antwoord": "defendi",
+          "feedback": "Stamtijden van defendo: defendere, defendi, defensum. De perfectum (1sg) is defendi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-DEFENDO.wav"
@@ -24510,6 +25593,25 @@
           "antwoord": "cognosco",
           "feedback": "Het Latijnse woord is 'cognosco' (leren kennen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-COGNOSC-005",
+          "knoop_ids": [
+            "LAT-V-F03-COGNOSC"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "cognosco",
+            "translation": "leren kennen"
+          },
+          "antwoord": "cognovi",
+          "feedback": "Stamtijden van cognosco: cognoscere, cognovi, cognitum. De perfectum (1sg) is cognovi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-COGNOSC.wav"
@@ -24613,6 +25715,25 @@
           "antwoord": "interficio",
           "feedback": "Het Latijnse woord is 'interficio' (doden).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-INTERFI-005",
+          "knoop_ids": [
+            "LAT-V-F03-INTERFI"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "interficio",
+            "translation": "doden"
+          },
+          "antwoord": "interfeci",
+          "feedback": "Stamtijden van interficio: interficere, interfeci, interfectum. De perfectum (1sg) is interfeci.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-INTERFI.wav"
@@ -24716,6 +25837,25 @@
           "antwoord": "dormio",
           "feedback": "Het Latijnse woord is 'dormio' (slapen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-DORMIO-005",
+          "knoop_ids": [
+            "LAT-V-F03-DORMIO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "dormio",
+            "translation": "slapen"
+          },
+          "antwoord": "dormivi",
+          "feedback": "Stamtijden van dormio: dormire, dormivi, dormitum. De perfectum (1sg) is dormivi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-DORMIO.wav"
@@ -24819,6 +25959,25 @@
           "antwoord": "nescio",
           "feedback": "Het Latijnse woord is 'nescio' (niet weten).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-NESCIO-005",
+          "knoop_ids": [
+            "LAT-V-F03-NESCIO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "nescio",
+            "translation": "niet weten"
+          },
+          "antwoord": "nescivi",
+          "feedback": "Stamtijden van nescio: nescire, nescivi, nescitum. De perfectum (1sg) is nescivi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-NESCIO.wav"
@@ -24922,6 +26081,25 @@
           "antwoord": "custodio",
           "feedback": "Het Latijnse woord is 'custodio' (bewaken).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-LAT-V-F03-CUSTODI-005",
+          "knoop_ids": [
+            "LAT-V-F03-CUSTODI"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de perfectum (1e persoon enkelvoud) van dit Latijnse werkwoord.",
+            "lemma": "custodio",
+            "translation": "bewaken"
+          },
+          "antwoord": "custodivi",
+          "feedback": "Stamtijden van custodio: custodire, custodivi, custoditum. De perfectum (1sg) is custodivi.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "LAT-V-F03-CUSTODI.wav"
