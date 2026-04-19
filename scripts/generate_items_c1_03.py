@@ -600,7 +600,9 @@ def define_items() -> dict[str, list[dict]]:
             "discriminatie_initieel": 1.2,
             "verwachte_tijd_sec": 35,
             "stimulus": "Ontleed 'bella' volledig. Geef alle mogelijke analyses.",
-            "antwoord": ["nominativus pluralis neutrum of accusativus pluralis neutrum, 2e declinatie"],
+            "antwoord": [
+                "nominativus pluralis neutrum of accusativus pluralis neutrum, 2e declinatie"
+            ],
             "feedback": "'Bella' kan nom. pl. of acc. pl. zijn (neutrumregel). Niet verwarren met 1e-declinatie nom. sg. fem. — 'bella' als neutrum pl. van 'bellum'.",
             "bron": "handmatig",
         },
@@ -627,9 +629,7 @@ def add_items_to_json(json_path: Path, items_by_knoop: dict[str, list[dict]]) ->
         if knoop["id"] in items_by_knoop:
             existing_ids = {item["id"] for item in knoop.get("items", [])}
             new_items = [
-                item
-                for item in items_by_knoop[knoop["id"]]
-                if item["id"] not in existing_ids
+                item for item in items_by_knoop[knoop["id"]] if item["id"] not in existing_ids
             ]
             knoop.setdefault("items", []).extend(new_items)
             added += len(new_items)
@@ -651,16 +651,16 @@ def print_summary(items_by_knoop: dict[str, list[dict]]) -> None:
             type_counter[item["type"]] += 1
             richting_counter[item["richting"]] += 1
 
-    print(f"\n=== C1-03 Summary ===")
+    print("\n=== C1-03 Summary ===")
     print(f"Knopen: {len(items_by_knoop)}")
     print(f"Total items: {total}")
-    print(f"\nItems per knoop:")
+    print("\nItems per knoop:")
     for kid, item_list in sorted(items_by_knoop.items()):
         print(f"  {kid}: {len(item_list)}")
-    print(f"\nOefentype-verdeling:")
+    print("\nOefentype-verdeling:")
     for t, c in type_counter.most_common():
         print(f"  {t}: {c}")
-    print(f"\nRichting-verdeling:")
+    print("\nRichting-verdeling:")
     for r, c in richting_counter.most_common():
         print(f"  {r}: {c}")
 

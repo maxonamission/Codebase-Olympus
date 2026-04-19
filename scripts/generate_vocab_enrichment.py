@@ -22,7 +22,6 @@ Usage::
 from __future__ import annotations
 
 import argparse
-import json
 import random
 import sys
 from pathlib import Path
@@ -47,7 +46,6 @@ from generate_luister_items import (  # type: ignore  # noqa: E402
     save_vocab_json,
 )
 
-
 HERKENNING_B_RANGE = (-0.8, 0.2)
 PRODUCTIE_B_RANGE = (0.3, 1.8)
 HERKENNING_TIME_SEC = 10
@@ -61,9 +59,7 @@ def _taal_labels(knoop_id: str) -> tuple[str, str]:
     return "Griekse", "Grieks"
 
 
-def generate_herkenning_item(
-    node: dict, translation_pool: list[str], item_nr: int
-) -> dict:
+def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: int) -> dict:
     """Text-based herkenning: read lemma, pick the Dutch translation."""
     knoop_id = node["id"]
     lemma, translation = parse_titel(node["titel_nl"])
@@ -149,9 +145,7 @@ def enrich_file(json_path: Path) -> tuple[int, int, int]:
 
         if "herkenning" not in existing_types:
             nr = next_item_nr(node)
-            node["items"].append(
-                generate_herkenning_item(node, translation_pool, nr)
-            )
+            node["items"].append(generate_herkenning_item(node, translation_pool, nr))
             herk_added += 1
             added_here += 1
 

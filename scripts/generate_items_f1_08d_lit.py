@@ -15,48 +15,57 @@ from gymnasium_classica.models.graph import Item
 OUTPUT = Path(__file__).parent.parent / "data" / "graph" / "sha_cultuur_leerjaar1.json"
 
 BATCH: list[tuple[str, str, list[str], int, str]] = [
-    ("LIT-INTRO",
-     "Welk schriftsysteem ligt aan de basis van het moderne Europese schrift?",
-     ["Het Chinese schrift",
-      "Het Egyptische hiërogliefenschrift",
-      "Het Griekse alfabet (via het Latijnse)",
-      "Het spijkerschrift"],
-     2,
-     "Het Griekse alfabet vormt, via het Latijnse, de basis van vrijwel alle moderne Europese schriften."),
-    ("LIT-GRALF",
-     "Welk schrift vormt de directe bron van het Griekse alfabet?",
-     ["Lineair B",
-      "Het Fenicische schrift",
-      "Het Etruskische schrift",
-      "Het Aramese schrift"],
-     1,
-     "De Grieken ontleenden rond 800 v.Chr. hun alfabet aan het Fenicische schrift en voegden klinkertekens toe."),
-    ("LIT-LTALF",
-     "Via welk volk is het Griekse alfabet bij de Romeinen terechtgekomen?",
-     ["De Galliërs",
-      "De Feniciërs",
-      "De Etrusken",
-      "De Karthagers"],
-     2,
-     "De Romeinen namen het alfabet over van de Etrusken, die het op hun beurt uit het Griekse schrift hadden."),
-    ("LIT-INSCR",
-     "Welke van de volgende is een voorbeeld van een inscriptie?",
-     ["Een perkamenten wetboek",
-      "Een grafsteen met tekst",
-      "Een papyrusrol",
-      "Een mondelinge overlevering"],
-     1,
-     "Inscripties zijn teksten in duurzaam materiaal — steen, brons of keramiek — zoals grafstenen, wetten of eerbewijzen."),
-    ("LIT-SCHRF",
-     "Welk van deze materialen werd in de oudheid NIET gebruikt om op te schrijven?",
-     ["Papyrus", "Wastafels", "Perkament", "Papier"],
-     3,
-     "Papier kwam pas na de oudheid in Europa in gebruik. In de klassieke wereld schreef men op papyrus, wastafels of perkament."),
+    (
+        "LIT-INTRO",
+        "Welk schriftsysteem ligt aan de basis van het moderne Europese schrift?",
+        [
+            "Het Chinese schrift",
+            "Het Egyptische hiërogliefenschrift",
+            "Het Griekse alfabet (via het Latijnse)",
+            "Het spijkerschrift",
+        ],
+        2,
+        "Het Griekse alfabet vormt, via het Latijnse, de basis van vrijwel alle moderne Europese schriften.",
+    ),
+    (
+        "LIT-GRALF",
+        "Welk schrift vormt de directe bron van het Griekse alfabet?",
+        ["Lineair B", "Het Fenicische schrift", "Het Etruskische schrift", "Het Aramese schrift"],
+        1,
+        "De Grieken ontleenden rond 800 v.Chr. hun alfabet aan het Fenicische schrift en voegden klinkertekens toe.",
+    ),
+    (
+        "LIT-LTALF",
+        "Via welk volk is het Griekse alfabet bij de Romeinen terechtgekomen?",
+        ["De Galliërs", "De Feniciërs", "De Etrusken", "De Karthagers"],
+        2,
+        "De Romeinen namen het alfabet over van de Etrusken, die het op hun beurt uit het Griekse schrift hadden.",
+    ),
+    (
+        "LIT-INSCR",
+        "Welke van de volgende is een voorbeeld van een inscriptie?",
+        [
+            "Een perkamenten wetboek",
+            "Een grafsteen met tekst",
+            "Een papyrusrol",
+            "Een mondelinge overlevering",
+        ],
+        1,
+        "Inscripties zijn teksten in duurzaam materiaal — steen, brons of keramiek — zoals grafstenen, wetten of eerbewijzen.",
+    ),
+    (
+        "LIT-SCHRF",
+        "Welk van deze materialen werd in de oudheid NIET gebruikt om op te schrijven?",
+        ["Papyrus", "Wastafels", "Perkament", "Papier"],
+        3,
+        "Papier kwam pas na de oudheid in Europa in gebruik. In de klassieke wereld schreef men op papyrus, wastafels of perkament.",
+    ),
 ]
 
 
-def make_item(suffix: str, vraag: str, options: list[str], correct_idx: int,
-              feedback: str) -> dict:
+def make_item(
+    suffix: str, vraag: str, options: list[str], correct_idx: int, feedback: str
+) -> dict:
     knoop_id = f"SHA-C-{suffix}"
     return {
         "id": f"ITEM-{knoop_id}-001",

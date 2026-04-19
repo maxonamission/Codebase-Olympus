@@ -33,3 +33,33 @@ pythonpath = ["src"]
 [tool.ruff]
 target-version = "py311"
 line-length = 99
+
+[tool.ruff.lint]
+# Expliciete regelkeuze zodat ruff-defaults niet stilletjes veranderen tussen versies.
+# E/F = pycodestyle errors + pyflakes (correctheid)
+# I   = isort (import-volgorde)
+# UP  = pyupgrade (moderne Python-syntax op 3.11)
+# B   = flake8-bugbear (veelvoorkomende bugs)
+# SIM = flake8-simplify (leesbaarheid)
+# RUF = ruff-specifieke regels (onder andere RUF001-003 voor look-alike unicode)
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+ignore = [
+    "E501",    # line-too-long: format regelt dit; losse strings/tabellen mogen uitsteken
+    "B008",    # function call in argument defaults: FastAPI Depends()/Query() vereist dit
+    "RUF001",  # ambiguous-unicode in strings: Griekse tekens zijn hier juist gewenst
+    "RUF002",  # idem voor docstrings
+    "RUF003",  # idem voor comments
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests mogen asserts gebruiken en hebben vaker lange fixtures/strings.
+"tests/**" = ["B011"]
+# Scripts zijn vaak ad-hoc; iets soepelere regels.
+"scripts/**" = ["B008"]
+
+[tool.ruff.format]
+# Expliciet zodat defaults niet verschuiven bij een ruff-upgrade.
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+docstring-code-format = false

@@ -93,8 +93,15 @@ class TestClusterProgress:
         assert len(data["clusters"]) > 0
 
         for c in data["clusters"]:
-            assert {"label", "beschrijving", "total", "mastered",
-                    "in_progress", "unseen", "mastered_pct"} <= set(c.keys())
+            assert {
+                "label",
+                "beschrijving",
+                "total",
+                "mastered",
+                "in_progress",
+                "unseen",
+                "mastered_pct",
+            } <= set(c.keys())
             assert c["mastered"] == 0
             assert c["in_progress"] == 0
             assert c["unseen"] == c["total"]
@@ -116,8 +123,7 @@ class TestClusterProgress:
             knoop = graph.nodes[node_id]["knoop"]
             if knoop.type.value != "V" or not knoop.semantisch_cluster:
                 continue
-            expected[knoop.semantisch_cluster] = expected.get(
-                knoop.semantisch_cluster, 0) + 1
+            expected[knoop.semantisch_cluster] = expected.get(knoop.semantisch_cluster, 0) + 1
 
         data = client.get("/progress/clusters", headers=headers).json()
         for c in data["clusters"]:

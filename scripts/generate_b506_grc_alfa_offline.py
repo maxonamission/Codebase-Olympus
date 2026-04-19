@@ -17,30 +17,144 @@ from gymnasium_classica.models.graph import Item  # noqa: E402
 # --- Greek letter data ---
 # (knoop_id_suffix, upper, lower, name, tip)
 LETTERS = [
-    ("ALFA",   "Α", "α", "alfa",     "Lijkt op de Latijnse A, maar de kleine letter is rond."),
-    ("BETA",   "Β", "β", "bèta",     "De kleine letter lijkt op een Duitse ß. Trek de lus naar beneden."),
-    ("GAMMA",  "Γ", "γ", "gamma",    "De hoofdletter is een omgekeerde L. De kleine letter hangt onder de regel."),
-    ("DELTA",  "Δ", "δ", "delta",    "De hoofdletter is een driehoek. De kleine letter lijkt op een omgekeerde 6."),
-    ("EPSIL",  "Ε", "ε", "epsilon",  "Kort! Lijkt op een kleine halve maan of omgekeerde 3."),
-    ("DZETA",  "Ζ", "ζ", "dzèta",   "De kleine letter heeft een staart onder de regel. Begin bovenaan met een horizontale streep."),
-    ("ETA",    "Η", "η", "èta",      "Lang! De kleine letter lijkt op een n met een lange staart naar beneden."),
-    ("THETA",  "Θ", "θ", "thèta",   "Een cirkel met een horizontale streep erdoor (hoofdletter) of een ronde 0 met bovenstok."),
-    ("IOTA",   "Ι", "ι", "iota",     "De eenvoudigste letter: één verticale streep. Geen punt erboven."),
-    ("KAPPA",  "Κ", "κ", "kappa",    "Lijkt sterk op de Latijnse K. De kleine letter heeft twee schuine streepjes."),
-    ("LAMBD",  "Λ", "λ", "lambda",   "De hoofdletter is een omgekeerde V. De kleine letter begint met een bovenstok."),
-    ("MU",     "Μ", "μ", "mu",       "De hoofdletter = M. De kleine letter heeft een staart onder de regel."),
-    ("NU",     "Ν", "ν", "nu",       "Valse vriend! De hoofdletter = N, maar de kleine letter lijkt op een v."),
-    ("XI",     "Ξ", "ξ", "xi",       "Drie horizontale strepen (hoofdletter). De kleine letter kronkelt naar beneden."),
-    ("OMIKR",  "Ο", "ο", "omikron",  "Kort! Identiek aan de Latijnse O/o. Let op: niet verwarren met omega."),
-    ("PI",     "Π", "π", "pi",       "De hoofdletter lijkt op een poort. De kleine letter heeft twee poten."),
-    ("RHO",    "Ρ", "ρ", "rho",      "Valse vriend! Lijkt op P/p maar is een R-klank. Kleine letter hangt onder de regel."),
-    ("SIGMA",  "Σ", "σ/ς", "sigma",  "Twee vormen! σ midden in een woord, ς aan het einde. De hoofdletter heeft puntige hoeken."),
-    ("TAU",    "Τ", "τ", "tau",      "Lijkt op de Latijnse T/t. De kleine letter is een kort streepje met een boog."),
-    ("UPSIL",  "Υ", "υ", "upsilon",  "Valse vriend! Lijkt op Y, maar klinkt als u of uu."),
-    ("PHI",    "Φ", "φ", "phi",      "Een cirkel met een verticale streep erdoor. De kleine letter steekt boven en onder uit."),
-    ("CHI",    "Χ", "χ", "chi",      "Valse vriend! Lijkt op X, maar klinkt als ch (als in 'loch')."),
-    ("PSI",    "Ψ", "ψ", "psi",      "Een drietand. De kleine letter lijkt op een drietand met een staart."),
-    ("OMEGA",  "Ω", "ω", "omega",    "Lang! De hoofdletter is een hoefijzer. De kleine letter lijkt op een w."),
+    ("ALFA", "Α", "α", "alfa", "Lijkt op de Latijnse A, maar de kleine letter is rond."),
+    (
+        "BETA",
+        "Β",
+        "β",
+        "bèta",
+        "De kleine letter lijkt op een Duitse ß. Trek de lus naar beneden.",
+    ),
+    (
+        "GAMMA",
+        "Γ",
+        "γ",
+        "gamma",
+        "De hoofdletter is een omgekeerde L. De kleine letter hangt onder de regel.",
+    ),
+    (
+        "DELTA",
+        "Δ",
+        "δ",
+        "delta",
+        "De hoofdletter is een driehoek. De kleine letter lijkt op een omgekeerde 6.",
+    ),
+    ("EPSIL", "Ε", "ε", "epsilon", "Kort! Lijkt op een kleine halve maan of omgekeerde 3."),
+    (
+        "DZETA",
+        "Ζ",
+        "ζ",
+        "dzèta",
+        "De kleine letter heeft een staart onder de regel. Begin bovenaan met een horizontale streep.",
+    ),
+    (
+        "ETA",
+        "Η",
+        "η",
+        "èta",
+        "Lang! De kleine letter lijkt op een n met een lange staart naar beneden.",
+    ),
+    (
+        "THETA",
+        "Θ",
+        "θ",
+        "thèta",
+        "Een cirkel met een horizontale streep erdoor (hoofdletter) of een ronde 0 met bovenstok.",
+    ),
+    ("IOTA", "Ι", "ι", "iota", "De eenvoudigste letter: één verticale streep. Geen punt erboven."),
+    (
+        "KAPPA",
+        "Κ",
+        "κ",
+        "kappa",
+        "Lijkt sterk op de Latijnse K. De kleine letter heeft twee schuine streepjes.",
+    ),
+    (
+        "LAMBD",
+        "Λ",
+        "λ",
+        "lambda",
+        "De hoofdletter is een omgekeerde V. De kleine letter begint met een bovenstok.",
+    ),
+    (
+        "MU",
+        "Μ",
+        "μ",
+        "mu",
+        "De hoofdletter = M. De kleine letter heeft een staart onder de regel.",
+    ),
+    (
+        "NU",
+        "Ν",
+        "ν",
+        "nu",
+        "Valse vriend! De hoofdletter = N, maar de kleine letter lijkt op een v.",
+    ),
+    (
+        "XI",
+        "Ξ",
+        "ξ",
+        "xi",
+        "Drie horizontale strepen (hoofdletter). De kleine letter kronkelt naar beneden.",
+    ),
+    (
+        "OMIKR",
+        "Ο",
+        "ο",
+        "omikron",
+        "Kort! Identiek aan de Latijnse O/o. Let op: niet verwarren met omega.",
+    ),
+    (
+        "PI",
+        "Π",
+        "π",
+        "pi",
+        "De hoofdletter lijkt op een poort. De kleine letter heeft twee poten.",
+    ),
+    (
+        "RHO",
+        "Ρ",
+        "ρ",
+        "rho",
+        "Valse vriend! Lijkt op P/p maar is een R-klank. Kleine letter hangt onder de regel.",
+    ),
+    (
+        "SIGMA",
+        "Σ",
+        "σ/ς",
+        "sigma",
+        "Twee vormen! σ midden in een woord, ς aan het einde. De hoofdletter heeft puntige hoeken.",
+    ),
+    (
+        "TAU",
+        "Τ",
+        "τ",
+        "tau",
+        "Lijkt op de Latijnse T/t. De kleine letter is een kort streepje met een boog.",
+    ),
+    ("UPSIL", "Υ", "υ", "upsilon", "Valse vriend! Lijkt op Y, maar klinkt als u of uu."),
+    (
+        "PHI",
+        "Φ",
+        "φ",
+        "phi",
+        "Een cirkel met een verticale streep erdoor. De kleine letter steekt boven en onder uit.",
+    ),
+    ("CHI", "Χ", "χ", "chi", "Valse vriend! Lijkt op X, maar klinkt als ch (als in 'loch')."),
+    (
+        "PSI",
+        "Ψ",
+        "ψ",
+        "psi",
+        "Een drietand. De kleine letter lijkt op een drietand met een staart.",
+    ),
+    (
+        "OMEGA",
+        "Ω",
+        "ω",
+        "omega",
+        "Lang! De hoofdletter is een hoefijzer. De kleine letter lijkt op een w.",
+    ),
 ]
 
 
@@ -107,8 +221,8 @@ def main():
         json.dump(graph, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
-    print(f"\n=== B5-06: Grieks alfabet schrijfoefeningen ===")
-    print(f"Bestand: grc_alfabet.json")
+    print("\n=== B5-06: Grieks alfabet schrijfoefeningen ===")
+    print("Bestand: grc_alfabet.json")
     print(f"Totaal toegevoegd: {added} items")
     print(f"Letters: {', '.join(l[3] for l in LETTERS[:12])}...")
 

@@ -21,7 +21,6 @@ from fastapi.testclient import TestClient
 from gymnasium_classica.api.app import create_app
 from gymnasium_classica.api.database import load_learner_model
 
-
 GRAPH_DIR = Path(__file__).parent.parent / "data" / "graph"
 PASSAGES_DIR = Path(__file__).parent.parent / "data" / "passages"
 
@@ -49,17 +48,13 @@ def app_factory(tmp_path):
 
 
 def _register(client: TestClient, email: str, password: str = "geheim1234") -> dict:
-    resp = client.post(
-        "/auth/register", json={"email": email, "password": password}
-    )
+    resp = client.post("/auth/register", json={"email": email, "password": password})
     assert resp.status_code == 200, resp.text
     return resp.json()
 
 
 def _login(client: TestClient, email: str, password: str = "geheim1234") -> dict:
-    resp = client.post(
-        "/auth/login", json={"email": email, "password": password}
-    )
+    resp = client.post("/auth/login", json={"email": email, "password": password})
     assert resp.status_code == 200, resp.text
     return resp.json()
 
@@ -129,22 +124,17 @@ class TestRegisterAndFirstSession:
                 data = resp.json()
                 # Feedback reflects the response type (passage_read is possible
                 # if the first question happened to be a passage).
-                assert data["feedback"]["response_type"] in {
-                    response, "passage_read"
-                }
+                assert data["feedback"]["response_type"] in {response, "passage_read"}
                 q = data.get("next_question")
                 if data["session_finished"]:
                     break
 
-            summary = client.get(
-                f"/session/{session_id}/summary", headers=headers
-            ).json()
+            summary = client.get(f"/session/{session_id}/summary", headers=headers).json()
             assert summary["session_id"] == session_id
             assert summary["total_items"] >= 1
             # At least one correct answer should have raised mastery.
             raised = [
-                (k, v) for k, v in summary["mastery_changes"].items()
-                if v["after"] > v["before"]
+                (k, v) for k, v in summary["mastery_changes"].items() if v["after"] > v["before"]
             ]
             assert raised, "At least one correct answer should raise mastery"
 
@@ -178,9 +168,7 @@ class TestSessionPersistsAcrossLogins:
             assert overview["mastered"] + overview["in_progress"] >= 1
 
             # Direct DB check: session_history actually got appended.
-            db_path = Path(client2.app.state.db.execute(
-                "PRAGMA database_list"
-            ).fetchone()["file"])
+            db_path = Path(client2.app.state.db.execute("PRAGMA database_list").fetchone()["file"])
             conn = client2.app.state.db
             learner = load_learner_model(conn, user_id)
             assert learner is not None
@@ -235,17 +223,14 @@ class TestIntakeThenSession:
             assert learner is not None
             assert learner.intake_completed is True
             diagnostic_nodes = [
-                ks for ks in learner.knoop_states.values()
-                if ks.source.value == "diagnostic"
+                ks for ks in learner.knoop_states.values() if ks.source.value == "diagnostic"
             ]
             assert diagnostic_nodes, "Intake must mark nodes with source=diagnostic"
 
             # A subsequent session works and respects the diagnostic priors.
             sess = client.post("/session/start", headers=headers).json()
             assert sess["session_id"]
-            _drain_session(
-                client, headers, sess["session_id"], sess["question"]
-            )
+            _drain_session(client, headers, sess["session_id"], sess["question"])
 
 
 class TestIncorrectAnswerTriggersFallback:
@@ -283,8 +268,7 @@ class TestIncorrectAnswerTriggersFallback:
             before_learner = load_learner_model(conn, user_id)
             assert before_learner is not None
             before_mastery = {
-                k: s.posterior_mastery
-                for k, s in before_learner.knoop_states.items()
+                k: s.posterior_mastery for k, s in before_learner.knoop_states.items()
             }
 
             # Start a session and answer the first question INCORRECT.
@@ -309,9 +293,7 @@ class TestIncorrectAnswerTriggersFallback:
             ).json()
             assert answer["feedback"]["knoop_id"] == knoop_id
             assert answer["feedback"]["correct"] is False
-            assert answer["feedback"]["mastery_after"] < before_mastery.get(
-                knoop_id, 1.0
-            )
+            assert answer["feedback"]["mastery_after"] < before_mastery.get(knoop_id, 1.0)
 
 
 class TestMultipleSessionsAccumulate:
@@ -327,9 +309,7 @@ class TestMultipleSessionsAccumulate:
 
             for _ in range(2):
                 start = client.post("/session/start", headers=headers).json()
-                _drain_session(
-                    client, headers, start["session_id"], start["question"]
-                )
+                _drain_session(client, headers, start["session_id"], start["question"])
 
             conn = client.app.state.db
             learner = load_learner_model(conn, user_id)

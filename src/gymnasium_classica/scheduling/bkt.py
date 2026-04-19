@@ -119,9 +119,7 @@ def update_knoop_state(
     """
     state = _get_or_create_state(learner, knoop_id)
     correct = response in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT)
-    state.posterior_mastery = bkt_update_posterior(
-        state.posterior_mastery, correct, params
-    )
+    state.posterior_mastery = bkt_update_posterior(state.posterior_mastery, correct, params)
     state.source = MasterySource.PRACTICE
     return state
 

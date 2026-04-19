@@ -31,6 +31,7 @@ random.seed(42)
 # Lemma / translation extraction from titel_nl
 # ---------------------------------------------------------------------------
 
+
 def parse_titel(titel_nl: str) -> tuple[str, str]:
     """Split titel_nl into (lemma, translation).
 
@@ -72,6 +73,7 @@ def extract_short_translation(translation: str) -> str:
 # Load and filter nodes
 # ---------------------------------------------------------------------------
 
+
 def load_vocab_json(json_path: Path) -> dict:
     """Load a graph JSON file."""
     with open(json_path, encoding="utf-8") as f:
@@ -93,6 +95,7 @@ def get_vocab_with_audio(data: dict) -> list[dict]:
 # ---------------------------------------------------------------------------
 # Distractor generation
 # ---------------------------------------------------------------------------
+
 
 def build_translation_pool(nodes: list[dict]) -> list[str]:
     """Build a pool of short translations for distractor generation."""
@@ -117,6 +120,7 @@ def pick_distractors(correct: str, pool: list[str], n: int = 3) -> list[str]:
 # Item ID management
 # ---------------------------------------------------------------------------
 
+
 def next_item_nr(node: dict) -> int:
     """Determine the next item number for a node."""
     existing = node.get("items", [])
@@ -138,9 +142,8 @@ def next_item_nr(node: dict) -> int:
 # Item generation: luister_herkenning
 # ---------------------------------------------------------------------------
 
-def generate_herkenning_item(
-    node: dict, translation_pool: list[str], item_nr: int
-) -> dict:
+
+def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: int) -> dict:
     """Generate a luister_herkenning item for a V-node.
 
     Stimulus: listen to audio, choose the correct translation from 4 options.
@@ -180,6 +183,7 @@ def generate_herkenning_item(
 # Item generation: luister_productie
 # ---------------------------------------------------------------------------
 
+
 def generate_productie_item(node: dict, item_nr: int) -> dict:
     """Generate a luister_productie item for a V-node.
 
@@ -217,9 +221,8 @@ def generate_productie_item(node: dict, item_nr: int) -> dict:
 # Main generation loop
 # ---------------------------------------------------------------------------
 
-def generate_items_for_file(
-    json_path: Path, item_type: str
-) -> tuple[int, int]:
+
+def generate_items_for_file(json_path: Path, item_type: str) -> tuple[int, int]:
     """Generate items for all V-nodes with audio_ref in a JSON file.
 
     Args:
@@ -279,6 +282,7 @@ def generate_items_for_file(
 # CLI
 # ---------------------------------------------------------------------------
 
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Generate luister-oefening items for V-nodes with audio_ref.",
@@ -312,7 +316,7 @@ def main(argv: list[str] | None = None) -> int:
         total_nodes += nodes_updated
         total_items += items_added
 
-    print(f"\n=== Summary ===")
+    print("\n=== Summary ===")
     print(f"Type:          {args.type}")
     print(f"Nodes updated: {total_nodes}")
     print(f"Items added:   {total_items}")

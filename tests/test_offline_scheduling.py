@@ -3,14 +3,10 @@
 from datetime import datetime, timedelta
 from uuid import uuid4
 
-import pytest
-
 from gymnasium_classica.graph.loader import load_graph_from_dict
-from gymnasium_classica.models.graph import KennisKnoop, ItemType
+from gymnasium_classica.models.graph import KennisKnoop
 from gymnasium_classica.models.learner import (
-    KnoopState,
     LearnerModel,
-    MasterySource,
     OfflineAssignment,
     ResponseType,
 )
@@ -98,9 +94,7 @@ class TestCollectOfflineItems:
     def test_finds_offline_items(self):
         graph = load_graph_from_dict(_graph_with_offline_items())
         now = datetime(2026, 4, 13)
-        assignments = _collect_offline_items(
-            graph, {"LAT-G-MORF-DECL1-INTRO"}, now
-        )
+        assignments = _collect_offline_items(graph, {"LAT-G-MORF-DECL1-INTRO"}, now)
         assert len(assignments) == 1
         assert assignments[0].knoop_id == "LAT-G-MORF-DECL1-INTRO"
         assert assignments[0].item_id == "ITEM-OFFLINE-D1-001"
@@ -110,18 +104,14 @@ class TestCollectOfflineItems:
     def test_ignores_online_items(self):
         graph = load_graph_from_dict(_graph_with_offline_items())
         now = datetime(2026, 4, 13)
-        assignments = _collect_offline_items(
-            graph, {"LAT-G-MORF-DECL1-INTRO"}, now
-        )
+        assignments = _collect_offline_items(graph, {"LAT-G-MORF-DECL1-INTRO"}, now)
         item_ids = [a.item_id for a in assignments]
         assert "ITEM-ONLINE-D1-001" not in item_ids
 
     def test_empty_for_nodes_without_offline(self):
         graph = load_graph_from_dict(_graph_with_offline_items())
         now = datetime(2026, 4, 13)
-        assignments = _collect_offline_items(
-            graph, {"LAT-G-MORF-NAAMVAL-INTRO"}, now
-        )
+        assignments = _collect_offline_items(graph, {"LAT-G-MORF-NAAMVAL-INTRO"}, now)
         assert assignments == []
 
     def test_empty_for_unknown_nodes(self):
@@ -217,9 +207,7 @@ class TestOfflineInSession:
 
         if learner.pending_offline_assignments:
             # Second session — follow-ups should be surfaced
-            result2 = run_session(
-                learner, graph, _always_correct, now=now + timedelta(days=1)
-            )
+            result2 = run_session(learner, graph, _always_correct, now=now + timedelta(days=1))
             assert len(result2.follow_ups) > 0
             assert result2.follow_ups[0].item_id == "ITEM-OFFLINE-D1-001"
 
@@ -238,9 +226,7 @@ class TestOfflineInSession:
         )
 
         graph = load_graph_from_dict(_graph_with_offline_items())
-        result = run_session(
-            learner, graph, _always_correct, now=now + timedelta(days=1)
-        )
+        result = run_session(learner, graph, _always_correct, now=now + timedelta(days=1))
         assert result.follow_ups == []
 
 

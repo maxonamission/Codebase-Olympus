@@ -2,7 +2,6 @@
 
 import sqlite3
 from pathlib import Path
-from typing import Optional
 
 from gymnasium_classica.models.learner import LearnerModel
 from gymnasium_classica.models.user import User
@@ -61,7 +60,7 @@ def create_user(conn: sqlite3.Connection, user: User, password_hash: str) -> Non
     conn.commit()
 
 
-def get_user(conn: sqlite3.Connection, user_id: str) -> Optional[User]:
+def get_user(conn: sqlite3.Connection, user_id: str) -> User | None:
     """Load a user by ID, returning None if not found."""
     row = conn.execute("SELECT data FROM users WHERE id = ?", (user_id,)).fetchone()
     if row is None:
@@ -69,7 +68,7 @@ def get_user(conn: sqlite3.Connection, user_id: str) -> Optional[User]:
     return User.model_validate_json(row["data"])
 
 
-def get_user_by_email(conn: sqlite3.Connection, email: str) -> Optional[User]:
+def get_user_by_email(conn: sqlite3.Connection, email: str) -> User | None:
     """Load a user by email address, returning None if not found."""
     row = conn.execute("SELECT data FROM users WHERE email = ?", (email,)).fetchone()
     if row is None:
@@ -100,11 +99,9 @@ def save_learner_model(conn: sqlite3.Connection, model: LearnerModel) -> None:
     conn.commit()
 
 
-def load_learner_model(conn: sqlite3.Connection, user_id: str) -> Optional[LearnerModel]:
+def load_learner_model(conn: sqlite3.Connection, user_id: str) -> LearnerModel | None:
     """Load the learner model for a user, returning None if not found."""
-    row = conn.execute(
-        "SELECT data FROM learner_models WHERE user_id = ?", (user_id,)
-    ).fetchone()
+    row = conn.execute("SELECT data FROM learner_models WHERE user_id = ?", (user_id,)).fetchone()
     if row is None:
         return None
     return LearnerModel.model_validate_json(row["data"])

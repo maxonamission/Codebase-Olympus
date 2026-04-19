@@ -20,56 +20,64 @@ from gymnasium_classica.models.graph import Item  # noqa: E402
 ITEMS = [
     # === PRAESENS (poc) ===
     (
-        "LAT-G-MORF-PRAES-C1-ACT", "lat_grammatica_poc.json",
+        "LAT-G-MORF-PRAES-C1-ACT",
+        "lat_grammatica_poc.json",
         "Schrijf de volledige vervoeging van 'amare' in de presens indicativus actief op papier.",
         "amo, amas, amat, amamus, amatis, amant",
         "Stam ama- + persoonsuitgangen. Let op: 1e pers.sg. amo (niet amao).",
         0.4,
     ),
     (
-        "LAT-G-MORF-PRAES-C2-ACT", "lat_grammatica_poc.json",
+        "LAT-G-MORF-PRAES-C2-ACT",
+        "lat_grammatica_poc.json",
         "Schrijf de volledige vervoeging van 'monēre' in de presens indicativus actief op papier.",
         "moneo, mones, monet, monemus, monetis, monent",
         "Stam mone- + persoonsuitgangen. De stamklinker -e- is lang (ē) en blijft in alle vormen.",
         0.4,
     ),
     (
-        "LAT-G-MORF-PRAES-C3-ACT", "lat_grammatica_poc.json",
+        "LAT-G-MORF-PRAES-C3-ACT",
+        "lat_grammatica_poc.json",
         "Schrijf de volledige vervoeging van 'legere' in de presens indicativus actief op papier.",
         "lego, legis, legit, legimus, legitis, legunt",
         "3e conjugatie: stamklinker wisselt (e/i/u). Let op: 3e pl. -unt (niet -ent).",
         0.5,
     ),
     (
-        "LAT-G-MORF-PRAES-C4-ACT", "lat_grammatica_poc.json",
+        "LAT-G-MORF-PRAES-C4-ACT",
+        "lat_grammatica_poc.json",
         "Schrijf de volledige vervoeging van 'audīre' in de presens indicativus actief op papier.",
         "audio, audis, audit, audimus, auditis, audiunt",
         "4e conjugatie: stamklinker -i- lang. Let op: 3e pl. audiunt (met -i-).",
         0.4,
     ),
     (
-        "LAT-G-MORF-PRAES-ESSE", "lat_grammatica_poc.json",
+        "LAT-G-MORF-PRAES-ESSE",
+        "lat_grammatica_poc.json",
         "Schrijf de volledige vervoeging van 'esse' in de presens indicativus op papier.",
         "sum, es, est, sumus, estis, sunt",
         "Onregelmatig werkwoord. Let op de stamwisseling su-/es-.",
         0.3,
     ),
     (
-        "LAT-G-MORF-INF-PRAES-ACT", "lat_grammatica_poc.json",
+        "LAT-G-MORF-INF-PRAES-ACT",
+        "lat_grammatica_poc.json",
         "Schrijf de infinitivus presens actief van alle vier conjugaties + esse op papier.",
         "1e: -āre (amare), 2e: -ēre (monere), 3e: -ere (legere), 4e: -īre (audire), esse",
         "Let op het verschil tussen 2e conj. -ēre (lang) en 3e conj. -ere (kort).",
         0.5,
     ),
     (
-        "LAT-G-MORF-IMPF-C1C2-ACT", "lat_grammatica_poc.json",
+        "LAT-G-MORF-IMPF-C1C2-ACT",
+        "lat_grammatica_poc.json",
         "Schrijf de volledige vervoeging van 'amare' in het imperfectum indicativus actief op papier.",
         "amabam, amabas, amabat, amabamus, amabatis, amabant",
         "Kenmerk: -ba- tussen stam en persoonsuitgang. 1e pers.sg. -bam.",
         0.5,
     ),
     (
-        "LAT-G-MORF-IMPF-C3C4-ACT", "lat_grammatica_poc.json",
+        "LAT-G-MORF-IMPF-C3C4-ACT",
+        "lat_grammatica_poc.json",
         "Schrijf de volledige vervoeging van 'audīre' in het imperfectum indicativus actief op papier.",
         "audiebam, audiebas, audiebat, audiebamus, audiebatis, audiebant",
         "3e/4e conjugatie: -eba- (met extra -e-). Vergelijk met 1e/2e: -ba-.",
@@ -77,28 +85,32 @@ ITEMS = [
     ),
     # === PRAESENS (leerjaar1) ===
     (
-        "LAT-G-MORF-PRAES-C3B-ACT", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-PRAES-C3B-ACT",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de volledige vervoeging van 'capere' (gemengde conjugatie) in de presens indicativus actief op papier.",
         "capio, capis, capit, capimus, capitis, capiunt",
         "Gemengde conjugatie: als 3e maar met -i- in 1e sg. en 3e pl. (capio, capiunt).",
         0.7,
     ),
     (
-        "LAT-G-MORF-PRAES-POSSE", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-PRAES-POSSE",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de volledige vervoeging van 'posse' in de presens indicativus op papier.",
         "possum, potes, potest, possumus, potestis, possunt",
         "Pot- voor klinker (potes), pos- voor s (possum). Samengesteld uit pot+esse.",
         0.6,
     ),
     (
-        "LAT-G-MORF-PRAES-PARAD", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-PRAES-PARAD",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de presens indicativus actief van alle vier conjugaties naast elkaar op papier (1e pers. sg. t/m 3e pers. pl.).",
         "1e: amo/as/at/amus/atis/ant, 2e: moneo/es/et/emus/etis/ent, 3e: lego/is/it/imus/itis/unt, 4e: audio/is/it/imus/itis/iunt",
         "Vergelijk de stamklinkers: -a-, -e-, wisselend, -i-. 3e pl.: -ant/-ent/-unt/-iunt.",
         0.8,
     ),
     (
-        "LAT-G-MORF-PRAES-PARAD", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-PRAES-PARAD",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de presens indicativus actief van 'esse' en 'posse' naast elkaar op papier.",
         "sum/possum, es/potes, est/potest, sumus/possumus, estis/potestis, sunt/possunt",
         "Posse = pot/pos + esse. Let op: pos- voor s, pot- voor klinker.",
@@ -106,35 +118,40 @@ ITEMS = [
     ),
     # === IMPERFECTUM (leerjaar1) ===
     (
-        "LAT-G-MORF-IMPF-ESSE", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-IMPF-ESSE",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de volledige vervoeging van 'esse' in het imperfectum indicativus op papier.",
         "eram, eras, erat, eramus, eratis, erant",
         "Imperfectum van esse: stam era- + persoonsuitgangen. Regelmatig patroon.",
         0.4,
     ),
     (
-        "LAT-G-MORF-IMPF-C3B-ACT", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-IMPF-C3B-ACT",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de volledige vervoeging van 'capere' in het imperfectum indicativus actief op papier.",
         "capiebam, capiebas, capiebat, capiebamus, capiebatis, capiebant",
         "Gemengde conjugatie: imperfectum met -ieba- (als 4e conjugatie).",
         0.7,
     ),
     (
-        "LAT-G-MORF-IMPF-POSSE", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-IMPF-POSSE",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de volledige vervoeging van 'posse' in het imperfectum indicativus op papier.",
         "poteram, poteras, poterat, poteramus, poteratis, poterant",
         "Pot- + eram: regelmatig imperfectum op basis van esse.",
         0.5,
     ),
     (
-        "LAT-G-MORF-IMPF-PARAD", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-IMPF-PARAD",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf het imperfectum indicativus actief van conj. 1, 3 en esse naast elkaar op papier.",
         "1e: amabam/-bas/-bat/-bamus/-batis/-bant, 3e: legebam/-bas/-bat/-bamus/-batis/-bant, esse: eram/-as/-at/-amus/-atis/-ant",
         "Kenmerk imperfectum: -ba- (1e/2e) of -eba- (3e/4e). Esse heeft era-.",
         0.8,
     ),
     (
-        "LAT-G-MORF-IMPF-PARAD", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-IMPF-PARAD",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf het imperfectum indicativus actief van alle vier conjugaties op papier (alleen 1e pers.sg. + 3e pers.pl.).",
         "1e: amabam/amabant, 2e: monebam/monebant, 3e: legebam/legebant, 4e: audiebam/audiebant",
         "Let op het verschil: 1e/2e -ba-, 3e/4e -eba-. Uitgang 3e pl. altijd -nt.",
@@ -142,49 +159,56 @@ ITEMS = [
     ),
     # === PERFECTUM (leerjaar1) ===
     (
-        "LAT-G-MORF-PERF-C1-ACT", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-PERF-C1-ACT",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de volledige vervoeging van 'amāre' in het perfectum indicativus actief op papier.",
         "amavi, amavisti, amavit, amavimus, amavistis, amaverunt",
         "V-perfectum: stam amav-. Uitgangen: -i, -isti, -it, -imus, -istis, -erunt.",
         0.6,
     ),
     (
-        "LAT-G-MORF-PERF-C2-ACT", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-PERF-C2-ACT",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de volledige vervoeging van 'monēre' in het perfectum indicativus actief op papier.",
         "monui, monuisti, monuit, monuimus, monuistis, monuerunt",
         "U-perfectum: stam monu-. Perfectumstam kan afwijken van de presensstam.",
         0.7,
     ),
     (
-        "LAT-G-MORF-PERF-C3-ACT", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-PERF-C3-ACT",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de volledige vervoeging van 'legere' in het perfectum indicativus actief op papier.",
         "legi, legisti, legit, legimus, legistis, legerunt",
         "Stam-perfectum (zonder extra kenmerk). Let op: legit kan presens of perfectum zijn.",
         0.8,
     ),
     (
-        "LAT-G-MORF-PERF-C4-ACT", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-PERF-C4-ACT",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de volledige vervoeging van 'audīre' in het perfectum indicativus actief op papier.",
         "audivi, audivisti, audivit, audivimus, audivistis, audiverunt",
         "V-perfectum: stam audiv-. Regelmatig als 1e conjugatie.",
         0.6,
     ),
     (
-        "LAT-G-MORF-PERF-ESSE", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-PERF-ESSE",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de volledige vervoeging van 'esse' in het perfectum indicativus op papier.",
         "fui, fuisti, fuit, fuimus, fuistis, fuerunt",
         "Perfectumstam fu- (suppletief). Uitgangen zijn regulier.",
         0.5,
     ),
     (
-        "LAT-G-MORF-PERF-PARAD", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-PERF-PARAD",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de perfectum-uitgangen (alle personen) op papier, met een voorbeeld per perfectumtype (v, u, s, stam).",
         "-i, -isti, -it, -imus, -istis, -erunt. V: amavi, U: monui, S: dixi, Stam: legi",
         "De perfectum-uitgangen zijn altijd gelijk, alleen de perfectumstam verschilt per type.",
         0.7,
     ),
     (
-        "LAT-G-MORF-PERF-PARAD", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-PERF-PARAD",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf het perfectum indicativus actief van 'amare' en 'esse' naast elkaar op papier.",
         "amavi/fui, amavisti/fuisti, amavit/fuit, amavimus/fuimus, amavistis/fuistis, amaverunt/fuerunt",
         "Beide regelmatig in uitgangen. Verschil zit in de perfectumstam: amav- vs. fu-.",
@@ -192,28 +216,32 @@ ITEMS = [
     ),
     # === PLUSQUAMPERFECTUM (leerjaar1) ===
     (
-        "LAT-G-MORF-PLQPF-REG-ACT", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-PLQPF-REG-ACT",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de volledige vervoeging van 'amare' in het plusquamperfectum indicativus actief op papier.",
         "amaveram, amaveras, amaverat, amaveramus, amaveratis, amaverant",
         "Perfectumstam + era- + persoonsuitgangen. Herkenbaar aan -era-.",
         0.7,
     ),
     (
-        "LAT-G-MORF-PLQPF-ESSE", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-PLQPF-ESSE",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de volledige vervoeging van 'esse' in het plusquamperfectum indicativus op papier.",
         "fueram, fueras, fuerat, fueramus, fueratis, fuerant",
         "Perfectumstam fu- + eram. Regelmatig patroon.",
         0.6,
     ),
     (
-        "LAT-G-MORF-PLQPF-POSSE", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-PLQPF-POSSE",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de volledige vervoeging van 'posse' in het plusquamperfectum indicativus op papier.",
         "potueram, potueras, potuerat, potueramus, potueratis, potuerant",
         "Perfectumstam potu- + eram. Vergelijk met imperfectum poteram.",
         0.7,
     ),
     (
-        "LAT-G-MORF-PLQPF-PARAD", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-PLQPF-PARAD",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf het plusquamperfectum van 'amare', 'legere' en 'esse' naast elkaar op papier (alle personen).",
         "amaveram/legeram/fueram, amaveras/legeras/fueras, amaverat/legerat/fuerat, amaveramus/legeramus/fueramus, amaveratis/legeratis/fueratis, amaverant/legerant/fuerant",
         "Alle drie: perfectumstam + era-uitgangen. Herken het -era- kenmerk.",
@@ -221,21 +249,24 @@ ITEMS = [
     ),
     # === IMPERATIVUS (leerjaar1) ===
     (
-        "LAT-G-MORF-IMPER-SG", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-IMPER-SG",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de imperativus singularis van alle vier conjugaties + esse op papier.",
         "1e: ama, 2e: mone, 3e: lege, 4e: audi, esse: es",
         "Imperativus sg. = zuivere stam (zonder uitgang). Esse: es.",
         0.4,
     ),
     (
-        "LAT-G-MORF-IMPER-PL", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-IMPER-PL",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de imperativus pluralis van alle vier conjugaties + esse op papier.",
         "1e: amate, 2e: monete, 3e: legite, 4e: audite, esse: este",
         "Imperativus pl. = stam + -te. Let op: 3e conj. -ite, 4e conj. -ite.",
         0.5,
     ),
     (
-        "LAT-G-MORF-IMPER-ESSE", "lat_grammatica_leerjaar1.json",
+        "LAT-G-MORF-IMPER-ESSE",
+        "lat_grammatica_leerjaar1.json",
         "Schrijf de imperativus singularis en pluralis van 'esse' op papier.",
         "sg.: es, pl.: este",
         "Es = 'wees!', este = 'weest!'. Onregelmatig maar eenvoudig.",
@@ -255,8 +286,9 @@ def next_item_nr(knoop: dict) -> int:
     return max_nr + 1
 
 
-def build_item(knoop_id: str, nr: int, stimulus: str, verwacht: str,
-               feedback: str, moeilijkheid: float) -> dict:
+def build_item(
+    knoop_id: str, nr: int, stimulus: str, verwacht: str, feedback: str, moeilijkheid: float
+) -> dict:
     """Build an offline_schrijven item dict."""
     return {
         "id": f"ITEM-{knoop_id}-{nr:03d}",
@@ -330,7 +362,7 @@ def main():
             print(f"  {kid}: +{count}")
         total_added += added
 
-    print(f"\n=== B5-04b: Conjugatie paradigma-schrijfoefeningen ===")
+    print("\n=== B5-04b: Conjugatie paradigma-schrijfoefeningen ===")
     print(f"Totaal toegevoegd: {total_added} items")
 
 

@@ -14,7 +14,6 @@ from gymnasium_classica.api.schemas import (
     IntakeStartResponse,
 )
 from gymnasium_classica.diagnostic.methode_profile import apply_methode_profile
-from gymnasium_classica.diagnostic.placement import MAX_QUESTIONS
 from gymnasium_classica.models.learner import LearnerModel
 
 router = APIRouter(prefix="/intake", tags=["intake"])

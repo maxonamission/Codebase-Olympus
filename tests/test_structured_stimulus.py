@@ -9,10 +9,7 @@ te graven.
 
 from __future__ import annotations
 
-import pytest
-
 from gymnasium_classica.api.session_manager import (
-    Question,
     _knoop_to_question,
     _promote_first_item,
 )
@@ -121,9 +118,7 @@ class TestPromoteFirstItem:
         item_type, instruction, options, hint, audio_ref = _promote_first_item(knoop)
 
         assert item_type == "luister_herkenning"
-        assert instruction == (
-            "Luister naar het Latijnse woord en kies de juiste vertaling."
-        )
+        assert instruction == ("Luister naar het Latijnse woord en kies de juiste vertaling.")
         assert options == ["zijn", "vaderland", "doden", "vragen, streven naar"]
         assert hint is None
         assert audio_ref == "LAT-V-F01-SUM.wav"

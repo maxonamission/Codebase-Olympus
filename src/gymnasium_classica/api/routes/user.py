@@ -5,7 +5,12 @@ import sqlite3
 from fastapi import APIRouter, Depends, HTTPException, Request
 
 from gymnasium_classica.api.auth import get_current_user_id
-from gymnasium_classica.api.database import get_user, load_learner_model, save_learner_model, update_user
+from gymnasium_classica.api.database import (
+    get_user,
+    load_learner_model,
+    save_learner_model,
+    update_user,
+)
 from gymnasium_classica.api.schemas import (
     UpdateLearningRouteRequest,
     UserProfileResponse,
@@ -69,9 +74,7 @@ async def update_learning_route(
     learner = load_learner_model(db, user_id)
     if learner is None:
         learner = LearnerModel(user_id=UUID(user_id))
-    learner.route_history.append(
-        RouteSwitch(timestamp=datetime.now(), route=route.value)
-    )
+    learner.route_history.append(RouteSwitch(timestamp=datetime.now(), route=route.value))
     save_learner_model(db, learner)
 
     return UserProfileResponse(

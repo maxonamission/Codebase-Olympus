@@ -9,11 +9,9 @@ Tests cover:
 - Grammar-first route is unaffected
 """
 
-from datetime import datetime
 from uuid import uuid4
 
 import networkx as nx
-import pytest
 
 from gymnasium_classica.api.session_manager import SessionManager
 from gymnasium_classica.models.graph import (
@@ -22,7 +20,6 @@ from gymnasium_classica.models.graph import (
     KennisKnoop,
     KnoopType,
     PrerequisiteEdge,
-    Taal,
 )
 from gymnasium_classica.models.learner import (
     KnoopState,
@@ -93,8 +90,12 @@ def _make_passage(
         titel="Test passage",
         tekst="Puella cantat.",
         annotaties=[
-            WordAnnotation(woord="Puella", lemma="puella", naamval="nom.sg", vertaling="het meisje"),
-            WordAnnotation(woord="cantat", lemma="cantare", naamval="praes.ind.act.3sg", vertaling="zingt"),
+            WordAnnotation(
+                woord="Puella", lemma="puella", naamval="nom.sg", vertaling="het meisje"
+            ),
+            WordAnnotation(
+                woord="cantat", lemma="cantare", naamval="praes.ind.act.3sg", vertaling="zingt"
+            ),
         ],
         knoop_ids=knoop_ids,
         moeilijkheid=moeilijkheid,
@@ -129,7 +130,9 @@ class TestReadinessScoreRelaxed:
             knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
         score = readiness_score(
-            "LAT-G-MORF-CHILDA", learner, g,
+            "LAT-G-MORF-CHILDA",
+            learner,
+            g,
             prereq_threshold=CONTEXT_FIRST_PREREQ_THRESHOLD,
         )
         assert score > 0.0
@@ -142,7 +145,9 @@ class TestReadinessScoreRelaxed:
             knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.10
         )
         score = readiness_score(
-            "LAT-G-MORF-CHILDA", learner, g,
+            "LAT-G-MORF-CHILDA",
+            learner,
+            g,
             prereq_threshold=CONTEXT_FIRST_PREREQ_THRESHOLD,
         )
         assert score == 0.0
@@ -181,9 +186,7 @@ class TestSelectPassage:
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
         for nid in ["LAT-G-MORF-ROOT", "LAT-G-MORF-CHILDA", "LAT-G-MORF-CHILDC"]:
-            learner.knoop_states[nid] = KnoopState(
-                knoop_id=nid, posterior_mastery=0.90
-            )
+            learner.knoop_states[nid] = KnoopState(knoop_id=nid, posterior_mastery=0.90)
         passages = [_make_passage()]
         result = select_passage(learner, g, passages)
         assert result is None
@@ -249,9 +252,7 @@ class TestCandidatesContextFirst:
         learner = LearnerModel(user_id=uuid4())
         # All nodes mastered → no passage matches
         for nid in g.nodes:
-            learner.knoop_states[nid] = KnoopState(
-                knoop_id=nid, posterior_mastery=0.90
-            )
+            learner.knoop_states[nid] = KnoopState(knoop_id=nid, posterior_mastery=0.90)
         passages = [_make_passage()]
         candidates = _candidates_for_new_material_context_first(learner, g, passages)
         assert candidates == []
@@ -269,7 +270,9 @@ class TestRunSessionContextFirst:
         )
         passages = [_make_passage()]
         result = run_session(
-            learner, g, _always_correct,
+            learner,
+            g,
+            _always_correct,
             learning_route=LearningRoute.CONTEXT_FIRST,
             passages=passages,
         )
@@ -295,7 +298,9 @@ class TestRunSessionContextFirst:
             knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.90
         )
         result = run_session(
-            learner, g, _always_correct,
+            learner,
+            g,
+            _always_correct,
             learning_route=LearningRoute.CONTEXT_FIRST,
             passages=[],
         )

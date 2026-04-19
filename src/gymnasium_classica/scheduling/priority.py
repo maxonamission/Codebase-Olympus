@@ -13,7 +13,7 @@ from datetime import datetime
 
 import networkx as nx
 
-from gymnasium_classica.models.graph import KennisKnoop, KnoopType, PrerequisiteEdge
+from gymnasium_classica.models.graph import KennisKnoop, PrerequisiteEdge
 from gymnasium_classica.models.learner import KnoopState, LearnerModel
 
 # Component weights

@@ -7,10 +7,10 @@ A session has four phases:
   4. Cool-down (5 min)   — spaced repetition review of older material
 """
 
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import StrEnum
-from typing import Callable
 from uuid import uuid4
 
 import networkx as nx
@@ -26,6 +26,8 @@ from gymnasium_classica.models.learner import (
     SelfReportResponse,
     SessionRecord,
 )
+from gymnasium_classica.models.passage import Passage
+from gymnasium_classica.models.user import LearningRoute
 from gymnasium_classica.scheduling.bkt import (
     SELF_REPORT_BKT_PARAMS,
     propagate_practice_correct,
@@ -35,11 +37,8 @@ from gymnasium_classica.scheduling.non_interference import (
     NonInterferenceState,
     select_next,
 )
-from gymnasium_classica.models.passage import Passage
-from gymnasium_classica.models.user import LearningRoute
 from gymnasium_classica.scheduling.priority import (
     MASTERY_THRESHOLD,
-    PREREQ_READY_THRESHOLD,
     compute_urgency_scores,
     estimate_retention,
     forget_urgency,
@@ -193,13 +192,13 @@ def select_passage(
             # 3. All its prerequisites are also in this passage
             #    (the passage introduces them together)
             preds = list(graph.predecessors(knoop_id))
-            if not preds:
-                reachable_unmastered += 1
-            elif all(p in passage_knoop_set for p in preds):
+            if not preds or all(p in passage_knoop_set for p in preds):
                 reachable_unmastered += 1
             else:
                 ready = readiness_score(
-                    knoop_id, learner, graph,
+                    knoop_id,
+                    learner,
+                    graph,
                     prereq_threshold=CONTEXT_FIRST_PREREQ_THRESHOLD,
                 )
                 if ready > 0.0:
@@ -246,7 +245,9 @@ def _candidates_for_new_material_context_first(
         if posterior >= MASTERY_THRESHOLD:
             continue
         ready = readiness_score(
-            knoop_id, learner, graph,
+            knoop_id,
+            learner,
+            graph,
             prereq_threshold=CONTEXT_FIRST_PREREQ_THRESHOLD,
         )
         if ready == 0.0:
@@ -451,23 +452,14 @@ def run_session(
         if phase == SessionPhase.WARMUP:
             candidates = _candidates_for_warmup(learner, graph, now)
         elif phase == SessionPhase.NEW_MATERIAL:
-            if (
-                learning_route == LearningRoute.CONTEXT_FIRST
-                and passages
-            ):
-                candidates = _candidates_for_new_material_context_first(
-                    learner, graph, passages
-                )
+            if learning_route == LearningRoute.CONTEXT_FIRST and passages:
+                candidates = _candidates_for_new_material_context_first(learner, graph, passages)
             else:
                 candidates = _candidates_for_new_material(learner, graph)
         elif phase == SessionPhase.DEEPENING:
-            candidates = _candidates_for_deepening(
-                learner, graph, result.nodes_introduced, now
-            )
+            candidates = _candidates_for_deepening(learner, graph, result.nodes_introduced, now)
         else:  # COOLDOWN
-            candidates = _candidates_for_cooldown(
-                learner, graph, session_node_ids, now
-            )
+            candidates = _candidates_for_cooldown(learner, graph, session_node_ids, now)
 
         if not candidates:
             continue

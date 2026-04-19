@@ -2,7 +2,6 @@
 
 from datetime import datetime
 from enum import StrEnum
-from typing import Optional
 from uuid import UUID
 
 from pydantic import BaseModel, Field
@@ -38,21 +37,21 @@ class ItemResponse(BaseModel):
     item_id: str
     correct: bool
     response_time_ms: int = Field(ge=0)
-    answer_text: Optional[str] = Field(
+    answer_text: str | None = Field(
         default=None,
         description=(
             "Raw answer the learner typed or selected.  None when the "
             "response came from self-assessment (no literal answer)."
         ),
     )
-    correct_answer: Optional[str] = Field(
+    correct_answer: str | None = Field(
         default=None,
         description=(
             "Snapshot of the expected answer at the time of the attempt, "
             "so later analysis doesn't break when items are rewritten."
         ),
     )
-    item_type: Optional[str] = Field(
+    item_type: str | None = Field(
         default=None,
         description="ItemType value at attempt-time (herkenning, productie, ...).",
     )
@@ -66,8 +65,8 @@ class KnoopState(BaseModel):
     easiness_factor: float = Field(gt=0.0, default=2.5)
     interval_days: float = Field(ge=0.0, default=0.0)
     repetitions: int = Field(ge=0, default=0)
-    last_review: Optional[datetime] = None
-    last_response: Optional[ResponseType] = None
+    last_review: datetime | None = None
+    last_response: ResponseType | None = None
     source: MasterySource = MasterySource.PRACTICE
     item_history: list[ItemResponse] = Field(default_factory=list)
 
@@ -93,11 +92,11 @@ class SessionRecord(BaseModel):
 
     session_id: str
     started_at: datetime
-    ended_at: Optional[datetime] = None
+    ended_at: datetime | None = None
     items_reviewed: list[str] = Field(
         default_factory=list, description="List of item IDs reviewed in this session"
     )
-    learning_route: Optional[str] = Field(
+    learning_route: str | None = Field(
         default=None,
         description="The learning route active during this session",
     )
@@ -114,7 +113,7 @@ class LearnerModel(BaseModel):
     self_report_count: int = Field(default=0, ge=0)
     ocr_verified_count: int = Field(default=0, ge=0)
     intake_completed: bool = False
-    intake_method: Optional[str] = Field(
+    intake_method: str | None = Field(
         default=None,
         description="School method used during intake, e.g. 'fortuna', 'pallas'.",
     )

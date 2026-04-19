@@ -13,7 +13,6 @@ from gymnasium_classica.api.auth import (
 from gymnasium_classica.api.database import (
     create_user,
     get_user,
-    get_user_by_email,
     load_learner_model,
     save_learner_model,
     update_user,
@@ -112,9 +111,7 @@ async def update_settings(
     learner = load_learner_model(db, user_id)
     if learner is None:
         learner = LearnerModel(user_id=UUID(user_id))
-    learner.route_history.append(
-        RouteSwitch(timestamp=datetime.now(), route=route.value)
-    )
+    learner.route_history.append(RouteSwitch(timestamp=datetime.now(), route=route.value))
     save_learner_model(db, learner)
 
     return UserProfileResponse(

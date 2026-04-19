@@ -69,9 +69,9 @@ class TestNonInterferenceState:
         terra = _vocab_knoop("TERRA", "natuur")
         mater = _vocab_knoop("MATER", "familie")
 
-        state.record_selection(pater)   # 3 steps ago
-        state.record_selection(bellum)   # 2 steps ago
-        state.record_selection(terra)    # 1 step ago
+        state.record_selection(pater)  # 3 steps ago
+        state.record_selection(bellum)  # 2 steps ago
+        state.record_selection(terra)  # 1 step ago
 
         penalty = state.cluster_penalty(mater)
         # "familie" was 3 steps ago → penalty_weights[2] = 0.2
@@ -192,6 +192,7 @@ class TestSelectNext:
         # The overall constraint: max 2 of the same cluster in the full 10
         clusters_selected = [k.semantisch_cluster for k in selected]
         from collections import Counter
+
         counts = Counter(clusters_selected)
         for cluster, count in counts.items():
             assert count <= 2, (

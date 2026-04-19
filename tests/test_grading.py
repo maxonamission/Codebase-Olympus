@@ -73,9 +73,7 @@ class TestNormalization:
         assert grade_answer("  sum  ", _make_item("sum"), Taal.LAT).correct is True
 
     def test_collapse_internal_whitespace(self):
-        assert (
-            grade_answer("de  boer", _make_item("de boer"), Taal.LAT).correct is True
-        )
+        assert grade_answer("de  boer", _make_item("de boer"), Taal.LAT).correct is True
 
     def test_case_insensitive_latin(self):
         assert grade_answer("SUM", _make_item("sum"), Taal.LAT).correct is True
@@ -88,15 +86,11 @@ class TestNormalization:
 class TestLatinMacronTolerance:
     def test_missing_macron_accepted(self):
         # Expected has macron, learner types plain vowel.
-        assert (
-            grade_answer("puella", _make_item("puellā"), Taal.LAT).correct is True
-        )
+        assert grade_answer("puella", _make_item("puellā"), Taal.LAT).correct is True
 
     def test_extra_macron_accepted(self):
         # Expected is plain, learner adds a macron.
-        assert (
-            grade_answer("puellā", _make_item("puella"), Taal.LAT).correct is True
-        )
+        assert grade_answer("puellā", _make_item("puella"), Taal.LAT).correct is True
 
     def test_breve_also_stripped(self):
         # Breve (U+0306) is also accepted loosely on Latin.

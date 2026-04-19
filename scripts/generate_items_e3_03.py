@@ -28,7 +28,6 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from gymnasium_classica.models.graph import Item
 
-
 # ---------------------------------------------------------------------------
 # Helper: ensure NFC normalization on every stimulus/antwoord/feedback string
 # (matches the normalization done client-side in GreekInput.jsx).
@@ -554,9 +553,7 @@ def add_items_to_json(json_path: Path, items_by_knoop: dict[str, list[dict]]) ->
         if knoop["id"] in items_by_knoop:
             existing_ids = {item["id"] for item in knoop.get("items", [])}
             new_items = [
-                item
-                for item in items_by_knoop[knoop["id"]]
-                if item["id"] not in existing_ids
+                item for item in items_by_knoop[knoop["id"]] if item["id"] not in existing_ids
             ]
             knoop.setdefault("items", []).extend(new_items)
             added += len(new_items)

@@ -172,9 +172,7 @@ class IntakeManager:
             if next_pos is not None:
                 state.cursor = next_pos
             else:
-                next_pos = _find_next_unresolved(
-                    state.learner, state.topo, state.cursor - 1, -1
-                )
+                next_pos = _find_next_unresolved(state.learner, state.topo, state.cursor - 1, -1)
                 if next_pos is None:
                     return self._finish(state, converged=True)
                 state.cursor = next_pos
@@ -196,9 +194,7 @@ class IntakeManager:
             if unresolved_pred is not None:
                 state.cursor = unresolved_pred
             else:
-                next_pos = _find_next_unresolved(
-                    state.learner, state.topo, state.cursor + 1, +1
-                )
+                next_pos = _find_next_unresolved(state.learner, state.topo, state.cursor + 1, +1)
                 if next_pos is None:
                     next_pos = _find_next_unresolved(
                         state.learner, state.topo, state.cursor - 1, -1

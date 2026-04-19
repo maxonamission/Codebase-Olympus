@@ -25,7 +25,6 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from gymnasium_classica.models.graph import Item
 
-
 # ---------------------------------------------------------------------------
 # Item definitions — split into thematic groups to keep each block readable.
 # ---------------------------------------------------------------------------
@@ -335,7 +334,10 @@ def diakritiek_items() -> dict[str, list[dict]]:
             "discriminatie_initieel": 1.0,
             "verwachte_tijd_sec": 15,
             "stimulus": "Op welke lettergrepen kan een accent in het Grieks vallen?",
-            "antwoord": ["een van de laatste drie lettergrepen", "ultima, penultima of antepenultima"],
+            "antwoord": [
+                "een van de laatste drie lettergrepen",
+                "ultima, penultima of antepenultima",
+            ],
             "feedback": "Accenten vallen alleen op een van de laatste drie lettergrepen: antepenultima, penultima of ultima.",
             "bron": "handmatig",
         },
@@ -351,7 +353,10 @@ def diakritiek_items() -> dict[str, list[dict]]:
             "discriminatie_initieel": 1.0,
             "verwachte_tijd_sec": 12,
             "stimulus": "Op welke drie lettergrepen kan acutus (´) voorkomen?",
-            "antwoord": ["antepenultima, penultima, ultima", "een van de laatste drie lettergrepen"],
+            "antwoord": [
+                "antepenultima, penultima, ultima",
+                "een van de laatste drie lettergrepen",
+            ],
             "feedback": "Acutus kan op antepenultima, penultima of ultima staan — met restricties op lettergreeplengte.",
             "bron": "handmatig",
         },
@@ -380,7 +385,10 @@ def diakritiek_items() -> dict[str, list[dict]]:
             "discriminatie_initieel": 1.2,
             "verwachte_tijd_sec": 15,
             "stimulus": "Wanneer verandert een acutus op de ultima in een gravis?",
-            "antwoord": ["wanneer een ander woord volgt (zonder leesteken)", "voor een volgend woord"],
+            "antwoord": [
+                "wanneer een ander woord volgt (zonder leesteken)",
+                "voor een volgend woord",
+            ],
             "feedback": "Acutus op de ultima wordt gravis wanneer direct een ander woord volgt zonder leesteken: τὸν νόμον (niet τόν).",
             "bron": "handmatig",
         },
@@ -422,7 +430,10 @@ def diakritiek_items() -> dict[str, list[dict]]:
             "discriminatie_initieel": 1.0,
             "verwachte_tijd_sec": 25,
             "stimulus": "Waarom kan circumflexus nooit op een antepenultima staan?",
-            "antwoord": ["omdat een circumflexus een lange klinker vereist en niet verder dan de penultima valt", "regel: circumflexus alleen op de laatste twee lettergrepen"],
+            "antwoord": [
+                "omdat een circumflexus een lange klinker vereist en niet verder dan de penultima valt",
+                "regel: circumflexus alleen op de laatste twee lettergrepen",
+            ],
             "feedback": "De circumflexus vereist een lange klinker én valt alleen op een van de laatste twee lettergrepen. Antepenultima ligt te ver van het woordeinde.",
             "bron": "handmatig",
         },
@@ -778,9 +789,7 @@ def add_items_to_json(json_path: Path, items_by_knoop: dict[str, list[dict]]) ->
         if knoop["id"] in items_by_knoop:
             existing_ids = {item["id"] for item in knoop.get("items", [])}
             new_items = [
-                item
-                for item in items_by_knoop[knoop["id"]]
-                if item["id"] not in existing_ids
+                item for item in items_by_knoop[knoop["id"]] if item["id"] not in existing_ids
             ]
             knoop.setdefault("items", []).extend(new_items)
             added += len(new_items)

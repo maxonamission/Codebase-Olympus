@@ -107,12 +107,8 @@ async def start_session(
     from gymnasium_classica.models.user import LearningRoute
 
     user = get_user(db, user_id)
-    learning_route = (
-        user.learning_route if user is not None else LearningRoute.GRAMMAR_FIRST
-    )
-    show_grammar_scaffolding = (
-        user.show_grammar_scaffolding if user is not None else True
-    )
+    learning_route = user.learning_route if user is not None else LearningRoute.GRAMMAR_FIRST
+    show_grammar_scaffolding = user.show_grammar_scaffolding if user is not None else True
 
     session_id, question = session_manager.start_session(
         user_id,
@@ -218,8 +214,7 @@ async def get_session_summary(
         nodes_introduced=summary.nodes_introduced,
         nodes_reviewed=summary.nodes_reviewed,
         mastery_changes={
-            k: MasteryChange(before=v[0], after=v[1])
-            for k, v in summary.mastery_changes.items()
+            k: MasteryChange(before=v[0], after=v[1]) for k, v in summary.mastery_changes.items()
         },
         phases_completed=summary.phases_completed,
     )

@@ -27,7 +27,7 @@ class TestPassageIntegration:
         passages = load_passages(PASSAGES_DIR)
         for p in passages:
             assert isinstance(p, Passage)
-            assert p.id, f"Passage missing id"
+            assert p.id, "Passage missing id"
             assert p.taal in ("lat", "grc", "shared"), f"{p.id}: invalid taal {p.taal}"
             assert p.titel, f"{p.id}: missing titel"
             assert p.tekst, f"{p.id}: missing tekst"

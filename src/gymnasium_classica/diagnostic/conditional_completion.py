@@ -10,7 +10,7 @@ was actually not mastered.
 import networkx as nx
 
 from gymnasium_classica.models.graph import PrerequisiteEdge
-from gymnasium_classica.models.learner import KnoopState, LearnerModel, MasterySource
+from gymnasium_classica.models.learner import LearnerModel, MasterySource
 
 # How much a post-requisite failure reduces prerequisite posteriors
 FALLBACK_PENALTY_BASE = 0.15  # Multiplied by encompassing_weight

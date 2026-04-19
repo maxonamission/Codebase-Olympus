@@ -15,7 +15,6 @@ from pathlib import Path
 from uuid import uuid4
 
 import networkx as nx
-import pytest
 
 from gymnasium_classica.api.session_manager import (
     SessionManager,
@@ -29,7 +28,6 @@ from gymnasium_classica.models.graph import (
     ItemType,
     KennisKnoop,
     KnoopType,
-    PrerequisiteEdge,
     Richting,
     Taal,
 )
@@ -37,11 +35,9 @@ from gymnasium_classica.models.learner import (
     ItemResponse,
     KnoopState,
     LearnerModel,
-    ResponseType,
 )
 from gymnasium_classica.models.user import LearningRoute, User
 from gymnasium_classica.scheduling.session import SessionPhase
-
 
 KNOOP_ID = "LAT-G-MORF-DECL1-INTRO"
 
@@ -154,14 +150,10 @@ class TestShouldScaffoldPure:
         assert _should_scaffold(state, _knoop(), SessionPhase.COOLDOWN) is False
 
     def test_context_first_requires_passage_presented(self):
-        not_yet = self._make_state(
-            route=LearningRoute.CONTEXT_FIRST, passage_presented=False
-        )
+        not_yet = self._make_state(route=LearningRoute.CONTEXT_FIRST, passage_presented=False)
         assert _should_scaffold(not_yet, _knoop(), SessionPhase.NEW_MATERIAL) is False
 
-        after = self._make_state(
-            route=LearningRoute.CONTEXT_FIRST, passage_presented=True
-        )
+        after = self._make_state(route=LearningRoute.CONTEXT_FIRST, passage_presented=True)
         assert _should_scaffold(after, _knoop(), SessionPhase.NEW_MATERIAL) is True
 
     def test_context_first_ignores_opt_out_flag(self):

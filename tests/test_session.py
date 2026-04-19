@@ -86,9 +86,7 @@ class TestSessionOrchestration:
                     posterior_mastery=0.10,
                 )
 
-        result = run_session(
-            learner, poc_graph, _mastery_based_answer(learner), now=now
-        )
+        result = run_session(learner, poc_graph, _mastery_based_answer(learner), now=now)
         phases_present = {item.phase for item in result.items}
         # At minimum warmup (review due) and new_material should be present
         assert SessionPhase.WARMUP in phases_present or SessionPhase.NEW_MATERIAL in phases_present
@@ -132,7 +130,6 @@ class TestSessionOrchestration:
         result = run_session(learner, poc_graph, _always_correct)
 
         # All introduced nodes should be root nodes or have mastered prereqs
-        import networkx as nx
 
         for node_id in result.nodes_introduced:
             preds = list(poc_graph.predecessors(node_id))
@@ -161,14 +158,8 @@ class TestMultiSessionProgression:
         mastered_counts = []
         for day in range(3):
             session_time = now + timedelta(days=day)
-            run_session(
-                learner, poc_graph, _always_correct, now=session_time
-            )
-            mastered = sum(
-                1
-                for s in learner.knoop_states.values()
-                if s.posterior_mastery >= 0.75
-            )
+            run_session(learner, poc_graph, _always_correct, now=session_time)
+            mastered = sum(1 for s in learner.knoop_states.values() if s.posterior_mastery >= 0.75)
             mastered_counts.append(mastered)
 
         # Each session should master at least as many nodes as the previous

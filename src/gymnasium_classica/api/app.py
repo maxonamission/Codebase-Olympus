@@ -7,7 +7,6 @@ import json
 import sqlite3
 from contextlib import asynccontextmanager
 from pathlib import Path
-from typing import Optional
 
 import networkx as nx
 from fastapi import FastAPI, HTTPException
@@ -50,7 +49,7 @@ def _load_clusters(path: Path) -> list[dict]:
 
 def create_app(
     graph_dir: Path = GRAPH_DIR,
-    db_path: Optional[Path] = None,
+    db_path: Path | None = None,
     passages_dir: Path = PASSAGES_DIR,
     audio_dir: Path = AUDIO_DIR,
     vocab_sources_dir: Path = VOCAB_SOURCES_DIR,

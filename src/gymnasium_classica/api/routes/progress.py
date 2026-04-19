@@ -19,8 +19,7 @@ from gymnasium_classica.api.schemas import (
     ProgressOverviewResponse,
     SessionMasteryEntry,
 )
-from gymnasium_classica.models.graph import KnoopType, PrerequisiteEdge
-from gymnasium_classica.models.graph import KennisKnoop
+from gymnasium_classica.models.graph import KennisKnoop, KnoopType, PrerequisiteEdge
 from gymnasium_classica.models.learner import LearnerModel
 from gymnasium_classica.scheduling.priority import MASTERY_THRESHOLD
 
@@ -236,9 +235,7 @@ async def progress_clusters(
     db = request.app.state.db
     learner = load_learner_model(db, user_id)
 
-    nodes_per_cluster: dict[str, list[str]] = {
-        c["label"]: [] for c in cluster_defs
-    }
+    nodes_per_cluster: dict[str, list[str]] = {c["label"]: [] for c in cluster_defs}
     for node_id in graph.nodes:
         knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
         if knoop.type != KnoopType.V:
@@ -305,14 +302,16 @@ async def graph_data(
                     status = "mastered"
                 elif mastery >= _IN_PROGRESS_FLOOR:
                     status = "in_progress"
-        nodes.append(GraphNode(
-            id=node_id,
-            titel=knoop.titel_nl,
-            type=knoop.type.value,
-            taal=knoop.taal.value if hasattr(knoop.taal, 'value') else str(knoop.taal),
-            mastery=round(mastery, 3),
-            status=status,
-        ))
+        nodes.append(
+            GraphNode(
+                id=node_id,
+                titel=knoop.titel_nl,
+                type=knoop.type.value,
+                taal=knoop.taal.value if hasattr(knoop.taal, "value") else str(knoop.taal),
+                mastery=round(mastery, 3),
+                status=status,
+            )
+        )
 
     edges = []
     for u, v in graph.edges:

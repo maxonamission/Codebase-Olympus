@@ -2,8 +2,6 @@
 
 import copy
 
-import pytest
-
 from gymnasium_classica.graph.loader import load_graph_from_dict
 from gymnasium_classica.graph.validation import (
     _prerequisite_enrichment_subgraph,
@@ -111,23 +109,29 @@ class TestCheckConnectivity:
 
         k1 = KennisKnoop(
             id="GRC-G-FONL-ALFABET",
-            type="G", taal="grc",
+            type="G",
+            taal="grc",
             titel_nl="Grieks alfabet",
             beschrijving="Introductie Grieks alfabet.",
-            bloom_niveau="kennis", fase="onderbouw_1",
+            bloom_niveau="kennis",
+            fase="onderbouw_1",
         )
         k2 = KennisKnoop(
             id="GRC-G-FONL-ALFA",
-            type="G", taal="grc",
+            type="G",
+            taal="grc",
             titel_nl="De letter alfa",
             beschrijving="De Griekse letter alfa.",
-            bloom_niveau="kennis", fase="onderbouw_1",
+            bloom_niveau="kennis",
+            fase="onderbouw_1",
         )
         g.add_node(k1.id, knoop=k1)
         g.add_node(k2.id, knoop=k2)
         e = PrerequisiteEdge(
-            source_id=k1.id, target_id=k2.id,
-            type="prerequisite", encompassing_weight=0.5,
+            source_id=k1.id,
+            target_id=k2.id,
+            type="prerequisite",
+            encompassing_weight=0.5,
         )
         g.add_edge(k1.id, k2.id, edge=e)
 
@@ -259,9 +263,7 @@ class TestValidateContentRefs:
         g = load_graph_from_dict(sample_graph_data)
         assert validate_content_refs(g, tmp_path) == []
 
-    def test_validate_graph_bubbles_up_content_errors(
-        self, sample_graph_data, tmp_path
-    ):
+    def test_validate_graph_bubbles_up_content_errors(self, sample_graph_data, tmp_path):
         """`validate_graph` markeert ontbrekende content als fout."""
         data = copy.deepcopy(sample_graph_data)
         data["knopen"][0]["content_ref"] = "data/content/DOES-NOT-EXIST.md"
@@ -271,9 +273,7 @@ class TestValidateContentRefs:
         assert report.is_valid is False
         assert any("DOES-NOT-EXIST.md" in err for err in report.errors)
 
-    def test_validate_graph_without_content_root_skips_check(
-        self, sample_graph_data, tmp_path
-    ):
+    def test_validate_graph_without_content_root_skips_check(self, sample_graph_data, tmp_path):
         """Zonder content_root blijft content_ref ongecontroleerd."""
         data = copy.deepcopy(sample_graph_data)
         data["knopen"][0]["content_ref"] = "data/content/DOES-NOT-EXIST.md"

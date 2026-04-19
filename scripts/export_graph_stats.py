@@ -56,8 +56,12 @@ def main() -> None:
     print(f"Root nodes:         {len(roots)}")
     print(f"Leaf nodes:         {len(leaves)}")
     print(f"Topological depth:  {topo_depth}")
-    print(f"Avg in-degree:      {sum(d for _, d in graph.in_degree()) / max(graph.number_of_nodes(), 1):.1f}")
-    print(f"Avg out-degree:     {sum(d for _, d in graph.out_degree()) / max(graph.number_of_nodes(), 1):.1f}")
+    print(
+        f"Avg in-degree:      {sum(d for _, d in graph.in_degree()) / max(graph.number_of_nodes(), 1):.1f}"
+    )
+    print(
+        f"Avg out-degree:     {sum(d for _, d in graph.out_degree()) / max(graph.number_of_nodes(), 1):.1f}"
+    )
 
     if type_counts:
         print("\nNodes by type (with items / total, total items):")

@@ -14,7 +14,6 @@ from dataclasses import dataclass
 
 from gymnasium_classica.models.graph import Item, Taal
 
-
 # --- Public types ---
 
 
@@ -93,9 +92,7 @@ def grade_answer(raw_answer: str, item: Item, taal: Taal) -> GradingResult:
     variants = _expected_variants(item.antwoord)
     normalized_variants = [_normalize(v, taal) for v in variants]
 
-    correct = any(normalized_answer == v for v in normalized_variants) and bool(
-        normalized_answer
-    )
+    correct = any(normalized_answer == v for v in normalized_variants) and bool(normalized_answer)
 
     # Prefer the first variant as the "canonical" expected string for
     # storage and future display.  If there are no variants at all

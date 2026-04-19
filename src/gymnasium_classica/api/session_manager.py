@@ -11,7 +11,6 @@ request/response protocol:
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
-from typing import Optional
 from uuid import uuid4
 
 import networkx as nx
@@ -22,15 +21,14 @@ from gymnasium_classica.models.graph import Item, KennisKnoop
 from gymnasium_classica.models.learner import (
     ItemResponse,
     LearnerModel,
-    OfflineAssignment,
     ResponseType,
     SessionRecord,
 )
 from gymnasium_classica.models.passage import Passage
 from gymnasium_classica.models.user import LearningRoute
-from gymnasium_classica.scheduling.bkt import propagate_practice_correct, update_knoop_state
+from gymnasium_classica.scheduling.grading import canonical_expected_answer, grade_answer
 from gymnasium_classica.scheduling.non_interference import NonInterferenceState, select_next
-from gymnasium_classica.scheduling.priority import MASTERY_THRESHOLD, compute_urgency_scores
+from gymnasium_classica.scheduling.priority import MASTERY_THRESHOLD
 from gymnasium_classica.scheduling.session import (
     DEFAULT_ITEM_TIME_SEC,
     MAX_NEW_NODES,
@@ -47,9 +45,6 @@ from gymnasium_classica.scheduling.session import (
     _process_response,
     select_passage,
 )
-from gymnasium_classica.scheduling.grading import canonical_expected_answer, grade_answer
-from gymnasium_classica.scheduling.sm2 import sm2_update
-
 
 # Learners get the "slow_correct" label when they answer correctly but
 # took more than this factor times the item's expected duration.  Tuned
@@ -207,9 +202,7 @@ def _grade_and_record(
     if grading.correct:
         threshold_ms = int(SLOW_FACTOR * item.verwachte_tijd_sec * 1000)
         response = (
-            ResponseType.SLOW_CORRECT
-            if response_time_ms > threshold_ms
-            else ResponseType.CORRECT
+            ResponseType.SLOW_CORRECT if response_time_ms > threshold_ms else ResponseType.CORRECT
         )
     else:
         response = ResponseType.INCORRECT
@@ -323,13 +316,15 @@ def _knoop_to_question(
     """
     items = []
     for item in knoop.items:
-        items.append({
-            "id": item.id,
-            "type": item.type.value,
-            "stimulus": item.stimulus,
-            "feedback": item.feedback,
-            "verwachte_tijd_sec": item.verwachte_tijd_sec,
-        })
+        items.append(
+            {
+                "id": item.id,
+                "type": item.type.value,
+                "stimulus": item.stimulus,
+                "feedback": item.feedback,
+                "verwachte_tijd_sec": item.verwachte_tijd_sec,
+            }
+        )
 
     if knoop.items:
         stimulus = knoop.items[0].stimulus
@@ -563,9 +558,7 @@ class SessionManager:
                 )
         else:
             if response is None:
-                raise ValueError(
-                    "submit_answer requires either answer_text or response"
-                )
+                raise ValueError("submit_answer requires either answer_text or response")
             item_response = _build_item_response(
                 item=item,
                 knoop=knoop,
@@ -666,9 +659,7 @@ class SessionManager:
                 and state.passages
                 and not state.passage_presented
             ):
-                passage = select_passage(
-                    state.learner, state.graph, state.passages
-                )
+                passage = select_passage(state.learner, state.graph, state.passages)
                 if passage is not None:
                     state.current_passage = passage
                     state.passage_presented = True
@@ -703,9 +694,7 @@ class SessionManager:
                 state.current_before = _get_state_posterior(state.learner, selected.id)
 
                 scaffolding = _should_scaffold(state, selected, phase)
-                return _knoop_to_question(
-                    selected, phase, include_scaffolding=scaffolding
-                )
+                return _knoop_to_question(selected, phase, include_scaffolding=scaffolding)
 
             # Phase exhausted — record and move on
             state.phases_completed.append(phase.value)
@@ -722,20 +711,14 @@ class SessionManager:
         if phase == SessionPhase.WARMUP:
             return _candidates_for_warmup(state.learner, state.graph, now)
         elif phase == SessionPhase.NEW_MATERIAL:
-            if (
-                state.learning_route == LearningRoute.CONTEXT_FIRST
-                and state.passages
-            ):
+            if state.learning_route == LearningRoute.CONTEXT_FIRST and state.passages:
                 return _candidates_for_new_material_context_first(
                     state.learner, state.graph, state.passages
                 )
             return _candidates_for_new_material(state.learner, state.graph)
         elif phase == SessionPhase.DEEPENING:
             # Context-first: deepen on passage-related nodes, not random urgency
-            if (
-                state.learning_route == LearningRoute.CONTEXT_FIRST
-                and state.current_passage
-            ):
+            if state.learning_route == LearningRoute.CONTEXT_FIRST and state.current_passage:
                 candidates = []
                 for knoop_id in state.current_passage.knoop_ids:
                     if knoop_id not in state.graph.nodes:
@@ -763,12 +746,8 @@ class SessionManager:
 
         # Collect offline assignments and attach them to the learner,
         # deduplicating on item_id against already-pending assignments.
-        new_offline = _collect_offline_items(
-            state.graph, state.session_node_ids, now
-        )
-        existing_item_ids = {
-            a.item_id for a in state.learner.pending_offline_assignments
-        }
+        new_offline = _collect_offline_items(state.graph, state.session_node_ids, now)
+        existing_item_ids = {a.item_id for a in state.learner.pending_offline_assignments}
         for assignment in new_offline:
             if assignment.item_id not in existing_item_ids:
                 state.learner.pending_offline_assignments.append(assignment)
