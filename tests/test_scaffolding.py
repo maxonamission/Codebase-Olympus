@@ -1,7 +1,5 @@
 """Tests for E7-09: grammatica-scaffolding bij passages."""
 
-import json
-from datetime import datetime
 from pathlib import Path
 from uuid import uuid4
 
@@ -9,7 +7,6 @@ import networkx as nx
 import pytest
 
 from gymnasium_classica.api.session_manager import (
-    Question,
     SessionManager,
     _knoop_to_question,
     _load_scaffolding_content,
@@ -62,8 +59,12 @@ def _make_passage() -> Passage:
         titel="Test passage",
         tekst="Puella cantat.",
         annotaties=[
-            WordAnnotation(woord="Puella", lemma="puella", naamval="nom.sg", vertaling="het meisje"),
-            WordAnnotation(woord="cantat", lemma="cantare", naamval="praes.ind.act.3sg", vertaling="zingt"),
+            WordAnnotation(
+                woord="Puella", lemma="puella", naamval="nom.sg", vertaling="het meisje"
+            ),
+            WordAnnotation(
+                woord="cantat", lemma="cantare", naamval="praes.ind.act.3sg", vertaling="zingt"
+            ),
         ],
         knoop_ids=["LAT-G-MORF-CHILDA"],
         moeilijkheid=1,
@@ -125,11 +126,15 @@ class TestKnoopToQuestionScaffolding:
 
     def test_scaffolding_when_requested(self, tmp_path: Path):
         knoop = _make_knoop("LAT-G-MORF-TEST")
-        (tmp_path / "LAT-G-MORF-TEST.md").write_text("# Grammatica-uitleg\n\nDit is uitleg.", encoding="utf-8")
+        (tmp_path / "LAT-G-MORF-TEST.md").write_text(
+            "# Grammatica-uitleg\n\nDit is uitleg.", encoding="utf-8"
+        )
 
         q = _knoop_to_question(
-            knoop, SessionPhase.NEW_MATERIAL,
-            include_scaffolding=True, content_dir=tmp_path,
+            knoop,
+            SessionPhase.NEW_MATERIAL,
+            include_scaffolding=True,
+            content_dir=tmp_path,
         )
         assert q.scaffolding_content is not None
         assert "Grammatica-uitleg" in q.scaffolding_content
@@ -137,8 +142,10 @@ class TestKnoopToQuestionScaffolding:
     def test_scaffolding_none_when_no_file(self, tmp_path: Path):
         knoop = _make_knoop("LAT-G-MORF-NOPE")
         q = _knoop_to_question(
-            knoop, SessionPhase.NEW_MATERIAL,
-            include_scaffolding=True, content_dir=tmp_path,
+            knoop,
+            SessionPhase.NEW_MATERIAL,
+            include_scaffolding=True,
+            content_dir=tmp_path,
         )
         assert q.scaffolding_content is None
 
@@ -184,7 +191,7 @@ class TestSessionManagerScaffolding:
             knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.90
         )
         mgr = SessionManager()
-        session_id, q1 = mgr.start_session(
+        _session_id, q1 = mgr.start_session(
             user_id=str(uuid4()),
             learner=learner,
             graph=g,

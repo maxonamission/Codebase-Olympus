@@ -13,7 +13,6 @@ from gymnasium_classica.api.auth import (
 from gymnasium_classica.api.database import (
     create_user,
     get_user,
-    get_user_by_email,
     load_learner_model,
     save_learner_model,
     update_user,
@@ -32,7 +31,7 @@ router = APIRouter(prefix="/auth", tags=["auth"])
 
 
 @router.post("/register", response_model=AuthResponse)
-async def register(body: RegisterRequest, request: Request):
+async def register(body: RegisterRequest, request: Request) -> AuthResponse:
     """Register a new user with email + password. Returns user_id and auth token."""
     db: sqlite3.Connection = request.app.state.db
 
@@ -56,7 +55,7 @@ async def register(body: RegisterRequest, request: Request):
 
 
 @router.post("/login", response_model=AuthResponse)
-async def login(body: LoginRequest, request: Request):
+async def login(body: LoginRequest, request: Request) -> AuthResponse:
     """Login with email + password. Returns user_id and auth token."""
     db: sqlite3.Connection = request.app.state.db
 
@@ -82,7 +81,7 @@ async def update_settings(
     body: UpdateLearningRouteRequest,
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> UserProfileResponse:
     """Update user settings (currently: learning_route).
 
     POST /auth/settings { learning_route: "grammar_first" | "context_first" }
@@ -91,12 +90,12 @@ async def update_settings(
 
     try:
         route = LearningRoute(body.learning_route)
-    except ValueError:
+    except ValueError as err:
         raise HTTPException(
             status_code=422,
             detail=f"Invalid learning_route: {body.learning_route!r}. "
             "Must be 'grammar_first' or 'context_first'.",
-        )
+        ) from err
 
     user = get_user(db, user_id)
     if user is None:
@@ -112,9 +111,7 @@ async def update_settings(
     learner = load_learner_model(db, user_id)
     if learner is None:
         learner = LearnerModel(user_id=UUID(user_id))
-    learner.route_history.append(
-        RouteSwitch(timestamp=datetime.now(), route=route.value)
-    )
+    learner.route_history.append(RouteSwitch(timestamp=datetime.now(), route=route.value))
     save_learner_model(db, learner)
 
     return UserProfileResponse(

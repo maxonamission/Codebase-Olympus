@@ -7,6 +7,8 @@ functie die direct aangeroepen wordt.
 
 from __future__ import annotations
 
+from dataclasses import FrozenInstanceError
+
 import pytest
 
 from gymnasium_classica.models.graph import (
@@ -64,7 +66,7 @@ class TestBasicMatching:
     def test_returns_frozen_result(self):
         result = grade_answer("sum", _make_item("sum"), Taal.LAT)
         assert isinstance(result, GradingResult)
-        with pytest.raises(Exception):
+        with pytest.raises((AttributeError, TypeError, FrozenInstanceError)):
             result.correct = False  # frozen dataclass
 
 
@@ -73,9 +75,7 @@ class TestNormalization:
         assert grade_answer("  sum  ", _make_item("sum"), Taal.LAT).correct is True
 
     def test_collapse_internal_whitespace(self):
-        assert (
-            grade_answer("de  boer", _make_item("de boer"), Taal.LAT).correct is True
-        )
+        assert grade_answer("de  boer", _make_item("de boer"), Taal.LAT).correct is True
 
     def test_case_insensitive_latin(self):
         assert grade_answer("SUM", _make_item("sum"), Taal.LAT).correct is True
@@ -88,15 +88,11 @@ class TestNormalization:
 class TestLatinMacronTolerance:
     def test_missing_macron_accepted(self):
         # Expected has macron, learner types plain vowel.
-        assert (
-            grade_answer("puella", _make_item("puellā"), Taal.LAT).correct is True
-        )
+        assert grade_answer("puella", _make_item("puellā"), Taal.LAT).correct is True
 
     def test_extra_macron_accepted(self):
         # Expected is plain, learner adds a macron.
-        assert (
-            grade_answer("puellā", _make_item("puella"), Taal.LAT).correct is True
-        )
+        assert grade_answer("puellā", _make_item("puella"), Taal.LAT).correct is True
 
     def test_breve_also_stripped(self):
         # Breve (U+0306) is also accepted loosely on Latin.

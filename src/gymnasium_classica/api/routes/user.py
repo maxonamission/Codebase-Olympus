@@ -5,7 +5,12 @@ import sqlite3
 from fastapi import APIRouter, Depends, HTTPException, Request
 
 from gymnasium_classica.api.auth import get_current_user_id
-from gymnasium_classica.api.database import get_user, load_learner_model, save_learner_model, update_user
+from gymnasium_classica.api.database import (
+    get_user,
+    load_learner_model,
+    save_learner_model,
+    update_user,
+)
 from gymnasium_classica.api.schemas import (
     UpdateLearningRouteRequest,
     UserProfileResponse,
@@ -20,7 +25,7 @@ router = APIRouter(prefix="/user", tags=["user"])
 async def get_profile(
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> UserProfileResponse:
     """Return the current user's profile including learning route."""
     db: sqlite3.Connection = request.app.state.db
     user = get_user(db, user_id)
@@ -38,7 +43,7 @@ async def update_learning_route(
     body: UpdateLearningRouteRequest,
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> UserProfileResponse:
     """Update the user's learning route preference.
 
     Accepts 'grammar_first' or 'context_first'.
@@ -48,12 +53,12 @@ async def update_learning_route(
     # Validate the route value
     try:
         route = LearningRoute(body.learning_route)
-    except ValueError:
+    except ValueError as err:
         raise HTTPException(
             status_code=422,
             detail=f"Invalid learning_route: {body.learning_route!r}. "
             "Must be 'grammar_first' or 'context_first'.",
-        )
+        ) from err
 
     user = get_user(db, user_id)
     if user is None:
@@ -69,9 +74,7 @@ async def update_learning_route(
     learner = load_learner_model(db, user_id)
     if learner is None:
         learner = LearnerModel(user_id=UUID(user_id))
-    learner.route_history.append(
-        RouteSwitch(timestamp=datetime.now(), route=route.value)
-    )
+    learner.route_history.append(RouteSwitch(timestamp=datetime.now(), route=route.value))
     save_learner_model(db, learner)
 
     return UserProfileResponse(

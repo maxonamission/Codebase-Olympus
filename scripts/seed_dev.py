@@ -11,7 +11,6 @@ Usage:
     python scripts/seed_dev.py
 """
 
-import json
 import sqlite3
 import sys
 from datetime import datetime, timedelta
@@ -61,10 +60,12 @@ def hash_password(password: str) -> str:
     """
     try:
         import bcrypt
+
         return bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
     except Exception:
         import hashlib
         import os
+
         salt = os.urandom(16).hex()
         hashed = hashlib.sha256(f"{salt}:{password}".encode()).hexdigest()
         return f"sha256:{salt}:{hashed}"
@@ -89,16 +90,13 @@ def main() -> None:
     apply_methode_profile(learner, graph, "fortuna", "3")
     learner.intake_completed = True
 
-    treated = sum(
-        1 for s in learner.knoop_states.values()
-        if s.posterior_mastery >= 0.50
-    )
+    treated = sum(1 for s in learner.knoop_states.values() if s.posterior_mastery >= 0.50)
     print(f"  Intake: Fortuna hfst. 3 → {treated} treated nodes (prior 0.70)")
 
     # Promote 20 nodes to full mastery
     promoted = 0
     now = datetime.now()
-    for knoop_id, state in learner.knoop_states.items():
+    for _knoop_id, state in learner.knoop_states.items():
         if promoted >= 20:
             break
         if state.posterior_mastery >= 0.50:

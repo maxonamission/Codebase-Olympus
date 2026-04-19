@@ -21,12 +21,10 @@ from gymnasium_classica.graph.loader import load_graph_from_dict
 from gymnasium_classica.models.learner import (
     KnoopState,
     LearnerModel,
-    MasterySource,
     ResponseType,
 )
 from gymnasium_classica.models.passage import Passage, WordAnnotation
 from gymnasium_classica.models.user import LearningRoute
-from gymnasium_classica.scheduling.priority import MASTERY_THRESHOLD
 from gymnasium_classica.scheduling.session import (
     DEFAULT_ITEM_TIME_SEC,
     MAX_NEW_NODES,
@@ -117,7 +115,7 @@ class TestStartSession:
         graph = load_graph_from_dict(data)
         learner = LearnerModel(user_id=uuid4())
         mgr = SessionManager()
-        session_id, question = mgr.start_session("user1", learner, graph)
+        _session_id, question = mgr.start_session("user1", learner, graph)
         assert question is None
 
 
@@ -425,7 +423,7 @@ class TestPhaseTransitions:
         now = datetime(2026, 4, 16, 10, 0, 0)
         graph, learner = _broad_graph_and_learner(now)
         mgr = SessionManager()
-        session_id, q = mgr.start_session("user1", learner, graph, now=now)
+        _session_id, q = mgr.start_session("user1", learner, graph, now=now)
         assert q is not None
         # Eerste vraag zit in één van de eerdere fasen (warmup of new_material
         # afhankelijk van kandidatenbeschikbaarheid).
@@ -530,7 +528,9 @@ class TestContextFirstRoute:
             tekst="Puella parva in villa est.",
             annotaties=[
                 WordAnnotation(
-                    woord="Puella", lemma="puella", naamval="nom.sg",
+                    woord="Puella",
+                    lemma="puella",
+                    naamval="nom.sg",
                     vertaling="Het meisje",
                 ),
             ],
@@ -555,8 +555,11 @@ class TestContextFirstRoute:
         learner = LearnerModel(user_id=uuid4())
         mgr = SessionManager()
         now = datetime(2026, 4, 16, 10, 0, 0)
-        session_id, q = mgr.start_session(
-            "user1", learner, graph, now=now,
+        _session_id, q = mgr.start_session(
+            "user1",
+            learner,
+            graph,
+            now=now,
             learning_route=LearningRoute.CONTEXT_FIRST,
             passages=[passage],
         )
@@ -572,15 +575,16 @@ class TestContextFirstRoute:
         mgr = SessionManager()
         now = datetime(2026, 4, 16, 10, 0, 0)
         session_id, q_passage = mgr.start_session(
-            "user1", learner, graph, now=now,
+            "user1",
+            learner,
+            graph,
+            now=now,
             learning_route=LearningRoute.CONTEXT_FIRST,
             passages=[passage],
         )
         assert q_passage.stimulus["type"] == "passage"
 
-        result = mgr.submit_answer(
-            session_id, ResponseType.CORRECT, 5000, now=now
-        )
+        result = mgr.submit_answer(session_id, ResponseType.CORRECT, 5000, now=now)
         assert result.feedback.response_type == "passage_read"
         # Mastery voor passage-step blijft 0.0 (geen BKT-update).
         assert result.feedback.mastery_before == 0.0
@@ -606,10 +610,7 @@ class TestOfflineAssignmentCollection:
         session_id, q = mgr.start_session("user1", learner, graph, now=now)
         _drive_session_to_completion(mgr, session_id, q, now)
 
-        assert any(
-            a.item_id == "ITEM-OFFLINE-D1-001"
-            for a in learner.pending_offline_assignments
-        )
+        assert any(a.item_id == "ITEM-OFFLINE-D1-001" for a in learner.pending_offline_assignments)
 
     def test_offline_item_not_duplicated_across_sessions(self):
         """Een tweede sessie op dezelfde knoop voegt niet nog een assignment toe."""
@@ -622,8 +623,7 @@ class TestOfflineAssignmentCollection:
             _drive_session_to_completion(mgr, session_id, q, now)
 
         matching = [
-            a for a in learner.pending_offline_assignments
-            if a.item_id == "ITEM-OFFLINE-D1-001"
+            a for a in learner.pending_offline_assignments if a.item_id == "ITEM-OFFLINE-D1-001"
         ]
         assert len(matching) == 1
 

@@ -14,7 +14,6 @@ from gymnasium_classica.api.schemas import (
     IntakeStartResponse,
 )
 from gymnasium_classica.diagnostic.methode_profile import apply_methode_profile
-from gymnasium_classica.diagnostic.placement import MAX_QUESTIONS
 from gymnasium_classica.models.learner import LearnerModel
 
 router = APIRouter(prefix="/intake", tags=["intake"])
@@ -39,7 +38,7 @@ async def start_intake(
     request: Request,
     body: IntakeStartRequest | None = None,
     user_id: str = Depends(get_current_user_id),
-):
+) -> IntakeStartResponse:
     """Start a diagnostic intake. Optionally provide methode + chapter for priors."""
     db = request.app.state.db
     graph: nx.DiGraph = request.app.state.graph
@@ -62,11 +61,11 @@ async def start_intake(
     if body and body.methode and body.chapter:
         try:
             apply_methode_profile(learner, graph, body.methode, body.chapter)
-        except (ValueError, FileNotFoundError):
+        except (ValueError, FileNotFoundError) as err:
             raise HTTPException(
                 status_code=400,
                 detail=f"Unknown methode {body.methode!r} or invalid chapter {body.chapter!r}",
-            )
+            ) from err
 
     intake_id, question = intake_manager.start_intake(user_id, learner, graph)
     save_learner_model(db, learner)
@@ -82,7 +81,7 @@ async def submit_intake_answer(
     body: IntakeAnswerRequest,
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> IntakeAnswerResponse:
     """Submit an answer to an intake diagnostic question."""
     if not intake_manager.has_intake(body.intake_id):
         raise HTTPException(status_code=404, detail="Intake not found")
@@ -94,7 +93,7 @@ async def submit_intake_answer(
     try:
         result = intake_manager.submit_answer(body.intake_id, body.correct)
     except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail=str(e)) from e
 
     # Persist learner model after each answer
     db = request.app.state.db

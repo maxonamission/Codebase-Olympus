@@ -72,7 +72,7 @@ class TestProgressOverview:
         _, headers = _auth_header(client, "domains@example.nl")
         data = client.get("/progress/overview", headers=headers).json()
         assert isinstance(data["domains"], dict)
-        for domain, dp in data["domains"].items():
+        for _domain, dp in data["domains"].items():
             assert "total" in dp
             assert "mastered" in dp
             assert "in_progress" in dp
@@ -93,8 +93,15 @@ class TestClusterProgress:
         assert len(data["clusters"]) > 0
 
         for c in data["clusters"]:
-            assert {"label", "beschrijving", "total", "mastered",
-                    "in_progress", "unseen", "mastered_pct"} <= set(c.keys())
+            assert {
+                "label",
+                "beschrijving",
+                "total",
+                "mastered",
+                "in_progress",
+                "unseen",
+                "mastered_pct",
+            } <= set(c.keys())
             assert c["mastered"] == 0
             assert c["in_progress"] == 0
             assert c["unseen"] == c["total"]
@@ -116,8 +123,7 @@ class TestClusterProgress:
             knoop = graph.nodes[node_id]["knoop"]
             if knoop.type.value != "V" or not knoop.semantisch_cluster:
                 continue
-            expected[knoop.semantisch_cluster] = expected.get(
-                knoop.semantisch_cluster, 0) + 1
+            expected[knoop.semantisch_cluster] = expected.get(knoop.semantisch_cluster, 0) + 1
 
         data = client.get("/progress/clusters", headers=headers).json()
         for c in data["clusters"]:
@@ -169,7 +175,7 @@ class TestKnoopProgress:
         """Knoop exists in graph but user hasn't interacted with it."""
         _, headers = _auth_header(client, "knoop_unseen@example.nl")
         graph = client.app.state.graph
-        knoop_id = list(graph.nodes)[0]
+        knoop_id = next(iter(graph.nodes))
         resp = client.get(f"/progress/knoop/{knoop_id}", headers=headers)
         assert resp.status_code == 200
         data = resp.json()
@@ -182,7 +188,7 @@ class TestKnoopProgress:
         user_id, headers = _auth_header(client, "knoop_state@example.nl")
         db = client.app.state.db
         graph = client.app.state.graph
-        knoop_id = list(graph.nodes)[0]
+        knoop_id = next(iter(graph.nodes))
 
         learner = LearnerModel(user_id=UUID(user_id))
         learner.knoop_states[knoop_id] = KnoopState(

@@ -1,14 +1,12 @@
 """Pydantic models for the knowledge graph: KennisKnoop, PrerequisiteEdge, Item."""
 
-from enum import StrEnum
-from typing import Optional, Union
-
 import re
+from enum import StrEnum
+from typing import Any
 
 from pydantic import BaseModel, Field, field_validator
 
 from gymnasium_classica.schemas.id_schema import validate_knoop_id
-
 
 # --- Enums ---
 
@@ -23,7 +21,7 @@ class KnoopType(StrEnum):
     G = "G"  # Grammatica
     V = "V"  # Vocabulaire
     C = "C"  # Cultuur
-    I = "I"  # Integratie
+    I = "I"  # Integratie  # noqa: E741 - enum uit ID-schema, niet te hernoemen
 
 
 class BloomNiveau(StrEnum):
@@ -90,19 +88,19 @@ class Item(BaseModel):
     moeilijkheid_initieel: float = Field(description="IRT b-parameter")
     discriminatie_initieel: float = Field(gt=0, description="IRT a-parameter, must be > 0")
     verwachte_tijd_sec: int = Field(gt=0)
-    stimulus: Union[str, dict]
-    antwoord: Union[str, list[str]]
+    stimulus: str | dict[str, Any]
+    antwoord: str | list[str]
     feedback: str
     bron: Bron
-    audio_ref: Optional[str] = Field(
+    audio_ref: str | None = Field(
         default=None,
         description="Path to audio file in data/audio/, e.g. LAT-V-F01-ESSE.mp3",
     )
-    verificatie_methode: Optional[VerificatieMethode] = Field(
+    verificatie_methode: VerificatieMethode | None = Field(
         default=None,
         description="For offline_schrijven items: how the result is verified.",
     )
-    verwacht_resultaat: Optional[str] = Field(
+    verwacht_resultaat: str | None = Field(
         default=None,
         description="For offline_schrijven items: the expected written result (paradigm, translation, etc.).",
     )
@@ -115,22 +113,22 @@ class KennisKnoop(BaseModel):
     type: KnoopType
     taal: Taal
     titel_nl: str
-    titel_terminologie: Optional[str] = None
+    titel_terminologie: str | None = None
     beschrijving: str = Field(description="Short (1-2 sentences) identifying description")
     bloom_niveau: BloomNiveau
     fase: Fase
     toetsbaar: bool = True
     pensum_jaren: list[int] = Field(default_factory=list)
-    cevte_referentie: Optional[str] = None
-    content_ref: Optional[str] = Field(
+    cevte_referentie: str | None = None
+    content_ref: str | None = Field(
         default=None,
         description="Path to markdown content file in data/content/, e.g. LAT-G-MORF-NOM-D1.md",
     )
-    pronunciation: Optional[str] = Field(
+    pronunciation: str | None = Field(
         default=None,
         description="IPA phonetic transcription of the lemma/title, e.g. /pu.ˈel.la/",
     )
-    semantisch_cluster: Optional[str] = Field(
+    semantisch_cluster: str | None = Field(
         default=None,
         description=(
             "Semantic cluster label for vocabulary nodes (type V). "

@@ -376,7 +376,7 @@ def define_items() -> dict[str, list[dict]]:
 
 def validate_items(items_by_knoop: dict[str, list[dict]]) -> None:
     """Validate all items via Pydantic model."""
-    for knoop_id, item_list in items_by_knoop.items():
+    for _knoop_id, item_list in items_by_knoop.items():
         for item_dict in item_list:
             Item(**item_dict)
     print("All items validated successfully.")
@@ -392,9 +392,7 @@ def add_items_to_json(json_path: Path, items_by_knoop: dict[str, list[dict]]) ->
         if knoop["id"] in items_by_knoop:
             existing_ids = {item["id"] for item in knoop.get("items", [])}
             new_items = [
-                item
-                for item in items_by_knoop[knoop["id"]]
-                if item["id"] not in existing_ids
+                item for item in items_by_knoop[knoop["id"]] if item["id"] not in existing_ids
             ]
             knoop.setdefault("items", []).extend(new_items)
             added += len(new_items)
@@ -416,16 +414,16 @@ def print_summary(items_by_knoop: dict[str, list[dict]]) -> None:
             type_counter[item["type"]] += 1
             richting_counter[item["richting"]] += 1
 
-    print(f"\n=== C1-01 Summary ===")
+    print("\n=== C1-01 Summary ===")
     print(f"Knopen: {len(items_by_knoop)}")
     print(f"Total items: {total}")
-    print(f"\nItems per knoop:")
+    print("\nItems per knoop:")
     for kid, item_list in sorted(items_by_knoop.items()):
         print(f"  {kid}: {len(item_list)}")
-    print(f"\nOefentype-verdeling:")
+    print("\nOefentype-verdeling:")
     for t, c in type_counter.most_common():
         print(f"  {t}: {c}")
-    print(f"\nRichting-verdeling:")
+    print("\nRichting-verdeling:")
     for r, c in richting_counter.most_common():
         print(f"  {r}: {c}")
 

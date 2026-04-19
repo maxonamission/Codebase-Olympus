@@ -85,10 +85,7 @@ def bkt_update_posterior(
         numerator = p_l * p_s
         denominator = p_l * p_s + (1.0 - p_l) * (1.0 - p_g)
 
-    if denominator == 0:
-        p_l_given_obs = prior
-    else:
-        p_l_given_obs = numerator / denominator
+    p_l_given_obs = prior if denominator == 0 else numerator / denominator
 
     # Learning transition
     p_l_new = p_l_given_obs + (1.0 - p_l_given_obs) * p_t
@@ -119,9 +116,7 @@ def update_knoop_state(
     """
     state = _get_or_create_state(learner, knoop_id)
     correct = response in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT)
-    state.posterior_mastery = bkt_update_posterior(
-        state.posterior_mastery, correct, params
-    )
+    state.posterior_mastery = bkt_update_posterior(state.posterior_mastery, correct, params)
     state.source = MasterySource.PRACTICE
     return state
 

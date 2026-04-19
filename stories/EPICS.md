@@ -461,22 +461,36 @@ Bestaand materiaal (markdowns, audio, MC-opties, vocab-metadata) daadwerkelijk n
 
 ## Epic F2: Mentor-dashboard
 
-**Doel:** Mentoren/docenten concreet kunnen coachen op basis van wat leerlingen letterlijk typen/kiezen. Bouwt voort op de telemetry die F1-12 neerlegt (`ItemResponse.answer_text` + `correct_answer` snapshot in `KnoopState.item_history`) en brengt fout-classificatie (track C) binnen reach.
+**Doel:** Mentoren en docenten in staat stellen om leerlingen op concreet niveau te helpen. Niet alleen *dat* een leerling struikelt op een knoop, maar *hoe*: welke letterlijke antwoorden gaven ze, welke MC-distractors kozen ze, zitten er patronen in (systematische naamvalsfout, synoniem-verwarring, macron-vergeten, ...).
+
 **Geschat:** 4 stories (uitbreidbaar)
-**Afhankelijkheden:** F1-12 (data), nieuwe mentor-rol op user-model
-**Status:** draft — skeletten in `stories/epic-f2-mentor-dashboard/todo/`
+**Status:** draft — skeletten in `stories/backlog/`
 
-| Story | Titel | Status |
-|-------|-------|--------|
-| F2-01 | Mentor-rol + leerling-koppeling in user-model | draft |
-| F2-02 | Laatste foute antwoorden per leerling per knoop | draft |
-| F2-03 | Struikelpunten-overzicht per leerling | draft |
-| F2-04 | Fout-classificatie (spelling / naamval / synoniem / macron) — track C kern | draft |
+**Context:** F1-12 heeft de datavoorraad neergelegd (`ItemResponse.answer_text`, `correct_answer`-snapshot, `item_type` per poging in `KnoopState.item_history`). Dit epic bouwt de ontsluiting daarop: rol-gebaseerde UI + aggregatie + optionele fout-classificatie.
 
-**Verhouding tot andere epics:**
-- **B8** (mentor-portfolio) richt zich op offline werk + OCR; F2 op online oefen-telemetrie. Toekomstige mentor-UI mag beide verzamelen.
-- **F2-04** is de reguliere instap voor track C en breidt `scheduling/grading.py` uit zonder bestaande callers te raken.
-- Blokkeert niet, maar activeert waarde die F1-12 sinds april 2026 al verzamelt.
+**Afhankelijkheden:**
+- **F1-12** (done) — `answer_text` + `item_history` wiring. Zonder deze story is er geen data om te tonen.
+- **E7-08-ish** — user-rollen bestaan in het user-model (nu alleen "learner"). Een "mentor"/"docent"-rol met relatie tot leerlingen moet erbij.
+
+| Story | Titel | Afhankelijk | Status |
+|-------|-------|-------------|--------|
+| F2-01 | Mentor-rol + leerling-koppeling in user-model | — | draft |
+| F2-02 | Laatste foute antwoorden per leerling per knoop | F2-01, F1-12 | draft |
+| F2-03 | Struikelpunten-overzicht per leerling | F2-01 | draft |
+| F2-04 | Fout-classificatie (spelling / naamval / synoniem / macron) — track C kern | F1-12 | draft |
+
+**Verhouding tot B8:**
+`epic-b8-mentor-portfolio` richt zich op offline werk (portfolio-selectie, OCR-confidence). F2 is specifiek over **online** oefen-telemetrie en foutdiagnostiek — de twee zijn complementair en kunnen later dezelfde mentor-UI delen.
+
+**Verhouding tot track C (fout-classificatie):**
+De grading-module (`scheduling/grading.py`) en `GradingResult` zijn ontworpen zodat een fout-classificator (spelling vs naamval vs synoniem) als uitbreiding kan worden toegevoegd. F2-04 trekt die brug. Dit is de reguliere instap voor track C en breidt `scheduling/grading.py` uit zonder bestaande callers te raken.
+
+**Niet-doel:**
+- Portfolio-selectie offline werk → B8
+- LLM-gestuurde vrije-vorm-feedback → aparte story
+- Cijferrapportage / toetsdossier → out-of-scope
+
+Blokkeert niet, maar activeert waarde die F1-12 sinds april 2026 al verzamelt.
 
 ---
 ---
@@ -659,3 +673,42 @@ Beide routes leiden tot mastery op dezelfde knopen — het verschil is de volgor
 | E7-08 | Frontend: route-selectie en onboarding | done |
 | E7-09 | Grammatica-scaffolding bij passages | done |
 | E7-10 | Validatie: vergelijk leeruitkomsten beide routes | done |
+
+---
+
+## Epic OS: Ontwikkelstraat fase 1 — Python-baseline
+
+**Doel:** Een werkende, laaggewijze ontwikkelstraat die code-kwaliteit, teststatus en storystatus automatisch bewaakt, zodat dit niet meer afhangt van oplettendheid per sessie. Zes lagen: projecttemplate (buiten scope), pre-commit, Claude Code hooks, CI, geautomatiseerde review, gedeelde standaarden.
+
+**Scope:** Alleen Codebase-Olympus. Templatisering naar andere projecten (`my-templates/`) is een latere epic.
+
+**Afhankelijkheden:** Geen. Bouwt voort op bestaande `pyproject.toml`, `ruff`-config en pytest-suite (165 tests).
+
+**Status:** in uitvoering — OS-00/01/02 done, OS-03 t/m OS-08 in backlog
+
+**Epic-brede acceptatiecriteria:**
+- [ ] Alle vijf actieve lagen van de ontwikkelstraat hebben ten minste één werkende check
+- [ ] CI is groen op `main` na alle stories
+- [ ] Een "break-test" (opzettelijk falende code) wordt geblokkeerd op minstens twee lagen
+- [ ] Nieuwe story kan niet naar `done/` zonder dat AC afgevinkt zijn — geautomatiseerd
+- [ ] Ontwikkelstraat-werkwijze gedocumenteerd in `CLAUDE.md`
+
+| Story | Titel | Laag | Afhankelijk | Status |
+|-------|-------|------|-------------|--------|
+| OS-00 | Storyconventie herstellen (platte backlog/doing/done) | — | — | done |
+| OS-01 | Lint- en formatbasis afmaken (ruff strict) | 1 | — | done |
+| OS-02 | Type-checking toevoegen (mypy) | 1 | — | done |
+| OS-03 | Pre-commit hooks | 2 | OS-01, OS-02 | backlog |
+| OS-04 | CI baseline (GitHub Actions) | 4 | OS-01, OS-02 | backlog |
+| OS-05 | Claude Code hooks (PostToolUse + Stop) | 3 | OS-01 | backlog |
+| OS-06 | Storystatus- en AC-verificatie (script + hooks + CI) | 2 + 4 | OS-03, OS-04 | backlog |
+| OS-07 | Review-skills inbedden in workflow | 5 | — | backlog |
+| OS-08 | CLAUDE.md bijwerken met ontwikkelstraat-sectie | 6 | alle voorgaande | backlog |
+
+**Volgorde-advies:** OS-01 en OS-02 parallel (beide linter-achtig). OS-03 en OS-04 daarna; OS-06 bouwt op beide. OS-05 (Claude-hooks) kan vroeg, zodra OS-01 klaar is, omdat het de inner loop versnelt. OS-07 en OS-08 als laatste: eerst moet er iets zijn om te documenteren.
+
+**Niet-scope voor deze epic:**
+- Uitrol naar andere repos (voxtral-transcribe, toekomstige apps)
+- Template-repo `my-templates/` opzetten
+- `mypy --strict` op de hele bestaande codebase (baseline-aanpak volstaat)
+- Coverage-thresholds optrekken (wel rapporteren, niet blokkeren)

@@ -26,6 +26,8 @@ Lees voor de volledige context:
 - Wees expliciet over wat je hebt gelezen vs. wat je aanneemt. Vlag onzekerheden.
 - Gebruik type hints overal. Pydantic models voor data validation.
 - Tests: pytest. Schrijf tests voor de knowledge graph (cycle detection, orphan detection, topologische sortering) en het learner model (BKT updates, SM-2 scheduling).
+- Lint en format: `ruff`. Voor commit altijd `uv run ruff check .` en `uv run ruff format .` draaien (of via pre-commit zodra OS-03 live is). Regelkeuze staat in `pyproject.toml`. Rationale voor `RUF001-003` op ignore: Griekse tekens in strings zijn kernfunctionaliteit, niet ambigu.
+- Type-checking: `uv run mypy src/`. Config in `pyproject.toml`. `strict = true` op `src/`; `tests/` en `scripts/` zijn uitgezonderd (mocks + dict-literals maken strict daar onpraktisch). Pydantic-plugin actief. Bij nieuwe code geldt: mypy moet groen blijven.
 - Git commits: conventionele commits, Nederlands in commit messages.
 
 ## Output en sessie-management

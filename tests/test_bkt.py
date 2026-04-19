@@ -1,5 +1,7 @@
 """Tests for the BKT (Bayesian Knowledge Tracing) module."""
 
+from uuid import uuid4
+
 import pytest
 
 from gymnasium_classica.graph.loader import load_graph_from_dict
@@ -10,15 +12,13 @@ from gymnasium_classica.models.learner import (
     ResponseType,
 )
 from gymnasium_classica.scheduling.bkt import (
-    BKTParams,
     POSTERIOR_MAX,
     POSTERIOR_MIN,
+    BKTParams,
     bkt_update_posterior,
     propagate_practice_correct,
     update_knoop_state,
 )
-
-from uuid import uuid4
 
 
 class TestBKTUpdatePosterior:
@@ -84,12 +84,8 @@ class TestUpdateKnoopState:
         correct_state = update_knoop_state(
             LearnerModel(user_id=uuid4()), "LAT-G-MORF-NOM-D1", ResponseType.CORRECT
         )
-        slow_state = update_knoop_state(
-            learner, "LAT-G-MORF-NOM-D1", ResponseType.SLOW_CORRECT
-        )
-        assert slow_state.posterior_mastery == pytest.approx(
-            correct_state.posterior_mastery
-        )
+        slow_state = update_knoop_state(learner, "LAT-G-MORF-NOM-D1", ResponseType.SLOW_CORRECT)
+        assert slow_state.posterior_mastery == pytest.approx(correct_state.posterior_mastery)
 
     def test_incorrect_lowers_posterior(self):
         learner = LearnerModel(user_id=uuid4())
@@ -97,9 +93,7 @@ class TestUpdateKnoopState:
         learner.knoop_states["LAT-G-MORF-NOM-D1"] = KnoopState(
             knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.70
         )
-        state = update_knoop_state(
-            learner, "LAT-G-MORF-NOM-D1", ResponseType.INCORRECT
-        )
+        state = update_knoop_state(learner, "LAT-G-MORF-NOM-D1", ResponseType.INCORRECT)
         assert state.posterior_mastery < 0.70
 
     def test_creates_state_if_missing(self):
@@ -118,43 +112,35 @@ class TestPropagation:
 
         # Initialize all nodes
         for node_id in graph.nodes:
-            learner.knoop_states[node_id] = KnoopState(
-                knoop_id=node_id, posterior_mastery=0.50
-            )
+            learner.knoop_states[node_id] = KnoopState(knoop_id=node_id, posterior_mastery=0.50)
 
         # NOM-D1 has prerequisite DECL1-INTRO
         initial = learner.knoop_states["LAT-G-MORF-DECL1-INTRO"].posterior_mastery
         affected = propagate_practice_correct(learner, graph, "LAT-G-MORF-NOM-D1")
         assert "LAT-G-MORF-DECL1-INTRO" in affected
-        assert (
-            learner.knoop_states["LAT-G-MORF-DECL1-INTRO"].posterior_mastery > initial
-        )
+        assert learner.knoop_states["LAT-G-MORF-DECL1-INTRO"].posterior_mastery > initial
 
     def test_propagation_respects_weights(self, sample_graph_data):
         graph = load_graph_from_dict(sample_graph_data)
         learner = LearnerModel(user_id=uuid4())
 
         for node_id in graph.nodes:
-            learner.knoop_states[node_id] = KnoopState(
-                knoop_id=node_id, posterior_mastery=0.50
-            )
+            learner.knoop_states[node_id] = KnoopState(knoop_id=node_id, posterior_mastery=0.50)
 
         propagate_practice_correct(learner, graph, "LAT-G-MORF-NOM-D1")
 
         # The boost should be proportional to encompassing_weight
         # DECL1-INTRO → NOM-D1 has weight 0.3, so boost = 0.10 * 0.3 = 0.03
-        assert learner.knoop_states[
-            "LAT-G-MORF-DECL1-INTRO"
-        ].posterior_mastery == pytest.approx(0.53, abs=0.01)
+        assert learner.knoop_states["LAT-G-MORF-DECL1-INTRO"].posterior_mastery == pytest.approx(
+            0.53, abs=0.01
+        )
 
     def test_siblings_get_smaller_boost(self, sample_graph_data):
         graph = load_graph_from_dict(sample_graph_data)
         learner = LearnerModel(user_id=uuid4())
 
         for node_id in graph.nodes:
-            learner.knoop_states[node_id] = KnoopState(
-                knoop_id=node_id, posterior_mastery=0.50
-            )
+            learner.knoop_states[node_id] = KnoopState(knoop_id=node_id, posterior_mastery=0.50)
 
         # NOM-D1 and ACC-D1 share parent DECL1-INTRO
         propagate_practice_correct(learner, graph, "LAT-G-MORF-NOM-D1")
@@ -162,18 +148,16 @@ class TestPropagation:
         # ACC-D1 should get a sibling boost (smaller than direct prereq boost)
         acc_posterior = learner.knoop_states["LAT-G-MORF-ACC-D1"].posterior_mastery
         assert acc_posterior > 0.50  # got some boost
-        assert acc_posterior < learner.knoop_states[
-            "LAT-G-MORF-DECL1-INTRO"
-        ].posterior_mastery  # less than direct prereq
+        assert (
+            acc_posterior < learner.knoop_states["LAT-G-MORF-DECL1-INTRO"].posterior_mastery
+        )  # less than direct prereq
 
     def test_no_propagation_on_incorrect(self, sample_graph_data):
         graph = load_graph_from_dict(sample_graph_data)
         learner = LearnerModel(user_id=uuid4())
 
         for node_id in graph.nodes:
-            learner.knoop_states[node_id] = KnoopState(
-                knoop_id=node_id, posterior_mastery=0.50
-            )
+            learner.knoop_states[node_id] = KnoopState(knoop_id=node_id, posterior_mastery=0.50)
 
         # propagate_practice_correct should NOT be called on incorrect
         # (this is the caller's responsibility, but verify the function only boosts)

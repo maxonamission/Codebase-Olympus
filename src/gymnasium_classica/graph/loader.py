@@ -2,6 +2,7 @@
 
 import json
 from pathlib import Path
+from typing import Any
 
 import networkx as nx
 
@@ -41,8 +42,8 @@ def _load_graph_directory(directory: Path) -> nx.DiGraph:
     if not json_files:
         raise FileNotFoundError(f"No .json files found in {directory}")
 
-    all_knopen: list[dict] = []
-    all_edges: list[dict] = []
+    all_knopen: list[dict[str, Any]] = []
+    all_edges: list[dict[str, Any]] = []
 
     for file_path in json_files:
         with open(file_path, encoding="utf-8") as f:
@@ -53,7 +54,7 @@ def _load_graph_directory(directory: Path) -> nx.DiGraph:
     return load_graph_from_dict({"knopen": all_knopen, "edges": all_edges})
 
 
-def load_graph_from_dict(data: dict) -> nx.DiGraph:
+def load_graph_from_dict(data: dict[str, Any]) -> nx.DiGraph:
     """Load a knowledge graph from an already-parsed dict.
 
     Validates all data through Pydantic models before building the graph.
@@ -89,7 +90,7 @@ def load_graph_from_dict(data: dict) -> nx.DiGraph:
     return graph
 
 
-def graph_to_dict(graph: nx.DiGraph) -> dict:
+def graph_to_dict(graph: nx.DiGraph) -> dict[str, Any]:
     """Serialize a NetworkX DiGraph back to a dict compatible with the JSON schema.
 
     Performs a round-trip: ``load_graph_from_dict(graph_to_dict(g))``

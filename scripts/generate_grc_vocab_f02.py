@@ -48,10 +48,7 @@ TITEL_TEMPLATES = {
 
 def make_titel(w: dict) -> str:
     pos = w["pos"]
-    if pos == "pron":
-        tmpl = "pron_gen" if w.get("gen") else "pron"
-    else:
-        tmpl = pos
+    tmpl = ("pron_gen" if w.get("gen") else "pron") if pos == "pron" else pos
     return TITEL_TEMPLATES[tmpl].format(**w)
 
 
@@ -62,23 +59,28 @@ def make_beschrijving(w: dict, band: str) -> str:
         if decl is None:
             return f"Het zelfstandig naamwoord {w['lemma']}: {w['mean']}. Frequentieband {band}."
         return DESC_TEMPLATES["noun"].format(
-            lemma=w["lemma"], gen=w["gen"], mean=w["mean"], decl=decl, band=band)
+            lemma=w["lemma"], gen=w["gen"], mean=w["mean"], decl=decl, band=band
+        )
     elif pos == "verb":
         if w["conj"] == "irreg":
-            return DESC_TEMPLATES["verb_irreg"].format(
-                lemma=w["lemma"], mean=w["mean"], band=band)
+            return DESC_TEMPLATES["verb_irreg"].format(lemma=w["lemma"], mean=w["mean"], band=band)
         return DESC_TEMPLATES["verb"].format(
-            lemma=w["lemma"], gen=w["gen"], mean=w["mean"],
-            conj_str=CONJ_NAMES[w["conj"]], band=band)
+            lemma=w["lemma"],
+            gen=w["gen"],
+            mean=w["mean"],
+            conj_str=CONJ_NAMES[w["conj"]],
+            band=band,
+        )
     elif pos == "adj":
         return DESC_TEMPLATES["adj"].format(
-            lemma=w["lemma"], gen=w["gen"], mean=w["mean"], band=band)
+            lemma=w["lemma"], gen=w["gen"], mean=w["mean"], band=band
+        )
     elif pos in ("conj", "adv", "prep"):
         return DESC_TEMPLATES[pos].format(
-            lemma=w["lemma"], gen=w.get("gen", ""), mean=w["mean"], band=band)
+            lemma=w["lemma"], gen=w.get("gen", ""), mean=w["mean"], band=band
+        )
     elif pos == "pron":
-        return DESC_TEMPLATES["pron"].format(
-            lemma=w["lemma"], mean=w["mean"], band=band)
+        return DESC_TEMPLATES["pron"].format(lemma=w["lemma"], mean=w["mean"], band=band)
     return f"{w['lemma']}: {w['mean']}. Frequentieband {band}."
 
 
@@ -129,6 +131,7 @@ def main() -> None:
     existing["edges"].extend(new_edges)
 
     from gymnasium_classica.models.graph import GraphData
+
     GraphData(**existing)
 
     OUTPUT.write_text(json.dumps(existing, ensure_ascii=False, indent=2) + "\n", "utf-8")

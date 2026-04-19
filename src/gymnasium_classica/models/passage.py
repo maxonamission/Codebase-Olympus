@@ -29,15 +29,11 @@ class Passage(BaseModel):
     taal: Taal
     titel: str = Field(description="Short descriptive title in Dutch")
     tekst: str = Field(description="The Latin/Greek source text")
-    annotaties: list[WordAnnotation] = Field(
-        description="Per-word annotations for the passage"
-    )
+    annotaties: list[WordAnnotation] = Field(description="Per-word annotations for the passage")
     knoop_ids: list[str] = Field(
         description="IDs of grammar/vocabulary nodes this passage exercises"
     )
-    moeilijkheid: int = Field(
-        ge=1, le=5, description="Difficulty level 1-5 (ascending)"
-    )
+    moeilijkheid: int = Field(ge=1, le=5, description="Difficulty level 1-5 (ascending)")
 
 
 class PassageData(BaseModel):

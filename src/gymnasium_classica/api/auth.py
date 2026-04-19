@@ -40,4 +40,5 @@ def get_current_user_id(
     row = db.execute("SELECT user_id FROM auth_tokens WHERE token = ?", (token,)).fetchone()
     if row is None:
         raise HTTPException(status_code=401, detail="Invalid or expired token")
-    return row["user_id"]
+    user_id: str = row["user_id"]
+    return user_id

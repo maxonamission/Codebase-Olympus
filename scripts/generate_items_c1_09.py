@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """Generate items for C1-09: pronomina."""
-import json, sys
+
+import json
+import sys
 from collections import Counter
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 from gymnasium_classica.models.graph import Item
 
 BASE = Path(__file__).parent.parent / "data" / "graph"
 ITEMS_FILE = Path(__file__).parent / "items_c1_09.json"
+
 
 def add_items_to_json(json_path, items_by_knoop):
     with open(json_path, encoding="utf-8") as f:
@@ -24,18 +28,21 @@ def add_items_to_json(json_path, items_by_knoop):
         f.write("\n")
     return added
 
+
 def main():
     raw = json.loads(ITEMS_FILE.read_text(encoding="utf-8"))
-    for kid, il in raw.items():
+    for _kid, il in raw.items():
         for d in il:
             Item(**d)
     print("All items validated.")
     # All C1-09 nodes are in leerjaar1
-    a2 = add_items_to_json(BASE/"lat_grammatica_leerjaar1.json", raw)
+    a2 = add_items_to_json(BASE / "lat_grammatica_leerjaar1.json", raw)
     total = sum(len(v) for v in raw.values())
     tc = Counter(i["type"] for il in raw.values() for i in il)
     print(f"Added {a2} to leerjaar1. Total: {total} items, {len(raw)} knopen.")
-    for t,c in tc.most_common(): print(f"  {t}: {c}")
+    for t, c in tc.most_common():
+        print(f"  {t}: {c}")
+
 
 if __name__ == "__main__":
     main()

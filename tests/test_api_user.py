@@ -31,9 +31,7 @@ def _register_and_get_token(client) -> tuple[str, str]:
 class TestGetProfile:
     def test_get_profile_success(self, client):
         user_id, token = _register_and_get_token(client)
-        resp = client.get(
-            "/user/profile", headers={"Authorization": f"Bearer {token}"}
-        )
+        resp = client.get("/user/profile", headers={"Authorization": f"Bearer {token}"})
         assert resp.status_code == 200
         data = resp.json()
         assert data["user_id"] == user_id
@@ -91,9 +89,7 @@ class TestUpdateLearningRoute:
             headers={"Authorization": f"Bearer {token}"},
         )
         # Reload profile
-        resp = client.get(
-            "/user/profile", headers={"Authorization": f"Bearer {token}"}
-        )
+        resp = client.get("/user/profile", headers={"Authorization": f"Bearer {token}"})
         assert resp.json()["learning_route"] == "context_first"
 
     def test_no_auth(self, client):

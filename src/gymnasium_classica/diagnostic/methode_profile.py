@@ -6,6 +6,7 @@ Mechanism 1 of the diagnostic intake system.
 
 import json
 from pathlib import Path
+from typing import Any
 
 import networkx as nx
 
@@ -15,7 +16,7 @@ from gymnasium_classica.models.learner import KnoopState, LearnerModel, MasteryS
 PRIOR_TREATED = 0.70  # Chapters already covered → expected mastered, to be verified
 PRIOR_UNTREATED = 0.10  # Not yet covered → expected unknown
 
-MethodeMapping = dict  # raw parsed JSON structure
+MethodeMapping = dict[str, Any]  # raw parsed JSON structure
 
 
 def load_methode_mapping(path: Path | None = None) -> MethodeMapping:
@@ -26,7 +27,8 @@ def load_methode_mapping(path: Path | None = None) -> MethodeMapping:
     if path is None:
         path = Path(__file__).resolve().parents[3] / "data" / "methode_mapping.json"
     with open(path, encoding="utf-8") as f:
-        return json.load(f)
+        data: MethodeMapping = json.load(f)
+    return data
 
 
 def get_treated_knoop_ids(

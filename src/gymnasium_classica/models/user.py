@@ -2,7 +2,6 @@
 
 from datetime import datetime
 from enum import StrEnum
-from typing import Optional
 from uuid import UUID, uuid4
 
 from pydantic import BaseModel, Field
@@ -41,7 +40,7 @@ class Subscription(BaseModel):
     plan: Plan = Plan.FREE
     status: SubscriptionStatus = SubscriptionStatus.TRIAL
     started_at: datetime = Field(default_factory=datetime.now)
-    expires_at: Optional[datetime] = None
+    expires_at: datetime | None = None
 
 
 class User(BaseModel):
@@ -51,8 +50,8 @@ class User(BaseModel):
     email: str
     auth_provider: str = "local"
     subscription: Subscription = Field(default_factory=Subscription)
-    examenjaar_ltc: Optional[int] = None
-    examenjaar_gtc: Optional[int] = None
+    examenjaar_ltc: int | None = None
+    examenjaar_gtc: int | None = None
     pronunciation_preference_lat: PronunciationLat = PronunciationLat.CLASSICAL
     pronunciation_preference_grc: PronunciationGrc = PronunciationGrc.ERASMIAN
     learning_route: LearningRoute = LearningRoute.GRAMMAR_FIRST

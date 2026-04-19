@@ -4,8 +4,6 @@
 import argparse
 import json
 import random
-import sys
-from datetime import datetime
 from pathlib import Path
 from uuid import uuid4
 
@@ -81,7 +79,7 @@ def print_session_summary(result) -> None:
     print(f"Review:       {len(result.nodes_reviewed)}")
 
     if result.mastery_changes:
-        print(f"\nMastery-veranderingen:")
+        print("\nMastery-veranderingen:")
         for knoop_id, (before, after) in sorted(result.mastery_changes.items()):
             direction = "↑" if after > before else "↓" if after < before else "="
             print(f"  {direction} {knoop_id}: {before:.2f} → {after:.2f}")
@@ -90,12 +88,19 @@ def print_session_summary(result) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Gymnasium Classica — sessie draaien")
     parser.add_argument("graph_path", type=Path, help="Pad naar graph JSON of directory")
-    parser.add_argument("--learner", type=Path, default=Path("learner.json"),
-                        help="Pad naar learner JSON (aangemaakt als afwezig)")
-    parser.add_argument("--simulate", action="store_true",
-                        help="Gebruik gesimuleerde antwoorden")
-    parser.add_argument("--intake", nargs=2, metavar=("METHODE", "HOOFDSTUK"),
-                        help="Voer eerst diagnostische intake uit")
+    parser.add_argument(
+        "--learner",
+        type=Path,
+        default=Path("learner.json"),
+        help="Pad naar learner JSON (aangemaakt als afwezig)",
+    )
+    parser.add_argument("--simulate", action="store_true", help="Gebruik gesimuleerde antwoorden")
+    parser.add_argument(
+        "--intake",
+        nargs=2,
+        metavar=("METHODE", "HOOFDSTUK"),
+        help="Voer eerst diagnostische intake uit",
+    )
 
     args = parser.parse_args()
 
@@ -115,24 +120,26 @@ def main() -> None:
 
         if args.simulate:
             answer_fn = make_simulated_answer_fn(learner)
-            diag_answer = lambda kid: answer_fn(kid, graph.nodes[kid]["knoop"])[0] == ResponseType.CORRECT
+
+            def diag_answer(kid):
+                return answer_fn(kid, graph.nodes[kid]["knoop"])[0] == ResponseType.CORRECT
         else:
+
             def diag_answer(kid):
                 knoop = graph.nodes[kid]["knoop"]
                 resp, _ = interactive_answer_fn(kid, knoop)
                 return resp in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT)
 
         diag_result = run_diagnostic(learner, graph, diag_answer)
-        print(f"Intake compleet: {diag_result.questions_asked} vragen, "
-              f"geconvergeerd: {diag_result.converged}")
+        print(
+            f"Intake compleet: {diag_result.questions_asked} vragen, "
+            f"geconvergeerd: {diag_result.converged}"
+        )
 
     # Run session
-    print(f"\n--- Sessie starten (30 min) ---")
+    print("\n--- Sessie starten (30 min) ---")
 
-    if args.simulate:
-        answer_fn = make_simulated_answer_fn(learner)
-    else:
-        answer_fn = interactive_answer_fn
+    answer_fn = make_simulated_answer_fn(learner) if args.simulate else interactive_answer_fn
 
     result = run_session(learner, graph, answer_fn)
     print_session_summary(result)

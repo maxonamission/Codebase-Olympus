@@ -28,7 +28,6 @@ import json
 import sys
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
-from typing import Optional
 
 import networkx as nx
 
@@ -195,7 +194,7 @@ def compute_coverage(
 
 def find_summary(
     report: CoverageReport, taal: Taal | str, ktype: KnoopType | str
-) -> Optional[CoverageSummary]:
+) -> CoverageSummary | None:
     """Look up the summary for a (taal, type) bucket; None if absent."""
     taal_v = taal.value if isinstance(taal, Taal) else taal
     type_v = ktype.value if isinstance(ktype, KnoopType) else ktype
@@ -222,9 +221,7 @@ def _format_summary_table(report: CoverageReport) -> str:
     for s in report.summaries:
         items_cell = f"{s.items}/{s.total} ({s.items_pct:.1f}%)"
         content_cell = f"{s.content}/{s.total} ({s.content_pct:.1f}%)"
-        audio_cell = (
-            f"{s.audio}/{s.total} ({s.audio_pct:.1f}%)" if s.type == "V" else "n.v.t."
-        )
+        audio_cell = f"{s.audio}/{s.total} ({s.audio_pct:.1f}%)" if s.type == "V" else "n.v.t."
         passage_cell = f"{s.passage}/{s.total} ({s.passage_pct:.1f}%)"
         lines.append(
             f"{s.taal:<6} {s.type:<4} {s.total:>5}  "

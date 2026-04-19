@@ -8,7 +8,6 @@ import pytest
 from gymnasium_classica.graph.loader import load_graph, load_graph_from_dict
 from gymnasium_classica.models.learner import KnoopState, LearnerModel, MasterySource
 from gymnasium_classica.scheduling.priority import (
-    MASTERY_THRESHOLD,
     compute_urgency_scores,
     estimate_retention,
     forget_urgency,
@@ -23,9 +22,7 @@ class TestEstimateRetention:
         assert estimate_retention(state) == 0.0
 
     def test_never_reviewed_mastered_diagnostic(self):
-        state = KnoopState(
-            knoop_id="X", posterior_mastery=0.80, source=MasterySource.DIAGNOSTIC
-        )
+        state = KnoopState(knoop_id="X", posterior_mastery=0.80, source=MasterySource.DIAGNOSTIC)
         assert estimate_retention(state) == pytest.approx(0.5)
 
     def test_just_reviewed(self):
@@ -111,9 +108,7 @@ class TestReadinessScore:
         learner = LearnerModel(user_id=uuid4())
         # Set all prerequisites of NOM-D1 to mastered
         for pred in graph.predecessors("LAT-G-MORF-NOM-D1"):
-            learner.knoop_states[pred] = KnoopState(
-                knoop_id=pred, posterior_mastery=0.85
-            )
+            learner.knoop_states[pred] = KnoopState(knoop_id=pred, posterior_mastery=0.85)
         score = readiness_score("LAT-G-MORF-NOM-D1", learner, graph)
         assert score > 0.0
 
@@ -154,7 +149,7 @@ class TestComputeUrgencyScores:
         # Should produce results for root nodes (no prereqs needed)
         assert len(scores) > 0
         # All urgencies should be non-negative
-        for urgency, knoop in scores:
+        for urgency, _knoop in scores:
             assert urgency >= 0.0
 
     def test_unmet_prerequisites_excluded(self, sample_graph_data):

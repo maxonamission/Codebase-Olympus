@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 
-from gymnasium_classica.models.graph import Item  # noqa: E402
+from gymnasium_classica.models.graph import Item
 
 # --- Item specifications (compact) ---
 # (knoop_id, stimulus, verwacht_resultaat, feedback, moeilijkheid)
@@ -126,8 +126,9 @@ def next_item_nr(knoop: dict) -> int:
     return max_nr + 1
 
 
-def build_item(knoop_id: str, nr: int, stimulus: str, verwacht: str,
-               feedback: str, moeilijkheid: float) -> dict:
+def build_item(
+    knoop_id: str, nr: int, stimulus: str, verwacht: str, feedback: str, moeilijkheid: float
+) -> dict:
     """Build an offline_schrijven item dict."""
     return {
         "id": f"ITEM-{knoop_id}-{nr:03d}",
@@ -191,7 +192,7 @@ def main():
         f.write("\n")
 
     # Summary
-    print(f"\n=== B5-04a: Declinatie paradigma-schrijfoefeningen ===")
+    print("\n=== B5-04a: Declinatie paradigma-schrijfoefeningen ===")
     print(f"Bestand: {target_file}")
     print(f"Totaal toegevoegd: {added} items")
     print(f"Knopen geraakt: {len(per_node)}")

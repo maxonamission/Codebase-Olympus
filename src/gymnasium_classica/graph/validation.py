@@ -2,7 +2,6 @@
 
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Optional
 
 import networkx as nx
 
@@ -24,7 +23,7 @@ class ValidationReport:
     orphan_nodes: list[str] = field(default_factory=list)
     weakly_connected_components: int = 0
     disconnected_nodes: list[str] = field(default_factory=list)
-    topological_order: Optional[list[str]] = None
+    topological_order: list[str] | None = None
     warnings: list[str] = field(default_factory=list)
     errors: list[str] = field(default_factory=list)
 
@@ -93,7 +92,7 @@ def check_connectivity(graph: nx.DiGraph) -> tuple[int, list[str]]:
     return (num_components, disconnected)
 
 
-def topological_sort(graph: nx.DiGraph) -> Optional[list[str]]:
+def topological_sort(graph: nx.DiGraph) -> list[str] | None:
     """Return a topological ordering of the prerequisite+enrichment subgraph.
 
     Transfer edges are excluded because they may be bidirectional.
@@ -163,7 +162,7 @@ def validate_content_refs(graph: nx.DiGraph, repo_root: Path) -> list[str]:
 def validate_graph(
     graph: nx.DiGraph,
     *,
-    content_root: Optional[Path] = None,
+    content_root: Path | None = None,
 ) -> ValidationReport:
     """Run all validation checks on a knowledge graph.
 
@@ -204,9 +203,7 @@ def validate_graph(
     # 2. Orphans
     report.orphan_nodes = find_orphan_nodes(graph)
     if report.orphan_nodes:
-        report.warnings.append(
-            f"Orphan nodes (no edges): {', '.join(report.orphan_nodes)}"
-        )
+        report.warnings.append(f"Orphan nodes (no edges): {', '.join(report.orphan_nodes)}")
 
     # 3. Connectivity
     num_comp, disconnected = check_connectivity(graph)

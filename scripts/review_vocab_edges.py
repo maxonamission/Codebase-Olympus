@@ -54,12 +54,14 @@ def add_edges(file_path: Path, extra: dict, label: str) -> int:
     added = 0
     for target_id, source_id in extra.items():
         if (source_id, target_id) not in existing:
-            data["edges"].append({
-                "source_id": source_id,
-                "target_id": target_id,
-                "type": "prerequisite",
-                "encompassing_weight": 0.3,
-            })
+            data["edges"].append(
+                {
+                    "source_id": source_id,
+                    "target_id": target_id,
+                    "type": "prerequisite",
+                    "encompassing_weight": 0.3,
+                }
+            )
             added += 1
     file_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", "utf-8")
     print(f"{label}: {added} edges toegevoegd (totaal {len(data['edges'])})")
@@ -79,12 +81,13 @@ def main() -> None:
     else:
         grc_edges = EXTRA_EDGES_GRC
 
-    lat_added = add_edges(LAT_FILE, EXTRA_EDGES_LAT, "Latijn")
-    grc_added = add_edges(GRC_FILE, grc_edges, "Grieks")
+    add_edges(LAT_FILE, EXTRA_EDGES_LAT, "Latijn")
+    add_edges(GRC_FILE, grc_edges, "Grieks")
 
     # Validate combined graph
     from gymnasium_classica.graph.loader import load_graph
     from gymnasium_classica.graph.validation import validate_graph
+
     g = load_graph(Path("data/graph/"))
     r = validate_graph(g)
     print(f"\nValidatie: {r.node_count} knopen, {r.edge_count} edges")

@@ -9,7 +9,6 @@ from pydantic import ValidationError
 from gymnasium_classica.models.passage import Passage, PassageData, WordAnnotation
 from gymnasium_classica.passages.loader import load_passages
 
-
 # --- WordAnnotation tests ---
 
 
@@ -46,11 +45,12 @@ class TestPassage:
                 WordAnnotation(
                     woord="Puella", lemma="puella", naamval="nom.sg", vertaling="het meisje"
                 ),
+                WordAnnotation(woord="aquam", lemma="aqua", naamval="acc.sg", vertaling="water"),
                 WordAnnotation(
-                    woord="aquam", lemma="aqua", naamval="acc.sg", vertaling="water"
-                ),
-                WordAnnotation(
-                    woord="portat", lemma="portare", naamval="praes.ind.act.3sg", vertaling="draagt"
+                    woord="portat",
+                    lemma="portare",
+                    naamval="praes.ind.act.3sg",
+                    vertaling="draagt",
                 ),
             ],
             knoop_ids=["LAT-G-MORF-NOM-D1", "LAT-G-MORF-ACC-D1"],
@@ -119,7 +119,9 @@ class TestPassage:
             titel="Test",
             tekst="Puella aquam portat.",
             annotaties=[
-                WordAnnotation(woord="Puella", lemma="puella", naamval="nom.sg", vertaling="het meisje"),
+                WordAnnotation(
+                    woord="Puella", lemma="puella", naamval="nom.sg", vertaling="het meisje"
+                ),
             ],
             knoop_ids=["LAT-G-MORF-NOM-D1"],
             moeilijkheid=2,
@@ -169,8 +171,18 @@ def passages_dir(tmp_path: Path) -> Path:
                 "titel": "Test 1",
                 "tekst": "Puella cantat.",
                 "annotaties": [
-                    {"woord": "Puella", "lemma": "puella", "naamval": "nom.sg", "vertaling": "het meisje"},
-                    {"woord": "cantat", "lemma": "cantare", "naamval": "praes.ind.act.3sg", "vertaling": "zingt"},
+                    {
+                        "woord": "Puella",
+                        "lemma": "puella",
+                        "naamval": "nom.sg",
+                        "vertaling": "het meisje",
+                    },
+                    {
+                        "woord": "cantat",
+                        "lemma": "cantare",
+                        "naamval": "praes.ind.act.3sg",
+                        "vertaling": "zingt",
+                    },
                 ],
                 "knoop_ids": ["LAT-G-MORF-NOM-D1"],
                 "moeilijkheid": 1,
@@ -188,8 +200,18 @@ def passages_dir(tmp_path: Path) -> Path:
                 "titel": "Test 2",
                 "tekst": "Miles pugnat.",
                 "annotaties": [
-                    {"woord": "Miles", "lemma": "miles", "naamval": "nom.sg", "vertaling": "de soldaat"},
-                    {"woord": "pugnat", "lemma": "pugnare", "naamval": "praes.ind.act.3sg", "vertaling": "vecht"},
+                    {
+                        "woord": "Miles",
+                        "lemma": "miles",
+                        "naamval": "nom.sg",
+                        "vertaling": "de soldaat",
+                    },
+                    {
+                        "woord": "pugnat",
+                        "lemma": "pugnare",
+                        "naamval": "praes.ind.act.3sg",
+                        "vertaling": "vecht",
+                    },
                 ],
                 "knoop_ids": ["LAT-G-MORF-NOM-D3"],
                 "moeilijkheid": 2,

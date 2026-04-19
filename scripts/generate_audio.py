@@ -33,13 +33,13 @@ _SCRIPT_DIR = Path(__file__).resolve().parent
 _PROJECT_ROOT = _SCRIPT_DIR.parent
 sys.path.insert(0, str(_PROJECT_ROOT / "src"))
 
-from gymnasium_classica.graph.loader import load_graph  # noqa: E402
-from gymnasium_classica.models.graph import KnoopType  # noqa: E402
-
+from gymnasium_classica.graph.loader import load_graph
+from gymnasium_classica.models.graph import KnoopType
 
 # ---------------------------------------------------------------------------
 # Data structures
 # ---------------------------------------------------------------------------
+
 
 @dataclass
 class VocabEntry:
@@ -53,6 +53,7 @@ class VocabEntry:
 # ---------------------------------------------------------------------------
 # Lemma extraction
 # ---------------------------------------------------------------------------
+
 
 def extract_lemma(titel_nl: str) -> str:
     """Extract the lemma (headword) from a titel_nl string.
@@ -76,6 +77,7 @@ def extract_lemma(titel_nl: str) -> str:
 # ---------------------------------------------------------------------------
 # Collect vocab nodes from the graph
 # ---------------------------------------------------------------------------
+
 
 def collect_vocab_nodes(graph_dir: Path, lang: str | None = None) -> list[VocabEntry]:
     """Load the knowledge graph and return VocabEntry for each V-node.
@@ -123,9 +125,12 @@ def generate_espeak(entry: VocabEntry, output_path: Path) -> None:
     voice = _ESPEAK_LANG_MAP[entry.taal]
     cmd = [
         "espeak-ng",
-        "-v", voice,
-        "-s", "130",
-        "-w", str(output_path),
+        "-v",
+        voice,
+        "-s",
+        "130",
+        "-w",
+        str(output_path),
         entry.lemma,
     ]
     subprocess.run(cmd, check=True, capture_output=True)
@@ -152,7 +157,7 @@ def generate_placeholder(output_path: Path) -> None:
         # fmt chunk
         f.write(b"fmt ")
         f.write(struct.pack("<I", 16))  # chunk size
-        f.write(struct.pack("<H", 1))   # PCM format
+        f.write(struct.pack("<H", 1))  # PCM format
         f.write(struct.pack("<H", num_channels))
         f.write(struct.pack("<I", sample_rate))
         f.write(struct.pack("<I", byte_rate))
@@ -167,6 +172,7 @@ def generate_placeholder(output_path: Path) -> None:
 # ---------------------------------------------------------------------------
 # Main generation loop
 # ---------------------------------------------------------------------------
+
 
 @dataclass
 class GenerationSummary:
@@ -260,6 +266,7 @@ def generate_all(
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
+
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(

@@ -14,12 +14,12 @@ from gymnasium_classica.models.learner import (
     SelfReportResponse,
 )
 from gymnasium_classica.scheduling.bkt import (
-    BKTParams,
     DEFAULT_P_GUESS,
     DEFAULT_P_SLIP,
     SELF_REPORT_BKT_PARAMS,
     SELF_REPORT_P_GUESS,
     SELF_REPORT_P_SLIP,
+    BKTParams,
     bkt_update_posterior,
     update_knoop_state,
 )
@@ -48,9 +48,7 @@ class TestSelfReportBKTParams:
         is less diagnostic of true mastery."""
         prior = 0.30
         normal = bkt_update_posterior(prior, correct=True)
-        self_report = bkt_update_posterior(
-            prior, correct=True, params=SELF_REPORT_BKT_PARAMS
-        )
+        self_report = bkt_update_posterior(prior, correct=True, params=SELF_REPORT_BKT_PARAMS)
         assert self_report < normal
 
     def test_incorrect_update_less_punishing_with_self_report(self):
@@ -59,9 +57,7 @@ class TestSelfReportBKTParams:
         is less diagnostic of true lack of mastery."""
         prior = 0.70
         normal = bkt_update_posterior(prior, correct=False)
-        self_report = bkt_update_posterior(
-            prior, correct=False, params=SELF_REPORT_BKT_PARAMS
-        )
+        self_report = bkt_update_posterior(prior, correct=False, params=SELF_REPORT_BKT_PARAMS)
         assert self_report > normal
 
 
@@ -135,9 +131,7 @@ class TestProcessSelfReport:
         learner_normal.knoop_states["LAT-G-MORF-DECL1-INTRO"] = KnoopState(
             knoop_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.30
         )
-        update_knoop_state(
-            learner_normal, "LAT-G-MORF-DECL1-INTRO", ResponseType.CORRECT
-        )
+        update_knoop_state(learner_normal, "LAT-G-MORF-DECL1-INTRO", ResponseType.CORRECT)
         normal_posterior = learner_normal.knoop_states["LAT-G-MORF-DECL1-INTRO"].posterior_mastery
 
         # Self-report should produce a lower posterior (less informative)

@@ -86,7 +86,7 @@ def _question_to_response(
 async def start_session(
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> StartSessionResponse:
     """Start a new learning session. Returns session_id and the first question.
 
     Automatically uses the user's learning_route preference and loads
@@ -107,12 +107,8 @@ async def start_session(
     from gymnasium_classica.models.user import LearningRoute
 
     user = get_user(db, user_id)
-    learning_route = (
-        user.learning_route if user is not None else LearningRoute.GRAMMAR_FIRST
-    )
-    show_grammar_scaffolding = (
-        user.show_grammar_scaffolding if user is not None else True
-    )
+    learning_route = user.learning_route if user is not None else LearningRoute.GRAMMAR_FIRST
+    show_grammar_scaffolding = user.show_grammar_scaffolding if user is not None else True
 
     session_id, question = session_manager.start_session(
         user_id,
@@ -138,7 +134,7 @@ async def submit_answer(
     body: AnswerRequest,
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> AnswerResponse:
     """Submit an answer to the current question. Returns feedback and the next question."""
     if not session_manager.has_session(body.session_id):
         raise HTTPException(status_code=404, detail="Session not found")
@@ -159,14 +155,14 @@ async def submit_answer(
     if body.response is not None:
         try:
             response = ResponseType(body.response)
-        except ValueError:
+        except ValueError as err:
             raise HTTPException(
                 status_code=422,
                 detail=(
                     f"Invalid response: {body.response!r}. "
                     "Must be correct, incorrect, or slow_correct."
                 ),
-            )
+            ) from err
 
     try:
         result = session_manager.submit_answer(
@@ -176,7 +172,7 @@ async def submit_answer(
             answer_text=body.answer_text,
         )
     except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail=str(e)) from e
 
     # Persist learner model after each answer
     db = request.app.state.db
@@ -200,7 +196,7 @@ async def submit_answer(
 async def get_session_summary(
     session_id: str,
     user_id: str = Depends(get_current_user_id),
-):
+) -> SessionSummaryResponse:
     """Return a summary of a completed (or in-progress) session."""
     if not session_manager.has_session(session_id):
         raise HTTPException(status_code=404, detail="Session not found")
@@ -218,8 +214,7 @@ async def get_session_summary(
         nodes_introduced=summary.nodes_introduced,
         nodes_reviewed=summary.nodes_reviewed,
         mastery_changes={
-            k: MasteryChange(before=v[0], after=v[1])
-            for k, v in summary.mastery_changes.items()
+            k: MasteryChange(before=v[0], after=v[1]) for k, v in summary.mastery_changes.items()
         },
         phases_completed=summary.phases_completed,
     )

@@ -17,12 +17,10 @@ from gymnasium_classica.diagnostic.methode_profile import (
 )
 from gymnasium_classica.diagnostic.placement import (
     MASTERED_THRESHOLD,
-    UNMASTERED_THRESHOLD,
-    DiagnosticResult,
     run_diagnostic,
 )
 from gymnasium_classica.graph.loader import load_graph
-from gymnasium_classica.models.learner import KnoopState, LearnerModel, MasterySource
+from gymnasium_classica.models.learner import LearnerModel, MasterySource
 
 
 @pytest.fixture
@@ -73,15 +71,11 @@ class TestMethodeProfile:
         graph_ids = set(poc_graph.nodes)
         assert treated == graph_ids
 
-    def test_apply_methode_profile_sets_priors(
-        self, fresh_learner, poc_graph, methode_mapping
-    ):
+    def test_apply_methode_profile_sets_priors(self, fresh_learner, poc_graph, methode_mapping):
         """After selecting 'fortuna hoofdstuk 2', all chapter 1+2 nodes get
         P(L₀) = 0.70 and the rest get P(L₀) = 0.10.
         """
-        apply_methode_profile(
-            fresh_learner, poc_graph, "fortuna", "2", mapping=methode_mapping
-        )
+        apply_methode_profile(fresh_learner, poc_graph, "fortuna", "2", mapping=methode_mapping)
 
         treated = get_treated_knoop_ids(methode_mapping, "fortuna", "2")
 
@@ -100,9 +94,7 @@ class TestMethodeProfile:
     def test_apply_methode_profile_sets_intake_method(
         self, fresh_learner, poc_graph, methode_mapping
     ):
-        apply_methode_profile(
-            fresh_learner, poc_graph, "fortuna", "1", mapping=methode_mapping
-        )
+        apply_methode_profile(fresh_learner, poc_graph, "fortuna", "1", mapping=methode_mapping)
         assert fresh_learner.intake_method == "fortuna"
 
     def test_unknown_methode_raises(self, methode_mapping):
@@ -146,9 +138,7 @@ class TestAdaptivePlacement:
         chapter 3): the diagnostic should find the frontier in ≤ 15 questions.
         """
         # Set up priors: chapters 1-3 treated (decl 1+2 + presens 1-2 + esse)
-        apply_methode_profile(
-            fresh_learner, poc_graph, "fortuna", "3", mapping=methode_mapping
-        )
+        apply_methode_profile(fresh_learner, poc_graph, "fortuna", "3", mapping=methode_mapping)
 
         treated = get_treated_knoop_ids(methode_mapping, "fortuna", "3")
 
@@ -163,15 +153,11 @@ class TestAdaptivePlacement:
         )
         assert fresh_learner.intake_completed is True
 
-    def test_frontier_correctly_identified(
-        self, fresh_learner, poc_graph, methode_mapping
-    ):
+    def test_frontier_correctly_identified(self, fresh_learner, poc_graph, methode_mapping):
         """After diagnostic, nodes the learner knows should have high posteriors
         and nodes they don't know should have low posteriors.
         """
-        apply_methode_profile(
-            fresh_learner, poc_graph, "fortuna", "2", mapping=methode_mapping
-        )
+        apply_methode_profile(fresh_learner, poc_graph, "fortuna", "2", mapping=methode_mapping)
 
         treated = get_treated_knoop_ids(methode_mapping, "fortuna", "2")
 
@@ -184,8 +170,7 @@ class TestAdaptivePlacement:
         for node_id in treated:
             state = fresh_learner.knoop_states[node_id]
             assert state.posterior_mastery >= MASTERED_THRESHOLD * 0.8, (
-                f"Treated node {node_id} posterior {state.posterior_mastery:.2f} "
-                f"is too low"
+                f"Treated node {node_id} posterior {state.posterior_mastery:.2f} is too low"
             )
 
     def test_no_profile_starts_from_beginning(self, fresh_learner, poc_graph):
@@ -221,17 +206,13 @@ class TestConditionalCompletion:
         the posteriors of its prerequisites should decrease.
         """
         # Set up: learner completed intake via fortuna ch3
-        apply_methode_profile(
-            fresh_learner, poc_graph, "fortuna", "3", mapping=methode_mapping
-        )
+        apply_methode_profile(fresh_learner, poc_graph, "fortuna", "3", mapping=methode_mapping)
 
         # Record initial posteriors of the prerequisites of NOM-D1
         pred_ids = list(poc_graph.predecessors("LAT-G-MORF-NOM-D1"))
         initial_posteriors = {}
         for pred_id in pred_ids:
-            initial_posteriors[pred_id] = (
-                fresh_learner.knoop_states[pred_id].posterior_mastery
-            )
+            initial_posteriors[pred_id] = fresh_learner.knoop_states[pred_id].posterior_mastery
 
         # Learner fails on NOM-D1 → prerequisites should be penalised
         affected = apply_fallback(fresh_learner, poc_graph, "LAT-G-MORF-NOM-D1")
@@ -253,9 +234,7 @@ class TestConditionalCompletion:
         """Nodes that were established through practice (not diagnostic)
         should NOT be penalised by the fallback.
         """
-        apply_methode_profile(
-            fresh_learner, poc_graph, "fortuna", "3", mapping=methode_mapping
-        )
+        apply_methode_profile(fresh_learner, poc_graph, "fortuna", "3", mapping=methode_mapping)
 
         # Manually mark one prerequisite as practice-verified
         pred_id = "LAT-G-MORF-DECL1-INTRO"
@@ -274,9 +253,7 @@ class TestConditionalCompletion:
         """The affected IDs returned by apply_fallback should be usable
         as elevated-priority entries in the review queue.
         """
-        apply_methode_profile(
-            fresh_learner, poc_graph, "fortuna", "3", mapping=methode_mapping
-        )
+        apply_methode_profile(fresh_learner, poc_graph, "fortuna", "3", mapping=methode_mapping)
 
         affected = apply_fallback(fresh_learner, poc_graph, "LAT-G-MORF-NOM-D1")
 

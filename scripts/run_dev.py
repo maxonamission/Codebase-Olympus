@@ -27,11 +27,15 @@ def main():
     try:
         # Start FastAPI backend
         backend_cmd = [
-            sys.executable, "-m", "uvicorn",
+            sys.executable,
+            "-m",
+            "uvicorn",
             "gymnasium_classica.api.app:app",
             "--reload",
-            "--host", "0.0.0.0",
-            "--port", "8000",
+            "--host",
+            "0.0.0.0",
+            "--port",
+            "8000",
         ]
         print("[run_dev] Starting backend: uvicorn on :8000")
         backend = subprocess.Popen(

@@ -36,8 +36,7 @@ find_summary = _mod.find_summary
 report_to_dict = _mod.report_to_dict
 main = _mod.main
 
-from gymnasium_classica.graph.loader import load_graph  # noqa: E402
-
+from gymnasium_classica.graph.loader import load_graph
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 GRAPH_DIR = REPO_ROOT / "data" / "graph"
@@ -101,30 +100,22 @@ class TestConservativeThresholds:
     def test_lat_vocabulaire_items_full(self, coverage_report):
         s = find_summary(coverage_report, "lat", "V")
         assert s is not None
-        assert s.items_pct >= 90.0, (
-            f"LAT-V items-dekking {s.items_pct:.1f}% < 90% drempel."
-        )
+        assert s.items_pct >= 90.0, f"LAT-V items-dekking {s.items_pct:.1f}% < 90% drempel."
 
     def test_lat_vocabulaire_audio_above_threshold(self, coverage_report):
         s = find_summary(coverage_report, "lat", "V")
         assert s is not None
-        assert s.audio_pct >= 90.0, (
-            f"LAT-V audio-dekking {s.audio_pct:.1f}% < 90% drempel."
-        )
+        assert s.audio_pct >= 90.0, f"LAT-V audio-dekking {s.audio_pct:.1f}% < 90% drempel."
 
     def test_grc_vocabulaire_items_full(self, coverage_report):
         s = find_summary(coverage_report, "grc", "V")
         assert s is not None
-        assert s.items_pct >= 90.0, (
-            f"GRC-V items-dekking {s.items_pct:.1f}% < 90% drempel."
-        )
+        assert s.items_pct >= 90.0, f"GRC-V items-dekking {s.items_pct:.1f}% < 90% drempel."
 
     def test_grc_vocabulaire_audio_above_threshold(self, coverage_report):
         s = find_summary(coverage_report, "grc", "V")
         assert s is not None
-        assert s.audio_pct >= 90.0, (
-            f"GRC-V audio-dekking {s.audio_pct:.1f}% < 90% drempel."
-        )
+        assert s.audio_pct >= 90.0, f"GRC-V audio-dekking {s.audio_pct:.1f}% < 90% drempel."
 
 
 class TestJsonOutput:

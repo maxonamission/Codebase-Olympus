@@ -489,9 +489,7 @@ def add_items_to_json(json_path: Path, items_by_knoop: dict[str, list[dict]]) ->
         if knoop["id"] in primary_map:
             existing_ids = {item["id"] for item in knoop.get("items", [])}
             new_items = [
-                item
-                for item in primary_map[knoop["id"]]
-                if item["id"] not in existing_ids
+                item for item in primary_map[knoop["id"]] if item["id"] not in existing_ids
             ]
             knoop.setdefault("items", []).extend(new_items)
             added += len(new_items)

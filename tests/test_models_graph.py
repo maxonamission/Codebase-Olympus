@@ -4,7 +4,6 @@ import pytest
 from pydantic import ValidationError
 
 from gymnasium_classica.models.graph import (
-    Bron,
     EdgeType,
     GraphData,
     Item,
@@ -236,9 +235,14 @@ class TestLuisterItemTypes:
 
     def test_all_item_types_present(self):
         expected = {
-            "herkenning", "productie", "analyse", "synthese",
-            "contextueel", "offline_schrijven",
-            "luister_herkenning", "luister_productie",
+            "herkenning",
+            "productie",
+            "analyse",
+            "synthese",
+            "contextueel",
+            "offline_schrijven",
+            "luister_herkenning",
+            "luister_productie",
         }
         actual = {t.value for t in ItemType}
         assert actual == expected
@@ -250,8 +254,14 @@ class TestLuisterItemTypes:
 
     def test_existing_item_types_unchanged(self, base_item_data):
         """Ensure existing item types still work — no breaking change."""
-        for existing_type in ["herkenning", "productie", "analyse",
-                              "synthese", "contextueel", "offline_schrijven"]:
+        for existing_type in [
+            "herkenning",
+            "productie",
+            "analyse",
+            "synthese",
+            "contextueel",
+            "offline_schrijven",
+        ]:
             base_item_data["type"] = existing_type
             item = Item(**base_item_data)
             assert item.type == existing_type

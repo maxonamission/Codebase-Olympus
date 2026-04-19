@@ -47,9 +47,7 @@ def _load_passages_directory(directory: Path) -> list[Passage]:
         passages = _load_passages_file(file_path)
         for p in passages:
             if p.id in seen_ids:
-                raise ValueError(
-                    f"Duplicate passage ID {p.id!r} found in {file_path}"
-                )
+                raise ValueError(f"Duplicate passage ID {p.id!r} found in {file_path}")
             seen_ids.add(p.id)
             all_passages.append(p)
 

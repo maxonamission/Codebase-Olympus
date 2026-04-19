@@ -77,7 +77,6 @@ class TestTokenAuth:
         token = resp.json()["token"]
         user_id = resp.json()["user_id"]
         # Verify the token is in the database
-        from gymnasium_classica.api.app import create_app
 
         db = client.app.state.db
         row = db.execute("SELECT user_id FROM auth_tokens WHERE token = ?", (token,)).fetchone()
@@ -86,12 +85,12 @@ class TestTokenAuth:
 
     def test_each_login_gets_unique_token(self, client):
         client.post("/auth/register", json={"email": "multi@b.nl", "password": "pw"})
-        t1 = client.post(
-            "/auth/login", json={"email": "multi@b.nl", "password": "pw"}
-        ).json()["token"]
-        t2 = client.post(
-            "/auth/login", json={"email": "multi@b.nl", "password": "pw"}
-        ).json()["token"]
+        t1 = client.post("/auth/login", json={"email": "multi@b.nl", "password": "pw"}).json()[
+            "token"
+        ]
+        t2 = client.post("/auth/login", json={"email": "multi@b.nl", "password": "pw"}).json()[
+            "token"
+        ]
         assert t1 != t2
 
 

@@ -5,9 +5,10 @@ Start with: uvicorn gymnasium_classica.api.app:app --reload
 
 import json
 import sqlite3
+from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from pathlib import Path
-from typing import Optional
+from typing import Any
 
 import networkx as nx
 from fastapi import FastAPI, HTTPException
@@ -36,7 +37,7 @@ _AUDIO_MEDIA_TYPES = {
 }
 
 
-def _load_clusters(path: Path) -> list[dict]:
+def _load_clusters(path: Path) -> list[dict[str, Any]]:
     """Load semantic vocabulary cluster definitions from JSON.
 
     Returns an empty list when the file is missing so tests and dev
@@ -50,7 +51,7 @@ def _load_clusters(path: Path) -> list[dict]:
 
 def create_app(
     graph_dir: Path = GRAPH_DIR,
-    db_path: Optional[Path] = None,
+    db_path: Path | None = None,
     passages_dir: Path = PASSAGES_DIR,
     audio_dir: Path = AUDIO_DIR,
     vocab_sources_dir: Path = VOCAB_SOURCES_DIR,
@@ -68,7 +69,7 @@ def create_app(
     """
 
     @asynccontextmanager
-    async def lifespan(application: FastAPI):
+    async def lifespan(application: FastAPI) -> AsyncIterator[None]:
         application.state.graph = load_graph(graph_dir)
         if passages_dir.is_dir():
             application.state.passages = load_passages(passages_dir)
@@ -115,7 +116,7 @@ def create_app(
     application.include_router(user_router)
 
     @application.get("/health")
-    async def health():
+    async def health() -> dict[str, Any]:
         """Health check: returns node/edge counts from the loaded graph."""
         graph: nx.DiGraph = application.state.graph
         return {

@@ -6,14 +6,12 @@ from pathlib import Path
 from uuid import uuid4
 
 import pytest
-from pydantic import ValidationError
 
 from gymnasium_classica.models.learner import (
     LearnerModel,
     RouteSwitch,
     SessionRecord,
 )
-
 
 # --- RouteSwitch model ---
 
@@ -45,20 +43,14 @@ class TestLearnerModelRouteHistory:
 
     def test_append_route_switch(self):
         lm = LearnerModel(user_id=uuid4())
-        lm.route_history.append(
-            RouteSwitch(timestamp=datetime.now(), route="context_first")
-        )
+        lm.route_history.append(RouteSwitch(timestamp=datetime.now(), route="context_first"))
         assert len(lm.route_history) == 1
         assert lm.route_history[0].route == "context_first"
 
     def test_multiple_switches(self):
         lm = LearnerModel(user_id=uuid4())
-        lm.route_history.append(
-            RouteSwitch(timestamp=datetime(2026, 1, 1), route="grammar_first")
-        )
-        lm.route_history.append(
-            RouteSwitch(timestamp=datetime(2026, 1, 5), route="context_first")
-        )
+        lm.route_history.append(RouteSwitch(timestamp=datetime(2026, 1, 1), route="grammar_first"))
+        lm.route_history.append(RouteSwitch(timestamp=datetime(2026, 1, 5), route="context_first"))
         lm.route_history.append(
             RouteSwitch(timestamp=datetime(2026, 1, 10), route="grammar_first")
         )
@@ -66,9 +58,7 @@ class TestLearnerModelRouteHistory:
 
     def test_roundtrip_with_route_history(self):
         lm = LearnerModel(user_id=uuid4())
-        lm.route_history.append(
-            RouteSwitch(timestamp=datetime.now(), route="context_first")
-        )
+        lm.route_history.append(RouteSwitch(timestamp=datetime.now(), route="context_first"))
         data = lm.model_dump()
         lm2 = LearnerModel(**data)
         assert len(lm2.route_history) == 1
@@ -109,8 +99,9 @@ class TestSessionRecordRoute:
 
 @pytest.fixture()
 def client():
-    from gymnasium_classica.api.app import create_app
     from fastapi.testclient import TestClient
+
+    from gymnasium_classica.api.app import create_app
 
     with tempfile.TemporaryDirectory() as tmp:
         db_path = Path(tmp) / "test.db"

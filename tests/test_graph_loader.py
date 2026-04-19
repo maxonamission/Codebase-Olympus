@@ -1,6 +1,7 @@
 """Tests for the graph loader: JSON → NetworkX DiGraph."""
 
 import json
+
 import pytest
 from pydantic import ValidationError
 
@@ -114,11 +115,14 @@ class TestLoadGraphFromDirectory:
             "knopen": [
                 {
                     "id": "LAT-G-MORF-NOM-D1",
-                    "type": "G", "taal": "lat",
+                    "type": "G",
+                    "taal": "lat",
                     "titel_nl": "Knoop A",
                     "beschrijving": "Test A.",
-                    "bloom_niveau": "kennis", "fase": "onderbouw_1",
-                    "toetsbaar": True, "items": [],
+                    "bloom_niveau": "kennis",
+                    "fase": "onderbouw_1",
+                    "toetsbaar": True,
+                    "items": [],
                 },
             ],
             "edges": [],
@@ -127,11 +131,14 @@ class TestLoadGraphFromDirectory:
             "knopen": [
                 {
                     "id": "GRC-G-MORF-NOM-D1",
-                    "type": "G", "taal": "grc",
+                    "type": "G",
+                    "taal": "grc",
                     "titel_nl": "Knoop B",
                     "beschrijving": "Test B.",
-                    "bloom_niveau": "kennis", "fase": "onderbouw_1",
-                    "toetsbaar": True, "items": [],
+                    "bloom_niveau": "kennis",
+                    "fase": "onderbouw_1",
+                    "toetsbaar": True,
+                    "items": [],
                 },
             ],
             "edges": [
@@ -156,7 +163,7 @@ class TestLoadGraphFromDirectory:
     def test_empty_directory_raises(self, tmp_path):
         empty_dir = tmp_path / "empty"
         empty_dir.mkdir()
-        with pytest.raises(FileNotFoundError, match="No .json files"):
+        with pytest.raises(FileNotFoundError, match=r"No \.json files"):
             load_graph(empty_dir)
 
     def test_duplicate_ids_across_files_rejected(self, tmp_path):
@@ -164,14 +171,19 @@ class TestLoadGraphFromDirectory:
         graph_dir.mkdir()
 
         node = {
-            "knopen": [{
-                "id": "LAT-G-MORF-NOM-D1",
-                "type": "G", "taal": "lat",
-                "titel_nl": "Same ID",
-                "beschrijving": "Test.",
-                "bloom_niveau": "kennis", "fase": "onderbouw_1",
-                "toetsbaar": True, "items": [],
-            }],
+            "knopen": [
+                {
+                    "id": "LAT-G-MORF-NOM-D1",
+                    "type": "G",
+                    "taal": "lat",
+                    "titel_nl": "Same ID",
+                    "beschrijving": "Test.",
+                    "bloom_niveau": "kennis",
+                    "fase": "onderbouw_1",
+                    "toetsbaar": True,
+                    "items": [],
+                }
+            ],
             "edges": [],
         }
 

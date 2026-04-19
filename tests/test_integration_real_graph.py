@@ -31,7 +31,6 @@ from gymnasium_classica.models.learner import LearnerModel, ResponseType
 from gymnasium_classica.scheduling.session import run_session
 from gymnasium_classica.schemas.id_schema import validate_knoop_id
 
-
 GRAPH_DIR = Path(__file__).parent.parent / "data" / "graph"
 
 
@@ -58,15 +57,14 @@ class TestStructuralIntegrity:
         missing = expected_files - present
         assert not missing, f"Ontbrekende productie-graph-bestanden: {missing}"
         assert real_graph.number_of_nodes() >= 500, (
-            f"Verwacht ≥500 knopen in volledige graph, "
-            f"kreeg {real_graph.number_of_nodes()}"
+            f"Verwacht ≥500 knopen in volledige graph, kreeg {real_graph.number_of_nodes()}"
         )
 
     def test_validate_graph_has_no_errors(self, real_graph):
         """De validator vindt geen harde fouten in de productie-graph."""
         report = validate_graph(real_graph)
-        assert report.errors == [], (
-            "Graph-validatie rapporteerde fouten:\n" + "\n".join(report.errors)
+        assert report.errors == [], "Graph-validatie rapporteerde fouten:\n" + "\n".join(
+            report.errors
         )
 
     def test_no_cycles_in_prerequisite_subgraph(self, real_graph):
@@ -77,8 +75,7 @@ class TestStructuralIntegrity:
         """Alle knoop-IDs passeren ``validate_knoop_id``."""
         invalid = [n for n in real_graph.nodes if not validate_knoop_id(n)]
         assert not invalid, (
-            f"{len(invalid)} knoop-ID(s) voldoen niet aan het ID-schema: "
-            f"{invalid[:5]}"
+            f"{len(invalid)} knoop-ID(s) voldoen niet aan het ID-schema: {invalid[:5]}"
         )
 
 
@@ -96,8 +93,7 @@ class TestCrossFileEdges:
                 if target not in real_graph.nodes:
                     unresolved.append(("target missing", source, target))
         assert not unresolved, (
-            f"Transfer-edges verwijzen naar niet-bestaande knopen: "
-            f"{unresolved[:5]}"
+            f"Transfer-edges verwijzen naar niet-bestaande knopen: {unresolved[:5]}"
         )
 
     def test_transfer_edges_bridge_languages(self, real_graph):
@@ -133,8 +129,7 @@ class TestGrcAlfabetInvariant:
             if not any("FONL-ALFA" in a for a in ancestors):
                 missing.append(node_id)
         assert not missing, (
-            f"{len(missing)} GRC-grammaticaknopen zonder alfabet-prerequisite: "
-            f"{missing[:5]}"
+            f"{len(missing)} GRC-grammaticaknopen zonder alfabet-prerequisite: {missing[:5]}"
         )
 
     def test_alfabet_subgraph_has_entry_point(self, real_graph):
@@ -148,8 +143,7 @@ class TestGrcAlfabetInvariant:
         alfa_nodes = [n for n in real_graph.nodes if "FONL-ALFA" in n]
         assert alfa_nodes, "Geen alfabet-knopen gevonden"
         entry_points = [
-            n for n in alfa_nodes
-            if not any("FONL-ALFA" in p for p in real_graph.predecessors(n))
+            n for n in alfa_nodes if not any("FONL-ALFA" in p for p in real_graph.predecessors(n))
         ]
         assert entry_points, (
             "Alfabet-subgraph heeft geen entry-knoop (elke alfabet-knoop "

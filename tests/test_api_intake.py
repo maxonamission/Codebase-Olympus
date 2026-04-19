@@ -11,7 +11,6 @@ from gymnasium_classica.api.intake_manager import IntakeManager
 from gymnasium_classica.graph.loader import load_graph
 from gymnasium_classica.models.learner import KnoopState, LearnerModel, MasterySource
 
-
 # -- Unit tests for IntakeManager --
 
 
@@ -54,7 +53,7 @@ class TestIntakeManager:
         """Fresh learner: all at 0.10 ≤ 0.25 = resolved unmastered → no questions."""
         learner = LearnerModel(user_id=uuid4())
         mgr = IntakeManager()
-        intake_id, q = mgr.start_intake("user1", learner, poc_graph)
+        intake_id, _q = mgr.start_intake("user1", learner, poc_graph)
         # All nodes resolve immediately as unmastered, intake finishes
         state = mgr.get_intake_state(intake_id)
         assert state.finished

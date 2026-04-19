@@ -1,6 +1,7 @@
 """Tests for scripts/generate_worksheets.py — PDF worksheet generation."""
 
-import re
+# Import the module under test (scripts/ is not a package, so use importlib)
+import importlib.util
 from pathlib import Path
 
 import pytest
@@ -16,9 +17,6 @@ from gymnasium_classica.models.graph import (
     Richting,
     Taal,
 )
-
-# Import the module under test (scripts/ is not a package, so use importlib)
-import importlib.util
 
 _spec = importlib.util.spec_from_file_location(
     "generate_worksheets",
@@ -198,9 +196,7 @@ class TestGenerateWorksheet:
         """Worksheet with markdown content produces a valid PDF."""
         content_dir = tmp_path / "content"
         content_dir.mkdir()
-        (content_dir / "LAT-G-MORF-DECL1-PARAD.md").write_text(
-            SAMPLE_MARKDOWN, encoding="utf-8"
-        )
+        (content_dir / "LAT-G-MORF-DECL1-PARAD.md").write_text(SAMPLE_MARKDOWN, encoding="utf-8")
 
         output = tmp_path / "worksheets" / "LAT-G-MORF-DECL1-PARAD.pdf"
         result = generate_worksheet(sample_knoop, content_dir, output)
@@ -272,9 +268,7 @@ class TestGenerateWorksheet:
         """Output directory is created automatically if it doesn't exist."""
         content_dir = tmp_path / "content"
         content_dir.mkdir()
-        (content_dir / "LAT-G-MORF-DECL1-PARAD.md").write_text(
-            SAMPLE_MARKDOWN, encoding="utf-8"
-        )
+        (content_dir / "LAT-G-MORF-DECL1-PARAD.md").write_text(SAMPLE_MARKDOWN, encoding="utf-8")
 
         output = tmp_path / "deep" / "nested" / "dir" / "test.pdf"
         result = generate_worksheet(sample_knoop, content_dir, output)
@@ -297,9 +291,7 @@ class TestGenerateWorksheet:
 
         content_dir = tmp_path / "content"
         content_dir.mkdir()
-        (content_dir / "LAT-G-MORF-DECL1-PARAD.md").write_text(
-            SAMPLE_MARKDOWN, encoding="utf-8"
-        )
+        (content_dir / "LAT-G-MORF-DECL1-PARAD.md").write_text(SAMPLE_MARKDOWN, encoding="utf-8")
 
         output = tmp_path / "out" / "test.pdf"
         result = generate_worksheet(knoop, content_dir, output)

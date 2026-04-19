@@ -1,9 +1,8 @@
 """Pydantic request/response models for the API."""
 
-from typing import Optional
+from typing import Any
 
 from pydantic import BaseModel, EmailStr, Field
-
 
 # -- Auth --
 
@@ -29,7 +28,7 @@ class AuthResponse(BaseModel):
 class ItemInfo(BaseModel):
     id: str
     type: str
-    stimulus: str | dict
+    stimulus: str | dict[str, Any]
     feedback: str
     verwachte_tijd_sec: int
 
@@ -44,8 +43,8 @@ class VocabMetadata(BaseModel):
 
     lemma: str
     part_of_speech: str
-    conjugation: Optional[str] = None
-    forms: Optional[str] = Field(
+    conjugation: str | None = None
+    forms: str | None = Field(
         default=None,
         description=(
             "For nouns/adjectives: genitive form.  For verbs: stamtijden. "
@@ -53,7 +52,7 @@ class VocabMetadata(BaseModel):
         ),
     )
     meaning: str
-    cluster: Optional[str] = Field(
+    cluster: str | None = Field(
         default=None,
         description="Semantisch cluster label, or None.",
     )
@@ -63,43 +62,43 @@ class QuestionResponse(BaseModel):
     knoop_id: str
     titel: str
     beschrijving: str
-    stimulus: str | dict
+    stimulus: str | dict[str, Any]
     phase: str
     items: list[ItemInfo] = Field(default_factory=list)
-    scaffolding_content: Optional[str] = Field(
+    scaffolding_content: str | None = Field(
         default=None,
         description="Markdown grammar explanation for context-first scaffolding",
     )
-    vocab_metadata: Optional[VocabMetadata] = Field(
+    vocab_metadata: VocabMetadata | None = Field(
         default=None,
         description="Structured metadata for V-knopen (F1-05 — woordkaart).",
     )
     # Promoted from the first item so the frontend can read a flat shape
     # (question.item_type / question.options / ...) instead of digging into
     # items[0].stimulus.
-    item_type: Optional[str] = None
-    instruction: Optional[str] = None
-    options: Optional[list[str]] = None
-    hint: Optional[str] = None
-    audio_ref: Optional[str] = None
+    item_type: str | None = None
+    instruction: str | None = None
+    options: list[str] | None = None
+    hint: str | None = None
+    audio_ref: str | None = None
 
 
 class StartSessionResponse(BaseModel):
     session_id: str
-    question: Optional[QuestionResponse] = None
+    question: QuestionResponse | None = None
 
 
 class AnswerRequest(BaseModel):
     session_id: str
     response_time_ms: int = Field(ge=0)
-    response: Optional[str] = Field(
+    response: str | None = Field(
         default=None,
         description=(
             "Self-assessment outcome: correct, incorrect, or slow_correct. "
             "Required when answer_text is not provided."
         ),
     )
-    answer_text: Optional[str] = Field(
+    answer_text: str | None = Field(
         default=None,
         description=(
             "Raw answer the learner typed or selected.  When provided, "
@@ -112,14 +111,16 @@ class AnswerRequest(BaseModel):
 class FeedbackResponse(BaseModel):
     knoop_id: str
     correct: bool
-    response_type: str = Field(description="The original response: correct, slow_correct, or incorrect")
+    response_type: str = Field(
+        description="The original response: correct, slow_correct, or incorrect"
+    )
     mastery_before: float
     mastery_after: float
 
 
 class AnswerResponse(BaseModel):
     feedback: FeedbackResponse
-    next_question: Optional[QuestionResponse] = None
+    next_question: QuestionResponse | None = None
     session_finished: bool = False
 
 
@@ -157,7 +158,7 @@ class SessionMasteryEntry(BaseModel):
 
     session_id: str
     timestamp: str
-    learning_route: Optional[str] = None
+    learning_route: str | None = None
     nodes_practiced: int
     mastered_after: int
 
@@ -209,7 +210,7 @@ class KnoopProgressResponse(BaseModel):
     easiness_factor: float
     interval_days: float
     repetitions: int
-    last_review: Optional[str] = None
+    last_review: str | None = None
     source: str
     item_history: list[ItemHistoryEntry]
 
@@ -241,11 +242,11 @@ class GraphDataResponse(BaseModel):
 
 
 class IntakeStartRequest(BaseModel):
-    methode: Optional[str] = Field(
+    methode: str | None = Field(
         default=None,
         description="Schoolmethode, bijv. 'fortuna', 'pallas'. Indien opgegeven samen met chapter.",
     )
-    chapter: Optional[str] = Field(
+    chapter: str | None = Field(
         default=None,
         description="Laatst behandelde hoofdstuk, bijv. 'h03'.",
     )
@@ -261,7 +262,7 @@ class IntakeQuestionResponse(BaseModel):
 
 class IntakeStartResponse(BaseModel):
     intake_id: str
-    question: Optional[IntakeQuestionResponse] = None
+    question: IntakeQuestionResponse | None = None
     already_completed: bool = False
 
 
@@ -272,7 +273,7 @@ class IntakeAnswerRequest(BaseModel):
 
 class IntakeAnswerResponse(BaseModel):
     questions_asked: int
-    next_question: Optional[IntakeQuestionResponse] = None
+    next_question: IntakeQuestionResponse | None = None
     finished: bool = False
     converged: bool = False
 

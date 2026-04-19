@@ -22,7 +22,6 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Optional
 
 from pydantic import BaseModel, Field
 
@@ -33,11 +32,11 @@ class VocabEntry(BaseModel):
     lemma: str
     id: str = Field(description="Short lemma handle, uppercase, e.g. 'SUM'.")
     pos: str = Field(description="Part of speech: verb, noun, adj, pron, prep, ...")
-    conj: Optional[str] = Field(
+    conj: str | None = Field(
         default=None,
         description="Conjugation or declension class, e.g. '1', '3b', 'irreg'.",
     )
-    gen: Optional[str] = Field(
+    gen: str | None = Field(
         default=None,
         description=(
             "Genitive form (nouns/adjectives), stamtijden (verbs) or "
@@ -45,7 +44,7 @@ class VocabEntry(BaseModel):
         ),
     )
     mean: str = Field(description="Dutch translation(s), semicolon-separated.")
-    cl: Optional[str] = Field(
+    cl: str | None = Field(
         default=None,
         description="Semantisch cluster label, or None.",
     )
@@ -87,9 +86,7 @@ def _load_file(file_path: Path) -> dict[str, VocabEntry]:
         entry = VocabEntry(**item)
         knoop_id = knoop_id_from_file_and_entry(file_path.name, entry.id)
         if knoop_id in entries:
-            raise ValueError(
-                f"Duplicate vocab entry for {knoop_id!r} in {file_path}"
-            )
+            raise ValueError(f"Duplicate vocab entry for {knoop_id!r} in {file_path}")
         entries[knoop_id] = entry
     return entries
 
@@ -103,8 +100,6 @@ def _load_directory(directory: Path) -> dict[str, VocabEntry]:
     for f in files:
         for knoop_id, entry in _load_file(f).items():
             if knoop_id in merged:
-                raise ValueError(
-                    f"Duplicate knoop_id {knoop_id!r} across vocab_sources"
-                )
+                raise ValueError(f"Duplicate knoop_id {knoop_id!r} across vocab_sources")
             merged[knoop_id] = entry
     return merged

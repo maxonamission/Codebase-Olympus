@@ -14,22 +14,21 @@ Without --knoop-id, generates worksheets for all grammar nodes that have content
 
 import argparse
 import re
-import sys
 from pathlib import Path
 
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.units import mm, cm
 from reportlab.lib import colors
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
+from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (
+    Paragraph,
     SimpleDocTemplate,
+    Spacer,
     Table,
     TableStyle,
-    Paragraph,
-    Spacer,
 )
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 
 from gymnasium_classica.graph.loader import load_graph
 from gymnasium_classica.models.graph import KennisKnoop, KnoopType
@@ -43,12 +42,12 @@ CONTENT_WIDTH = PAGE_WIDTH - 2 * MARGIN
 # Font paths (DejaVu Sans supports Latin + Greek + diacritics)
 # Search common locations across Linux, macOS, and Windows
 _FONT_SEARCH_PATHS = [
-    Path("/usr/share/fonts/truetype/dejavu"),          # Linux (Debian/Ubuntu)
-    Path("/usr/share/fonts/dejavu-sans-fonts"),         # Linux (Fedora/RHEL)
-    Path("/usr/share/fonts/TTF"),                       # Linux (Arch)
-    Path("/opt/homebrew/share/fonts/dejavu"),           # macOS (Homebrew ARM)
-    Path("/usr/local/share/fonts/dejavu"),              # macOS (Homebrew Intel)
-    Path("C:/Windows/Fonts"),                           # Windows (system fonts)
+    Path("/usr/share/fonts/truetype/dejavu"),  # Linux (Debian/Ubuntu)
+    Path("/usr/share/fonts/dejavu-sans-fonts"),  # Linux (Fedora/RHEL)
+    Path("/usr/share/fonts/TTF"),  # Linux (Arch)
+    Path("/opt/homebrew/share/fonts/dejavu"),  # macOS (Homebrew ARM)
+    Path("/usr/local/share/fonts/dejavu"),  # macOS (Homebrew Intel)
+    Path("C:/Windows/Fonts"),  # Windows (system fonts)
 ]
 
 
@@ -200,9 +199,7 @@ def parse_markdown_tables(content: str) -> list[dict]:
     return tables
 
 
-def _make_empty_paradigm_table(
-    table_data: dict, styles: dict[str, ParagraphStyle]
-) -> list:
+def _make_empty_paradigm_table(table_data: dict, styles: dict[str, ParagraphStyle]) -> list:
     """Build a reportlab Table from parsed markdown table data.
 
     The first row (header) is kept; all other cells are emptied
@@ -216,9 +213,7 @@ def _make_empty_paradigm_table(
     num_cols = len(header)
 
     # Build table data: header + empty rows (keep first column as row label)
-    pdf_rows = [
-        [Paragraph(cell, styles["body"]) for cell in header]
-    ]
+    pdf_rows = [[Paragraph(cell, styles["body"]) for cell in header]]
     for row in rows[1:]:
         pdf_row = []
         for col_idx, cell in enumerate(row):
@@ -258,9 +253,7 @@ def _make_empty_paradigm_table(
     return table
 
 
-def _build_exercise_elements(
-    knoop: KennisKnoop, styles: dict[str, ParagraphStyle]
-) -> list:
+def _build_exercise_elements(knoop: KennisKnoop, styles: dict[str, ParagraphStyle]) -> list:
     """Build exercise elements from the knoop's items."""
     elements = []
     # Filter for suitable exercise items (production, analyse, synthese, offline)
@@ -278,9 +271,7 @@ def _build_exercise_elements(
 
     for idx, item in enumerate(exercise_items, 1):
         stimulus = item.stimulus if isinstance(item.stimulus, str) else str(item.stimulus)
-        elements.append(
-            Paragraph(f"{idx}. {stimulus}", styles["exercise"])
-        )
+        elements.append(Paragraph(f"{idx}. {stimulus}", styles["exercise"]))
         # Add ruled writing lines
         line_table = Table(
             [[""] for _ in range(2)],
@@ -302,9 +293,7 @@ def _build_exercise_elements(
     return elements
 
 
-def _build_greek_writing_lines(
-    knoop: KennisKnoop, styles: dict[str, ParagraphStyle]
-) -> list:
+def _build_greek_writing_lines(knoop: KennisKnoop, styles: dict[str, ParagraphStyle]) -> list:
     """Build Greek letter writing practice lines for GRC alphabet nodes."""
     elements = []
 
@@ -339,9 +328,7 @@ def _build_greek_writing_lines(
 
     # Generate ruled lines with the letter as example at the start
     for letter, label in [(majuskel, "hoofdletter"), (minuskel, "kleine letter")]:
-        elements.append(
-            Paragraph(f"{label}: {letter}", styles["body"])
-        )
+        elements.append(Paragraph(f"{label}: {letter}", styles["body"]))
         # Create practice rows: first cell has the example, rest is blank
         practice_rows = []
         for _ in range(WRITING_LINES_PER_LETTER):
@@ -456,9 +443,7 @@ def generate_worksheet(
 
     # Footer
     elements.append(Spacer(1, 6 * mm))
-    elements.append(
-        Paragraph("Gymnasium Classica — Werkblad", styles["footer"])
-    )
+    elements.append(Paragraph("Gymnasium Classica — Werkblad", styles["footer"]))
 
     doc.build(elements)
     return True

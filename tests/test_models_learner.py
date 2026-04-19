@@ -10,7 +10,6 @@ from gymnasium_classica.models.learner import (
     ItemResponse,
     KnoopState,
     LearnerModel,
-    ResponseType,
     SessionRecord,
 )
 
