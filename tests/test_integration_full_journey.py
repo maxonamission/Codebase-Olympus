@@ -108,7 +108,7 @@ class TestRegisterAndFirstSession:
             assert start["question"] is not None, "Production graph must yield a question"
 
             # Answer at least three questions, alternating correct/incorrect.
-            q = start["question"]
+            start["question"]
             alternating = ["correct", "incorrect", "correct"]
             for response in alternating:
                 resp = client.post(
@@ -125,7 +125,7 @@ class TestRegisterAndFirstSession:
                 # Feedback reflects the response type (passage_read is possible
                 # if the first question happened to be a passage).
                 assert data["feedback"]["response_type"] in {response, "passage_read"}
-                q = data.get("next_question")
+                data.get("next_question")
                 if data["session_finished"]:
                     break
 
@@ -168,7 +168,7 @@ class TestSessionPersistsAcrossLogins:
             assert overview["mastered"] + overview["in_progress"] >= 1
 
             # Direct DB check: session_history actually got appended.
-            db_path = Path(client2.app.state.db.execute("PRAGMA database_list").fetchone()["file"])
+            Path(client2.app.state.db.execute("PRAGMA database_list").fetchone()["file"])
             conn = client2.app.state.db
             learner = load_learner_model(conn, user_id)
             assert learner is not None

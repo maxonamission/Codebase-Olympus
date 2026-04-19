@@ -115,7 +115,7 @@ class TestStartSession:
         graph = load_graph_from_dict(data)
         learner = LearnerModel(user_id=uuid4())
         mgr = SessionManager()
-        session_id, question = mgr.start_session("user1", learner, graph)
+        _session_id, question = mgr.start_session("user1", learner, graph)
         assert question is None
 
 
@@ -423,7 +423,7 @@ class TestPhaseTransitions:
         now = datetime(2026, 4, 16, 10, 0, 0)
         graph, learner = _broad_graph_and_learner(now)
         mgr = SessionManager()
-        session_id, q = mgr.start_session("user1", learner, graph, now=now)
+        _session_id, q = mgr.start_session("user1", learner, graph, now=now)
         assert q is not None
         # Eerste vraag zit in één van de eerdere fasen (warmup of new_material
         # afhankelijk van kandidatenbeschikbaarheid).
@@ -555,7 +555,7 @@ class TestContextFirstRoute:
         learner = LearnerModel(user_id=uuid4())
         mgr = SessionManager()
         now = datetime(2026, 4, 16, 10, 0, 0)
-        session_id, q = mgr.start_session(
+        _session_id, q = mgr.start_session(
             "user1",
             learner,
             graph,

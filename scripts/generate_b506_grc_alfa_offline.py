@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 
-from gymnasium_classica.models.graph import Item  # noqa: E402
+from gymnasium_classica.models.graph import Item
 
 # --- Greek letter data ---
 # (knoop_id_suffix, upper, lower, name, tip)
@@ -224,7 +224,7 @@ def main():
     print("\n=== B5-06: Grieks alfabet schrijfoefeningen ===")
     print("Bestand: grc_alfabet.json")
     print(f"Totaal toegevoegd: {added} items")
-    print(f"Letters: {', '.join(l[3] for l in LETTERS[:12])}...")
+    print(f"Letters: {', '.join(letter[3] for letter in LETTERS[:12])}...")
 
 
 if __name__ == "__main__":

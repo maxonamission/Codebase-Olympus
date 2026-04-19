@@ -82,7 +82,7 @@ def _a(kid, nr, stim, antw, fb, moeil=1.0, tijd=30):
 
 
 def define_items() -> dict[str, list[dict]]:
-    I = {}  # knoop_id -> list[dict]
+    I = {}  # knoop_id -> list[dict]  # noqa: E741 - script-lokale conventie
     K = "LAT-G-MORF-DECL3-INTRO"
     I[K] = [
         _h(
@@ -467,7 +467,7 @@ def define_items() -> dict[str, list[dict]]:
 
 
 def validate_items(items_by_knoop):
-    for kid, il in items_by_knoop.items():
+    for _kid, il in items_by_knoop.items():
         for d in il:
             Item(**d)
     print("All items validated successfully.")

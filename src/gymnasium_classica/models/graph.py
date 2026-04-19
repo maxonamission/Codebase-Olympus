@@ -20,7 +20,7 @@ class KnoopType(StrEnum):
     G = "G"  # Grammatica
     V = "V"  # Vocabulaire
     C = "C"  # Cultuur
-    I = "I"  # Integratie
+    I = "I"  # Integratie  # noqa: E741 - enum uit ID-schema, niet te hernoemen
 
 
 class BloomNiveau(StrEnum):

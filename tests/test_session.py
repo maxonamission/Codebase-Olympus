@@ -142,7 +142,7 @@ class TestSessionOrchestration:
         learner = LearnerModel(user_id=uuid4())
         result = run_session(learner, poc_graph, _always_correct)
         assert len(result.mastery_changes) > 0
-        for knoop_id, (before, after) in result.mastery_changes.items():
+        for _knoop_id, (before, after) in result.mastery_changes.items():
             # Correct answers should increase mastery
             assert after >= before
 

@@ -376,7 +376,7 @@ def define_items() -> dict[str, list[dict]]:
 
 def validate_items(items_by_knoop: dict[str, list[dict]]) -> None:
     """Validate all items via Pydantic model."""
-    for knoop_id, item_list in items_by_knoop.items():
+    for _knoop_id, item_list in items_by_knoop.items():
         for item_dict in item_list:
             Item(**item_dict)
     print("All items validated successfully.")

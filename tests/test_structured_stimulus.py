@@ -125,7 +125,7 @@ class TestPromoteFirstItem:
 
     def test_luister_productie_promotes_hint(self):
         knoop = _vocab_knoop([_text_item()])
-        item_type, instruction, options, hint, audio_ref = _promote_first_item(knoop)
+        item_type, _instruction, options, hint, audio_ref = _promote_first_item(knoop)
 
         assert item_type == "luister_productie"
         assert hint == "zijn"
@@ -149,7 +149,7 @@ class TestPromoteFirstItem:
     def test_only_first_item_is_promoted(self):
         """Een knoop met MC én text-item promoot alleen het eerste (MC)."""
         knoop = _vocab_knoop([_mc_item(), _text_item()])
-        item_type, instruction, options, hint, audio_ref = _promote_first_item(knoop)
+        item_type, _instruction, options, hint, _audio_ref = _promote_first_item(knoop)
 
         assert item_type == "luister_herkenning"
         assert options is not None

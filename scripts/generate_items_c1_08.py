@@ -32,7 +32,7 @@ def add_items_to_json(json_path, items_by_knoop):
 
 def main():
     raw = json.loads(ITEMS_FILE.read_text(encoding="utf-8"))
-    for kid, il in raw.items():
+    for _kid, il in raw.items():
         for d in il:
             Item(**d)
     print("All items validated.")

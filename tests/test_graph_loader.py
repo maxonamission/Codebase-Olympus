@@ -163,7 +163,7 @@ class TestLoadGraphFromDirectory:
     def test_empty_directory_raises(self, tmp_path):
         empty_dir = tmp_path / "empty"
         empty_dir.mkdir()
-        with pytest.raises(FileNotFoundError, match="No .json files"):
+        with pytest.raises(FileNotFoundError, match=r"No \.json files"):
             load_graph(empty_dir)
 
     def test_duplicate_ids_across_files_rejected(self, tmp_path):

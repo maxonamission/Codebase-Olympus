@@ -16,6 +16,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import contextlib
 import json
 import random
 import sys
@@ -131,10 +132,8 @@ def next_item_nr(node: dict) -> int:
         # Parse NR from ITEM-{KNOOP_ID}-{NR}
         parts = item["id"].rsplit("-", 1)
         if len(parts) == 2:
-            try:
+            with contextlib.suppress(ValueError):
                 max_nr = max(max_nr, int(parts[1]))
-            except ValueError:
-                pass
     return max_nr + 1
 
 
@@ -154,7 +153,7 @@ def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: i
     correct = extract_short_translation(translation)
     distractors = pick_distractors(correct, translation_pool)
 
-    options = [correct] + distractors
+    options = [correct, *distractors]
     random.shuffle(options)
 
     taal_label = "Latijnse" if knoop_id.startswith("LAT") else "Griekse"
@@ -256,19 +255,17 @@ def generate_items_for_file(json_path: Path, item_type: str) -> tuple[int, int]:
         existing_types = {i["type"] for i in target["items"]}
         added_here = 0
 
-        if item_type in ("herkenning", "both"):
-            if "luister_herkenning" not in existing_types:
-                nr = next_item_nr(target)
-                item = generate_herkenning_item(node, translation_pool, nr)
-                target["items"].append(item)
-                added_here += 1
+        if item_type in ("herkenning", "both") and "luister_herkenning" not in existing_types:
+            nr = next_item_nr(target)
+            item = generate_herkenning_item(node, translation_pool, nr)
+            target["items"].append(item)
+            added_here += 1
 
-        if item_type in ("productie", "both"):
-            if "luister_productie" not in existing_types:
-                nr = next_item_nr(target)
-                item = generate_productie_item(node, nr)
-                target["items"].append(item)
-                added_here += 1
+        if item_type in ("productie", "both") and "luister_productie" not in existing_types:
+            nr = next_item_nr(target)
+            item = generate_productie_item(node, nr)
+            target["items"].append(item)
+            added_here += 1
 
         if added_here > 0:
             nodes_updated += 1

@@ -36,7 +36,7 @@ find_summary = _mod.find_summary
 report_to_dict = _mod.report_to_dict
 main = _mod.main
 
-from gymnasium_classica.graph.loader import load_graph  # noqa: E402
+from gymnasium_classica.graph.loader import load_graph
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 GRAPH_DIR = REPO_ROOT / "data" / "graph"

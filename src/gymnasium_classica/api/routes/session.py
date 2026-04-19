@@ -155,14 +155,14 @@ async def submit_answer(
     if body.response is not None:
         try:
             response = ResponseType(body.response)
-        except ValueError:
+        except ValueError as err:
             raise HTTPException(
                 status_code=422,
                 detail=(
                     f"Invalid response: {body.response!r}. "
                     "Must be correct, incorrect, or slow_correct."
                 ),
-            )
+            ) from err
 
     try:
         result = session_manager.submit_answer(
@@ -172,7 +172,7 @@ async def submit_answer(
             answer_text=body.answer_text,
         )
     except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail=str(e)) from e
 
     # Persist learner model after each answer
     db = request.app.state.db

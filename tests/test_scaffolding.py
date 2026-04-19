@@ -191,7 +191,7 @@ class TestSessionManagerScaffolding:
             knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.90
         )
         mgr = SessionManager()
-        session_id, q1 = mgr.start_session(
+        _session_id, q1 = mgr.start_session(
             user_id=str(uuid4()),
             learner=learner,
             graph=g,

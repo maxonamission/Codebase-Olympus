@@ -69,7 +69,7 @@ def session_and_manager():
 
 class TestAnswerTextGrading:
     def test_correct_answer_text_is_graded_correct(self, session_and_manager):
-        manager, session_id, learner, now = session_and_manager
+        manager, session_id, _learner, now = session_and_manager
 
         result = manager.submit_answer(
             session_id,
@@ -83,7 +83,7 @@ class TestAnswerTextGrading:
         assert result.feedback.response_type == "correct"
 
     def test_slow_correct_detected_from_response_time(self, session_and_manager):
-        manager, session_id, learner, now = session_and_manager
+        manager, session_id, _learner, now = session_and_manager
 
         # Item.verwachte_tijd_sec = 10 → threshold = 15_000 ms.
         result = manager.submit_answer(
@@ -98,7 +98,7 @@ class TestAnswerTextGrading:
         assert result.feedback.response_type == "slow_correct"
 
     def test_wrong_answer_is_graded_incorrect(self, session_and_manager):
-        manager, session_id, learner, now = session_and_manager
+        manager, session_id, _learner, now = session_and_manager
 
         result = manager.submit_answer(
             session_id,
@@ -112,7 +112,7 @@ class TestAnswerTextGrading:
         assert result.feedback.response_type == "incorrect"
 
     def test_case_and_macron_insensitive(self, session_and_manager):
-        manager, session_id, learner, now = session_and_manager
+        manager, session_id, _learner, now = session_and_manager
 
         # "SUM" (uppercase) should still count as correct.
         result = manager.submit_answer(

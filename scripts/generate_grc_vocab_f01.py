@@ -49,10 +49,7 @@ TITEL_TEMPLATES = {
 
 def make_titel(w: dict) -> str:
     pos = w["pos"]
-    if pos == "pron":
-        tmpl = "pron_gen" if w.get("gen") else "pron"
-    else:
-        tmpl = pos
+    tmpl = ("pron_gen" if w.get("gen") else "pron") if pos == "pron" else pos
     return TITEL_TEMPLATES[tmpl].format(**w)
 
 

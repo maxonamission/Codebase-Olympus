@@ -774,7 +774,7 @@ def collect_all() -> dict[str, list[dict]]:
 
 
 def validate_all(items_by_knoop: dict[str, list[dict]]) -> None:
-    for knoop_id, item_list in items_by_knoop.items():
+    for _knoop_id, item_list in items_by_knoop.items():
         for item_dict in item_list:
             Item(**item_dict)
     print(f"All {sum(len(v) for v in items_by_knoop.values())} items validated.")

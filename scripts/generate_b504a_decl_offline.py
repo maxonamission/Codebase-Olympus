@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 
-from gymnasium_classica.models.graph import Item  # noqa: E402
+from gymnasium_classica.models.graph import Item
 
 # --- Item specifications (compact) ---
 # (knoop_id, stimulus, verwacht_resultaat, feedback, moeilijkheid)

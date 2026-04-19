@@ -61,11 +61,11 @@ async def start_intake(
     if body and body.methode and body.chapter:
         try:
             apply_methode_profile(learner, graph, body.methode, body.chapter)
-        except (ValueError, FileNotFoundError):
+        except (ValueError, FileNotFoundError) as err:
             raise HTTPException(
                 status_code=400,
                 detail=f"Unknown methode {body.methode!r} or invalid chapter {body.chapter!r}",
-            )
+            ) from err
 
     intake_id, question = intake_manager.start_intake(user_id, learner, graph)
     save_learner_model(db, learner)
@@ -93,7 +93,7 @@ async def submit_intake_answer(
     try:
         result = intake_manager.submit_answer(body.intake_id, body.correct)
     except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail=str(e)) from e
 
     # Persist learner model after each answer
     db = request.app.state.db

@@ -7,6 +7,8 @@ functie die direct aangeroepen wordt.
 
 from __future__ import annotations
 
+from dataclasses import FrozenInstanceError
+
 import pytest
 
 from gymnasium_classica.models.graph import (
@@ -64,7 +66,7 @@ class TestBasicMatching:
     def test_returns_frozen_result(self):
         result = grade_answer("sum", _make_item("sum"), Taal.LAT)
         assert isinstance(result, GradingResult)
-        with pytest.raises(Exception):
+        with pytest.raises((AttributeError, TypeError, FrozenInstanceError)):
             result.correct = False  # frozen dataclass
 
 

@@ -96,7 +96,7 @@ def main() -> None:
     # Promote 20 nodes to full mastery
     promoted = 0
     now = datetime.now()
-    for knoop_id, state in learner.knoop_states.items():
+    for _knoop_id, state in learner.knoop_states.items():
         if promoted >= 20:
             break
         if state.posterior_mastery >= 0.50:

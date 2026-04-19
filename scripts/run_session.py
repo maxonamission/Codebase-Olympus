@@ -120,9 +120,9 @@ def main() -> None:
 
         if args.simulate:
             answer_fn = make_simulated_answer_fn(learner)
-            diag_answer = lambda kid: (
-                answer_fn(kid, graph.nodes[kid]["knoop"])[0] == ResponseType.CORRECT
-            )
+
+            def diag_answer(kid):
+                return answer_fn(kid, graph.nodes[kid]["knoop"])[0] == ResponseType.CORRECT
         else:
 
             def diag_answer(kid):
@@ -139,10 +139,7 @@ def main() -> None:
     # Run session
     print("\n--- Sessie starten (30 min) ---")
 
-    if args.simulate:
-        answer_fn = make_simulated_answer_fn(learner)
-    else:
-        answer_fn = interactive_answer_fn
+    answer_fn = make_simulated_answer_fn(learner) if args.simulate else interactive_answer_fn
 
     result = run_session(learner, graph, answer_fn)
     print_session_summary(result)

@@ -149,7 +149,7 @@ class TestComputeUrgencyScores:
         # Should produce results for root nodes (no prereqs needed)
         assert len(scores) > 0
         # All urgencies should be non-negative
-        for urgency, knoop in scores:
+        for urgency, _knoop in scores:
             assert urgency >= 0.0
 
     def test_unmet_prerequisites_excluded(self, sample_graph_data):

@@ -33,8 +33,8 @@ _SCRIPT_DIR = Path(__file__).resolve().parent
 _PROJECT_ROOT = _SCRIPT_DIR.parent
 sys.path.insert(0, str(_PROJECT_ROOT / "src"))
 
-from gymnasium_classica.graph.loader import load_graph  # noqa: E402
-from gymnasium_classica.models.graph import KnoopType  # noqa: E402
+from gymnasium_classica.graph.loader import load_graph
+from gymnasium_classica.models.graph import KnoopType
 
 # ---------------------------------------------------------------------------
 # Data structures

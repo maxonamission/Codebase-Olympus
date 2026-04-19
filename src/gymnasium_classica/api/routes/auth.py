@@ -90,12 +90,12 @@ async def update_settings(
 
     try:
         route = LearningRoute(body.learning_route)
-    except ValueError:
+    except ValueError as err:
         raise HTTPException(
             status_code=422,
             detail=f"Invalid learning_route: {body.learning_route!r}. "
             "Must be 'grammar_first' or 'context_first'.",
-        )
+        ) from err
 
     user = get_user(db, user_id)
     if user is None:

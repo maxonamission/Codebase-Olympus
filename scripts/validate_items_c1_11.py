@@ -72,13 +72,8 @@ def main():
     print("\n2. OEFENTYPE-MIX")
     for t, c in types.most_common():
         pct = 100 * c / total
-        flag = (
-            "✓"
-            if (t == "herkenning" and pct >= 30)
-            or (t == "productie" and pct >= 30)
-            or t not in ("herkenning", "productie")
-            else "✓"
-        )
+        # Placeholder: altijd "✓" zolang we geen striktere drempel handhaven.
+        flag = "✓"
         print(f"   {flag} {t:15s}: {c:4d} ({pct:.0f}%)")
     hpct = 100 * types.get("herkenning", 0) / total
     ppct = 100 * types.get("productie", 0) / total

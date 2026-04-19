@@ -145,13 +145,12 @@ class TestSubmitAnswer:
         if q is None:
             pytest.skip("No question available in graph")
 
-        expected = None
         if q.get("items"):
-            expected = q["items"][0].get("feedback")  # placeholder
+            q["items"][0].get("feedback")  # placeholder
         # Use the first item's canonical expected answer via options/hint:
         # easiest reliable hook is question.options when present (MC).
         if q.get("options"):
-            expected = q["options"][0]  # not necessarily correct; see below
+            q["options"][0]  # not necessarily correct; see below
 
         # We don't know the correct answer from the wire, so we post a
         # deliberately-wrong answer and assert the server still accepts
@@ -325,7 +324,7 @@ class TestSessionSummary:
         headers = _auth_header(client)
         session_id = self._run_session(client, headers)
         data = client.get(f"/session/{session_id}/summary", headers=headers).json()
-        for knoop_id, change in data["mastery_changes"].items():
+        for _knoop_id, change in data["mastery_changes"].items():
             assert "before" in change
             assert "after" in change
             assert isinstance(change["before"], float)

@@ -343,7 +343,7 @@ class TestSessionManagerContextFirst:
             knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.90
         )
         mgr = SessionManager()
-        session_id, question = mgr.start_session(
+        session_id, _question = mgr.start_session(
             user_id=str(uuid4()),
             learner=learner,
             graph=g,
@@ -388,7 +388,7 @@ class TestSessionManagerContextFirst:
         )
         passages = [_make_passage()]
         mgr = SessionManager()
-        session_id, q1 = mgr.start_session(
+        session_id, _q1 = mgr.start_session(
             user_id=str(uuid4()),
             learner=learner,
             graph=g,
@@ -410,7 +410,7 @@ class TestSessionManagerContextFirst:
         )
         passages = [_make_passage()]
         mgr = SessionManager()
-        session_id, q1 = mgr.start_session(
+        session_id, _q1 = mgr.start_session(
             user_id=str(uuid4()),
             learner=learner,
             graph=g,
@@ -425,7 +425,7 @@ class TestSessionManagerContextFirst:
             before_val = before.posterior_mastery if before else 0.10
 
             # Answer the grammar node correctly
-            result2 = mgr.submit_answer(session_id, ResponseType.CORRECT, 2000)
+            mgr.submit_answer(session_id, ResponseType.CORRECT, 2000)
             after_val = learner.knoop_states[grammar_id].posterior_mastery
 
             # Mastery should have increased (BKT applied)

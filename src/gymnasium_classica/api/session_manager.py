@@ -15,8 +15,6 @@ from uuid import uuid4
 
 import networkx as nx
 
-CONTENT_DIR = Path("data/content")
-
 from gymnasium_classica.models.graph import Item, KennisKnoop
 from gymnasium_classica.models.learner import (
     ItemResponse,
@@ -45,6 +43,8 @@ from gymnasium_classica.scheduling.session import (
     _process_response,
     select_passage,
 )
+
+CONTENT_DIR = Path("data/content")
 
 # Learners get the "slow_correct" label when they answer correctly but
 # took more than this factor times the item's expected duration.  Tuned
@@ -326,10 +326,7 @@ def _knoop_to_question(
             }
         )
 
-    if knoop.items:
-        stimulus = knoop.items[0].stimulus
-    else:
-        stimulus = _generate_self_assess_prompt(knoop)
+    stimulus = knoop.items[0].stimulus if knoop.items else _generate_self_assess_prompt(knoop)
 
     # For V-nodes: show only the lemma in the title, hide the translation
     titel = knoop.titel_nl

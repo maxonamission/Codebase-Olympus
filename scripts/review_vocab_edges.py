@@ -81,8 +81,8 @@ def main() -> None:
     else:
         grc_edges = EXTRA_EDGES_GRC
 
-    lat_added = add_edges(LAT_FILE, EXTRA_EDGES_LAT, "Latijn")
-    grc_added = add_edges(GRC_FILE, grc_edges, "Grieks")
+    add_edges(LAT_FILE, EXTRA_EDGES_LAT, "Latijn")
+    add_edges(GRC_FILE, grc_edges, "Grieks")
 
     # Validate combined graph
     from gymnasium_classica.graph.loader import load_graph

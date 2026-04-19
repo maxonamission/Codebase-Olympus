@@ -53,9 +53,10 @@ ignore = [
 
 [tool.ruff.lint.per-file-ignores]
 # Tests mogen asserts gebruiken en hebben vaker lange fixtures/strings.
-"tests/**" = ["B011"]
-# Scripts zijn vaak ad-hoc; iets soepelere regels.
-"scripts/**" = ["B008"]
+# E402 toegestaan: sys.path-manipulatie vóór project-imports is gangbaar.
+"tests/**" = ["B011", "E402"]
+# Scripts zijn vaak ad-hoc; iets soepelere regels. E402 idem voor sys.path-prelude.
+"scripts/**" = ["B008", "E402"]
 
 [tool.ruff.format]
 # Expliciet zodat defaults niet verschuiven bij een ruff-upgrade.

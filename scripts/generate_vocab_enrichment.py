@@ -35,7 +35,7 @@ sys.path.insert(0, str(_PROJECT_ROOT / "src"))
 # scripts agree on how to parse titles, pick first-word lemmata, and shorten
 # translations.  Import path is relative to the scripts directory.
 sys.path.insert(0, str(_SCRIPT_DIR))
-from generate_luister_items import (  # type: ignore  # noqa: E402
+from generate_luister_items import (  # type: ignore
     build_translation_pool,
     extract_first_word,
     extract_short_translation,
@@ -67,7 +67,7 @@ def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: i
     correct = extract_short_translation(translation)
     distractors = pick_distractors(correct, translation_pool)
 
-    options = [correct] + distractors
+    options = [correct, *distractors]
     random.shuffle(options)
 
     taal_adj, _ = _taal_labels(knoop_id)

@@ -335,9 +335,8 @@ def _process_response(
     sm2_update(state, response, review_time=now)
 
     # Conditional completion: fallback for diagnostic-sourced failures
-    if response == ResponseType.INCORRECT:
-        if state.source == MasterySource.DIAGNOSTIC:
-            apply_fallback(learner, graph, knoop_id)
+    if response == ResponseType.INCORRECT and state.source == MasterySource.DIAGNOSTIC:
+        apply_fallback(learner, graph, knoop_id)
 
     # Record the raw attempt (optional; callers pass None when they
     # don't have a literal answer, e.g. self-assess paths in run_session)
@@ -473,9 +472,8 @@ def run_session(
                 break
 
             # For new material phase, cap at MAX_NEW_NODES
-            if phase == SessionPhase.NEW_MATERIAL:
-                if new_count >= MAX_NEW_NODES:
-                    break
+            if phase == SessionPhase.NEW_MATERIAL and new_count >= MAX_NEW_NODES:
+                break
 
             knoop_id = selected.id
             before = _get_state_posterior(learner, knoop_id)
