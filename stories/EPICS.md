@@ -461,22 +461,36 @@ Bestaand materiaal (markdowns, audio, MC-opties, vocab-metadata) daadwerkelijk n
 
 ## Epic F2: Mentor-dashboard
 
-**Doel:** Mentoren/docenten concreet kunnen coachen op basis van wat leerlingen letterlijk typen/kiezen. Bouwt voort op de telemetry die F1-12 neerlegt (`ItemResponse.answer_text` + `correct_answer` snapshot in `KnoopState.item_history`) en brengt fout-classificatie (track C) binnen reach.
+**Doel:** Mentoren en docenten in staat stellen om leerlingen op concreet niveau te helpen. Niet alleen *dat* een leerling struikelt op een knoop, maar *hoe*: welke letterlijke antwoorden gaven ze, welke MC-distractors kozen ze, zitten er patronen in (systematische naamvalsfout, synoniem-verwarring, macron-vergeten, ...).
+
 **Geschat:** 4 stories (uitbreidbaar)
-**Afhankelijkheden:** F1-12 (data), nieuwe mentor-rol op user-model
-**Status:** draft — skeletten in `stories/epic-f2-mentor-dashboard/todo/`
+**Status:** draft — skeletten in `stories/backlog/`
 
-| Story | Titel | Status |
-|-------|-------|--------|
-| F2-01 | Mentor-rol + leerling-koppeling in user-model | draft |
-| F2-02 | Laatste foute antwoorden per leerling per knoop | draft |
-| F2-03 | Struikelpunten-overzicht per leerling | draft |
-| F2-04 | Fout-classificatie (spelling / naamval / synoniem / macron) — track C kern | draft |
+**Context:** F1-12 heeft de datavoorraad neergelegd (`ItemResponse.answer_text`, `correct_answer`-snapshot, `item_type` per poging in `KnoopState.item_history`). Dit epic bouwt de ontsluiting daarop: rol-gebaseerde UI + aggregatie + optionele fout-classificatie.
 
-**Verhouding tot andere epics:**
-- **B8** (mentor-portfolio) richt zich op offline werk + OCR; F2 op online oefen-telemetrie. Toekomstige mentor-UI mag beide verzamelen.
-- **F2-04** is de reguliere instap voor track C en breidt `scheduling/grading.py` uit zonder bestaande callers te raken.
-- Blokkeert niet, maar activeert waarde die F1-12 sinds april 2026 al verzamelt.
+**Afhankelijkheden:**
+- **F1-12** (done) — `answer_text` + `item_history` wiring. Zonder deze story is er geen data om te tonen.
+- **E7-08-ish** — user-rollen bestaan in het user-model (nu alleen "learner"). Een "mentor"/"docent"-rol met relatie tot leerlingen moet erbij.
+
+| Story | Titel | Afhankelijk | Status |
+|-------|-------|-------------|--------|
+| F2-01 | Mentor-rol + leerling-koppeling in user-model | — | draft |
+| F2-02 | Laatste foute antwoorden per leerling per knoop | F2-01, F1-12 | draft |
+| F2-03 | Struikelpunten-overzicht per leerling | F2-01 | draft |
+| F2-04 | Fout-classificatie (spelling / naamval / synoniem / macron) — track C kern | F1-12 | draft |
+
+**Verhouding tot B8:**
+`epic-b8-mentor-portfolio` richt zich op offline werk (portfolio-selectie, OCR-confidence). F2 is specifiek over **online** oefen-telemetrie en foutdiagnostiek — de twee zijn complementair en kunnen later dezelfde mentor-UI delen.
+
+**Verhouding tot track C (fout-classificatie):**
+De grading-module (`scheduling/grading.py`) en `GradingResult` zijn ontworpen zodat een fout-classificator (spelling vs naamval vs synoniem) als uitbreiding kan worden toegevoegd. F2-04 trekt die brug. Dit is de reguliere instap voor track C en breidt `scheduling/grading.py` uit zonder bestaande callers te raken.
+
+**Niet-doel:**
+- Portfolio-selectie offline werk → B8
+- LLM-gestuurde vrije-vorm-feedback → aparte story
+- Cijferrapportage / toetsdossier → out-of-scope
+
+Blokkeert niet, maar activeert waarde die F1-12 sinds april 2026 al verzamelt.
 
 ---
 ---
