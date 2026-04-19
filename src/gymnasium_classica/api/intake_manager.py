@@ -15,7 +15,6 @@ import networkx as nx
 from gymnasium_classica.diagnostic.placement import (
     MAX_QUESTIONS,
     SKIP_ON_CORRECT,
-    MasterySource,
     _all_resolved,
     _find_next_unresolved,
     _find_start_position,
@@ -25,7 +24,7 @@ from gymnasium_classica.diagnostic.placement import (
     _propagate_incorrect,
 )
 from gymnasium_classica.models.graph import EdgeType, KennisKnoop, PrerequisiteEdge
-from gymnasium_classica.models.learner import LearnerModel
+from gymnasium_classica.models.learner import LearnerModel, MasterySource
 
 
 def _topo_order_safe(graph: nx.DiGraph) -> list[str]:

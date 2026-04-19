@@ -2,6 +2,7 @@
 
 import re
 from enum import StrEnum
+from typing import Any
 
 from pydantic import BaseModel, Field, field_validator
 
@@ -87,7 +88,7 @@ class Item(BaseModel):
     moeilijkheid_initieel: float = Field(description="IRT b-parameter")
     discriminatie_initieel: float = Field(gt=0, description="IRT a-parameter, must be > 0")
     verwachte_tijd_sec: int = Field(gt=0)
-    stimulus: str | dict
+    stimulus: str | dict[str, Any]
     antwoord: str | list[str]
     feedback: str
     bron: Bron

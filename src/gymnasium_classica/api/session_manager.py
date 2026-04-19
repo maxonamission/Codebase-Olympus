@@ -11,6 +11,7 @@ request/response protocol:
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
+from typing import Any
 from uuid import uuid4
 
 import networkx as nx
@@ -62,9 +63,9 @@ class Question:
     knoop_id: str
     titel: str
     beschrijving: str
-    stimulus: str | dict
+    stimulus: str | dict[str, Any]
     phase: str
-    items: list[dict] = field(default_factory=list)
+    items: list[dict[str, Any]] = field(default_factory=list)
     scaffolding_content: str | None = None
     # Promoted from the first item for frontend convenience. Populated by
     # `_knoop_to_question` so the React components can read a flat shape

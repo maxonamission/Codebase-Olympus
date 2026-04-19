@@ -114,7 +114,7 @@ def pedagogical_value(
     max_out_degree: int = 1,
 ) -> float:
     """Pedagogical value: normalized out-degree. High = unlocks many nodes."""
-    out_deg = graph.out_degree(knoop_id)
+    out_deg = int(graph.out_degree(knoop_id))
     if max_out_degree <= 0:
         return 0.0
     return min(1.0, out_deg / max_out_degree)

@@ -5,6 +5,7 @@ order and encompassing weights to efficiently find the learner's knowledge
 frontier in ≤ 30 questions.
 """
 
+from collections.abc import Callable
 from dataclasses import dataclass, field
 
 import networkx as nx
@@ -172,7 +173,7 @@ def _find_next_unresolved(
 def run_diagnostic(
     learner: LearnerModel,
     graph: nx.DiGraph,
-    answer_fn: callable,
+    answer_fn: Callable[[str], bool],
 ) -> DiagnosticResult:
     """Run the adaptive diagnostic placement test.
 

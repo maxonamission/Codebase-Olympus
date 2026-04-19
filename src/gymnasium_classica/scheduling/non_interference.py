@@ -118,5 +118,7 @@ def select_next(
             best_score = score
             best_knoop = knoop
 
+    if best_knoop is None:
+        return None
     state.record_selection(best_knoop)
     return best_knoop

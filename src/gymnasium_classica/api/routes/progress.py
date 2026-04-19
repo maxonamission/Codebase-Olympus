@@ -1,6 +1,7 @@
 """Progress routes: overview and per-knoop detail."""
 
 from datetime import datetime, timedelta
+from typing import Any
 
 import networkx as nx
 from fastapi import APIRouter, Depends, HTTPException, Request
@@ -95,7 +96,7 @@ def _compute_session_progression(
 async def progress_overview(
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> ProgressOverviewResponse:
     """Return a progress overview: nodes per status, per domain, and streak."""
     db = request.app.state.db
     graph: nx.DiGraph = request.app.state.graph
@@ -125,10 +126,10 @@ async def progress_overview(
     mastered = 0
     in_progress = 0
     unseen = 0
-    domains: dict[str, DomainProgress] = {}
+    domains = {}
 
     for node_id in graph.nodes:
-        knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+        knoop = graph.nodes[node_id]["knoop"]
         d = knoop.type.value
         if d not in domains:
             domains[d] = DomainProgress(total=0, mastered=0, in_progress=0, unseen=0)
@@ -165,7 +166,7 @@ async def knoop_progress(
     knoop_id: str,
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> KnoopProgressResponse:
     """Return detailed progress for a single knowledge node."""
     graph: nx.DiGraph = request.app.state.graph
 
@@ -221,7 +222,7 @@ async def knoop_progress(
 async def progress_clusters(
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> ClustersResponse:
     """Return vocabulary progress grouped by semantic cluster.
 
     Each cluster from ``data/vocabulaire_clusters.json`` is returned
@@ -230,7 +231,7 @@ async def progress_clusters(
     for those nodes.
     """
     graph: nx.DiGraph = request.app.state.graph
-    cluster_defs: list[dict] = getattr(request.app.state, "clusters", []) or []
+    cluster_defs: list[dict[str, Any]] = getattr(request.app.state, "clusters", []) or []
 
     db = request.app.state.db
     learner = load_learner_model(db, user_id)
@@ -283,7 +284,7 @@ async def progress_clusters(
 async def graph_data(
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> GraphDataResponse:
     """Return the full knowledge graph with per-node mastery for visualisation."""
     db = request.app.state.db
     graph: nx.DiGraph = request.app.state.graph

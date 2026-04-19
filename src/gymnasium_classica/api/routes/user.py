@@ -25,7 +25,7 @@ router = APIRouter(prefix="/user", tags=["user"])
 async def get_profile(
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> UserProfileResponse:
     """Return the current user's profile including learning route."""
     db: sqlite3.Connection = request.app.state.db
     user = get_user(db, user_id)
@@ -43,7 +43,7 @@ async def update_learning_route(
     body: UpdateLearningRouteRequest,
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> UserProfileResponse:
     """Update the user's learning route preference.
 
     Accepts 'grammar_first' or 'context_first'.

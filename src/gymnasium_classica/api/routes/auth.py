@@ -31,7 +31,7 @@ router = APIRouter(prefix="/auth", tags=["auth"])
 
 
 @router.post("/register", response_model=AuthResponse)
-async def register(body: RegisterRequest, request: Request):
+async def register(body: RegisterRequest, request: Request) -> AuthResponse:
     """Register a new user with email + password. Returns user_id and auth token."""
     db: sqlite3.Connection = request.app.state.db
 
@@ -55,7 +55,7 @@ async def register(body: RegisterRequest, request: Request):
 
 
 @router.post("/login", response_model=AuthResponse)
-async def login(body: LoginRequest, request: Request):
+async def login(body: LoginRequest, request: Request) -> AuthResponse:
     """Login with email + password. Returns user_id and auth token."""
     db: sqlite3.Connection = request.app.state.db
 
@@ -81,7 +81,7 @@ async def update_settings(
     body: UpdateLearningRouteRequest,
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> UserProfileResponse:
     """Update user settings (currently: learning_route).
 
     POST /auth/settings { learning_route: "grammar_first" | "context_first" }

@@ -38,7 +38,7 @@ async def start_intake(
     request: Request,
     body: IntakeStartRequest | None = None,
     user_id: str = Depends(get_current_user_id),
-):
+) -> IntakeStartResponse:
     """Start a diagnostic intake. Optionally provide methode + chapter for priors."""
     db = request.app.state.db
     graph: nx.DiGraph = request.app.state.graph
@@ -81,7 +81,7 @@ async def submit_intake_answer(
     body: IntakeAnswerRequest,
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> IntakeAnswerResponse:
     """Submit an answer to an intake diagnostic question."""
     if not intake_manager.has_intake(body.intake_id):
         raise HTTPException(status_code=404, detail="Intake not found")

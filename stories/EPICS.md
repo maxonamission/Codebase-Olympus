@@ -670,7 +670,7 @@ Beide routes leiden tot mastery op dezelfde knopen — het verschil is de volgor
 
 **Afhankelijkheden:** Geen. Bouwt voort op bestaande `pyproject.toml`, `ruff`-config en pytest-suite (165 tests).
 
-**Status:** in uitvoering — OS-00 en OS-01 done, OS-02 t/m OS-08 in backlog
+**Status:** in uitvoering — OS-00/01/02 done, OS-03 t/m OS-08 in backlog
 
 **Epic-brede acceptatiecriteria:**
 - [ ] Alle vijf actieve lagen van de ontwikkelstraat hebben ten minste één werkende check
@@ -683,7 +683,7 @@ Beide routes leiden tot mastery op dezelfde knopen — het verschil is de volgor
 |-------|-------|------|-------------|--------|
 | OS-00 | Storyconventie herstellen (platte backlog/doing/done) | — | — | done |
 | OS-01 | Lint- en formatbasis afmaken (ruff strict) | 1 | — | done |
-| OS-02 | Type-checking toevoegen (mypy) | 1 | — | backlog |
+| OS-02 | Type-checking toevoegen (mypy) | 1 | — | done |
 | OS-03 | Pre-commit hooks | 2 | OS-01, OS-02 | backlog |
 | OS-04 | CI baseline (GitHub Actions) | 4 | OS-01, OS-02 | backlog |
 | OS-05 | Claude Code hooks (PostToolUse + Stop) | 3 | OS-01 | backlog |

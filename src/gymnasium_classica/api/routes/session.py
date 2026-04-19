@@ -86,7 +86,7 @@ def _question_to_response(
 async def start_session(
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> StartSessionResponse:
     """Start a new learning session. Returns session_id and the first question.
 
     Automatically uses the user's learning_route preference and loads
@@ -134,7 +134,7 @@ async def submit_answer(
     body: AnswerRequest,
     request: Request,
     user_id: str = Depends(get_current_user_id),
-):
+) -> AnswerResponse:
     """Submit an answer to the current question. Returns feedback and the next question."""
     if not session_manager.has_session(body.session_id):
         raise HTTPException(status_code=404, detail="Session not found")
@@ -196,7 +196,7 @@ async def submit_answer(
 async def get_session_summary(
     session_id: str,
     user_id: str = Depends(get_current_user_id),
-):
+) -> SessionSummaryResponse:
     """Return a summary of a completed (or in-progress) session."""
     if not session_manager.has_session(session_id):
         raise HTTPException(status_code=404, detail="Session not found")
