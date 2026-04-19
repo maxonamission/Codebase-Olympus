@@ -27,7 +27,7 @@ data/
 
 frontend/             # React (Vite) frontend
 scripts/              # CLI tools: validatie, sessie, audio, werkbladen
-tests/                # pytest (300+ tests)
+tests/                # pytest (550+ tests)
 stories/              # Epic/story tracking (todo/doing/done)
 docs/                 # Briefing, ontwerpkeuzes, syllabi, prompts
 ```
@@ -134,7 +134,7 @@ python scripts/run_session.py data/graph/ --learner mijn_voortgang.json
 - **NetworkX** voor de knowledge graph (in-memory)
 - **FastAPI** + **SQLite** voor de backend
 - **React** (Vite) voor de frontend
-- **pytest** (300+ tests)
+- **pytest** (550+ tests)
 
 ## Documentatie
 

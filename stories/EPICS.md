@@ -527,41 +527,55 @@ Bronnen en leads:
 **Doel:** C1/C2 dekken alleen Latijnse grammatica. Grieks en vocabulaire hebben ook items en content nodig voor een volwaardige ervaring. Parallelstructuur met C1 (items) en C2 (content) voor Latijn.
 **Geschat:** 19 stories, ~400 GRC-G-items, ~900 extra V-items, ~40 GRC-markdowns, ~60 SHA-C-markdowns
 **Afhankelijkheden:** A2, A3 done (Griekse knopen bestaan); F1-01 + F1-03 wenselijk (rendering werkt); F1-08 voor cultuur (items-basis)
-**Status:** todo
+**Status:** done
 
 ### Items — GRC grammatica (analoog aan C1)
 
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
-| E3-01 | Items voor GRC alfabet — restknopen (INTRO, groepen, diakritiek, combinaties) | ~60 items | todo |
-| E3-02 | Items voor GRC-conceptknopen (naamval/genus/declinatie/tempus-INTRO's) | ~25 items | todo |
-| E3-03 | Items voor GRC 1e declinatie (α/η-stammen) | ~30 items | todo |
-| E3-04 | Items voor GRC 2e declinatie (ο-stammen m/n) | ~30 items | todo |
-| E3-05 | Items voor GRC 3e declinatie (πᾶς, σώφρων) | ~25 items | todo |
-| E3-06 | Items voor GRC adjectieven (α/ο-stam + medeklinkerstam) | ~25 items | todo |
-| E3-07 | Items voor GRC praesens actief (thematisch + contracta + εἰμί) | ~40 items | todo |
-| E3-08 | Items voor GRC imperfectum + augment | ~30 items | todo |
-| E3-09 | Items voor GRC aoristus (sigmatisch + thematisch) | ~30 items | todo |
-| E3-10 | Items voor GRC pronomina (persoonlijk, bezittelijk, aanwijzend) | ~30 items | todo |
-| E3-11 | Items voor GRC voorzetsels + basissyntaxis | ~30 items | todo |
-| E3-12 | Validatie — dekking, IRT-params, oefentype-mix (GRC) | — | todo |
+| E3-01 | Items voor GRC alfabet — restknopen (INTRO, groepen, diakritiek, combinaties) | ~60 items | done |
+| E3-02 | Items voor GRC-conceptknopen (naamval/genus/declinatie/tempus-INTRO's) | ~25 items | done |
+| E3-03 | Items voor GRC 1e declinatie (α/η-stammen) | ~30 items | done |
+| E3-04 | Items voor GRC 2e declinatie (ο-stammen m/n) | ~30 items | done |
+| E3-05 | Items voor GRC 3e declinatie (πᾶς, σώφρων) | ~25 items | done |
+| E3-06 | Items voor GRC adjectieven (α/ο-stam + medeklinkerstam) | ~25 items | done |
+| E3-07 | Items voor GRC praesens actief (thematisch + contracta + εἰμί) | ~40 items | done |
+| E3-08 | Items voor GRC imperfectum + augment | ~30 items | done |
+| E3-09 | Items voor GRC aoristus (sigmatisch + thematisch) | ~30 items | done |
+| E3-10 | Items voor GRC pronomina (persoonlijk, bezittelijk, aanwijzend) | ~30 items | done |
+| E3-11 | Items voor GRC voorzetsels + basissyntaxis | ~30 items | done |
+| E3-12 | Validatie — dekking, IRT-params, oefentype-mix (GRC) | — | done |
 
 ### Content — GRC grammatica (analoog aan C2)
 
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
-| E3-13 | Content voor GRC concept-INTRO knopen | ~10 bestanden | todo |
-| E3-14 | Content voor GRC declinatie-paradigma's | ~8 bestanden | todo |
-| E3-15 | Content voor GRC werkwoord-paradigma's | ~10 bestanden | todo |
-| E3-16 | Content voor GRC syntaxis | ~6 bestanden | todo |
-| E3-17 | Content voor GRC pronomina + adjectieven | ~6 bestanden | todo |
+| E3-13 | Content voor GRC concept-INTRO knopen | ~10 bestanden | done |
+| E3-14 | Content voor GRC declinatie-paradigma's | ~8 bestanden | done |
+| E3-15 | Content voor GRC werkwoord-paradigma's | ~10 bestanden | done |
+| E3-16 | Content voor GRC syntaxis | ~6 bestanden | done |
+| E3-17 | Content voor GRC pronomina + adjectieven | ~6 bestanden | done |
 
 ### Cultuur en vocabulaire
 
+E3-18 is opgesplitst in 5 thematische sub-stories voor parallel werk; samen 65 SHA-C-markdowns.
+
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
-| E3-18 | Content voor cultuurknopen (SHA-C) | ~60 bestanden | todo |
-| E3-19 | Vocabulaire — item-mix verrijken (NL↔lemma, stamtijd-items) | ~900 items | todo |
+| E3-18 | Content voor cultuurknopen (SHA-C) — umbrella | ~65 bestanden | done |
+| E3-18a | SHA-C mythologie | 20 bestanden | done |
+| E3-18b | SHA-C Romeins dagelijks leven | 15 bestanden | done |
+| E3-18c | SHA-C Grieks dagelijks leven | 10 bestanden | done |
+| E3-18d | SHA-C geschiedenis + staatsinrichting | 15 bestanden | done |
+| E3-18e | SHA-C taal, schrift, literatuur | 5 bestanden | done |
+| E3-19 | Vocabulaire — stamtijd-items voor werkwoorden (NL↔lemma was al gerealiseerd) | 94 items | done |
+
+### Resultaat
+
+- **GRC-G-items: 100 % dekking** (142/142 knopen, 389 items) — gemeten via `scripts/validate_items_e3_12.py`
+- **GRC-G-content: 45 markdowns** voor concept-INTRO's, declinaties, werkwoorden, syntaxis, pronomina/adjectieven
+- **SHA-C-content: 100 % dekking** (65/65 cultuurknopen)
+- **V-items: 5 per werkwoord-knoop** (4 basis + 1 stamtijd voor 94 verbs); rest 4 per knoop
 
 **Verhouding tot andere epics:**
 - **F1-01 en F1-03** moeten draaien voordat GRC-items en -markdowns nut hebben op het scherm.
