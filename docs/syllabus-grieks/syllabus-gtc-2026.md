@@ -1534,4 +1534,3 @@ DI. Pak hem zelf van mij af; het is Dionysus’ staf die ik draag.
 PE. En we zullen je bewaken achter de tralies.
 DI. De god zelf zal mij bevrijden, wanneer ik dat wil.
 Euripides, Bacchae 492-498
-

@@ -155,5 +155,3 @@ Een ontwikkelstraat is geen sprint-project. Het is een investering van misschien
 Het echte voordeel zit niet in de techniek, maar in je hoofd: je hoeft niet meer op te letten. Je kunt je volle aandacht bij het eigenlijke probleem houden — de applicatie die je aan het bouwen bent — in plaats van bij de regels waaraan je wilt voldoen. De regels zorgen voor zichzelf.
 
 En dat is precies wat automatisering zou moeten doen: **niet meer werk voor jou, maar minder**.
-
-

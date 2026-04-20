@@ -1,0 +1,40 @@
+# Pre-commit hooks voor Codebase-Olympus.
+# Installeer met: uv pip install -e ".[dev]" && uv run pre-commit install
+# Handmatig draaien: uv run pre-commit run --all-files
+
+repos:
+  # Generieke file-hygiene hooks.
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: '\.md$'  # Markdown mag trailing whitespace voor line-breaks hebben
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-json
+        exclude: '^data/'  # graph-JSONs zijn groot; valideren elders
+      - id: check-added-large-files
+        args: ['--maxkb=2000']  # vocabulaire-JSONs zijn ~1MB; graph-data blijft onder 2MB
+      - id: detect-private-key
+      - id: check-merge-conflict
+
+  # Ruff: lint + format. Gebruikt de config uit pyproject.toml.
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.11
+    hooks:
+      - id: ruff-check
+        args: ['--fix']
+      - id: ruff-format
+
+  # Mypy: local hook met project-venv zodat imports en plugins werken.
+  # Draait op de hele src/ (niet alleen gewijzigde bestanden) omdat mypy
+  # cross-module context nodig heeft. De incremental cache maakt herhaalruns snel.
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy (strict op src/)
+        entry: uv run mypy src/
+        language: system
+        pass_filenames: false
+        types: [python]

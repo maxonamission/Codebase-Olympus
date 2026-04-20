@@ -24,7 +24,7 @@ import json
 import sys
 from collections import Counter
 from pathlib import Path
-from typing import Optional
+from typing import Any
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
@@ -45,7 +45,9 @@ SOURCES = [
 
 
 def _stamtijd_label(taal: str) -> str:
-    return "perfectum (1e persoon enkelvoud)" if taal == "lat" else "aoristus (1e persoon enkelvoud)"
+    return (
+        "perfectum (1e persoon enkelvoud)" if taal == "lat" else "aoristus (1e persoon enkelvoud)"
+    )
 
 
 def _short_label(taal: str) -> str:
@@ -54,7 +56,7 @@ def _short_label(taal: str) -> str:
 
 def make_stamtijd_item(
     knoop_id: str, lemma: str, mean: str, gen: str, taal: str
-) -> Optional[dict]:
+) -> dict[str, Any] | None:
     """Build one stamtijd productie-item, or return None if not applicable."""
     parts = [p.strip() for p in (gen or "").split(",") if p.strip()]
     if len(parts) < 2:
@@ -78,10 +80,7 @@ def make_stamtijd_item(
             "translation": mean,
         },
         "antwoord": second,
-        "feedback": (
-            f"Stamtijden van {lemma}: {gen}. "
-            f"De {_short_label(taal)} (1sg) is {second}."
-        ),
+        "feedback": (f"Stamtijden van {lemma}: {gen}. De {_short_label(taal)} (1sg) is {second}."),
         "bron": "handmatig",
     }
 
@@ -92,7 +91,8 @@ def collect_items() -> dict[str, list[dict]]:
     skipped: list[tuple[str, str]] = []
     for src_name, graph_name, prefix in SOURCES:
         taal = "lat" if prefix.startswith("LAT") else "grc"
-        entries = json.load(open(VOCAB_SOURCES / src_name, encoding="utf-8"))
+        with open(VOCAB_SOURCES / src_name, encoding="utf-8") as f:
+            entries = json.load(f)
         for entry in entries:
             if entry["pos"] != "verb":
                 continue
@@ -128,7 +128,8 @@ def add_items(by_file: dict[str, list[tuple[str, dict]]]) -> int:
     added = 0
     for graph_name, items in by_file.items():
         path = GRAPH_DIR / graph_name
-        data = json.load(open(path, encoding="utf-8"))
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
         # index nodes by id
         node_index = {k["id"]: k for k in data["knopen"]}
         for knoop_id, item in items:
@@ -154,7 +155,7 @@ def print_summary(by_file: dict[str, list[tuple[str, dict]]]) -> None:
     for items in by_file.values():
         for kid, _ in items:
             by_taal["lat" if kid.startswith("LAT") else "grc"] += 1
-    print(f"\n=== E3-19 stamtijd-items ===")
+    print("\n=== E3-19 stamtijd-items ===")
     print(f"Totaal: {total}")
     print(f"  LAT: {by_taal['lat']}")
     print(f"  GRC: {by_taal['grc']}")
