@@ -36,7 +36,9 @@ VALID_STATUSES = {"backlog", "doing", "done"}
 EPICS_ALIASES = {"draft": "backlog", "todo": "backlog"}
 
 # Regex voor de titel-regel van een storybestand.
-TITLE_RE = re.compile(r"^#\s+Story\s+([A-Z0-9-]+):\s*(.+?)\s*$")
+# ID-patroon: zelfde als EPICS_ROW_RE — letters + optioneel cijfer + dash + cijfers
+# + optionele kleine letter (bv. E3-18a).
+TITLE_RE = re.compile(r"^#\s+Story\s+([A-Z]+\d?-\d{1,2}[a-z]?):\s*(.+?)\s*$")
 
 # Regex voor checkbox-items in de AC-sectie.
 CHECKBOX_RE = re.compile(r"^\s*-\s*\[([ xX])\]\s+")
@@ -229,7 +231,7 @@ def check_structure(story: Story) -> CheckResult:
             f"{rel}: titel-regel ontbreekt of matcht niet '# Story <ID>: <titel>'"
         )
 
-    if story.title and story.id != story.path.stem.upper():
+    if story.title and story.id.upper() != story.path.stem.upper():
         result.errors.append(
             f"{rel}: titel-ID '{story.id}' matcht niet bestandsnaam '{story.path.stem}'"
         )
