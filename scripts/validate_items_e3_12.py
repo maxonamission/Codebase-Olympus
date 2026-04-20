@@ -54,7 +54,7 @@ def main() -> None:
                     try:
                         Item(**item)
                     except Exception as exc:
-                        validation_errors.append(f'{item["id"]}: {exc}')
+                        validation_errors.append(f"{item['id']}: {exc}")
                     if item["id"] in item_ids:
                         dupes.append(item["id"])
                     item_ids.add(item["id"])
@@ -80,16 +80,18 @@ def main() -> None:
     print(f"   Totaal items:              {total}")
     if knopen_met:
         print(f"   Gem. items/knoop:          {total / len(knopen_met):.1f}")
+
         # Alfabet-letter-knopen hebben bij ontwerp 1 offline-schrijven item.
         def _is_letter_drill(kid: str) -> bool:
-            return (
-                kid.startswith("GRC-G-FONL-ALFA-")
-                and kid.split("-")[-1] not in {"INTRO", "GRP1", "GRP2", "GRP3", "GRP4"}
-            )
+            return kid.startswith("GRC-G-FONL-ALFA-") and kid.split("-")[-1] not in {
+                "INTRO",
+                "GRP1",
+                "GRP2",
+                "GRP3",
+                "GRP4",
+            }
 
-        under_two = [
-            (kid, n) for kid, n in knopen_met if n < 2 and not _is_letter_drill(kid)
-        ]
+        under_two = [(kid, n) for kid, n in knopen_met if n < 2 and not _is_letter_drill(kid)]
         if under_two:
             print(f"   ⚠ {len(under_two)} niet-letter-knopen met < 2 items:")
             for kid, n in under_two[:5]:
@@ -111,15 +113,10 @@ def main() -> None:
     print("\n2. DEKKING PER SUBCATEGORIE (MORF / SYNT / FONL)")
     for sub in sorted(per_subcat_knopen):
         k_total = per_subcat_knopen[sub]
-        k_with = sum(
-            1 for kid, _ in knopen_met if _subcategory(kid) == sub
-        )
+        k_with = sum(1 for kid, _ in knopen_met if _subcategory(kid) == sub)
         i_total = per_subcat_items[sub]
         pct = 100 * k_with / k_total if k_total else 0
-        print(
-            f"   {sub:6s}: {k_with:3d}/{k_total:3d} knopen "
-            f"({pct:5.1f}%) · {i_total} items"
-        )
+        print(f"   {sub:6s}: {k_with:3d}/{k_total:3d} knopen ({pct:5.1f}%) · {i_total} items")
 
     print("\n3. OEFENTYPE-MIX")
     for t, c in types.most_common():
