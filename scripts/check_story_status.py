@@ -96,6 +96,14 @@ class CheckResult:
     warnings: list[str] = field(default_factory=list)
 
 
+def _display_path(path: Path) -> str:
+    """Pad relatief tot REPO_ROOT, of absoluut als dat niet kan (bv. in tests)."""
+    try:
+        return str(path.relative_to(REPO_ROOT))
+    except ValueError:
+        return str(path)
+
+
 # --- Parsers ---
 
 
@@ -197,7 +205,10 @@ def staged_story_paths() -> list[Path]:
     """Vraag git om de gestageerde storybestanden onder stories/."""
     try:
         result = subprocess.run(
-            ["git", "diff", "--cached", "--name-only", "--diff-filter=ACM"],
+            # ACMR = Added, Copied, Modified, Renamed.
+            # Met name R is belangrijk: een story van backlog/ naar done/
+            # verplaatsen telt git als rename, niet als modify.
+            ["git", "diff", "--cached", "--name-only", "--diff-filter=ACMR"],
             capture_output=True,
             text=True,
             check=True,
@@ -224,7 +235,7 @@ def staged_story_paths() -> list[Path]:
 def check_structure(story: Story) -> CheckResult:
     """Check 1: titel + Doel + AC-sectie met >= 1 item."""
     result = CheckResult()
-    rel = story.path.relative_to(REPO_ROOT)
+    rel = _display_path(story.path)
 
     if not story.title:
         result.errors.append(
@@ -253,7 +264,7 @@ def check_done_ac(story: Story) -> CheckResult:
     if story.status_from_location != "done":
         return result
     if story.ac_open > 0:
-        rel = story.path.relative_to(REPO_ROOT)
+        rel = _display_path(story.path)
         result.errors.append(
             f"{rel}: staat in done/ maar heeft {story.ac_open} openstaand(e) "
             f"acceptatiecriterium/criteria (van {story.ac_total} totaal)"
@@ -264,7 +275,7 @@ def check_done_ac(story: Story) -> CheckResult:
 def check_status_location(story: Story, epics: dict[str, EpicEntry]) -> CheckResult:
     """Check 2: locatie van bestand komt overeen met status in EPICS.md."""
     result = CheckResult()
-    rel = story.path.relative_to(REPO_ROOT)
+    rel = _display_path(story.path)
     epic_entry = epics.get(story.id.upper())
     if epic_entry is None:
         # Zit aparte check voor: orphans. Hier alleen de match-check.
@@ -281,7 +292,7 @@ def check_orphan(story: Story, epics: dict[str, EpicEntry]) -> CheckResult:
     """Check 5: elke story op disk staat in EPICS.md."""
     result = CheckResult()
     if story.id.upper() not in epics:
-        rel = story.path.relative_to(REPO_ROOT)
+        rel = _display_path(story.path)
         result.warnings.append(f"{rel}: story-ID '{story.id}' niet gevonden in EPICS.md (orphan)")
     return result
 
