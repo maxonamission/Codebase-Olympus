@@ -1,5 +1,7 @@
 # Gymnasium Classica
 
+[![CI](https://github.com/maxonamission/Codebase-Olympus/actions/workflows/ci.yml/badge.svg)](https://github.com/maxonamission/Codebase-Olympus/actions/workflows/ci.yml)
+
 Adaptief leersysteem voor Latijn en Grieks op VWO-gymnasiumniveau. Bereidt leerlingen voor op het staatsexamen LTC/GTC met 30 minuten per dag.
 
 ## Wat het doet
