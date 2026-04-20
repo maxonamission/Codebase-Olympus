@@ -1717,4 +1717,3 @@ usus sum
 vectus sum
 veritus sum
 versus sum
-
