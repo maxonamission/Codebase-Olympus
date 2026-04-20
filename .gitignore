@@ -41,3 +41,6 @@ data/worksheets/*.pdf
 *.db
 *.db-wal
 *.db-shm
+
+# Claude Code lokale overrides (per-ontwikkelaar)
+.claude/settings.local.json
