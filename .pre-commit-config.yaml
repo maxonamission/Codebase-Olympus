@@ -38,3 +38,10 @@ repos:
         language: system
         pass_filenames: false
         types: [python]
+
+      - id: story-status
+        name: stories/-consistentie (staged)
+        entry: uv run python scripts/check_story_status.py --mode=staged
+        language: system
+        pass_filenames: false
+        files: ^stories/

@@ -148,6 +148,18 @@ python scripts/run_session.py data/graph/ --learner mijn_voortgang.json
 | `docs/syllabus-latijn/` | CvTE syllabus LTC 2026 (markdown) |
 | `docs/syllabus-grieks/` | CvTE syllabus GTC 2026 (markdown) |
 | `CLAUDE.md` | Instructies voor Claude Code sessies |
+| `docs/ontwikkelstraat-uitleg.md` | Long-read: concept ontwikkelstraat + zes lagen |
+
+## Bijdragen
+
+Elke PR doorloopt de ontwikkelstraat (zie `CLAUDE.md`):
+
+1. **Lokaal**: `uv run pre-commit run --all-files` moet groen zijn.
+2. **CI**: ruff + mypy + pytest + stories-consistentie op GitHub Actions.
+3. **Review**: vóór merge `/review` draaien in Claude Code; `/security-review` verplicht bij auth/input/database/externe API/dep-upgrades.
+4. **Stories**: werk `stories/` bij volgens OS-06-conventie (platte structuur, AC afvinken, `EPICS.md` synchroon).
+
+Het PR-template `.github/pull_request_template.md` bevat de volledige checklist.
 
 ## Licentie
 

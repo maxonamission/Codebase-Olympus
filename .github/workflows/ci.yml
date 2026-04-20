@@ -56,6 +56,9 @@ jobs:
       - name: Mypy (strict op src/)
         run: uv run mypy src/
 
+      - name: Stories-consistentie (full)
+        run: uv run python scripts/check_story_status.py --mode=full
+
       - name: Pytest met coverage
         run: uv run pytest --cov=src --cov-report=term-missing --cov-report=xml
 

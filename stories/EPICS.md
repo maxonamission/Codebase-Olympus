@@ -240,12 +240,12 @@ Offline schrijven als volwaardige oefenvorm met OCR-verificatie en mentor-portfo
 
 | Story | Titel | Geschat | Status |
 |-------|-------|---------|--------|
-| B5-01 | Offline oefentype en scheduling-integratie | — | todo |
-| B5-02 | Self-report flow en BKT-integratie met verlaagde confidence | — | todo |
-| B5-03 | Printbare PDF-werkbladen genereren | — | todo |
-| B5-04 | Paradigma-schrijfoefeningen genereren | ~50 items | todo |
-| B5-05 | Vertaal-op-papier oefeningen genereren | ~30 items | todo |
-| B5-06 | Grieks alfabet schrijfoefeningen | ~24 items | todo |
+| B5-01 | Offline oefentype en scheduling-integratie | — | done |
+| B5-02 | Self-report flow en BKT-integratie met verlaagde confidence | — | done |
+| B5-03 | Printbare PDF-werkbladen genereren | — | done |
+| B5-04 | Paradigma-schrijfoefeningen genereren | ~50 items | done |
+| B5-05 | Vertaal-op-papier oefeningen genereren | ~30 items | done |
+| B5-06 | Grieks alfabet schrijfoefeningen | ~24 items | done |
 
 ---
 
@@ -390,13 +390,13 @@ De engine naar een webapplicatie brengen. Zie `docs/Prompt_spoor_d.md` voor de v
 
 | Story | Titel | Status |
 |-------|-------|--------|
-| D2-01 | Project setup: Vite + React + routing | todo |
-| D2-02 | Login pagina | todo |
-| D2-03 | Session pagina: vraag tonen | todo |
-| D2-04 | Session pagina: antwoord + feedback | todo |
-| D2-05 | Session pagina: samenvatting | todo |
-| D2-06 | Dashboard pagina | todo |
-| D2-07 | Polytonic Greek input | todo |
+| D2-01 | Project setup: Vite + React + routing | done |
+| D2-02 | Login pagina | done |
+| D2-03 | Session pagina: vraag tonen | done |
+| D2-04 | Session pagina: antwoord + feedback | done |
+| D2-05 | Session pagina: samenvatting | done |
+| D2-06 | Dashboard pagina | done |
+| D2-07 | Polytonic Greek input | done |
 
 ---
 
@@ -439,17 +439,20 @@ Bestaand materiaal (markdowns, audio, MC-opties, vocab-metadata) daadwerkelijk n
 
 | Story | Titel | Status |
 |-------|-------|--------|
-| F1-01 | Frontend ScaffoldingPanel — render `scaffolding_content` als markdown | todo |
-| F1-02 | Scaffolding ook in grammar-first (opt-in) bij eerste introductie | todo |
-| F1-03 | Frontend rendert structured stimulus (instruction / hint / options) | todo |
-| F1-04 | AudioPlayer component + afspelen van `audio_ref` in luister-items | todo |
-| F1-05 | Woordkaart — toon structured vocab-metadata uit vocab_sources | todo |
-| F1-06 | `content_ref` expliciet zetten in alle graph-JSONs + validator | todo |
-| F1-07 | LAT-G content-dekking verhogen naar hot-path ≥ 80 % | todo |
-| F1-08 | Cultuurknopen oefenbaar maken (items + korte markdown) | todo |
-| F1-09 | Ontsluit of verwijder `vocabulaire_clusters.json` | todo |
-| F1-10 | Opschonen passages — merge `lat_passages_leerjaar1.json` | todo |
-| F1-11 | Content-dekkingsrapport — script + CI-check | todo |
+| F1-01 | Frontend ScaffoldingPanel — render `scaffolding_content` als markdown | done |
+| F1-02 | Scaffolding ook in grammar-first (opt-in) bij eerste introductie | done |
+| F1-03 | Frontend rendert structured stimulus (instruction / hint / options) | done |
+| F1-04 | AudioPlayer component + afspelen van `audio_ref` in luister-items | done |
+| F1-05 | Woordkaart — toon structured vocab-metadata uit vocab_sources | done |
+| F1-06 | `content_ref` expliciet zetten in alle graph-JSONs + validator | done |
+| F1-07 | LAT-G content-dekking verhogen naar hot-path ≥ 80 % | done |
+| F1-08 | Cultuurknopen oefenbaar maken (items + korte markdown) | done |
+| F1-09 | Ontsluit of verwijder `vocabulaire_clusters.json` | done |
+| F1-10 | Opschonen passages — merge `lat_passages_leerjaar1.json` | done |
+| F1-11 | Content-dekkingsrapport — script + CI-check | done |
+| F1-12 | Telemetrie-uitbreiding — `answer_text` + `item_history` wiring | done |
+| F1-13 | Frontend mentor-view (placeholder) | backlog |
+| F1-19 | Diverse content-opschoning ronde 2 | done |
 
 **Verhouding tot andere epics:**
 - F1 overlapt niet met **A-spoor** (graph-structuur) — die is af.
@@ -514,6 +517,10 @@ Scope:
 - UX-verbeteringen op basis van observatie (waar haakt de leerling af?)
 - Monitoring: logging van sessie-data voor analyse
 - Feedbackformulier integreren (simpel: Google Form of in-app)
+
+| Story | Titel | Status |
+|-------|-------|--------|
+| E1-01 | Pilot-ready milestone — eerste echte leerling | doing |
 
 ---
 
@@ -684,7 +691,7 @@ Beide routes leiden tot mastery op dezelfde knopen — het verschil is de volgor
 
 **Afhankelijkheden:** Geen. Bouwt voort op bestaande `pyproject.toml`, `ruff`-config en pytest-suite (165 tests).
 
-**Status:** in uitvoering — OS-00/01/02/03 done, OS-04 in doing (infrastructuur klaar; wacht op eerste CI-run + branch protection), OS-05 t/m OS-08 in backlog
+**Status:** in uitvoering — OS-00/01/02/03/05/06 done; OS-04, OS-07, OS-08 in doing (alle drie wachten op externe verificatie: branch protection, live PR-review, verse sessie)
 
 **Epic-brede acceptatiecriteria:**
 - [ ] Alle vijf actieve lagen van de ontwikkelstraat hebben ten minste één werkende check
@@ -700,10 +707,10 @@ Beide routes leiden tot mastery op dezelfde knopen — het verschil is de volgor
 | OS-02 | Type-checking toevoegen (mypy) | 1 | — | done |
 | OS-03 | Pre-commit hooks | 2 | OS-01, OS-02 | done |
 | OS-04 | CI baseline (GitHub Actions) | 4 | OS-01, OS-02 | doing |
-| OS-05 | Claude Code hooks (PostToolUse + Stop) | 3 | OS-01 | backlog |
-| OS-06 | Storystatus- en AC-verificatie (script + hooks + CI) | 2 + 4 | OS-03, OS-04 | backlog |
-| OS-07 | Review-skills inbedden in workflow | 5 | — | backlog |
-| OS-08 | CLAUDE.md bijwerken met ontwikkelstraat-sectie | 6 | alle voorgaande | backlog |
+| OS-05 | Claude Code hooks (PostToolUse + Stop) | 3 | OS-01 | done |
+| OS-06 | Storystatus- en AC-verificatie (script + hooks + CI) | 2 + 4 | OS-03, OS-04 | done |
+| OS-07 | Review-skills inbedden in workflow | 5 | — | doing |
+| OS-08 | CLAUDE.md bijwerken met ontwikkelstraat-sectie | 6 | alle voorgaande | doing |
 
 **Volgorde-advies:** OS-01 en OS-02 parallel (beide linter-achtig). OS-03 en OS-04 daarna; OS-06 bouwt op beide. OS-05 (Claude-hooks) kan vroeg, zodra OS-01 klaar is, omdat het de inner loop versnelt. OS-07 en OS-08 als laatste: eerst moet er iets zijn om te documenteren.
 
