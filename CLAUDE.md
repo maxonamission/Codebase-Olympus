@@ -26,12 +26,64 @@ Lees voor de volledige context:
 - Wees expliciet over wat je hebt gelezen vs. wat je aanneemt. Vlag onzekerheden.
 - Gebruik type hints overal. Pydantic models voor data validation.
 - Tests: pytest. Schrijf tests voor de knowledge graph (cycle detection, orphan detection, topologische sortering) en het learner model (BKT updates, SM-2 scheduling).
-- Lint en format: `ruff`. Voor commit altijd `uv run ruff check .` en `uv run ruff format .` draaien (of via pre-commit zodra OS-03 live is). Regelkeuze staat in `pyproject.toml`. Rationale voor `RUF001-003` op ignore: Griekse tekens in strings zijn kernfunctionaliteit, niet ambigu.
-- Type-checking: `uv run mypy src/`. Config in `pyproject.toml`. `strict = true` op `src/`; `tests/` en `scripts/` zijn uitgezonderd (mocks + dict-literals maken strict daar onpraktisch). Pydantic-plugin actief. Bij nieuwe code geldt: mypy moet groen blijven.
-- Pre-commit hooks: `uv run pre-commit install` (eenmalig per checkout), daarna draait elke commit automatisch door ruff-check, ruff-format, mypy, whitespace/EOF-fixers, yaml/toml/json-validatie, secret-detector en large-file-check. Config staat in `.pre-commit-config.yaml`. Handmatig over de hele repo draaien: `uv run pre-commit run --all-files`.
-- Claude Code hooks: `.claude/settings.json` activeert twee hooks. **PostToolUse** (op `Edit`/`Write` van `.py`-bestanden) draait `.claude/hooks/ruff_on_python.sh` — `ruff check --fix` + `ruff format` op het gewijzigde bestand. **Stop** draait `.claude/hooks/pytest_on_stop.sh` — `pytest -x --tb=short`. Zo worden lint-issues meteen in de turn gecorrigeerd en kan een sessie niet afgerond worden met gebroken tests. Persoonlijke overrides in `.claude/settings.local.json` (in `.gitignore`).
-- Review-skills: vóór elke PR-merge `/review` draaien en commentaar verwerken. `/security-review` **verplicht** bij wijzigingen in auth/token-afhandeling, sqlite-queries, user-input-endpoints, externe API-calls of dependency-upgrades; optioneel bij alle andere wijzigingen. Zie `.github/pull_request_template.md` voor de volledige checklist.
 - Git commits: conventionele commits, Nederlands in commit messages.
+
+## Ontwikkelstraat
+
+Kwaliteit wordt automatisch afgedwongen in zes lagen. Achtergrond: `docs/ontwikkelstraat-uitleg.md`.
+
+### Laag 1 — Lint & types
+
+- **Lint/format**: `uv run ruff check .` + `uv run ruff format --check .`. Regelkeuze in `pyproject.toml`. `RUF001-003` op ignore: Griekse tekens zijn kernfunctionaliteit, niet ambigu.
+- **Type-checking**: `uv run mypy src/`. `strict = true` op `src/`; `tests/` en `scripts/` uitgezonderd. Pydantic-plugin actief. Nieuwe code moet mypy-groen zijn.
+
+### Laag 2 — Pre-commit
+
+- Eenmalig per checkout: `uv run pre-commit install`. Daarna draait elke commit automatisch door ruff-check + format, mypy, whitespace/EOF, yaml/toml/json-validatie, private-key-detector, large-file-check en de story-status-check (zie Laag 6).
+- Handmatig over de hele repo: `uv run pre-commit run --all-files`.
+- Bij faling: hooks auto-fixen waar mogelijk; anders fouten lezen, fixen, opnieuw stagen.
+
+### Laag 3 — Claude Code hooks
+
+- `.claude/settings.json` definieert twee hooks die vanuit elke sessie draaien:
+  - **PostToolUse** (`Edit`/`Write` op `.py`) → `.claude/hooks/ruff_on_python.sh` (ruff fix + format op het gewijzigde bestand).
+  - **Stop** → `.claude/hooks/pytest_on_stop.sh` (`pytest -x --tb=short`; blokkeert de Stop bij rode tests).
+- Persoonlijke overrides in `.claude/settings.local.json` (gitignored).
+
+### Laag 4 — CI (GitHub Actions)
+
+- Workflow `.github/workflows/ci.yml` draait op elke push en PR: dezelfde checks als pre-commit (ruff, mypy, story-status) plus `pytest --cov`. Pre-commit kun je lokaal overslaan; CI niet.
+- Status-badge in `README.md`; branch protection op `main` hoort CI verplicht te maken (handmatige GitHub-instelling).
+
+### Laag 5 — Review-skills
+
+- `/review` draaien vóór elke PR-merge en commentaar verwerken.
+- `/security-review` **verplicht** bij wijzigingen in: auth/token-afhandeling, sqlite-queries, user-input-endpoints, externe API-calls, dependency-upgrades. Optioneel bij de rest.
+- PR-template (`.github/pull_request_template.md`) bevat de volledige checklist.
+
+### Laag 6 — Story-workflow
+
+Zie `## Story-workflow` hieronder. Handhaving via `scripts/check_story_status.py`, integreerd in pre-commit en CI.
+
+## Story-workflow
+
+Stories staan onder `stories/` met subfolders `backlog/`, `doing/`, `done/` + centrale `EPICS.md`.
+
+**Bij oppakken van een story:**
+
+1. Verplaats het bestand met `git mv stories/backlog/XX-NN.md stories/doing/`.
+2. Werk de status-kolom in `EPICS.md` bij naar `doing`.
+3. Commit deze verplaatsing apart van inhoudelijke wijzigingen.
+
+**Bij afronden van een story:**
+
+1. Vink alle `- [ ]` in de `## Acceptatiecriteria`-sectie om naar `- [x]`. Voeg eventueel een kort resultaat-blok toe.
+2. Verplaats het bestand met `git mv stories/doing/XX-NN.md stories/done/`.
+3. Werk de status-kolom in `EPICS.md` bij naar `done`.
+4. Draai lokaal `uv run python scripts/check_story_status.py --mode=full` — moet groen zijn.
+5. Commit en push; de pre-commit-hook en CI valideren dezelfde regels.
+
+**De check blokkeert als:** een story in `done/` nog openstaande AC heeft, locatie en EPICS-status niet matchen, of een story ontbreekt in EPICS.md (warning).
 
 ## Output en sessie-management
 
@@ -43,6 +95,7 @@ De API heeft een idle timeout (~60s). Voorkom timeouts door:
 - **Splits grote bestanden.** Lees bestanden met `offset` en `limit`, niet in één keer als ze >150 regels zijn.
 - **Geen volledige bestanden herhalen.** Bij edits: toon alleen wat er veranderd is, niet het hele bestand.
 - **Commit vroeg en vaak.** Na elke story of logische eenheid. Niet wachten tot het einde van een sessie.
+- **Stop-hook draait `pytest`.** De Claude Code Stop-hook blokkeert de sessie-afronding bij rode tests. Plan commits dus vóór het einde van een sessie, en verwacht bij een rood testresultaat een extra iteratie — niet het einde van de turn.
 
 ## Domeinkennis
 
