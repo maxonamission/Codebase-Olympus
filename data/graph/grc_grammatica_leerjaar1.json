@@ -299,7 +299,56 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-NOM-FUNCTIE-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-NOM-FUNCTIE"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welke naamval gebruik je in het Grieks voor het onderwerp van een zin?",
+          "antwoord": "nominativus",
+          "feedback": "De nominativus is de naamval van het onderwerp en van het naamwoordelijk deel van het gezegde.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-NOM-FUNCTIE-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-NOM-FUNCTIE"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Welke functie heeft ὁ ἄνθρωπος in: ὁ ἄνθρωπος τρέχει.",
+          "antwoord": "onderwerp",
+          "feedback": "ὁ ἄνθρωπος staat in de nominativus en is het onderwerp van τρέχει (loopt).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-NOM-FUNCTIE-003",
+          "knoop_ids": [
+            "GRC-G-SYNT-NOM-FUNCTIE"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Welke functie heeft σοφός in: ὁ διδάσκαλος σοφός ἐστιν.",
+          "antwoord": [
+            "naamwoordelijk deel van het gezegde",
+            "predicaatsnomen"
+          ],
+          "feedback": "σοφός is nominativus en vormt met ἐστίν het gezegde: 'de leraar is wijs'.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-GEN-FUNCTIE",
@@ -311,7 +360,77 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-GEN-FUNCTIE-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-GEN-FUNCTIE"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welke naamval drukt in het Grieks bezit uit?",
+          "antwoord": "genitivus",
+          "feedback": "De genitivus is de naamval van bezit, partitief, vergelijking en tijd — en speelt een hoofdrol in de genitivus absolutus.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-GEN-FUNCTIE-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-GEN-FUNCTIE"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Welke functie heeft τοῦ φίλου in: ὁ οἶκος τοῦ φίλου μέγας ἐστίν.",
+          "antwoord": [
+            "bezit",
+            "genitivus van bezit"
+          ],
+          "feedback": "τοῦ φίλου is genitivus van bezit: 'het huis van de vriend is groot'.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-GEN-FUNCTIE-003",
+          "knoop_ids": [
+            "GRC-G-SYNT-GEN-FUNCTIE"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 35,
+          "stimulus": "Welke functie heeft τῶν Ἑλλήνων in: πολλοὶ τῶν Ἑλλήνων ἦλθον.",
+          "antwoord": [
+            "partitief",
+            "genitivus partitivus"
+          ],
+          "feedback": "τῶν Ἑλλήνων is genitivus partitivus: 'velen van de Grieken kwamen'. Drukt het geheel uit waarvan een deel genomen wordt.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-GEN-FUNCTIE-004",
+          "knoop_ids": [
+            "GRC-G-SYNT-GEN-FUNCTIE"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Wat is een genitivus absolutus in het Grieks?",
+          "antwoord": [
+            "een los zinsdeel van genitivus + participium",
+            "een bijzin-vervanger met participium en substantief in de genitivus"
+          ],
+          "feedback": "De genitivus absolutus is een los bijvoeglijk zinsdeel, bestaand uit een substantief en een participium beide in de genitivus, zonder grammaticale band met de hoofdzin.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-DAT-FUNCTIE",
@@ -323,7 +442,76 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-DAT-FUNCTIE-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-DAT-FUNCTIE"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welke naamval gebruik je in het Grieks voor het meewerkend voorwerp?",
+          "antwoord": "dativus",
+          "feedback": "De dativus is de naamval van het meewerkend voorwerp, middel, wijze, tijd en van de bezitter bij εἶναι.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-DAT-FUNCTIE-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-DAT-FUNCTIE"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Welke functie heeft τῷ πατρί in: τῷ πατρὶ βιβλίον δίδωμι.",
+          "antwoord": "meewerkend voorwerp",
+          "feedback": "τῷ πατρί is dativus en meewerkend voorwerp: 'ik geef een boek aan de vader'.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-DAT-FUNCTIE-003",
+          "knoop_ids": [
+            "GRC-G-SYNT-DAT-FUNCTIE"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 35,
+          "stimulus": "Welke functie heeft ξίφει in: οἱ στρατιῶται ξίφει μάχονται.",
+          "antwoord": [
+            "middel",
+            "dativus van middel",
+            "instrumentalis"
+          ],
+          "feedback": "ξίφει is dativus van middel: 'de soldaten vechten met het zwaard'.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-DAT-FUNCTIE-004",
+          "knoop_ids": [
+            "GRC-G-SYNT-DAT-FUNCTIE"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 35,
+          "stimulus": "Welke functie heeft τῷ παιδί in: τῷ παιδὶ βιβλίον ἐστίν.",
+          "antwoord": [
+            "bezitter",
+            "bezitter bij εἶναι",
+            "dativus possessivus"
+          ],
+          "feedback": "τῷ παιδί is dativus possessivus bij ἐστίν: letterlijk 'aan het kind is een boek', dus 'het kind heeft een boek'.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-ACC-FUNCTIE",
@@ -335,7 +523,75 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-ACC-FUNCTIE-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-ACC-FUNCTIE"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Welke naamval gebruik je in het Grieks voor het lijdend voorwerp?",
+          "antwoord": "accusativus",
+          "feedback": "De accusativus is de naamval van het lijdend voorwerp, richting, tijdsduur en betrekking (respectus).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-ACC-FUNCTIE-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-ACC-FUNCTIE"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Welke functie heeft τὸν λόγον in: ὁ διδάσκαλος τὸν λόγον λέγει.",
+          "antwoord": "lijdend voorwerp",
+          "feedback": "τὸν λόγον is accusativus en lijdend voorwerp: 'de leraar zegt het woord'.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-ACC-FUNCTIE-003",
+          "knoop_ids": [
+            "GRC-G-SYNT-ACC-FUNCTIE"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Welke functie heeft τρεῖς ἡμέρας in: τρεῖς ἡμέρας ἐμένομεν.",
+          "antwoord": [
+            "tijdsduur",
+            "accusativus van tijdsduur"
+          ],
+          "feedback": "τρεῖς ἡμέρας is accusativus van tijdsduur: 'drie dagen lang wachtten wij'.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-ACC-FUNCTIE-004",
+          "knoop_ids": [
+            "GRC-G-SYNT-ACC-FUNCTIE"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 35,
+          "stimulus": "Welke functie heeft τοὺς πόδας in: κάμνει τοὺς πόδας.",
+          "antwoord": [
+            "betrekking",
+            "accusativus van respectus",
+            "respectus"
+          ],
+          "feedback": "τοὺς πόδας is accusativus van betrekking (respectus): 'hij heeft pijn aan zijn voeten' — de acc. preciseert waarin.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-VOC-FUNCTIE",
@@ -347,7 +603,63 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-VOC-FUNCTIE-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-VOC-FUNCTIE"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.4,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 12,
+          "stimulus": "Wat is de functie van de vocativus in het Grieks?",
+          "antwoord": [
+            "aanspreekvorm",
+            "iemand direct aanspreken"
+          ],
+          "feedback": "De vocativus is de aanspreekvorm — gebruikt om iemand direct toe te spreken, vaak voorafgegaan door ὦ.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-VOC-FUNCTIE-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-VOC-FUNCTIE"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Wie wordt aangesproken in: ὦ παῖ, ἄκουε!",
+          "antwoord": [
+            "παῖ",
+            "het kind",
+            "de jongen"
+          ],
+          "feedback": "παῖ is vocativus: 'O kind, luister!' De partikel ὦ maakt de aanspreking nog duidelijker.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-VOC-FUNCTIE-003",
+          "knoop_ids": [
+            "GRC-G-SYNT-VOC-FUNCTIE"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "In welke declinatiesubgroep wijkt de vocativus enkelvoud af van de nominativus?",
+          "antwoord": [
+            "2e declinatie masculinum op -ος",
+            "2e declinatie op -ος"
+          ],
+          "feedback": "De vocativus enkelvoud wijkt af bij de 2e declinatie -ος → -ε: ὁ λόγος → ὦ λόγε. In de meeste andere gevallen valt voc. samen met nom.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-DECL1-INTRO",
@@ -3663,7 +3975,62 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-INTRO-001",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.1,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welk aspect drukt het imperfectum uit?",
+          "antwoord": [
+            "duur of herhaling in het verleden",
+            "durende/herhalende handeling in het verleden"
+          ],
+          "feedback": "Het imperfectum drukt een durende of herhaalde verleden handeling uit. Tegenhanger is de aoristus (eenmalig, afgerond).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-INTRO-002",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Uit welke drie ingrediënten bestaat een imperfectum-vorm?",
+          "antwoord": [
+            "augment + praesensstam + secundaire uitgang",
+            "augment, praesensstam, secundaire persoonsuitgang"
+          ],
+          "feedback": "Imperfectum = augment (ἐ-/klinkerverlenging) + praesensstam + secundaire uitgang (-ον, -ες, -ε, -ομεν, -ετε, -ον).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-INTRO-003",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-INTRO"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Splits ἐλύομεν in augment + stam + thematische klinker + uitgang.",
+          "antwoord": [
+            "ἐ-λυ-ο-μεν",
+            "ἐ + λυ + ο + μεν"
+          ],
+          "feedback": "ἐ- (syllabisch augment) + λυ- (stam) + -ο- (thematisch) + -μεν (secundaire uitgang 1 pl.). Vergelijk praesens λύ-ο-μεν.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-AUGMENT",
@@ -3675,7 +4042,119 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-AUGMENT-001",
+          "knoop_ids": [
+            "GRC-G-MORF-AUGMENT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.1,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wanneer krijgt een werkwoord een syllabisch augment?",
+          "antwoord": [
+            "als de stam met een medeklinker begint",
+            "bij consonant-initiële werkwoorden"
+          ],
+          "feedback": "Syllabisch augment ἐ- wordt geplakt vóór een medeklinker-stam: λύω → ἔλυον, γράφω → ἔγραφον.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AUGMENT-002",
+          "knoop_ids": [
+            "GRC-G-MORF-AUGMENT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de 1 sg. imperfectum van γράφω (praesens 'ik schrijf').",
+          "antwoord": "ἔγραφον",
+          "feedback": "γράφω → ἔγραφον: syllabisch augment ἐ- vóór γ, secundaire uitgang -ον (1 sg.). 'Ik was aan het schrijven'.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AUGMENT-003",
+          "knoop_ids": [
+            "GRC-G-MORF-AUGMENT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 1 sg. imperfectum van ἀκούω.",
+          "antwoord": "ἤκουον",
+          "feedback": "ἀκούω → ἤκουον (ik hoorde). Temporeel augment: α → η. Vowelstam krijgt geen ἐ-, maar een verlenging.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AUGMENT-004",
+          "knoop_ids": [
+            "GRC-G-MORF-AUGMENT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 1 sg. imperfectum van ἐθέλω.",
+          "antwoord": "ἤθελον",
+          "feedback": "ἐθέλω → ἤθελον (ik wilde). Temporeel augment: ε → η. Vowelstam krijgt geen ἐ-, maar een verlenging.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AUGMENT-005",
+          "knoop_ids": [
+            "GRC-G-MORF-AUGMENT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 1 sg. imperfectum van ἄρχω.",
+          "antwoord": "ἦρχον",
+          "feedback": "ἄρχω → ἦρχον (ik heerste / begon). Temporeel augment: α → η. Vowelstam krijgt geen ἐ-, maar een verlenging.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AUGMENT-006",
+          "knoop_ids": [
+            "GRC-G-MORF-AUGMENT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 1 sg. imperfectum van ὀνομάζω.",
+          "antwoord": "ὠνόμαζον",
+          "feedback": "ὀνομάζω → ὠνόμαζον (ik noemde). Temporeel augment: ο → ω. Vowelstam krijgt geen ἐ-, maar een verlenging.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AUGMENT-007",
+          "knoop_ids": [
+            "GRC-G-MORF-AUGMENT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Tot welke klinkers verlengen initiële α, ε en ο bij temporeel augment?",
+          "antwoord": [
+            "α → η, ε → η, ο → ω",
+            "α→η, ε→η, ο→ω"
+          ],
+          "feedback": "Temporeel augment: α → η, ε → η, ο → ω. Lange klinkers (η, ω) en diftongen blijven meestal onveranderd (ηὐξάνομεν, niet ἤυξάνομεν).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-UIT-SEC",
@@ -3736,7 +4215,119 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-THEM-001",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-THEM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 1 sg. imperfectum ind. act. van λύω.",
+          "antwoord": "ἔλυον",
+          "feedback": "1 sg. = ἔλυον (ik maakte los / was aan het losmaken). Augment ἐ- + stam λυ- + thematische klinker + secundaire uitgang.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-THEM-002",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-THEM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 2 sg. imperfectum ind. act. van λύω.",
+          "antwoord": "ἔλυες",
+          "feedback": "2 sg. = ἔλυες (jij maakte los). Augment ἐ- + stam λυ- + thematische klinker + secundaire uitgang.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-THEM-003",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-THEM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 3 sg. imperfectum ind. act. van λύω.",
+          "antwoord": [
+            "ἔλυε(ν)",
+            "ἔλυε"
+          ],
+          "feedback": "3 sg. = ἔλυε(ν) (hij/zij maakte los). Augment ἐ- + stam λυ- + thematische klinker + secundaire uitgang.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-THEM-004",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-THEM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 1 pl. imperfectum ind. act. van λύω.",
+          "antwoord": "ἐλύομεν",
+          "feedback": "1 pl. = ἐλύομεν (wij maakten los). Augment ἐ- + stam λυ- + thematische klinker + secundaire uitgang.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-THEM-005",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-THEM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 2 pl. imperfectum ind. act. van λύω.",
+          "antwoord": "ἐλύετε",
+          "feedback": "2 pl. = ἐλύετε (jullie maakten los). Augment ἐ- + stam λυ- + thematische klinker + secundaire uitgang.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-THEM-006",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-THEM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 3 pl. imperfectum ind. act. van λύω.",
+          "antwoord": "ἔλυον",
+          "feedback": "3 pl. = ἔλυον (zij maakten los). Augment ἐ- + stam λυ- + thematische klinker + secundaire uitgang.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-THEM-007",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-THEM"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Waarom zijn de 1 sg. en de 3 pl. imperfectum vaak identiek (ἔλυον)?",
+          "antwoord": [
+            "omdat beide de secundaire uitgang -ον hebben",
+            "secundaire uitgang -ον voor 1 sg. én 3 pl."
+          ],
+          "feedback": "Beide eindigen op -ον: 1 sg. stam + -ον, 3 pl. stam + -ον. Alleen context of onderwerp beslist welke functie de vorm heeft.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-IMPF-CTA",
@@ -3748,7 +4339,71 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-CTA-001",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-CTA"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Geef de 1 sg. imperfectum ind. act. van τιμάω (voor-contractie: ἐ-τιμά-ον).",
+          "antwoord": "ἐτίμων",
+          "feedback": "ἐ-τιμά-ον → ἐτίμων. Syllabisch augment ἐ- + contractie α+ο → ω.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-CTA-002",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-CTA"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Geef de 3 sg. imperfectum ind. act. van τιμάω (voor-contractie: ἐ-τιμά-ε(ν)).",
+          "antwoord": "ἐτίμα",
+          "feedback": "ἐ-τιμά-ε(ν) → ἐτίμα. Syllabisch augment ἐ- + contractie α+ε → ᾱ.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-CTA-003",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-CTA"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Geef de 1 pl. imperfectum ind. act. van τιμάω (voor-contractie: ἐ-τιμά-ομεν).",
+          "antwoord": "ἐτιμῶμεν",
+          "feedback": "ἐ-τιμά-ομεν → ἐτιμῶμεν. Syllabisch augment ἐ- + contractie α+ο → ω (circumflex).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-CTA-004",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-CTA"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Welke persoon en welk getal heeft ἐτίμων?",
+          "antwoord": [
+            "1e persoon singularis of 3e persoon pluralis",
+            "1 sg. of 3 pl."
+          ],
+          "feedback": "ἐτίμων is 1 sg. óf 3 pl. imperfectum (identieke vormen wegens -ον in beide; na contractie α+ο → ω).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-IMPF-CTE",
@@ -3760,7 +4415,53 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-CTE-001",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-CTE"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Geef de 1 sg. imperfectum ind. act. van ποιέω (voor-contractie: ἐ-ποιέ-ον).",
+          "antwoord": "ἐποίουν",
+          "feedback": "ἐ-ποιέ-ον → ἐποίουν. Syllabisch augment ἐ- + contractie ε+ο → ου.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-CTE-002",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-CTE"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Geef de 3 sg. imperfectum ind. act. van ποιέω (voor-contractie: ἐ-ποιέ-ε(ν)).",
+          "antwoord": "ἐποίει",
+          "feedback": "ἐ-ποιέ-ε(ν) → ἐποίει. Syllabisch augment ἐ- + contractie ε+ε → ει.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-CTE-003",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-CTE"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Geef de 1 pl. imperfectum ind. act. van ποιέω (voor-contractie: ἐ-ποιέ-ομεν).",
+          "antwoord": "ἐποιοῦμεν",
+          "feedback": "ἐ-ποιέ-ομεν → ἐποιοῦμεν. Syllabisch augment ἐ- + contractie ε+ο → ου (circumflex).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-IMPF-EIMI",
@@ -3772,7 +4473,68 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-EIMI-001",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-EIMI"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de 1 sg. imperfectum van εἰμί ('ik was').",
+          "antwoord": "ἦν",
+          "feedback": "1 sg. = ἦν (ik was). Paradigma: ἦν, ἦσθα, ἦν, ἦμεν, ἦτε, ἦσαν. Onregelmatig — geen zichtbaar augment, maar wel verleden-tijd-betekenis.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-EIMI-002",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-EIMI"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de 2 sg. imperfectum van εἰμί ('jij was').",
+          "antwoord": "ἦσθα",
+          "feedback": "2 sg. = ἦσθα (jij was). Paradigma: ἦν, ἦσθα, ἦν, ἦμεν, ἦτε, ἦσαν. Onregelmatig — geen zichtbaar augment, maar wel verleden-tijd-betekenis.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-EIMI-003",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-EIMI"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de 1 pl. imperfectum van εἰμί ('wij waren').",
+          "antwoord": "ἦμεν",
+          "feedback": "1 pl. = ἦμεν (wij waren). Paradigma: ἦν, ἦσθα, ἦν, ἦμεν, ἦτε, ἦσαν. Onregelmatig — geen zichtbaar augment, maar wel verleden-tijd-betekenis.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-EIMI-004",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-EIMI"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de 3 pl. imperfectum van εἰμί ('zij waren').",
+          "antwoord": "ἦσαν",
+          "feedback": "3 pl. = ἦσαν (zij waren). Paradigma: ἦν, ἦσθα, ἦν, ἦμεν, ἦτε, ἦσαν. Onregelmatig — geen zichtbaar augment, maar wel verleden-tijd-betekenis.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-IMPF-PARAD",
@@ -3784,7 +4546,61 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-PARAD-001",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 100,
+          "stimulus": "Schrijf het volledige paradigma van het imperfectum van λύω op (6 personen) en vergelijk met je grammaticaboek.",
+          "antwoord": "ἔλυον, ἔλυες, ἔλυε(ν), ἐλύομεν, ἐλύετε, ἔλυον",
+          "feedback": "Kern: augment ἐ- + stam λυ- + thematische klinker + secundaire uitgangen. 1 sg. = 3 pl. = ἔλυον.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "6 vormen van ἔλυον met correcte accenten en bewegelijke ν in de 3 sg."
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-PARAD-002",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-PARAD"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "In 'οἱ παῖδες ἔγραφον τοὺς λόγους' — welke tijd, persoon en getal heeft ἔγραφον?",
+          "antwoord": [
+            "imperfectum 3e persoon pluralis",
+            "impf. 3 pl."
+          ],
+          "feedback": "ἔγραφον = impf. 3 pl. (augment ἐ- + stam γραφ- + thematisch + -ον). Onderwerp οἱ παῖδες (nom. pl.) bepaalt 3 pl.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-IMPF-PARAD-003",
+          "knoop_ids": [
+            "GRC-G-MORF-IMPF-PARAD"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Hoe herken je aan ἠκούομεν dat dit een imperfectum is?",
+          "antwoord": [
+            "temporeel augment (α → η) en secundaire uitgang -ομεν",
+            "augment + secundaire uitgang"
+          ],
+          "feedback": "ἀκούω → ἠκούομεν: α → η (temporeel augment) + thematische ο + -μεν (secundaire 1 pl.). Praesens zou ἀκούομεν zijn.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-AOR-INTRO",
@@ -3796,7 +4612,62 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-INTRO-001",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.4,
+          "discriminatie_initieel": 1.1,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welk aspect drukt de aoristus uit?",
+          "antwoord": [
+            "eenmalige of afgeronde handeling",
+            "punctueel / perfectief"
+          ],
+          "feedback": "De aoristus is punctueel: de handeling wordt als één afgeronde gebeurtenis gezien. Tegenhanger: imperfectum (duur/herhaling).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-INTRO-002",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke twee hoofdtypen aoristus onderscheiden we in leerjaar 1?",
+          "antwoord": [
+            "sigmatisch (zwak) en thematisch (sterk)",
+            "sigmatisch en thematisch"
+          ],
+          "feedback": "Sigmatisch/zwak: stam + σ + α-uitgangen (ἔλυσα). Thematisch/sterk: eigen aoriststam + thematische klinker + secundaire uitgangen (ἔλαβον).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-INTRO-003",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Uit welke drie ingrediënten bestaat elke aoristusvorm?",
+          "antwoord": [
+            "augment + aoriststam + persoonsuitgang",
+            "augment, aoriststam, uitgang"
+          ],
+          "feedback": "Aoristus = augment (ἐ-/klinkerverlenging) + aoriststam (σ-stam of eigen stam) + uitgang (α-uitgangen bij sigm., secundair bij them.).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-STAMTIJD",
@@ -3856,7 +4727,86 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-SIGMA-001",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-SIGMA"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 1 sg. aoristus ind. act. van λύω.",
+          "antwoord": "ἔλυσα",
+          "feedback": "1 sg. = ἔλυσα (ik maakte los). Augment ἐ- + stam λυ- + σ + α-uitgang.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-SIGMA-002",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-SIGMA"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 2 sg. aoristus ind. act. van λύω.",
+          "antwoord": "ἔλυσας",
+          "feedback": "2 sg. = ἔλυσας (jij maakte los). Augment ἐ- + stam λυ- + σ + α-uitgang.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-SIGMA-003",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-SIGMA"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 3 sg. aoristus ind. act. van λύω.",
+          "antwoord": [
+            "ἔλυσε(ν)",
+            "ἔλυσε"
+          ],
+          "feedback": "3 sg. = ἔλυσε(ν) (hij/zij maakte los). Augment ἐ- + stam λυ- + σ + α-uitgang.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-SIGMA-004",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-SIGMA"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 1 pl. aoristus ind. act. van λύω.",
+          "antwoord": "ἐλύσαμεν",
+          "feedback": "1 pl. = ἐλύσαμεν (wij maakten los). Augment ἐ- + stam λυ- + σ + α-uitgang.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-SIGMA-005",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-SIGMA"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 1 sg. sigmatische aoristus van γράφω.",
+          "antwoord": "ἔγραψα",
+          "feedback": "γράφω → ἔγραψα: φ + σ → ψ. Bij labiaalstammen (π/β/φ) smelt de σ-aorist de stamconsonant tot ψ.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-AOR-UIT",
@@ -3868,7 +4818,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-UIT-001",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-UIT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.1,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Noem de zes uitgangen van de sigmatische aoristus actief.",
+          "antwoord": [
+            "-α, -ας, -ε(ν), -αμεν, -ατε, -αν",
+            "-α -ας -ε -αμεν -ατε -αν"
+          ],
+          "feedback": "Sigmatische uitgangen: -α, -ας, -ε(ν), -αμεν, -ατε, -αν. Let op: 1 sg. op -α (niet -ον); 3 sg. op -ε (niet -ε van impf.).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-UIT-002",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-UIT"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Welke uitgangen heeft een thematische (sterke) aoristus — sigmatisch of secundair?",
+          "antwoord": [
+            "secundaire uitgangen (-ον, -ες, -ε(ν), -ομεν, -ετε, -ον)",
+            "secundair, zoals imperfectum"
+          ],
+          "feedback": "Thematische aoristus gebruikt de secundaire uitgangen (impf.-stijl) op een ándere stam: ἔλαβον lijkt op ἔγραφον qua uitgang.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-AOR-THEM",
@@ -3880,7 +4867,71 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-THEM-001",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-THEM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 1 sg. thematische aoristus ind. act. van λαμβάνω.",
+          "antwoord": "ἔλαβον",
+          "feedback": "1 sg. = ἔλαβον (ik nam / pakte). Aoriststam λαβ- (niet λαμβαν-!) + augment + secundaire uitgangen.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-THEM-002",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-THEM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 2 sg. thematische aoristus ind. act. van λαμβάνω.",
+          "antwoord": "ἔλαβες",
+          "feedback": "2 sg. = ἔλαβες (jij nam). Aoriststam λαβ- (niet λαμβαν-!) + augment + secundaire uitgangen.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-THEM-003",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-THEM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de 3 pl. thematische aoristus ind. act. van λαμβάνω.",
+          "antwoord": "ἔλαβον",
+          "feedback": "3 pl. = ἔλαβον (zij namen). Aoriststam λαβ- (niet λαμβαν-!) + augment + secundaire uitgangen.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-THEM-004",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-THEM"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Wat onderscheidt ἔλαβον van een imperfectum van hetzelfde werkwoord?",
+          "antwoord": [
+            "ἔλαβον heeft de aoriststam λαβ-; imperf. gebruikt de praesensstam λαμβαν-",
+            "de stam: λαβ- (aorist) vs. λαμβαν- (praesens/impf.)"
+          ],
+          "feedback": "ἐλάμβανον (impf.) < λαμβαν- + secundair. ἔλαβον (aorist) < λαβ- + secundair. Zelfde uitgang, andere stam → ander aspect.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-AOR-ROOT",
@@ -3892,7 +4943,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-ROOT-001",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-ROOT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wat kenmerkt een stamaoristus zoals ἔβην of ἔστην?",
+          "antwoord": [
+            "geen thematische klinker; uitgangen direct aan de kale stam",
+            "athematisch: stam + uitgang zonder ε/ο"
+          ],
+          "feedback": "Stamaoristi (ἔβην van βαίνω, ἔστην van ἵστημι, ἔγνων van γιγνώσκω) hebben geen thematische klinker: uitgang plakt direct aan de stam.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-ROOT-002",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-ROOT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Welk lemma hoort bij ἔγνων (1 sg. stamaorist, 'ik leerde kennen')?",
+          "antwoord": [
+            "γιγνώσκω",
+            "γιγνώσκω, -γνώσομαι, -ἔγνων"
+          ],
+          "feedback": "ἔγνων is 1 sg. stamaorist van γιγνώσκω. Aoriststam γνω- (zonder thematische klinker, met lange ω).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-AOR-LIJST",
@@ -3904,7 +4992,84 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-LIJST-001",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-LIJST",
+            "GRC-G-MORF-STAMTIJD"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Van welk lemma is εἶπον de 1 sg. aoristus, en welk aoristype is het?",
+          "antwoord": [
+            "λέγω, thematisch",
+            "lemma: λέγω; type: thematisch"
+          ],
+          "feedback": "εἶπον = 1 sg. aorist (thematisch) van λέγω ('zeggen'). De aoriststam staat los van de praesensstam.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-LIJST-002",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-LIJST",
+            "GRC-G-MORF-STAMTIJD"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Van welk lemma is ἦλθον de 1 sg. aoristus, en welk aoristype is het?",
+          "antwoord": [
+            "ἔρχομαι, thematisch",
+            "lemma: ἔρχομαι; type: thematisch"
+          ],
+          "feedback": "ἦλθον = 1 sg. aorist (thematisch) van ἔρχομαι ('gaan, komen'). De aoriststam staat los van de praesensstam.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-LIJST-003",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-LIJST",
+            "GRC-G-MORF-STAMTIJD"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Van welk lemma is εἶδον de 1 sg. aoristus, en welk aoristype is het?",
+          "antwoord": [
+            "ὁράω, thematisch",
+            "lemma: ὁράω; type: thematisch"
+          ],
+          "feedback": "εἶδον = 1 sg. aorist (thematisch) van ὁράω ('zien'). De aoriststam staat los van de praesensstam.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-LIJST-004",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-LIJST",
+            "GRC-G-MORF-STAMTIJD"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Van welk lemma is ἔλυσα de 1 sg. aoristus, en welk aoristype is het?",
+          "antwoord": [
+            "λύω, sigmatisch",
+            "lemma: λύω; type: sigmatisch"
+          ],
+          "feedback": "ἔλυσα = 1 sg. aorist (sigmatisch) van λύω ('losmaken'). De aoriststam staat los van de praesensstam.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-INF-AOR",
@@ -3916,7 +5081,38 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-INF-AOR-001",
+          "knoop_ids": [
+            "GRC-G-MORF-INF-AOR"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de infinitief aoristus actief van λύω.",
+          "antwoord": "λῦσαι",
+          "feedback": "Sigmatische inf. aor. = λῦσαι (stam λυ- + σ + -αι). Geen augment in infinitief (augment blijft bij de indicatief).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-INF-AOR-002",
+          "knoop_ids": [
+            "GRC-G-MORF-INF-AOR"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de infinitief aoristus actief van λαμβάνω.",
+          "antwoord": "λαβεῖν",
+          "feedback": "Thematische inf. aor. = λαβεῖν (aoriststam λαβ- + -εῖν). Kenmerkende circumflex op de ultima.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-AOR-PARAD",
@@ -3928,7 +5124,62 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-PARAD-001",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-PARAD"
+          ],
+          "type": "offline_schrijven",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 100,
+          "stimulus": "Schrijf het volledige paradigma van ἔλυσα op (6 personen) en vergelijk met je grammaticaboek.",
+          "antwoord": "ἔλυσα, ἔλυσας, ἔλυσε(ν), ἐλύσαμεν, ἐλύσατε, ἔλυσαν",
+          "feedback": "Kern: augment ἐ- + stam λυ- + σ + α-uitgangen. Zes vormen: ἔλυσα / ἔλυσας / ἔλυσε(ν) / ἐλύσαμεν / ἐλύσατε / ἔλυσαν.",
+          "bron": "handmatig",
+          "verificatie_methode": "self_report",
+          "verwacht_resultaat": "6 vormen van ἔλυσα met correcte accenten en bewegelijke ν in de 3 sg."
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-PARAD-002",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-PARAD",
+            "GRC-G-MORF-STAMTIJD"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Bij welk lemma hoort ἤνεγκον en welk aoristype is het?",
+          "antwoord": [
+            "φέρω, thematisch (onregelmatig)",
+            "lemma: φέρω; type: thematisch"
+          ],
+          "feedback": "ἤνεγκον is 1 sg. (suppletieve) thematische aorist van φέρω ('dragen/brengen'). Sterk onregelmatig, moet uit het hoofd geleerd.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-AOR-PARAD-003",
+          "knoop_ids": [
+            "GRC-G-MORF-AOR-PARAD"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "In 'ὁ διδάσκαλος ἔγραψε τὸν λόγον' — welke tijd, persoon en getal heeft ἔγραψε?",
+          "antwoord": [
+            "aoristus 3e persoon singularis",
+            "aor. 3 sg."
+          ],
+          "feedback": "ἔγραψε = 3 sg. sigm. aorist van γράφω (augment ἐ- + stam γραφ- + σ → γραψ- + -ε). Punctueel: 'schreef één keer' — tegenover impf. 'was aan het schrijven'.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-AOR-ASPECT",
@@ -3940,7 +5191,98 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-AOR-ASPECT-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-AOR-ASPECT"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.1,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wat is het aspectueel verschil tussen aoristus en imperfectum?",
+          "antwoord": [
+            "aoristus = punctueel/afgerond; imperfectum = duratief/herhaald",
+            "aorist punctueel, imperfectum duratief"
+          ],
+          "feedback": "Beide zijn verleden tijd, maar verschillen in aspect: aoristus noemt één afgeronde gebeurtenis, imperfectum beschrijft een lopende of herhaalde handeling.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-AOR-ASPECT-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-AOR-ASPECT"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Welke tijd zou je kiezen voor 'hij schreef (één keer) een brief': aoristus of imperfectum?",
+          "antwoord": [
+            "aoristus",
+            "aorist"
+          ],
+          "feedback": "Eenmalige, afgeronde actie → aoristus: ἔγραψε ἐπιστολήν. Het imperfectum (ἔγραφε) zou suggereren 'hij was aan het schrijven'.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-AOR-ASPECT-003",
+          "knoop_ids": [
+            "GRC-G-SYNT-AOR-ASPECT"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Welke tijd past bij 'iedere dag offerde zij aan de goden': aoristus of imperfectum?",
+          "antwoord": [
+            "imperfectum",
+            "impf."
+          ],
+          "feedback": "Herhaalde handeling in het verleden → imperfectum: ἔθυεν τοῖς θεοῖς. Aoristus zou één specifieke offermoment noemen.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-AOR-ASPECT-004",
+          "knoop_ids": [
+            "GRC-G-SYNT-AOR-ASPECT"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Vertaal het aspectueel verschil: 'ὁ ἄνθρωπος ἔλεγε' vs. 'ὁ ἄνθρωπος εἶπε'.",
+          "antwoord": [
+            "ἔλεγε = hij was aan het spreken / sprak (telkens); εἶπε = hij zei (één keer)",
+            "impf. durend, aorist eenmalig"
+          ],
+          "feedback": "ἔλεγε (impf.) = duratief 'hij sprak / was aan het spreken'. εἶπε (aor.) = punctueel 'hij zei/sprak (één keer)'. Zelfde werkwoord, verschillend aspect.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-AOR-ASPECT-005",
+          "knoop_ids": [
+            "GRC-G-SYNT-AOR-ASPECT"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Waarom is de keuze tussen aoristus en imperfectum niet alleen een kwestie van 'wanneer', maar vooral van 'hoe'?",
+          "antwoord": [
+            "beide zijn verleden tijd; het verschil zit in het aspect (perfectief vs. imperfectief)",
+            "de aspectkeuze betreft de manier waarop de spreker de handeling ziet"
+          ],
+          "feedback": "Tempus (verleden) is bij beide gelijk. De spreker kiest het aspect: wil hij de handeling als één punt zien (aor.) of als proces/herhaling (impf.)?",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-PRON-INTRO",
@@ -3952,7 +5294,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-INTRO-001",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.6,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke vier hoofdcategorieën voornaamwoorden kent het Grieks in leerjaar 1?",
+          "antwoord": [
+            "persoonlijk, bezittelijk, aanwijzend, αὐτός",
+            "persoonlijk / bezittelijk / aanwijzend / αὐτός"
+          ],
+          "feedback": "Vier categorieën: persoonlijk (ἐγώ, σύ), bezittelijk (ἐμός, σός), aanwijzend (οὗτος, ἐκεῖνος, ὅδε) en het veelzijdige αὐτός (zelf / dezelfde / hem).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-INTRO-002",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.1,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Waarom neemt αὐτός een aparte plaats in tussen de Griekse voornaamwoorden?",
+          "antwoord": [
+            "het heeft drie functies: zelf, dezelfde, en hij/zij/het",
+            "drie betekenissen afhankelijk van positie en lidwoord"
+          ],
+          "feedback": "αὐτός is intensivum (zelf, predicatief), identiteit (dezelfde, attributief met lidwoord) én 3e-persoons-pronomen in de oblique naamvallen.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-PRON-PERS",
@@ -3964,7 +5343,62 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-PERS-001",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-PERS"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de genitivus enkelvoud van het persoonlijk voornaamwoord 'ik' (nadrukkelijke vorm).",
+          "antwoord": [
+            "ἐμοῦ",
+            "ἐμοῦ (μου)"
+          ],
+          "feedback": "Nadrukkelijk: ἐμοῦ ('van mij'). Enclitisch/zonder nadruk: μου. Dezelfde betekenis, verschillend gewicht in de zin.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-PERS-002",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-PERS"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.0,
+          "discriminatie_initieel": 1.1,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke naamval en persoon is ἡμῖν?",
+          "antwoord": [
+            "dativus 1e persoon meervoud (aan ons)",
+            "dat. pl. 1e pers."
+          ],
+          "feedback": "ἡμῖν = dat. pl. van ἡμεῖς ('wij'). Paradigma: ἡμεῖς / ἡμῶν / ἡμῖν / ἡμᾶς.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-PERS-003",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-PERS"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Waarom schrijft men 'ἐγὼ λέγω' i.p.v. alleen 'λέγω'? Wat voegt ἐγώ toe?",
+          "antwoord": [
+            "nadruk/contrast (IK zeg, in tegenstelling tot iemand anders)",
+            "expliciet onderwerp voor nadruk"
+          ],
+          "feedback": "De persoonsuitgang -ω zegt al 'ik'. ἐγώ toevoegen = nadruk of contrast: 'IK zeg (maar jij niet)'. Zonder contrast blijft het vnw. meestal weg.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-PRON-BEZ",
@@ -3976,7 +5410,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-BEZ-001",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-BEZ"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.1,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de nom. sg. vrouwelijk van het bezittelijk voornaamwoord 'mijn'.",
+          "antwoord": [
+            "ἐμή",
+            "ἡ ἐμή"
+          ],
+          "feedback": "ἐμός / ἐμή / ἐμόν — verbuigt als α/ο-stam adjectief. Vrouwelijk enkelvoud: ἐμή, ἐμῆς, ἐμῇ, ἐμήν.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-BEZ-002",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-BEZ"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Vertaal: ὁ ἐμὸς φίλος καὶ ὁ σὸς ἀδελφός. Welke twee bezittelijke vnw. staan hier, en hoe vertaal je ze?",
+          "antwoord": [
+            "ἐμός = mijn, σός = jouw; 'mijn vriend en jouw broer'",
+            "ἐμός (mijn) en σός (jouw)"
+          ],
+          "feedback": "Bezittelijke vnw. staan attributief bij het lidwoord: ὁ ἐμὸς φίλος = 'mijn vriend', ὁ σὸς ἀδελφός = 'jouw broer'. Ze verbuigen met het substantief mee.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-PRON-AANW",
@@ -3988,7 +5459,62 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-AANW-001",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-AANW"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Welk aanwijzend voornaamwoord gebruik je voor 'deze hier, die ik nú ga noemen' (vooruitwijzend)?",
+          "antwoord": [
+            "ὅδε",
+            "ὅδε / ἥδε / τόδε"
+          ],
+          "feedback": "ὅδε verwijst naar wat vólgt (cataforisch): 'deze (die ik nu ga noemen)'. οὗτος verwijst terug naar het net genoemde; ἐκεῖνος naar iets ver weg of eerder.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-AANW-002",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-AANW"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Welk aanwijzend voornaamwoord past bij 'die (veraf) / die gene' — bijv. over een persoon uit lang vervlogen tijden?",
+          "antwoord": [
+            "ἐκεῖνος",
+            "ἐκεῖνος / ἐκείνη / ἐκεῖνο"
+          ],
+          "feedback": "ἐκεῖνος = 'die, gene' — verwijst naar wat ver weg is in ruimte, tijd of gedachte. Tegenhanger van οὗτος (dichtbij, zojuist genoemd).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-AANW-003",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-AANW"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Kies het juiste demonstratief: 'Ik heb zojuist een verhaal verteld. ___ verhaal is waar.' (οὗτος / ἐκεῖνος / ὅδε?)",
+          "antwoord": [
+            "οὗτος",
+            "οὗτος (ὁ λόγος)"
+          ],
+          "feedback": "οὗτος verwijst terug naar wat net gezegd is (anaforisch): 'dit/dat verhaal (dat ik zojuist vertelde)'. ὅδε zou vooruitwijzen, ἐκεῖνος naar iets ver weg.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-PRON-HOUTOS",
@@ -4000,7 +5526,41 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-HOUTOS-001",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-HOUTOS"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Geef de nom. sg. vrouwelijk van οὗτος.",
+          "antwoord": "αὕτη",
+          "feedback": "Vrouwelijk nom. sg. = αὕτη (stam ταυτ- met α-klinker, spiritus asper). Niet verwarren met dat. sg. vr. ταύτῃ.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-HOUTOS-002",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-HOUTOS"
+          ],
+          "type": "analyse",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Welke naamval, geslacht en getal is τούτων?",
+          "antwoord": [
+            "genitivus pluralis (alle geslachten)",
+            "gen. pl. m/f/n"
+          ],
+          "feedback": "τούτων = gen. pl. — één vorm voor alle drie de geslachten, net als bij het lidwoord τῶν. Stamwisseling: sg. heeft ου-/αυ-, pl. heeft ου-/αυ- alternerend per vorm.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-PRON-EKEIN",
@@ -4012,7 +5572,41 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-EKEIN-001",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-EKEIN"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de acc. sg. mannelijk van ἐκεῖνος.",
+          "antwoord": "ἐκεῖνον",
+          "feedback": "ἐκεῖνος verbuigt als een α/ο-stam adjectief: ἐκεῖνος, ἐκείνου, ἐκείνῳ, ἐκεῖνον. Let op: nom. en acc. sg. n. = ἐκεῖνο (zónder -ν).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-EKEIN-002",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-EKEIN"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Welke naamval, geslacht en getal is ἐκείναις?",
+          "antwoord": [
+            "dativus pluralis vrouwelijk",
+            "dat. pl. vr."
+          ],
+          "feedback": "ἐκείναις = dat. pl. vr. (α-stam uitgang -αις). Verschilt van ἐκείνοις (dat. pl. m./n.).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-PRON-AUTOS",
@@ -4024,7 +5618,179 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-AUTOS-001",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-AUTOS",
+            "GRC-G-SYNT-PRON-GEBR"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Vertaal: ὁ βασιλεὺς αὐτὸς ἔρχεται. Waarom staat αὐτός zó (predicatief, zonder lidwoord vóór)?",
+          "antwoord": [
+            "de koning zelf komt; predicatieve positie → intensivum 'zelf'",
+            "'de koning zelf komt' — αὐτός predicatief = zelf"
+          ],
+          "feedback": "Predicatieve positie (ὁ βασιλεὺς αὐτὸς of αὐτὸς ὁ βασιλεύς) geeft de betekenis 'zelf'. Attributief (ὁ αὐτὸς βασιλεύς) zou 'dezelfde' betekenen.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-AUTOS-002",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-AUTOS",
+            "GRC-G-SYNT-PRON-GEBR"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Vertaal: αὐτὴ ἡ θεὰ τὸν νεὼν οἰκοδομεῖ. Wat betekent αὐτή hier?",
+          "antwoord": [
+            "de godin zelf bouwt de tempel",
+            "zelf — 'de godin zelf bouwt de tempel'"
+          ],
+          "feedback": "αὐτὴ ἡ θεά = predicatieve positie → 'de godin zélf'. Nadruk: niemand anders dan zij persoonlijk.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-AUTOS-003",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-AUTOS",
+            "GRC-G-SYNT-PRON-GEBR"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Vertaal: ὁ διδάσκαλος αὐτὸς γράφει τὴν ἐπιστολήν. Welke drie woorden dragen de nadruk van αὐτός?",
+          "antwoord": [
+            "'de leraar zelf schrijft de brief' — nadruk op 'de leraar zelf'",
+            "de leraar zelf — niet een slaaf of leerling"
+          ],
+          "feedback": "αὐτός predicatief = intensivum 'zelf'. Context: hij delegeert het niet, dóét het eigenhandig. Vergelijk Latijn ipse.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-AUTOS-004",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-AUTOS",
+            "GRC-G-SYNT-PRON-GEBR"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Vertaal: ὁ αὐτὸς ἀνὴρ πάλιν λέγει. Waarom betekent αὐτός hier 'dezelfde' en niet 'zelf'?",
+          "antwoord": [
+            "dezelfde man spreekt opnieuw; attributieve positie (lidwoord + αὐτός) → 'dezelfde'",
+            "attributief tussen lidwoord en substantief = 'dezelfde'"
+          ],
+          "feedback": "ὁ αὐτὸς ἀνήρ (lidwoord + αὐτός + substantief) = attributieve positie → 'dezelfde man'. Zonder lidwoord vóór αὐτός zou het 'zelf' betekenen.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-AUTOS-005",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-AUTOS",
+            "GRC-G-SYNT-PRON-GEBR"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Vertaal: ἡ αὐτὴ γνώμη ἐστὶν καὶ ἐμοὶ καὶ σοί.",
+          "antwoord": [
+            "Dezelfde mening heb ik en jij / wij hebben dezelfde mening",
+            "ik en jij hebben dezelfde mening"
+          ],
+          "feedback": "ἡ αὐτὴ γνώμη (attributief) = 'dezelfde mening'. Dativus van bezit: ἐμοί καὶ σοί = 'voor mij en voor jou'. Αὐτός met lidwoord = identiteit.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-AUTOS-006",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-AUTOS",
+            "GRC-G-SYNT-PRON-GEBR"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.7,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Welk verschil in betekenis geven deze twee zinnen? (a) ὁ στρατηγὸς αὐτὸς ἔρχεται. (b) ὁ αὐτὸς στρατηγὸς ἔρχεται.",
+          "antwoord": [
+            "(a) de generaal zelf komt; (b) dezelfde generaal komt",
+            "(a) zelf (predicatief); (b) dezelfde (attributief)"
+          ],
+          "feedback": "Positie t.o.v. het lidwoord beslist alles. Predicatief (αὐτός buiten lidwoord+subst.) = 'zelf'. Attributief (lidwoord + αὐτός + subst.) = 'dezelfde'.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-AUTOS-007",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-AUTOS",
+            "GRC-G-SYNT-PRON-GEBR"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Vertaal: ὁ δοῦλος ὁρᾷ αὐτόν. Welke functie heeft αὐτόν hier?",
+          "antwoord": [
+            "de slaaf ziet hem; αὐτόν = 3e pers. pronomen (hem) in acc.",
+            "αὐτόν = 'hem' (lijdend voorwerp)"
+          ],
+          "feedback": "In de oblique naamvallen (gen./dat./acc.) vervangt αὐτός het ontbrekende 3e-persoons pronomen: 'hem/haar/het'. Nom. wordt alleen als intensivum gebruikt.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-AUTOS-008",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-AUTOS",
+            "GRC-G-SYNT-PRON-GEBR"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Vertaal: ὁ πατὴρ δίδωσιν αὐτῷ τὸ βιβλίον. Welke vormen en welke betekenis heeft αὐτῷ?",
+          "antwoord": [
+            "dat. sg. m. — 'aan hem'; 'de vader geeft hem het boek'",
+            "αὐτῷ = 'aan hem' (dat. sg.)"
+          ],
+          "feedback": "αὐτῷ = dativus sg. m./n. — meewerkend voorwerp 'aan hem'. In de oblique naamvallen fungeert αὐτός als 3e-persoons pronomen.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-AUTOS-009",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-AUTOS",
+            "GRC-G-SYNT-PRON-GEBR"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Vertaal: ἡ μήτηρ φιλεῖ αὐτήν. Wat betekent αὐτήν hier, en waarom niet 'zelf'?",
+          "antwoord": [
+            "de moeder houdt van haar; αὐτήν in acc. = 'haar' (geen lidwoord in context → pronomen, geen intensivum)",
+            "αὐτήν = 'haar' (3e pers. pron., acc. sg. vr.)"
+          ],
+          "feedback": "αὐτός in oblique naamvallen zonder koppeling aan een gezamenlijk substantief = 3e-pers. pronomen. 'Zelf'-lezing vereist dat αὐτός predicatief bij een substantief staat.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-PRON-AANW",
@@ -4036,7 +5802,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-PRON-AANW-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-PRON-AANW"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Welke van deze woordvolgordes is correct voor 'deze mens' met οὗτος?",
+          "antwoord": [
+            "οὗτος ὁ ἄνθρωπος of ὁ ἄνθρωπος οὗτος",
+            "predicatieve positie: οὗτος staat buiten de lidwoord-substantief-groep"
+          ],
+          "feedback": "Demonstrativa staan in predicatieve positie: óf vóór het lidwoord (οὗτος ὁ ἄνθρωπος) óf na het substantief (ὁ ἄνθρωπος οὗτος). Nooit *ὁ οὗτος ἄνθρωπος.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-PRON-AANW-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-PRON-AANW"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Wat is er fout aan *ἡ ἐκείνη πόλις en hoe verbeter je het?",
+          "antwoord": [
+            "demonstrativa moeten predicatief staan: ἐκείνη ἡ πόλις of ἡ πόλις ἐκείνη",
+            "verkeerde positie; correct: ἐκείνη ἡ πόλις"
+          ],
+          "feedback": "*ἡ ἐκείνη πόλις plaatst het demonstratief attributief — fout. Demonstrativa staan altijd predicatief: ἐκείνη ἡ πόλις ('die stad').",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-MORF-PRON-PARAD",
@@ -4048,7 +5851,136 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-PARAD-001",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-PARAD",
+            "GRC-G-MORF-PRON-AUTOS"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de gen. sg. vr. van αὐτός.",
+          "antwoord": "αὐτῆς",
+          "feedback": "gen. sg. vr. = αὐτῆς ('van haar'). Uitgangen α/ο-stam, maar let op: gen./dat. sg. vr. eindigt op -ῆς / -ῇ (met iota subscript).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-PARAD-002",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-PARAD",
+            "GRC-G-MORF-PRON-AUTOS"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de dat. sg. vr. van αὐτός.",
+          "antwoord": "αὐτῇ",
+          "feedback": "dat. sg. vr. = αὐτῇ ('aan haar'). Uitgangen α/ο-stam, maar let op: gen./dat. sg. vr. eindigt op -ῆς / -ῇ (met iota subscript).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-PARAD-003",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-PARAD",
+            "GRC-G-MORF-PRON-AUTOS"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de gen. sg. m. van αὐτός.",
+          "antwoord": "αὐτοῦ",
+          "feedback": "gen. sg. m. = αὐτοῦ ('van hem'). Uitgangen α/ο-stam, maar let op: gen./dat. sg. vr. eindigt op -ῆς / -ῇ (met iota subscript).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-PARAD-004",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-PARAD",
+            "GRC-G-MORF-PRON-AUTOS"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de dat. sg. m. van αὐτός.",
+          "antwoord": "αὐτῷ",
+          "feedback": "dat. sg. m. = αὐτῷ ('aan hem'). Uitgangen α/ο-stam, maar let op: gen./dat. sg. vr. eindigt op -ῆς / -ῇ (met iota subscript).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-PARAD-005",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-PARAD",
+            "GRC-G-MORF-PRON-AUTOS"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de acc. sg. vr. van αὐτός.",
+          "antwoord": "αὐτήν",
+          "feedback": "acc. sg. vr. = αὐτήν ('haar'). Let op: nom./acc. pl. onz. is αὐτά (kort -α, geen -ος/-α verwarring met 1e decl.).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-PARAD-006",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-PARAD",
+            "GRC-G-MORF-PRON-AUTOS"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de nom. pl. onz. van αὐτός.",
+          "antwoord": "αὐτά",
+          "feedback": "nom. pl. onz. = αὐτά ('zij (onz.) / ze'). Let op: nom./acc. pl. onz. is αὐτά (kort -α, geen -ος/-α verwarring met 1e decl.).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-PARAD-007",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-PARAD",
+            "GRC-G-MORF-PRON-AUTOS"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de dat. pl. m./n. van αὐτός.",
+          "antwoord": "αὐτοῖς",
+          "feedback": "dat. pl. m./n. = αὐτοῖς ('aan hen'). Let op: nom./acc. pl. onz. is αὐτά (kort -α, geen -ος/-α verwarring met 1e decl.).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-MORF-PRON-PARAD-008",
+          "knoop_ids": [
+            "GRC-G-MORF-PRON-PARAD",
+            "GRC-G-MORF-PRON-AUTOS"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Geef de dat. pl. vr. van αὐτός.",
+          "antwoord": "αὐταῖς",
+          "feedback": "dat. pl. vr. = αὐταῖς ('aan hen (vr.)'). Let op: nom./acc. pl. onz. is αὐτά (kort -α, geen -ος/-α verwarring met 1e decl.).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-PRON-GEBR",
@@ -4060,7 +5992,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-PRON-GEBR-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-PRON-GEBR"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Waarom is een persoonlijk voornaamwoord als onderwerp meestal overbodig in het Grieks?",
+          "antwoord": [
+            "de persoonsuitgang van het werkwoord drukt de persoon al uit",
+            "uitgangen zijn expliciet; vnw. alleen bij nadruk"
+          ],
+          "feedback": "De werkwoordsuitgangen -ω, -εις, -ει, -ομεν, -ετε, -ουσι(ν) wijzen de persoon al ondubbelzinnig aan. Het vnw. voegt je alleen toe bij nadruk of contrast.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-PRON-GEBR-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-PRON-GEBR"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Wat is het verschil in gebruik tussen ἐμοῦ en μου?",
+          "antwoord": [
+            "ἐμοῦ = nadrukkelijk/aan begin van zin; μου = enclitisch, zonder nadruk",
+            "ἐμοῦ met klemtoon, μου als enclisis"
+          ],
+          "feedback": "Nadrukkelijk ἐμοῦ (eigen accent) gebruik je bij contrast of na een voorzetsel. Enclitisch μου leunt op het voorgaande woord: 'ὁ πατήρ μου' (mijn vader).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-PREP-INTRO",
@@ -4072,7 +6041,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-INTRO-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.5,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Wat heeft elk Grieks voorzetsel nodig van het zelfstandig naamwoord dat erop volgt?",
+          "antwoord": [
+            "een specifieke naamval (gen., dat. of acc.)",
+            "een vaste naamval"
+          ],
+          "feedback": "Elk voorzetsel stuurt één of meer vaste naamvallen. Sommige (ἐν, εἰς) alleen één; andere (ἐπί, παρά, μετά) drie — met betekenisverschil per naamval.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-INTRO-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-INTRO"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.1,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke ruwe vuistregel verbindt naamval en betekenis bij plaatsvoorzetsels?",
+          "antwoord": [
+            "gen. = vanwaar (beweging vanaf); dat. = waar (rust/plaats); acc. = waarheen (beweging naartoe)",
+            "gen. vandaan, dat. waar, acc. waarheen"
+          ],
+          "feedback": "Vuistregel: genitivus = herkomst (ἐκ τῆς οἰκίας), dativus = plaats/rust (ἐν τῇ οἰκίᾳ), accusativus = richting/doel (εἰς τὴν οἰκίαν).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-PREP-GEN",
@@ -4084,7 +6090,62 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-GEN-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-GEN"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Welke naamval eist ἀπό? Geef als voorbeeld 'van de stad af' (ἡ πόλις, πόλεως).",
+          "antwoord": [
+            "genitivus — ἀπὸ τῆς πόλεως",
+            "gen.; ἀπὸ τῆς πόλεως"
+          ],
+          "feedback": "ἀπό staat altijd met genitivus en betekent 'vanaf, (weg) van'. Beweging uit de buurt van iets: ἀπὸ τῆς πόλεως = 'van de stad weg'.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-GEN-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-GEN"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Vertaal: οἱ παῖδες ἐκ τῆς οἰκίας ἔρχονται. Welke naamval heeft τῆς οἰκίας en waarom?",
+          "antwoord": [
+            "genitivus; ἐκ eist de gen. ('uit het huis komen de kinderen')",
+            "gen. bij ἐκ — 'uit het huis'"
+          ],
+          "feedback": "ἐκ (vóór klinker: ἐξ) + gen. = 'uit'. Herkomst uit het binnenste van iets. Contrast met ἀπό (gen.) = 'vanaf, weg van'.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-GEN-003",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-GEN"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Vul de juiste vorm in: ἀπὸ ___ (ὁ ποταμός) ἔρχεται ὁ στρατηγός.",
+          "antwoord": [
+            "τοῦ ποταμοῦ",
+            "ἀπὸ τοῦ ποταμοῦ"
+          ],
+          "feedback": "ἀπό + gen. → ὁ ποταμός wordt τοῦ ποταμοῦ (gen. sg. m.). 'De generaal komt vanaf de rivier.'",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-PREP-DAT",
@@ -4096,7 +6157,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-DAT-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-DAT"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Welke naamval eist ἐν? Geef 'in het huis' (ἡ οἰκία).",
+          "antwoord": [
+            "dativus — ἐν τῇ οἰκίᾳ",
+            "dat.; ἐν τῇ οἰκίᾳ"
+          ],
+          "feedback": "ἐν + dat. = 'in, op' (rust/plaats). Geen beweging: waar iets zich bevindt. ἐν τῇ οἰκίᾳ = 'in het huis'.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-DAT-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-DAT"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Waarom is *ἐν τὴν οἰκίαν fout, en wat zou je moeten schrijven voor 'naar het huis toe'?",
+          "antwoord": [
+            "ἐν eist dativus, niet accusativus; 'naar het huis toe' = εἰς τὴν οἰκίαν",
+            "ἐν + dat. voor rust; εἰς + acc. voor beweging naartoe"
+          ],
+          "feedback": "ἐν + dat. = plaats/rust ('in'). Voor beweging naar een doel gebruik je εἰς + acc. Twee verschillende voorzetsels, twee verschillende naamvallen.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-PREP-ACC",
@@ -4108,7 +6206,62 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-ACC-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-ACC"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Welke naamval eist εἰς? Geef 'naar de agora' (ἡ ἀγορά).",
+          "antwoord": [
+            "accusativus — εἰς τὴν ἀγοράν",
+            "acc.; εἰς τὴν ἀγοράν"
+          ],
+          "feedback": "εἰς + acc. = 'naar...toe' (beweging, richting, doel). Altijd accusativus, nooit dativus of genitivus.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-ACC-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-ACC"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Vertaal: ὁ ἀνὴρ πρὸς τὸν φίλον λέγει. Welke naamval heeft τὸν φίλον en waarom?",
+          "antwoord": [
+            "accusativus; πρός + acc. = 'tegen, tot, naar' (gericht aan iemand)",
+            "acc. bij πρός — 'tegen de vriend'"
+          ],
+          "feedback": "πρός + acc. = richting, spreker die iets zegt 'tegen' iemand. 'De man spreekt tegen de vriend.'",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-ACC-003",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-ACC"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Vul aan met de juiste vorm: οἱ μαθηταὶ ἔρχονται εἰς ___ (τὸ διδασκαλεῖον).",
+          "antwoord": [
+            "τὸ διδασκαλεῖον",
+            "εἰς τὸ διδασκαλεῖον"
+          ],
+          "feedback": "εἰς + acc. Onzijdig enkelvoud τὸ διδασκαλεῖον is in nom. én acc. identiek (neutrum-regel). 'De leerlingen gaan naar de school.'",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-PREP-MRV",
@@ -4120,7 +6273,116 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-MRV-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-MRV"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "ἐπί kent drie naamvallen. Welke betekenis hoort bij ἐπί + gen.?",
+          "antwoord": [
+            "op (rust/plaats, historisch context: ten tijde van)",
+            "op (plaats); ten tijde van"
+          ],
+          "feedback": "ἐπί + gen. = 'op' (plaats) of historisch 'ten tijde van' (ἐπὶ Περικλέους = onder/ten tijde van Perikles).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-MRV-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-MRV"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Vertaal het verschil: (a) ἐπὶ τῇ τραπέζῃ — (b) ἐπὶ τὴν τράπεζαν.",
+          "antwoord": [
+            "(a) op de tafel (rust, dat.); (b) op de tafel toe (beweging, acc.)",
+            "dat. = op (rust), acc. = op (beweging naartoe)"
+          ],
+          "feedback": "ἐπί + dat. = 'op' (rust: iets ligt erop). ἐπί + acc. = 'op...toe' (iets wordt erop gelegd of beweegt erheen). Naamval verschuift de betekenis van rust naar richting.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-MRV-003",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-MRV"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.6,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Vul de juiste naamval in: οἱ στρατιῶται μάχονται ἐπὶ ___ (οἱ πολέμιοι) — 'de soldaten strijden tegen de vijanden'.",
+          "antwoord": [
+            "τοὺς πολεμίους",
+            "ἐπὶ τοὺς πολεμίους (acc.)"
+          ],
+          "feedback": "ἐπί + acc. in vijandige context = 'tegen, op af' (richting/doel). Soldaten die oprukken 'tegen' de vijand: ἐπὶ τοὺς πολεμίους.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-MRV-004",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-MRV"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "μετά + gen. en μετά + acc. hebben heel verschillende betekenissen. Welke?",
+          "antwoord": [
+            "μετά + gen. = met (samen met); μετά + acc. = na (tijd of plaats)",
+            "gen. = met; acc. = na"
+          ],
+          "feedback": "μετά + gen. = 'met, samen met' (gezelschap). μετά + acc. = 'na' (temporeel of ruimtelijk volgend). Zelfde voorzetsel, fundamenteel ander concept.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-MRV-005",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-MRV"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Vertaal en verklaar het naamvalsverschil: (a) μετὰ τῶν φίλων — (b) μετὰ τοὺς φίλους.",
+          "antwoord": [
+            "(a) met de vrienden (gen. = gezelschap); (b) na de vrienden (acc. = temporeel/volgorde)",
+            "gen. 'met', acc. 'na'"
+          ],
+          "feedback": "μετὰ τῶν φίλων (gen.) = 'met/samen met de vrienden'. μετὰ τοὺς φίλους (acc.) = 'na de vrienden' (later dan zij, of achter hen aan).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-PREP-MRV-006",
+          "knoop_ids": [
+            "GRC-G-SYNT-PREP-MRV"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "Welke naamval bij μετά voor 'na de slag' (ἡ μάχη)?",
+          "antwoord": [
+            "accusativus — μετὰ τὴν μάχην",
+            "acc.; μετὰ τὴν μάχην"
+          ],
+          "feedback": "'Na de slag' = temporeel → μετά + acc. → μετὰ τὴν μάχην. Zou de vertaling 'met de slag' zijn geweest, dan μετὰ τῆς μάχης (gen.) — maar dat slaat hier nergens op.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-WRDVLG",
@@ -4132,7 +6394,44 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-WRDVLG-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-WRDVLG"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Waarom kan het Grieks vrijer dan het Nederlands met woordvolgorde omgaan?",
+          "antwoord": [
+            "de naamvallen geven de zinsfunctie aan, niet de positie",
+            "naamvalsysteem neemt de taak van de woordvolgorde over"
+          ],
+          "feedback": "Door naamvalsuitgangen is onderwerp (nom.) vs. lijdend voorwerp (acc.) altijd duidelijk, ook bij afwijkende volgorde. Positie geeft dus nadruk, niet grammaticale functie.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-WRDVLG-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-WRDVLG"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.4,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Wat doet de schrijver met de positie van 'τὸν παῖδα' in 'τὸν παῖδα ὁ πατὴρ φιλεῖ'?",
+          "antwoord": [
+            "hij zet het lijdend voorwerp vooraan voor nadruk ('de jongen is het die de vader liefheeft')",
+            "nadruk op τὸν παῖδα door plaats aan het begin"
+          ],
+          "feedback": "Neutrale volgorde zou ὁ πατὴρ φιλεῖ τὸν παῖδα zijn. Door τὸν παῖδα vóóraan te plaatsen benadrukt de schrijver juist dit element (topic/focus).",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-ONTK",
@@ -4144,7 +6443,116 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-ONTK-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-ONTK"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.2,
+          "discriminatie_initieel": 1.1,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke ontkenning gebruik je in een feitelijke bewering in de indicativus?",
+          "antwoord": [
+            "οὐ",
+            "οὐ (οὐκ / οὐχ)"
+          ],
+          "feedback": "οὐ bij indicativus = factuele ontkenning: ontkent dát iets het geval is. Varianten: οὐ vóór medeklinker, οὐκ vóór zachte klinker, οὐχ vóór ruwe klinker.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-ONTK-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-ONTK"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Vul de juiste vorm van 'niet' in: ὁ διδάσκαλος ___ ἀκούει τοὺς παῖδας.",
+          "antwoord": [
+            "οὐκ",
+            "οὐκ (vóór klinker)"
+          ],
+          "feedback": "οὐκ vóór een klinker met zachte ademing (ἀκούει). Indicativus feitelijk ontkennen → οὐ-reeks (οὐ / οὐκ / οὐχ afhankelijk van volgklank).",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-ONTK-003",
+          "knoop_ids": [
+            "GRC-G-SYNT-ONTK"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Vertaal en geef de ontkenning aan: οὐχ ὁρᾶτε τὸν στρατηγόν;",
+          "antwoord": [
+            "'Zien jullie de generaal niet?' — οὐχ (vóór ruwe klinker ὁρ-)",
+            "οὐχ (vóór ὁ met spiritus asper)"
+          ],
+          "feedback": "Vragende zin met indicatieve werkwoordsvorm ὁρᾶτε → οὐ-reeks. De ὁ in ὁρᾶτε heeft spiritus asper, dus οὐχ. Indicativus blijft ook in een vraag feitelijk ontkennen met οὐ.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-ONTK-004",
+          "knoop_ids": [
+            "GRC-G-SYNT-ONTK"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.1,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke ontkenning hoort bij een verbod (imperatief of conjunctief met prohibitieve functie)?",
+          "antwoord": [
+            "μή",
+            "μή (prohibitief)"
+          ],
+          "feedback": "μή bij imperatief of conj. aor. ontkent een wens/verbod: 'doe dat niet!'. Niet feitelijk, maar modaal/prohibitief — daarom niet οὐ.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-ONTK-005",
+          "knoop_ids": [
+            "GRC-G-SYNT-ONTK"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Kies οὐ of μή: '___ λέγε ταῦτα!' (Zeg dat niet!)",
+          "antwoord": [
+            "μή",
+            "μὴ λέγε"
+          ],
+          "feedback": "Imperatief (λέγε) met verbod → μή. Feitelijk zou 'hij zegt dat niet' oὐ λέγει zijn; hier is het een appèl, dus μή.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-ONTK-006",
+          "knoop_ids": [
+            "GRC-G-SYNT-ONTK"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 30,
+          "stimulus": "In een finale bijzin ('opdat niet...') met conjunctief, welke ontkenning gebruik je? Geef de combinatie met ἵνα.",
+          "antwoord": [
+            "μή — ἵνα μή (+ conj.)",
+            "μή; ἵνα μή"
+          ],
+          "feedback": "Finale bijzinnen met ἵνα + conj. drukken doel uit; ontkennend doel = ἵνα μή ('opdat niet'). Conjunctief is modaal → altijd μή, nooit οὐ.",
+          "bron": "handmatig"
+        }
+      ]
     },
     {
       "id": "GRC-G-SYNT-ZINSBOUW",
@@ -4156,7 +6564,80 @@
       "fase": "onderbouw_1",
       "toetsbaar": true,
       "pensum_jaren": [],
-      "items": []
+      "items": [
+        {
+          "id": "ITEM-GRC-G-SYNT-ZINSBOUW-001",
+          "knoop_ids": [
+            "GRC-G-SYNT-ZINSBOUW"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": -0.3,
+          "discriminatie_initieel": 1.0,
+          "verwachte_tijd_sec": 15,
+          "stimulus": "Welke naamval dragen onderwerp, lijdend voorwerp en meewerkend voorwerp in het Grieks?",
+          "antwoord": [
+            "onderwerp nom., lijdend voorwerp acc., meewerkend voorwerp dat.",
+            "nom. / acc. / dat."
+          ],
+          "feedback": "Onderwerp = nominativus, lijdend voorwerp = accusativus, meewerkend voorwerp = dativus. De persoonsvorm congrueert met het onderwerp.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-ZINSBOUW-002",
+          "knoop_ids": [
+            "GRC-G-SYNT-ZINSBOUW"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.3,
+          "discriminatie_initieel": 1.3,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Ontleed de zin 'ὁ πατὴρ δίδωσιν τῷ παιδὶ τὸ βιβλίον': wie is onderwerp, lv, mv?",
+          "antwoord": [
+            "onderwerp: ὁ πατήρ; mv (dat.): τῷ παιδί; lv (acc.): τὸ βιβλίον",
+            "ow ὁ πατήρ, mv τῷ παιδί, lv τὸ βιβλίον"
+          ],
+          "feedback": "ὁ πατήρ (nom.) = onderwerp van δίδωσιν. τὸ βιβλίον (acc.) = lijdend voorwerp. τῷ παιδί (dat.) = meewerkend voorwerp. 'De vader geeft het kind het boek.'",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-ZINSBOUW-003",
+          "knoop_ids": [
+            "GRC-G-SYNT-ZINSBOUW"
+          ],
+          "type": "herkenning",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.2,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 20,
+          "stimulus": "Welk partikel markeert een neutrale ja/nee-vraag aan het begin van een Griekse zin?",
+          "antwoord": [
+            "ἆρα",
+            "ἆρα (of niets, met stijgende intonatie)"
+          ],
+          "feedback": "ἆρα aan het zinsbegin = neutrale vraagmarkering, zoals Engels 'Is it the case that...?' Antwoord kan positief of negatief zijn — het partikel zelf stuurt niet.",
+          "bron": "handmatig"
+        },
+        {
+          "id": "ITEM-GRC-G-SYNT-ZINSBOUW-004",
+          "knoop_ids": [
+            "GRC-G-SYNT-ZINSBOUW"
+          ],
+          "type": "contextueel",
+          "richting": "receptief",
+          "moeilijkheid_initieel": 0.5,
+          "discriminatie_initieel": 1.4,
+          "verwachte_tijd_sec": 25,
+          "stimulus": "Wat is het verschil tussen een vraag met ἆρα en een vraag met μῶν?",
+          "antwoord": [
+            "ἆρα is neutraal; μῶν verwacht een ontkennend antwoord ('toch niet?')",
+            "ἆρα neutraal, μῶν = 'toch niet?' (negatief verwachtingspatroon)"
+          ],
+          "feedback": "ἆρα stelt een open vraag zonder vooroordeel. μῶν (= μὴ οὖν) verwacht 'nee' als antwoord: 'μῶν ὁ ἀνὴρ ἀπέθανεν; = 'Hij is toch niet dood?' (verwacht: nee).",
+          "bron": "handmatig"
+        }
+      ]
     }
   ],
   "edges": [

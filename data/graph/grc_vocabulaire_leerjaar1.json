@@ -1129,6 +1129,25 @@
           "antwoord": "ἔχω",
           "feedback": "Het Griekse woord is 'ἔχω' (hebben, houden).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-ECHO-005",
+          "knoop_ids": [
+            "GRC-V-F01-ECHO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "ἔχω",
+            "translation": "hebben, houden"
+          },
+          "antwoord": "ἔσχον",
+          "feedback": "Stamtijden van ἔχω: ἔχειν, ἔσχον. De aoristus (1sg) is ἔσχον.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F01-ECHO.wav"
@@ -1232,6 +1251,25 @@
           "antwoord": "λέγω",
           "feedback": "Het Griekse woord is 'λέγω' (zeggen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-LEGO-005",
+          "knoop_ids": [
+            "GRC-V-F01-LEGO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "λέγω",
+            "translation": "zeggen"
+          },
+          "antwoord": "ἔλεξα/εἶπον",
+          "feedback": "Stamtijden van λέγω: λέγειν, ἔλεξα/εἶπον. De aoristus (1sg) is ἔλεξα/εἶπον.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F01-LEGO.wav"
@@ -1335,6 +1373,25 @@
           "antwoord": "γίγνομαι",
           "feedback": "Het Griekse woord is 'γίγνομαι' (worden, ontstaan).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-GIGNM-005",
+          "knoop_ids": [
+            "GRC-V-F01-GIGNM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "γίγνομαι",
+            "translation": "worden, ontstaan"
+          },
+          "antwoord": "ἐγενόμην",
+          "feedback": "Stamtijden van γίγνομαι: γίγνεσθαι, ἐγενόμην. De aoristus (1sg) is ἐγενόμην.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F01-GIGNM.wav"
@@ -1438,6 +1495,25 @@
           "antwoord": "ποιέω",
           "feedback": "Het Griekse woord is 'ποιέω' (maken, doen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-POIEO-005",
+          "knoop_ids": [
+            "GRC-V-F01-POIEO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "ποιέω",
+            "translation": "maken, doen"
+          },
+          "antwoord": "ἐποίησα",
+          "feedback": "Stamtijden van ποιέω: ποιεῖν, ἐποίησα. De aoristus (1sg) is ἐποίησα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F01-POIEO.wav"
@@ -4528,6 +4604,25 @@
           "antwoord": "γιγνώσκω",
           "feedback": "Het Griekse woord is 'γιγνώσκω' (leren kennen, weten).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-GIGNSK-005",
+          "knoop_ids": [
+            "GRC-V-F01-GIGNSK"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "γιγνώσκω",
+            "translation": "leren kennen, weten"
+          },
+          "antwoord": "ἔγνων",
+          "feedback": "Stamtijden van γιγνώσκω: γιγνώσκειν, ἔγνων. De aoristus (1sg) is ἔγνων.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F01-GIGNSK.wav"
@@ -4631,6 +4726,25 @@
           "antwoord": "βαίνω",
           "feedback": "Het Griekse woord is 'βαίνω' (gaan, stappen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-BAINO-005",
+          "knoop_ids": [
+            "GRC-V-F01-BAINO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "βαίνω",
+            "translation": "gaan, stappen"
+          },
+          "antwoord": "ἔβην",
+          "feedback": "Stamtijden van βαίνω: βαίνειν, ἔβην. De aoristus (1sg) is ἔβην.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F01-BAINO.wav"
@@ -4734,6 +4848,25 @@
           "antwoord": "φέρω",
           "feedback": "Het Griekse woord is 'φέρω' (dragen, brengen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-PHERO-005",
+          "knoop_ids": [
+            "GRC-V-F01-PHERO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "φέρω",
+            "translation": "dragen, brengen"
+          },
+          "antwoord": "ἤνεγκον",
+          "feedback": "Stamtijden van φέρω: φέρειν, ἤνεγκον. De aoristus (1sg) is ἤνεγκον.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F01-PHERO.wav"
@@ -4837,6 +4970,25 @@
           "antwoord": "ἔρχομαι",
           "feedback": "Het Griekse woord is 'ἔρχομαι' (komen, gaan).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-ERCHOM-005",
+          "knoop_ids": [
+            "GRC-V-F01-ERCHOM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "ἔρχομαι",
+            "translation": "komen, gaan"
+          },
+          "antwoord": "ἦλθον",
+          "feedback": "Stamtijden van ἔρχομαι: ἔρχεσθαι, ἦλθον. De aoristus (1sg) is ἦλθον.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F01-ERCHOM.wav"
@@ -4940,6 +5092,25 @@
           "antwoord": "ὁράω",
           "feedback": "Het Griekse woord is 'ὁράω' (zien).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-HORAO-005",
+          "knoop_ids": [
+            "GRC-V-F01-HORAO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "ὁράω",
+            "translation": "zien"
+          },
+          "antwoord": "εἶδον",
+          "feedback": "Stamtijden van ὁράω: ὁρᾶν, εἶδον. De aoristus (1sg) is εἶδον.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F01-HORAO.wav"
@@ -5043,6 +5214,25 @@
           "antwoord": "δίδωμι",
           "feedback": "Het Griekse woord is 'δίδωμι' (geven).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-DIDOMI-005",
+          "knoop_ids": [
+            "GRC-V-F01-DIDOMI"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "δίδωμι",
+            "translation": "geven"
+          },
+          "antwoord": "ἔδωκα",
+          "feedback": "Stamtijden van δίδωμι: διδόναι, ἔδωκα. De aoristus (1sg) is ἔδωκα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F01-DIDOMI.wav"
@@ -5146,6 +5336,25 @@
           "antwoord": "γράφω",
           "feedback": "Het Griekse woord is 'γράφω' (schrijven).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-GRAPHO-005",
+          "knoop_ids": [
+            "GRC-V-F01-GRAPHO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "γράφω",
+            "translation": "schrijven"
+          },
+          "antwoord": "ἔγραψα",
+          "feedback": "Stamtijden van γράφω: γράφειν, ἔγραψα. De aoristus (1sg) is ἔγραψα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F01-GRAPHO.wav"
@@ -5249,6 +5458,25 @@
           "antwoord": "ἄγω",
           "feedback": "Het Griekse woord is 'ἄγω' (leiden, voeren).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-AGO-005",
+          "knoop_ids": [
+            "GRC-V-F01-AGO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "ἄγω",
+            "translation": "leiden, voeren"
+          },
+          "antwoord": "ἤγαγον",
+          "feedback": "Stamtijden van ἄγω: ἄγειν, ἤγαγον. De aoristus (1sg) is ἤγαγον.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F01-AGO.wav"
@@ -5352,6 +5580,25 @@
           "antwoord": "πέμπω",
           "feedback": "Het Griekse woord is 'πέμπω' (zenden, sturen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-PEMPO-005",
+          "knoop_ids": [
+            "GRC-V-F01-PEMPO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "πέμπω",
+            "translation": "zenden, sturen"
+          },
+          "antwoord": "ἔπεμψα",
+          "feedback": "Stamtijden van πέμπω: πέμπειν, ἔπεμψα. De aoristus (1sg) is ἔπεμψα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F01-PEMPO.wav"
@@ -5455,6 +5702,25 @@
           "antwoord": "τίθημι",
           "feedback": "Het Griekse woord is 'τίθημι' (plaatsen, leggen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F01-TITHEM-005",
+          "knoop_ids": [
+            "GRC-V-F01-TITHEM"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "τίθημι",
+            "translation": "plaatsen, leggen"
+          },
+          "antwoord": "ἔθηκα",
+          "feedback": "Stamtijden van τίθημι: τιθέναι, ἔθηκα. De aoristus (1sg) is ἔθηκα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F01-TITHEM.wav"
@@ -7824,6 +8090,25 @@
           "antwoord": "λαμβάνω",
           "feedback": "Het Griekse woord is 'λαμβάνω' (nemen, pakken).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-LAMBAN-005",
+          "knoop_ids": [
+            "GRC-V-F02-LAMBAN"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "λαμβάνω",
+            "translation": "nemen, pakken"
+          },
+          "antwoord": "ἔλαβον",
+          "feedback": "Stamtijden van λαμβάνω: λαμβάνειν, ἔλαβον. De aoristus (1sg) is ἔλαβον.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-LAMBAN.wav"
@@ -7927,6 +8212,25 @@
           "antwoord": "εὑρίσκω",
           "feedback": "Het Griekse woord is 'εὑρίσκω' (vinden).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-HEURSK-005",
+          "knoop_ids": [
+            "GRC-V-F02-HEURSK"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "εὑρίσκω",
+            "translation": "vinden"
+          },
+          "antwoord": "ηὗρον",
+          "feedback": "Stamtijden van εὑρίσκω: εὑρίσκειν, ηὗρον. De aoristus (1sg) is ηὗρον.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-HEURSK.wav"
@@ -8030,6 +8334,25 @@
           "antwoord": "ἀκούω",
           "feedback": "Het Griekse woord is 'ἀκούω' (horen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-AKOUO-005",
+          "knoop_ids": [
+            "GRC-V-F02-AKOUO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "ἀκούω",
+            "translation": "horen"
+          },
+          "antwoord": "ἤκουσα",
+          "feedback": "Stamtijden van ἀκούω: ἀκούειν, ἤκουσα. De aoristus (1sg) is ἤκουσα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-AKOUO.wav"
@@ -8133,6 +8456,25 @@
           "antwoord": "φεύγω",
           "feedback": "Het Griekse woord is 'φεύγω' (vluchten).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-PHEUGO-005",
+          "knoop_ids": [
+            "GRC-V-F02-PHEUGO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "φεύγω",
+            "translation": "vluchten"
+          },
+          "antwoord": "ἔφυγον",
+          "feedback": "Stamtijden van φεύγω: φεύγειν, ἔφυγον. De aoristus (1sg) is ἔφυγον.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-PHEUGO.wav"
@@ -8236,6 +8578,25 @@
           "antwoord": "βάλλω",
           "feedback": "Het Griekse woord is 'βάλλω' (werpen, gooien).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-BALLO-005",
+          "knoop_ids": [
+            "GRC-V-F02-BALLO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "βάλλω",
+            "translation": "werpen, gooien"
+          },
+          "antwoord": "ἔβαλον",
+          "feedback": "Stamtijden van βάλλω: βάλλειν, ἔβαλον. De aoristus (1sg) is ἔβαλον.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-BALLO.wav"
@@ -8339,6 +8700,25 @@
           "antwoord": "κελεύω",
           "feedback": "Het Griekse woord is 'κελεύω' (bevelen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-KELEUO-005",
+          "knoop_ids": [
+            "GRC-V-F02-KELEUO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "κελεύω",
+            "translation": "bevelen"
+          },
+          "antwoord": "ἐκέλευσα",
+          "feedback": "Stamtijden van κελεύω: κελεύειν, ἐκέλευσα. De aoristus (1sg) is ἐκέλευσα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-KELEUO.wav"
@@ -8442,6 +8822,25 @@
           "antwoord": "λείπω",
           "feedback": "Het Griekse woord is 'λείπω' (verlaten, achterlaten).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-LEIPO-005",
+          "knoop_ids": [
+            "GRC-V-F02-LEIPO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "λείπω",
+            "translation": "verlaten, achterlaten"
+          },
+          "antwoord": "ἔλιπον",
+          "feedback": "Stamtijden van λείπω: λείπειν, ἔλιπον. De aoristus (1sg) is ἔλιπον.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-LEIPO.wav"
@@ -8545,6 +8944,25 @@
           "antwoord": "μανθάνω",
           "feedback": "Het Griekse woord is 'μανθάνω' (leren).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-MANTHN-005",
+          "knoop_ids": [
+            "GRC-V-F02-MANTHN"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "μανθάνω",
+            "translation": "leren"
+          },
+          "antwoord": "ἔμαθον",
+          "feedback": "Stamtijden van μανθάνω: μανθάνειν, ἔμαθον. De aoristus (1sg) is ἔμαθον.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-MANTHN.wav"
@@ -8648,6 +9066,25 @@
           "antwoord": "πείθω",
           "feedback": "Het Griekse woord is 'πείθω' (overtuigen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-PEITHO-005",
+          "knoop_ids": [
+            "GRC-V-F02-PEITHO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "πείθω",
+            "translation": "overtuigen"
+          },
+          "antwoord": "ἔπεισα",
+          "feedback": "Stamtijden van πείθω: πείθειν, ἔπεισα. De aoristus (1sg) is ἔπεισα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-PEITHO.wav"
@@ -8751,6 +9188,25 @@
           "antwoord": "τρέπω",
           "feedback": "Het Griekse woord is 'τρέπω' (keren, wenden).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-TREPO-005",
+          "knoop_ids": [
+            "GRC-V-F02-TREPO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "τρέπω",
+            "translation": "keren, wenden"
+          },
+          "antwoord": "ἔτρεψα",
+          "feedback": "Stamtijden van τρέπω: τρέπειν, ἔτρεψα. De aoristus (1sg) is ἔτρεψα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-TREPO.wav"
@@ -8854,6 +9310,25 @@
           "antwoord": "τρέχω",
           "feedback": "Het Griekse woord is 'τρέχω' (rennen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-TRECHO-005",
+          "knoop_ids": [
+            "GRC-V-F02-TRECHO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "τρέχω",
+            "translation": "rennen"
+          },
+          "antwoord": "ἔδραμον",
+          "feedback": "Stamtijden van τρέχω: τρέχειν, ἔδραμον. De aoristus (1sg) is ἔδραμον.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-TRECHO.wav"
@@ -8957,6 +9432,25 @@
           "antwoord": "νομίζω",
           "feedback": "Het Griekse woord is 'νομίζω' (menen, geloven).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-NOMIZO-005",
+          "knoop_ids": [
+            "GRC-V-F02-NOMIZO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "νομίζω",
+            "translation": "menen, geloven"
+          },
+          "antwoord": "ἐνόμισα",
+          "feedback": "Stamtijden van νομίζω: νομίζειν, ἐνόμισα. De aoristus (1sg) is ἐνόμισα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-NOMIZO.wav"
@@ -9163,6 +9657,25 @@
           "antwoord": "δείκνυμι",
           "feedback": "Het Griekse woord is 'δείκνυμι' (tonen, aanwijzen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-DEIKNU-005",
+          "knoop_ids": [
+            "GRC-V-F02-DEIKNU"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "δείκνυμι",
+            "translation": "tonen, aanwijzen"
+          },
+          "antwoord": "ἔδειξα",
+          "feedback": "Stamtijden van δείκνυμι: δεικνύναι, ἔδειξα. De aoristus (1sg) is ἔδειξα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-DEIKNU.wav"
@@ -9266,6 +9779,25 @@
           "antwoord": "φιλέω",
           "feedback": "Het Griekse woord is 'φιλέω' (liefhebben, houden van).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-PHILEO-005",
+          "knoop_ids": [
+            "GRC-V-F02-PHILEO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "φιλέω",
+            "translation": "liefhebben, houden van"
+          },
+          "antwoord": "ἐφίλησα",
+          "feedback": "Stamtijden van φιλέω: φιλεῖν, ἐφίλησα. De aoristus (1sg) is ἐφίλησα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-PHILEO.wav"
@@ -9369,6 +9901,25 @@
           "antwoord": "νικάω",
           "feedback": "Het Griekse woord is 'νικάω' (overwinnen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-NIKAO-005",
+          "knoop_ids": [
+            "GRC-V-F02-NIKAO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "νικάω",
+            "translation": "overwinnen"
+          },
+          "antwoord": "ἐνίκησα",
+          "feedback": "Stamtijden van νικάω: νικᾶν, ἐνίκησα. De aoristus (1sg) is ἐνίκησα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-NIKAO.wav"
@@ -9472,6 +10023,25 @@
           "antwoord": "τιμάω",
           "feedback": "Het Griekse woord is 'τιμάω' (eren).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-TIMAO-005",
+          "knoop_ids": [
+            "GRC-V-F02-TIMAO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "τιμάω",
+            "translation": "eren"
+          },
+          "antwoord": "ἐτίμησα",
+          "feedback": "Stamtijden van τιμάω: τιμᾶν, ἐτίμησα. De aoristus (1sg) is ἐτίμησα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-TIMAO.wav"
@@ -9575,6 +10145,25 @@
           "antwoord": "ζητέω",
           "feedback": "Het Griekse woord is 'ζητέω' (zoeken).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-ZETEO-005",
+          "knoop_ids": [
+            "GRC-V-F02-ZETEO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "ζητέω",
+            "translation": "zoeken"
+          },
+          "antwoord": "ἐζήτησα",
+          "feedback": "Stamtijden van ζητέω: ζητεῖν, ἐζήτησα. De aoristus (1sg) is ἐζήτησα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-ZETEO.wav"
@@ -9678,6 +10267,25 @@
           "antwoord": "δοκέω",
           "feedback": "Het Griekse woord is 'δοκέω' (menen, schijnen).",
           "bron": "llm_gegenereerd"
+        },
+        {
+          "id": "ITEM-GRC-V-F02-DOKEO-005",
+          "knoop_ids": [
+            "GRC-V-F02-DOKEO"
+          ],
+          "type": "productie",
+          "richting": "productief",
+          "moeilijkheid_initieel": 1.0,
+          "discriminatie_initieel": 1.2,
+          "verwachte_tijd_sec": 25,
+          "stimulus": {
+            "instruction": "Geef de aoristus (1e persoon enkelvoud) van dit Griekse werkwoord.",
+            "lemma": "δοκέω",
+            "translation": "menen, schijnen"
+          },
+          "antwoord": "ἔδοξα",
+          "feedback": "Stamtijden van δοκέω: δοκεῖν, ἔδοξα. De aoristus (1sg) is ἔδοξα.",
+          "bron": "handmatig"
         }
       ],
       "audio_ref": "GRC-V-F02-DOKEO.wav"
