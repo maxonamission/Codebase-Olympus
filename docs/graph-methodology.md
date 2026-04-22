@@ -52,16 +52,18 @@ Het is bewust **geen library** en bewust **geen generieke basisklasse**. Het is 
 
 **Regel.** Elk project heeft `graph/validation.py` die een `ValidationReport` produceert. Minstens deze checks:
 
-- cycle-detectie op "harde" edges
+- cycle-detectie **per edge-type waarvoor de semantiek dat vraagt**
 - orphan-detectie (isolated nodes)
 - duplicate-ID-detectie
 - dangling edge-references (al in de loader)
 
 Optioneel, afhankelijk van het domein: topologische sortering, connectivity-analyse, diameter, clustering.
 
-**Rationale.** Deze checks vangen 80 % van de dataset-fouten die anders pas aan het oppervlak komen in productie. Wat "hard" betekent verschilt per domein — in Olympus is `prerequisite` hard en `enrichment` soft. Daarom definieert elk project zelf welk edge-type deel is van de invariant.
+**Rationale — waarom per edge-type.** Een globale "de graph is een DAG"-check is een anti-pattern zodra je meer dan één edge-type hebt. Olympus heeft prerequisite (moet acyclisch), enrichment (mag cyclisch), transfer (bidirectioneel, dus automatisch cyclisch); een globale check zou elke transfer als cyclus rapporteren. Olympus-voorbeeld: `_prerequisite_enrichment_subgraph` filtert de transfer-edges vóór `nx.simple_cycles()` wordt aangeroepen. Alternatieve edge-types (FEEDBACK, SOCIAL_REGULATORY) bij een causaal netwerk zijn een sterker voorbeeld: die *willen* juist cyclisch zijn.
 
-**Script:** `scripts/validate_graph.py` draait de hele catalogus en exit non-zero bij fouten. Staat in CI als aparte stap, zodat een kapotte data-commit niet naar `main` gaat.
+**Concrete API.** Een hulpfunctie `acyclic_subgraph(graph, *, edge_types: set[str])` of vergelijkbaar; de `detect_cycles`-functie roept die aan met de types-die-acyclisch-moeten-zijn. Vermijd de hardcoded "drop type X"-variant — dan breekt elke toevoeging van een nieuw edge-type de check.
+
+**Script.** `scripts/validate_graph.py` draait de catalogus en exit non-zero bij fouten. Staat in CI als aparte stap, zodat een kapotte data-commit niet naar `main` gaat.
 
 ### 6. Naamgevingsconventies
 
@@ -128,3 +130,29 @@ Loop langs bij het opstarten van een nieuw graph-project:
 - [ ] Smoke + round-trip + invariant-based tests aanwezig (§8)
 
 Acht "ja" = je volgt de methodologie. Minder is geen ramp, mits je per afwijking een eenregelige rationale in je project-CLAUDE.md noteert.
+
+## Appendix: wanneer je domein dynamiek en tijd heeft
+
+De acht conventies hierboven gaan uit van een **structurele graph**: een stabiel model waarin knopen en edges beschrijven wat waarmee samenhangt. Voor veel domeinen is dat niet de hele verhaal. Sportdeelname, organisatieontwikkeling, epidemiologie, marktdynamica — daar heeft elke edge een **vertraging** (investering in U8 werkt pas na jaren door) en is **feedback** essentieel (meer deelname → gezondere competitie → meer deelname).
+
+**Herken het:** als edges in je schema een `time_lag`, `delay`, `cycle_time`, `half_life` of `polarity`-veld hebben, of als je wilt antwoorden op "wat als ik X verander?" in plaats van "hoe hangen A en B samen?", ben je in dynamisch-domein-territorium.
+
+**Drie valkuilen om te vermijden:**
+
+1. **Dead-field anti-pattern.** `time_lag` opslaan maar niet gebruiken in de simulatie. Het schema belooft dan iets wat de code niet levert — reviewers en toekomstige jezelf raken in verwarring. Ofwel activeer het veld, ofwel schrap het uit het schema.
+2. **DAG-dogma op een causaal netwerk.** Als je domein feedback-loops kent, forceer dan niet globaal DAG-acycliciteit. Zie §5: typeer edges en check per type.
+3. **Statische analyse als je dynamische vragen hebt.** Pad-analyse ("welke factoren hangen samen?") werkt op een statische graph. Interventie-vragen vragen om propagatie in de tijd. Gebruik niet het eerste voor het tweede.
+
+**Wanneer de acht conventies nog steeds grotendeels passen:**
+
+- Pydantic-typering (§1), ID-schema (§2), lean JSON + content (§3), directory-loader (§4), naamgeving (§6), test-patronen (§8) — volledig toepasbaar.
+- Invarianten (§5) — toepasbaar mits per edge-type.
+- Layout-defaults (§7) — causale netwerken met feedback lenen zich voor circulaire of force-directed layout in plaats van Sugiyama; anders identiek.
+
+**Wanneer je buiten deze methodologie treedt:**
+
+- **Simulatie-laag.** Echte turn-based of continue-tijd-simulatie vraagt om óf discrete stappen over de graph (eigen code), óf system-dynamics-tooling (Vensim, Stella, `BPTK-Py`). De graph blijft dan de **datalaag**; de simulator is apart. Documenteer de tijdseenheid (seizoen? week? dag?) en welke edges "doorzetten" per stap.
+- **Onzekerheid en parameters.** Dynamische modellen hebben vaak parameters (`base_weight`, `strength`, `curve_type`) die niet uit data maar uit literatuur of expertise komen. Sla de bron (`literature`-veld) op; dit is content die thuishoort in §3's separate-content-model of op de edge zelf.
+- **Visualisatie van dynamiek.** Structurele viz (welke factoren hangen samen?) en dynamische viz (hoe verandert factor X over tijd na interventie?) zijn twee aparte componenten. De eerste volgt §7; de tweede is out-of-scope hier.
+
+**Gemeenschappelijke les:** als je domein dynamisch is, behandel je model als een **tweeluik**: structurele graph (beschrijft wat waarmee samenhangt, volgt deze methodologie) en dynamisch overlay (beschrijft hoe het beweegt, eigen regels). De twee delen de knopen en edges maar níét de invarianten of de analysemethodiek.
