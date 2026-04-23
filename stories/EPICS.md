@@ -706,7 +706,7 @@ Beide routes leiden tot mastery op dezelfde knopen — het verschil is de volgor
 | OS-01 | Lint- en formatbasis afmaken (ruff strict) | 1 | — | done |
 | OS-02 | Type-checking toevoegen (mypy) | 1 | — | done |
 | OS-03 | Pre-commit hooks | 2 | OS-01, OS-02 | done |
-| OS-04 | CI baseline (GitHub Actions) | 4 | OS-01, OS-02 | doing |
+| OS-04 | CI baseline (GitHub Actions) | 4 | OS-01, OS-02 | done |
 | OS-05 | Claude Code hooks (PostToolUse + Stop) | 3 | OS-01 | done |
 | OS-06 | Storystatus- en AC-verificatie (script + hooks + CI) | 2 + 4 | OS-03, OS-04 | done |
 | OS-07 | Review-skills inbedden in workflow | 5 | — | doing |
