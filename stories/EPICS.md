@@ -496,6 +496,70 @@ De grading-module (`scheduling/grading.py`) en `GradingResult` zijn ontworpen zo
 Blokkeert niet, maar activeert waarde die F1-12 sinds april 2026 al verzamelt.
 
 ---
+
+## Spoor M — Methodologie en doelgroep-uitbreiding
+
+Spiegeling van Olympus' aanpak aan externe didactische praktijk
+(Wijkunnenmeer / Reijgwart). Drie sporen: vertaalstrategie als
+first-class object in de graph, misconceptie-diagnostiek, en een
+tweede gebruikersmodus voor de gymnasiast die op school al vastloopt.
+
+Bron: `docs/externe-bronnen/wkm-problemen-latijn-grieks.md`.
+
+### Uitvoervolgorde
+
+1. **M1-01** (Knoop-type P + POLMO) — modelaanpassing, blokkeert M1-02
+2. **M1-02** (Misconcepties + Lego-vertaler-detectie) — bouwt op M1-01
+3. **M1-03** (Bijspijkerroute) — onafhankelijk maar profiteert van M1-01/02
+
+---
+
+## Epic M1: WKM-spiegeling — vertaalstrategie, misconcepties, bijspijkerroute
+
+**Doel:** Drie inzichten uit Wijkunnenmeer's praktijk inbouwen in
+Olympus: (1) de vertaalstrategie POLMO als procedurele DAG naast de
+declaratieve grammatica; (2) misconcepties als first-class object met
+een eerste detector voor "Lego-vertalen"; (3) een tweede
+gebruikersmodus die de grotere doelgroep — gymnasiasten die op school
+dreigen te zakken — als primaire doelgroep ondersteunt.
+
+**Geschat:** 3 stories (uitbreidbaar — vervolgstories voor extra
+procedures, extra misconcepties en extra schoolmethodes liggen voor
+de hand)
+
+**Afhankelijkheden:**
+- A1, A2, A3 done (graph bestaat)
+- F1-12 done (telemetrie-basis voor M1-02)
+- E1 in uitvoering (methode-mapping voor M1-03)
+
+**Status:** backlog
+
+| Story | Titel | Afhankelijk | Status |
+|-------|-------|-------------|--------|
+| M1-01 | Knoop-type P (Procedure) + POLMO-stappen-DAG | — | backlog |
+| M1-02 | Misconceptie-attribuut + Lego-vertaler-detectie | M1-01 | backlog |
+| M1-03 | Bijspijkerroute — methode-en-hoofdstuk-gestuurde catch-up | E1 | backlog |
+
+**Verhouding tot andere epics:**
+- **E1** is begonnen aan methode-mapping (Fortuna, SPQR); M1-03
+  formaliseert dat tot een tweede planner-modus
+- **E7** (didactische routes) is route-loodrecht op M1: bijspijker- en
+  staatsexamen-modus werken beide op grammar-first én context-first
+- **F2** (mentor-dashboard) wordt waardevoller wanneer M1-02 actief
+  is — een misconceptie-flag is precies het soort signaal dat een
+  mentor wil zien
+- **C1/C2/E3** (items en content) — POLMO-stappen krijgen later eigen
+  items en content via vervolgstories
+
+**Niet-scope voor M1:**
+- Volledige Bug Library (meerdere misconcepties) — alleen Lego-vertalen
+- Studievaardigheden als parallelle skill-tree (executieve functies,
+  encoding-strategieën) — eigen toekomstige epic
+- Ouder/mentor-dashboard met misconceptie-overzicht — F2-uitbreiding
+- LLM-feedback bij misconceptie — buiten scope, regelgebaseerde
+  detectie volstaat
+
+---
 ---
 
 ## Roadmap — toekomstige epics
