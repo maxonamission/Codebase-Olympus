@@ -94,14 +94,14 @@ repos:
 
       - id: validate-graph
         name: validate-graph
-        entry: uv run python scripts/validate_graph.py data/graph/
+        entry: uv run python scripts/validate_graph.py data/graph/ --mode=staged
         language: system
         pass_filenames: false
         files: ^data/graph/
 
       - id: story-status-check
         name: story-status-check
-        entry: uv run python scripts/check_story_status.py
+        entry: uv run python scripts/check_story_status.py --mode=staged
         language: system
         pass_filenames: false
 
@@ -341,6 +341,13 @@ Eenvoudige Python-CLI die:
 2. Door `stories/doing/` loopt en alleen waarschuwt bij meer dan 3 actieve stories.
 3. Verifieert dat elke story-naam ook in `EPICS.md` voorkomt.
 4. Verifieert dat de status in `EPICS.md` overeenkomt met de fysieke locatie.
+
+**Twee modes** (geldt ook voor `validate_graph.py` en andere cross-document-validators):
+
+- `--mode=staged` (default lokaal, voor pre-commit): rapporteert drift, exit 0 — niet-blokkerend. Lokaal mag drift bestaan tijdens werk-in-uitvoering: een story zit halverwege een refactor, EPICS.md is nog niet bijgewerkt, een ref_id is nog niet uitgevuld. Soft-fail voorkomt dat zulke tijdelijke inconsistentie de commit blokkeert.
+- `--mode=full` (CI): hard, exit 1 bij elk probleem. CI is de gate die `main` schoonhoudt.
+
+Zonder dit onderscheid wordt de pre-commit hook ofwel zo streng dat hij vaak omzeild wordt (`--no-verify`), ofwel zo lakse dat hij in CI alsnog dingen toelaat die niet hadden gemoeten.
 
 Implementatieblauwdruk in Olympus' `scripts/check_story_status.py`. ~150 regels.
 
