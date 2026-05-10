@@ -47,6 +47,21 @@ Dit hoofdstuk bevat de fouten die in Codebase-Olympus en aanverwante projecten (
 
 **Mitigatie als het al gebeurd is:** schrijf een idempotent migratiescript, lever een `old_to_new_ids.json` mee, voer pas door als alle externe consumenten ervan op de hoogte zijn.
 
+**Patroon voor het migratiescript** (idempotent + zelf-validerend, naar het patroon `_scripts/check_*.py`):
+
+```python
+def migrate(data: dict) -> tuple[dict, dict[str, str]]:
+    """Return (migrated_data, old_to_new_id_mapping). Idempotent."""
+    mapping = build_mapping(data)              # bestaande IDs → nieuwe IDs
+    if all(old == new for old, new in mapping.items()):
+        return data, mapping                   # niets te doen, tweede run = no-op
+    migrated = apply_mapping(data, mapping)
+    validate_referential_integrity(migrated)   # geen dangling refs
+    return migrated, mapping
+```
+
+Drie eigenschappen die het script altijd heeft: (1) idempotent (tweede run produceert geen wijzigingen), (2) referentiële integriteit gecheckt vóór wegschrijven, (3) mapping-bestand als audit-trail. Zonder een van de drie krijg je over zes maanden niemand meer die het durft te draaien.
+
 ## §B — Werkwijze-antipatronen
 
 ### 7. Bouwen-zonder-storying
@@ -210,6 +225,12 @@ Loop deze door **vóór je je eerste echte gebruiker (of pilotgroep) toelaat**. 
 - [ ] Sliders/parameters met eenheden en literatuur-onderbouwing
 - [ ] Minstens drie voorbeeldscenario's gedocumenteerd
 
+### Evidence-traceability (alle archetypes met literatuur- of bronclaims)
+
+- [ ] Sliders, evidence-claims en bron-velden hebben een `ref_id` naar een gedeeld literatuurregister (`data/literatuur.json` of equivalent)
+- [ ] Reference-integrity-invariant draait in `validation.py` (zie hoofdstuk 02 §F invariant 9)
+- [ ] Literatuur-audit-script in CI; rotte refs blokkeren de merge
+
 ### Ontwikkelstraat (hoofdstuk 04)
 
 - [ ] Pre-commit hooks actief en groen
@@ -227,6 +248,7 @@ Loop deze door **vóór je je eerste echte gebruiker (of pilotgroep) toelaat**. 
 ### Domeinvalidatie
 
 - [ ] Externe expertise-sessie heeft plaatsgevonden vóór pilot (of expliciete reden geboekt waarom niet)
+- [ ] **Externe-blik-sessie** ingepland: review door iemand die niet meegebouwd heeft. Ander dan de domeinexpert; doel is fris perspectief op architectuur en documentatie, niet domeininhoud
 - [ ] Onboarding-laag aanwezig en getest
 - [ ] Pensum/scenario-overlay (jaarlijks of cases-gestuurd) gescheiden van vaste graph
 - [ ] Privacy-implicaties (AVG, minderjarigen) afgewogen indien van toepassing

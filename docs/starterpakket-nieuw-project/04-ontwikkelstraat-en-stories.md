@@ -15,6 +15,14 @@ Dit hoofdstuk is een **uittreksel met praktijkrecepten** bij `docs/ontwikkelstra
 
 Volg de lagen-volgorde bij invoer: laag 1-2 op dag één, laag 3-4 binnen de eerste sprint, laag 5 zodra je je eerste merge doet, laag 6 als je een tweede project hebt.
 
+### Archief vanaf maand 6
+
+Een lang-lopend project (>6 maanden) accumuleert versies van BRIEFING- en ONTWERPKEUZES-documenten, afgeronde closure-rapporten en gearchiveerde verkenningen. Zonder discipline raken die ofwel verloren of vervuilen ze de actieve werkruimte.
+
+Werkwijze: een `archief/`-map met een `archief/INDEX.md` die per gearchiveerd document één regel geeft (titel, datum, reden van archivering). Zodra een document niet meer actief gebruikt wordt — een nieuwe versie is uit, een review-cyclus is afgesloten, een verkenning is gemerged of verworpen — verhuis je het naar `archief/` en voeg je een regel toe aan de index. **Wijzig nooit een document na archivering**, anders breekt de terugkijk-functie ("hoe stond het er destijds bij?"). Voor wijzigingen: maak een nieuw document in de actieve ruimte; verwijs eventueel terug.
+
+Niet relevant in de eerste maanden; activeer zodra de tweede major versie van BRIEFING of ONTWERPKEUZES geschreven wordt.
+
 ## §B — Concreet: minimale starter-config
 
 Hieronder de bestanden die je in je nieuwe repo zet. Je kunt ze grotendeels uit Olympus kopiëren en domein-specifiek aanpassen.
@@ -41,6 +49,10 @@ dev = [
 ]
 
 [tool.ruff]
+# Houd target-version op de laagste Python-versie uit requires-python (hier 3.11);
+# dat dwingt ruff om geen syntax voor te stellen die op de oudste ondersteunde
+# versie nog niet werkt. Vergeet niet bij te werken zodra je requires-python
+# verhoogt.
 target-version = "py311"
 line-length = 99
 
@@ -94,14 +106,14 @@ repos:
 
       - id: validate-graph
         name: validate-graph
-        entry: uv run python scripts/validate_graph.py data/graph/
+        entry: uv run python scripts/validate_graph.py data/graph/ --mode=staged
         language: system
         pass_filenames: false
         files: ^data/graph/
 
       - id: story-status-check
         name: story-status-check
-        entry: uv run python scripts/check_story_status.py
+        entry: uv run python scripts/check_story_status.py --mode=staged
         language: system
         pass_filenames: false
 
@@ -195,7 +207,7 @@ Test eerst handmatig dat ze werken; commit pas daarna.
 
 ## §C — De story-workflow
 
-De story-conventie is de manier om werk te verdelen in afgebakende, traceerbare eenheden — zowel voor jezelf als voor AI-assistentie. Olympus gebruikt deze structuur:
+De story-conventie is de manier om werk te verdelen in afgebakende, traceerbare eenheden — zowel voor jezelf als voor AI-assistentie. Olympus startte met drie statussen (`backlog/doing/done`); op basis van later opgedane ervaring is `todo/` als optionele vierde status toegevoegd voor projecten met een groeiende backlog. De aanbevolen structuur:
 
 ```
 stories/
@@ -203,12 +215,25 @@ stories/
 ├── backlog/          # ideeën die nog opgepakt moeten worden
 │   ├── A1-01.md
 │   └── A1-02.md
+├── todo/             # OPTIONEEL: ingepland voor de eerstvolgende sessies
+│   └── A1-03.md
 ├── doing/            # max 3 stories tegelijk; meer = onderbroken werk
 │   └── A2-01.md
 └── done/             # afgeronde stories; AC's afgevinkt
     ├── A0-01.md
     └── A0-02.md
 ```
+
+### Vier statussen, met `todo/` als opt-in
+
+| Status | Betekenis | WIP-richtlijn |
+|---|---|---|
+| `backlog` | Gedefinieerd, geen specifieke planning | Geen limiet |
+| `todo` | Ingepland voor eerstvolgende sessies | Soft-cap 5–10 |
+| `doing` | Actief in uitvoering | Max 3 |
+| `done` | Afgerond en gereviewd | — |
+
+`backlog → doing` mag direct — `todo` is opt-in. Voor solo-projecten met <15 stories in backlog is drie statussen prima. Activeer `todo/` zodra je merkt dat je elke sessie opnieuw moet kiezen "wat pak ik nu op?".
 
 ### Story-naamgeving
 
@@ -251,7 +276,7 @@ Epic-letters bewust kort: A, B, C, ... met getal voor sub-spoor. Voorbeeld uit O
 ### Workflow
 
 **Bij oppakken:**
-1. `git mv stories/backlog/XX-NN.md stories/doing/`
+1. `git mv stories/{backlog,todo}/XX-NN.md stories/doing/`
 2. Werk de status-kolom in `EPICS.md` bij naar `doing`
 3. Commit deze verplaatsing apart van inhoudelijk werk
 
@@ -264,6 +289,19 @@ Epic-letters bewust kort: A, B, C, ... met getal voor sub-spoor. Voorbeeld uit O
 6. Commit en push
 
 **Pre-commit hook** valideert: stories in `done/` hebben geen openstaande AC's, locatie en `EPICS.md`-status matchen.
+
+### Nieuwe epic openen (bij meerdere actieve branches)
+
+Zodra je tegelijk aan twee feature-branches werkt — ook in solo-context — claimen ze allebei het volgende epic-nummer als je niet uitkijkt. Resolution achteraf is niet-triviaal: niet alleen folder- en story-IDs moeten hernoemd, ook elke kruisverwijzing in docs en `EPICS.md`.
+
+```markdown
+1. `git fetch origin main` vóór je een epic-folder aanmaakt.
+2. Pak het hoogste E# op origin/main + 1 — niet op je eigen branch.
+3. Bij collision: tweede merger hernoemt. Documenteer het patroon
+   nu, niet als het probleem ontstaat.
+```
+
+Voor één-branch-projecten meestal overbodig; opnemen in CLAUDE.md zodra je voor het eerst twee actieve branches naast elkaar hebt.
 
 ### `EPICS.md` opbouw
 
@@ -283,6 +321,31 @@ Epic-letters bewust kort: A, B, C, ... met getal voor sub-spoor. Voorbeeld uit O
 | A1-02 | … | 4 knopen | done |
 ```
 
+### Review-acties en follow-ups in `EPICS.md`
+
+Acceptatiecriteria in stories vangen niet alle uitkomsten van werk. Reviews leveren twee soorten residu op die in stories niet thuishoren maar wel zichtbaar moeten blijven:
+
+1. **Review-acties voor de projecteigenaar** — concrete handelingen die de mens (niet de AI) moet doen: lezen-en-akkoord, expert-consult, scope-beslissing. Verdwijnen na afhandeling.
+2. **Follow-ups uit reviews** — geparkeerde overwegingen die op de roadmap blijven staan tot een trigger ze activeert (bv. "model raakt actief gebruikt door externe instantie").
+
+Houd beide bij in `EPICS.md` als losse secties onderaan, niet als verkapte stories in `backlog/`. Dat scheidt **werk dat alleen jij kunt doen** van **werk dat in een story past**, en het maakt het later veel makkelijker om eerder werk weer op te pakken: één blik op `EPICS.md` toont én de status van alle epics én wat er nog op jou wacht.
+
+```markdown
+## Review-acties voor de projecteigenaar
+
+| Actie | Document | Toelichting |
+|---|---|---|
+| {…} | {…} | {…} |
+
+## Follow-ups uit reviews
+
+| Item | Bron | Plek (signaalstory of doc-sectie) | Trigger |
+|---|---|---|---|
+| {…} | {…} | {…} | {…} |
+```
+
+De tweede tabel maak je pas aan zodra er minstens één levende follow-up is — leeg toevoegen is overbodig.
+
 ### `scripts/check_story_status.py`
 
 Eenvoudige Python-CLI die:
@@ -290,6 +353,13 @@ Eenvoudige Python-CLI die:
 2. Door `stories/doing/` loopt en alleen waarschuwt bij meer dan 3 actieve stories.
 3. Verifieert dat elke story-naam ook in `EPICS.md` voorkomt.
 4. Verifieert dat de status in `EPICS.md` overeenkomt met de fysieke locatie.
+
+**Twee modes** (geldt ook voor `validate_graph.py` en andere cross-document-validators):
+
+- `--mode=staged` (default lokaal, voor pre-commit): rapporteert drift, exit 0 — niet-blokkerend. Lokaal mag drift bestaan tijdens werk-in-uitvoering: een story zit halverwege een refactor, EPICS.md is nog niet bijgewerkt, een ref_id is nog niet uitgevuld. Soft-fail voorkomt dat zulke tijdelijke inconsistentie de commit blokkeert.
+- `--mode=full` (CI): hard, exit 1 bij elk probleem. CI is de gate die `main` schoonhoudt.
+
+Zonder dit onderscheid wordt de pre-commit hook ofwel zo streng dat hij vaak omzeild wordt (`--no-verify`), ofwel zo lakse dat hij in CI alsnog dingen toelaat die niet hadden gemoeten.
 
 Implementatieblauwdruk in Olympus' `scripts/check_story_status.py`. ~150 regels.
 
@@ -385,12 +455,46 @@ Lees voor de volledige context:
 
 {Specifiek voor jouw schema, met voorbeelden}
 
+## Onomkeerbare acties bevestigen
+
+{Reversibele lokale acties (file-edits, tests, refactors) gewoon doen.
+Onomkeerbare of breed-zichtbare acties (force-push, branch verwijderen,
+package upgrade in lockfile, PR mergen, externe API-call met effect)
+expliciet bevestigen. Vijf seconden bevestigingsvraag bespaart drie
+uur reparatie.}
+
 ## Niet doen
 
-{Opzettelijke uitsluitingen — geen frontend in fase 0, etc.}
+{Drie tot zes scherp geformuleerde regels — gedestilleerd uit hoofdstuk 06
+antipatronen, domein-specifiek gemaakt. Voorbeeld voor archetype B:}
+
+1. Geen globale DAG-cyclus-check op een netwerk met feedback-edges.
+2. Geen edge-velden invoeren die niet door code gebruikt worden.
+3. Geen sliders zonder eenheid + literatuur-onderbouwing (`ref_id`).
+4. Geen statische pad-analyse als antwoord op dynamische vragen.
+
+{De "Niet-doen"-sectie staat hier omdat de AI CLAUDE.md elke sessie leest;
+het antipatronen-hoofdstuk alleen als iemand er expliciet naar verwijst.
+Korter en harder dan §6 — zet hier alleen wat al gefaald heeft of
+gegarandeerd zal falen.}
+
+## Waar vind ik wat?
+
+| Vraag | Locatie |
+|---|---|
+| Projectvisie en scope | `docs/BRIEFING_*.md` |
+| Vastgestelde ontwerpkeuzes | `docs/ONTWERPKEUZES_*.md` |
+| Edge- en node-types | `src/<pkg>/schemas/` |
+| ID-schema | `docs/id-schema.md` |
+| Validatie-catalogus | `src/<pkg>/graph/validation.py` |
+| Stories-overzicht | `stories/EPICS.md` |
+| Review-acties + follow-ups | `stories/EPICS.md` (onderaan) |
+| Literatuurregister | `data/literatuur.json` |
+| Archief van oude versies | `archief/INDEX.md` |
+| ... | ... |
 ```
 
-Voor Olympus is dit bestand 11 KB. Voor een nieuw project mag je beginnen met de helft daarvan en geleidelijk uitbreiden.
+Voor Olympus is dit bestand 11 KB. Voor een nieuw project mag je beginnen met de helft daarvan en geleidelijk uitbreiden. De "Waar vind ik wat?"-tabel is in de praktijk de meest geraadpleegde sectie — laat hem organisch meegroeien met je repo.
 
 ## Vragen voor je nieuwe project
 
