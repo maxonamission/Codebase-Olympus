@@ -83,6 +83,7 @@ Daarnaast verwijs je gewoon door naar de oorspronkelijke documenten, die al gene
 1. Geef deze hele map plus de drie brondocumenten aan de overnemer.
 2. Voeg een eigen `00-context.md` toe met: wat het onderwerp is, waarom dit project, wie de doelgroep is, en wat de huidige status is.
 3. Laat overnemer eerst Pad B doorlopen voordat hij/zij begint te bouwen.
+4. **Vraag de overnemer expliciet om een eigen pass over `06-antipatronen-en-checklist.md`.** Antipatronen herkennen in een vreemde codebase is de meest waardevolle vaardigheid voor wie iets overneemt — en de overnemer ziet vanuit fris perspectief vaak dingen die je zelf niet meer waarneemt.
 
 ## Wat dit pakket bewust **niet** doet
 
@@ -104,4 +105,15 @@ Lees `06-antipatronen-en-checklist.md` voor de volledige lijst.
 
 ## Versie
 
-Versie 1.0 — opgesteld door Codebase-Olympus, mei 2026. Pakket is een momentopname; nieuwe lessen die opdoemen in vervolgprojecten kunnen terug landen in de brondocumenten (`graph-methodology.md` en `ontwikkelstraat-uitleg.md`) zonder dit pakket te wijzigen.
+**Versie 1.1** — mei 2026. Verwerkt de externe review uit `review_olympus-starterpakket_2026-05.md` (Atlas-perspectief, multi-model en evidence-zwaar):
+
+- `todo/` als optionele 4e story-status (H1)
+- Cross-branch epic-collision-protocol (H2)
+- Review-acties + follow-ups als secties in `EPICS.md` (H3)
+- Reference-integrity-invariant + literatuurregister-checklist (H4)
+- `--mode=staged|full` voor cross-document-validators (H5, S2)
+- "Niet-doen", "Onomkeerbare acties bevestigen" en "Waar vind ik wat?" als verplichte secties in het CLAUDE.md-template (H6, H8, S4)
+- Archief-conventie vanaf maand 6 (H7)
+- Plus kleine correcties (S1, S3, S5, S6, S7, S8)
+
+**Versie 1.0** — opgesteld door Codebase-Olympus, mei 2026. Pakket is een momentopname; nieuwe lessen die opdoemen in vervolgprojecten kunnen terug landen in de brondocumenten (`graph-methodology.md` en `ontwikkelstraat-uitleg.md`) zonder dit pakket te wijzigen.
