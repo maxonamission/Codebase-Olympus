@@ -248,6 +248,7 @@ Loop deze door **vóór je je eerste echte gebruiker (of pilotgroep) toelaat**. 
 ### Domeinvalidatie
 
 - [ ] Externe expertise-sessie heeft plaatsgevonden vóór pilot (of expliciete reden geboekt waarom niet)
+- [ ] **Externe-blik-sessie** ingepland: review door iemand die niet meegebouwd heeft. Ander dan de domeinexpert; doel is fris perspectief op architectuur en documentatie, niet domeininhoud
 - [ ] Onboarding-laag aanwezig en getest
 - [ ] Pensum/scenario-overlay (jaarlijks of cases-gestuurd) gescheiden van vaste graph
 - [ ] Privacy-implicaties (AVG, minderjarigen) afgewogen indien van toepassing

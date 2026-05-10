@@ -49,6 +49,10 @@ dev = [
 ]
 
 [tool.ruff]
+# Houd target-version op de laagste Python-versie uit requires-python (hier 3.11);
+# dat dwingt ruff om geen syntax voor te stellen die op de oudste ondersteunde
+# versie nog niet werkt. Vergeet niet bij te werken zodra je requires-python
+# verhoogt.
 target-version = "py311"
 line-length = 99
 

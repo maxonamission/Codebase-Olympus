@@ -78,12 +78,13 @@ Stap 1-4 is meestal 20-30% van de totale tijd; stap 5 voelt daarna bijna mechani
 
 ## Principe 7 — Output- en sessiediscipline
 
-**Regel.** Vier specifieke gedragingen die context-gebrek voorkomen in lange AI-sessies:
+**Regel.** Vijf specifieke gedragingen die context-gebrek voorkomen in lange AI-sessies:
 
 1. **Werk in kleine stappen.** Eén story per response, niet meerdere.
 2. **Genereer grote data via scripts**, niet inline. Toon de samenvatting (knopen-aantal, validatie-uitkomst), niet de hele JSON.
 3. **Beperk tool-output.** Pijp lange commando-uitvoer door `head -N` of `tail -N`. Toon alleen relevante delen van testresultaten.
-4. **Splits grote bestanden.** Lees met `offset` en `limit` als bestanden >150 regels zijn.
+4. **Splits grote bestanden — bij voorkeur aan de bron.** Houd JSON-bestanden onder ~200 knopen en markdown-bestanden onder ~800 regels. Reactief splitsen tijdens het lezen (`offset`/`limit`) is een vangnet, geen oplossing: het lost de symptoomafstand op maar niet de tooling-frictie.
+5. **Reactief splitsen blijft het vangnet.** Lees met `offset` en `limit` als een bestand toch >150 regels is — bv. omdat het een externe bron of een legacy-bestand betreft dat je niet wilt herstructureren.
 
 Dit klinkt micromanagement; in de praktijk redt het je een uur per dag aan crashende sessies en context-overload.
 
