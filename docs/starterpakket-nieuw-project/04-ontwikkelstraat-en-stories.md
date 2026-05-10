@@ -15,6 +15,14 @@ Dit hoofdstuk is een **uittreksel met praktijkrecepten** bij `docs/ontwikkelstra
 
 Volg de lagen-volgorde bij invoer: laag 1-2 op dag één, laag 3-4 binnen de eerste sprint, laag 5 zodra je je eerste merge doet, laag 6 als je een tweede project hebt.
 
+### Archief vanaf maand 6
+
+Een lang-lopend project (>6 maanden) accumuleert versies van BRIEFING- en ONTWERPKEUZES-documenten, afgeronde closure-rapporten en gearchiveerde verkenningen. Zonder discipline raken die ofwel verloren of vervuilen ze de actieve werkruimte.
+
+Werkwijze: een `archief/`-map met een `archief/INDEX.md` die per gearchiveerd document één regel geeft (titel, datum, reden van archivering). Zodra een document niet meer actief gebruikt wordt — een nieuwe versie is uit, een review-cyclus is afgesloten, een verkenning is gemerged of verworpen — verhuis je het naar `archief/` en voeg je een regel toe aan de index. **Wijzig nooit een document na archivering**, anders breekt de terugkijk-functie ("hoe stond het er destijds bij?"). Voor wijzigingen: maak een nieuw document in de actieve ruimte; verwijs eventueel terug.
+
+Niet relevant in de eerste maanden; activeer zodra de tweede major versie van BRIEFING of ONTWERPKEUZES geschreven wordt.
+
 ## §B — Concreet: minimale starter-config
 
 Hieronder de bestanden die je in je nieuwe repo zet. Je kunt ze grotendeels uit Olympus kopiëren en domein-specifiek aanpassen.
@@ -443,12 +451,46 @@ Lees voor de volledige context:
 
 {Specifiek voor jouw schema, met voorbeelden}
 
+## Onomkeerbare acties bevestigen
+
+{Reversibele lokale acties (file-edits, tests, refactors) gewoon doen.
+Onomkeerbare of breed-zichtbare acties (force-push, branch verwijderen,
+package upgrade in lockfile, PR mergen, externe API-call met effect)
+expliciet bevestigen. Vijf seconden bevestigingsvraag bespaart drie
+uur reparatie.}
+
 ## Niet doen
 
-{Opzettelijke uitsluitingen — geen frontend in fase 0, etc.}
+{Drie tot zes scherp geformuleerde regels — gedestilleerd uit hoofdstuk 06
+antipatronen, domein-specifiek gemaakt. Voorbeeld voor archetype B:}
+
+1. Geen globale DAG-cyclus-check op een netwerk met feedback-edges.
+2. Geen edge-velden invoeren die niet door code gebruikt worden.
+3. Geen sliders zonder eenheid + literatuur-onderbouwing (`ref_id`).
+4. Geen statische pad-analyse als antwoord op dynamische vragen.
+
+{De "Niet-doen"-sectie staat hier omdat de AI CLAUDE.md elke sessie leest;
+het antipatronen-hoofdstuk alleen als iemand er expliciet naar verwijst.
+Korter en harder dan §6 — zet hier alleen wat al gefaald heeft of
+gegarandeerd zal falen.}
+
+## Waar vind ik wat?
+
+| Vraag | Locatie |
+|---|---|
+| Projectvisie en scope | `docs/BRIEFING_*.md` |
+| Vastgestelde ontwerpkeuzes | `docs/ONTWERPKEUZES_*.md` |
+| Edge- en node-types | `src/<pkg>/schemas/` |
+| ID-schema | `docs/id-schema.md` |
+| Validatie-catalogus | `src/<pkg>/graph/validation.py` |
+| Stories-overzicht | `stories/EPICS.md` |
+| Review-acties + follow-ups | `stories/EPICS.md` (onderaan) |
+| Literatuurregister | `data/literatuur.json` |
+| Archief van oude versies | `archief/INDEX.md` |
+| ... | ... |
 ```
 
-Voor Olympus is dit bestand 11 KB. Voor een nieuw project mag je beginnen met de helft daarvan en geleidelijk uitbreiden.
+Voor Olympus is dit bestand 11 KB. Voor een nieuw project mag je beginnen met de helft daarvan en geleidelijk uitbreiden. De "Waar vind ik wat?"-tabel is in de praktijk de meest geraadpleegde sectie — laat hem organisch meegroeien met je repo.
 
 ## Vragen voor je nieuwe project
 
