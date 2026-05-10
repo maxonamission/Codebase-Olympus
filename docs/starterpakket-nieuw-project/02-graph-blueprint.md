@@ -173,15 +173,21 @@ Verplicht in elk graph-project, zie `graph-methodology.md` §5:
 7. **Connectivity-analyse** (waarschuw bij meerdere disconnected components).
 8. **Topologische sortering** (alleen als de graph-vorm een sortering toelaat).
 
+**Conditioneel** (alleen bij projecten met evidence-claims, modelparameters of literatuurverwijzingen):
+
+9. **Reference-integrity** — elke knoop, edge of slider met een `ref_id`-veld verwijst naar een bestaand record in `data/literatuur.json` (of equivalent register). Voorkomt rotting van bronnen zodra het corpus groeit. Bij archetype B (causaal/beleidsmodel) is dit bijna altijd relevant; bij archetype A geldt het bijvoorbeeld voor authentieke item-bronnen.
+
 Implementeer in `src/<package>/graph/validation.py` met een `ValidationReport`-dataclass. Zie Olympus' implementatie als sjabloon (250 regels).
 
 CLI in `scripts/validate_graph.py`:
 
 ```bash
-python scripts/validate_graph.py data/graph/
+python scripts/validate_graph.py data/graph/                  # default = strict
+python scripts/validate_graph.py data/graph/ --mode=staged    # soft-fail, drift-rapport
+python scripts/validate_graph.py data/graph/ --mode=full      # CI-modus, hard
 ```
 
-Exit non-zero bij errors. Hangt aan in pre-commit en CI (zie hoofdstuk 04).
+Exit non-zero bij errors in `--mode=full`; in `--mode=staged` rapporteert de tool maar exit 0 — handig voor pre-commit op werk-in-uitvoering. Hangt aan in pre-commit (`--mode=staged`) en CI (`--mode=full`); zie hoofdstuk 04.
 
 ## §G — Visualisatie
 
@@ -227,7 +233,7 @@ Sprint 1 (1-2 dagen):
 3. Eén handmatig PoC-JSON met 30-50 knopen.
 4. Loader (single-file + directory).
 5. Eerste twee invariant-checks (cycle + duplicate).
-6. `scripts/validate_graph.py`.
+6. `scripts/validate_graph.py` met `--mode=staged|full`-vlaggen.
 7. Tests groen.
 
 Sprint 2 (1 dag):
