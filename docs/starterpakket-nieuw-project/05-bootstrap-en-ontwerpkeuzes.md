@@ -187,6 +187,7 @@ Dag 14
 
 Dag 15
 - [ ] Buffer / refactor / bugjes. Belangrijk: gebruik dag 15 níet om aan een tweede onderwerp te beginnen. Stabiliseer wat er is.
+- [ ] **Stop-criterium expliciet:** als de loader, de invariant-catalogus, of de PoC-data nog niet stabiel zijn, ga níet door naar week 3. Buffer-tijd glijdt anders ongemerkt in scope-uitbreiding. Liever een dag uitloop op week 2 dan een wankel fundament onder weken aan content.
 
 ### Week 4 — Eerste bovenliggende laag (kies je archetype)
 

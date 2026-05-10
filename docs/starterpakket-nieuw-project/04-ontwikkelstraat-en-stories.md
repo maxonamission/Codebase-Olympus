@@ -195,7 +195,7 @@ Test eerst handmatig dat ze werken; commit pas daarna.
 
 ## §C — De story-workflow
 
-De story-conventie is de manier om werk te verdelen in afgebakende, traceerbare eenheden — zowel voor jezelf als voor AI-assistentie. Olympus gebruikt deze structuur:
+De story-conventie is de manier om werk te verdelen in afgebakende, traceerbare eenheden — zowel voor jezelf als voor AI-assistentie. Olympus startte met drie statussen (`backlog/doing/done`); op basis van later opgedane ervaring is `todo/` als optionele vierde status toegevoegd voor projecten met een groeiende backlog. De aanbevolen structuur:
 
 ```
 stories/
@@ -203,12 +203,25 @@ stories/
 ├── backlog/          # ideeën die nog opgepakt moeten worden
 │   ├── A1-01.md
 │   └── A1-02.md
+├── todo/             # OPTIONEEL: ingepland voor de eerstvolgende sessies
+│   └── A1-03.md
 ├── doing/            # max 3 stories tegelijk; meer = onderbroken werk
 │   └── A2-01.md
 └── done/             # afgeronde stories; AC's afgevinkt
     ├── A0-01.md
     └── A0-02.md
 ```
+
+### Vier statussen, met `todo/` als opt-in
+
+| Status | Betekenis | WIP-richtlijn |
+|---|---|---|
+| `backlog` | Gedefinieerd, geen specifieke planning | Geen limiet |
+| `todo` | Ingepland voor eerstvolgende sessies | Soft-cap 5–10 |
+| `doing` | Actief in uitvoering | Max 3 |
+| `done` | Afgerond en gereviewd | — |
+
+`backlog → doing` mag direct — `todo` is opt-in. Voor solo-projecten met <15 stories in backlog is drie statussen prima. Activeer `todo/` zodra je merkt dat je elke sessie opnieuw moet kiezen "wat pak ik nu op?".
 
 ### Story-naamgeving
 
@@ -251,7 +264,7 @@ Epic-letters bewust kort: A, B, C, ... met getal voor sub-spoor. Voorbeeld uit O
 ### Workflow
 
 **Bij oppakken:**
-1. `git mv stories/backlog/XX-NN.md stories/doing/`
+1. `git mv stories/{backlog,todo}/XX-NN.md stories/doing/`
 2. Werk de status-kolom in `EPICS.md` bij naar `doing`
 3. Commit deze verplaatsing apart van inhoudelijk werk
 
@@ -264,6 +277,19 @@ Epic-letters bewust kort: A, B, C, ... met getal voor sub-spoor. Voorbeeld uit O
 6. Commit en push
 
 **Pre-commit hook** valideert: stories in `done/` hebben geen openstaande AC's, locatie en `EPICS.md`-status matchen.
+
+### Nieuwe epic openen (bij meerdere actieve branches)
+
+Zodra je tegelijk aan twee feature-branches werkt — ook in solo-context — claimen ze allebei het volgende epic-nummer als je niet uitkijkt. Resolution achteraf is niet-triviaal: niet alleen folder- en story-IDs moeten hernoemd, ook elke kruisverwijzing in docs en `EPICS.md`.
+
+```markdown
+1. `git fetch origin main` vóór je een epic-folder aanmaakt.
+2. Pak het hoogste E# op origin/main + 1 — niet op je eigen branch.
+3. Bij collision: tweede merger hernoemt. Documenteer het patroon
+   nu, niet als het probleem ontstaat.
+```
+
+Voor één-branch-projecten meestal overbodig; opnemen in CLAUDE.md zodra je voor het eerst twee actieve branches naast elkaar hebt.
 
 ### `EPICS.md` opbouw
 
@@ -282,6 +308,31 @@ Epic-letters bewust kort: A, B, C, ... met getal voor sub-spoor. Voorbeeld uit O
 | A1-01 | … | 6 knopen | done |
 | A1-02 | … | 4 knopen | done |
 ```
+
+### Review-acties en follow-ups in `EPICS.md`
+
+Acceptatiecriteria in stories vangen niet alle uitkomsten van werk. Reviews leveren twee soorten residu op die in stories niet thuishoren maar wel zichtbaar moeten blijven:
+
+1. **Review-acties voor de projecteigenaar** — concrete handelingen die de mens (niet de AI) moet doen: lezen-en-akkoord, expert-consult, scope-beslissing. Verdwijnen na afhandeling.
+2. **Follow-ups uit reviews** — geparkeerde overwegingen die op de roadmap blijven staan tot een trigger ze activeert (bv. "model raakt actief gebruikt door externe instantie").
+
+Houd beide bij in `EPICS.md` als losse secties onderaan, niet als verkapte stories in `backlog/`. Dat scheidt **werk dat alleen jij kunt doen** van **werk dat in een story past**, en het maakt het later veel makkelijker om eerder werk weer op te pakken: één blik op `EPICS.md` toont én de status van alle epics én wat er nog op jou wacht.
+
+```markdown
+## Review-acties voor de projecteigenaar
+
+| Actie | Document | Toelichting |
+|---|---|---|
+| {…} | {…} | {…} |
+
+## Follow-ups uit reviews
+
+| Item | Bron | Plek (signaalstory of doc-sectie) | Trigger |
+|---|---|---|---|
+| {…} | {…} | {…} | {…} |
+```
+
+De tweede tabel maak je pas aan zodra er minstens één levende follow-up is — leeg toevoegen is overbodig.
 
 ### `scripts/check_story_status.py`
 
