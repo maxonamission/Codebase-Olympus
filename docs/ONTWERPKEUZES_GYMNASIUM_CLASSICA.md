@@ -319,6 +319,17 @@ De literatuur geeft niet alleen aan *wat* werkt, maar ook waar je energie wél e
 
 ---
 
+## Edge-type-beleid
+
+De graph kent drie edge-types (`prerequisite`, `enrichment`, `transfer`). Voor de acycliciteitseis geldt één regel:
+
+- **`prerequisite` en `enrichment` moeten samen acyclisch zijn** — zij leggen een leervolgorde op; een cyclus zou betekenen dat een knoop (indirect) zijn eigen voorwaarde is.
+- **`transfer` mag cyclisch zijn** — transfer-edges zijn bidirectionele, cross-linguïstische verbanden (LAT ↔ GRC) die geen volgorde opleggen.
+
+Dit beleid staat op één plek in de code: de constante `ACYCLIC_EDGE_TYPES` in `graph/validation.py`. Cycle-detectie en topologische sortering filteren de graph via `acyclic_subgraph(...)` op precies die set. Een vierde edge-type toevoegen kost daardoor één regel: opnemen in of weglaten uit `ACYCLIC_EDGE_TYPES`. (Afgeleid uit de graph-methodologie-reflectie; geïmplementeerd in story OS-09.)
+
+---
+
 ## Architectuurconsequenties — samenvatting voor Claude Code
 
 De volgende technische requirements vloeien direct voort uit de bovenstaande keuzes en moeten vanaf fase 0 worden meegenomen:

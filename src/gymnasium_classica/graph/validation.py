@@ -28,29 +28,43 @@ class ValidationReport:
     errors: list[str] = field(default_factory=list)
 
 
-def _prerequisite_enrichment_subgraph(graph: nx.DiGraph) -> nx.DiGraph:
-    """Return a view of the graph with only prerequisite and enrichment edges.
+# Edge-types waarover de graph acyclisch moet zijn. Eén plek voor het
+# beleid: cycle-detectie en topologische sortering gebruiken precies deze
+# set. `transfer` staat er bewust NIET in — transfer-edges zijn
+# bidirectionele, cross-linguïstische verbanden (LAT <-> GRC) die per
+# definitie cyclisch mogen zijn en geen leervolgorde opleggen. Een vierde
+# edge-type toevoegen kost één regel: opnemen in of weglaten uit deze set.
+ACYCLIC_EDGE_TYPES: frozenset[str] = frozenset({"prerequisite", "enrichment"})
 
-    Transfer edges are excluded because they represent bidirectional
-    cross-linguistic connections and are not subject to DAG constraints.
+
+def acyclic_subgraph(
+    graph: nx.DiGraph, *, include_edge_types: frozenset[str] | set[str]
+) -> nx.DiGraph:
+    """Return a copy of *graph* keeping only edges of *include_edge_types*.
+
+    Edges whose attached ``edge`` object has a ``type`` outside the given
+    set are removed; nodes and edges without a typed ``edge`` object are
+    left untouched. Used to isolate the subgraph that must satisfy the
+    DAG constraint (see :data:`ACYCLIC_EDGE_TYPES`).
     """
     sub = graph.copy()
-    transfer_edges = [
+    excluded = [
         (u, v)
         for u, v in sub.edges
-        if sub.edges[u, v].get("edge") and sub.edges[u, v]["edge"].type == "transfer"
+        if (edge := sub.edges[u, v].get("edge")) is not None
+        and edge.type not in include_edge_types
     ]
-    sub.remove_edges_from(transfer_edges)
+    sub.remove_edges_from(excluded)
     return sub
 
 
 def detect_cycles(graph: nx.DiGraph) -> list[list[str]]:
-    """Return all simple cycles in the prerequisite+enrichment subgraph.
+    """Return all simple cycles in the acyclic-edge-type subgraph.
 
     Transfer edges are excluded from cycle detection because they
     represent bidirectional cross-linguistic connections.
     """
-    sub = _prerequisite_enrichment_subgraph(graph)
+    sub = acyclic_subgraph(graph, include_edge_types=ACYCLIC_EDGE_TYPES)
     return list(nx.simple_cycles(sub))
 
 
@@ -93,12 +107,12 @@ def check_connectivity(graph: nx.DiGraph) -> tuple[int, list[str]]:
 
 
 def topological_sort(graph: nx.DiGraph) -> list[str] | None:
-    """Return a topological ordering of the prerequisite+enrichment subgraph.
+    """Return a topological ordering of the acyclic-edge-type subgraph.
 
     Transfer edges are excluded because they may be bidirectional.
-    Returns None if the prerequisite+enrichment subgraph has cycles.
+    Returns None if that subgraph has cycles.
     """
-    sub = _prerequisite_enrichment_subgraph(graph)
+    sub = acyclic_subgraph(graph, include_edge_types=ACYCLIC_EDGE_TYPES)
     if not nx.is_directed_acyclic_graph(sub):
         return None
     return list(nx.topological_sort(sub))

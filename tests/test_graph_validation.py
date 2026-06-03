@@ -4,7 +4,8 @@ import copy
 
 from gymnasium_classica.graph.loader import load_graph_from_dict
 from gymnasium_classica.graph.validation import (
-    _prerequisite_enrichment_subgraph,
+    ACYCLIC_EDGE_TYPES,
+    acyclic_subgraph,
     check_connectivity,
     detect_cycles,
     find_leaf_nodes,
@@ -213,25 +214,37 @@ class TestValidateGraph:
         assert report.transfer_edge_count == 4
 
 
-class TestPrerequisiteEnrichmentSubgraph:
-    """Tests for the _prerequisite_enrichment_subgraph helper."""
+class TestAcyclicSubgraph:
+    """Tests for the generic acyclic_subgraph helper and ACYCLIC_EDGE_TYPES."""
 
     def test_excludes_transfer_edges(self, bidirectional_transfer_graph_data):
         g = load_graph_from_dict(bidirectional_transfer_graph_data)
-        sub = _prerequisite_enrichment_subgraph(g)
+        sub = acyclic_subgraph(g, include_edge_types=ACYCLIC_EDGE_TYPES)
         assert sub.number_of_edges() == 2  # only prerequisite edges
         assert sub.number_of_nodes() == 4  # all nodes preserved
 
     def test_preserves_prerequisite_edges(self, sample_graph_data):
         g = load_graph_from_dict(sample_graph_data)
-        sub = _prerequisite_enrichment_subgraph(g)
+        sub = acyclic_subgraph(g, include_edge_types=ACYCLIC_EDGE_TYPES)
         assert sub.number_of_edges() == g.number_of_edges()  # no transfer edges to remove
 
     def test_does_not_modify_original(self, bidirectional_transfer_graph_data):
         g = load_graph_from_dict(bidirectional_transfer_graph_data)
         original_edges = g.number_of_edges()
-        _prerequisite_enrichment_subgraph(g)
+        acyclic_subgraph(g, include_edge_types=ACYCLIC_EDGE_TYPES)
         assert g.number_of_edges() == original_edges
+
+    def test_acyclic_subgraph_excludes_specified_types(self, bidirectional_transfer_graph_data):
+        """Restricting to a type set drops all other edge types, so the
+        bidirectional transfer edges cannot show up as cycles."""
+        g = load_graph_from_dict(bidirectional_transfer_graph_data)
+        only_prereq = acyclic_subgraph(g, include_edge_types={"prerequisite"})
+        # No transfer edges survive the filter -> prerequisite-only view.
+        assert only_prereq.number_of_edges() == 2
+        assert detect_cycles(g) == []
+        # The policy constant deliberately excludes transfer.
+        assert "transfer" not in ACYCLIC_EDGE_TYPES
+        assert frozenset({"prerequisite", "enrichment"}) == ACYCLIC_EDGE_TYPES
 
 
 class TestValidateContentRefs:
