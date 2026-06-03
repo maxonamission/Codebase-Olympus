@@ -243,6 +243,82 @@ Het CE-pensum wisselt jaarlijks van auteur. De cyclus is voorspelbaar en wordt j
 
 ---
 
+## Evidence-based keuzes (uit het literatuuronderzoek, juni 2026)
+
+> Keuzes 12 t/m 16 vloeien voort uit `docs/LITERATUURONDERZOEK_LEERBENADERING.md`. Implementatie loopt via **Spoor L** in `stories/EPICS.md`. (Keuze 11 is gereserveerd voor "Procedurele knopen" uit epic M1.)
+
+### Evidence-based uitgangspunten (prioritering)
+
+De literatuur geeft niet alleen aan *wat* werkt, maar ook waar je energie wél en niet in moet steken. Deze uitgangspunten zijn leidend bij planning en review:
+
+- **Méér prioriteit:** spaced repetition en retrieval practice (de twee best-gerepliceerde, goedkoopste hefbomen); meetbaarheid van de eigen effectgrootte; het onderscheid receptief/productief; het benutten van de graph-structuur in het learner model.
+- **Minder prioriteit (niet vroeg over-optimaliseren):** de exacte keuze van het SR-algoritme (SM-2 volstaat tot er data is; FSRS als latere upgrade — het verschil wordt pas meetbaar bij honderden leerlingen); geavanceerde BKT-varianten (vanille-BKT is een prima, interpreteerbare start).
+- **Geen prioriteit (parkeren/schrappen):** pure Comprehensible Input/Krashen als methode (omstreden én misaligned met het examen — hybride blijft leidend); deep/neurale knowledge tracing (voortijdig, vereist big data, levert interpreteerbaarheid in).
+
+### Keuze 12: Meetbaarheid en effectgrootte als first-class uitgangspunt
+
+**Vraag:** Hoe toetst het project zijn eigen centrale claim (efficiënter leren) en het gat in de literatuur (geen evidence voor klassieke talen)?
+
+**Beslissing:** Het systeem legt vanaf de vroegste fase retentie-, tijd- en mastery-data per leerling vast, met een baseline-meting bij intake en de mogelijkheid tot A/B-vergelijking van leerstrategieën. De pilot tegen het staatsexamen is de objectieve externe toets.
+
+**Onderbouwing:** Bloom's "2 sigma" is nooit gerepliceerd en realistische effecten liggen rond 0,2–0,8 SD; zonder eigen meting blijft "efficiënter" een aanname. Door dit te meten verandert de grootste zwakte (dunne evidence voor Latijn/Grieks) in een onderscheidende sterkte: het project genereert die evidence zelf.
+
+**Architecturale implicaties:**
+- **A12.1** Een meetlaag die per `ItemResponse`/`SessionRecord` voldoende vastlegt om retentie over tijd en effectgrootte te berekenen (zie story L1-01).
+- **A12.2** Een baseline-/intakemeting die als nulpunt dient voor voortgangsrapportage (L1-02).
+- **A12.3** Een experiment-/variant-framework zodat leerstrategie-parameters (bijv. spacing-schema, scaffolding-drempel) controleerbaar gevarieerd kunnen worden (L1-03).
+
+### Keuze 13: Receptieve en productieve beheersing apart modelleren
+
+**Vraag:** Volstaat één masterygetal per knoop?
+
+**Beslissing:** Nee. Receptieve en productieve beheersing worden apart bijgehouden per knoop.
+
+**Onderbouwing:** Spacing en retrieval leveren receptieve kennis betrouwbaar op, maar productieve beheersing (actief vervoegen/verbuigen) vereist meer en moeilijker oefening (Shintani, 2015). `Item` heeft al een `richting`-veld (receptief/productief), maar `KnoopState.posterior_mastery` is één float — die asymmetrie kan het systeem nu niet zien.
+
+**Architecturale implicaties:**
+- **A13.1** `KnoopState` krijgt gescheiden receptieve en productieve mastery; de BKT-update routeert op `Item.richting` (L2-01).
+- **A13.2** De scheduler en readiness-gates kunnen per richting drempels hanteren; productieve oefening wordt als consolidatie ingezet zodra receptieve beheersing er is (sluit aan op keuze 5).
+
+### Keuze 14: Learner model als migreerbare laag met individuele parameters
+
+**Vraag:** Is BKT de definitieve keuze voor het learner model?
+
+**Beslissing:** BKT is de *start* (interpreteerbaar, werkt met weinig data), maar de learner-model-laag wordt achter een interface geabstraheerd zodat migratie naar PFA/logistische of graph-aware modellen mogelijk is. De graph-structuur (prerequisite/transfer-edges) wordt actief benut, en er komen learner-niveau parameters naast skill-niveau parameters.
+
+**Onderbouwing:** In eerlijke vergelijkingen presteren PFA en — bij grote datasets — graph-aware modellen vaak beter dan vanille-BKT, dat skills onafhankelijk modelleert en transfer mist. Juist de combinatie graph + per-knoop-tracing is waar de literatuur winst ziet (prerequisite-driven KT). Bij (jonge) taalleerders wegen individuele verschillen vaak zwaarder dan het exacte interval (Kasprowicz, 2019; geïndividualiseerde BKT, Yudelson, 2013).
+
+**Architecturale implicaties:**
+- **A14.1** Een `LearnerModelStrategy`-interface met BKT als eerste implementatie; predictiemodel inplugbaar (L2-02).
+- **A14.2** De BKT-update mag prior/transitie bijstellen op basis van mastery van prerequisite-/transfer-buren in de graph (L2-02).
+- **A14.3** Learner-niveau parameters (bijv. individuele leersnelheid) naast de skill-parameters (L2-03).
+
+### Keuze 15: Worked examples en faded scaffolding als oefentype
+
+**Vraag:** Dekken de huidige oefentypen de effectiefste didactische patronen?
+
+**Beslissing:** Voeg een uitgewerkt-voorbeeld-oefentype met afnemende steun (faded scaffolding) toe aan de oefeningen-taxonomie.
+
+**Onderbouwing:** Meerdere ITS-meta-analyses noemen *worked examples* als belangrijkste moderator van effectiviteit. De huidige `ItemType`-waarden (herkenning/productie/analyse/synthese/contextueel) bevatten geen uitgewerkt voorbeeld met geleidelijk wegvallende steun. Dit sluit naadloos aan op de scaffolding-aanpak voor teksten (keuze in briefing §3.6).
+
+**Architecturale implicaties:**
+- **A15.1** `ItemType` uitgebreid met een `worked_example`-variant; een item kan een reeks stappen met instelbaar steunniveau bevatten (L3-01).
+- **A15.2** De scheduler zet worked examples in bij de introductie van een knoop en faseert ze uit naarmate de mastery stijgt.
+
+### Keuze 16: Motivatie- (metacognitieve illusie) en equity-laag
+
+**Vraag:** Hoe voorkomen we afhaken en averechtse effecten voor zwakkere leerlingen?
+
+**Beslissing:** Het systeem krijgt (a) een motivatielaag die expliciet uitlegt waarom effectieve oefening zwaar voelt, gekoppeld aan voortgangsvisualisatie, en (b) expliciete equity-waarborgen voor zwakkere presteerders.
+
+**Onderbouwing:** Effectieve, "desirable difficult" oefening wordt door leerlingen systematisch onderschat (metacognitieve illusie) — een reëel afhaakrisico (briefing-risico 7.4). Daarnaast waarschuwt onderzoek dat ITS de gemiddelde leerling méér helpen dan zwakke presteerders, terwijl bijles/remediatie juist de secundaire doelgroep is.
+
+**Architecturale implicaties:**
+- **A16.1** Een UX-laag met "waarom dit werkt"-uitleg en de groen kleurende heat map als tegenwicht (L3-02).
+- **A16.2** Equity-waarborgen: extra scaffolding-drempels en langzamere readiness-gates voor leerlingen met lage mastery-trajecten, zodat het systeem niet versnelt waar het zou moeten consolideren (L3-03).
+
+---
+
 ## Architectuurconsequenties — samenvatting voor Claude Code
 
 De volgende technische requirements vloeien direct voort uit de bovenstaande keuzes en moeten vanaf fase 0 worden meegenomen:

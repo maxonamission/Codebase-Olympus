@@ -13,7 +13,7 @@
 
 ### 1.1 Kernidee
 
-Gymnasium Classica is een adaptief leersysteem dat leerlingen in staat stelt om — buiten school, met circa 30 minuten per dag — de eindtermen van het Nederlandse gymnasium te behalen voor Latijnse Taal en Cultuur (LTC) en Griekse Taal en Cultuur (GTC). Het systeem combineert een knowledge graph met spaced repetition, mastery-based progression en item response theory om een 3x efficiëntiewinst te realiseren ten opzichte van traditioneel klassikaal onderwijs.
+Gymnasium Classica is een adaptief leersysteem dat leerlingen in staat stelt om — buiten school, met circa 30 minuten per dag — de eindtermen van het Nederlandse gymnasium te behalen voor Latijnse Taal en Cultuur (LTC) en Griekse Taal en Cultuur (GTC). Het systeem combineert een knowledge graph met spaced repetition, mastery-based progression en item response theory met als doel een aanzienlijk hogere leerefficiëntie per bestede minuut dan traditioneel klassikaal onderwijs. Deze efficiëntiewinst is een meetbaar ontwerpdoel (zie §1.3), geen vooraf bewezen resultaat.
 
 ### 1.2 Doelgroepen
 
@@ -23,17 +23,17 @@ Gymnasium Classica is een adaptief leersysteem dat leerlingen in staat stelt om 
 
 **Tertiair:** Volwassen autodidacten met interesse in de klassieke talen en cultuur.
 
-### 1.3 Ambitie: waarom 3x realistisch is
+### 1.3 Ambitie: efficiënter leren per bestede minuut
 
-De 3x-claim is geen marketingretoriek maar een conservatieve schatting op basis van drie convergerende lijnen uit de cognitieve psychologie:
+Het systeem mikt op een substantiële efficiëntiewinst ten opzichte van klassikaal onderwijs. Die ambitie steunt op drie goed onderbouwde lijnen uit de leerwetenschappen — maar de exacte omvang ervan is een meetbaar ontwerpdoel, geen bewezen resultaat. De effecten van de afzonderlijke mechanismen stapelen niet lineair op; een eerlijke verwachting ligt in de orde van een halve tot ruim één standaarddeviatie, niet de "twee sigma" uit de populaire literatuur. Het project meet daarom zijn eigen effectgrootte (zie het literatuuronderzoek in `LITERATUURONDERZOEK_LEERBENADERING.md`, met name de claim-beoordeling in deel C en aanbeveling D2).
 
-**Bloom's 2-sigma probleem (1984).** Eén-op-één tutoring met mastery learning produceert een effect van twee standaarddeviaties boven klassikaal onderwijs. Dit is het verschil tussen de 50e en de 98e percentiel. De uitdaging die Bloom formuleerde — dit effect bereiken zonder een menselijke tutor per leerling — is precies wat een goed ontworpen adaptief systeem kan benaderen.
+**Adaptieve, mastery-gestuurde tutoring (Bloom, 1984; VanLehn, 2011).** Bloom rapporteerde dat één-op-één tutoring met mastery learning twee standaarddeviaties boven klassikaal onderwijs uitkwam — het verschil tussen de 50e en de 98e percentiel. Dat specifieke resultaat is echter nooit gerepliceerd; modern onderzoek plaatst goed opgezette interventies eerder in de range van 0,2 tot 0,8 SD. De relevante en wél gerepliceerde bevinding: goede intelligent tutoring systems benaderen de effectiviteit van een gemiddelde menselijke tutor (VanLehn: d≈0,76 voor ITS vs. d≈0,79 voor menselijke tutoring). Dát niveau benaderen zonder een menselijke tutor per leerling is de realistische ambitie.
 
-**Testing effect (Roediger & Karpicke, 2006).** Actieve retrieval is twee tot drie keer effectiever voor langetermijnretentie dan passieve studie. Een traditionele les bevat misschien 10-15% actieve retrieval; een goed ontworpen adaptief systeem kan dit naar 80%+ tillen.
+**Testing effect (Roediger & Karpicke, 2006).** Actieve retrieval is ongeveer twee tot drie keer effectiever voor langetermijnretentie dan passieve studie — een breed gerepliceerde bevinding. Een traditionele les bevat misschien 10-15% actieve retrieval; een goed ontworpen adaptief systeem kan dit fors verhogen. Aandachtspunt: leerlingen onderschatten effectieve, moeilijk voelende oefening systematisch (de "metacognitieve illusie"), wat expliciete uitleg en voortgangsvisualisatie in de UX noodzakelijk maakt.
 
-**Spaced repetition (Cepeda et al., 2006; Pimsleur, 1967).** Het optimaal spreiden van herhalingen op basis van individueel vergeetgedrag verdubbelt tot verdrievoudigt de retentie per bestede minuut vergeleken met massed practice.
+**Spaced repetition (Cepeda et al., 2006, 2009; Pimsleur, 1967).** Het optimaal spreiden van herhalingen op basis van individueel vergeetgedrag verhoogt de retentie per herhaling aanzienlijk — een optimale spreiding verbeterde de uiteindelijke recall met tot circa 150% in lab-studies, en voor tweede-taalverwerving is het effect medium tot groot. Dit is, samen met het testing effect, de best onderbouwde pijler van het ontwerp.
 
-**De inefficiëntie van traditioneel klassikaal Latijn/Grieks.** Een gymnasiast besteedt typisch 760 studielasturen aan LTC of GTC over de volledige schoolloopbaan. Een groot deel daarvan gaat verloren aan klassikaal tempo (wachten op de langzaamste leerling), passief luisteren naar uitleg buiten de zone of proximal development, en herhaling die niet is afgestemd op individueel vergeetgedrag. Bij 30 minuten per dag over 4 jaar besteedt een Gymnasium Classica-leerling circa 730 uur — vergelijkbaar in volume, maar met een radicaal hogere effectiviteit per minuut.
+**De inefficiëntie van traditioneel klassikaal Latijn/Grieks.** Een gymnasiast besteedt typisch 760 studielasturen aan LTC of GTC over de volledige schoolloopbaan. Een groot deel daarvan gaat verloren aan klassikaal tempo (wachten op de langzaamste leerling), passief luisteren naar uitleg buiten de zone of proximal development, en herhaling die niet is afgestemd op individueel vergeetgedrag. Bij 30 minuten per dag over 4 jaar besteedt een Gymnasium Classica-leerling circa 730 uur — vergelijkbaar in volume, maar met een aanzienlijk hogere beoogde effectiviteit per minuut.
 
 ---
 
@@ -586,6 +586,7 @@ Zonder een school als institutionele partner is het moeilijk om het systeem te v
 - MathAcademy (2024). How Our AI Works. https://mathacademy.com/how-our-ai-works
 - Skycak, J. (2024). How Math Academy Creates its Knowledge Graph. https://www.justinmath.com/how-math-academy-creates-its-knowledge-graph/
 - VanLehn, K. (2006). The behavior of tutoring systems. *International Journal of Artificial Intelligence in Education, 16*(3), 227-265.
+- VanLehn, K. (2011). The Relative Effectiveness of Human Tutoring, Intelligent Tutoring Systems, and Other Tutoring Systems. *Educational Psychologist, 46*(4), 197-221.
 
 ### Klassieke talen didactiek
 - Ørberg, H. H. (2011). *Lingua Latina per se Illustrata, Pars I: Familia Romana*. Focus Publishing.
