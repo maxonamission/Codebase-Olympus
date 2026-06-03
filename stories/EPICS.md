@@ -562,6 +562,75 @@ de hand)
 ---
 ---
 
+## Spoor L — Evidence-based leerontwerp
+
+Vertaling van `docs/LITERATUURONDERZOEK_LEERBENADERING.md` naar de
+aanpak: meetbaarheid, een beter learner model, en didactische
+patronen die de literatuur ondersteunt. Onderbouwing in
+`docs/ONTWERPKEUZES_GYMNASIUM_CLASSICA.md`, keuzes 12–16, plus de
+evidence-based uitgangspunten (prioritering méér/minder/geen).
+
+### Uitvoervolgorde
+
+1. **L1** (meetlaag) — fundament: zonder meten geen toetsbare claim
+2. **L2** (learner model) — bouwt deels op L1 voor evaluatie
+3. **L3** (didactiek/UX) — gebruikt L1-metriek voor triggers en equity
+
+---
+
+## Epic L1: Meet- en experimenteer-infrastructuur
+
+**Doel:** De centrale claim ("efficiënter leren per minuut") toetsbaar
+maken en het gat in de literatuur (geen evidence voor klassieke talen)
+zelf vullen. Retentie-/tijd-/masterymetriek, een baseline, en een licht
+A/B-framework.
+**Geschat:** 3 stories
+**Afhankelijkheden:** Bestaand learner-model + telemetrie (F1-12 done)
+**Status:** backlog
+
+| Story | Titel | Afhankelijk | Status |
+|-------|-------|-------------|--------|
+| L1-01 | Retentie- en sessiemetriek-logging | — | backlog |
+| L1-02 | Baseline-intakemeting en effectgrootte-rapportage | L1-01 | backlog |
+| L1-03 | A/B-experiment- en variant-framework | L1-01, L1-02 | backlog |
+
+---
+
+## Epic L2: Learner model — receptief/productief, migreerbaar, individueel
+
+**Doel:** Het learner model versterken conform de literatuur: receptieve
+en productieve beheersing apart, BKT achter een migreerbare interface
+met graph-aware tracing, en learner-niveau parameters.
+**Geschat:** 3 stories
+**Afhankelijkheden:** Bestaand BKT/SM-2 learner-model
+**Status:** backlog
+
+| Story | Titel | Afhankelijk | Status |
+|-------|-------|-------------|--------|
+| L2-01 | Receptieve en productieve mastery apart tracken | — | backlog |
+| L2-02 | Learner-model-strategie-interface + graph-aware tracing | L2-01 | backlog |
+| L2-03 | Learner-niveau parameters (individuele leersnelheid) | L2-02 | backlog |
+
+---
+
+## Epic L3: Didactiek — worked examples, motivatie, equity
+
+**Doel:** Didactische patronen toevoegen die de literatuur ondersteunt:
+worked examples met faded scaffolding, een motivatielaag tegen de
+metacognitieve illusie, en equity-waarborgen voor zwakkere leerlingen.
+**Geschat:** 3 stories
+**Afhankelijkheden:** L1 (metriek voor triggers en equity-detectie)
+**Status:** backlog
+
+| Story | Titel | Afhankelijk | Status |
+|-------|-------|-------------|--------|
+| L3-01 | Worked-example oefentype met faded scaffolding | — | backlog |
+| L3-02 | Motivatielaag tegen de metacognitieve illusie | L1-01 | backlog |
+| L3-03 | Equity-waarborgen voor zwakkere leerlingen | L1-01, L1-02 | backlog |
+
+---
+---
+
 ## Roadmap — toekomstige epics
 
 Uitwerking in stories volgt per epic wanneer deze opgepakt wordt.
