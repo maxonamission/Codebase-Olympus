@@ -844,7 +844,7 @@ Beide routes leiden tot mastery op dezelfde knopen — het verschil is de volgor
 | OS-06 | Storystatus- en AC-verificatie (script + hooks + CI) | 2 + 4 | OS-03, OS-04 | done |
 | OS-07 | Review-skills inbedden in workflow | 5 | — | doing |
 | OS-08 | CLAUDE.md bijwerken met ontwikkelstraat-sectie | 6 | alle voorgaande | doing |
-| OS-09 | validation.py generiek per edge-type maken | 5 | — | doing |
+| OS-09 | validation.py generiek per edge-type maken | 5 | — | done |
 
 **Volgorde-advies:** OS-01 en OS-02 parallel (beide linter-achtig). OS-03 en OS-04 daarna; OS-06 bouwt op beide. OS-05 (Claude-hooks) kan vroeg, zodra OS-01 klaar is, omdat het de inner loop versnelt. OS-07 en OS-08 als laatste: eerst moet er iets zijn om te documenteren.
 
