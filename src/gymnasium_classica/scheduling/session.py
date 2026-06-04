@@ -16,6 +16,7 @@ from uuid import uuid4
 import networkx as nx
 
 from gymnasium_classica.diagnostic.conditional_completion import apply_fallback
+from gymnasium_classica.experiments import strategy_params_for
 from gymnasium_classica.models.graph import ItemType, Node
 from gymnasium_classica.models.learner import (
     ItemResponse,
@@ -330,9 +331,10 @@ def _process_response(
     if response in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT):
         propagate_practice_correct(learner, graph, node_id)
 
-    # SM-2
+    # SM-2 (spacing kan per experiment-variant variëren; default = ongewijzigd)
     state = learner.node_states[node_id]
-    sm2_update(state, response, review_time=now)
+    params = strategy_params_for(learner)
+    sm2_update(state, response, review_time=now, spacing_multiplier=params.spacing_multiplier)
 
     # Conditional completion: fallback for diagnostic-sourced failures
     if response == ResponseType.INCORRECT and state.source == MasterySource.DIAGNOSTIC:
