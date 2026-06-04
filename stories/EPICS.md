@@ -592,7 +592,7 @@ A/B-framework.
 |-------|-------|-------------|--------|
 | L1-01 | Retentie- en sessiemetriek-logging | — | done |
 | L1-02 | Baseline-intakemeting en effectgrootte-rapportage | L1-01 | done |
-| L1-03 | A/B-experiment- en variant-framework | L1-01, L1-02 | backlog |
+| L1-03 | A/B-experiment- en variant-framework | L1-01, L1-02 | doing |
 
 ---
 

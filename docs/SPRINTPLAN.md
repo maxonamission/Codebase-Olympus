@@ -61,8 +61,8 @@
 
 | Story | Titel | Status | Volgorde |
 |-------|-------|--------|----------|
-| L1-01 | Retentie- en sessiemetriek-logging | backlog | 1 |
-| L1-02 | Baseline-intakemeting en effectgrootte-rapportage | backlog | 2 (na L1-01) |
+| L1-01 | Retentie- en sessiemetriek-logging | done | 1 |
+| L1-02 | Baseline-intakemeting en effectgrootte-rapportage | done | 2 (na L1-01) |
 | E1-01 | Pilot-ready milestone — eerste echte leerling | doing | 3 (met L1 op zijn plek) |
 
 **Afhankelijkheden:** L1-02 → L1-01. E1-01 leunt op de al-done F1-pipeline (scaffolding, structured stimulus, audio); meetlaag erbij maakt de pilot pas evalueerbaar.
