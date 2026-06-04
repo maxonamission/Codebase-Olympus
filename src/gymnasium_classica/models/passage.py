@@ -7,7 +7,7 @@ grammar and vocabulary nodes it exercises.
 
 from pydantic import BaseModel, Field
 
-from gymnasium_classica.models.graph import Taal
+from gymnasium_classica.models.graph import Language
 
 
 class WordAnnotation(BaseModel):
@@ -26,7 +26,7 @@ class Passage(BaseModel):
     """A reading passage for contextual learning."""
 
     id: str = Field(description="Unique passage ID, e.g. 'LAT-P-001'")
-    taal: Taal
+    taal: Language
     titel: str = Field(description="Short descriptive title in Dutch")
     tekst: str = Field(description="The Latin/Greek source text")
     annotaties: list[WordAnnotation] = Field(description="Per-word annotations for the passage")

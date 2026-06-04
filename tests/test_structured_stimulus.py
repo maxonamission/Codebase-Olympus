@@ -14,15 +14,15 @@ from gymnasium_classica.api.session_manager import (
     _promote_first_item,
 )
 from gymnasium_classica.models.graph import (
-    BloomNiveau,
-    Bron,
-    Fase,
+    BloomLevel,
+    Direction,
     Item,
     ItemType,
-    KnoopType,
+    Language,
     Node,
-    Richting,
-    Taal,
+    NodeType,
+    Phase,
+    Source,
 )
 from gymnasium_classica.scheduling.session import SessionPhase
 
@@ -33,7 +33,7 @@ def _mc_item(item_id: str = "ITEM-LAT-V-F01-SUM-001") -> Item:
         id=item_id,
         knoop_ids=["LAT-V-F01-SUM"],
         type=ItemType.LUISTER_HERKENNING,
-        richting=Richting.RECEPTIEF,
+        richting=Direction.RECEPTIEF,
         moeilijkheid_initieel=0.0,
         discriminatie_initieel=1.0,
         verwachte_tijd_sec=15,
@@ -44,7 +44,7 @@ def _mc_item(item_id: str = "ITEM-LAT-V-F01-SUM-001") -> Item:
         },
         antwoord="zijn",
         feedback="Correct: sum betekent 'zijn'.",
-        bron=Bron.HANDMATIG,
+        bron=Source.HANDMATIG,
     )
 
 
@@ -54,7 +54,7 @@ def _text_item(item_id: str = "ITEM-LAT-V-F01-SUM-002") -> Item:
         id=item_id,
         knoop_ids=["LAT-V-F01-SUM"],
         type=ItemType.LUISTER_PRODUCTIE,
-        richting=Richting.PRODUCTIEF,
+        richting=Direction.PRODUCTIEF,
         moeilijkheid_initieel=0.2,
         discriminatie_initieel=1.0,
         verwachte_tijd_sec=20,
@@ -65,7 +65,7 @@ def _text_item(item_id: str = "ITEM-LAT-V-F01-SUM-002") -> Item:
         },
         antwoord="sum",
         feedback="Correct.",
-        bron=Bron.HANDMATIG,
+        bron=Source.HANDMATIG,
     )
 
 
@@ -75,26 +75,26 @@ def _plain_item(item_id: str = "ITEM-LAT-G-DEMO-001") -> Item:
         id=item_id,
         knoop_ids=["LAT-G-MORF-NAAMVAL-INTRO"],
         type=ItemType.HERKENNING,
-        richting=Richting.RECEPTIEF,
+        richting=Direction.RECEPTIEF,
         moeilijkheid_initieel=-0.5,
         discriminatie_initieel=1.0,
         verwachte_tijd_sec=12,
         stimulus="Hoeveel naamvallen kent het Latijn?",
         antwoord="6",
         feedback="Zes.",
-        bron=Bron.HANDMATIG,
+        bron=Source.HANDMATIG,
     )
 
 
 def _vocab_knoop(items: list[Item]) -> Node:
     return Node(
         id="LAT-V-F01-SUM",
-        type=KnoopType.V,
-        taal=Taal.LAT,
+        type=NodeType.V,
+        taal=Language.LAT,
         titel_nl="sum, esse — zijn",
         beschrijving="Het werkwoord 'zijn'.",
-        bloom_niveau=BloomNiveau.KENNIS,
-        fase=Fase.ONDERBOUW_1,
+        bloom_niveau=BloomLevel.KENNIS,
+        fase=Phase.ONDERBOUW_1,
         items=items,
     )
 
@@ -102,12 +102,12 @@ def _vocab_knoop(items: list[Item]) -> Node:
 def _grammar_knoop(items: list[Item]) -> Node:
     return Node(
         id="LAT-G-MORF-NAAMVAL-INTRO",
-        type=KnoopType.G,
-        taal=Taal.LAT,
+        type=NodeType.G,
+        taal=Language.LAT,
         titel_nl="Wat is een naamval?",
         beschrijving="Introductie van het concept naamval.",
-        bloom_niveau=BloomNiveau.KENNIS,
-        fase=Fase.ONDERBOUW_1,
+        bloom_niveau=BloomLevel.KENNIS,
+        fase=Phase.ONDERBOUW_1,
         items=items,
     )
 

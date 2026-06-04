@@ -466,7 +466,7 @@ class TestMaxNewNodes:
 
 
 class TestBudgetExhaustion:
-    """Fase-transities gebeuren wanneer het tijdbudget uitgeput is."""
+    """Phase-transities gebeuren wanneer het tijdbudget uitgeput is."""
 
     def test_new_material_phase_time_budget_consumed(self):
         now = datetime(2026, 4, 16, 10, 0, 0)

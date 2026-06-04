@@ -61,7 +61,7 @@ class ItemResponse(BaseModel):
     )
     richting: str | None = Field(
         description=(
-            "Richting (Richting-value: 'receptief'/'productief') van het item, "
+            "Direction (Direction-value: 'receptief'/'productief') van het item, "
             "gesnapshot op moment van antwoorden. None bij self-assessment zonder item."
         ),
     )

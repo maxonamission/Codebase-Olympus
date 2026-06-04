@@ -8,7 +8,7 @@ from pathlib import Path
 import pytest
 
 from gymnasium_classica.graph.loader import load_graph
-from gymnasium_classica.models.graph import KnoopType
+from gymnasium_classica.models.graph import NodeType
 from gymnasium_classica.vocab.loader import (
     VocabEntry,
     knoop_id_from_file_and_entry,
@@ -95,7 +95,7 @@ class TestRealVocabSources:
     def test_every_v_knoop_has_metadata(self, lookup):
         """Alle V-knopen in de productie-graph moeten matchen."""
         graph = load_graph(GRAPH_DIR)
-        v_ids = [n for n in graph.nodes if graph.nodes[n]["knoop"].type == KnoopType.V]
+        v_ids = [n for n in graph.nodes if graph.nodes[n]["knoop"].type == NodeType.V]
         missing = [kid for kid in v_ids if kid not in lookup]
         assert missing == [], f"V-knopen zonder vocab_source-entry: {missing[:5]}"
 

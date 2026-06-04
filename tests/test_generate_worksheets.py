@@ -7,15 +7,15 @@ from pathlib import Path
 import pytest
 
 from gymnasium_classica.models.graph import (
-    BloomNiveau,
-    Bron,
-    Fase,
+    BloomLevel,
+    Direction,
     Item,
     ItemType,
-    KnoopType,
+    Language,
     Node,
-    Richting,
-    Taal,
+    NodeType,
+    Phase,
+    Source,
 )
 
 _spec = importlib.util.spec_from_file_location(
@@ -43,25 +43,25 @@ def sample_knoop() -> Node:
     """A minimal grammar knoop for testing."""
     return Node(
         id="LAT-G-MORF-DECL1-PARAD",
-        type=KnoopType.G,
-        taal=Taal.LAT,
+        type=NodeType.G,
+        taal=Language.LAT,
         titel_nl="Paradigma 1e declinatie",
         beschrijving="De 1e declinatie met modelwoord puella.",
-        bloom_niveau=BloomNiveau.KENNIS,
-        fase=Fase.ONDERBOUW_1,
+        bloom_niveau=BloomLevel.KENNIS,
+        fase=Phase.ONDERBOUW_1,
         items=[
             Item(
                 id="ITEM-LAT-G-MORF-DECL1-PARAD-001",
                 knoop_ids=["LAT-G-MORF-DECL1-PARAD"],
                 type=ItemType.HERKENNING,
-                richting=Richting.RECEPTIEF,
+                richting=Direction.RECEPTIEF,
                 moeilijkheid_initieel=-0.5,
                 discriminatie_initieel=1.0,
                 verwachte_tijd_sec=15,
                 stimulus="Geef de genitivus singularis van puella.",
                 antwoord="puellae",
                 feedback="De genitivus singularis van de 1e declinatie eindigt op -ae.",
-                bron=Bron.HANDMATIG,
+                bron=Source.HANDMATIG,
             ),
         ],
     )
@@ -72,12 +72,12 @@ def greek_letter_knoop() -> Node:
     """A Greek alphabet knoop for testing writing lines."""
     return Node(
         id="GRC-G-FONL-ALFA-ALFA",
-        type=KnoopType.G,
-        taal=Taal.GRC,
+        type=NodeType.G,
+        taal=Language.GRC,
         titel_nl="Α α — alfa",
         beschrijving="De letter alfa: Α (majuskel), α (minuskel). Klank: kort of lang /a/.",
-        bloom_niveau=BloomNiveau.KENNIS,
-        fase=Fase.ONDERBOUW_1,
+        bloom_niveau=BloomLevel.KENNIS,
+        fase=Phase.ONDERBOUW_1,
     )
 
 
@@ -86,12 +86,12 @@ def knoop_no_content() -> Node:
     """A knoop with no content and no items."""
     return Node(
         id="LAT-G-MORF-GENUS-INTRO",
-        type=KnoopType.G,
-        taal=Taal.LAT,
+        type=NodeType.G,
+        taal=Language.LAT,
         titel_nl="Grammaticaal geslacht",
         beschrijving="Introductie van het concept genus.",
-        bloom_niveau=BloomNiveau.KENNIS,
-        fase=Fase.ONDERBOUW_1,
+        bloom_niveau=BloomLevel.KENNIS,
+        fase=Phase.ONDERBOUW_1,
     )
 
 
@@ -211,25 +211,25 @@ class TestGenerateWorksheet:
         """Knoop with items but no content file still produces a PDF."""
         knoop = Node(
             id="LAT-G-SYNT-WRDVLG",
-            type=KnoopType.G,
-            taal=Taal.LAT,
+            type=NodeType.G,
+            taal=Language.LAT,
             titel_nl="Woordvolgorde",
             beschrijving="Latijnse woordvolgorde is vrij.",
-            bloom_niveau=BloomNiveau.BEGRIP,
-            fase=Fase.ONDERBOUW_1,
+            bloom_niveau=BloomLevel.BEGRIP,
+            fase=Phase.ONDERBOUW_1,
             items=[
                 Item(
                     id="ITEM-LAT-G-SYNT-WRDVLG-001",
                     knoop_ids=["LAT-G-SYNT-WRDVLG"],
                     type=ItemType.PRODUCTIE,
-                    richting=Richting.PRODUCTIEF,
+                    richting=Direction.PRODUCTIEF,
                     moeilijkheid_initieel=0.0,
                     discriminatie_initieel=1.0,
                     verwachte_tijd_sec=30,
                     stimulus="Vertaal: Het meisje ziet de heer.",
                     antwoord="Puella dominum videt.",
                     feedback="SOV is de gangbare volgorde.",
-                    bron=Bron.HANDMATIG,
+                    bron=Source.HANDMATIG,
                 ),
             ],
         )
@@ -280,12 +280,12 @@ class TestGenerateWorksheet:
         """When knoop has content_ref, that file is loaded."""
         knoop = Node(
             id="LAT-G-MORF-DECL1-PARAD",
-            type=KnoopType.G,
-            taal=Taal.LAT,
+            type=NodeType.G,
+            taal=Language.LAT,
             titel_nl="1e declinatie paradigma",
             beschrijving="Paradigma.",
-            bloom_niveau=BloomNiveau.KENNIS,
-            fase=Fase.ONDERBOUW_1,
+            bloom_niveau=BloomLevel.KENNIS,
+            fase=Phase.ONDERBOUW_1,
             content_ref="LAT-G-MORF-DECL1-PARAD.md",
         )
 
@@ -340,12 +340,12 @@ class TestBuildGreekWritingLines:
         styles = _build_styles()
         knoop = Node(
             id="GRC-G-FONL-ALFA-GRP1",
-            type=KnoopType.G,
-            taal=Taal.GRC,
+            type=NodeType.G,
+            taal=Language.GRC,
             titel_nl="Groep 1: identieke letters",
             beschrijving="Letters die identiek zijn aan het Latijnse alfabet.",
-            bloom_niveau=BloomNiveau.KENNIS,
-            fase=Fase.ONDERBOUW_1,
+            bloom_niveau=BloomLevel.KENNIS,
+            fase=Phase.ONDERBOUW_1,
         )
         elements = _build_greek_writing_lines(knoop, styles)
         assert elements == []

@@ -11,20 +11,20 @@ from gymnasium_classica.schemas.id_schema import validate_knoop_id
 # --- Enums ---
 
 
-class Taal(StrEnum):
+class Language(StrEnum):
     LAT = "lat"
     GRC = "grc"
     SHARED = "shared"
 
 
-class KnoopType(StrEnum):
+class NodeType(StrEnum):
     G = "G"  # Grammatica
     V = "V"  # Vocabulaire
     C = "C"  # Cultuur
     I = "I"  # Integratie  # noqa: E741 - enum uit ID-schema, niet te hernoemen
 
 
-class BloomNiveau(StrEnum):
+class BloomLevel(StrEnum):
     KENNIS = "kennis"
     BEGRIP = "begrip"
     TOEPASSING = "toepassing"
@@ -32,7 +32,7 @@ class BloomNiveau(StrEnum):
     SYNTHESE = "synthese"
 
 
-class Fase(StrEnum):
+class Phase(StrEnum):
     ONDERBOUW_1 = "onderbouw_1"
     ONDERBOUW_2 = "onderbouw_2"
     ONDERBOUW_3 = "onderbouw_3"
@@ -58,18 +58,18 @@ class ItemType(StrEnum):
     LUISTER_PRODUCTIE = "luister_productie"
 
 
-class VerificatieMethode(StrEnum):
+class VerificationMethod(StrEnum):
     SELF_REPORT = "self_report"
     OCR = "ocr"
     MENTOR_REVIEW = "mentor_review"
 
 
-class Richting(StrEnum):
+class Direction(StrEnum):
     RECEPTIEF = "receptief"
     PRODUCTIEF = "productief"
 
 
-class Bron(StrEnum):
+class Source(StrEnum):
     HANDMATIG = "handmatig"
     LLM_GEGENEREERD = "llm_gegenereerd"
     AUTHENTIEK = "authentiek"
@@ -84,19 +84,19 @@ class Item(BaseModel):
     id: str
     knoop_ids: list[str]
     type: ItemType
-    richting: Richting
+    richting: Direction
     moeilijkheid_initieel: float = Field(description="IRT b-parameter")
     discriminatie_initieel: float = Field(gt=0, description="IRT a-parameter, must be > 0")
     verwachte_tijd_sec: int = Field(gt=0)
     stimulus: str | dict[str, Any]
     antwoord: str | list[str]
     feedback: str
-    bron: Bron
+    bron: Source
     audio_ref: str | None = Field(
         default=None,
         description="Path to audio file in data/audio/, e.g. LAT-V-F01-ESSE.mp3",
     )
-    verificatie_methode: VerificatieMethode | None = Field(
+    verificatie_methode: VerificationMethod | None = Field(
         default=None,
         description="For offline_schrijven items: how the result is verified.",
     )
@@ -110,13 +110,13 @@ class Node(BaseModel):
     """A single knowledge node (kennisatoom) in the graph."""
 
     id: str
-    type: KnoopType
-    taal: Taal
+    type: NodeType
+    taal: Language
     titel_nl: str
     titel_terminologie: str | None = None
     beschrijving: str = Field(description="Short (1-2 sentences) identifying description")
-    bloom_niveau: BloomNiveau
-    fase: Fase
+    bloom_niveau: BloomLevel
+    fase: Phase
     toetsbaar: bool = True
     pensum_jaren: list[int] = Field(default_factory=list)
     cevte_referentie: str | None = None

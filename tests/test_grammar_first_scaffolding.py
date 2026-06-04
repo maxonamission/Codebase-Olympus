@@ -21,15 +21,15 @@ from gymnasium_classica.api.session_manager import (
     _should_scaffold,
 )
 from gymnasium_classica.models.graph import (
-    BloomNiveau,
-    Bron,
-    Fase,
+    BloomLevel,
+    Direction,
     Item,
     ItemType,
-    KnoopType,
+    Language,
     Node,
-    Richting,
-    Taal,
+    NodeType,
+    Phase,
+    Source,
 )
 from gymnasium_classica.models.learner import (
     ItemResponse,
@@ -45,25 +45,25 @@ KNOOP_ID = "LAT-G-MORF-DECL1-INTRO"
 def _knoop() -> Node:
     return Node(
         id=KNOOP_ID,
-        type=KnoopType.G,
-        taal=Taal.LAT,
+        type=NodeType.G,
+        taal=Language.LAT,
         titel_nl="De eerste declinatie",
         beschrijving="Overzicht van de 1e declinatie (a-stammen).",
-        bloom_niveau=BloomNiveau.KENNIS,
-        fase=Fase.ONDERBOUW_1,
+        bloom_niveau=BloomLevel.KENNIS,
+        fase=Phase.ONDERBOUW_1,
         items=[
             Item(
                 id=f"ITEM-{KNOOP_ID}-001",
                 knoop_ids=[KNOOP_ID],
                 type=ItemType.HERKENNING,
-                richting=Richting.RECEPTIEF,
+                richting=Direction.RECEPTIEF,
                 moeilijkheid_initieel=0.0,
                 discriminatie_initieel=1.0,
                 verwachte_tijd_sec=10,
                 stimulus="Wat is de nominativus van 'puella'?",
                 antwoord="puella",
                 feedback="Correct: puella.",
-                bron=Bron.HANDMATIG,
+                bron=Source.HANDMATIG,
             )
         ],
     )

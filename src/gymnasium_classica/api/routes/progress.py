@@ -20,7 +20,7 @@ from gymnasium_classica.api.schemas import (
     ProgressOverviewResponse,
     SessionMasteryEntry,
 )
-from gymnasium_classica.models.graph import KnoopType, Node, PrerequisiteEdge
+from gymnasium_classica.models.graph import Node, NodeType, PrerequisiteEdge
 from gymnasium_classica.models.learner import LearnerModel
 from gymnasium_classica.scheduling.priority import MASTERY_THRESHOLD
 
@@ -239,7 +239,7 @@ async def progress_clusters(
     nodes_per_cluster: dict[str, list[str]] = {c["label"]: [] for c in cluster_defs}
     for node_id in graph.nodes:
         knoop: Node = graph.nodes[node_id]["knoop"]
-        if knoop.type != KnoopType.V:
+        if knoop.type != NodeType.V:
             continue
         label = knoop.semantisch_cluster
         if not label or label not in nodes_per_cluster:

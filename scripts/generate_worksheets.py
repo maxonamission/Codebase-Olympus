@@ -31,7 +31,7 @@ from reportlab.platypus import (
 )
 
 from gymnasium_classica.graph.loader import load_graph
-from gymnasium_classica.models.graph import KnoopType, Node
+from gymnasium_classica.models.graph import Node, NodeType
 
 # --- Constants ---
 
@@ -491,7 +491,7 @@ def main() -> None:
         knoop: Node = graph.nodes[node_id]["knoop"]
 
         # Filter: only grammar nodes
-        if knoop.type != KnoopType.G:
+        if knoop.type != NodeType.G:
             continue
 
         # Filter: specific knoop if requested
