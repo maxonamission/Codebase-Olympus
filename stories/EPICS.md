@@ -451,8 +451,9 @@ Bestaand materiaal (markdowns, audio, MC-opties, vocab-metadata) daadwerkelijk n
 | F1-10 | Opschonen passages — merge `lat_passages_leerjaar1.json` | done |
 | F1-11 | Content-dekkingsrapport — script + CI-check | done |
 | F1-12 | Telemetrie-uitbreiding — `answer_text` + `item_history` wiring | done |
-| F1-13 | Frontend mentor-view (placeholder) | doing |
+| F1-13 | Mentor-view pagina (capstone Sprint 5) | doing |
 | F1-19 | Diverse content-opschoning ronde 2 | done |
+| F1-20 | Mouseover-tooltips voor vaktermen in content (afgesplitst van F1-13) | backlog |
 
 **Verhouding tot andere epics:**
 - F1 overlapt niet met **A-spoor** (graph-structuur) — die is af.
