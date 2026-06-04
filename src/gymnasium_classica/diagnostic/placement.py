@@ -11,7 +11,7 @@ from dataclasses import dataclass, field
 import networkx as nx
 
 from gymnasium_classica.models.graph import PrerequisiteEdge
-from gymnasium_classica.models.learner import KnoopState, LearnerModel, MasterySource
+from gymnasium_classica.models.learner import LearnerModel, MasterySource, NodeState
 
 # Convergence thresholds
 MASTERED_THRESHOLD = 0.75  # Above this → considered mastered
@@ -38,10 +38,10 @@ def _topo_order(graph: nx.DiGraph) -> list[str]:
     return list(nx.topological_sort(graph))
 
 
-def _get_or_init_state(learner: LearnerModel, knoop_id: str) -> KnoopState:
+def _get_or_init_state(learner: LearnerModel, knoop_id: str) -> NodeState:
     """Get existing state or create a new one with default prior."""
     if knoop_id not in learner.knoop_states:
-        learner.knoop_states[knoop_id] = KnoopState(
+        learner.knoop_states[knoop_id] = NodeState(
             knoop_id=knoop_id,
             posterior_mastery=0.10,
             source=MasterySource.DIAGNOSTIC,
@@ -49,7 +49,7 @@ def _get_or_init_state(learner: LearnerModel, knoop_id: str) -> KnoopState:
     return learner.knoop_states[knoop_id]
 
 
-def _is_resolved(state: KnoopState) -> bool:
+def _is_resolved(state: NodeState) -> bool:
     """A node is resolved when its posterior is clearly mastered or unmastered."""
     return (
         state.posterior_mastery >= MASTERED_THRESHOLD

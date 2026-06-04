@@ -4,7 +4,7 @@ from datetime import datetime
 
 import pytest
 
-from gymnasium_classica.models.learner import KnoopState, ResponseType
+from gymnasium_classica.models.learner import NodeState, ResponseType
 from gymnasium_classica.scheduling.sm2 import (
     MIN_EASINESS_FACTOR,
     compute_quality,
@@ -24,8 +24,8 @@ class TestComputeQuality:
 
 
 class TestSM2Update:
-    def _fresh_state(self) -> KnoopState:
-        return KnoopState(knoop_id="LAT-G-MORF-NOM-D1")
+    def _fresh_state(self) -> NodeState:
+        return NodeState(knoop_id="LAT-G-MORF-NOM-D1")
 
     def test_first_correct_sets_interval_1(self):
         state = self._fresh_state()

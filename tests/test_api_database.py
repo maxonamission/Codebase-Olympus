@@ -101,11 +101,11 @@ class TestLearnerModel:
         assert loaded.intake_completed is True
 
     def test_roundtrip_with_knoop_states(self, db):
-        from gymnasium_classica.models.learner import KnoopState
+        from gymnasium_classica.models.learner import NodeState
 
         uid = uuid4()
         model = LearnerModel(user_id=uid)
-        model.knoop_states["LAT-G-MORF-NOM-D1"] = KnoopState(
+        model.knoop_states["LAT-G-MORF-NOM-D1"] = NodeState(
             knoop_id="LAT-G-MORF-NOM-D1",
             posterior_mastery=0.75,
             easiness_factor=2.3,

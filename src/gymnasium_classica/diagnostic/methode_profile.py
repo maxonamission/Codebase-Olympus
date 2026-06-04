@@ -10,7 +10,7 @@ from typing import Any
 
 import networkx as nx
 
-from gymnasium_classica.models.learner import KnoopState, LearnerModel, MasterySource
+from gymnasium_classica.models.learner import LearnerModel, MasterySource, NodeState
 
 # Default priors
 PRIOR_TREATED = 0.70  # Chapters already covered → expected mastered, to be verified
@@ -80,7 +80,7 @@ def apply_methode_profile(
 
     for node_id in graph.nodes:
         prior = PRIOR_TREATED if node_id in treated_ids else PRIOR_UNTREATED
-        learner.knoop_states[node_id] = KnoopState(
+        learner.knoop_states[node_id] = NodeState(
             knoop_id=node_id,
             posterior_mastery=prior,
             source=MasterySource.DIAGNOSTIC,

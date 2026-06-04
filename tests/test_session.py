@@ -8,9 +8,9 @@ import pytest
 from gymnasium_classica.graph.loader import load_graph
 from gymnasium_classica.models.graph import KennisKnoop
 from gymnasium_classica.models.learner import (
-    KnoopState,
     LearnerModel,
     MasterySource,
+    NodeState,
     ResponseType,
 )
 from gymnasium_classica.scheduling.session import (
@@ -71,7 +71,7 @@ class TestSessionOrchestration:
         for i, node_id in enumerate(topo):
             if i < 15:
                 # Mastered, reviewed a week ago
-                learner.knoop_states[node_id] = KnoopState(
+                learner.knoop_states[node_id] = NodeState(
                     knoop_id=node_id,
                     posterior_mastery=0.85,
                     source=MasterySource.PRACTICE,
@@ -81,7 +81,7 @@ class TestSessionOrchestration:
                     last_review=now - timedelta(days=7),
                 )
             else:
-                learner.knoop_states[node_id] = KnoopState(
+                learner.knoop_states[node_id] = NodeState(
                     knoop_id=node_id,
                     posterior_mastery=0.10,
                 )

@@ -9,7 +9,7 @@ from fastapi.testclient import TestClient
 
 from gymnasium_classica.api.intake_manager import IntakeManager
 from gymnasium_classica.graph.loader import load_graph
-from gymnasium_classica.models.learner import KnoopState, LearnerModel, MasterySource
+from gymnasium_classica.models.learner import LearnerModel, MasterySource, NodeState
 
 # -- Unit tests for IntakeManager --
 
@@ -34,7 +34,7 @@ def _apply_partial_mastery(learner: LearnerModel, graph, fraction: float = 0.3):
     topo = list(nx.topological_sort(graph))
     n_treated = max(1, int(len(topo) * fraction))
     for node_id in topo[:n_treated]:
-        learner.knoop_states[node_id] = KnoopState(
+        learner.knoop_states[node_id] = NodeState(
             knoop_id=node_id, posterior_mastery=0.70, source=MasterySource.DIAGNOSTIC
         )
 

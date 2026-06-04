@@ -6,9 +6,9 @@ from uuid import uuid4
 import pytest
 
 from gymnasium_classica.models.learner import (
-    KnoopState,
     LearnerModel,
     MasterySource,
+    NodeState,
     OfflineAssignment,
     ResponseType,
     SelfReportResponse,
@@ -82,7 +82,7 @@ class TestProcessSelfReport:
 
     def test_correct_increases_posterior(self):
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-DECL1-INTRO"] = KnoopState(
+        learner.knoop_states["LAT-G-MORF-DECL1-INTRO"] = NodeState(
             knoop_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.30
         )
         assignment = self._make_assignment()
@@ -94,7 +94,7 @@ class TestProcessSelfReport:
 
     def test_partial_increases_posterior(self):
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-DECL1-INTRO"] = KnoopState(
+        learner.knoop_states["LAT-G-MORF-DECL1-INTRO"] = NodeState(
             knoop_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.30
         )
         assignment = self._make_assignment()
@@ -106,7 +106,7 @@ class TestProcessSelfReport:
 
     def test_incorrect_decreases_posterior(self):
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-DECL1-INTRO"] = KnoopState(
+        learner.knoop_states["LAT-G-MORF-DECL1-INTRO"] = NodeState(
             knoop_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.70
         )
         assignment = self._make_assignment()
@@ -119,7 +119,7 @@ class TestProcessSelfReport:
     def test_uses_self_report_params_not_default(self):
         """Verify that self-report uses the higher P(G)/P(S) params."""
         learner_sr = LearnerModel(user_id=uuid4())
-        learner_sr.knoop_states["LAT-G-MORF-DECL1-INTRO"] = KnoopState(
+        learner_sr.knoop_states["LAT-G-MORF-DECL1-INTRO"] = NodeState(
             knoop_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.30
         )
         assignment = self._make_assignment()
@@ -128,7 +128,7 @@ class TestProcessSelfReport:
 
         # Compare with normal BKT update
         learner_normal = LearnerModel(user_id=uuid4())
-        learner_normal.knoop_states["LAT-G-MORF-DECL1-INTRO"] = KnoopState(
+        learner_normal.knoop_states["LAT-G-MORF-DECL1-INTRO"] = NodeState(
             knoop_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.30
         )
         update_knoop_state(learner_normal, "LAT-G-MORF-DECL1-INTRO", ResponseType.CORRECT)

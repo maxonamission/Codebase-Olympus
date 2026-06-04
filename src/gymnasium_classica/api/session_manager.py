@@ -237,7 +237,7 @@ def _should_scaffold(
     * Only during :class:`SessionPhase.NEW_MATERIAL`.
     * Only on the **first** introduction of the knoop for this learner —
       i.e. the knoop has no :class:`ItemResponse` entries in
-      ``KnoopState.item_history`` yet.  This prevents scaffolding from
+      ``NodeState.item_history`` yet.  This prevents scaffolding from
       re-appearing on SM-2 reviews.
 
     Path-specific gating:

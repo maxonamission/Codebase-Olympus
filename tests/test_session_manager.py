@@ -19,8 +19,8 @@ from gymnasium_classica.api.session_manager import (
 )
 from gymnasium_classica.graph.loader import load_graph_from_dict
 from gymnasium_classica.models.learner import (
-    KnoopState,
     LearnerModel,
+    NodeState,
     ResponseType,
 )
 from gymnasium_classica.models.passage import Passage, WordAnnotation
@@ -306,7 +306,7 @@ def _broad_graph_and_learner(now: datetime):
 
     # Mastered ancestors met verouderde review → warmup-kandidaat.
     stale = now - timedelta(days=30)
-    learner.knoop_states["LAT-G-MORF-NAAMVAL-INTRO"] = KnoopState(
+    learner.knoop_states["LAT-G-MORF-NAAMVAL-INTRO"] = NodeState(
         knoop_id="LAT-G-MORF-NAAMVAL-INTRO",
         posterior_mastery=0.92,
         easiness_factor=2.5,
@@ -314,7 +314,7 @@ def _broad_graph_and_learner(now: datetime):
         repetitions=3,
         last_review=stale,
     )
-    learner.knoop_states["LAT-G-MORF-DECL-INTRO"] = KnoopState(
+    learner.knoop_states["LAT-G-MORF-DECL-INTRO"] = NodeState(
         knoop_id="LAT-G-MORF-DECL-INTRO",
         posterior_mastery=0.88,
         easiness_factor=2.5,
@@ -324,7 +324,7 @@ def _broad_graph_and_learner(now: datetime):
     )
     # Mastered losstaand vocab-item, niet aangeraakt in deze sessie
     # → cooldown-kandidaat.
-    learner.knoop_states["LAT-V-F01-ESSE"] = KnoopState(
+    learner.knoop_states["LAT-V-F01-ESSE"] = NodeState(
         knoop_id="LAT-V-F01-ESSE",
         posterior_mastery=0.91,
         easiness_factor=2.5,

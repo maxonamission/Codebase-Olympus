@@ -322,7 +322,7 @@ def _process_response(
     """Run BKT update, SM-2 update, and conditional completion check.
 
     When *item_response* is supplied, it is appended to the
-    ``KnoopState.item_history`` so mentors and future error-pattern
+    ``NodeState.item_history`` so mentors and future error-pattern
     analysis can inspect what the learner actually typed/selected.
     """
     # BKT
