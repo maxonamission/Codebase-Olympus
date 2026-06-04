@@ -17,7 +17,7 @@ import networkx as nx
 
 from gymnasium_classica.diagnostic.conditional_completion import apply_fallback
 from gymnasium_classica.experiments import strategy_params_for
-from gymnasium_classica.models.graph import ItemType, Node
+from gymnasium_classica.models.graph import Direction, ItemType, Node
 from gymnasium_classica.models.learner import (
     ItemResponse,
     LearnerModel,
@@ -326,8 +326,14 @@ def _process_response(
     ``NodeState.item_history`` so mentors and future error-pattern
     analysis can inspect what the learner actually typed/selected.
     """
-    # BKT
-    update_node_state(learner, node_id, response)
+    # BKT — route op de richting van het beantwoorde item (L2-01); bij
+    # self-assess zonder item blijft het de overall posterior.
+    direction = (
+        Direction(item_response.direction)
+        if item_response is not None and item_response.direction is not None
+        else None
+    )
+    update_node_state(learner, node_id, response, direction=direction)
     if response in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT):
         propagate_practice_correct(learner, graph, node_id)
 

@@ -6,6 +6,8 @@ from uuid import UUID
 
 from pydantic import BaseModel, Field
 
+from gymnasium_classica.models.graph import Direction
+
 
 class ResponseType(StrEnum):
     CORRECT = "correct"
@@ -77,6 +79,18 @@ class NodeState(BaseModel):
 
     node_id: str
     posterior_mastery: float = Field(ge=0.0, le=1.0, default=0.0)
+    receptive_mastery: float = Field(
+        ge=0.0,
+        le=1.0,
+        default=0.0,
+        description="BKT-posterior voor receptieve items (herkennen). L2-01.",
+    )
+    productive_mastery: float = Field(
+        ge=0.0,
+        le=1.0,
+        default=0.0,
+        description="BKT-posterior voor productieve items (zelf produceren). L2-01.",
+    )
     easiness_factor: float = Field(gt=0.0, default=2.5)
     interval_days: float = Field(ge=0.0, default=0.0)
     repetitions: int = Field(ge=0, default=0)
@@ -84,6 +98,27 @@ class NodeState(BaseModel):
     last_response: ResponseType | None = None
     source: MasterySource = MasterySource.PRACTICE
     item_history: list[ItemResponse] = Field(default_factory=list)
+
+    def mastery_for(self, direction: Direction | None) -> float:
+        """Mastery voor een richting; ``None`` geeft de overall posterior.
+
+        Vormt de interface waarmee scheduler/diagnostiek optioneel per
+        richting kan redeneren (L2-01).
+        """
+        if direction == Direction.RECEPTIVE:
+            return self.receptive_mastery
+        if direction == Direction.PRODUCTIVE:
+            return self.productive_mastery
+        return self.posterior_mastery
+
+    @property
+    def combined_mastery(self) -> float:
+        """Strenge afgeleide overall-mastery: min van receptief en productief.
+
+        Beschikbaar voor diagnostiek die 'beide richtingen beheerst' wil
+        weten; ``posterior_mastery`` blijft de reguliere overall-trajectorie.
+        """
+        return min(self.receptive_mastery, self.productive_mastery)
 
 
 class OfflineAssignment(BaseModel):
