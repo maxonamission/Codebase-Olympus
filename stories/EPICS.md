@@ -874,8 +874,9 @@ inventarisatie, juni 2026).
   (`titel_nl`, `beschrijving`, `antwoord`, `moeilijkheid_initieel`,
   `verwachte_tijd_sec`, `bloom_niveau`, `toetsbaar`, `pensum_jaren`) en
   enum-*waarden* (`receptief`/`productief`, bloom-/fase-waarden). Vereist
-  migratie van ~7-9 graph-databestanden + loader + veel tests. Beslissing
-  per ja/nee nog te nemen; stories volgen pas na akkoord.
+  migratie van ~7-9 graph-databestanden + loader + veel tests. **Besloten (juni 2026): volledige Tier 3 wordt uitgevoerd** — "pijnlijk
+  maar anders blijven we ermee zitten". Stories worden uitgewerkt zodra N1
+  start (na de Sprint-2-merge).
 
 **Uitvoervolgorde:** N1-01 → N1-02 → N1-03 (elk eigen, kleine PR; per
 rename de volledige suite groen). Tier 2/3 daarna, alleen na expliciet
@@ -892,8 +893,9 @@ plannen ná merge van lopend werk dat diezelfde bestanden aanpast
 | Story | Titel | Tier | Status |
 |-------|-------|------|--------|
 | N1-01 | KnoopState → NodeState | 1 | backlog |
-| N1-02 | KennisKnoop → KnowledgeNode | 1 | backlog |
+| N1-02 | KennisKnoop → Node | 1 | backlog |
 | N1-03 | Enum-klassen naar Engels | 1 | backlog |
 
-**Tier 2/3** (veldnamen + JSON-keys + enum-waarden) worden als aparte
-stories toegevoegd zodra de scope is afgestemd.
+**Scope besloten: t/m Tier 3** (volledig). Tier 2- en Tier 3-stories
+(veldnamen, JSON-keys, enum-waarden + datamigratie) worden uitgewerkt zodra
+N1 daadwerkelijk start, ná de Sprint-2-merge.
