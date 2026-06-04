@@ -289,3 +289,24 @@ class UserProfileResponse(BaseModel):
     user_id: str
     email: str
     learning_route: str
+
+
+class MenteeSummary(BaseModel):
+    """One learner linked to the requesting mentor."""
+
+    user_id: str
+    email: str
+
+
+class MenteeListResponse(BaseModel):
+    """The mentees assigned to the authenticated mentor."""
+
+    mentees: list[MenteeSummary]
+
+
+class MentorLearnerProfileResponse(BaseModel):
+    """Basic profile of a learner, viewed through the mentor guard."""
+
+    user_id: str
+    email: str
+    role: str

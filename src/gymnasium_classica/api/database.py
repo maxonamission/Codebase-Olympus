@@ -1,6 +1,7 @@
 """SQLite database connection, schema management, and CRUD operations."""
 
 import sqlite3
+from datetime import datetime
 from pathlib import Path
 
 from gymnasium_classica.models.learner import LearnerModel
@@ -24,6 +25,15 @@ CREATE TABLE IF NOT EXISTS learner_models (
 CREATE TABLE IF NOT EXISTS auth_tokens (
     token TEXT PRIMARY KEY,
     user_id TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS mentor_assignments (
+    mentor_id TEXT NOT NULL,
+    learner_id TEXT NOT NULL,
+    created_at TEXT NOT NULL,
+    PRIMARY KEY (mentor_id, learner_id),
+    FOREIGN KEY (mentor_id) REFERENCES users(id),
+    FOREIGN KEY (learner_id) REFERENCES users(id)
 );
 """
 
@@ -105,3 +115,40 @@ def load_learner_model(conn: sqlite3.Connection, user_id: str) -> LearnerModel |
     if row is None:
         return None
     return LearnerModel.model_validate_json(row["data"])
+
+
+# ---------------------------------------------------------------------------
+# CRUD: Mentor assignments (F2-01)
+# ---------------------------------------------------------------------------
+
+
+def create_mentor_assignment(conn: sqlite3.Connection, mentor_id: str, learner_id: str) -> None:
+    """Link a mentor to a learner. Idempotent: re-linking is a no-op.
+
+    The caller is responsible for ensuring ``mentor_id`` belongs to a user
+    with the MENTOR role; this function only records the relationship.
+    """
+    conn.execute(
+        "INSERT OR IGNORE INTO mentor_assignments (mentor_id, learner_id, created_at) "
+        "VALUES (?, ?, ?)",
+        (mentor_id, learner_id, datetime.now().isoformat()),
+    )
+    conn.commit()
+
+
+def is_mentor_of(conn: sqlite3.Connection, mentor_id: str, learner_id: str) -> bool:
+    """Return True if an assignment links *mentor_id* to *learner_id*."""
+    row = conn.execute(
+        "SELECT 1 FROM mentor_assignments WHERE mentor_id = ? AND learner_id = ?",
+        (mentor_id, learner_id),
+    ).fetchone()
+    return row is not None
+
+
+def list_mentees(conn: sqlite3.Connection, mentor_id: str) -> list[str]:
+    """Return the learner IDs assigned to *mentor_id*, oldest link first."""
+    rows = conn.execute(
+        "SELECT learner_id FROM mentor_assignments WHERE mentor_id = ? ORDER BY created_at",
+        (mentor_id,),
+    ).fetchall()
+    return [row["learner_id"] for row in rows]
