@@ -75,8 +75,8 @@ def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: i
     return {
         "id": f"ITEM-{node_id}-{item_nr:03d}",
         "node_ids": [node_id],
-        "type": "herkenning",
-        "direction": "receptief",
+        "type": "recognition",
+        "direction": "receptive",
         "difficulty_initial": round(random.uniform(*HERKENNING_B_RANGE), 2),
         "discrimination_initial": 1.0,
         "expected_time_sec": HERKENNING_TIME_SEC,
@@ -87,7 +87,7 @@ def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: i
         },
         "answer": correct,
         "feedback": f"{first_word} = {correct}.",
-        "source": "llm_gegenereerd",
+        "source": "llm_generated",
     }
 
 
@@ -103,8 +103,8 @@ def generate_productie_item(node: dict, item_nr: int) -> dict:
     return {
         "id": f"ITEM-{node_id}-{item_nr:03d}",
         "node_ids": [node_id],
-        "type": "productie",
-        "direction": "productief",
+        "type": "production",
+        "direction": "productive",
         "difficulty_initial": round(random.uniform(*PRODUCTIE_B_RANGE), 2),
         "discrimination_initial": 1.0,
         "expected_time_sec": PRODUCTIE_TIME_SEC,
@@ -114,7 +114,7 @@ def generate_productie_item(node: dict, item_nr: int) -> dict:
         },
         "answer": first_word,
         "feedback": f"Het {taal_adj} woord is '{first_word}' ({correct}).",
-        "source": "llm_gegenereerd",
+        "source": "llm_generated",
     }
 
 
@@ -143,13 +143,13 @@ def enrich_file(json_path: Path) -> tuple[int, int, int]:
         existing_types = {i["type"] for i in node["items"]}
         added_here = 0
 
-        if "herkenning" not in existing_types:
+        if "recognition" not in existing_types:
             nr = next_item_nr(node)
             node["items"].append(generate_herkenning_item(node, translation_pool, nr))
             herk_added += 1
             added_here += 1
 
-        if "productie" not in existing_types:
+        if "production" not in existing_types:
             nr = next_item_nr(node)
             node["items"].append(generate_productie_item(node, nr))
             prod_added += 1

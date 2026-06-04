@@ -6,7 +6,7 @@
       "language": "grc",
       "title_nl": "Het Griekse alfabet",
       "description": "Overzicht van het Griekse alfabet: 24 letters, majuskel en minuskel, gegroepeerd naar visuele gelijkenis met het Latijnse alfabet.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": false,
       "pensum_years": [],
@@ -16,23 +16,23 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -1.0,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
           "stimulus": "Uit hoeveel letters bestaat het Griekse alfabet?",
           "answer": "24",
           "feedback": "Het Griekse alfabet telt 24 letters — van alfa (α) tot omega (ω).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-ALFA-INTRO-002",
           "node_ids": [
             "GRC-G-FONL-ALFA-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -42,7 +42,7 @@
             "identiek, bekende klank, valse vrienden, uniek"
           ],
           "feedback": "Vier groepen: (1) identiek aan Latijn, (2) afwijkende vorm maar bekende klank, (3) valse vrienden, (4) uniek Griekse letters.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -52,7 +52,7 @@
       "language": "grc",
       "title_nl": "Groep 1: identieke letters",
       "description": "Letters die identiek zijn aan het Latijnse alfabet in vorm en klank: Α/α (alfa), Β/β (bèta), Ε/ε (epsilon), Ζ/ζ (dzèta), Ι/ι (iota), Κ/κ (kappa), Μ/μ (mu), Ν/ν (nu), Ο/ο (omikron), Τ/τ (tau).",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -62,30 +62,30 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-GRP1"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.8,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Welke Griekse letter is identiek aan de Latijnse A in vorm én klank?",
           "answer": "alfa",
           "feedback": "Α/α (alfa) is identiek aan de Latijnse A in vorm en klank.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-ALFA-GRP1-002",
           "node_ids": [
             "GRC-G-FONL-ALFA-GRP1"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Welke letter hoort NIET bij groep 1 (identieke letters): Α, Κ, Θ, Μ?",
           "answer": "Θ",
           "feedback": "Θ (thèta) hoort bij groep 4 (uniek Grieks). Α, Κ en Μ zijn identiek aan Latijnse A, K en M.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -95,7 +95,7 @@
       "language": "grc",
       "title_nl": "Α α — alfa",
       "description": "De letter alfa: Α (majuskel), α (minuskel). Klank: kort of lang /a/. Visueel identiek aan Latijns A.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -105,15 +105,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-ALFA"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter alfa vijf keer op papier: hoofdletter (Α) en kleine letter (α). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Α α.",
           "feedback": "Lijkt op de Latijnse A, maar de kleine letter is rond.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Α en 5× α — herkenbare lettervorm"
         }
@@ -125,7 +125,7 @@
       "language": "grc",
       "title_nl": "Β β — bèta",
       "description": "De letter bèta: Β (majuskel), β (minuskel). Klank: /b/. Majuskel identiek aan Latijns B, minuskel wijkt af.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -135,15 +135,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-BETA"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter bèta vijf keer op papier: hoofdletter (Β) en kleine letter (β). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Β β.",
           "feedback": "De kleine letter lijkt op een Duitse ß. Trek de lus naar beneden.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Β en 5× β — herkenbare lettervorm"
         }
@@ -155,7 +155,7 @@
       "language": "grc",
       "title_nl": "Γ γ — gamma",
       "description": "De letter gamma: Γ (majuskel), γ (minuskel). Klank: /ɡ/. Geen Latijns equivalent; voor nasaal γγ zie lettercombinaties.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -165,15 +165,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-GAMMA"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter gamma vijf keer op papier: hoofdletter (Γ) en kleine letter (γ). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Γ γ.",
           "feedback": "De hoofdletter is een omgekeerde L. De kleine letter hangt onder de regel.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Γ en 5× γ — herkenbare lettervorm"
         }
@@ -185,7 +185,7 @@
       "language": "grc",
       "title_nl": "Δ δ — delta",
       "description": "De letter delta: Δ (majuskel), δ (minuskel). Klank: /d/. Majuskel driehoekig, minuskel lijkt op een d met lus.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -195,15 +195,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-DELTA"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter delta vijf keer op papier: hoofdletter (Δ) en kleine letter (δ). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Δ δ.",
           "feedback": "De hoofdletter is een driehoek. De kleine letter lijkt op een omgekeerde 6.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Δ en 5× δ — herkenbare lettervorm"
         }
@@ -215,7 +215,7 @@
       "language": "grc",
       "title_nl": "Ε ε — epsilon",
       "description": "De letter epsilon: Ε (majuskel), ε (minuskel). Klank: kort /e/. Majuskel identiek aan Latijns E.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -225,15 +225,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-EPSIL"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter epsilon vijf keer op papier: hoofdletter (Ε) en kleine letter (ε). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Ε ε.",
           "feedback": "Kort! Lijkt op een kleine halve maan of omgekeerde 3.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Ε en 5× ε — herkenbare lettervorm"
         }
@@ -245,7 +245,7 @@
       "language": "grc",
       "title_nl": "Ζ ζ — dzèta",
       "description": "De letter dzèta: Ζ (majuskel), ζ (minuskel). Klank: /zd/ of /dz/. Majuskel lijkt op Latijns Z.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -255,15 +255,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-DZETA"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter dzèta vijf keer op papier: hoofdletter (Ζ) en kleine letter (ζ). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Ζ ζ.",
           "feedback": "De kleine letter heeft een staart onder de regel. Begin bovenaan met een horizontale streep.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Ζ en 5× ζ — herkenbare lettervorm"
         }
@@ -275,7 +275,7 @@
       "language": "grc",
       "title_nl": "Η η — èta",
       "description": "De letter èta: Η (majuskel), η (minuskel). Klank: lang /ɛː/. Valse vriend: majuskel lijkt op Latijns H maar is een klinker.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -285,15 +285,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-ETA"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter èta vijf keer op papier: hoofdletter (Η) en kleine letter (η). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Η η.",
           "feedback": "Lang! De kleine letter lijkt op een n met een lange staart naar beneden.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Η en 5× η — herkenbare lettervorm"
         }
@@ -305,7 +305,7 @@
       "language": "grc",
       "title_nl": "Θ θ — thèta",
       "description": "De letter thèta: Θ (majuskel), θ (minuskel). Klank: geaspireerde /tʰ/. Geen Latijns visueel equivalent.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -315,15 +315,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-THETA"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter thèta vijf keer op papier: hoofdletter (Θ) en kleine letter (θ). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Θ θ.",
           "feedback": "Een cirkel met een horizontale streep erdoor (hoofdletter) of een ronde 0 met bovenstok.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Θ en 5× θ — herkenbare lettervorm"
         }
@@ -335,7 +335,7 @@
       "language": "grc",
       "title_nl": "Ι ι — iota",
       "description": "De letter iota: Ι (majuskel), ι (minuskel). Klank: kort of lang /i/. Visueel identiek aan Latijns I.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -345,15 +345,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-IOTA"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter iota vijf keer op papier: hoofdletter (Ι) en kleine letter (ι). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Ι ι.",
           "feedback": "De eenvoudigste letter: één verticale streep. Geen punt erboven.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Ι en 5× ι — herkenbare lettervorm"
         }
@@ -365,7 +365,7 @@
       "language": "grc",
       "title_nl": "Κ κ — kappa",
       "description": "De letter kappa: Κ (majuskel), κ (minuskel). Klank: /k/. Visueel identiek aan Latijns K.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -375,15 +375,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-KAPPA"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter kappa vijf keer op papier: hoofdletter (Κ) en kleine letter (κ). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Κ κ.",
           "feedback": "Lijkt sterk op de Latijnse K. De kleine letter heeft twee schuine streepjes.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Κ en 5× κ — herkenbare lettervorm"
         }
@@ -395,7 +395,7 @@
       "language": "grc",
       "title_nl": "Λ λ — lambda",
       "description": "De letter lambda: Λ (majuskel), λ (minuskel). Klank: /l/. Majuskel omgekeerde V, minuskel uniek.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -405,15 +405,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-LAMBD"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter lambda vijf keer op papier: hoofdletter (Λ) en kleine letter (λ). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Λ λ.",
           "feedback": "De hoofdletter is een omgekeerde V. De kleine letter begint met een bovenstok.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Λ en 5× λ — herkenbare lettervorm"
         }
@@ -425,7 +425,7 @@
       "language": "grc",
       "title_nl": "Μ μ — mu",
       "description": "De letter mu: Μ (majuskel), μ (minuskel). Klank: /m/. Majuskel identiek aan Latijns M.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -435,15 +435,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-MU"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter mu vijf keer op papier: hoofdletter (Μ) en kleine letter (μ). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Μ μ.",
           "feedback": "De hoofdletter = M. De kleine letter heeft een staart onder de regel.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Μ en 5× μ — herkenbare lettervorm"
         }
@@ -455,7 +455,7 @@
       "language": "grc",
       "title_nl": "Ν ν — nu",
       "description": "De letter nu: Ν (majuskel), ν (minuskel). Klank: /n/. Majuskel identiek aan Latijns N; let op: minuskel ν lijkt op Latijns v.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -465,15 +465,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-NU"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter nu vijf keer op papier: hoofdletter (Ν) en kleine letter (ν). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Ν ν.",
           "feedback": "Valse vriend! De hoofdletter = N, maar de kleine letter lijkt op een v.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Ν en 5× ν — herkenbare lettervorm"
         }
@@ -485,7 +485,7 @@
       "language": "grc",
       "title_nl": "Ξ ξ — xi",
       "description": "De letter xi: Ξ (majuskel), ξ (minuskel). Klank: /ks/. Dubbelmedeklinker, geen Latijns visueel equivalent.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -495,15 +495,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-XI"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter xi vijf keer op papier: hoofdletter (Ξ) en kleine letter (ξ). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Ξ ξ.",
           "feedback": "Drie horizontale strepen (hoofdletter). De kleine letter kronkelt naar beneden.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Ξ en 5× ξ — herkenbare lettervorm"
         }
@@ -515,7 +515,7 @@
       "language": "grc",
       "title_nl": "Ο ο — omikron",
       "description": "De letter omikron: Ο (majuskel), ο (minuskel). Klank: kort /o/. Visueel identiek aan Latijns O.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -525,15 +525,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-OMIKR"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter omikron vijf keer op papier: hoofdletter (Ο) en kleine letter (ο). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Ο ο.",
           "feedback": "Kort! Identiek aan de Latijnse O/o. Let op: niet verwarren met omega.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Ο en 5× ο — herkenbare lettervorm"
         }
@@ -545,7 +545,7 @@
       "language": "grc",
       "title_nl": "Π π — pi",
       "description": "De letter pi: Π (majuskel), π (minuskel). Klank: /p/. Majuskel lijkt op poort, minuskel wijkt af van Latijns P.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -555,15 +555,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-PI"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter pi vijf keer op papier: hoofdletter (Π) en kleine letter (π). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Π π.",
           "feedback": "De hoofdletter lijkt op een poort. De kleine letter heeft twee poten.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Π en 5× π — herkenbare lettervorm"
         }
@@ -575,7 +575,7 @@
       "language": "grc",
       "title_nl": "Ρ ρ — rho",
       "description": "De letter rho: Ρ (majuskel), ρ (minuskel). Klank: /r/. Valse vriend: majuskel identiek aan Latijns P maar klinkt als R.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -585,15 +585,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-RHO"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter rho vijf keer op papier: hoofdletter (Ρ) en kleine letter (ρ). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Ρ ρ.",
           "feedback": "Valse vriend! Lijkt op P/p maar is een R-klank. Kleine letter hangt onder de regel.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Ρ en 5× ρ — herkenbare lettervorm"
         }
@@ -605,7 +605,7 @@
       "language": "grc",
       "title_nl": "Σ σ/ς — sigma",
       "description": "De letter sigma: Σ (majuskel), σ (mediaal), ς (finaal). Klank: /s/. Twee minuskelvormen: σ midden in een woord, ς aan het einde.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -615,15 +615,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-SIGMA"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter sigma vijf keer op papier: hoofdletter (Σ) en kleine letter (σ/ς). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Σ σ/ς.",
           "feedback": "Twee vormen! σ midden in een woord, ς aan het einde. De hoofdletter heeft puntige hoeken.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Σ en 5× σ/ς — herkenbare lettervorm"
         }
@@ -635,7 +635,7 @@
       "language": "grc",
       "title_nl": "Τ τ — tau",
       "description": "De letter tau: Τ (majuskel), τ (minuskel). Klank: /t/. Majuskel identiek aan Latijns T.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -645,15 +645,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-TAU"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter tau vijf keer op papier: hoofdletter (Τ) en kleine letter (τ). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Τ τ.",
           "feedback": "Lijkt op de Latijnse T/t. De kleine letter is een kort streepje met een boog.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Τ en 5× τ — herkenbare lettervorm"
         }
@@ -665,7 +665,7 @@
       "language": "grc",
       "title_nl": "Υ υ — upsilon",
       "description": "De letter upsilon: Υ (majuskel), υ (minuskel). Klank: /y/ (als Duitse ü). Valse vriend: majuskel lijkt op Latijns Y maar klinkt als ü.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -675,15 +675,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-UPSIL"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter upsilon vijf keer op papier: hoofdletter (Υ) en kleine letter (υ). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Υ υ.",
           "feedback": "Valse vriend! Lijkt op Y, maar klinkt als u of uu.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Υ en 5× υ — herkenbare lettervorm"
         }
@@ -695,7 +695,7 @@
       "language": "grc",
       "title_nl": "Φ φ — phi",
       "description": "De letter phi: Φ (majuskel), φ (minuskel). Klank: geaspireerde /pʰ/. Geen Latijns visueel equivalent.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -705,15 +705,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-PHI"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter phi vijf keer op papier: hoofdletter (Φ) en kleine letter (φ). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Φ φ.",
           "feedback": "Een cirkel met een verticale streep erdoor. De kleine letter steekt boven en onder uit.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Φ en 5× φ — herkenbare lettervorm"
         }
@@ -725,7 +725,7 @@
       "language": "grc",
       "title_nl": "Χ χ — chi",
       "description": "De letter chi: Χ (majuskel), χ (minuskel). Klank: geaspireerde /kʰ/. Valse vriend: lijkt op Latijns X maar klinkt als ch.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -735,15 +735,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-CHI"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter chi vijf keer op papier: hoofdletter (Χ) en kleine letter (χ). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Χ χ.",
           "feedback": "Valse vriend! Lijkt op X, maar klinkt als ch (als in 'loch').",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Χ en 5× χ — herkenbare lettervorm"
         }
@@ -755,7 +755,7 @@
       "language": "grc",
       "title_nl": "Ψ ψ — psi",
       "description": "De letter psi: Ψ (majuskel), ψ (minuskel). Klank: /ps/. Dubbelmedeklinker, geen Latijns visueel equivalent.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -765,15 +765,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-PSI"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter psi vijf keer op papier: hoofdletter (Ψ) en kleine letter (ψ). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Ψ ψ.",
           "feedback": "Een drietand. De kleine letter lijkt op een drietand met een staart.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Ψ en 5× ψ — herkenbare lettervorm"
         }
@@ -785,7 +785,7 @@
       "language": "grc",
       "title_nl": "Ω ω — omega",
       "description": "De letter omega: Ω (majuskel), ω (minuskel). Klank: lang /ɔː/. Laatste letter van het alfabet; onderscheid met omikron (kort /o/).",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -795,15 +795,15 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-OMEGA"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Schrijf de Griekse letter omega vijf keer op papier: hoofdletter (Ω) en kleine letter (ω). Let op de schrijfrichting en verhoudingen.",
           "answer": "Controleer je lettervormen met het voorbeeld: Ω ω.",
           "feedback": "Lang! De hoofdletter is een hoefijzer. De kleine letter lijkt op een w.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "5× Ω en 5× ω — herkenbare lettervorm"
         }
@@ -815,7 +815,7 @@
       "language": "grc",
       "title_nl": "Groep 2: afwijkende vorm, bekende klank",
       "description": "Letters met een afwijkende Griekse vorm maar een herkenbare klank: Γ/γ (gamma=g), Δ/δ (delta=d), Λ/λ (lambda=l), Π/π (pi=p), Σ/σ/ς (sigma=s), Ω/ω (omega=lange o).",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -825,23 +825,23 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-GRP2"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Hoe klinkt Γ (gamma) in het Grieks?",
           "answer": "g",
           "feedback": "Γ/γ (gamma) heeft een afwijkende vorm maar de bekende g-klank.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-ALFA-GRP2-002",
           "node_ids": [
             "GRC-G-FONL-ALFA-GRP2"
           ],
-          "type": "analyse",
-          "direction": "receptief",
+          "type": "analysis",
+          "direction": "receptive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 25,
@@ -851,7 +851,7 @@
             "gamma, lambda, sigma"
           ],
           "feedback": "Γ=g, Λ=l, Σ=s: afwijkende vorm, bekende klank. Η is een valse vriend (=lange e), Ρ klinkt als r.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -861,7 +861,7 @@
       "language": "grc",
       "title_nl": "Groep 3: valse vrienden",
       "description": "Letters die op een Latijnse letter lijken maar anders klinken: Η/η (lijkt op H, klinkt als lange e), Ρ/ρ (lijkt op P, klinkt als r), Χ/χ (lijkt op X, klinkt als ch), Υ/υ (lijkt op Y, klinkt als uu).",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -871,8 +871,8 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-GRP3"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.2,
           "expected_time_sec": 15,
@@ -882,22 +882,22 @@
             "ē"
           ],
           "feedback": "Η/η (èta) is een valse vriend: vorm van een H, maar klinkt als lange e (ē).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-ALFA-GRP3-002",
           "node_ids": [
             "GRC-G-FONL-ALFA-GRP3"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.0,
           "discrimination_initial": 1.2,
           "expected_time_sec": 15,
           "stimulus": "Hoe klinkt Ρ (rho) — als p of als r?",
           "answer": "r",
           "feedback": "Ρ/ρ (rho) is een valse vriend: vorm van een P, klinkt als r.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -907,7 +907,7 @@
       "language": "grc",
       "title_nl": "Groep 4: unieke Griekse letters",
       "description": "Letters zonder Latijns equivalent: Θ/θ (thèta=th), Ξ/ξ (xi=ks), Φ/φ (phi=ph), Ψ/ψ (psi=ps).",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -917,8 +917,8 @@
           "node_ids": [
             "GRC-G-FONL-ALFA-GRP4"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -928,22 +928,22 @@
             "tʰ"
           ],
           "feedback": "Θ/θ (thèta) is een unieke Griekse letter: aspirata, klinkt als th.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-ALFA-GRP4-002",
           "node_ids": [
             "GRC-G-FONL-ALFA-GRP4"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.0,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Welke letter staat voor de klank /ps/: Ξ, Φ, Ψ of Χ?",
           "answer": "Ψ",
           "feedback": "Ψ/ψ (psi) = /ps/. Ξ = /ks/, Φ = /ph/, Χ = /kh/.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -953,7 +953,7 @@
       "language": "grc",
       "title_nl": "Diakritische tekens",
       "description": "Overzicht van de diakritische tekens in polytoon Grieks: spiritus, accenten en iota subscriptum.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": false,
       "pensum_years": [],
@@ -963,8 +963,8 @@
           "node_ids": [
             "GRC-G-FONL-DIAK-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -974,22 +974,22 @@
             "ademtekens, accenten en iota subscriptum"
           ],
           "feedback": "Polytoon Grieks heeft drie soorten: spiritus (asper/lenis), accenten (acutus/gravis/circumflexus) en iota subscriptum.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-DIAK-INTRO-002",
           "node_ids": [
             "GRC-G-FONL-DIAK-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Waarom schrijven we diakritische tekens bij polytoon Grieks?",
           "answer": "om uitspraak en betekenis precies vast te leggen (h-klank, klemtoon, lange klinker)",
           "feedback": "Diakritieken noteren klankinformatie die niet in de letters zelf zit: ademteken (h/geen h), accent (klemtoon) en iota subscriptum (historische klinker).",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -999,7 +999,7 @@
       "language": "grc",
       "title_nl": "Spiritus asper en lenis",
       "description": "Elke beginklinker en initiële ρ draagt een spiritus: asper (ἁ = h-klank) of lenis (ἀ = geen h-klank).",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1009,8 +1009,8 @@
           "node_ids": [
             "GRC-G-FONL-DIAK-SPIR"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
@@ -1020,22 +1020,22 @@
             "spiritus asper en spiritus lenis"
           ],
           "feedback": "Twee spiritus-tekens: asper (ruw, ῾ = h-klank) en lenis (zacht, ᾿ = geen h-klank).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-DIAK-SPIR-002",
           "node_ids": [
             "GRC-G-FONL-DIAK-SPIR"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Welke letters krijgen altijd een spiritus aan het begin van een woord?",
           "answer": "elke beginklinker en initiële ρ",
           "feedback": "Elke woordinitiële klinker krijgt een spiritus (asper of lenis); initiële ρ krijgt altijd asper (ῥ).",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1045,7 +1045,7 @@
       "language": "grc",
       "title_nl": "Spiritus asper",
       "description": "De spiritus asper (ruwe ademteken): geeft een /h/-klank aan bij woordinitiële klinkers en bij ρ. Voorbeeld: ὁ, ἡ, ῥ.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1055,8 +1055,8 @@
           "node_ids": [
             "GRC-G-FONL-DIAK-ASPER"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
@@ -1066,22 +1066,22 @@
             "h-klank"
           ],
           "feedback": "Spiritus asper (῾) geeft een h-klank vóór de woordinitiële klinker of ρ: ἁμαρτία = hamartia.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-DIAK-ASPER-002",
           "node_ids": [
             "GRC-G-FONL-DIAK-ASPER"
           ],
-          "type": "analyse",
-          "direction": "receptief",
+          "type": "analysis",
+          "direction": "receptive",
           "difficulty_initial": 0.1,
           "discrimination_initial": 1.2,
           "expected_time_sec": 20,
           "stimulus": "Welk woord begint met spiritus asper: ἀγαθός, ἁμαρτία, εἰρήνη of ἔργον?",
           "answer": "ἁμαρτία",
           "feedback": "ἁμαρτία heeft spiritus asper (῾) → h-klank. De andere drie hebben spiritus lenis (᾿) → geen h.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1091,7 +1091,7 @@
       "language": "grc",
       "title_nl": "Spiritus lenis",
       "description": "De spiritus lenis (zachte ademteken): woordinitiële klinker zonder /h/-klank. Elke woordinitiële klinker krijgt een spiritus. Voorbeeld: ἀ, ἐ.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1101,8 +1101,8 @@
           "node_ids": [
             "GRC-G-FONL-DIAK-LENIS"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
@@ -1112,15 +1112,15 @@
             "geen extra klank"
           ],
           "feedback": "Spiritus lenis (᾿) markeert de afwezigheid van de h-klank: ἀγαθός = agathos, niet hagathos.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-DIAK-LENIS-002",
           "node_ids": [
             "GRC-G-FONL-DIAK-LENIS"
           ],
-          "type": "analyse",
-          "direction": "receptief",
+          "type": "analysis",
+          "direction": "receptive",
           "difficulty_initial": 0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 18,
@@ -1130,7 +1130,7 @@
             "ἄνθρωπος begint met een a, zonder h"
           ],
           "feedback": "ἄνθρωπος heeft spiritus lenis op α: dus 'an-thropos', niet 'han-thropos'.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1140,7 +1140,7 @@
       "language": "grc",
       "title_nl": "Accenten — acutus, gravis, circumflexus",
       "description": "Grieks kent drie accenten die de toonhoogte aangeven: acutus (´ stijgend), gravis (` dalend) en circumflexus (῀ stijgend-dalend).",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1150,8 +1150,8 @@
           "node_ids": [
             "GRC-G-FONL-DIAK-ACC"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
@@ -1161,15 +1161,15 @@
             "acutus (´), gravis (`) en circumflexus (῀)"
           ],
           "feedback": "Drie accenten: acutus (´), gravis (`) en circumflexus (῀ of ˜). Oorspronkelijk toonhoogte-accenten.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-DIAK-ACC-002",
           "node_ids": [
             "GRC-G-FONL-DIAK-ACC"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -1179,7 +1179,7 @@
             "ultima, penultima of antepenultima"
           ],
           "feedback": "Accenten vallen alleen op een van de laatste drie lettergrepen: antepenultima, penultima of ultima.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1189,7 +1189,7 @@
       "language": "grc",
       "title_nl": "Acutus (oxeia)",
       "description": "Het accent aigu (oxeia): geeft stijgende toon aan op een van de laatste drie lettergrepen. Voorbeeld: λόγος.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1199,8 +1199,8 @@
           "node_ids": [
             "GRC-G-FONL-DIAK-ACUT"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
@@ -1210,15 +1210,15 @@
             "een van de laatste drie lettergrepen"
           ],
           "feedback": "Acutus kan op antepenultima, penultima of ultima staan — met restricties op lettergreeplengte.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-DIAK-ACUT-002",
           "node_ids": [
             "GRC-G-FONL-DIAK-ACUT"
           ],
-          "type": "analyse",
-          "direction": "receptief",
+          "type": "analysis",
+          "direction": "receptive",
           "difficulty_initial": 0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
@@ -1228,7 +1228,7 @@
             "θεός"
           ],
           "feedback": "λόγος (penultima) en θεός (ultima) hebben acutus. λόγων heeft ook acutus maar op andere plaats; θεῶν heeft circumflexus.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1238,7 +1238,7 @@
       "language": "grc",
       "title_nl": "Gravis (bareia)",
       "description": "Het accent grave (bareia): vervangt een acutus op de ultima als er een volgend woord komt. Voorbeeld: καλὸς λόγος.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1248,8 +1248,8 @@
           "node_ids": [
             "GRC-G-FONL-DIAK-GRAV"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.0,
           "discrimination_initial": 1.2,
           "expected_time_sec": 15,
@@ -1259,15 +1259,15 @@
             "voor een volgend woord"
           ],
           "feedback": "Acutus op de ultima wordt gravis wanneer direct een ander woord volgt zonder leesteken: τὸν νόμον (niet τόν).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-DIAK-GRAV-002",
           "node_ids": [
             "GRC-G-FONL-DIAK-GRAV"
           ],
-          "type": "analyse",
-          "direction": "receptief",
+          "type": "analysis",
+          "direction": "receptive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
@@ -1277,7 +1277,7 @@
             "de laatste lettergreep"
           ],
           "feedback": "Gravis staat altijd op de ultima en vervangt daar een acutus vóór een volgend woord.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1287,7 +1287,7 @@
       "language": "grc",
       "title_nl": "Circumflexus (perispomene)",
       "description": "Het accent circumflexe (perispomene): stijgend-dalende toon, alleen op lange klinkers of diftongen op de ultima/paenultima. Voorbeeld: τοῦ, δῶρον.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1297,8 +1297,8 @@
           "node_ids": [
             "GRC-G-FONL-DIAK-CIRCU"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.0,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -1308,15 +1308,15 @@
             "lange klinkers of diftongen"
           ],
           "feedback": "Circumflexus staat alleen op lange klinkers (η, ω, soms α/ι/υ als lang) of diftongen, en alleen op penultima of ultima.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-DIAK-CIRCU-002",
           "node_ids": [
             "GRC-G-FONL-DIAK-CIRCU"
           ],
-          "type": "analyse",
-          "direction": "receptief",
+          "type": "analysis",
+          "direction": "receptive",
           "difficulty_initial": 0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 25,
@@ -1326,7 +1326,7 @@
             "regel: circumflexus alleen op de laatste twee lettergrepen"
           ],
           "feedback": "De circumflexus vereist een lange klinker én valt alleen op een van de laatste twee lettergrepen. Antepenultima ligt te ver van het woordeinde.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1336,7 +1336,7 @@
       "language": "grc",
       "title_nl": "Iota subscriptum",
       "description": "Een kleine iota onder α, η of ω (ᾳ, ῃ, ῳ). Historisch een diftong, in de Erasmiaanse uitspraak niet hoorbaar. Frequent bij dativus-uitgangen.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1346,8 +1346,8 @@
           "node_ids": [
             "GRC-G-FONL-DIAK-IOTSU"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
@@ -1357,15 +1357,15 @@
             "ᾳ, ῃ, ῳ"
           ],
           "feedback": "Iota subscriptum verschijnt onder α, η en ω (ᾳ, ῃ, ῳ) — historisch een diftong, in Erasmiaanse uitspraak niet gerealiseerd.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-DIAK-IOTSU-002",
           "node_ids": [
             "GRC-G-FONL-DIAK-IOTSU"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.0,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -1375,7 +1375,7 @@
             "dativus enkelvoud"
           ],
           "feedback": "De dativus singularis in 1e en 2e declinatie eindigt op ᾳ/ῃ/ῳ — voor τιμή wordt het τιμῇ, voor λόγος λόγῳ.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1385,7 +1385,7 @@
       "language": "grc",
       "title_nl": "Coronis",
       "description": "De coronis markeert crasis (samenklontering van twee woorden). Voorbeeld: κἀγώ (= καὶ ἐγώ). Zeldzaam maar herkenbaar.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1395,8 +1395,8 @@
           "node_ids": [
             "GRC-G-FONL-DIAK-CORON"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -1406,15 +1406,15 @@
             "crasis"
           ],
           "feedback": "De coronis (᾿) markeert crasis: twee woorden trekken samen, zoals καὶ ἐγώ → κἀγώ.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-DIAK-CORON-002",
           "node_ids": [
             "GRC-G-FONL-DIAK-CORON"
           ],
-          "type": "analyse",
-          "direction": "receptief",
+          "type": "analysis",
+          "direction": "receptive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 25,
@@ -1424,7 +1424,7 @@
             "καὶ + ἐγώ"
           ],
           "feedback": "κἀγώ = καί + ἐγώ. De coronis markeert deze samentrekking.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1434,7 +1434,7 @@
       "language": "grc",
       "title_nl": "Lettercombinaties en uitspraak",
       "description": "Overzicht van de Griekse lettercombinaties: diftongen, nasaal-gamma en dubbele medeklinkers.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": false,
       "pensum_years": [],
@@ -1444,8 +1444,8 @@
           "node_ids": [
             "GRC-G-FONL-KOMBI-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -1455,22 +1455,22 @@
             "diftongen, nasaal-γ, dubbele medeklinkers"
           ],
           "feedback": "Drie relevante groepen: diftongen (αι, ει, οι, …), nasaal-gamma (γγ, γκ, γχ, γξ) en dubbele medeklinkers (ζ, ξ, ψ).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-KOMBI-INTRO-002",
           "node_ids": [
             "GRC-G-FONL-KOMBI-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Waarom is het belangrijk om lettercombinaties te leren naast losse letters?",
           "answer": "omdat een combinatie vaak een andere klank geeft dan de losse letters",
           "feedback": "Combinaties als ου, γγ en ξ hebben klanken die je niet zomaar uit de losse letters afleidt.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1480,7 +1480,7 @@
       "language": "grc",
       "title_nl": "Echte diftongen",
       "description": "De diftongen met korte eerste klinker: αι /ai/, ει /ei/, οι /oi/, αυ /au/, ευ /eu/, ου /oː/ (monoftong). Erasmiaans: beide klinkers hoorbaar.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1490,23 +1490,23 @@
           "node_ids": [
             "GRC-G-FONL-KOMBI-DIFTE"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Welke diftong klinkt in Erasmiaanse uitspraak als /oe/ (lang)?",
           "answer": "ου",
           "feedback": "De diftong ου is in Erasmiaans /oː/ (lang oe), zoals in Nederlands 'boer'. Een monoftongale diftong.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-KOMBI-DIFTE-002",
           "node_ids": [
             "GRC-G-FONL-KOMBI-DIFTE"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -1516,15 +1516,15 @@
             "αι=ai, ει=ei, οι=oi"
           ],
           "feedback": "Echte diftongen met korte eerste klinker: αι=/ai/, ει=/ei/, οι=/oi/. De tweede letter is altijd ι.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-KOMBI-DIFTE-003",
           "node_ids": [
             "GRC-G-FONL-KOMBI-DIFTE"
           ],
-          "type": "analyse",
-          "direction": "receptief",
+          "type": "analysis",
+          "direction": "receptive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 25,
@@ -1534,7 +1534,7 @@
             "αι, ει"
           ],
           "feedback": "παιδεία bevat twee diftongen: παι- (αι) en -δεί- (ει), uitgesproken als 'pai-dei-a'.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1544,7 +1544,7 @@
       "language": "grc",
       "title_nl": "Oneigenlijke diftongen",
       "description": "De diftongen met lange eerste klinker: ηυ /ɛːu/, υι /yi/, plus ᾳ/ῃ/ῳ (iota subscriptum-vormen). Let op: ου klinkt als lange oe.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1554,8 +1554,8 @@
           "node_ids": [
             "GRC-G-FONL-KOMBI-DIFTO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -1565,15 +1565,15 @@
             "lange eerste klinker"
           ],
           "feedback": "Oneigenlijke diftongen hebben een lange eerste klinker: ηυ, υι en de iota-subscriptum-vormen ᾳ, ῃ, ῳ.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-KOMBI-DIFTO-002",
           "node_ids": [
             "GRC-G-FONL-KOMBI-DIFTO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -1583,7 +1583,7 @@
             "oneigenlijk"
           ],
           "feedback": "ᾳ, ῃ, ῳ zijn oneigenlijke diftongen: lange klinker + geschreven iota die niet uitgesproken wordt.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1593,7 +1593,7 @@
       "language": "grc",
       "title_nl": "Nasaal-gamma (γγ, γκ, γχ, γξ)",
       "description": "Gamma voor een andere velaar (γ, κ, χ, ξ) wordt uitgesproken als nasaal /ŋ/: γγ = /ŋɡ/, γκ = /ŋk/, γχ = /ŋkʰ/, γξ = /ŋks/.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1603,8 +1603,8 @@
           "node_ids": [
             "GRC-G-FONL-KOMBI-NASAL"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.0,
           "discrimination_initial": 1.2,
           "expected_time_sec": 15,
@@ -1614,15 +1614,15 @@
             "ng"
           ],
           "feedback": "Voor een andere velaar (γ, κ, χ, ξ) klinkt γ als nasaal /ŋ/. γγ = /ŋɡ/, zoals in Nederlands 'angel'.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-KOMBI-NASAL-002",
           "node_ids": [
             "GRC-G-FONL-KOMBI-NASAL"
           ],
-          "type": "analyse",
-          "direction": "receptief",
+          "type": "analysis",
+          "direction": "receptive",
           "difficulty_initial": 0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
@@ -1632,7 +1632,7 @@
             "an-ge-los met ng-klank"
           ],
           "feedback": "ἄγγελος = 'an-ge-los'. De eerste γ in γγ wordt nasaal /ŋ/.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1642,7 +1642,7 @@
       "language": "grc",
       "title_nl": "Dubbele medeklinkers",
       "description": "Drie letters representeren medeklinkercombinaties: ζ = /zd/ of /dz/, ξ = /ks/, ψ = /ps/. Relevant voor metriek en lettergreepverdeling.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1652,8 +1652,8 @@
           "node_ids": [
             "GRC-G-FONL-KOMBI-DUBBL"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
@@ -1663,22 +1663,22 @@
             "zèta, xi, psi"
           ],
           "feedback": "Drie dubbele medeklinkers: ζ (/zd/ of /dz/), ξ (/ks/) en ψ (/ps/).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-KOMBI-DUBBL-002",
           "node_ids": [
             "GRC-G-FONL-KOMBI-DUBBL"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.0,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Welke Griekse letter spreek je uit als /ks/?",
           "answer": "ξ",
           "feedback": "ξ (xi) = /ks/, zoals in ξένος = 'ksenos'.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1688,7 +1688,7 @@
       "language": "grc",
       "title_nl": "Geaspireerde medeklinkers",
       "description": "De drie geaspireerde medeklinkers: θ = /tʰ/, φ = /pʰ/, χ = /kʰ/. Erasmiaans uitgesproken met hoorbare aspiratie, niet als fricatieven.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1698,8 +1698,8 @@
           "node_ids": [
             "GRC-G-FONL-KOMBI-ASPIR"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
@@ -1709,15 +1709,15 @@
             "thèta, phi, chi"
           ],
           "feedback": "De geaspireerde medeklinkers zijn θ (/tʰ/), φ (/pʰ/) en χ (/kʰ/). Erasmiaans met hoorbare adem.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-KOMBI-ASPIR-002",
           "node_ids": [
             "GRC-G-FONL-KOMBI-ASPIR"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.0,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -1728,7 +1728,7 @@
             "geaspireerde k"
           ],
           "feedback": "χ = /kʰ/: een k met hoorbare adem erachter. Niet de harde Nederlandse 'ch' van 'lachen'.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1738,7 +1738,7 @@
       "language": "grc",
       "title_nl": "Klinkerlengte — kort vs. lang",
       "description": "Overzicht van de zeven klinkertekens: altijd kort (ε, ο), altijd lang (η, ω), kort of lang (α, ι, υ). Essentieel voor accentregels.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1748,8 +1748,8 @@
           "node_ids": [
             "GRC-G-FONL-KOMBI-KWANT"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
@@ -1759,15 +1759,15 @@
             "epsilon en omicron"
           ],
           "feedback": "ε (epsilon) en ο (omicron) zijn altijd kort. Tegenhangers: η (altijd lang) en ω (altijd lang).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-GRC-G-FONL-KOMBI-KWANT-002",
           "node_ids": [
             "GRC-G-FONL-KOMBI-KWANT"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -1777,7 +1777,7 @@
             "alfa, iota en upsilon"
           ],
           "feedback": "α, ι en υ zijn ambigu: kort of lang afhankelijk van het woord. ε/ο altijd kort, η/ω altijd lang.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1787,7 +1787,7 @@
       "language": "grc",
       "title_nl": "Leesvaardigheid — woorden lezen",
       "description": "Integratie van letters, diakritiek en lettercombinaties tot basale leesvaardigheid van polytoon Grieks. Blokkeert alle verdere Griekse grammatica.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1797,15 +1797,15 @@
           "node_ids": [
             "GRC-G-FONL-KOMBI-LEESV"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 60,
           "stimulus": "Lees hardop en schrijf de Erasmiaanse uitspraak van drie woorden op: ἄνθρωπος, λόγος, ἀγαθός.",
           "answer": "Controleer je uitspraak: an-thro-pos, lo-gos, a-ga-thos.",
           "feedback": "Let op: ἄνθρωπος heeft spiritus lenis (geen h), θ = /th/, χ = /kh/ (komt niet voor in deze drie).",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "an-thro-pos / lo-gos / a-ga-thos, correcte lettergreep-indeling en klanken"
         },
@@ -1814,8 +1814,8 @@
           "node_ids": [
             "GRC-G-FONL-KOMBI-LEESV"
           ],
-          "type": "analyse",
-          "direction": "receptief",
+          "type": "analysis",
+          "direction": "receptive",
           "difficulty_initial": 0.4,
           "discrimination_initial": 1.2,
           "expected_time_sec": 35,
@@ -1825,7 +1825,7 @@
             "lenis, acutus op de ultima, klank a-ga-thoi"
           ],
           "feedback": "ἀγαθοί: spiritus lenis (geen h), acutus op de ultima οι, uitspraak 'a-ga-thoi' met th = /tʰ/ en οι = /oi/.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     }

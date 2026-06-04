@@ -261,7 +261,7 @@ def _build_exercise_elements(node: Node, styles: dict[str, ParagraphStyle]) -> l
         item
         for item in node.items
         if item.type.value
-        in ("productie", "analyse", "synthese", "offline_schrijven", "herkenning")
+        in ("production", "analysis", "synthesis", "offline_writing", "recognition")
     ]
 
     if not exercise_items:

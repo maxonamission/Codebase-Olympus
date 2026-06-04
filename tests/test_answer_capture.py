@@ -28,21 +28,21 @@ def _build_graph_with_gradeable_item() -> dict:
                 "language": "lat",
                 "title_nl": "sum, esse — zijn",
                 "description": "Het werkwoord 'zijn'.",
-                "bloom_level": "kennis",
+                "bloom_level": "knowledge",
                 "phase": "onderbouw_1",
                 "items": [
                     {
                         "id": "ITEM-LAT-V-F01-TEST-001",
                         "node_ids": ["LAT-V-F01-TEST"],
-                        "type": "productie",
-                        "direction": "productief",
+                        "type": "production",
+                        "direction": "productive",
                         "difficulty_initial": 0.0,
                         "discrimination_initial": 1.0,
                         "expected_time_sec": 10,
                         "stimulus": "Vertaal 'zijn' naar het Latijn.",
                         "answer": "sum",
                         "feedback": "sum betekent 'zijn'.",
-                        "source": "handmatig",
+                        "source": "manual",
                     }
                 ],
             }
@@ -143,7 +143,7 @@ class TestItemHistoryRecording:
         assert entry.answer_text == "est"
         assert entry.correct is False
         assert entry.correct_answer == "sum"
-        assert entry.item_type == "productie"
+        assert entry.item_type == "production"
         assert entry.item_id == "ITEM-LAT-V-F01-TEST-001"
 
     def test_self_assess_records_without_answer_text(self, session_and_manager):

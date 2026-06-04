@@ -17,7 +17,7 @@ def _vocab_node(id_suffix: str, cluster: str | None = None) -> Node:
         language="lat",
         title_nl=f"Woord {id_suffix}",
         description=f"Vocabulary node {id_suffix}.",
-        bloom_level="kennis",
+        bloom_level="knowledge",
         phase="onderbouw_1",
         semantic_cluster=cluster,
     )
@@ -31,7 +31,7 @@ def _grammar_node(id_suffix: str) -> Node:
         language="lat",
         title_nl=f"Grammatica {id_suffix}",
         description=f"Grammar node {id_suffix}.",
-        bloom_level="kennis",
+        bloom_level="knowledge",
         phase="onderbouw_1",
     )
 

@@ -29,20 +29,20 @@ def _make_item(
     antwoord: str | list[str],
     *,
     item_id: str = "ITEM-TEST-001",
-    item_type: ItemType = ItemType.PRODUCTIE,
+    item_type: ItemType = ItemType.PRODUCTION,
 ) -> Item:
     return Item(
         id=item_id,
         node_ids=["LAT-V-F01-TEST"],
         type=item_type,
-        direction=Direction.PRODUCTIEF,
+        direction=Direction.PRODUCTIVE,
         difficulty_initial=0.0,
         discrimination_initial=1.0,
         expected_time_sec=10,
         stimulus="stim",
         answer=antwoord,
         feedback="ok",
-        source=Source.HANDMATIG,
+        source=Source.MANUAL,
     )
 
 

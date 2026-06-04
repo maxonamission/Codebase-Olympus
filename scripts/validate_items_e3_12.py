@@ -122,9 +122,9 @@ def main() -> None:
     for t, c in types.most_common():
         pct = 100 * c / total
         print(f"   {t:20s}: {c:4d} ({pct:.1f}%)")
-    hpct = 100 * types.get("herkenning", 0) / total
-    ppct = 100 * types.get("productie", 0) / total
-    cpct = 100 * (types.get("contextueel", 0) + types.get("analyse", 0)) / total
+    hpct = 100 * types.get("recognition", 0) / total
+    ppct = 100 * types.get("production", 0) / total
+    cpct = 100 * (types.get("contextual", 0) + types.get("analysis", 0)) / total
     if hpct < 20:
         print(f"   ⚠ Herkenning lager dan gewenst: {hpct:.0f}% (doel: 30%+)")
     if ppct < 20:

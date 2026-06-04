@@ -133,15 +133,15 @@ def build_item(
     return {
         "id": f"ITEM-{node_id}-{nr:03d}",
         "node_ids": [node_id],
-        "type": "offline_schrijven",
-        "direction": "productief",
+        "type": "offline_writing",
+        "direction": "productive",
         "difficulty_initial": difficulty,
         "discrimination_initial": 1.0,
         "expected_time_sec": 120,
         "stimulus": stimulus,
         "answer": "Controleer je werk met het paradigma in je lesboek of de app.",
         "feedback": feedback,
-        "source": "handmatig",
+        "source": "manual",
         "verification_method": "self_report",
         "expected_result": verwacht,
     }

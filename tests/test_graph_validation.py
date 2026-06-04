@@ -77,7 +77,7 @@ class TestFindRootNodes:
             language="lat",
             title_nl="Woordgeslacht",
             description="Introductie woordgeslacht.",
-            bloom_level="kennis",
+            bloom_level="knowledge",
             phase="onderbouw_1",
         )
         g.add_node(node.id, node=node)
@@ -114,7 +114,7 @@ class TestCheckConnectivity:
             language="grc",
             title_nl="Grieks alfabet",
             description="Introductie Grieks alfabet.",
-            bloom_level="kennis",
+            bloom_level="knowledge",
             phase="onderbouw_1",
         )
         k2 = Node(
@@ -123,7 +123,7 @@ class TestCheckConnectivity:
             language="grc",
             title_nl="De letter alfa",
             description="De Griekse letter alfa.",
-            bloom_level="kennis",
+            bloom_level="knowledge",
             phase="onderbouw_1",
         )
         g.add_node(k1.id, node=k1)

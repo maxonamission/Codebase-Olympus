@@ -69,8 +69,8 @@ class TestBuildLearnerReport:
             interval_days=5.0,
             last_review=NOW - timedelta(days=5),
             item_history=[
-                _response("B", direction="receptief", mastery_before=0.2),
-                _response("B", direction="productief", mastery_before=0.4),
+                _response("B", direction="receptive", mastery_before=0.2),
+                _response("B", direction="productive", mastery_before=0.4),
             ],
         )
         # mastered, reviewed today, one self-assess response (direction None)
@@ -98,7 +98,7 @@ class TestBuildLearnerReport:
         report = build_learner_report(self._learner(), NOW)
         assert report.total_reviews == 3
         assert report.mastery_distribution == {"new": 1, "learning": 1, "mastered": 1}
-        assert report.reviews_by_richting == {"receptief": 1, "productief": 1, "onbekend": 1}
+        assert report.reviews_by_direction == {"receptive": 1, "productive": 1, "unknown": 1}
 
     def test_study_time_only_finished_sessions(self):
         report = build_learner_report(self._learner(), NOW)

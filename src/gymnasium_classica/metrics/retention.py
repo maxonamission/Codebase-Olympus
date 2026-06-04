@@ -25,8 +25,8 @@ NEW_MAX = 0.3  # posterior < NEW_MAX  -> nog niet begonnen / net gestart
 MASTERED_MIN = 0.85  # posterior >= MASTERED_MIN -> beheerst
 # Tussenin (NEW_MAX <= posterior < MASTERED_MIN) telt als "learning".
 
-# Labels voor reviews per direction; "onbekend" vangt self-assessment (geen item).
-_RICHTING_UNKNOWN = "onbekend"
+# Labels voor reviews per direction; "unknown" vangt self-assessment (geen item).
+_DIRECTION_UNKNOWN = "unknown"
 
 
 def estimated_retention(state: NodeState, now: datetime) -> float:
@@ -61,8 +61,8 @@ class LearnerReport:
     """Gemiddelde geschatte retentie over gereviewde nodes; None als er geen zijn."""
     mastery_distribution: dict[str, int]
     """Aantal nodes per bucket: 'new' / 'learning' / 'mastered'."""
-    reviews_by_richting: dict[str, int]
-    """Aantal antwoorden per direction: 'receptief' / 'productief' / 'onbekend'."""
+    reviews_by_direction: dict[str, int]
+    """Aantal antwoorden per direction: 'receptive' / 'productive' / 'unknown'."""
 
 
 def _mastery_bucket(posterior: float) -> str:
@@ -78,7 +78,7 @@ def build_learner_report(learner: LearnerModel, now: datetime) -> LearnerReport:
     total_reviews = 0
     retentions: list[float] = []
     mastery_distribution = {"new": 0, "learning": 0, "mastered": 0}
-    reviews_by_richting = {"receptief": 0, "productief": 0, _RICHTING_UNKNOWN: 0}
+    reviews_by_direction = {"receptive": 0, "productive": 0, _DIRECTION_UNKNOWN: 0}
 
     for state in learner.node_states.values():
         mastery_distribution[_mastery_bucket(state.posterior_mastery)] += 1
@@ -86,8 +86,8 @@ def build_learner_report(learner: LearnerModel, now: datetime) -> LearnerReport:
             retentions.append(estimated_retention(state, now))
         total_reviews += len(state.item_history)
         for response in state.item_history:
-            key = response.direction if response.direction in ("receptief", "productief") else None
-            reviews_by_richting[key or _RICHTING_UNKNOWN] += 1
+            key = response.direction if response.direction in ("receptive", "productive") else None
+            reviews_by_direction[key or _DIRECTION_UNKNOWN] += 1
 
     total_study_seconds = sum(
         (session.ended_at - session.started_at).total_seconds()
@@ -102,5 +102,5 @@ def build_learner_report(learner: LearnerModel, now: datetime) -> LearnerReport:
         total_study_seconds=total_study_seconds,
         average_retention=average_retention,
         mastery_distribution=mastery_distribution,
-        reviews_by_richting=reviews_by_richting,
+        reviews_by_direction=reviews_by_direction,
     )
