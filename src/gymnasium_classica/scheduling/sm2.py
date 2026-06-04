@@ -33,6 +33,7 @@ def sm2_update(
     state: NodeState,
     response: ResponseType,
     review_time: datetime | None = None,
+    spacing_multiplier: float = 1.0,
 ) -> NodeState:
     """Apply SM-2 algorithm to update scheduling parameters.
 
@@ -40,6 +41,12 @@ def sm2_update(
 
     Updates: easiness_factor, repetitions, interval_days, last_review,
     last_response.
+
+    *spacing_multiplier* (default 1.0 = unchanged) scales the fixed initial
+    intervals so an experiment variant (L1-03) can widen/narrow spacing
+    without forking the algorithm. It is applied to the first/second interval
+    and then carried forward through the easiness progression (no
+    compounding), so 1.0 reproduces the original behaviour exactly.
     """
     if review_time is None:
         review_time = datetime.now()
@@ -55,15 +62,15 @@ def sm2_update(
         # Successful recall
         state.repetitions += 1
         if state.repetitions == 1:
-            state.interval_days = FIRST_INTERVAL_DAYS
+            state.interval_days = FIRST_INTERVAL_DAYS * spacing_multiplier
         elif state.repetitions == 2:
-            state.interval_days = SECOND_INTERVAL_DAYS
+            state.interval_days = SECOND_INTERVAL_DAYS * spacing_multiplier
         else:
             state.interval_days = state.interval_days * state.easiness_factor
     else:
         # Failed recall — reset
         state.repetitions = 0
-        state.interval_days = FIRST_INTERVAL_DAYS
+        state.interval_days = FIRST_INTERVAL_DAYS * spacing_multiplier
 
     state.last_review = review_time
     state.last_response = response

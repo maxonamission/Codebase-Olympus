@@ -150,3 +150,8 @@ class LearnerModel(BaseModel):
         default=None,
         description="Mastery-nulpunt vastgelegd bij intake-afronding (L1-02).",
     )
+    experiment_arms: dict[str, str] = Field(
+        default_factory=dict,
+        description="Toegewezen experiment-varianten (experiment-naam -> arm-naam), "
+        "zodat metriek per variant uitgesplitst kan worden (L1-03).",
+    )
