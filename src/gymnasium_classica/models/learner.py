@@ -55,6 +55,21 @@ class ItemResponse(BaseModel):
         default=None,
         description="ItemType value at attempt-time (herkenning, productie, ...).",
     )
+    # --- L1-01 meetlaag: verplichte velden voor retentie- en effectgrootte-analyse ---
+    knoop_id: str = Field(
+        description="Knoop waartoe dit antwoord hoort; maakt de respons zelf-beschrijvend voor platte analyse en export.",
+    )
+    richting: str | None = Field(
+        description=(
+            "Richting (Richting-value: 'receptief'/'productief') van het item, "
+            "gesnapshot op moment van antwoorden. None bij self-assessment zonder item."
+        ),
+    )
+    mastery_before: float = Field(
+        ge=0.0,
+        le=1.0,
+        description="BKT-posterior mastery vlak vóór deze poging; basis voor leerwinst/effectgrootte.",
+    )
 
 
 class KnoopState(BaseModel):

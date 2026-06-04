@@ -171,6 +171,7 @@ def _build_item_response(
     answer_text: str | None,
     correct: bool,
     response_time_ms: int,
+    mastery_before: float,
     now: datetime,
 ) -> ItemResponse:
     """Construct an ItemResponse snapshotting knoop/item state at attempt-time."""
@@ -182,6 +183,9 @@ def _build_item_response(
         answer_text=answer_text,
         correct_answer=canonical_expected_answer(item) if item is not None else None,
         item_type=item.type.value if item is not None else None,
+        knoop_id=knoop.id,
+        richting=item.richting.value if item is not None else None,
+        mastery_before=mastery_before,
     )
 
 
@@ -191,6 +195,7 @@ def _grade_and_record(
     knoop: KennisKnoop,
     answer_text: str,
     response_time_ms: int,
+    mastery_before: float,
     now: datetime,
 ) -> tuple[ResponseType, ItemResponse]:
     """Grade a literal answer and produce the ItemResponse to record.
@@ -214,6 +219,7 @@ def _grade_and_record(
         answer_text=answer_text,
         correct=grading.correct,
         response_time_ms=response_time_ms,
+        mastery_before=mastery_before,
         now=now,
     )
     return response, item_response
@@ -544,6 +550,7 @@ class SessionManager:
                     answer_text=answer_text,
                     correct=False,
                     response_time_ms=response_time_ms,
+                    mastery_before=before,
                     now=now,
                 )
             else:
@@ -552,6 +559,7 @@ class SessionManager:
                     knoop=knoop,
                     answer_text=answer_text,
                     response_time_ms=response_time_ms,
+                    mastery_before=before,
                     now=now,
                 )
         else:
@@ -563,6 +571,7 @@ class SessionManager:
                 answer_text=None,
                 correct=response in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT),
                 response_time_ms=response_time_ms,
+                mastery_before=before,
                 now=now,
             )
 

@@ -136,6 +136,9 @@ class TestShouldScaffoldPure:
             item_id=f"ITEM-{KNOOP_ID}-001",
             correct=True,
             response_time_ms=2000,
+            knoop_id=KNOOP_ID,
+            richting="receptief",
+            mastery_before=0.0,
         )
         state = self._make_state(
             route=LearningRoute.GRAMMAR_FIRST,
@@ -232,6 +235,9 @@ class TestGrammarFirstSessionIntegration:
                     item_id=f"ITEM-{KNOOP_ID}-001",
                     correct=True,
                     response_time_ms=2000,
+                    knoop_id=KNOOP_ID,
+                    richting="receptief",
+                    mastery_before=0.0,
                 )
             ],
         )
