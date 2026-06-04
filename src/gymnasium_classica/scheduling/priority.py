@@ -14,7 +14,7 @@ from datetime import datetime
 import networkx as nx
 
 from gymnasium_classica.models.graph import KennisKnoop, PrerequisiteEdge
-from gymnasium_classica.models.learner import KnoopState, LearnerModel
+from gymnasium_classica.models.learner import LearnerModel, NodeState
 
 # Component weights
 W_FORGET = 0.35
@@ -37,7 +37,7 @@ DOMAIN_BALANCE_TARGETS: dict[str, float] = {
 
 
 def estimate_retention(
-    state: KnoopState,
+    state: NodeState,
     now: datetime | None = None,
 ) -> float:
     """Estimate current retention probability using exponential decay.
@@ -66,7 +66,7 @@ def estimate_retention(
     return math.exp(-elapsed_days / stability)
 
 
-def forget_urgency(state: KnoopState, now: datetime | None = None) -> float:
+def forget_urgency(state: NodeState, now: datetime | None = None) -> float:
     """Forget urgency: 1.0 - estimated_retention. Higher = more urgent."""
     return 1.0 - estimate_retention(state, now)
 
@@ -187,7 +187,7 @@ def compute_urgency_scores(
         state = learner.knoop_states.get(node_id)
 
         if state is None:
-            state = KnoopState(knoop_id=node_id, posterior_mastery=0.10)
+            state = NodeState(knoop_id=node_id, posterior_mastery=0.10)
 
         is_mastered = state.posterior_mastery >= MASTERY_THRESHOLD
         ready = readiness_score(node_id, learner, graph)

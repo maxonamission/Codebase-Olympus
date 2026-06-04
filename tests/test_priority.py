@@ -6,7 +6,7 @@ from uuid import uuid4
 import pytest
 
 from gymnasium_classica.graph.loader import load_graph, load_graph_from_dict
-from gymnasium_classica.models.learner import KnoopState, LearnerModel, MasterySource
+from gymnasium_classica.models.learner import LearnerModel, MasterySource, NodeState
 from gymnasium_classica.scheduling.priority import (
     compute_urgency_scores,
     estimate_retention,
@@ -18,16 +18,16 @@ from gymnasium_classica.scheduling.priority import (
 
 class TestEstimateRetention:
     def test_never_reviewed_unmastered(self):
-        state = KnoopState(knoop_id="X", posterior_mastery=0.10)
+        state = NodeState(knoop_id="X", posterior_mastery=0.10)
         assert estimate_retention(state) == 0.0
 
     def test_never_reviewed_mastered_diagnostic(self):
-        state = KnoopState(knoop_id="X", posterior_mastery=0.80, source=MasterySource.DIAGNOSTIC)
+        state = NodeState(knoop_id="X", posterior_mastery=0.80, source=MasterySource.DIAGNOSTIC)
         assert estimate_retention(state) == pytest.approx(0.5)
 
     def test_just_reviewed(self):
         now = datetime(2026, 4, 12, 10, 0)
-        state = KnoopState(
+        state = NodeState(
             knoop_id="X",
             posterior_mastery=0.90,
             interval_days=6.0,
@@ -39,7 +39,7 @@ class TestEstimateRetention:
 
     def test_decay_over_time(self):
         base = datetime(2026, 4, 1)
-        state = KnoopState(
+        state = NodeState(
             knoop_id="X",
             posterior_mastery=0.90,
             interval_days=6.0,
@@ -54,14 +54,14 @@ class TestEstimateRetention:
         base = datetime(2026, 4, 1)
         now = base + timedelta(days=5)
 
-        low_ef = KnoopState(
+        low_ef = NodeState(
             knoop_id="X",
             posterior_mastery=0.90,
             interval_days=6.0,
             easiness_factor=1.5,
             last_review=base,
         )
-        high_ef = KnoopState(
+        high_ef = NodeState(
             knoop_id="X",
             posterior_mastery=0.90,
             interval_days=6.0,
@@ -73,12 +73,12 @@ class TestEstimateRetention:
 
 class TestForgetUrgency:
     def test_unreviewed_unmastered_max_urgency(self):
-        state = KnoopState(knoop_id="X", posterior_mastery=0.10)
+        state = NodeState(knoop_id="X", posterior_mastery=0.10)
         assert forget_urgency(state) == pytest.approx(1.0)
 
     def test_just_reviewed_low_urgency(self):
         now = datetime(2026, 4, 12)
-        state = KnoopState(
+        state = NodeState(
             knoop_id="X",
             posterior_mastery=0.90,
             interval_days=6.0,
@@ -108,14 +108,14 @@ class TestReadinessScore:
         learner = LearnerModel(user_id=uuid4())
         # Set all prerequisites of NOM-D1 to mastered
         for pred in graph.predecessors("LAT-G-MORF-NOM-D1"):
-            learner.knoop_states[pred] = KnoopState(knoop_id=pred, posterior_mastery=0.85)
+            learner.knoop_states[pred] = NodeState(knoop_id=pred, posterior_mastery=0.85)
         score = readiness_score("LAT-G-MORF-NOM-D1", learner, graph)
         assert score > 0.0
 
     def test_mastered_node_returns_zero(self, sample_graph_data):
         graph = load_graph_from_dict(sample_graph_data)
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-NOM-D1"] = KnoopState(
+        learner.knoop_states["LAT-G-MORF-NOM-D1"] = NodeState(
             knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.90
         )
         score = readiness_score("LAT-G-MORF-NOM-D1", learner, graph)
@@ -165,7 +165,7 @@ class TestComputeUrgencyScores:
         graph = load_graph_from_dict(sample_graph_data)
         learner = LearnerModel(user_id=uuid4())
         # Master a node with old review
-        learner.knoop_states["LAT-G-MORF-NOM-D1"] = KnoopState(
+        learner.knoop_states["LAT-G-MORF-NOM-D1"] = NodeState(
             knoop_id="LAT-G-MORF-NOM-D1",
             posterior_mastery=0.90,
             interval_days=6.0,

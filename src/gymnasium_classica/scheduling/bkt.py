@@ -14,9 +14,9 @@ import networkx as nx
 
 from gymnasium_classica.models.graph import PrerequisiteEdge
 from gymnasium_classica.models.learner import (
-    KnoopState,
     LearnerModel,
     MasterySource,
+    NodeState,
     ResponseType,
 )
 
@@ -93,10 +93,10 @@ def bkt_update_posterior(
     return max(POSTERIOR_MIN, min(POSTERIOR_MAX, p_l_new))
 
 
-def _get_or_create_state(learner: LearnerModel, knoop_id: str) -> KnoopState:
+def _get_or_create_state(learner: LearnerModel, knoop_id: str) -> NodeState:
     """Get existing state or create one with default untreated prior."""
     if knoop_id not in learner.knoop_states:
-        learner.knoop_states[knoop_id] = KnoopState(
+        learner.knoop_states[knoop_id] = NodeState(
             knoop_id=knoop_id,
             posterior_mastery=0.10,
         )
@@ -108,7 +108,7 @@ def update_knoop_state(
     knoop_id: str,
     response: ResponseType,
     params: BKTParams | None = None,
-) -> KnoopState:
+) -> NodeState:
     """Update a single node's BKT posterior given a response.
 
     ``slow_correct`` is treated as ``correct`` for BKT (BKT does not

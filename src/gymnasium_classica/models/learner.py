@@ -72,7 +72,7 @@ class ItemResponse(BaseModel):
     )
 
 
-class KnoopState(BaseModel):
+class NodeState(BaseModel):
     """Per-node mastery state for a learner, combining BKT posterior and SM-2 scheduling."""
 
     knoop_id: str
@@ -135,7 +135,7 @@ class LearnerModel(BaseModel):
     """Complete learner model for one user: mastery states and session history."""
 
     user_id: UUID
-    knoop_states: dict[str, KnoopState] = Field(default_factory=dict)
+    knoop_states: dict[str, NodeState] = Field(default_factory=dict)
     session_history: list[SessionRecord] = Field(default_factory=list)
     pending_offline_assignments: list[OfflineAssignment] = Field(default_factory=list)
     route_history: list[RouteSwitch] = Field(default_factory=list)

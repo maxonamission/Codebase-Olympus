@@ -8,7 +8,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from gymnasium_classica.api.database import save_learner_model
-from gymnasium_classica.models.learner import KnoopState, LearnerModel, MasterySource
+from gymnasium_classica.models.learner import LearnerModel, MasterySource, NodeState
 
 
 @pytest.fixture()
@@ -50,10 +50,10 @@ class TestProgressOverview:
         # Pick a real knoop_id from the graph
         knoop_ids = list(graph.nodes)[:3]
         learner = LearnerModel(user_id=UUID(user_id))
-        learner.knoop_states[knoop_ids[0]] = KnoopState(
+        learner.knoop_states[knoop_ids[0]] = NodeState(
             knoop_id=knoop_ids[0], posterior_mastery=0.85, source=MasterySource.PRACTICE
         )
-        learner.knoop_states[knoop_ids[1]] = KnoopState(
+        learner.knoop_states[knoop_ids[1]] = NodeState(
             knoop_id=knoop_ids[1], posterior_mastery=0.40, source=MasterySource.PRACTICE
         )
         save_learner_model(db, learner)
@@ -146,7 +146,7 @@ class TestClusterProgress:
         assert target_node is not None, "Seed data must contain a clustered V-knoop"
 
         learner = LearnerModel(user_id=UUID(user_id))
-        learner.knoop_states[target_node] = KnoopState(
+        learner.knoop_states[target_node] = NodeState(
             knoop_id=target_node,
             posterior_mastery=0.9,
             source=MasterySource.PRACTICE,
@@ -191,7 +191,7 @@ class TestKnoopProgress:
         knoop_id = next(iter(graph.nodes))
 
         learner = LearnerModel(user_id=UUID(user_id))
-        learner.knoop_states[knoop_id] = KnoopState(
+        learner.knoop_states[knoop_id] = NodeState(
             knoop_id=knoop_id,
             posterior_mastery=0.6,
             easiness_factor=2.2,

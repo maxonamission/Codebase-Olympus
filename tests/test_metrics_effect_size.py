@@ -8,7 +8,7 @@ from gymnasium_classica.metrics import (
     cohort_report,
     learner_progress,
 )
-from gymnasium_classica.models.learner import BaselineSnapshot, KnoopState, LearnerModel
+from gymnasium_classica.models.learner import BaselineSnapshot, LearnerModel, NodeState
 
 NOW = datetime(2026, 6, 4, 12, 0, 0)
 
@@ -16,7 +16,7 @@ NOW = datetime(2026, 6, 4, 12, 0, 0)
 def _learner(current: dict[str, float], baseline: dict[str, float] | None) -> LearnerModel:
     learner = LearnerModel(user_id=uuid4())
     for kid, mastery in current.items():
-        learner.knoop_states[kid] = KnoopState(knoop_id=kid, posterior_mastery=mastery)
+        learner.knoop_states[kid] = NodeState(knoop_id=kid, posterior_mastery=mastery)
     if baseline is not None:
         learner.baseline = BaselineSnapshot(captured_at=NOW, mastery=dict(baseline))
     return learner

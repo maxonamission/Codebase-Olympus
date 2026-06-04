@@ -1,4 +1,4 @@
-"""Tests for LearnerModel, KnoopState, and related models."""
+"""Tests for LearnerModel, NodeState, and related models."""
 
 from datetime import datetime
 from uuid import uuid4
@@ -8,17 +8,17 @@ from pydantic import ValidationError
 
 from gymnasium_classica.models.learner import (
     ItemResponse,
-    KnoopState,
     LearnerModel,
+    NodeState,
     SessionRecord,
 )
 
 
-class TestKnoopState:
-    """Tests for the KnoopState model."""
+class TestNodeState:
+    """Tests for the NodeState model."""
 
     def test_defaults(self):
-        state = KnoopState(knoop_id="LAT-G-MORF-NOM-D1")
+        state = NodeState(knoop_id="LAT-G-MORF-NOM-D1")
         assert state.posterior_mastery == 0.0
         assert state.easiness_factor == 2.5
         assert state.interval_days == 0.0
@@ -28,37 +28,37 @@ class TestKnoopState:
         assert state.item_history == []
 
     def test_mastery_boundary_zero(self):
-        state = KnoopState(knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.0)
+        state = NodeState(knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.0)
         assert state.posterior_mastery == 0.0
 
     def test_mastery_boundary_one(self):
-        state = KnoopState(knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=1.0)
+        state = NodeState(knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=1.0)
         assert state.posterior_mastery == 1.0
 
     def test_mastery_below_zero_rejected(self):
         with pytest.raises(ValidationError):
-            KnoopState(knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=-0.1)
+            NodeState(knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=-0.1)
 
     def test_mastery_above_one_rejected(self):
         with pytest.raises(ValidationError):
-            KnoopState(knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=1.1)
+            NodeState(knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=1.1)
 
     def test_easiness_must_be_positive(self):
         with pytest.raises(ValidationError):
-            KnoopState(knoop_id="LAT-G-MORF-NOM-D1", easiness_factor=0.0)
+            NodeState(knoop_id="LAT-G-MORF-NOM-D1", easiness_factor=0.0)
 
     def test_interval_cannot_be_negative(self):
         with pytest.raises(ValidationError):
-            KnoopState(knoop_id="LAT-G-MORF-NOM-D1", interval_days=-1.0)
+            NodeState(knoop_id="LAT-G-MORF-NOM-D1", interval_days=-1.0)
 
     def test_all_response_types(self):
         for rt in ["correct", "incorrect", "slow_correct"]:
-            state = KnoopState(knoop_id="LAT-G-MORF-NOM-D1", last_response=rt)
+            state = NodeState(knoop_id="LAT-G-MORF-NOM-D1", last_response=rt)
             assert state.last_response == rt
 
     def test_invalid_response_type_rejected(self):
         with pytest.raises(ValidationError):
-            KnoopState(knoop_id="LAT-G-MORF-NOM-D1", last_response="timeout")
+            NodeState(knoop_id="LAT-G-MORF-NOM-D1", last_response="timeout")
 
 
 class TestItemResponse:
@@ -137,7 +137,7 @@ class TestLearnerModel:
     def test_add_knoop_state(self):
         uid = uuid4()
         model = LearnerModel(user_id=uid)
-        state = KnoopState(knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.7)
+        state = NodeState(knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.7)
         model.knoop_states["LAT-G-MORF-NOM-D1"] = state
         assert "LAT-G-MORF-NOM-D1" in model.knoop_states
         assert model.knoop_states["LAT-G-MORF-NOM-D1"].posterior_mastery == 0.7
@@ -147,7 +147,7 @@ class TestLearnerModel:
         model = LearnerModel(
             user_id=uid,
             knoop_states={
-                "LAT-G-MORF-NOM-D1": KnoopState(
+                "LAT-G-MORF-NOM-D1": NodeState(
                     knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.85
                 ),
             },

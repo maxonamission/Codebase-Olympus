@@ -6,9 +6,9 @@ import pytest
 
 from gymnasium_classica.graph.loader import load_graph_from_dict
 from gymnasium_classica.models.learner import (
-    KnoopState,
     LearnerModel,
     MasterySource,
+    NodeState,
     ResponseType,
 )
 from gymnasium_classica.scheduling.bkt import (
@@ -70,8 +70,8 @@ class TestBKTUpdatePosterior:
         assert low_guess > high_guess  # Low guess → correct is more informative
 
 
-class TestUpdateKnoopState:
-    """Tests for updating KnoopState via BKT."""
+class TestUpdateNodeState:
+    """Tests for updating NodeState via BKT."""
 
     def test_correct_updates_posterior(self):
         learner = LearnerModel(user_id=uuid4())
@@ -90,7 +90,7 @@ class TestUpdateKnoopState:
     def test_incorrect_lowers_posterior(self):
         learner = LearnerModel(user_id=uuid4())
         # First set a moderate prior
-        learner.knoop_states["LAT-G-MORF-NOM-D1"] = KnoopState(
+        learner.knoop_states["LAT-G-MORF-NOM-D1"] = NodeState(
             knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.70
         )
         state = update_knoop_state(learner, "LAT-G-MORF-NOM-D1", ResponseType.INCORRECT)
@@ -112,7 +112,7 @@ class TestPropagation:
 
         # Initialize all nodes
         for node_id in graph.nodes:
-            learner.knoop_states[node_id] = KnoopState(knoop_id=node_id, posterior_mastery=0.50)
+            learner.knoop_states[node_id] = NodeState(knoop_id=node_id, posterior_mastery=0.50)
 
         # NOM-D1 has prerequisite DECL1-INTRO
         initial = learner.knoop_states["LAT-G-MORF-DECL1-INTRO"].posterior_mastery
@@ -125,7 +125,7 @@ class TestPropagation:
         learner = LearnerModel(user_id=uuid4())
 
         for node_id in graph.nodes:
-            learner.knoop_states[node_id] = KnoopState(knoop_id=node_id, posterior_mastery=0.50)
+            learner.knoop_states[node_id] = NodeState(knoop_id=node_id, posterior_mastery=0.50)
 
         propagate_practice_correct(learner, graph, "LAT-G-MORF-NOM-D1")
 
@@ -140,7 +140,7 @@ class TestPropagation:
         learner = LearnerModel(user_id=uuid4())
 
         for node_id in graph.nodes:
-            learner.knoop_states[node_id] = KnoopState(knoop_id=node_id, posterior_mastery=0.50)
+            learner.knoop_states[node_id] = NodeState(knoop_id=node_id, posterior_mastery=0.50)
 
         # NOM-D1 and ACC-D1 share parent DECL1-INTRO
         propagate_practice_correct(learner, graph, "LAT-G-MORF-NOM-D1")
@@ -157,7 +157,7 @@ class TestPropagation:
         learner = LearnerModel(user_id=uuid4())
 
         for node_id in graph.nodes:
-            learner.knoop_states[node_id] = KnoopState(knoop_id=node_id, posterior_mastery=0.50)
+            learner.knoop_states[node_id] = NodeState(knoop_id=node_id, posterior_mastery=0.50)
 
         # propagate_practice_correct should NOT be called on incorrect
         # (this is the caller's responsibility, but verify the function only boosts)

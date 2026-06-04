@@ -19,7 +19,7 @@ from gymnasium_classica.models.graph import (
     PrerequisiteEdge,
     Taal,
 )
-from gymnasium_classica.models.learner import KnoopState, LearnerModel, ResponseType
+from gymnasium_classica.models.learner import LearnerModel, NodeState, ResponseType
 from gymnasium_classica.models.passage import Passage, WordAnnotation
 from gymnasium_classica.models.user import LearningRoute
 from gymnasium_classica.scheduling.session import SessionPhase
@@ -159,7 +159,7 @@ class TestSessionManagerScaffolding:
         when a content file exists."""
         g = _build_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = KnoopState(
+        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
             knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
         passages = [_make_passage()]
@@ -187,7 +187,7 @@ class TestSessionManagerScaffolding:
         """Grammar-first route should NOT include scaffolding."""
         g = _build_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = KnoopState(
+        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
             knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.90
         )
         mgr = SessionManager()

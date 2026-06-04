@@ -2,7 +2,7 @@
 
 De functies hier reconstrueren retentie over tijd en aggregeren per
 leerling, zodat de centrale projectclaim (efficiënter leren) toetsbaar
-wordt. Alles is een *pure* functie over ``LearnerModel`` / ``KnoopState``;
+wordt. Alles is een *pure* functie over ``LearnerModel`` / ``NodeState``;
 er wordt niets gemuteerd of opgeslagen.
 
 De retentie-schatting is een bewuste eerste-orde heuristiek (exponentiële
@@ -17,7 +17,7 @@ import math
 from dataclasses import dataclass
 from datetime import datetime
 
-from gymnasium_classica.models.learner import KnoopState, LearnerModel
+from gymnasium_classica.models.learner import LearnerModel, NodeState
 
 # Drempels voor de mastery-verdeling. Bewust apart van de scheduler-drempel
 # (priority.MASTERY_THRESHOLD = 0.75): dit is rapportage, geen planning.
@@ -29,7 +29,7 @@ MASTERED_MIN = 0.85  # posterior >= MASTERED_MIN -> beheerst
 _RICHTING_UNKNOWN = "onbekend"
 
 
-def estimated_retention(state: KnoopState, now: datetime) -> float:
+def estimated_retention(state: NodeState, now: datetime) -> float:
     """Schat de kans dat *state* op tijdstip *now* nog wordt herinnerd.
 
     Exponentiële vergeetcurve ``R = exp(-Δdagen / stabiliteit)`` met het

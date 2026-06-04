@@ -3,7 +3,7 @@
 Scaffolding verschijnt alleen:
 * tijdens NEW_MATERIAL
 * bij de eerste keer dat de knoop voor deze leerling wordt opgeroepen
-  (``KnoopState.item_history`` is leeg of KnoopState ontbreekt nog)
+  (``NodeState.item_history`` is leeg of NodeState ontbreekt nog)
 * context-first: na een passage (bestaand gedrag)
 * grammar-first: alleen als ``User.show_grammar_scaffolding`` aan staat
 """
@@ -33,8 +33,8 @@ from gymnasium_classica.models.graph import (
 )
 from gymnasium_classica.models.learner import (
     ItemResponse,
-    KnoopState,
     LearnerModel,
+    NodeState,
 )
 from gymnasium_classica.models.user import LearningRoute, User
 from gymnasium_classica.scheduling.session import SessionPhase
@@ -103,7 +103,7 @@ class TestShouldScaffoldPure:
 
         learner = LearnerModel(user_id=uuid4())
         if item_history is not None:
-            learner.knoop_states[KNOOP_ID] = KnoopState(
+            learner.knoop_states[KNOOP_ID] = NodeState(
                 knoop_id=KNOOP_ID,
                 item_history=item_history,
             )
@@ -130,7 +130,7 @@ class TestShouldScaffoldPure:
         assert _should_scaffold(state, _knoop(), SessionPhase.NEW_MATERIAL) is False
 
     def test_grammar_first_second_time_no_scaffolding(self):
-        """KnoopState.item_history is niet leeg → al eens gezien."""
+        """NodeState.item_history is niet leeg → al eens gezien."""
         prior = ItemResponse(
             timestamp=datetime(2026, 4, 10, 10),
             item_id=f"ITEM-{KNOOP_ID}-001",
@@ -227,7 +227,7 @@ class TestGrammarFirstSessionIntegration:
 
         learner = LearnerModel(user_id=uuid4())
         # Seed een eerder item_history-entry om "tweede keer" te simuleren.
-        learner.knoop_states[KNOOP_ID] = KnoopState(
+        learner.knoop_states[KNOOP_ID] = NodeState(
             knoop_id=KNOOP_ID,
             item_history=[
                 ItemResponse(

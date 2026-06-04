@@ -1,6 +1,6 @@
 """SM-2 spaced repetition algorithm (SuperMemo 2).
 
-Updates scheduling parameters on KnoopState after each review:
+Updates scheduling parameters on NodeState after each review:
 easiness factor, interval, repetition count, and timestamps.
 
 Operates independently of BKT: BKT answers *how well* the learner knows
@@ -9,7 +9,7 @@ a node, SM-2 answers *when* to review it next.
 
 from datetime import datetime
 
-from gymnasium_classica.models.learner import KnoopState, ResponseType
+from gymnasium_classica.models.learner import NodeState, ResponseType
 
 # SM-2 quality mapping from ResponseType
 QUALITY_MAP: dict[ResponseType, int] = {
@@ -30,10 +30,10 @@ def compute_quality(response: ResponseType) -> int:
 
 
 def sm2_update(
-    state: KnoopState,
+    state: NodeState,
     response: ResponseType,
     review_time: datetime | None = None,
-) -> KnoopState:
+) -> NodeState:
     """Apply SM-2 algorithm to update scheduling parameters.
 
     Mutates *state* in-place and returns it for convenience.
