@@ -18,7 +18,7 @@ import networkx as nx
 from gymnasium_classica.diagnostic.conditional_completion import apply_fallback
 from gymnasium_classica.experiments import strategy_params_for
 from gymnasium_classica.learner_strategy import get_strategy
-from gymnasium_classica.models.graph import Direction, ItemType, Node
+from gymnasium_classica.models.graph import Direction, Item, ItemType, Node
 from gymnasium_classica.models.learner import (
     ItemResponse,
     LearnerModel,
@@ -78,6 +78,15 @@ CONTEXT_FIRST_PREREQ_THRESHOLD = 0.25
 
 # Type alias for the answer callback
 AnswerFn = Callable[[str, Node], tuple[ResponseType, int]]
+
+
+def is_introduction_item(item: Item) -> bool:
+    """Scheduler-markering: behandel een worked example als introductie-oefening.
+
+    Interface voor faded scaffolding (L3-01); volledige uitfasering in de
+    planner mag een vervolgstory zijn.
+    """
+    return item.is_worked_example
 
 
 @dataclass

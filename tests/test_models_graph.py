@@ -243,6 +243,7 @@ class TestLuisterItemTypes:
             "offline_writing",
             "listening_recognition",
             "listening_production",
+            "worked_example",
         }
         actual = {t.value for t in ItemType}
         assert actual == expected
