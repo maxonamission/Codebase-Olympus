@@ -20,6 +20,8 @@ from gymnasium_classica.api.schemas import (
     MentorAttempt,
     MentorAttemptsResponse,
     MentorLearnerProfileResponse,
+    StruikelpuntenResponse,
+    StruikelpuntEntry,
 )
 from gymnasium_classica.models.graph import Node
 from gymnasium_classica.models.user import Role
@@ -123,3 +125,60 @@ async def get_node_attempts(
         knoop_title=node.title_nl,
         attempts=attempts,
     )
+
+
+@router.get("/{user_id}/struikelpunten", response_model=StruikelpuntenResponse)
+async def get_struikelpunten(
+    user_id: str,
+    request: Request,
+    mentor_id: str = Depends(require_mentor_of),
+    min_attempts: int = Query(default=3, ge=1, le=100),
+) -> StruikelpuntenResponse:
+    """Per-node stumbling-block overview for one learner.
+
+    A node is a *struikelpunt* when the learner made at least one wrong
+    attempt and reached ``min_attempts`` total attempts (filters noise).
+    Default sort: most recent wrong attempt first, so a mentor sees what
+    went wrong most recently at the top. The frontend table re-sorts on
+    error rate / wrong count / recency client-side.
+
+    Guarded by :func:`require_mentor_of`.
+    """
+    graph: nx.DiGraph = request.app.state.graph
+    db: sqlite3.Connection = request.app.state.db
+    learner = load_learner_model(db, user_id)
+
+    entries: list[StruikelpuntEntry] = []
+    # Parallel list of sort keys (most recent wrong timestamp) to avoid
+    # recomputing during the sort.
+    sort_keys: dict[str, str] = {}
+    if learner is not None:
+        for knoop_id, state in learner.node_states.items():
+            history = state.item_history
+            total = len(history)
+            if total < min_attempts:
+                continue
+            wrong = [ir for ir in history if not ir.correct]
+            if not wrong:
+                continue
+            last_wrong = max(ir.timestamp for ir in wrong)
+            title = knoop_id
+            if knoop_id in graph.nodes:
+                node: Node = graph.nodes[knoop_id]["node"]
+                title = node.title_nl
+            entries.append(
+                StruikelpuntEntry(
+                    knoop_id=knoop_id,
+                    knoop_title=title,
+                    total_attempts=total,
+                    wrong_attempts=len(wrong),
+                    error_rate=round(len(wrong) / total, 4),
+                    last_attempt=last_wrong.isoformat(),
+                    mastery=round(state.posterior_mastery, 4),
+                )
+            )
+            sort_keys[knoop_id] = last_wrong.isoformat()
+
+    entries.sort(key=lambda e: sort_keys[e.knoop_id], reverse=True)
+
+    return StruikelpuntenResponse(user_id=user_id, struikelpunten=entries)

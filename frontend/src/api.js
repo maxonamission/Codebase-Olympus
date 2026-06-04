@@ -101,6 +101,12 @@ export function getMentorAttempts(userId, knoopId, limit = 10) {
   );
 }
 
+export function getStruikelpunten(userId, minAttempts = 3) {
+  return apiFetch(
+    `/mentor/${encodeURIComponent(userId)}/struikelpunten?min_attempts=${minAttempts}`,
+  );
+}
+
 export function updateLearningRoute(learningRoute) {
   return apiFetch('/user/learning-route', {
     method: 'PUT',
