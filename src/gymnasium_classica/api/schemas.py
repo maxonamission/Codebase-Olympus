@@ -310,3 +310,24 @@ class MentorLearnerProfileResponse(BaseModel):
     user_id: str
     email: str
     role: str
+
+
+class MentorAttempt(BaseModel):
+    """One concrete wrong/right attempt the learner made on a node (F2-02)."""
+
+    timestamp: str
+    item_id: str
+    answer_text: str
+    correct_answer: str | None
+    correct: bool
+    response_time_ms: int
+    item_type: str | None
+
+
+class MentorAttemptsResponse(BaseModel):
+    """The most recent literal attempts on one node, newest first."""
+
+    user_id: str
+    knoop_id: str
+    knoop_title: str
+    attempts: list[MentorAttempt]
