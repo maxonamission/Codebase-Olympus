@@ -12,7 +12,7 @@ Deze tests falen als:
 - Een JSON-bestand een typo of ongeldig ID bevat.
 - Cross-file edges (met name ``transfer_edges_leerjaar1.json``) naar
   niet-bestaande knopen verwijzen.
-- Een nieuwe grammaticaknoop wordt toegevoegd zonder prerequisite op de
+- Een nieuwe grammar node wordt toegevoegd zonder prerequisite op de
   alfabet-subgraph (schending van de invariant uit CLAUDE.md).
 - De scheduler deadlockt of crasht op de volledige graph.
 """
