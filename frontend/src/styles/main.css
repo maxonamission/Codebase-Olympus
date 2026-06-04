@@ -1491,3 +1491,41 @@ h2 {
   color: var(--text-muted, #888);
   font-style: italic;
 }
+
+/* --- Mentor: struikelpunten-tabel (F2-03) --- */
+.struikelpunten-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.struikelpunten-table th,
+.struikelpunten-table td {
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border, #e0e0e0);
+}
+.struikelpunten-table th.is-numeric,
+.struikelpunten-table td.is-numeric {
+  text-align: right;
+}
+.struikelpunten-table th button {
+  background: none;
+  border: none;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  color: inherit;
+}
+.struikelpunt-row {
+  cursor: pointer;
+}
+.struikelpunt-row:hover,
+.struikelpunt-row:focus {
+  background: var(--surface-hover, #f0f4ff);
+  outline: none;
+}
+.struikelpunten--empty {
+  color: var(--text-muted, #888);
+  font-style: italic;
+}

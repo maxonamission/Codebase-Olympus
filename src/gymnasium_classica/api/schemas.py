@@ -331,3 +331,22 @@ class MentorAttemptsResponse(BaseModel):
     knoop_id: str
     knoop_title: str
     attempts: list[MentorAttempt]
+
+
+class StruikelpuntEntry(BaseModel):
+    """Aggregated difficulty signal for one node (F2-03)."""
+
+    knoop_id: str
+    knoop_title: str
+    total_attempts: int
+    wrong_attempts: int
+    error_rate: float
+    last_attempt: str | None
+    mastery: float
+
+
+class StruikelpuntenResponse(BaseModel):
+    """Per-node stumbling-block overview for one learner, worst first."""
+
+    user_id: str
+    struikelpunten: list[StruikelpuntEntry]
