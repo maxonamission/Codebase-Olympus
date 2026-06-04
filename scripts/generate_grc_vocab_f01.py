@@ -87,15 +87,15 @@ def make_node(w: dict, band: str) -> dict:
     return {
         "id": f"GRC-V-{band}-{w['id']}",
         "type": "V",
-        "taal": TAAL,
-        "titel_nl": make_titel(w),
-        "titel_terminologie": None,
-        "beschrijving": make_beschrijving(w, band),
-        "bloom_niveau": "kennis",
-        "fase": "onderbouw_1",
-        "toetsbaar": True,
-        "pensum_jaren": [],
-        "semantisch_cluster": w["cl"],
+        "language": TAAL,
+        "title_nl": make_titel(w),
+        "title_terminology": None,
+        "description": make_beschrijving(w, band),
+        "bloom_level": "kennis",
+        "phase": "onderbouw_1",
+        "testable": True,
+        "pensum_years": [],
+        "semantic_cluster": w["cl"],
         "items": [],
     }
 
@@ -117,23 +117,23 @@ def make_edge(w: dict, band: str) -> dict | None:
 
 def main() -> None:
     words = json.loads(WORDS.read_text("utf-8"))
-    knopen = [make_node(w, BAND) for w in words]
+    nodes = [make_node(w, BAND) for w in words]
     edges = [e for w in words if (e := make_edge(w, BAND)) is not None]
 
     from gymnasium_classica.models.graph import GraphData
 
-    data = {"knopen": knopen, "edges": edges}
+    data = {"nodes": nodes, "edges": edges}
     GraphData(**data)
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", "utf-8")
 
     clusters = {}
-    for k in knopen:
-        c = k.get("semantisch_cluster") or "(geen)"
+    for k in nodes:
+        c = k.get("semantic_cluster") or "(geen)"
         clusters[c] = clusters.get(c, 0) + 1
 
-    print(f"Band {BAND}: {len(knopen)} knopen, {len(edges)} edges")
+    print(f"Band {BAND}: {len(nodes)} nodes, {len(edges)} edges")
     print(f"Output: {OUTPUT}")
     print("Clusters:")
     for c, n in sorted(clusters.items()):

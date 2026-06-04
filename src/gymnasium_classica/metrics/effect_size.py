@@ -36,9 +36,9 @@ class LearnerProgress:
     mean_delta: float
     """current_mean - baseline_mean (ruwe mastery-winst)."""
     standardized_gain: float | None
-    """mean_delta / baseline-SD over knopen; None als de baseline-SD 0 is."""
+    """mean_delta / baseline-SD over nodes; None als de baseline-SD 0 is."""
     n_nodes: int
-    """Aantal baseline-knopen dat nog in het learner-model bestaat."""
+    """Aantal baseline-nodes dat nog in het learner-model bestaat."""
 
 
 def learner_progress(learner: LearnerModel) -> LearnerProgress | None:

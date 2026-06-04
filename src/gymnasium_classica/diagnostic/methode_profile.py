@@ -51,7 +51,7 @@ def get_treated_node_ids(
         if chapter_key.startswith("_"):
             continue
         chapter_data = chapters[chapter_key]
-        treated.update(chapter_data.get("knoop_ids", []))
+        treated.update(chapter_data.get("node_ids", []))
         if chapter_key == up_to_chapter:
             break
 

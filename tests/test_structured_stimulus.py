@@ -31,20 +31,20 @@ def _mc_item(item_id: str = "ITEM-LAT-V-F01-SUM-001") -> Item:
     """Een luister_herkenning-item zoals de vocab-generator ze produceert."""
     return Item(
         id=item_id,
-        knoop_ids=["LAT-V-F01-SUM"],
+        node_ids=["LAT-V-F01-SUM"],
         type=ItemType.LUISTER_HERKENNING,
-        richting=Direction.RECEPTIEF,
-        moeilijkheid_initieel=0.0,
-        discriminatie_initieel=1.0,
-        verwachte_tijd_sec=15,
+        direction=Direction.RECEPTIEF,
+        difficulty_initial=0.0,
+        discrimination_initial=1.0,
+        expected_time_sec=15,
         stimulus={
             "instruction": "Luister naar het Latijnse woord en kies de juiste vertaling.",
             "audio_ref": "LAT-V-F01-SUM.wav",
             "options": ["zijn", "vaderland", "doden", "vragen, streven naar"],
         },
-        antwoord="zijn",
+        answer="zijn",
         feedback="Correct: sum betekent 'zijn'.",
-        bron=Source.HANDMATIG,
+        source=Source.HANDMATIG,
     )
 
 
@@ -52,20 +52,20 @@ def _text_item(item_id: str = "ITEM-LAT-V-F01-SUM-002") -> Item:
     """Een luister_productie-item met hint."""
     return Item(
         id=item_id,
-        knoop_ids=["LAT-V-F01-SUM"],
+        node_ids=["LAT-V-F01-SUM"],
         type=ItemType.LUISTER_PRODUCTIE,
-        richting=Direction.PRODUCTIEF,
-        moeilijkheid_initieel=0.2,
-        discriminatie_initieel=1.0,
-        verwachte_tijd_sec=20,
+        direction=Direction.PRODUCTIEF,
+        difficulty_initial=0.2,
+        discrimination_initial=1.0,
+        expected_time_sec=20,
         stimulus={
             "instruction": "Luister naar het Latijnse woord en typ het in het Latijn.",
             "audio_ref": "LAT-V-F01-SUM.wav",
             "hint": "zijn",
         },
-        antwoord="sum",
+        answer="sum",
         feedback="Correct.",
-        bron=Source.HANDMATIG,
+        source=Source.HANDMATIG,
     )
 
 
@@ -73,16 +73,16 @@ def _plain_item(item_id: str = "ITEM-LAT-G-DEMO-001") -> Item:
     """Een herkenning-item met een platte-string-stimulus (geen dict)."""
     return Item(
         id=item_id,
-        knoop_ids=["LAT-G-MORF-NAAMVAL-INTRO"],
+        node_ids=["LAT-G-MORF-NAAMVAL-INTRO"],
         type=ItemType.HERKENNING,
-        richting=Direction.RECEPTIEF,
-        moeilijkheid_initieel=-0.5,
-        discriminatie_initieel=1.0,
-        verwachte_tijd_sec=12,
+        direction=Direction.RECEPTIEF,
+        difficulty_initial=-0.5,
+        discrimination_initial=1.0,
+        expected_time_sec=12,
         stimulus="Hoeveel naamvallen kent het Latijn?",
-        antwoord="6",
+        answer="6",
         feedback="Zes.",
-        bron=Source.HANDMATIG,
+        source=Source.HANDMATIG,
     )
 
 
@@ -90,11 +90,11 @@ def _vocab_node(items: list[Item]) -> Node:
     return Node(
         id="LAT-V-F01-SUM",
         type=NodeType.V,
-        taal=Language.LAT,
-        titel_nl="sum, esse — zijn",
-        beschrijving="Het werkwoord 'zijn'.",
-        bloom_niveau=BloomLevel.KENNIS,
-        fase=Phase.ONDERBOUW_1,
+        language=Language.LAT,
+        title_nl="sum, esse — zijn",
+        description="Het werkwoord 'zijn'.",
+        bloom_level=BloomLevel.KENNIS,
+        phase=Phase.ONDERBOUW_1,
         items=items,
     )
 
@@ -103,11 +103,11 @@ def _grammar_node(items: list[Item]) -> Node:
     return Node(
         id="LAT-G-MORF-NAAMVAL-INTRO",
         type=NodeType.G,
-        taal=Language.LAT,
-        titel_nl="Wat is een naamval?",
-        beschrijving="Introductie van het concept naamval.",
-        bloom_niveau=BloomLevel.KENNIS,
-        fase=Phase.ONDERBOUW_1,
+        language=Language.LAT,
+        title_nl="Wat is een naamval?",
+        description="Introductie van het concept naamval.",
+        bloom_level=BloomLevel.KENNIS,
+        phase=Phase.ONDERBOUW_1,
         items=items,
     )
 

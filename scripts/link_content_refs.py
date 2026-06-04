@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Link knowledge-graph knopen to their markdown content files.
+"""Link knowledge-graph nodes to their markdown content files.
 
 For every node that has a matching ``data/content/{ID}.md`` file this
 script ensures the node's ``content_ref`` points at that file.  The
@@ -8,7 +8,7 @@ blijft platform-onafhankelijk:
 
     "content_ref": "data/content/LAT-G-MORF-NOM-D1.md"
 
-The script is idempotent: knopen that already have the correct
+The script is idempotent: nodes that already have the correct
 ``content_ref`` are left untouched.  Use ``--dry-run`` to preview
 changes without writing to disk.
 
@@ -33,23 +33,23 @@ DEFAULT_CONTENT_DIR = REPO_ROOT / "data" / "content"
 
 # Canonical key order for a node. Existing JSON files omit content_ref, so we
 # insert it in the position dictated by the Pydantic model (after
-# cevte_referentie, before pronunciation). Keys not listed here keep their
+# cevte_reference, before pronunciation). Keys not listed here keep their
 # original order.
 _KNOOP_KEY_ORDER = [
     "id",
     "type",
-    "taal",
-    "titel_nl",
-    "titel_terminologie",
+    "language",
+    "title_nl",
+    "title_terminology",
     "beschrijving",
-    "bloom_niveau",
-    "fase",
-    "toetsbaar",
-    "pensum_jaren",
-    "cevte_referentie",
+    "bloom_level",
+    "phase",
+    "testable",
+    "pensum_years",
+    "cevte_reference",
     "content_ref",
     "pronunciation",
-    "semantisch_cluster",
+    "semantic_cluster",
     "items",
 ]
 
@@ -93,7 +93,7 @@ def link_content_refs(
 ) -> LinkResult:
     """Set ``content_ref`` on every node with a matching markdown file.
 
-    Only updates knopen where ``{content_dir}/{node_id}.md`` exists.  The
+    Only updates nodes where ``{content_dir}/{node_id}.md`` exists.  The
     JSON is re-written with ``indent=2`` and ``ensure_ascii=False`` to match
     the existing style.
     """
@@ -107,8 +107,8 @@ def link_content_refs(
             data = json.load(f)
 
         file_changed = False
-        knopen = data.get("knopen", [])
-        for idx, node in enumerate(knopen):
+        nodes = data.get("nodes", [])
+        for idx, node in enumerate(nodes):
             result.scanned_knopen += 1
             node_id = node.get("id")
             if not node_id or node_id not in content_ids:
@@ -126,7 +126,7 @@ def link_content_refs(
                 result.refs_updated.append((json_path.name, node_id, current))
 
             node["content_ref"] = expected
-            knopen[idx] = _reorder_node_keys(node)
+            nodes[idx] = _reorder_node_keys(node)
             file_changed = True
 
         if file_changed and not dry_run:

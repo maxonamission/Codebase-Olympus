@@ -13,27 +13,27 @@ from gymnasium_classica.models.graph import Language
 class WordAnnotation(BaseModel):
     """Per-word annotation for a passage."""
 
-    woord: str = Field(description="Surface form as it appears in the text")
+    word: str = Field(description="Surface form as it appears in the text")
     lemma: str = Field(description="Dictionary form (lemma)")
-    naamval: str | None = Field(
+    case: str | None = Field(
         default=None,
         description="Grammatical case or form label, e.g. 'nom.sg', 'praes.ind.act.3sg'",
     )
-    vertaling: str = Field(description="Dutch translation of this word in context")
+    translation: str = Field(description="Dutch translation of this word in context")
 
 
 class Passage(BaseModel):
     """A reading passage for contextual learning."""
 
     id: str = Field(description="Unique passage ID, e.g. 'LAT-P-001'")
-    taal: Language
-    titel: str = Field(description="Short descriptive title in Dutch")
-    tekst: str = Field(description="The Latin/Greek source text")
-    annotaties: list[WordAnnotation] = Field(description="Per-word annotations for the passage")
-    knoop_ids: list[str] = Field(
+    language: Language
+    title: str = Field(description="Short descriptive title in Dutch")
+    text: str = Field(description="The Latin/Greek source text")
+    annotations: list[WordAnnotation] = Field(description="Per-word annotations for the passage")
+    node_ids: list[str] = Field(
         description="IDs of grammar/vocabulary nodes this passage exercises"
     )
-    moeilijkheid: int = Field(ge=1, le=5, description="Difficulty level 1-5 (ascending)")
+    difficulty: int = Field(ge=1, le=5, description="Difficulty level 1-5 (ascending)")
 
 
 class PassageData(BaseModel):

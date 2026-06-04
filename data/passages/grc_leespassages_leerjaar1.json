@@ -2,60 +2,60 @@
   "passages": [
     {
       "id": "GRC-PASS-LJ1-001",
-      "taal": "grc",
-      "titel": "De mens en de god",
-      "tekst": "ὁ ἄνθρωπος ἀγαθός ἐστιν. ὁ θεὸς σοφός ἐστιν.",
-      "annotaties": [
+      "language": "grc",
+      "title": "De mens en de god",
+      "text": "ὁ ἄνθρωπος ἀγαθός ἐστιν. ὁ θεὸς σοφός ἐστιν.",
+      "annotations": [
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἄνθρωπος",
+          "word": "ἄνθρωπος",
           "lemma": "ἄνθρωπος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "mens"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "mens"
         },
         {
-          "woord": "ἀγαθός",
+          "word": "ἀγαθός",
           "lemma": "ἀγαθός",
-          "naamval": "nom.sg.m — adj. D1/D2",
-          "vertaling": "goed"
+          "case": "nom.sg.m — adj. D1/D2",
+          "translation": "goed"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg",
-          "vertaling": "is"
+          "case": "praes.ind. 3sg",
+          "translation": "is"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "θεὸς",
+          "word": "θεὸς",
           "lemma": "θεός",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "god"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "god"
         },
         {
-          "woord": "σοφός",
+          "word": "σοφός",
           "lemma": "σοφός",
-          "naamval": "nom.sg.m — adj. D1/D2",
-          "vertaling": "wijs"
+          "case": "nom.sg.m — adj. D1/D2",
+          "translation": "wijs"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg",
-          "vertaling": "is"
+          "case": "praes.ind. 3sg",
+          "translation": "is"
         }
       ],
-      "knoop_ids": [
+      "node_ids": [
         "GRC-G-MORF-NOM-D2",
         "GRC-G-MORF-DECL2-INTRO",
         "GRC-G-MORF-PRAES-EIMI",
@@ -69,88 +69,88 @@
         "GRC-V-F01-SOPHOS",
         "GRC-V-F01-ARTIC"
       ],
-      "moeilijkheid": 1
+      "difficulty": 1
     },
     {
       "id": "GRC-PASS-LJ1-002",
-      "taal": "grc",
-      "titel": "De slaaf en het paard",
-      "tekst": "ὁ δοῦλος ἀγαθός ἐστιν. ὁ ἵππος καλός ἐστιν. ὁ οἶκος νέος ἐστίν.",
-      "annotaties": [
+      "language": "grc",
+      "title": "De slaaf en het paard",
+      "text": "ὁ δοῦλος ἀγαθός ἐστιν. ὁ ἵππος καλός ἐστιν. ὁ οἶκος νέος ἐστίν.",
+      "annotations": [
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "δοῦλος",
+          "word": "δοῦλος",
           "lemma": "δοῦλος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "slaaf"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "slaaf"
         },
         {
-          "woord": "ἀγαθός",
+          "word": "ἀγαθός",
           "lemma": "ἀγαθός",
-          "naamval": "nom.sg.m — adj. D1/D2",
-          "vertaling": "goed"
+          "case": "nom.sg.m — adj. D1/D2",
+          "translation": "goed"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg",
-          "vertaling": "is"
+          "case": "praes.ind. 3sg",
+          "translation": "is"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "het"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "ἵππος",
+          "word": "ἵππος",
           "lemma": "ἵππος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "paard"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "paard"
         },
         {
-          "woord": "καλός",
+          "word": "καλός",
           "lemma": "καλός",
-          "naamval": "nom.sg.m — adj. D1/D2",
-          "vertaling": "mooi"
+          "case": "nom.sg.m — adj. D1/D2",
+          "translation": "mooi"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg",
-          "vertaling": "is"
+          "case": "praes.ind. 3sg",
+          "translation": "is"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "het"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "οἶκος",
+          "word": "οἶκος",
           "lemma": "οἶκος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "huis"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "huis"
         },
         {
-          "woord": "νέος",
+          "word": "νέος",
           "lemma": "νέος",
-          "naamval": "nom.sg.m — adj. D1/D2",
-          "vertaling": "nieuw"
+          "case": "nom.sg.m — adj. D1/D2",
+          "translation": "nieuw"
         },
         {
-          "woord": "ἐστίν",
+          "word": "ἐστίν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg",
-          "vertaling": "is"
+          "case": "praes.ind. 3sg",
+          "translation": "is"
         }
       ],
-      "knoop_ids": [
+      "node_ids": [
         "GRC-G-MORF-NOM-D2",
         "GRC-G-MORF-DECL2-INTRO",
         "GRC-G-MORF-PRAES-EIMI",
@@ -165,100 +165,100 @@
         "GRC-V-F01-NEOS",
         "GRC-V-F01-ARTIC"
       ],
-      "moeilijkheid": 2
+      "difficulty": 2
     },
     {
       "id": "GRC-PASS-LJ1-003",
-      "taal": "grc",
-      "titel": "De mens heeft een paard",
-      "tekst": "ὁ ἄνθρωπος ἵππον ἔχει. ὁ δοῦλος τὸν ἵππον ἄγει. ὁ ἄνθρωπος τὸν δοῦλον ἔχει.",
-      "annotaties": [
+      "language": "grc",
+      "title": "De mens heeft een paard",
+      "text": "ὁ ἄνθρωπος ἵππον ἔχει. ὁ δοῦλος τὸν ἵππον ἄγει. ὁ ἄνθρωπος τὸν δοῦλον ἔχει.",
+      "annotations": [
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἄνθρωπος",
+          "word": "ἄνθρωπος",
           "lemma": "ἄνθρωπος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "mens"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "mens"
         },
         {
-          "woord": "ἵππον",
+          "word": "ἵππον",
           "lemma": "ἵππος",
-          "naamval": "acc.sg.m — 2e decl.",
-          "vertaling": "paard"
+          "case": "acc.sg.m — 2e decl.",
+          "translation": "paard"
         },
         {
-          "woord": "ἔχει",
+          "word": "ἔχει",
           "lemma": "ἔχω",
-          "naamval": "praes.ind.act. 3sg — -ω verb",
-          "vertaling": "heeft"
+          "case": "praes.ind.act. 3sg — -ω verb",
+          "translation": "heeft"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "δοῦλος",
+          "word": "δοῦλος",
           "lemma": "δοῦλος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "slaaf"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "slaaf"
         },
         {
-          "woord": "τὸν",
+          "word": "τὸν",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.sg.m — lidwoord",
-          "vertaling": "het"
+          "case": "acc.sg.m — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "ἵππον",
+          "word": "ἵππον",
           "lemma": "ἵππος",
-          "naamval": "acc.sg.m — 2e decl.",
-          "vertaling": "paard"
+          "case": "acc.sg.m — 2e decl.",
+          "translation": "paard"
         },
         {
-          "woord": "ἄγει",
+          "word": "ἄγει",
           "lemma": "ἄγω",
-          "naamval": "praes.ind.act. 3sg — -ω verb",
-          "vertaling": "leidt"
+          "case": "praes.ind.act. 3sg — -ω verb",
+          "translation": "leidt"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἄνθρωπος",
+          "word": "ἄνθρωπος",
           "lemma": "ἄνθρωπος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "mens"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "mens"
         },
         {
-          "woord": "τὸν",
+          "word": "τὸν",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "acc.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "δοῦλον",
+          "word": "δοῦλον",
           "lemma": "δοῦλος",
-          "naamval": "acc.sg.m — 2e decl.",
-          "vertaling": "slaaf"
+          "case": "acc.sg.m — 2e decl.",
+          "translation": "slaaf"
         },
         {
-          "woord": "ἔχει",
+          "word": "ἔχει",
           "lemma": "ἔχω",
-          "naamval": "praes.ind.act. 3sg — -ω verb",
-          "vertaling": "heeft"
+          "case": "praes.ind.act. 3sg — -ω verb",
+          "translation": "heeft"
         }
       ],
-      "knoop_ids": [
+      "node_ids": [
         "GRC-G-MORF-NOM-D2",
         "GRC-G-MORF-ACC-D2",
         "GRC-G-MORF-DECL2-INTRO",
@@ -274,100 +274,100 @@
         "GRC-V-F01-AGO",
         "GRC-V-F01-ARTIC"
       ],
-      "moeilijkheid": 3
+      "difficulty": 3
     },
     {
       "id": "GRC-PASS-LJ1-004",
-      "taal": "grc",
-      "titel": "Het werk en het geschenk",
-      "tekst": "τὸ ἔργον καλόν ἐστιν. ὁ δοῦλος τὸ ἔργον ἔχει. ὁ ἄνθρωπος τὸ δῶρον φέρει.",
-      "annotaties": [
+      "language": "grc",
+      "title": "Het werk en het geschenk",
+      "text": "τὸ ἔργον καλόν ἐστιν. ὁ δοῦλος τὸ ἔργον ἔχει. ὁ ἄνθρωπος τὸ δῶρον φέρει.",
+      "annotations": [
         {
-          "woord": "τὸ",
+          "word": "τὸ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.n — lidwoord",
-          "vertaling": "het"
+          "case": "nom.sg.n — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "ἔργον",
+          "word": "ἔργον",
           "lemma": "ἔργον",
-          "naamval": "nom.sg.n — 2e decl.",
-          "vertaling": "werk"
+          "case": "nom.sg.n — 2e decl.",
+          "translation": "werk"
         },
         {
-          "woord": "καλόν",
+          "word": "καλόν",
           "lemma": "καλός",
-          "naamval": "nom.sg.n — adj. D1/D2",
-          "vertaling": "mooi"
+          "case": "nom.sg.n — adj. D1/D2",
+          "translation": "mooi"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg",
-          "vertaling": "is"
+          "case": "praes.ind. 3sg",
+          "translation": "is"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "δοῦλος",
+          "word": "δοῦλος",
           "lemma": "δοῦλος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "slaaf"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "slaaf"
         },
         {
-          "woord": "τὸ",
+          "word": "τὸ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.sg.n — lidwoord",
-          "vertaling": "het"
+          "case": "acc.sg.n — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "ἔργον",
+          "word": "ἔργον",
           "lemma": "ἔργον",
-          "naamval": "acc.sg.n — 2e decl.",
-          "vertaling": "werk"
+          "case": "acc.sg.n — 2e decl.",
+          "translation": "werk"
         },
         {
-          "woord": "ἔχει",
+          "word": "ἔχει",
           "lemma": "ἔχω",
-          "naamval": "praes.ind.act. 3sg — -ω verb",
-          "vertaling": "heeft"
+          "case": "praes.ind.act. 3sg — -ω verb",
+          "translation": "heeft"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἄνθρωπος",
+          "word": "ἄνθρωπος",
           "lemma": "ἄνθρωπος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "mens"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "mens"
         },
         {
-          "woord": "τὸ",
+          "word": "τὸ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.sg.n — lidwoord",
-          "vertaling": "het"
+          "case": "acc.sg.n — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "δῶρον",
+          "word": "δῶρον",
           "lemma": "δῶρον",
-          "naamval": "acc.sg.n — 2e decl.",
-          "vertaling": "geschenk"
+          "case": "acc.sg.n — 2e decl.",
+          "translation": "geschenk"
         },
         {
-          "woord": "φέρει",
+          "word": "φέρει",
           "lemma": "φέρω",
-          "naamval": "praes.ind.act. 3sg — -ω verb",
-          "vertaling": "brengt"
+          "case": "praes.ind.act. 3sg — -ω verb",
+          "translation": "brengt"
         }
       ],
-      "knoop_ids": [
+      "node_ids": [
         "GRC-G-MORF-NOM-D2",
         "GRC-G-MORF-ACC-D2",
         "GRC-G-MORF-DECL2-INTRO",
@@ -387,94 +387,94 @@
         "GRC-V-F01-PHERO",
         "GRC-V-F01-ARTIC"
       ],
-      "moeilijkheid": 4
+      "difficulty": 4
     },
     {
       "id": "GRC-PASS-LJ1-005",
-      "taal": "grc",
-      "titel": "Mensen en paarden",
-      "tekst": "οἱ ἄνθρωποι ἀγαθοί εἰσιν. οἱ δοῦλοι τοὺς ἵππους ἄγουσιν. τὰ ἔργα καλά ἐστιν.",
-      "annotaties": [
+      "language": "grc",
+      "title": "Mensen en paarden",
+      "text": "οἱ ἄνθρωποι ἀγαθοί εἰσιν. οἱ δοῦλοι τοὺς ἵππους ἄγουσιν. τὰ ἔργα καλά ἐστιν.",
+      "annotations": [
         {
-          "woord": "οἱ",
+          "word": "οἱ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.pl.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.pl.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἄνθρωποι",
+          "word": "ἄνθρωποι",
           "lemma": "ἄνθρωπος",
-          "naamval": "nom.pl.m — 2e decl.",
-          "vertaling": "mensen"
+          "case": "nom.pl.m — 2e decl.",
+          "translation": "mensen"
         },
         {
-          "woord": "ἀγαθοί",
+          "word": "ἀγαθοί",
           "lemma": "ἀγαθός",
-          "naamval": "nom.pl.m — adj. D1/D2",
-          "vertaling": "goed"
+          "case": "nom.pl.m — adj. D1/D2",
+          "translation": "goed"
         },
         {
-          "woord": "εἰσιν",
+          "word": "εἰσιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3pl",
-          "vertaling": "zijn"
+          "case": "praes.ind. 3pl",
+          "translation": "zijn"
         },
         {
-          "woord": "οἱ",
+          "word": "οἱ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.pl.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.pl.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "δοῦλοι",
+          "word": "δοῦλοι",
           "lemma": "δοῦλος",
-          "naamval": "nom.pl.m — 2e decl.",
-          "vertaling": "slaven"
+          "case": "nom.pl.m — 2e decl.",
+          "translation": "slaven"
         },
         {
-          "woord": "τοὺς",
+          "word": "τοὺς",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.pl.m — lidwoord",
-          "vertaling": "de"
+          "case": "acc.pl.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἵππους",
+          "word": "ἵππους",
           "lemma": "ἵππος",
-          "naamval": "acc.pl.m — 2e decl.",
-          "vertaling": "paarden"
+          "case": "acc.pl.m — 2e decl.",
+          "translation": "paarden"
         },
         {
-          "woord": "ἄγουσιν",
+          "word": "ἄγουσιν",
           "lemma": "ἄγω",
-          "naamval": "praes.ind.act. 3pl — -ω verb",
-          "vertaling": "leiden"
+          "case": "praes.ind.act. 3pl — -ω verb",
+          "translation": "leiden"
         },
         {
-          "woord": "τὰ",
+          "word": "τὰ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.pl.n — lidwoord",
-          "vertaling": "de"
+          "case": "nom.pl.n — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἔργα",
+          "word": "ἔργα",
           "lemma": "ἔργον",
-          "naamval": "nom.pl.n — 2e decl.",
-          "vertaling": "werken"
+          "case": "nom.pl.n — 2e decl.",
+          "translation": "werken"
         },
         {
-          "woord": "καλά",
+          "word": "καλά",
           "lemma": "καλός",
-          "naamval": "nom.pl.n — adj. D1/D2",
-          "vertaling": "mooi"
+          "case": "nom.pl.n — adj. D1/D2",
+          "translation": "mooi"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg (neutr.pl.!)",
-          "vertaling": "zijn"
+          "case": "praes.ind. 3sg (neutr.pl.!)",
+          "translation": "zijn"
         }
       ],
-      "knoop_ids": [
+      "node_ids": [
         "GRC-G-MORF-NOM-D2",
         "GRC-G-MORF-ACC-D2",
         "GRC-G-MORF-DECL2-INTRO",
@@ -496,100 +496,100 @@
         "GRC-V-F01-KALOS",
         "GRC-V-F01-ARTIC"
       ],
-      "moeilijkheid": 5
+      "difficulty": 5
     },
     {
       "id": "GRC-PASS-LJ1-006",
-      "taal": "grc",
-      "titel": "De ziel en het recht",
-      "tekst": "ἡ ψυχὴ ἀγαθή ἐστιν. ἡ δίκη καλή ἐστιν. ἡ ψυχὴ τοῦ ἀνθρώπου ἀγαθή ἐστιν.",
-      "annotaties": [
+      "language": "grc",
+      "title": "De ziel en het recht",
+      "text": "ἡ ψυχὴ ἀγαθή ἐστιν. ἡ δίκη καλή ἐστιν. ἡ ψυχὴ τοῦ ἀνθρώπου ἀγαθή ἐστιν.",
+      "annotations": [
         {
-          "woord": "ἡ",
+          "word": "ἡ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.f — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.f — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ψυχὴ",
+          "word": "ψυχὴ",
           "lemma": "ψυχή",
-          "naamval": "nom.sg.f — 1e decl. (η-type)",
-          "vertaling": "ziel"
+          "case": "nom.sg.f — 1e decl. (η-type)",
+          "translation": "ziel"
         },
         {
-          "woord": "ἀγαθή",
+          "word": "ἀγαθή",
           "lemma": "ἀγαθός",
-          "naamval": "nom.sg.f — adj. D1/D2",
-          "vertaling": "goed"
+          "case": "nom.sg.f — adj. D1/D2",
+          "translation": "goed"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg",
-          "vertaling": "is"
+          "case": "praes.ind. 3sg",
+          "translation": "is"
         },
         {
-          "woord": "ἡ",
+          "word": "ἡ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.f — lidwoord",
-          "vertaling": "het"
+          "case": "nom.sg.f — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "δίκη",
+          "word": "δίκη",
           "lemma": "δίκη",
-          "naamval": "nom.sg.f — 1e decl. (η-type)",
-          "vertaling": "recht"
+          "case": "nom.sg.f — 1e decl. (η-type)",
+          "translation": "recht"
         },
         {
-          "woord": "καλή",
+          "word": "καλή",
           "lemma": "καλός",
-          "naamval": "nom.sg.f — adj. D1/D2",
-          "vertaling": "mooi"
+          "case": "nom.sg.f — adj. D1/D2",
+          "translation": "mooi"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg",
-          "vertaling": "is"
+          "case": "praes.ind. 3sg",
+          "translation": "is"
         },
         {
-          "woord": "ἡ",
+          "word": "ἡ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.f — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.f — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ψυχὴ",
+          "word": "ψυχὴ",
           "lemma": "ψυχή",
-          "naamval": "nom.sg.f — 1e decl. (η-type)",
-          "vertaling": "ziel"
+          "case": "nom.sg.f — 1e decl. (η-type)",
+          "translation": "ziel"
         },
         {
-          "woord": "τοῦ",
+          "word": "τοῦ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "gen.sg.m — lidwoord",
-          "vertaling": "van de"
+          "case": "gen.sg.m — lidwoord",
+          "translation": "van de"
         },
         {
-          "woord": "ἀνθρώπου",
+          "word": "ἀνθρώπου",
           "lemma": "ἄνθρωπος",
-          "naamval": "gen.sg.m — 2e decl.",
-          "vertaling": "mens"
+          "case": "gen.sg.m — 2e decl.",
+          "translation": "mens"
         },
         {
-          "woord": "ἀγαθή",
+          "word": "ἀγαθή",
           "lemma": "ἀγαθός",
-          "naamval": "nom.sg.f — adj. D1/D2",
-          "vertaling": "goed"
+          "case": "nom.sg.f — adj. D1/D2",
+          "translation": "goed"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg",
-          "vertaling": "is"
+          "case": "praes.ind. 3sg",
+          "translation": "is"
         }
       ],
-      "knoop_ids": [
+      "node_ids": [
         "GRC-G-MORF-NOM-D1",
         "GRC-G-MORF-DECL1-INTRO",
         "GRC-G-MORF-DECL1-ETA",
@@ -606,100 +606,100 @@
         "GRC-V-F01-ANTHRO",
         "GRC-V-F01-ARTIC"
       ],
-      "moeilijkheid": 5
+      "difficulty": 5
     },
     {
       "id": "GRC-PASS-LJ1-007",
-      "taal": "grc",
-      "titel": "Het land en de strateeg",
-      "tekst": "ἡ χώρα καλή ἐστιν. ὁ ἄνθρωπος τὴν χώραν ἔχει. ὁ στρατηγὸς τοὺς δούλους πέμπει.",
-      "annotaties": [
+      "language": "grc",
+      "title": "Het land en de strateeg",
+      "text": "ἡ χώρα καλή ἐστιν. ὁ ἄνθρωπος τὴν χώραν ἔχει. ὁ στρατηγὸς τοὺς δούλους πέμπει.",
+      "annotations": [
         {
-          "woord": "ἡ",
+          "word": "ἡ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.f — lidwoord",
-          "vertaling": "het"
+          "case": "nom.sg.f — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "χώρα",
+          "word": "χώρα",
           "lemma": "χώρα",
-          "naamval": "nom.sg.f — 1e decl. (α-type)",
-          "vertaling": "land"
+          "case": "nom.sg.f — 1e decl. (α-type)",
+          "translation": "land"
         },
         {
-          "woord": "καλή",
+          "word": "καλή",
           "lemma": "καλός",
-          "naamval": "nom.sg.f — adj. D1/D2",
-          "vertaling": "mooi"
+          "case": "nom.sg.f — adj. D1/D2",
+          "translation": "mooi"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg",
-          "vertaling": "is"
+          "case": "praes.ind. 3sg",
+          "translation": "is"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἄνθρωπος",
+          "word": "ἄνθρωπος",
           "lemma": "ἄνθρωπος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "mens"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "mens"
         },
         {
-          "woord": "τὴν",
+          "word": "τὴν",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.sg.f — lidwoord",
-          "vertaling": "het"
+          "case": "acc.sg.f — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "χώραν",
+          "word": "χώραν",
           "lemma": "χώρα",
-          "naamval": "acc.sg.f — 1e decl. (α-type)",
-          "vertaling": "land"
+          "case": "acc.sg.f — 1e decl. (α-type)",
+          "translation": "land"
         },
         {
-          "woord": "ἔχει",
+          "word": "ἔχει",
           "lemma": "ἔχω",
-          "naamval": "praes.ind.act. 3sg — -ω verb",
-          "vertaling": "heeft"
+          "case": "praes.ind.act. 3sg — -ω verb",
+          "translation": "heeft"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "στρατηγὸς",
+          "word": "στρατηγὸς",
           "lemma": "στρατηγός",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "strateeg/veldheer"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "strateeg/veldheer"
         },
         {
-          "woord": "τοὺς",
+          "word": "τοὺς",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.pl.m — lidwoord",
-          "vertaling": "de"
+          "case": "acc.pl.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "δούλους",
+          "word": "δούλους",
           "lemma": "δοῦλος",
-          "naamval": "acc.pl.m — 2e decl.",
-          "vertaling": "slaven"
+          "case": "acc.pl.m — 2e decl.",
+          "translation": "slaven"
         },
         {
-          "woord": "πέμπει",
+          "word": "πέμπει",
           "lemma": "πέμπω",
-          "naamval": "praes.ind.act. 3sg — -ω verb",
-          "vertaling": "stuurt"
+          "case": "praes.ind.act. 3sg — -ω verb",
+          "translation": "stuurt"
         }
       ],
-      "knoop_ids": [
+      "node_ids": [
         "GRC-G-MORF-NOM-D1",
         "GRC-G-MORF-ACC-D1",
         "GRC-G-MORF-DECL1-INTRO",
@@ -720,124 +720,124 @@
         "GRC-V-F01-PEMPO",
         "GRC-V-F01-ARTIC"
       ],
-      "moeilijkheid": 5
+      "difficulty": 5
     },
     {
       "id": "GRC-PASS-LJ1-008",
-      "taal": "grc",
-      "titel": "Het paard van de strateeg",
-      "tekst": "ὁ ἵππος τοῦ στρατηγοῦ καλός ἐστιν. τὸ ἔργον τοῦ δούλου ἀγαθόν ἐστιν. ἡ τέχνη τῆς μάχης δεινή ἐστιν.",
-      "annotaties": [
+      "language": "grc",
+      "title": "Het paard van de strateeg",
+      "text": "ὁ ἵππος τοῦ στρατηγοῦ καλός ἐστιν. τὸ ἔργον τοῦ δούλου ἀγαθόν ἐστιν. ἡ τέχνη τῆς μάχης δεινή ἐστιν.",
+      "annotations": [
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "het"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "ἵππος",
+          "word": "ἵππος",
           "lemma": "ἵππος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "paard"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "paard"
         },
         {
-          "woord": "τοῦ",
+          "word": "τοῦ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "gen.sg.m — lidwoord",
-          "vertaling": "van de"
+          "case": "gen.sg.m — lidwoord",
+          "translation": "van de"
         },
         {
-          "woord": "στρατηγοῦ",
+          "word": "στρατηγοῦ",
           "lemma": "στρατηγός",
-          "naamval": "gen.sg.m — 2e decl.",
-          "vertaling": "strateeg"
+          "case": "gen.sg.m — 2e decl.",
+          "translation": "strateeg"
         },
         {
-          "woord": "καλός",
+          "word": "καλός",
           "lemma": "καλός",
-          "naamval": "nom.sg.m — adj. D1/D2",
-          "vertaling": "mooi"
+          "case": "nom.sg.m — adj. D1/D2",
+          "translation": "mooi"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg",
-          "vertaling": "is"
+          "case": "praes.ind. 3sg",
+          "translation": "is"
         },
         {
-          "woord": "τὸ",
+          "word": "τὸ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.n — lidwoord",
-          "vertaling": "het"
+          "case": "nom.sg.n — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "ἔργον",
+          "word": "ἔργον",
           "lemma": "ἔργον",
-          "naamval": "nom.sg.n — 2e decl.",
-          "vertaling": "werk"
+          "case": "nom.sg.n — 2e decl.",
+          "translation": "werk"
         },
         {
-          "woord": "τοῦ",
+          "word": "τοῦ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "gen.sg.m — lidwoord",
-          "vertaling": "van de"
+          "case": "gen.sg.m — lidwoord",
+          "translation": "van de"
         },
         {
-          "woord": "δούλου",
+          "word": "δούλου",
           "lemma": "δοῦλος",
-          "naamval": "gen.sg.m — 2e decl.",
-          "vertaling": "slaaf"
+          "case": "gen.sg.m — 2e decl.",
+          "translation": "slaaf"
         },
         {
-          "woord": "ἀγαθόν",
+          "word": "ἀγαθόν",
           "lemma": "ἀγαθός",
-          "naamval": "nom.sg.n — adj. D1/D2",
-          "vertaling": "goed"
+          "case": "nom.sg.n — adj. D1/D2",
+          "translation": "goed"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg",
-          "vertaling": "is"
+          "case": "praes.ind. 3sg",
+          "translation": "is"
         },
         {
-          "woord": "ἡ",
+          "word": "ἡ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.f — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.f — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "τέχνη",
+          "word": "τέχνη",
           "lemma": "τέχνη",
-          "naamval": "nom.sg.f — 1e decl. (η-type)",
-          "vertaling": "kunst/vaardigheid"
+          "case": "nom.sg.f — 1e decl. (η-type)",
+          "translation": "kunst/vaardigheid"
         },
         {
-          "woord": "τῆς",
+          "word": "τῆς",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "gen.sg.f — lidwoord",
-          "vertaling": "van de"
+          "case": "gen.sg.f — lidwoord",
+          "translation": "van de"
         },
         {
-          "woord": "μάχης",
+          "word": "μάχης",
           "lemma": "μάχη",
-          "naamval": "gen.sg.f — 1e decl. (η-type)",
-          "vertaling": "strijd"
+          "case": "gen.sg.f — 1e decl. (η-type)",
+          "translation": "strijd"
         },
         {
-          "woord": "δεινή",
+          "word": "δεινή",
           "lemma": "δεινός",
-          "naamval": "nom.sg.f — adj. D1/D2",
-          "vertaling": "indrukwekkend"
+          "case": "nom.sg.f — adj. D1/D2",
+          "translation": "indrukwekkend"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg",
-          "vertaling": "is"
+          "case": "praes.ind. 3sg",
+          "translation": "is"
         }
       ],
-      "knoop_ids": [
+      "node_ids": [
         "GRC-G-MORF-GEN-D1",
         "GRC-G-MORF-GEN-D2",
         "GRC-G-MORF-NOM-D1",
@@ -862,124 +862,124 @@
         "GRC-V-F01-DEINOS",
         "GRC-V-F01-ARTIC"
       ],
-      "moeilijkheid": 5
+      "difficulty": 5
     },
     {
       "id": "GRC-PASS-LJ1-009",
-      "taal": "grc",
-      "titel": "De mens brengt een geschenk",
-      "tekst": "ὁ ἄνθρωπος τῷ δούλῳ δῶρον φέρει. ὁ στρατηγὸς τοῖς δούλοις λέγει. ὁ δοῦλος τῷ ἀνθρώπῳ τὸν ἵππον ἄγει.",
-      "annotaties": [
+      "language": "grc",
+      "title": "De mens brengt een geschenk",
+      "text": "ὁ ἄνθρωπος τῷ δούλῳ δῶρον φέρει. ὁ στρατηγὸς τοῖς δούλοις λέγει. ὁ δοῦλος τῷ ἀνθρώπῳ τὸν ἵππον ἄγει.",
+      "annotations": [
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἄνθρωπος",
+          "word": "ἄνθρωπος",
           "lemma": "ἄνθρωπος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "mens"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "mens"
         },
         {
-          "woord": "τῷ",
+          "word": "τῷ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "dat.sg.m — lidwoord",
-          "vertaling": "aan de"
+          "case": "dat.sg.m — lidwoord",
+          "translation": "aan de"
         },
         {
-          "woord": "δούλῳ",
+          "word": "δούλῳ",
           "lemma": "δοῦλος",
-          "naamval": "dat.sg.m — 2e decl.",
-          "vertaling": "slaaf"
+          "case": "dat.sg.m — 2e decl.",
+          "translation": "slaaf"
         },
         {
-          "woord": "δῶρον",
+          "word": "δῶρον",
           "lemma": "δῶρον",
-          "naamval": "acc.sg.n — 2e decl.",
-          "vertaling": "geschenk"
+          "case": "acc.sg.n — 2e decl.",
+          "translation": "geschenk"
         },
         {
-          "woord": "φέρει",
+          "word": "φέρει",
           "lemma": "φέρω",
-          "naamval": "praes.ind.act. 3sg — -ω verb",
-          "vertaling": "brengt"
+          "case": "praes.ind.act. 3sg — -ω verb",
+          "translation": "brengt"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "στρατηγὸς",
+          "word": "στρατηγὸς",
           "lemma": "στρατηγός",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "strateeg"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "strateeg"
         },
         {
-          "woord": "τοῖς",
+          "word": "τοῖς",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "dat.pl.m — lidwoord",
-          "vertaling": "tot/aan de"
+          "case": "dat.pl.m — lidwoord",
+          "translation": "tot/aan de"
         },
         {
-          "woord": "δούλοις",
+          "word": "δούλοις",
           "lemma": "δοῦλος",
-          "naamval": "dat.pl.m — 2e decl.",
-          "vertaling": "slaven"
+          "case": "dat.pl.m — 2e decl.",
+          "translation": "slaven"
         },
         {
-          "woord": "λέγει",
+          "word": "λέγει",
           "lemma": "λέγω",
-          "naamval": "praes.ind.act. 3sg — -ω verb",
-          "vertaling": "spreekt"
+          "case": "praes.ind.act. 3sg — -ω verb",
+          "translation": "spreekt"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "δοῦλος",
+          "word": "δοῦλος",
           "lemma": "δοῦλος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "slaaf"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "slaaf"
         },
         {
-          "woord": "τῷ",
+          "word": "τῷ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "dat.sg.m — lidwoord",
-          "vertaling": "aan/naar de"
+          "case": "dat.sg.m — lidwoord",
+          "translation": "aan/naar de"
         },
         {
-          "woord": "ἀνθρώπῳ",
+          "word": "ἀνθρώπῳ",
           "lemma": "ἄνθρωπος",
-          "naamval": "dat.sg.m — 2e decl.",
-          "vertaling": "mens"
+          "case": "dat.sg.m — 2e decl.",
+          "translation": "mens"
         },
         {
-          "woord": "τὸν",
+          "word": "τὸν",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.sg.m — lidwoord",
-          "vertaling": "het"
+          "case": "acc.sg.m — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "ἵππον",
+          "word": "ἵππον",
           "lemma": "ἵππος",
-          "naamval": "acc.sg.m — 2e decl.",
-          "vertaling": "paard"
+          "case": "acc.sg.m — 2e decl.",
+          "translation": "paard"
         },
         {
-          "woord": "ἄγει",
+          "word": "ἄγει",
           "lemma": "ἄγω",
-          "naamval": "praes.ind.act. 3sg — -ω verb",
-          "vertaling": "leidt"
+          "case": "praes.ind.act. 3sg — -ω verb",
+          "translation": "leidt"
         }
       ],
-      "knoop_ids": [
+      "node_ids": [
         "GRC-G-MORF-DAT-D2",
         "GRC-G-MORF-NOM-D2",
         "GRC-G-MORF-ACC-D2",
@@ -997,148 +997,148 @@
         "GRC-V-F01-AGO",
         "GRC-V-F01-ARTIC"
       ],
-      "moeilijkheid": 5
+      "difficulty": 5
     },
     {
       "id": "GRC-PASS-LJ1-010",
-      "taal": "grc",
-      "titel": "De strateeg schrijft een rede",
-      "tekst": "ὁ στρατηγὸς λόγον γράφει. ὁ δοῦλος τὸν λόγον τοῦ στρατηγοῦ φέρει. ὁ ἄνθρωπος τὸν λόγον λέγει. τὰ ἔργα τῶν δούλων καλά ἐστιν.",
-      "annotaties": [
+      "language": "grc",
+      "title": "De strateeg schrijft een rede",
+      "text": "ὁ στρατηγὸς λόγον γράφει. ὁ δοῦλος τὸν λόγον τοῦ στρατηγοῦ φέρει. ὁ ἄνθρωπος τὸν λόγον λέγει. τὰ ἔργα τῶν δούλων καλά ἐστιν.",
+      "annotations": [
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "στρατηγὸς",
+          "word": "στρατηγὸς",
           "lemma": "στρατηγός",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "strateeg"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "strateeg"
         },
         {
-          "woord": "λόγον",
+          "word": "λόγον",
           "lemma": "λόγος",
-          "naamval": "acc.sg.m — 2e decl.",
-          "vertaling": "rede/woord"
+          "case": "acc.sg.m — 2e decl.",
+          "translation": "rede/woord"
         },
         {
-          "woord": "γράφει",
+          "word": "γράφει",
           "lemma": "γράφω",
-          "naamval": "praes.ind.act. 3sg — -ω verb",
-          "vertaling": "schrijft"
+          "case": "praes.ind.act. 3sg — -ω verb",
+          "translation": "schrijft"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "δοῦλος",
+          "word": "δοῦλος",
           "lemma": "δοῦλος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "slaaf"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "slaaf"
         },
         {
-          "woord": "τὸν",
+          "word": "τὸν",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "acc.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "λόγον",
+          "word": "λόγον",
           "lemma": "λόγος",
-          "naamval": "acc.sg.m — 2e decl.",
-          "vertaling": "rede/woord"
+          "case": "acc.sg.m — 2e decl.",
+          "translation": "rede/woord"
         },
         {
-          "woord": "τοῦ",
+          "word": "τοῦ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "gen.sg.m — lidwoord",
-          "vertaling": "van de"
+          "case": "gen.sg.m — lidwoord",
+          "translation": "van de"
         },
         {
-          "woord": "στρατηγοῦ",
+          "word": "στρατηγοῦ",
           "lemma": "στρατηγός",
-          "naamval": "gen.sg.m — 2e decl.",
-          "vertaling": "strateeg"
+          "case": "gen.sg.m — 2e decl.",
+          "translation": "strateeg"
         },
         {
-          "woord": "φέρει",
+          "word": "φέρει",
           "lemma": "φέρω",
-          "naamval": "praes.ind.act. 3sg — -ω verb",
-          "vertaling": "brengt"
+          "case": "praes.ind.act. 3sg — -ω verb",
+          "translation": "brengt"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἄνθρωπος",
+          "word": "ἄνθρωπος",
           "lemma": "ἄνθρωπος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "mens"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "mens"
         },
         {
-          "woord": "τὸν",
+          "word": "τὸν",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "acc.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "λόγον",
+          "word": "λόγον",
           "lemma": "λόγος",
-          "naamval": "acc.sg.m — 2e decl.",
-          "vertaling": "rede/woord"
+          "case": "acc.sg.m — 2e decl.",
+          "translation": "rede/woord"
         },
         {
-          "woord": "λέγει",
+          "word": "λέγει",
           "lemma": "λέγω",
-          "naamval": "praes.ind.act. 3sg — -ω verb",
-          "vertaling": "spreekt"
+          "case": "praes.ind.act. 3sg — -ω verb",
+          "translation": "spreekt"
         },
         {
-          "woord": "τὰ",
+          "word": "τὰ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.pl.n — lidwoord",
-          "vertaling": "de"
+          "case": "nom.pl.n — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἔργα",
+          "word": "ἔργα",
           "lemma": "ἔργον",
-          "naamval": "nom.pl.n — 2e decl.",
-          "vertaling": "werken"
+          "case": "nom.pl.n — 2e decl.",
+          "translation": "werken"
         },
         {
-          "woord": "τῶν",
+          "word": "τῶν",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "gen.pl.m — lidwoord",
-          "vertaling": "van de"
+          "case": "gen.pl.m — lidwoord",
+          "translation": "van de"
         },
         {
-          "woord": "δούλων",
+          "word": "δούλων",
           "lemma": "δοῦλος",
-          "naamval": "gen.pl.m — 2e decl.",
-          "vertaling": "slaven"
+          "case": "gen.pl.m — 2e decl.",
+          "translation": "slaven"
         },
         {
-          "woord": "καλά",
+          "word": "καλά",
           "lemma": "καλός",
-          "naamval": "nom.pl.n — adj. D1/D2",
-          "vertaling": "mooi"
+          "case": "nom.pl.n — adj. D1/D2",
+          "translation": "mooi"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg (neutr.pl.!)",
-          "vertaling": "zijn"
+          "case": "praes.ind. 3sg (neutr.pl.!)",
+          "translation": "zijn"
         }
       ],
-      "knoop_ids": [
+      "node_ids": [
         "GRC-G-MORF-NOM-D2",
         "GRC-G-MORF-ACC-D2",
         "GRC-G-MORF-GEN-D2",
@@ -1162,94 +1162,94 @@
         "GRC-V-F01-EIMI",
         "GRC-V-F01-ARTIC"
       ],
-      "moeilijkheid": 5
+      "difficulty": 5
     },
     {
       "id": "GRC-PASS-LJ1-011",
-      "taal": "grc",
-      "titel": "De mens schreef",
-      "tekst": "ὁ ἄνθρωπος ἔγραφεν. ὁ δοῦλος τὸν ἵππον ἦγεν. ὁ στρατηγὸς τοὺς δούλους εἶχεν.",
-      "annotaties": [
+      "language": "grc",
+      "title": "De mens schreef",
+      "text": "ὁ ἄνθρωπος ἔγραφεν. ὁ δοῦλος τὸν ἵππον ἦγεν. ὁ στρατηγὸς τοὺς δούλους εἶχεν.",
+      "annotations": [
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἄνθρωπος",
+          "word": "ἄνθρωπος",
           "lemma": "ἄνθρωπος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "mens"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "mens"
         },
         {
-          "woord": "ἔγραφεν",
+          "word": "ἔγραφεν",
           "lemma": "γράφω",
-          "naamval": "impf.ind.act. 3sg — -ω verb",
-          "vertaling": "schreef"
+          "case": "impf.ind.act. 3sg — -ω verb",
+          "translation": "schreef"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "δοῦλος",
+          "word": "δοῦλος",
           "lemma": "δοῦλος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "slaaf"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "slaaf"
         },
         {
-          "woord": "τὸν",
+          "word": "τὸν",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.sg.m — lidwoord",
-          "vertaling": "het"
+          "case": "acc.sg.m — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "ἵππον",
+          "word": "ἵππον",
           "lemma": "ἵππος",
-          "naamval": "acc.sg.m — 2e decl.",
-          "vertaling": "paard"
+          "case": "acc.sg.m — 2e decl.",
+          "translation": "paard"
         },
         {
-          "woord": "ἦγεν",
+          "word": "ἦγεν",
           "lemma": "ἄγω",
-          "naamval": "impf.ind.act. 3sg — -ω verb",
-          "vertaling": "leidde"
+          "case": "impf.ind.act. 3sg — -ω verb",
+          "translation": "leidde"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "στρατηγὸς",
+          "word": "στρατηγὸς",
           "lemma": "στρατηγός",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "strateeg"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "strateeg"
         },
         {
-          "woord": "τοὺς",
+          "word": "τοὺς",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.pl.m — lidwoord",
-          "vertaling": "de"
+          "case": "acc.pl.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "δούλους",
+          "word": "δούλους",
           "lemma": "δοῦλος",
-          "naamval": "acc.pl.m — 2e decl.",
-          "vertaling": "slaven"
+          "case": "acc.pl.m — 2e decl.",
+          "translation": "slaven"
         },
         {
-          "woord": "εἶχεν",
+          "word": "εἶχεν",
           "lemma": "ἔχω",
-          "naamval": "impf.ind.act. 3sg — -ω verb",
-          "vertaling": "had"
+          "case": "impf.ind.act. 3sg — -ω verb",
+          "translation": "had"
         }
       ],
-      "knoop_ids": [
+      "node_ids": [
         "GRC-G-MORF-IMPF-INTRO",
         "GRC-G-MORF-IMPF-THEM",
         "GRC-G-MORF-AUGMENT",
@@ -1265,148 +1265,148 @@
         "GRC-V-F01-ECHO",
         "GRC-V-F01-ARTIC"
       ],
-      "moeilijkheid": 5
+      "difficulty": 5
     },
     {
       "id": "GRC-PASS-LJ1-012",
-      "taal": "grc",
-      "titel": "Op de markt",
-      "tekst": "ὁ ἄνθρωπος ἐν τῇ ἀγορᾷ ἦν. ὁ δοῦλος εἰς τὴν ἀγορὰν τὸν ἵππον ἦγεν. ὁ στρατηγὸς ἐκ τῆς χώρας τοὺς δούλους ἔπεμπεν.",
-      "annotaties": [
+      "language": "grc",
+      "title": "Op de markt",
+      "text": "ὁ ἄνθρωπος ἐν τῇ ἀγορᾷ ἦν. ὁ δοῦλος εἰς τὴν ἀγορὰν τὸν ἵππον ἦγεν. ὁ στρατηγὸς ἐκ τῆς χώρας τοὺς δούλους ἔπεμπεν.",
+      "annotations": [
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἄνθρωπος",
+          "word": "ἄνθρωπος",
           "lemma": "ἄνθρωπος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "mens"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "mens"
         },
         {
-          "woord": "ἐν",
+          "word": "ἐν",
           "lemma": "ἐν",
-          "naamval": "voorzetsel + dat.",
-          "vertaling": "in/op"
+          "case": "voorzetsel + dat.",
+          "translation": "in/op"
         },
         {
-          "woord": "τῇ",
+          "word": "τῇ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "dat.sg.f — lidwoord",
-          "vertaling": "de"
+          "case": "dat.sg.f — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἀγορᾷ",
+          "word": "ἀγορᾷ",
           "lemma": "ἀγορά",
-          "naamval": "dat.sg.f — 1e decl. (α-type)",
-          "vertaling": "markt"
+          "case": "dat.sg.f — 1e decl. (α-type)",
+          "translation": "markt"
         },
         {
-          "woord": "ἦν",
+          "word": "ἦν",
           "lemma": "εἰμί",
-          "naamval": "impf.ind. 3sg",
-          "vertaling": "was"
+          "case": "impf.ind. 3sg",
+          "translation": "was"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "δοῦλος",
+          "word": "δοῦλος",
           "lemma": "δοῦλος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "slaaf"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "slaaf"
         },
         {
-          "woord": "εἰς",
+          "word": "εἰς",
           "lemma": "εἰς",
-          "naamval": "voorzetsel + acc.",
-          "vertaling": "naar"
+          "case": "voorzetsel + acc.",
+          "translation": "naar"
         },
         {
-          "woord": "τὴν",
+          "word": "τὴν",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.sg.f — lidwoord",
-          "vertaling": "de"
+          "case": "acc.sg.f — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἀγορὰν",
+          "word": "ἀγορὰν",
           "lemma": "ἀγορά",
-          "naamval": "acc.sg.f — 1e decl. (α-type)",
-          "vertaling": "markt"
+          "case": "acc.sg.f — 1e decl. (α-type)",
+          "translation": "markt"
         },
         {
-          "woord": "τὸν",
+          "word": "τὸν",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.sg.m — lidwoord",
-          "vertaling": "het"
+          "case": "acc.sg.m — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "ἵππον",
+          "word": "ἵππον",
           "lemma": "ἵππος",
-          "naamval": "acc.sg.m — 2e decl.",
-          "vertaling": "paard"
+          "case": "acc.sg.m — 2e decl.",
+          "translation": "paard"
         },
         {
-          "woord": "ἦγεν",
+          "word": "ἦγεν",
           "lemma": "ἄγω",
-          "naamval": "impf.ind.act. 3sg — -ω verb",
-          "vertaling": "leidde"
+          "case": "impf.ind.act. 3sg — -ω verb",
+          "translation": "leidde"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "στρατηγὸς",
+          "word": "στρατηγὸς",
           "lemma": "στρατηγός",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "strateeg"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "strateeg"
         },
         {
-          "woord": "ἐκ",
+          "word": "ἐκ",
           "lemma": "ἐκ",
-          "naamval": "voorzetsel + gen.",
-          "vertaling": "uit"
+          "case": "voorzetsel + gen.",
+          "translation": "uit"
         },
         {
-          "woord": "τῆς",
+          "word": "τῆς",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "gen.sg.f — lidwoord",
-          "vertaling": "het"
+          "case": "gen.sg.f — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "χώρας",
+          "word": "χώρας",
           "lemma": "χώρα",
-          "naamval": "gen.sg.f — 1e decl. (α-type)",
-          "vertaling": "land"
+          "case": "gen.sg.f — 1e decl. (α-type)",
+          "translation": "land"
         },
         {
-          "woord": "τοὺς",
+          "word": "τοὺς",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.pl.m — lidwoord",
-          "vertaling": "de"
+          "case": "acc.pl.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "δούλους",
+          "word": "δούλους",
           "lemma": "δοῦλος",
-          "naamval": "acc.pl.m — 2e decl.",
-          "vertaling": "slaven"
+          "case": "acc.pl.m — 2e decl.",
+          "translation": "slaven"
         },
         {
-          "woord": "ἔπεμπεν",
+          "word": "ἔπεμπεν",
           "lemma": "πέμπω",
-          "naamval": "impf.ind.act. 3sg — -ω verb",
-          "vertaling": "stuurde"
+          "case": "impf.ind.act. 3sg — -ω verb",
+          "translation": "stuurde"
         }
       ],
-      "knoop_ids": [
+      "node_ids": [
         "GRC-G-MORF-IMPF-INTRO",
         "GRC-G-MORF-IMPF-THEM",
         "GRC-G-MORF-IMPF-EIMI",
@@ -1433,94 +1433,94 @@
         "GRC-V-F01-PEMPO",
         "GRC-V-F01-ARTIC"
       ],
-      "moeilijkheid": 5
+      "difficulty": 5
     },
     {
       "id": "GRC-PASS-LJ1-013",
-      "taal": "grc",
-      "titel": "Het kind en de vader",
-      "tekst": "ὁ παῖς ἀγαθός ἐστιν. ὁ πατὴρ τὸν παῖδα ἄγει. ἡ πόλις καλή ἐστιν.",
-      "annotaties": [
+      "language": "grc",
+      "title": "Het kind en de vader",
+      "text": "ὁ παῖς ἀγαθός ἐστιν. ὁ πατὴρ τὸν παῖδα ἄγει. ἡ πόλις καλή ἐστιν.",
+      "annotations": [
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "het"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "παῖς",
+          "word": "παῖς",
           "lemma": "παῖς",
-          "naamval": "nom.sg.m — 3e decl.",
-          "vertaling": "kind"
+          "case": "nom.sg.m — 3e decl.",
+          "translation": "kind"
         },
         {
-          "woord": "ἀγαθός",
+          "word": "ἀγαθός",
           "lemma": "ἀγαθός",
-          "naamval": "nom.sg.m — adj. D1/D2",
-          "vertaling": "goed"
+          "case": "nom.sg.m — adj. D1/D2",
+          "translation": "goed"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg",
-          "vertaling": "is"
+          "case": "praes.ind. 3sg",
+          "translation": "is"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "πατὴρ",
+          "word": "πατὴρ",
           "lemma": "πατήρ",
-          "naamval": "nom.sg.m — 3e decl.",
-          "vertaling": "vader"
+          "case": "nom.sg.m — 3e decl.",
+          "translation": "vader"
         },
         {
-          "woord": "τὸν",
+          "word": "τὸν",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.sg.m — lidwoord",
-          "vertaling": "het"
+          "case": "acc.sg.m — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "παῖδα",
+          "word": "παῖδα",
           "lemma": "παῖς",
-          "naamval": "acc.sg.m — 3e decl.",
-          "vertaling": "kind"
+          "case": "acc.sg.m — 3e decl.",
+          "translation": "kind"
         },
         {
-          "woord": "ἄγει",
+          "word": "ἄγει",
           "lemma": "ἄγω",
-          "naamval": "praes.ind.act. 3sg — -ω verb",
-          "vertaling": "leidt"
+          "case": "praes.ind.act. 3sg — -ω verb",
+          "translation": "leidt"
         },
         {
-          "woord": "ἡ",
+          "word": "ἡ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.f — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.f — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "πόλις",
+          "word": "πόλις",
           "lemma": "πόλις",
-          "naamval": "nom.sg.f — 3e decl.",
-          "vertaling": "stad"
+          "case": "nom.sg.f — 3e decl.",
+          "translation": "stad"
         },
         {
-          "woord": "καλή",
+          "word": "καλή",
           "lemma": "καλός",
-          "naamval": "nom.sg.f — adj. D1/D2",
-          "vertaling": "mooi"
+          "case": "nom.sg.f — adj. D1/D2",
+          "translation": "mooi"
         },
         {
-          "woord": "ἐστιν",
+          "word": "ἐστιν",
           "lemma": "εἰμί",
-          "naamval": "praes.ind. 3sg",
-          "vertaling": "is"
+          "case": "praes.ind. 3sg",
+          "translation": "is"
         }
       ],
-      "knoop_ids": [
+      "node_ids": [
         "GRC-G-MORF-NOM-D3",
         "GRC-G-MORF-ACC-D3",
         "GRC-G-MORF-DECL3-INTRO",
@@ -1539,106 +1539,106 @@
         "GRC-V-F01-KALOS",
         "GRC-V-F01-ARTIC"
       ],
-      "moeilijkheid": 5
+      "difficulty": 5
     },
     {
       "id": "GRC-PASS-LJ1-014",
-      "taal": "grc",
-      "titel": "De strateeg stuurde soldaten",
-      "tekst": "ὁ στρατηγὸς τοὺς δούλους ἔπεμψεν. ὁ ἄνθρωπος λόγον ἔγραψεν. ὁ πατὴρ τῷ παιδὶ δῶρον ἔπεμψεν.",
-      "annotaties": [
+      "language": "grc",
+      "title": "De strateeg stuurde soldaten",
+      "text": "ὁ στρατηγὸς τοὺς δούλους ἔπεμψεν. ὁ ἄνθρωπος λόγον ἔγραψεν. ὁ πατὴρ τῷ παιδὶ δῶρον ἔπεμψεν.",
+      "annotations": [
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "στρατηγὸς",
+          "word": "στρατηγὸς",
           "lemma": "στρατηγός",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "strateeg"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "strateeg"
         },
         {
-          "woord": "τοὺς",
+          "word": "τοὺς",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.pl.m — lidwoord",
-          "vertaling": "de"
+          "case": "acc.pl.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "δούλους",
+          "word": "δούλους",
           "lemma": "δοῦλος",
-          "naamval": "acc.pl.m — 2e decl.",
-          "vertaling": "slaven"
+          "case": "acc.pl.m — 2e decl.",
+          "translation": "slaven"
         },
         {
-          "woord": "ἔπεμψεν",
+          "word": "ἔπεμψεν",
           "lemma": "πέμπω",
-          "naamval": "aor.ind.act. 3sg — σ-aor.",
-          "vertaling": "stuurde"
+          "case": "aor.ind.act. 3sg — σ-aor.",
+          "translation": "stuurde"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἄνθρωπος",
+          "word": "ἄνθρωπος",
           "lemma": "ἄνθρωπος",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "mens"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "mens"
         },
         {
-          "woord": "λόγον",
+          "word": "λόγον",
           "lemma": "λόγος",
-          "naamval": "acc.sg.m — 2e decl.",
-          "vertaling": "rede/woord"
+          "case": "acc.sg.m — 2e decl.",
+          "translation": "rede/woord"
         },
         {
-          "woord": "ἔγραψεν",
+          "word": "ἔγραψεν",
           "lemma": "γράφω",
-          "naamval": "aor.ind.act. 3sg — σ-aor.",
-          "vertaling": "schreef"
+          "case": "aor.ind.act. 3sg — σ-aor.",
+          "translation": "schreef"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "πατὴρ",
+          "word": "πατὴρ",
           "lemma": "πατήρ",
-          "naamval": "nom.sg.m — 3e decl.",
-          "vertaling": "vader"
+          "case": "nom.sg.m — 3e decl.",
+          "translation": "vader"
         },
         {
-          "woord": "τῷ",
+          "word": "τῷ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "dat.sg.m — lidwoord",
-          "vertaling": "aan het"
+          "case": "dat.sg.m — lidwoord",
+          "translation": "aan het"
         },
         {
-          "woord": "παιδὶ",
+          "word": "παιδὶ",
           "lemma": "παῖς",
-          "naamval": "dat.sg.m — 3e decl.",
-          "vertaling": "kind"
+          "case": "dat.sg.m — 3e decl.",
+          "translation": "kind"
         },
         {
-          "woord": "δῶρον",
+          "word": "δῶρον",
           "lemma": "δῶρον",
-          "naamval": "acc.sg.n — 2e decl.",
-          "vertaling": "geschenk"
+          "case": "acc.sg.n — 2e decl.",
+          "translation": "geschenk"
         },
         {
-          "woord": "ἔπεμψεν",
+          "word": "ἔπεμψεν",
           "lemma": "πέμπω",
-          "naamval": "aor.ind.act. 3sg — σ-aor.",
-          "vertaling": "stuurde"
+          "case": "aor.ind.act. 3sg — σ-aor.",
+          "translation": "stuurde"
         }
       ],
-      "knoop_ids": [
+      "node_ids": [
         "GRC-G-MORF-AOR-INTRO",
         "GRC-G-MORF-AOR-SIGMA",
         "GRC-G-MORF-AOR-UIT",
@@ -1659,160 +1659,160 @@
         "GRC-V-F02-DORON",
         "GRC-V-F01-ARTIC"
       ],
-      "moeilijkheid": 5
+      "difficulty": 5
     },
     {
       "id": "GRC-PASS-LJ1-015",
-      "taal": "grc",
-      "titel": "De slag",
-      "tekst": "ἡ μάχη δεινὴ ἦν. οἱ στρατιῶται ἐν τῇ χώρᾳ ἦσαν. ὁ στρατηγὸς τοὺς στρατιώτας εἰς τὴν πόλιν ἔπεμψεν. οἱ ἄνθρωποι ἐκ τῆς ἀγορᾶς ἔφευγον.",
-      "annotaties": [
+      "language": "grc",
+      "title": "De slag",
+      "text": "ἡ μάχη δεινὴ ἦν. οἱ στρατιῶται ἐν τῇ χώρᾳ ἦσαν. ὁ στρατηγὸς τοὺς στρατιώτας εἰς τὴν πόλιν ἔπεμψεν. οἱ ἄνθρωποι ἐκ τῆς ἀγορᾶς ἔφευγον.",
+      "annotations": [
         {
-          "woord": "ἡ",
+          "word": "ἡ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.f — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.f — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "μάχη",
+          "word": "μάχη",
           "lemma": "μάχη",
-          "naamval": "nom.sg.f — 1e decl. (η-type)",
-          "vertaling": "slag/strijd"
+          "case": "nom.sg.f — 1e decl. (η-type)",
+          "translation": "slag/strijd"
         },
         {
-          "woord": "δεινὴ",
+          "word": "δεινὴ",
           "lemma": "δεινός",
-          "naamval": "nom.sg.f — adj. D1/D2",
-          "vertaling": "verschrikkelijk"
+          "case": "nom.sg.f — adj. D1/D2",
+          "translation": "verschrikkelijk"
         },
         {
-          "woord": "ἦν",
+          "word": "ἦν",
           "lemma": "εἰμί",
-          "naamval": "impf.ind. 3sg",
-          "vertaling": "was"
+          "case": "impf.ind. 3sg",
+          "translation": "was"
         },
         {
-          "woord": "οἱ",
+          "word": "οἱ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.pl.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.pl.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "στρατιῶται",
+          "word": "στρατιῶται",
           "lemma": "στρατιώτης",
-          "naamval": "nom.pl.m — 1e decl. (masc.)",
-          "vertaling": "soldaten"
+          "case": "nom.pl.m — 1e decl. (masc.)",
+          "translation": "soldaten"
         },
         {
-          "woord": "ἐν",
+          "word": "ἐν",
           "lemma": "ἐν",
-          "naamval": "voorzetsel + dat.",
-          "vertaling": "in"
+          "case": "voorzetsel + dat.",
+          "translation": "in"
         },
         {
-          "woord": "τῇ",
+          "word": "τῇ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "dat.sg.f — lidwoord",
-          "vertaling": "het"
+          "case": "dat.sg.f — lidwoord",
+          "translation": "het"
         },
         {
-          "woord": "χώρᾳ",
+          "word": "χώρᾳ",
           "lemma": "χώρα",
-          "naamval": "dat.sg.f — 1e decl. (α-type)",
-          "vertaling": "land"
+          "case": "dat.sg.f — 1e decl. (α-type)",
+          "translation": "land"
         },
         {
-          "woord": "ἦσαν",
+          "word": "ἦσαν",
           "lemma": "εἰμί",
-          "naamval": "impf.ind. 3pl",
-          "vertaling": "waren"
+          "case": "impf.ind. 3pl",
+          "translation": "waren"
         },
         {
-          "woord": "ὁ",
+          "word": "ὁ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.sg.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.sg.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "στρατηγὸς",
+          "word": "στρατηγὸς",
           "lemma": "στρατηγός",
-          "naamval": "nom.sg.m — 2e decl.",
-          "vertaling": "strateeg"
+          "case": "nom.sg.m — 2e decl.",
+          "translation": "strateeg"
         },
         {
-          "woord": "τοὺς",
+          "word": "τοὺς",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.pl.m — lidwoord",
-          "vertaling": "de"
+          "case": "acc.pl.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "στρατιώτας",
+          "word": "στρατιώτας",
           "lemma": "στρατιώτης",
-          "naamval": "acc.pl.m — 1e decl. (masc.)",
-          "vertaling": "soldaten"
+          "case": "acc.pl.m — 1e decl. (masc.)",
+          "translation": "soldaten"
         },
         {
-          "woord": "εἰς",
+          "word": "εἰς",
           "lemma": "εἰς",
-          "naamval": "voorzetsel + acc.",
-          "vertaling": "naar"
+          "case": "voorzetsel + acc.",
+          "translation": "naar"
         },
         {
-          "woord": "τὴν",
+          "word": "τὴν",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "acc.sg.f — lidwoord",
-          "vertaling": "de"
+          "case": "acc.sg.f — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "πόλιν",
+          "word": "πόλιν",
           "lemma": "πόλις",
-          "naamval": "acc.sg.f — 3e decl.",
-          "vertaling": "stad"
+          "case": "acc.sg.f — 3e decl.",
+          "translation": "stad"
         },
         {
-          "woord": "ἔπεμψεν",
+          "word": "ἔπεμψεν",
           "lemma": "πέμπω",
-          "naamval": "aor.ind.act. 3sg — σ-aor.",
-          "vertaling": "stuurde"
+          "case": "aor.ind.act. 3sg — σ-aor.",
+          "translation": "stuurde"
         },
         {
-          "woord": "οἱ",
+          "word": "οἱ",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "nom.pl.m — lidwoord",
-          "vertaling": "de"
+          "case": "nom.pl.m — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἄνθρωποι",
+          "word": "ἄνθρωποι",
           "lemma": "ἄνθρωπος",
-          "naamval": "nom.pl.m — 2e decl.",
-          "vertaling": "mensen"
+          "case": "nom.pl.m — 2e decl.",
+          "translation": "mensen"
         },
         {
-          "woord": "ἐκ",
+          "word": "ἐκ",
           "lemma": "ἐκ",
-          "naamval": "voorzetsel + gen.",
-          "vertaling": "uit/van"
+          "case": "voorzetsel + gen.",
+          "translation": "uit/van"
         },
         {
-          "woord": "τῆς",
+          "word": "τῆς",
           "lemma": "ὁ/ἡ/τό",
-          "naamval": "gen.sg.f — lidwoord",
-          "vertaling": "de"
+          "case": "gen.sg.f — lidwoord",
+          "translation": "de"
         },
         {
-          "woord": "ἀγορᾶς",
+          "word": "ἀγορᾶς",
           "lemma": "ἀγορά",
-          "naamval": "gen.sg.f — 1e decl. (α-type)",
-          "vertaling": "markt"
+          "case": "gen.sg.f — 1e decl. (α-type)",
+          "translation": "markt"
         },
         {
-          "woord": "ἔφευγον",
+          "word": "ἔφευγον",
           "lemma": "φεύγω",
-          "naamval": "impf.ind.act. 3pl — -ω verb",
-          "vertaling": "vluchtten"
+          "case": "impf.ind.act. 3pl — -ω verb",
+          "translation": "vluchtten"
         }
       ],
-      "knoop_ids": [
+      "node_ids": [
         "GRC-G-MORF-NOM-D1",
         "GRC-G-MORF-NOM-D2",
         "GRC-G-MORF-NOM-D3",
@@ -1851,7 +1851,7 @@
         "GRC-V-F02-PHEUGO",
         "GRC-V-F01-ARTIC"
       ],
-      "moeilijkheid": 5
+      "difficulty": 5
     }
   ]
 }

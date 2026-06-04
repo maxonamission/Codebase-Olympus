@@ -2,7 +2,7 @@
 """Generate Latin reading passages for leerjaar 1 and write to data/passages/.
 
 Each passage has per-word annotations (lemma, morphology, Dutch translation)
-and a list of knoop_ids that the passage exercises.
+and a list of node_ids that the passage exercises.
 
 Run: python scripts/generate_lat_passages.py
 """
@@ -23,7 +23,7 @@ def load_all_node_ids() -> set[str]:
     for p in GRAPH_DIR.glob("*.json"):
         with open(p, encoding="utf-8") as f:
             data = json.load(f)
-        for k in data.get("knopen", []):
+        for k in data.get("nodes", []):
             ids.add(k["id"])
     return ids
 
@@ -45,20 +45,20 @@ def zin(latijn: str, vertaling_nl: str, woorden: list[dict]) -> dict:
 
 def passage(
     nr: int,
-    titel_nl: str,
+    title_nl: str,
     niveau: int,
     label: str,
     zinnen: list[dict],
-    knoop_ids: list[str],
+    node_ids: list[str],
 ) -> dict:
     """Build a passage dict."""
     return {
         "id": f"LAT-PASS-LJ1-{nr:03d}",
-        "titel_nl": titel_nl,
+        "title_nl": title_nl,
         "niveau": niveau,
         "complexiteit_label": label,
         "zinnen": zinnen,
-        "knoop_ids": knoop_ids,
+        "node_ids": node_ids,
     }
 
 
@@ -92,7 +92,7 @@ BATCH_1 = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-NOM-D1",
             "LAT-G-MORF-NOM-D2",
             "LAT-G-MORF-ACC-D1",
@@ -141,7 +141,7 @@ BATCH_1 = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-NOM-D1",
             "LAT-G-MORF-NOM-D2",
             "LAT-G-MORF-ACC-D1",
@@ -191,7 +191,7 @@ BATCH_1 = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-NOM-D1",
             "LAT-G-MORF-NOM-D2",
             "LAT-G-MORF-ACC-D1",
@@ -246,7 +246,7 @@ BATCH_1 = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-NOM-D1",
             "LAT-G-MORF-NOM-D2",
             "LAT-G-MORF-ACC-D1",
@@ -307,7 +307,7 @@ BATCH_1 = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-NOM-D1",
             "LAT-G-MORF-NOM-D2",
             "LAT-G-MORF-ACC-D1",
@@ -371,7 +371,7 @@ BATCH_2: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-NOM-D1",
             "LAT-G-MORF-NOM-D2",
             "LAT-G-MORF-GEN-D2",
@@ -429,7 +429,7 @@ BATCH_2: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-NOM-D2",
             "LAT-G-MORF-DAT-D2",
             "LAT-G-MORF-ACC-D1",
@@ -487,7 +487,7 @@ BATCH_2: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-NOM-D1",
             "LAT-G-MORF-NOM-D2",
             "LAT-G-MORF-ABL-D1",
@@ -547,7 +547,7 @@ BATCH_2: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-NOM-D2",
             "LAT-G-MORF-GEN-D2",
             "LAT-G-MORF-DAT-D2",
@@ -619,7 +619,7 @@ BATCH_2: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-NOM-D1",
             "LAT-G-MORF-NOM-D2",
             "LAT-G-MORF-GEN-D2",
@@ -693,7 +693,7 @@ BATCH_3: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-NOM-D3",
             "LAT-G-MORF-ACC-D3",
             "LAT-G-MORF-DECL3-INTRO",
@@ -746,7 +746,7 @@ BATCH_3: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-NOM-D3",
             "LAT-G-MORF-ACC-D3",
             "LAT-G-MORF-NOM-D2",
@@ -806,7 +806,7 @@ BATCH_3: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-IMPF-INTRO",
             "LAT-G-MORF-IMPF-C1C2-ACT",
             "LAT-G-MORF-NOM-D1",
@@ -867,7 +867,7 @@ BATCH_3: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-NOM-D3",
             "LAT-G-MORF-ACC-D3",
             "LAT-G-MORF-ABL-D3",
@@ -938,7 +938,7 @@ BATCH_3: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-NOM-D3",
             "LAT-G-MORF-ACC-D3",
             "LAT-G-MORF-GEN-D2",
@@ -1007,7 +1007,7 @@ BATCH_4: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-PERF-INTRO",
             "LAT-G-MORF-PERF-C1-ACT",
             "LAT-G-MORF-PERF-UITG",
@@ -1059,7 +1059,7 @@ BATCH_4: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-PERF-INTRO",
             "LAT-G-MORF-PERF-C1-ACT",
             "LAT-G-MORF-PERF-C2-ACT",
@@ -1118,7 +1118,7 @@ BATCH_4: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-PRON-INTRO",
             "LAT-G-MORF-PRON-HIC",
             "LAT-G-MORF-PRON-ILLE",
@@ -1176,7 +1176,7 @@ BATCH_4: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-MORF-PERF-INTRO",
             "LAT-G-MORF-PERF-C1-ACT",
             "LAT-G-MORF-PERF-C3-ACT",
@@ -1248,7 +1248,7 @@ BATCH_4: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "LAT-G-SYNT-ACI-INTRO",
             "LAT-G-MORF-INF-PRAES-ACT",
             "LAT-G-MORF-INF-INTRO",
@@ -1291,10 +1291,10 @@ ALL_PASSAGES = BATCH_1 + BATCH_2 + BATCH_3 + BATCH_4
 
 
 def validate(passages: list[dict], known_ids: set[str]) -> list[str]:
-    """Validate knoop_ids in passages against the graph. Return warnings."""
+    """Validate node_ids in passages against the graph. Return warnings."""
     warnings = []
     for p in passages:
-        for kid in p["knoop_ids"]:
+        for kid in p["node_ids"]:
             if kid not in known_ids:
                 warnings.append(f"  {p['id']}: onbekend node_id {kid}")
     return warnings
@@ -1322,12 +1322,12 @@ def main() -> None:
         f"Totaal woorden: {sum(len(wo) for p in passages for z in p['zinnen'] for wo in [z['woorden']])}"
     )
     if warnings:
-        print(f"\n⚠ {len(warnings)} onbekende knoop_ids:")
+        print(f"\n⚠ {len(warnings)} onbekende node_ids:")
         for ww in warnings:
             print(ww)
         sys.exit(1)
     else:
-        print("\n✓ Alle knoop_ids gevalideerd.")
+        print("\n✓ Alle node_ids gevalideerd.")
 
 
 if __name__ == "__main__":

@@ -29,20 +29,20 @@ _PROJECT_ROOT = _SCRIPT_DIR.parent
 random.seed(42)
 
 # ---------------------------------------------------------------------------
-# Lemma / translation extraction from titel_nl
+# Lemma / translation extraction from title_nl
 # ---------------------------------------------------------------------------
 
 
-def parse_titel(titel_nl: str) -> tuple[str, str]:
-    """Split titel_nl into (lemma, translation).
+def parse_titel(title_nl: str) -> tuple[str, str]:
+    """Split title_nl into (lemma, translation).
 
     Format: "lemma — translation"
     Example: "sum, esse — zijn" -> ("sum, esse", "zijn")
     """
-    if " — " in titel_nl:
-        parts = titel_nl.split(" — ", maxsplit=1)
+    if " — " in title_nl:
+        parts = title_nl.split(" — ", maxsplit=1)
         return parts[0].strip(), parts[1].strip()
-    return titel_nl.strip(), ""
+    return title_nl.strip(), ""
 
 
 def extract_first_word(lemma: str) -> str:
@@ -90,7 +90,7 @@ def save_vocab_json(json_path: Path, data: dict) -> None:
 
 def get_vocab_with_audio(data: dict) -> list[dict]:
     """Return V-nodes that have audio_ref set."""
-    return [k for k in data["knopen"] if k["type"] == "V" and k.get("audio_ref")]
+    return [k for k in data["nodes"] if k["type"] == "V" and k.get("audio_ref")]
 
 
 # ---------------------------------------------------------------------------
@@ -102,7 +102,7 @@ def build_translation_pool(nodes: list[dict]) -> list[str]:
     """Build a pool of short translations for distractor generation."""
     pool = []
     for node in nodes:
-        _, translation = parse_titel(node["titel_nl"])
+        _, translation = parse_titel(node["title_nl"])
         short = extract_short_translation(translation)
         if short:
             pool.append(short)
@@ -148,7 +148,7 @@ def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: i
     Stimulus: listen to audio, choose the correct translation from 4 options.
     """
     node_id = node["id"]
-    lemma, translation = parse_titel(node["titel_nl"])
+    lemma, translation = parse_titel(node["title_nl"])
     first_word = extract_first_word(lemma)
     correct = extract_short_translation(translation)
     distractors = pick_distractors(correct, translation_pool)
@@ -160,20 +160,20 @@ def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: i
 
     return {
         "id": f"ITEM-{node_id}-{item_nr:03d}",
-        "knoop_ids": [node_id],
+        "node_ids": [node_id],
         "type": "luister_herkenning",
-        "richting": "receptief",
-        "moeilijkheid_initieel": round(random.uniform(-1.0, 0.0), 2),
-        "discriminatie_initieel": 1.0,
-        "verwachte_tijd_sec": 15,
+        "direction": "receptief",
+        "difficulty_initial": round(random.uniform(-1.0, 0.0), 2),
+        "discrimination_initial": 1.0,
+        "expected_time_sec": 15,
         "stimulus": {
             "instruction": f"Luister naar het {taal_label} woord en kies de juiste vertaling.",
             "audio_ref": node["audio_ref"],
             "options": options,
         },
-        "antwoord": correct,
+        "answer": correct,
         "feedback": f"{first_word} = {correct}.",
-        "bron": "llm_gegenereerd",
+        "source": "llm_gegenereerd",
         "audio_ref": node["audio_ref"],
     }
 
@@ -189,7 +189,7 @@ def generate_productie_item(node: dict, item_nr: int) -> dict:
     Stimulus: listen to audio, type the word you hear in the original language.
     """
     node_id = node["id"]
-    lemma, translation = parse_titel(node["titel_nl"])
+    lemma, translation = parse_titel(node["title_nl"])
     first_word = extract_first_word(lemma)
     correct = extract_short_translation(translation)
 
@@ -198,20 +198,20 @@ def generate_productie_item(node: dict, item_nr: int) -> dict:
 
     return {
         "id": f"ITEM-{node_id}-{item_nr:03d}",
-        "knoop_ids": [node_id],
+        "node_ids": [node_id],
         "type": "luister_productie",
-        "richting": "productief",
-        "moeilijkheid_initieel": round(random.uniform(0.0, 1.5), 2),
-        "discriminatie_initieel": 1.0,
-        "verwachte_tijd_sec": 25,
+        "direction": "productief",
+        "difficulty_initial": round(random.uniform(0.0, 1.5), 2),
+        "discrimination_initial": 1.0,
+        "expected_time_sec": 25,
         "stimulus": {
             "instruction": f"Luister naar het {taal_label} woord en typ het in het {taal_naam}.",
             "audio_ref": node["audio_ref"],
             "hint": correct,
         },
-        "antwoord": first_word,
+        "answer": first_word,
         "feedback": f"Het woord is '{first_word}' ({correct}).",
-        "bron": "llm_gegenereerd",
+        "source": "llm_gegenereerd",
         "audio_ref": node["audio_ref"],
     }
 
@@ -243,7 +243,7 @@ def generate_items_for_file(json_path: Path, item_type: str) -> tuple[int, int]:
     items_added = 0
 
     # Build a lookup for fast access
-    node_map = {k["id"]: k for k in data["knopen"]}
+    node_map = {k["id"]: k for k in data["nodes"]}
 
     for node in nodes:
         node_id = node["id"]

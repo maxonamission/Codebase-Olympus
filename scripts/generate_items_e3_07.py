@@ -2,7 +2,7 @@
 """Generate exercise items for E3-07: GRC praesens indicativus actief.
 
 Target: data/graph/grc_grammatica_leerjaar1.json
-Scope:  7 knopen rondom het praesens ind. act.: PRAES-THEM, CONTR-INTRO,
+Scope:  7 nodes rondom het praesens ind. act.: PRAES-THEM, CONTR-INTRO,
         CONTR-A, CONTR-E, PRAES-EIMI, INF-PRAES, PRAES-PARAD.
 
 Drie componenten:
@@ -58,16 +58,16 @@ def praes_them_items() -> list[dict]:
         items.append(
             {
                 "id": f"ITEM-GRC-G-MORF-PRAES-THEM-{idx:03d}",
-                "knoop_ids": ["GRC-G-MORF-PRAES-THEM", "GRC-G-MORF-PERSOON-INTRO"],
+                "node_ids": ["GRC-G-MORF-PRAES-THEM", "GRC-G-MORF-PERSOON-INTRO"],
                 "type": "productie",
-                "richting": "productief",
-                "moeilijkheid_initieel": diff,
-                "discriminatie_initieel": 1.2,
-                "verwachte_tijd_sec": 25,
+                "direction": "productief",
+                "difficulty_initial": diff,
+                "discrimination_initial": 1.2,
+                "expected_time_sec": 25,
                 "stimulus": f"Geef de {label} praesens actief van γράφω (= 'schrijven').",
-                "antwoord": form,
+                "answer": form,
                 "feedback": (f"{label} van γράφω = {form} ({nl}). Uitgang {uitg} op stam γραφ-."),
-                "bron": "handmatig",
+                "source": "handmatig",
             }
         )
 
@@ -81,14 +81,14 @@ def praes_them_items() -> list[dict]:
         items.append(
             {
                 "id": f"ITEM-GRC-G-MORF-PRAES-THEM-{idx:03d}",
-                "knoop_ids": ["GRC-G-MORF-PRAES-THEM", "GRC-G-MORF-PERSOON-INTRO"],
+                "node_ids": ["GRC-G-MORF-PRAES-THEM", "GRC-G-MORF-PERSOON-INTRO"],
                 "type": "herkenning",
-                "richting": "receptief",
-                "moeilijkheid_initieel": diff,
-                "discriminatie_initieel": 1.2,
-                "verwachte_tijd_sec": 15,
+                "direction": "receptief",
+                "difficulty_initial": diff,
+                "discrimination_initial": 1.2,
+                "expected_time_sec": 15,
                 "stimulus": f"Welke persoon en welk getal heeft {form}?",
-                "antwoord": [
+                "answer": [
                     antw,
                     antw.replace("persoon ", "p. ")
                     .replace("singularis", "sg.")
@@ -98,7 +98,7 @@ def praes_them_items() -> list[dict]:
                     f"{form} = {antw} praesens actief van λύω. De thematische klinker (ε/ο) zit "
                     "tussen stam en uitgang."
                 ),
-                "bron": "handmatig",
+                "source": "handmatig",
             }
         )
 
@@ -106,16 +106,16 @@ def praes_them_items() -> list[dict]:
     items.append(
         {
             "id": "ITEM-GRC-G-MORF-PRAES-THEM-010",
-            "knoop_ids": ["GRC-G-MORF-PRAES-THEM", "GRC-G-MORF-THEM-INTRO"],
+            "node_ids": ["GRC-G-MORF-PRAES-THEM", "GRC-G-MORF-THEM-INTRO"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Splits λύομεν in stam + thematische klinker + persoonsuitgang.",
-            "antwoord": ["λυ-ο-μεν", "λυ + ο + μεν"],
+            "answer": ["λυ-ο-μεν", "λυ + ο + μεν"],
             "feedback": "λυ- (stam) + -ο- (thematische klinker vóór nasaal μ) + -μεν (1 pl. uitgang). Vóór σ/τ wordt het ε: λύ-ε-τε.",
-            "bron": "handmatig",
+            "source": "handmatig",
         }
     )
 
@@ -131,33 +131,33 @@ def contr_intro_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-CONTR-INTRO-001",
-            "knoop_ids": ["GRC-G-MORF-CONTR-INTRO"],
+            "node_ids": ["GRC-G-MORF-CONTR-INTRO"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.3,
-            "discriminatie_initieel": 1.1,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.3,
+            "discrimination_initial": 1.1,
+            "expected_time_sec": 15,
             "stimulus": "Welke drie soorten verba contracta kent het praesens?",
-            "antwoord": [
+            "answer": [
                 "α-contracta, ε-contracta, ο-contracta",
                 "stammen op α, ε of ο",
             ],
             "feedback": "Drie stamklinkers contracteren met de thematische klinker: α (τιμάω), ε (ποιέω), ο (δηλόω). Lexicon-vorm toont altijd de ongecontracteerde 1 sg.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-CONTR-INTRO-002",
-            "knoop_ids": ["GRC-G-MORF-CONTR-INTRO"],
+            "node_ids": ["GRC-G-MORF-CONTR-INTRO"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.5,
+            "direction": "productief",
+            "difficulty_initial": 0.5,
             "discriminatie_initueel_placeholder": 0.0,  # removed below
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Geef de gecontracteerde 1 sg. praesens actief van δηλόω (voor-contractie: δηλό-ω).",
-            "antwoord": "δηλῶ",
+            "answer": "δηλῶ",
             "feedback": "Contractie ο+ω → ω (circumflex verplicht): δηλό-ω → δηλῶ. Dezelfde regel bij τιμάω → τιμῶ en ποιέω → ποιῶ.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -176,49 +176,49 @@ def contr_a_items() -> list[dict]:
         items.append(
             {
                 "id": f"ITEM-GRC-G-MORF-CONTR-A-{idx:03d}",
-                "knoop_ids": ["GRC-G-MORF-CONTR-A"],
+                "node_ids": ["GRC-G-MORF-CONTR-A"],
                 "type": "productie",
-                "richting": "productief",
-                "moeilijkheid_initieel": diff,
-                "discriminatie_initieel": 1.3,
-                "verwachte_tijd_sec": 25,
+                "direction": "productief",
+                "difficulty_initial": diff,
+                "discrimination_initial": 1.3,
+                "expected_time_sec": 25,
                 "stimulus": f"Geef de gecontracteerde {label} praesens actief van τιμάω (voor-contractie: {pre}).",
-                "antwoord": post,
+                "answer": post,
                 "feedback": f"{pre} → {post}. Regel: {rule}.",
-                "bron": "handmatig",
+                "source": "handmatig",
             }
         )
     items.append(
         {
             "id": "ITEM-GRC-G-MORF-CONTR-A-006",
-            "knoop_ids": ["GRC-G-MORF-CONTR-A"],
+            "node_ids": ["GRC-G-MORF-CONTR-A"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.2,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": 0.2,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 15,
             "stimulus": "Naar welke klank contracteren α + ο in een α-contractum?",
-            "antwoord": ["ω", "lange ω"],
+            "answer": ["ω", "lange ω"],
             "feedback": "α+ο → ω (en α+ου → ω). Dit verklaart τιμῶμεν (< τιμά-ομεν) en τιμῶσι (< τιμά-ουσι).",
-            "bron": "handmatig",
+            "source": "handmatig",
         }
     )
     items.append(
         {
             "id": "ITEM-GRC-G-MORF-CONTR-A-007",
-            "knoop_ids": ["GRC-G-MORF-CONTR-A"],
+            "node_ids": ["GRC-G-MORF-CONTR-A"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 20,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 20,
             "stimulus": "Waarom heeft τιμᾷ een iota subscriptum en τιμᾶτε niet?",
-            "antwoord": [
+            "answer": [
                 "τιμᾷ < τιμά-ει (α+ει → ᾳ, iota blijft); τιμᾶτε < τιμά-ετε (α+ε → ᾱ, geen iota)",
                 "de ει brengt een iota mee, de losse ε niet",
             ],
             "feedback": "Contractieresultaat hangt af van de tweede klinker: α+ει behoudt de iota (subscript); α+ε levert een lange α zonder iota.",
-            "bron": "handmatig",
+            "source": "handmatig",
         }
     )
     return items
@@ -238,31 +238,31 @@ def contr_e_items() -> list[dict]:
         items.append(
             {
                 "id": f"ITEM-GRC-G-MORF-CONTR-E-{idx:03d}",
-                "knoop_ids": ["GRC-G-MORF-CONTR-E"],
+                "node_ids": ["GRC-G-MORF-CONTR-E"],
                 "type": "productie",
-                "richting": "productief",
-                "moeilijkheid_initieel": diff,
-                "discriminatie_initieel": 1.3,
-                "verwachte_tijd_sec": 25,
+                "direction": "productief",
+                "difficulty_initial": diff,
+                "discrimination_initial": 1.3,
+                "expected_time_sec": 25,
                 "stimulus": f"Geef de gecontracteerde {label} praesens actief van ποιέω (voor-contractie: {pre}).",
-                "antwoord": post,
+                "answer": post,
                 "feedback": f"{pre} → {post}. Regel: {rule}.",
-                "bron": "handmatig",
+                "source": "handmatig",
             }
         )
     items.append(
         {
             "id": "ITEM-GRC-G-MORF-CONTR-E-006",
-            "knoop_ids": ["GRC-G-MORF-CONTR-E"],
+            "node_ids": ["GRC-G-MORF-CONTR-E"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.2,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": 0.2,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 15,
             "stimulus": "Naar welke klank contracteren ε + ο in een ε-contractum?",
-            "antwoord": ["ου", "lange ou"],
+            "answer": ["ου", "lange ou"],
             "feedback": "ε+ο → ου. Dit verklaart ποιοῦμεν (< ποιέ-ομεν) en ποιοῦσι (< ποιέ-ουσι).",
-            "bron": "handmatig",
+            "source": "handmatig",
         }
     )
     return items
@@ -277,68 +277,68 @@ def eimi_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-PRAES-EIMI-001",
-            "knoop_ids": ["GRC-G-MORF-PRAES-EIMI"],
+            "node_ids": ["GRC-G-MORF-PRAES-EIMI"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": -0.3,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "productief",
+            "difficulty_initial": -0.3,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Geef de 1 sg. praesens van εἰμί ('ik ben').",
-            "antwoord": "εἰμί",
+            "answer": "εἰμί",
             "feedback": "1 sg. = εἰμί. Enclitisch (verliest vaak zijn accent). Onregelmatig werkwoord, deels athematisch.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRAES-EIMI-002",
-            "knoop_ids": ["GRC-G-MORF-PRAES-EIMI"],
+            "node_ids": ["GRC-G-MORF-PRAES-EIMI"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.0,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "productief",
+            "difficulty_initial": 0.0,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Geef de 2 sg. praesens van εἰμί ('jij bent').",
-            "antwoord": "εἶ",
+            "answer": "εἶ",
             "feedback": "2 sg. = εἶ (korte vorm met circumflex). Niet te verwarren met het imperatief εἶ.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRAES-EIMI-003",
-            "knoop_ids": ["GRC-G-MORF-PRAES-EIMI"],
+            "node_ids": ["GRC-G-MORF-PRAES-EIMI"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.0,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "productief",
+            "difficulty_initial": 0.0,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Geef de 3 sg. praesens van εἰμί ('hij/zij is').",
-            "antwoord": ["ἐστί", "ἐστίν", "ἐστί(ν)"],
+            "answer": ["ἐστί", "ἐστίν", "ἐστί(ν)"],
             "feedback": "3 sg. = ἐστί(ν) met bewegelijke ν. Enclitisch tenzij nadrukkelijk of aan het begin van de zin (dan ἔστι).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRAES-EIMI-004",
-            "knoop_ids": ["GRC-G-MORF-PRAES-EIMI"],
+            "node_ids": ["GRC-G-MORF-PRAES-EIMI"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.2,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "productief",
+            "difficulty_initial": 0.2,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Geef de 1 pl. praesens van εἰμί ('wij zijn').",
-            "antwoord": "ἐσμέν",
+            "answer": "ἐσμέν",
             "feedback": "1 pl. = ἐσμέν. De stam ἐσ- is zichtbaar in het meervoud; in sg. 1/2 is de σ verdwenen.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRAES-EIMI-005",
-            "knoop_ids": ["GRC-G-MORF-PRAES-EIMI"],
+            "node_ids": ["GRC-G-MORF-PRAES-EIMI"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.2,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "productief",
+            "difficulty_initial": 0.2,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Geef de 3 pl. praesens van εἰμί ('zij zijn').",
-            "antwoord": ["εἰσί", "εἰσίν", "εἰσί(ν)"],
+            "answer": ["εἰσί", "εἰσίν", "εἰσί(ν)"],
             "feedback": "3 pl. = εἰσί(ν) met bewegelijke ν. Compleet paradigma: εἰμί, εἶ, ἐστί(ν), ἐσμέν, ἐστέ, εἰσί(ν).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -352,55 +352,55 @@ def inf_praes_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-INF-PRAES-001",
-            "knoop_ids": ["GRC-G-MORF-INF-PRAES"],
+            "node_ids": ["GRC-G-MORF-INF-PRAES"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.2,
-            "discriminatie_initieel": 1.1,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.2,
+            "discrimination_initial": 1.1,
+            "expected_time_sec": 15,
             "stimulus": "Welke uitgang heeft de infinitief praesens actief bij een thematisch werkwoord?",
-            "antwoord": "-ειν",
+            "answer": "-ειν",
             "feedback": "Inf. praes. act. thematisch = -ειν: λύειν, γράφειν. Contracta krijgen een gecontracteerde vorm (-ᾶν, -εῖν, -οῦν).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-INF-PRAES-002",
-            "knoop_ids": ["GRC-G-MORF-INF-PRAES"],
+            "node_ids": ["GRC-G-MORF-INF-PRAES"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "productief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Geef de infinitief praesens actief van γράφω.",
-            "antwoord": "γράφειν",
+            "answer": "γράφειν",
             "feedback": "Inf. = γράφειν ('schrijven'). Stam γραφ- + uitgang -ειν.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-INF-PRAES-003",
-            "knoop_ids": ["GRC-G-MORF-INF-PRAES"],
+            "node_ids": ["GRC-G-MORF-INF-PRAES"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.6,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "productief",
+            "difficulty_initial": 0.6,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Geef de infinitief praesens actief van τιμάω (voor-contractie: τιμά-ειν).",
-            "antwoord": "τιμᾶν",
+            "answer": "τιμᾶν",
             "feedback": "τιμά-ειν → τιμᾶν (α+ει verliest iota als de infinitief geen morfologische iota bevat). Vergelijk ποιεῖν (< ποιέ-ειν).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-INF-PRAES-004",
-            "knoop_ids": ["GRC-G-MORF-INF-PRAES"],
+            "node_ids": ["GRC-G-MORF-INF-PRAES"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.2,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": 0.2,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 15,
             "stimulus": "Wat is de infinitief praesens van εἰμί?",
-            "antwoord": "εἶναι",
+            "answer": "εἶναι",
             "feedback": "Inf. van εἰμί = εἶναι ('zijn'). Onregelmatig, eigen vorm buiten het -ειν-patroon.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -414,95 +414,95 @@ def paradigma_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-PRAES-PARAD-001",
-            "knoop_ids": ["GRC-G-MORF-PRAES-PARAD"],
+            "node_ids": ["GRC-G-MORF-PRAES-PARAD"],
             "type": "offline_schrijven",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.7,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 90,
+            "direction": "productief",
+            "difficulty_initial": 0.7,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 90,
             "stimulus": "Schrijf het volledige paradigma van λύω praesens ind. act. op (6 personen) en vergelijk met je grammaticaboek.",
-            "antwoord": "λύω, λύεις, λύει, λύομεν, λύετε, λύουσι(ν)",
+            "answer": "λύω, λύεις, λύει, λύομεν, λύετε, λύουσι(ν)",
             "feedback": "Zes vormen: λύω / λύεις / λύει / λύομεν / λύετε / λύουσι(ν). Thematische klinker ο vóór μ/ν, ε elders.",
-            "bron": "handmatig",
-            "verificatie_methode": "self_report",
-            "verwacht_resultaat": "6 vormen van λύω met correcte accenten en bewegelijke ν in de 3 pl.",
+            "source": "handmatig",
+            "verification_method": "self_report",
+            "expected_result": "6 vormen van λύω met correcte accenten en bewegelijke ν in de 3 pl.",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRAES-PARAD-002",
-            "knoop_ids": ["GRC-G-MORF-PRAES-PARAD"],
+            "node_ids": ["GRC-G-MORF-PRAES-PARAD"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Welke persoon en welk getal heeft ποιοῦμεν?",
-            "antwoord": [
+            "answer": [
                 "1e persoon pluralis",
                 "1 pl.",
             ],
             "feedback": "ποιοῦμεν = 1 pl. praes. ind. act. van ποιέω (< ποιέ-ομεν; ε+ο → ου).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRAES-PARAD-003",
-            "knoop_ids": ["GRC-G-MORF-PRAES-PARAD"],
+            "node_ids": ["GRC-G-MORF-PRAES-PARAD"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Welke persoon en welk getal heeft τιμᾷς?",
-            "antwoord": [
+            "answer": [
                 "2e persoon singularis",
                 "2 sg.",
             ],
             "feedback": "τιμᾷς = 2 sg. praes. ind. act. van τιμάω (< τιμά-εις; α+ει → ᾳ, circumflex).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRAES-PARAD-004",
-            "knoop_ids": ["GRC-G-MORF-PRAES-PARAD"],
+            "node_ids": ["GRC-G-MORF-PRAES-PARAD"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "In 'οἱ νεανίαι γράφουσι τοὺς λόγους' — welke persoon en getal heeft γράφουσι?",
-            "antwoord": [
+            "answer": [
                 "3e persoon pluralis",
                 "3 pl.",
             ],
             "feedback": "γράφουσι = 3 pl. praes. ind. act. Congrueert met het onderwerp οἱ νεανίαι (nom. pl.).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRAES-PARAD-005",
-            "knoop_ids": ["GRC-G-MORF-PRAES-PARAD"],
+            "node_ids": ["GRC-G-MORF-PRAES-PARAD"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.6,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 30,
+            "direction": "productief",
+            "difficulty_initial": 0.6,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 30,
             "stimulus": "Geef de 3 pl. praesens actief van τιμάω (voor-contractie: τιμά-ουσι).",
-            "antwoord": ["τιμῶσι", "τιμῶσιν", "τιμῶσι(ν)"],
+            "answer": ["τιμῶσι", "τιμῶσιν", "τιμῶσι(ν)"],
             "feedback": "τιμά-ουσι → τιμῶσι(ν). Regel α+ου → ω (circumflex). Bewegelijke ν voor klinker of zineinde.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRAES-PARAD-006",
-            "knoop_ids": ["GRC-G-MORF-PRAES-PARAD"],
+            "node_ids": ["GRC-G-MORF-PRAES-PARAD"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 15,
             "stimulus": "Wat is aan het accent te zien dat ποιῶ, τιμῶ en δηλῶ contracta zijn?",
-            "antwoord": [
+            "answer": [
                 "een verplichte circumflex op de gecontracteerde lange klinker",
                 "circumflex op de ultima bij 1 sg.",
             ],
             "feedback": "Contracta krijgen in de 1 sg. steeds een circumflex op de gecontracteerde ω — signaal dat daar twee klinkers zijn samengetrokken.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -526,10 +526,10 @@ def collect_all() -> dict[str, list[dict]]:
     # Clean up placeholder fields + NFC-normaliseer
     for item in all_items:
         item.pop("discriminatie_initueel_placeholder", None)
-        for key in ("stimulus", "antwoord", "feedback", "verwacht_resultaat"):
+        for key in ("stimulus", "antwoord", "feedback", "expected_result"):
             if key in item and item[key] is not None:
                 item[key] = nfc(item[key])
-        primary_map.setdefault(item["knoop_ids"][0], []).append(item)
+        primary_map.setdefault(item["node_ids"][0], []).append(item)
 
     return primary_map
 
@@ -547,7 +547,7 @@ def add_items_to_json(json_path: Path, items_by_node: dict[str, list[dict]]) -> 
         data = json.load(f)
 
     added = 0
-    for node in data["knopen"]:
+    for node in data["nodes"]:
         if node["id"] in items_by_node:
             existing_ids = {item["id"] for item in node.get("items", [])}
             new_items = [
@@ -572,7 +572,7 @@ def print_summary(items_by_node: dict[str, list[dict]]) -> None:
         per_node[node_id] = len(item_list)
         for item in item_list:
             type_counter[item["type"]] += 1
-            richting_counter[item["richting"]] += 1
+            richting_counter[item["direction"]] += 1
 
     print("\n=== E3-07 Summary ===")
     print(f"Knopen: {len(items_by_node)}")

@@ -2,7 +2,7 @@
 """Generate exercise items for E3-08: GRC imperfectum indicativus actief.
 
 Target: data/graph/grc_grammatica_leerjaar1.json
-Scope:  7 knopen: IMPF-INTRO, AUGMENT, IMPF-THEM, IMPF-CTA, IMPF-CTE,
+Scope:  7 nodes: IMPF-INTRO, AUGMENT, IMPF-THEM, IMPF-CTA, IMPF-CTE,
         IMPF-EIMI, IMPF-PARAD.
 
 Focus:
@@ -48,48 +48,48 @@ def impf_intro_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-IMPF-INTRO-001",
-            "knoop_ids": ["GRC-G-MORF-IMPF-INTRO"],
+            "node_ids": ["GRC-G-MORF-IMPF-INTRO"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.5,
-            "discriminatie_initieel": 1.1,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.5,
+            "discrimination_initial": 1.1,
+            "expected_time_sec": 15,
             "stimulus": "Welk aspect drukt het imperfectum uit?",
-            "antwoord": [
+            "answer": [
                 "duur of herhaling in het verleden",
                 "durende/herhalende handeling in het verleden",
             ],
             "feedback": "Het imperfectum drukt een durende of herhaalde verleden handeling uit. Tegenhanger is de aoristus (eenmalig, afgerond).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-IMPF-INTRO-002",
-            "knoop_ids": ["GRC-G-MORF-IMPF-INTRO"],
+            "node_ids": ["GRC-G-MORF-IMPF-INTRO"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.3,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.3,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 15,
             "stimulus": "Uit welke drie ingrediënten bestaat een imperfectum-vorm?",
-            "antwoord": [
+            "answer": [
                 "augment + praesensstam + secundaire uitgang",
                 "augment, praesensstam, secundaire persoonsuitgang",
             ],
             "feedback": "Imperfectum = augment (ἐ-/klinkerverlenging) + praesensstam + secundaire uitgang (-ον, -ες, -ε, -ομεν, -ετε, -ον).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-IMPF-INTRO-003",
-            "knoop_ids": ["GRC-G-MORF-IMPF-INTRO"],
+            "node_ids": ["GRC-G-MORF-IMPF-INTRO"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Splits ἐλύομεν in augment + stam + thematische klinker + uitgang.",
-            "antwoord": ["ἐ-λυ-ο-μεν", "ἐ + λυ + ο + μεν"],
+            "answer": ["ἐ-λυ-ο-μεν", "ἐ + λυ + ο + μεν"],
             "feedback": "ἐ- (syllabisch augment) + λυ- (stam) + -ο- (thematisch) + -μεν (secundaire uitgang 1 pl.). Vergelijk praesens λύ-ο-μεν.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -105,34 +105,34 @@ def augment_items() -> list[dict]:
     items.append(
         {
             "id": "ITEM-GRC-G-MORF-AUGMENT-001",
-            "knoop_ids": ["GRC-G-MORF-AUGMENT"],
+            "node_ids": ["GRC-G-MORF-AUGMENT"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.3,
-            "discriminatie_initieel": 1.1,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.3,
+            "discrimination_initial": 1.1,
+            "expected_time_sec": 15,
             "stimulus": "Wanneer krijgt een werkwoord een syllabisch augment?",
-            "antwoord": [
+            "answer": [
                 "als de stam met een medeklinker begint",
                 "bij consonant-initiële werkwoorden",
             ],
             "feedback": "Syllabisch augment ἐ- wordt geplakt vóór een medeklinker-stam: λύω → ἔλυον, γράφω → ἔγραφον.",
-            "bron": "handmatig",
+            "source": "handmatig",
         }
     )
     items.append(
         {
             "id": "ITEM-GRC-G-MORF-AUGMENT-002",
-            "knoop_ids": ["GRC-G-MORF-AUGMENT"],
+            "node_ids": ["GRC-G-MORF-AUGMENT"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.2,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "productief",
+            "difficulty_initial": 0.2,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Geef de 1 sg. imperfectum van γράφω (praesens 'ik schrijf').",
-            "antwoord": "ἔγραφον",
+            "answer": "ἔγραφον",
             "feedback": "γράφω → ἔγραφον: syllabisch augment ἐ- vóór γ, secundaire uitgang -ον (1 sg.). 'Ik was aan het schrijven'.",
-            "bron": "handmatig",
+            "source": "handmatig",
         }
     )
 
@@ -147,16 +147,16 @@ def augment_items() -> list[dict]:
         items.append(
             {
                 "id": f"ITEM-GRC-G-MORF-AUGMENT-{idx:03d}",
-                "knoop_ids": ["GRC-G-MORF-AUGMENT"],
+                "node_ids": ["GRC-G-MORF-AUGMENT"],
                 "type": "productie",
-                "richting": "productief",
-                "moeilijkheid_initieel": 0.5,
-                "discriminatie_initieel": 1.3,
-                "verwachte_tijd_sec": 25,
+                "direction": "productief",
+                "difficulty_initial": 0.5,
+                "discrimination_initial": 1.3,
+                "expected_time_sec": 25,
                 "stimulus": f"Geef de 1 sg. imperfectum van {praes}.",
-                "antwoord": impf,
+                "answer": impf,
                 "feedback": f"{praes} → {impf} ({nl}). Temporeel augment: {rule}. Vowelstam krijgt geen ἐ-, maar een verlenging.",
-                "bron": "handmatig",
+                "source": "handmatig",
             }
         )
 
@@ -164,19 +164,19 @@ def augment_items() -> list[dict]:
     items.append(
         {
             "id": "ITEM-GRC-G-MORF-AUGMENT-007",
-            "knoop_ids": ["GRC-G-MORF-AUGMENT"],
+            "node_ids": ["GRC-G-MORF-AUGMENT"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.2,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": 0.2,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 15,
             "stimulus": "Tot welke klinkers verlengen initiële α, ε en ο bij temporeel augment?",
-            "antwoord": [
+            "answer": [
                 "α → η, ε → η, ο → ω",
                 "α→η, ε→η, ο→ω",
             ],
             "feedback": "Temporeel augment: α → η, ε → η, ο → ω. Lange klinkers (η, ω) en diftongen blijven meestal onveranderd (ηὐξάνομεν, niet ἤυξάνομεν).",
-            "bron": "handmatig",
+            "source": "handmatig",
         }
     )
 
@@ -202,35 +202,35 @@ def impf_them_items() -> list[dict]:
         items.append(
             {
                 "id": f"ITEM-GRC-G-MORF-IMPF-THEM-{idx:03d}",
-                "knoop_ids": ["GRC-G-MORF-IMPF-THEM"],
+                "node_ids": ["GRC-G-MORF-IMPF-THEM"],
                 "type": "productie",
-                "richting": "productief",
-                "moeilijkheid_initieel": diff,
-                "discriminatie_initieel": 1.2,
-                "verwachte_tijd_sec": 25,
+                "direction": "productief",
+                "difficulty_initial": diff,
+                "discrimination_initial": 1.2,
+                "expected_time_sec": 25,
                 "stimulus": f"Geef de {label} imperfectum ind. act. van λύω.",
-                "antwoord": [form, form.replace("(ν)", "")] if "(ν)" in form else form,
+                "answer": [form, form.replace("(ν)", "")] if "(ν)" in form else form,
                 "feedback": f"{label} = {form} ({nl}). Augment ἐ- + stam λυ- + thematische klinker + secundaire uitgang.",
-                "bron": "handmatig",
+                "source": "handmatig",
             }
         )
 
     items.append(
         {
             "id": "ITEM-GRC-G-MORF-IMPF-THEM-007",
-            "knoop_ids": ["GRC-G-MORF-IMPF-THEM"],
+            "node_ids": ["GRC-G-MORF-IMPF-THEM"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Waarom zijn de 1 sg. en de 3 pl. imperfectum vaak identiek (ἔλυον)?",
-            "antwoord": [
+            "answer": [
                 "omdat beide de secundaire uitgang -ον hebben",
                 "secundaire uitgang -ον voor 1 sg. én 3 pl.",
             ],
             "feedback": "Beide eindigen op -ον: 1 sg. stam + -ον, 3 pl. stam + -ον. Alleen context of onderwerp beslist welke functie de vorm heeft.",
-            "bron": "handmatig",
+            "source": "handmatig",
         }
     )
 
@@ -253,34 +253,34 @@ def impf_cta_items() -> list[dict]:
         items.append(
             {
                 "id": f"ITEM-GRC-G-MORF-IMPF-CTA-{idx:03d}",
-                "knoop_ids": ["GRC-G-MORF-IMPF-CTA"],
+                "node_ids": ["GRC-G-MORF-IMPF-CTA"],
                 "type": "productie",
-                "richting": "productief",
-                "moeilijkheid_initieel": 0.6,
-                "discriminatie_initieel": 1.3,
-                "verwachte_tijd_sec": 30,
+                "direction": "productief",
+                "difficulty_initial": 0.6,
+                "discrimination_initial": 1.3,
+                "expected_time_sec": 30,
                 "stimulus": f"Geef de {label} imperfectum ind. act. van τιμάω (voor-contractie: ἐ-{pre}).",
-                "antwoord": post,
+                "answer": post,
                 "feedback": f"ἐ-{pre} → {post}. Syllabisch augment ἐ- + contractie {rule}.",
-                "bron": "handmatig",
+                "source": "handmatig",
             }
         )
     items.append(
         {
             "id": "ITEM-GRC-G-MORF-IMPF-CTA-004",
-            "knoop_ids": ["GRC-G-MORF-IMPF-CTA"],
+            "node_ids": ["GRC-G-MORF-IMPF-CTA"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 20,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 20,
             "stimulus": "Welke persoon en welk getal heeft ἐτίμων?",
-            "antwoord": [
+            "answer": [
                 "1e persoon singularis of 3e persoon pluralis",
                 "1 sg. of 3 pl.",
             ],
             "feedback": "ἐτίμων is 1 sg. óf 3 pl. imperfectum (identieke vormen wegens -ον in beide; na contractie α+ο → ω).",
-            "bron": "handmatig",
+            "source": "handmatig",
         }
     )
     return items
@@ -302,16 +302,16 @@ def impf_cte_items() -> list[dict]:
         items.append(
             {
                 "id": f"ITEM-GRC-G-MORF-IMPF-CTE-{idx:03d}",
-                "knoop_ids": ["GRC-G-MORF-IMPF-CTE"],
+                "node_ids": ["GRC-G-MORF-IMPF-CTE"],
                 "type": "productie",
-                "richting": "productief",
-                "moeilijkheid_initieel": 0.6,
-                "discriminatie_initieel": 1.3,
-                "verwachte_tijd_sec": 30,
+                "direction": "productief",
+                "difficulty_initial": 0.6,
+                "discrimination_initial": 1.3,
+                "expected_time_sec": 30,
                 "stimulus": f"Geef de {label} imperfectum ind. act. van ποιέω (voor-contractie: ἐ-{pre}).",
-                "antwoord": post,
+                "answer": post,
                 "feedback": f"ἐ-{pre} → {post}. Syllabisch augment ἐ- + contractie {rule}.",
-                "bron": "handmatig",
+                "source": "handmatig",
             }
         )
     return items
@@ -334,19 +334,19 @@ def impf_eimi_items() -> list[dict]:
         items.append(
             {
                 "id": f"ITEM-GRC-G-MORF-IMPF-EIMI-{idx:03d}",
-                "knoop_ids": ["GRC-G-MORF-IMPF-EIMI"],
+                "node_ids": ["GRC-G-MORF-IMPF-EIMI"],
                 "type": "productie",
-                "richting": "productief",
-                "moeilijkheid_initieel": diff,
-                "discriminatie_initieel": 1.2,
-                "verwachte_tijd_sec": 20,
+                "direction": "productief",
+                "difficulty_initial": diff,
+                "discrimination_initial": 1.2,
+                "expected_time_sec": 20,
                 "stimulus": f"Geef de {label} imperfectum van εἰμί ('{nl}').",
-                "antwoord": form,
+                "answer": form,
                 "feedback": (
                     f"{label} = {form} ({nl}). Paradigma: ἦν, ἦσθα, ἦν, ἦμεν, ἦτε, ἦσαν. "
                     "Onregelmatig — geen zichtbaar augment, maar wel verleden-tijd-betekenis."
                 ),
-                "bron": "handmatig",
+                "source": "handmatig",
             }
         )
     return items
@@ -361,50 +361,50 @@ def impf_parad_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-IMPF-PARAD-001",
-            "knoop_ids": ["GRC-G-MORF-IMPF-PARAD"],
+            "node_ids": ["GRC-G-MORF-IMPF-PARAD"],
             "type": "offline_schrijven",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.7,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 100,
+            "direction": "productief",
+            "difficulty_initial": 0.7,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 100,
             "stimulus": "Schrijf het volledige paradigma van het imperfectum van λύω op (6 personen) en vergelijk met je grammaticaboek.",
-            "antwoord": "ἔλυον, ἔλυες, ἔλυε(ν), ἐλύομεν, ἐλύετε, ἔλυον",
+            "answer": "ἔλυον, ἔλυες, ἔλυε(ν), ἐλύομεν, ἐλύετε, ἔλυον",
             "feedback": "Kern: augment ἐ- + stam λυ- + thematische klinker + secundaire uitgangen. 1 sg. = 3 pl. = ἔλυον.",
-            "bron": "handmatig",
-            "verificatie_methode": "self_report",
-            "verwacht_resultaat": "6 vormen van ἔλυον met correcte accenten en bewegelijke ν in de 3 sg.",
+            "source": "handmatig",
+            "verification_method": "self_report",
+            "expected_result": "6 vormen van ἔλυον met correcte accenten en bewegelijke ν in de 3 sg.",
         },
         {
             "id": "ITEM-GRC-G-MORF-IMPF-PARAD-002",
-            "knoop_ids": ["GRC-G-MORF-IMPF-PARAD"],
+            "node_ids": ["GRC-G-MORF-IMPF-PARAD"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "In 'οἱ παῖδες ἔγραφον τοὺς λόγους' — welke tijd, persoon en getal heeft ἔγραφον?",
-            "antwoord": [
+            "answer": [
                 "imperfectum 3e persoon pluralis",
                 "impf. 3 pl.",
             ],
             "feedback": "ἔγραφον = impf. 3 pl. (augment ἐ- + stam γραφ- + thematisch + -ον). Onderwerp οἱ παῖδες (nom. pl.) bepaalt 3 pl.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-IMPF-PARAD-003",
-            "knoop_ids": ["GRC-G-MORF-IMPF-PARAD"],
+            "node_ids": ["GRC-G-MORF-IMPF-PARAD"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.6,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.6,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Hoe herken je aan ἠκούομεν dat dit een imperfectum is?",
-            "antwoord": [
+            "answer": [
                 "temporeel augment (α → η) en secundaire uitgang -ομεν",
                 "augment + secundaire uitgang",
             ],
             "feedback": "ἀκούω → ἠκούομεν: α → η (temporeel augment) + thematische ο + -μεν (secundaire 1 pl.). Praesens zou ἀκούομεν zijn.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -426,10 +426,10 @@ def collect_all() -> dict[str, list[dict]]:
 
     primary_map: dict[str, list[dict]] = {}
     for item in all_items:
-        for key in ("stimulus", "antwoord", "feedback", "verwacht_resultaat"):
+        for key in ("stimulus", "antwoord", "feedback", "expected_result"):
             if key in item and item[key] is not None:
                 item[key] = nfc(item[key])
-        primary_map.setdefault(item["knoop_ids"][0], []).append(item)
+        primary_map.setdefault(item["node_ids"][0], []).append(item)
     return primary_map
 
 
@@ -446,7 +446,7 @@ def add_items_to_json(json_path: Path, items_by_node: dict[str, list[dict]]) -> 
         data = json.load(f)
 
     added = 0
-    for node in data["knopen"]:
+    for node in data["nodes"]:
         if node["id"] in items_by_node:
             existing_ids = {item["id"] for item in node.get("items", [])}
             new_items = [

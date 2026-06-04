@@ -176,9 +176,9 @@ def select_passage(
     for passage in passages:
         reachable_unmastered = 0
         total_relevant = 0
-        passage_node_set = set(passage.knoop_ids)
+        passage_node_set = set(passage.node_ids)
 
-        for node_id in passage.knoop_ids:
+        for node_id in passage.node_ids:
             if node_id not in graph.nodes:
                 continue
             total_relevant += 1
@@ -210,7 +210,7 @@ def select_passage(
         # Score: fraction of relevant nodes that are frontier nodes,
         # with a small penalty for higher difficulty
         coverage = reachable_unmastered / max(total_relevant, 1)
-        difficulty_penalty = (passage.moeilijkheid - 1) * 0.05
+        difficulty_penalty = (passage.difficulty - 1) * 0.05
         score = coverage - difficulty_penalty
 
         if score > best_score:
@@ -238,7 +238,7 @@ def _candidates_for_new_material_context_first(
     candidates = []
     max_out_deg = max((graph.out_degree(n) for n in graph.nodes), default=1) or 1
 
-    for node_id in passage.knoop_ids:
+    for node_id in passage.node_ids:
         if node_id not in graph.nodes:
             continue
         posterior = _get_state_posterior(learner, node_id)

@@ -35,8 +35,8 @@ def save_learner(learner: LearnerModel, path: Path) -> None:
 
 def interactive_answer_fn(node_id: str, node: Node) -> tuple[ResponseType, int]:
     """Prompt the user for an answer via stdin."""
-    print(f"\n  [{node.type.value}] {node.titel_nl}")
-    print(f"  {node.beschrijving}")
+    print(f"\n  [{node.type.value}] {node.title_nl}")
+    print(f"  {node.description}")
     while True:
         choice = input("  Antwoord — (c)orrect, (s)low, (i)ncorrect: ").strip().lower()
         if choice in ("c", "correct"):
@@ -107,7 +107,7 @@ def main() -> None:
     graph = load_graph(args.graph_path)
     learner = load_learner(args.learner)
 
-    print(f"Graph geladen: {graph.number_of_nodes()} knopen, {graph.number_of_edges()} edges")
+    print(f"Graph geladen: {graph.number_of_nodes()} nodes, {graph.number_of_edges()} edges")
     print(f"Learner: {'bestaand' if args.learner.exists() else 'nieuw aangemaakt'}")
 
     # Optional diagnostic intake

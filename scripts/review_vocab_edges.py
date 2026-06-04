@@ -72,7 +72,7 @@ def main() -> None:
     # Check if GRC-G-SYNT-PREP-INTRO exists in Greek grammar
     grc_gram = Path("data/graph/grc_grammatica_leerjaar1.json")
     gram_data = json.loads(grc_gram.read_text("utf-8"))
-    grc_ids = {k["id"] for k in gram_data["knopen"]}
+    grc_ids = {k["id"] for k in gram_data["nodes"]}
 
     has_prep = "GRC-G-SYNT-PREP-INTRO" in grc_ids
     if not has_prep:
@@ -90,7 +90,7 @@ def main() -> None:
 
     g = load_graph(Path("data/graph/"))
     r = validate_graph(g)
-    print(f"\nValidatie: {r.node_count} knopen, {r.edge_count} edges")
+    print(f"\nValidatie: {r.node_count} nodes, {r.edge_count} edges")
     print(f"Valid: {r.is_valid}, Cycles: {len(r.cycles)}, Orphans: {len(r.orphan_nodes)}")
 
     # Show remaining orphans (should only be adv/conj/particles)

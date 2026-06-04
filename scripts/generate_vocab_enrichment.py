@@ -62,7 +62,7 @@ def _taal_labels(node_id: str) -> tuple[str, str]:
 def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: int) -> dict:
     """Text-based herkenning: read lemma, pick the Dutch translation."""
     node_id = node["id"]
-    lemma, translation = parse_titel(node["titel_nl"])
+    lemma, translation = parse_titel(node["title_nl"])
     first_word = extract_first_word(lemma)
     correct = extract_short_translation(translation)
     distractors = pick_distractors(correct, translation_pool)
@@ -74,27 +74,27 @@ def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: i
 
     return {
         "id": f"ITEM-{node_id}-{item_nr:03d}",
-        "knoop_ids": [node_id],
+        "node_ids": [node_id],
         "type": "herkenning",
-        "richting": "receptief",
-        "moeilijkheid_initieel": round(random.uniform(*HERKENNING_B_RANGE), 2),
-        "discriminatie_initieel": 1.0,
-        "verwachte_tijd_sec": HERKENNING_TIME_SEC,
+        "direction": "receptief",
+        "difficulty_initial": round(random.uniform(*HERKENNING_B_RANGE), 2),
+        "discrimination_initial": 1.0,
+        "expected_time_sec": HERKENNING_TIME_SEC,
         "stimulus": {
             "instruction": f"Lees het {taal_adj} woord en kies de juiste vertaling.",
             "lemma": first_word,
             "options": options,
         },
-        "antwoord": correct,
+        "answer": correct,
         "feedback": f"{first_word} = {correct}.",
-        "bron": "llm_gegenereerd",
+        "source": "llm_gegenereerd",
     }
 
 
 def generate_productie_item(node: dict, item_nr: int) -> dict:
     """Text-based productie: given NL translation, type the lemma."""
     node_id = node["id"]
-    lemma, translation = parse_titel(node["titel_nl"])
+    lemma, translation = parse_titel(node["title_nl"])
     first_word = extract_first_word(lemma)
     correct = extract_short_translation(translation)
 
@@ -102,19 +102,19 @@ def generate_productie_item(node: dict, item_nr: int) -> dict:
 
     return {
         "id": f"ITEM-{node_id}-{item_nr:03d}",
-        "knoop_ids": [node_id],
+        "node_ids": [node_id],
         "type": "productie",
-        "richting": "productief",
-        "moeilijkheid_initieel": round(random.uniform(*PRODUCTIE_B_RANGE), 2),
-        "discriminatie_initieel": 1.0,
-        "verwachte_tijd_sec": PRODUCTIE_TIME_SEC,
+        "direction": "productief",
+        "difficulty_initial": round(random.uniform(*PRODUCTIE_B_RANGE), 2),
+        "discrimination_initial": 1.0,
+        "expected_time_sec": PRODUCTIE_TIME_SEC,
         "stimulus": {
             "instruction": f"Typ het {taal_adj} woord voor deze vertaling.",
             "translation": correct,
         },
-        "antwoord": first_word,
+        "answer": first_word,
         "feedback": f"Het {taal_adj} woord is '{first_word}' ({correct}).",
-        "bron": "llm_gegenereerd",
+        "source": "llm_gegenereerd",
     }
 
 
@@ -124,7 +124,7 @@ def enrich_file(json_path: Path) -> tuple[int, int, int]:
     Returns ``(nodes_updated, herkenning_added, productie_added)``.
     """
     data = load_vocab_json(json_path)
-    v_nodes = [k for k in data["knopen"] if k["type"] == "V"]
+    v_nodes = [k for k in data["nodes"] if k["type"] == "V"]
 
     if not v_nodes:
         return 0, 0, 0
@@ -198,7 +198,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Processing {vf.name} ...")
         nodes_updated, herk_added, prod_added = enrich_file(vf)
         print(
-            f"  {nodes_updated} knopen bijgewerkt, "
+            f"  {nodes_updated} nodes bijgewerkt, "
             f"{herk_added} herkenning + {prod_added} productie toegevoegd"
         )
         total_nodes += nodes_updated

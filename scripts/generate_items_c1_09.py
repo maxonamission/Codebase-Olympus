@@ -17,7 +17,7 @@ def add_items_to_json(json_path, items_by_node):
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
     added = 0
-    for node in data["knopen"]:
+    for node in data["nodes"]:
         if node["id"] in items_by_node:
             existing = {i["id"] for i in node.get("items", [])}
             new = [i for i in items_by_node[node["id"]] if i["id"] not in existing]
@@ -39,7 +39,7 @@ def main():
     a2 = add_items_to_json(BASE / "lat_grammatica_leerjaar1.json", raw)
     total = sum(len(v) for v in raw.values())
     tc = Counter(i["type"] for il in raw.values() for i in il)
-    print(f"Added {a2} to leerjaar1. Total: {total} items, {len(raw)} knopen.")
+    print(f"Added {a2} to leerjaar1. Total: {total} items, {len(raw)} nodes.")
     for t, c in tc.most_common():
         print(f"  {t}: {c}")
 

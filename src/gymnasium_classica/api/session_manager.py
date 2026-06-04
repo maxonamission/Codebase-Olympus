@@ -61,8 +61,8 @@ class Question:
     """A question to present to the learner."""
 
     node_id: str
-    titel: str
-    beschrijving: str
+    title: str
+    description: str
     stimulus: str | dict[str, Any]
     phase: str
     items: list[dict[str, Any]] = field(default_factory=list)
@@ -148,20 +148,20 @@ class _SessionState:
 def _generate_self_assess_prompt(node: Node) -> str:
     """Generate a self-assessment prompt based on the node type."""
     t = node.type.value
-    titel = node.titel_nl
+    title = node.title_nl
     if t == "G":
-        return f"Kun je het volgende uitleggen of opschrijven: {titel}?"
+        return f"Kun je het volgende uitleggen of opschrijven: {title}?"
     elif t == "V":
         # V-node titles have format "lemma — translation". Show only the lemma
         # as the prompt so the learner has to recall the translation.
-        if " — " in titel:
-            lemma = titel.split(" — ")[0].strip()
+        if " — " in title:
+            lemma = title.split(" — ")[0].strip()
             return f"Wat betekent: {lemma}?"
-        return f"Ken je de betekenis van dit woord: {titel}?"
+        return f"Ken je de betekenis van dit word: {title}?"
     elif t == "C":
-        return f"Kun je het volgende uitleggen: {titel}?"
+        return f"Kun je het volgende uitleggen: {title}?"
     else:
-        return f"Beheers je het volgende concept: {titel}?"
+        return f"Beheers je het volgende concept: {title}?"
 
 
 def _build_item_response(
@@ -184,7 +184,7 @@ def _build_item_response(
         correct_answer=canonical_expected_answer(item) if item is not None else None,
         item_type=item.type.value if item is not None else None,
         node_id=node.id,
-        richting=item.richting.value if item is not None else None,
+        direction=item.direction.value if item is not None else None,
         mastery_before=mastery_before,
     )
 
@@ -204,9 +204,9 @@ def _grade_and_record(
     took longer than :data:`SLOW_FACTOR` × the item's expected duration)
     and the ItemResponse that should be appended to item_history.
     """
-    grading = grade_answer(answer_text, item, node.taal)
+    grading = grade_answer(answer_text, item, node.language)
     if grading.correct:
-        threshold_ms = int(SLOW_FACTOR * item.verwachte_tijd_sec * 1000)
+        threshold_ms = int(SLOW_FACTOR * item.expected_time_sec * 1000)
         response = (
             ResponseType.SLOW_CORRECT if response_time_ms > threshold_ms else ResponseType.CORRECT
         )
@@ -271,16 +271,16 @@ def _passage_to_question(passage: Passage, phase: SessionPhase) -> Question:
     """
     return Question(
         node_id=passage.id,
-        titel=passage.titel,
-        beschrijving="Lees de passage en probeer de tekst te begrijpen.",
+        title=passage.title,
+        description="Lees de passage en probeer de tekst te begrijpen.",
         stimulus={
             "type": "passage",
             "passage_id": passage.id,
-            "taal": passage.taal.value,
-            "tekst": passage.tekst,
-            "annotaties": [a.model_dump() for a in passage.annotaties],
-            "knoop_ids": passage.knoop_ids,
-            "moeilijkheid": passage.moeilijkheid,
+            "language": passage.language.value,
+            "text": passage.text,
+            "annotations": [a.model_dump() for a in passage.annotations],
+            "node_ids": passage.node_ids,
+            "difficulty": passage.difficulty,
         },
         phase=phase.value,
     )
@@ -329,16 +329,16 @@ def _node_to_question(
                 "type": item.type.value,
                 "stimulus": item.stimulus,
                 "feedback": item.feedback,
-                "verwachte_tijd_sec": item.verwachte_tijd_sec,
+                "expected_time_sec": item.expected_time_sec,
             }
         )
 
     stimulus = node.items[0].stimulus if node.items else _generate_self_assess_prompt(node)
 
     # For V-nodes: show only the lemma in the title, hide the translation
-    titel = node.titel_nl
-    if node.type.value == "V" and " — " in titel and not node.items:
-        titel = titel.split(" — ")[0].strip()
+    title = node.title_nl
+    if node.type.value == "V" and " — " in title and not node.items:
+        title = title.split(" — ")[0].strip()
 
     content = None
     if include_scaffolding:
@@ -348,8 +348,8 @@ def _node_to_question(
 
     return Question(
         node_id=node.id,
-        titel=titel,
-        beschrijving=node.beschrijving,
+        title=title,
+        description=node.description,
         stimulus=stimulus,
         phase=phase.value,
         items=items,
@@ -727,7 +727,7 @@ class SessionManager:
             # Context-first: deepen on passage-related nodes, not random urgency
             if state.learning_route == LearningRoute.CONTEXT_FIRST and state.current_passage:
                 candidates = []
-                for node_id in state.current_passage.knoop_ids:
+                for node_id in state.current_passage.node_ids:
                     if node_id not in state.graph.nodes:
                         continue
                     if node_id in state.session_node_ids:

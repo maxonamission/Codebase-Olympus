@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """E3-19: stamtijd-items voor V-werkwoorden.
 
-Achtergrond: alle 450 V-knopen hebben al 4 items (luister_herkenning,
+Achtergrond: alle 450 V-nodes hebben al 4 items (luister_herkenning,
 luister_productie, herkenning, productie). De resterende E3-19 scope is
 het toevoegen van één stamtijd-productie-item per werkwoord met >= 2
 stamtijden (gen-veld in vocab_sources).
@@ -44,18 +44,20 @@ SOURCES = [
 ]
 
 
-def _stamtijd_label(taal: str) -> str:
+def _stamtijd_label(language: str) -> str:
     return (
-        "perfectum (1e persoon enkelvoud)" if taal == "lat" else "aoristus (1e persoon enkelvoud)"
+        "perfectum (1e persoon enkelvoud)"
+        if language == "lat"
+        else "aoristus (1e persoon enkelvoud)"
     )
 
 
-def _short_label(taal: str) -> str:
-    return "perfectum" if taal == "lat" else "aoristus"
+def _short_label(language: str) -> str:
+    return "perfectum" if language == "lat" else "aoristus"
 
 
 def make_stamtijd_item(
-    node_id: str, lemma: str, mean: str, gen: str, taal: str
+    node_id: str, lemma: str, mean: str, gen: str, language: str
 ) -> dict[str, Any] | None:
     """Build one stamtijd productie-item, or return None if not applicable."""
     parts = [p.strip() for p in (gen or "").split(",") if p.strip()]
@@ -64,24 +66,26 @@ def make_stamtijd_item(
     second = parts[1]
     return {
         "id": f"ITEM-{node_id}-005",
-        "knoop_ids": [node_id],
+        "node_ids": [node_id],
         "type": "productie",
-        "richting": "productief",
+        "direction": "productief",
         # Stamtijden zijn moeilijker dan basis NL↔lemma
-        "moeilijkheid_initieel": 1.0,
-        "discriminatie_initieel": 1.2,
-        "verwachte_tijd_sec": 25,
+        "difficulty_initial": 1.0,
+        "discrimination_initial": 1.2,
+        "expected_time_sec": 25,
         "stimulus": {
             "instruction": (
-                f"Geef de {_stamtijd_label(taal)} van dit "
-                f"{'Latijnse' if taal == 'lat' else 'Griekse'} werkwoord."
+                f"Geef de {_stamtijd_label(language)} van dit "
+                f"{'Latijnse' if language == 'lat' else 'Griekse'} werkwoord."
             ),
             "lemma": lemma,
             "translation": mean,
         },
-        "antwoord": second,
-        "feedback": (f"Stamtijden van {lemma}: {gen}. De {_short_label(taal)} (1sg) is {second}."),
-        "bron": "handmatig",
+        "answer": second,
+        "feedback": (
+            f"Stamtijden van {lemma}: {gen}. De {_short_label(language)} (1sg) is {second}."
+        ),
+        "source": "handmatig",
     }
 
 
@@ -90,7 +94,7 @@ def collect_items() -> dict[str, list[dict]]:
     by_file: dict[str, list[tuple[str, dict]]] = {}
     skipped: list[tuple[str, str]] = []
     for src_name, graph_name, prefix in SOURCES:
-        taal = "lat" if prefix.startswith("LAT") else "grc"
+        language = "lat" if prefix.startswith("LAT") else "grc"
         with open(VOCAB_SOURCES / src_name, encoding="utf-8") as f:
             entries = json.load(f)
         for entry in entries:
@@ -98,7 +102,7 @@ def collect_items() -> dict[str, list[dict]]:
                 continue
             node_id = f"{prefix}-{entry['id']}"
             item = make_stamtijd_item(
-                node_id, entry["lemma"], entry["mean"], entry.get("gen") or "", taal
+                node_id, entry["lemma"], entry["mean"], entry.get("gen") or "", language
             )
             if item is None:
                 skipped.append((node_id, entry.get("gen") or ""))
@@ -131,7 +135,7 @@ def add_items(by_file: dict[str, list[tuple[str, dict]]]) -> int:
         with open(path, encoding="utf-8") as f:
             data = json.load(f)
         # index nodes by id
-        node_index = {k["id"]: k for k in data["knopen"]}
+        node_index = {k["id"]: k for k in data["nodes"]}
         for node_id, item in items:
             node = node_index.get(node_id)
             if node is None:

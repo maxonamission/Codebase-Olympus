@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Report content coverage per node and aggregate per (taal, type).
+"""Report content coverage per node and aggregate per (language, type).
 
 For every node in the knowledge graph this script checks four coverage
 dimensions:
@@ -9,7 +9,7 @@ dimensions:
   node's ``content_ref`` points to an existing file.
 * ``has_audio`` — only for V-nodes: ``data/audio/{id}.wav`` exists and is
   larger than 1 KB.
-* ``in_passage`` — the node ID occurs in the ``knoop_ids`` list of any
+* ``in_passage`` — the node ID occurs in the ``node_ids`` list of any
   passage in ``data/passages/*.json``.
 
 Usage::
@@ -48,7 +48,7 @@ class KnoopCoverage:
     """Coverage flags for a single node."""
 
     id: str
-    taal: str
+    language: str
     type: str
     has_items: bool
     has_content: bool
@@ -58,9 +58,9 @@ class KnoopCoverage:
 
 @dataclass
 class CoverageSummary:
-    """Aggregate coverage counts + percentages for a (taal, type) bucket."""
+    """Aggregate coverage counts + percentages for a (language, type) bucket."""
 
-    taal: str
+    language: str
     type: str
     total: int
     items: int
@@ -77,7 +77,7 @@ class CoverageSummary:
 class CoverageReport:
     """Full coverage report: per-node records + per-bucket summaries."""
 
-    knopen: list[KnoopCoverage] = field(default_factory=list)
+    nodes: list[KnoopCoverage] = field(default_factory=list)
     summaries: list[CoverageSummary] = field(default_factory=list)
 
 
@@ -90,7 +90,7 @@ def _collect_passage_node_ids(passages_dir: Path) -> set[str]:
         with open(path, encoding="utf-8") as f:
             data = json.load(f)
         for passage in data.get("passages", []):
-            for kid in passage.get("knoop_ids", []):
+            for kid in passage.get("node_ids", []):
                 ids.add(kid)
     return ids
 
@@ -133,7 +133,7 @@ def compute_coverage(
     passage_ids = _collect_passage_node_ids(passages_dir)
 
     report = CoverageReport()
-    # (taal, type) -> counters
+    # (language, type) -> counters
     buckets: dict[tuple[str, str], dict[str, int]] = {}
 
     for node_id in graph.nodes:
@@ -143,10 +143,10 @@ def compute_coverage(
         has_audio = _audio_ok(node, audio_dir)
         in_passage = node.id in passage_ids
 
-        report.knopen.append(
+        report.nodes.append(
             KnoopCoverage(
                 id=node.id,
-                taal=node.taal.value,
+                language=node.language.value,
                 type=node.type.value,
                 has_items=has_items,
                 has_content=has_content,
@@ -155,7 +155,7 @@ def compute_coverage(
             )
         )
 
-        key = (node.taal.value, node.type.value)
+        key = (node.language.value, node.type.value)
         bucket = buckets.setdefault(
             key,
             {"total": 0, "items": 0, "content": 0, "audio": 0, "passage": 0},
@@ -170,11 +170,11 @@ def compute_coverage(
         if in_passage:
             bucket["passage"] += 1
 
-    for (taal, ktype), counts in sorted(buckets.items()):
+    for (language, ktype), counts in sorted(buckets.items()):
         total = counts["total"]
         report.summaries.append(
             CoverageSummary(
-                taal=taal,
+                language=language,
                 type=ktype,
                 total=total,
                 items=counts["items"],
@@ -188,18 +188,18 @@ def compute_coverage(
             )
         )
 
-    report.knopen.sort(key=lambda k: k.id)
+    report.nodes.sort(key=lambda k: k.id)
     return report
 
 
 def find_summary(
-    report: CoverageReport, taal: Language | str, ktype: NodeType | str
+    report: CoverageReport, language: Language | str, ktype: NodeType | str
 ) -> CoverageSummary | None:
-    """Look up the summary for a (taal, type) bucket; None if absent."""
-    taal_v = taal.value if isinstance(taal, Language) else taal
+    """Look up the summary for a (language, type) bucket; None if absent."""
+    taal_v = language.value if isinstance(language, Language) else language
     type_v = ktype.value if isinstance(ktype, NodeType) else ktype
     for s in report.summaries:
-        if s.taal == taal_v and s.type == type_v:
+        if s.language == taal_v and s.type == type_v:
             return s
     return None
 
@@ -207,14 +207,14 @@ def find_summary(
 def report_to_dict(report: CoverageReport) -> dict:
     """JSON-serialisable view of the report."""
     return {
-        "knopen": [asdict(k) for k in report.knopen],
+        "nodes": [asdict(k) for k in report.nodes],
         "summaries": [asdict(s) for s in report.summaries],
     }
 
 
 def _format_summary_table(report: CoverageReport) -> str:
     header = (
-        f"{'taal':<6} {'type':<4} {'total':>5}  "
+        f"{'language':<6} {'type':<4} {'total':>5}  "
         f"{'items':>16} {'content':>16} {'audio':>16} {'passage':>16}"
     )
     lines = [header, "-" * len(header)]
@@ -224,7 +224,7 @@ def _format_summary_table(report: CoverageReport) -> str:
         audio_cell = f"{s.audio}/{s.total} ({s.audio_pct:.1f}%)" if s.type == "V" else "n.v.t."
         passage_cell = f"{s.passage}/{s.total} ({s.passage_pct:.1f}%)"
         lines.append(
-            f"{s.taal:<6} {s.type:<4} {s.total:>5}  "
+            f"{s.language:<6} {s.type:<4} {s.total:>5}  "
             f"{items_cell:>16} {content_cell:>16} {audio_cell:>16} {passage_cell:>16}"
         )
     return "\n".join(lines)
@@ -232,7 +232,7 @@ def _format_summary_table(report: CoverageReport) -> str:
 
 def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Rapporteer content-dekking per node en per (taal, type).",
+        description="Rapporteer content-dekking per node en per (language, type).",
     )
     parser.add_argument(
         "--graph-dir",
@@ -277,7 +277,7 @@ def main(argv: list[str] | None = None) -> int:
         passages_dir=args.passages_dir,
     )
 
-    print(f"=== Content-dekking ({graph.number_of_nodes()} knopen) ===")
+    print(f"=== Content-dekking ({graph.number_of_nodes()} nodes) ===")
     print(_format_summary_table(report))
 
     if args.output:

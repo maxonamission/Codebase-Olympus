@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""F1-08d — herkenningsitems voor taal en schrift in de klassieke wereld.
+"""F1-08d — herkenningsitems voor language en schrift in de klassieke wereld.
 
-Vijf SHA-C-LIT-* knopen: INTRO, GRALF, LTALF, INSCR, SCHRF.
+Vijf SHA-C-LIT-* nodes: INTRO, GRALF, LTALF, INSCR, SCHRF.
 """
 
 import json
@@ -29,7 +29,7 @@ BATCH: list[tuple[str, str, list[str], int, str]] = [
     ),
     (
         "LIT-GRALF",
-        "Welk schrift vormt de directe bron van het Griekse alfabet?",
+        "Welk schrift vormt de directe source van het Griekse alfabet?",
         ["Lineair B", "Het Fenicische schrift", "Het Etruskische schrift", "Het Aramese schrift"],
         1,
         "De Grieken ontleenden rond 800 v.Chr. hun alfabet aan het Fenicische schrift en voegden klinkertekens toe.",
@@ -69,16 +69,16 @@ def make_item(
     node_id = f"SHA-C-{suffix}"
     return {
         "id": f"ITEM-{node_id}-001",
-        "knoop_ids": [node_id],
+        "node_ids": [node_id],
         "type": "herkenning",
-        "richting": "receptief",
-        "moeilijkheid_initieel": -0.5,
-        "discriminatie_initieel": 1.0,
-        "verwachte_tijd_sec": 20,
+        "direction": "receptief",
+        "difficulty_initial": -0.5,
+        "discrimination_initial": 1.0,
+        "expected_time_sec": 20,
         "stimulus": {"instruction": vraag, "options": options},
-        "antwoord": options[correct_idx],
+        "answer": options[correct_idx],
         "feedback": feedback,
-        "bron": "handmatig",
+        "source": "handmatig",
     }
 
 
@@ -96,7 +96,7 @@ def inject(json_path: Path, items_by_node: dict[str, list[dict]]) -> int:
         data = json.load(f)
     added = 0
     missing = set(items_by_node.keys())
-    for node in data["knopen"]:
+    for node in data["nodes"]:
         kid = node["id"]
         if kid in items_by_node:
             existing = {it["id"] for it in node.get("items", [])}
@@ -115,7 +115,7 @@ def inject(json_path: Path, items_by_node: dict[str, list[dict]]) -> int:
 def main() -> None:
     items = build_items()
     added = inject(OUTPUT, items)
-    print(f"F1-08d taal/schrift: {len(items)} knopen, {added} nieuwe items toegevoegd.")
+    print(f"F1-08d language/schrift: {len(items)} nodes, {added} nieuwe items toegevoegd.")
     print(f"Output: {OUTPUT}")
 
 

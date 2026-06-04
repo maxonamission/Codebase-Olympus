@@ -42,7 +42,7 @@ def main() -> None:
             continue
         t = node.type
         type_counts[t] = type_counts.get(t, 0) + 1
-        bloom_counts[node.bloom_niveau] = bloom_counts.get(node.bloom_niveau, 0) + 1
+        bloom_counts[node.bloom_level] = bloom_counts.get(node.bloom_level, 0) + 1
         n_items = len(node.items)
         items_per_type[t] = items_per_type.get(t, 0) + n_items
         if n_items > 0:

@@ -2,7 +2,7 @@
 """Generate exercise items for E3-11: GRC voorzetsels + basissyntaxis.
 
 Target: data/graph/grc_grammatica_leerjaar1.json
-Scope:  8 knopen (GRC-G-SYNT-PREP-*, -WRDVLG, -ONTK, -ZINSBOUW).
+Scope:  8 nodes (GRC-G-SYNT-PREP-*, -WRDVLG, -ONTK, -ZINSBOUW).
 
 Drie componenten:
 1. Voorzetsel-items: juiste naamval-keuze bij ἀπό/ἐκ (+gen), ἐν (+dat),
@@ -48,35 +48,35 @@ def prep_intro_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-SYNT-PREP-INTRO-001",
-            "knoop_ids": ["GRC-G-SYNT-PREP-INTRO"],
+            "node_ids": ["GRC-G-SYNT-PREP-INTRO"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.5,
-            "discriminatie_initieel": 1.0,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.5,
+            "discrimination_initial": 1.0,
+            "expected_time_sec": 15,
             "stimulus": "Wat heeft elk Grieks voorzetsel nodig van het zelfstandig naamwoord dat erop volgt?",
-            "antwoord": [
+            "answer": [
                 "een specifieke naamval (gen., dat. of acc.)",
                 "een vaste naamval",
             ],
             "feedback": "Elk voorzetsel stuurt één of meer vaste naamvallen. Sommige (ἐν, εἰς) alleen één; andere (ἐπί, παρά, μετά) drie — met betekenisverschil per naamval.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-PREP-INTRO-002",
-            "knoop_ids": ["GRC-G-SYNT-PREP-INTRO"],
+            "node_ids": ["GRC-G-SYNT-PREP-INTRO"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.3,
-            "discriminatie_initieel": 1.1,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.3,
+            "discrimination_initial": 1.1,
+            "expected_time_sec": 15,
             "stimulus": "Welke ruwe vuistregel verbindt naamval en betekenis bij plaatsvoorzetsels?",
-            "antwoord": [
+            "answer": [
                 "gen. = vanwaar (beweging vanaf); dat. = waar (rust/plaats); acc. = waarheen (beweging naartoe)",
                 "gen. vandaan, dat. waar, acc. waarheen",
             ],
-            "feedback": "Vuistregel: genitivus = herkomst (ἐκ τῆς οἰκίας), dativus = plaats/rust (ἐν τῇ οἰκίᾳ), accusativus = richting/doel (εἰς τὴν οἰκίαν).",
-            "bron": "handmatig",
+            "feedback": "Vuistregel: genitivus = herkomst (ἐκ τῆς οἰκίας), dativus = plaats/rust (ἐν τῇ οἰκίᾳ), accusativus = direction/doel (εἰς τὴν οἰκίαν).",
+            "source": "handmatig",
         },
     ]
 
@@ -90,51 +90,51 @@ def prep_gen_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-SYNT-PREP-GEN-001",
-            "knoop_ids": ["GRC-G-SYNT-PREP-GEN"],
+            "node_ids": ["GRC-G-SYNT-PREP-GEN"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.2,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "productief",
+            "difficulty_initial": 0.2,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Welke naamval eist ἀπό? Geef als voorbeeld 'van de stad af' (ἡ πόλις, πόλεως).",
-            "antwoord": [
+            "answer": [
                 "genitivus — ἀπὸ τῆς πόλεως",
                 "gen.; ἀπὸ τῆς πόλεως",
             ],
             "feedback": "ἀπό staat altijd met genitivus en betekent 'vanaf, (weg) van'. Beweging uit de buurt van iets: ἀπὸ τῆς πόλεως = 'van de stad weg'.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-PREP-GEN-002",
-            "knoop_ids": ["GRC-G-SYNT-PREP-GEN"],
+            "node_ids": ["GRC-G-SYNT-PREP-GEN"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Vertaal: οἱ παῖδες ἐκ τῆς οἰκίας ἔρχονται. Welke naamval heeft τῆς οἰκίας en waarom?",
-            "antwoord": [
+            "answer": [
                 "genitivus; ἐκ eist de gen. ('uit het huis komen de kinderen')",
                 "gen. bij ἐκ — 'uit het huis'",
             ],
             "feedback": "ἐκ (vóór klinker: ἐξ) + gen. = 'uit'. Herkomst uit het binnenste van iets. Contrast met ἀπό (gen.) = 'vanaf, weg van'.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-PREP-GEN-003",
-            "knoop_ids": ["GRC-G-SYNT-PREP-GEN"],
+            "node_ids": ["GRC-G-SYNT-PREP-GEN"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.4,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.4,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Vul de juiste vorm in: ἀπὸ ___ (ὁ ποταμός) ἔρχεται ὁ στρατηγός.",
-            "antwoord": [
+            "answer": [
                 "τοῦ ποταμοῦ",
                 "ἀπὸ τοῦ ποταμοῦ",
             ],
             "feedback": "ἀπό + gen. → ὁ ποταμός wordt τοῦ ποταμοῦ (gen. sg. m.). 'De generaal komt vanaf de rivier.'",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -148,35 +148,35 @@ def prep_dat_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-SYNT-PREP-DAT-001",
-            "knoop_ids": ["GRC-G-SYNT-PREP-DAT"],
+            "node_ids": ["GRC-G-SYNT-PREP-DAT"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.2,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "productief",
+            "difficulty_initial": 0.2,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Welke naamval eist ἐν? Geef 'in het huis' (ἡ οἰκία).",
-            "antwoord": [
+            "answer": [
                 "dativus — ἐν τῇ οἰκίᾳ",
                 "dat.; ἐν τῇ οἰκίᾳ",
             ],
             "feedback": "ἐν + dat. = 'in, op' (rust/plaats). Geen beweging: waar iets zich bevindt. ἐν τῇ οἰκίᾳ = 'in het huis'.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-PREP-DAT-002",
-            "knoop_ids": ["GRC-G-SYNT-PREP-DAT"],
+            "node_ids": ["GRC-G-SYNT-PREP-DAT"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.4,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.4,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Waarom is *ἐν τὴν οἰκίαν fout, en wat zou je moeten schrijven voor 'naar het huis toe'?",
-            "antwoord": [
+            "answer": [
                 "ἐν eist dativus, niet accusativus; 'naar het huis toe' = εἰς τὴν οἰκίαν",
                 "ἐν + dat. voor rust; εἰς + acc. voor beweging naartoe",
             ],
             "feedback": "ἐν + dat. = plaats/rust ('in'). Voor beweging naar een doel gebruik je εἰς + acc. Twee verschillende voorzetsels, twee verschillende naamvallen.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -190,51 +190,51 @@ def prep_acc_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-SYNT-PREP-ACC-001",
-            "knoop_ids": ["GRC-G-SYNT-PREP-ACC"],
+            "node_ids": ["GRC-G-SYNT-PREP-ACC"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.2,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "productief",
+            "difficulty_initial": 0.2,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Welke naamval eist εἰς? Geef 'naar de agora' (ἡ ἀγορά).",
-            "antwoord": [
+            "answer": [
                 "accusativus — εἰς τὴν ἀγοράν",
                 "acc.; εἰς τὴν ἀγοράν",
             ],
-            "feedback": "εἰς + acc. = 'naar...toe' (beweging, richting, doel). Altijd accusativus, nooit dativus of genitivus.",
-            "bron": "handmatig",
+            "feedback": "εἰς + acc. = 'naar...toe' (beweging, direction, doel). Altijd accusativus, nooit dativus of genitivus.",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-PREP-ACC-002",
-            "knoop_ids": ["GRC-G-SYNT-PREP-ACC"],
+            "node_ids": ["GRC-G-SYNT-PREP-ACC"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.4,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.4,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Vertaal: ὁ ἀνὴρ πρὸς τὸν φίλον λέγει. Welke naamval heeft τὸν φίλον en waarom?",
-            "antwoord": [
+            "answer": [
                 "accusativus; πρός + acc. = 'tegen, tot, naar' (gericht aan iemand)",
                 "acc. bij πρός — 'tegen de vriend'",
             ],
-            "feedback": "πρός + acc. = richting, spreker die iets zegt 'tegen' iemand. 'De man spreekt tegen de vriend.'",
-            "bron": "handmatig",
+            "feedback": "πρός + acc. = direction, spreker die iets zegt 'tegen' iemand. 'De man spreekt tegen de vriend.'",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-PREP-ACC-003",
-            "knoop_ids": ["GRC-G-SYNT-PREP-ACC"],
+            "node_ids": ["GRC-G-SYNT-PREP-ACC"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 30,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 30,
             "stimulus": "Vul aan met de juiste vorm: οἱ μαθηταὶ ἔρχονται εἰς ___ (τὸ διδασκαλεῖον).",
-            "antwoord": [
+            "answer": [
                 "τὸ διδασκαλεῖον",
                 "εἰς τὸ διδασκαλεῖον",
             ],
             "feedback": "εἰς + acc. Onzijdig enkelvoud τὸ διδασκαλεῖον is in nom. én acc. identiek (neutrum-regel). 'De leerlingen gaan naar de school.'",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -255,51 +255,51 @@ def _prep_mrv_epi() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-SYNT-PREP-MRV-001",
-            "knoop_ids": ["GRC-G-SYNT-PREP-MRV"],
+            "node_ids": ["GRC-G-SYNT-PREP-MRV"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.4,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 20,
+            "direction": "receptief",
+            "difficulty_initial": 0.4,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 20,
             "stimulus": "ἐπί kent drie naamvallen. Welke betekenis hoort bij ἐπί + gen.?",
-            "antwoord": [
+            "answer": [
                 "op (rust/plaats, historisch context: ten tijde van)",
                 "op (plaats); ten tijde van",
             ],
             "feedback": "ἐπί + gen. = 'op' (plaats) of historisch 'ten tijde van' (ἐπὶ Περικλέους = onder/ten tijde van Perikles).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-PREP-MRV-002",
-            "knoop_ids": ["GRC-G-SYNT-PREP-MRV"],
+            "node_ids": ["GRC-G-SYNT-PREP-MRV"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 25,
             "stimulus": "Vertaal het verschil: (a) ἐπὶ τῇ τραπέζῃ — (b) ἐπὶ τὴν τράπεζαν.",
-            "antwoord": [
+            "answer": [
                 "(a) op de tafel (rust, dat.); (b) op de tafel toe (beweging, acc.)",
                 "dat. = op (rust), acc. = op (beweging naartoe)",
             ],
-            "feedback": "ἐπί + dat. = 'op' (rust: iets ligt erop). ἐπί + acc. = 'op...toe' (iets wordt erop gelegd of beweegt erheen). Naamval verschuift de betekenis van rust naar richting.",
-            "bron": "handmatig",
+            "feedback": "ἐπί + dat. = 'op' (rust: iets ligt erop). ἐπί + acc. = 'op...toe' (iets wordt erop gelegd of beweegt erheen). Naamval verschuift de betekenis van rust naar direction.",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-PREP-MRV-003",
-            "knoop_ids": ["GRC-G-SYNT-PREP-MRV"],
+            "node_ids": ["GRC-G-SYNT-PREP-MRV"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.6,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 30,
+            "direction": "receptief",
+            "difficulty_initial": 0.6,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 30,
             "stimulus": "Vul de juiste naamval in: οἱ στρατιῶται μάχονται ἐπὶ ___ (οἱ πολέμιοι) — 'de soldaten strijden tegen de vijanden'.",
-            "antwoord": [
+            "answer": [
                 "τοὺς πολεμίους",
                 "ἐπὶ τοὺς πολεμίους (acc.)",
             ],
-            "feedback": "ἐπί + acc. in vijandige context = 'tegen, op af' (richting/doel). Soldaten die oprukken 'tegen' de vijand: ἐπὶ τοὺς πολεμίους.",
-            "bron": "handmatig",
+            "feedback": "ἐπί + acc. in vijandige context = 'tegen, op af' (direction/doel). Soldaten die oprukken 'tegen' de vijand: ἐπὶ τοὺς πολεμίους.",
+            "source": "handmatig",
         },
     ]
 
@@ -308,51 +308,51 @@ def _prep_mrv_meta() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-SYNT-PREP-MRV-004",
-            "knoop_ids": ["GRC-G-SYNT-PREP-MRV"],
+            "node_ids": ["GRC-G-SYNT-PREP-MRV"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.4,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 20,
+            "direction": "receptief",
+            "difficulty_initial": 0.4,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 20,
             "stimulus": "μετά + gen. en μετά + acc. hebben heel verschillende betekenissen. Welke?",
-            "antwoord": [
+            "answer": [
                 "μετά + gen. = met (samen met); μετά + acc. = na (tijd of plaats)",
                 "gen. = met; acc. = na",
             ],
             "feedback": "μετά + gen. = 'met, samen met' (gezelschap). μετά + acc. = 'na' (temporeel of ruimtelijk volgend). Zelfde voorzetsel, fundamenteel ander concept.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-PREP-MRV-005",
-            "knoop_ids": ["GRC-G-SYNT-PREP-MRV"],
+            "node_ids": ["GRC-G-SYNT-PREP-MRV"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 30,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 30,
             "stimulus": "Vertaal en verklaar het naamvalsverschil: (a) μετὰ τῶν φίλων — (b) μετὰ τοὺς φίλους.",
-            "antwoord": [
+            "answer": [
                 "(a) met de vrienden (gen. = gezelschap); (b) na de vrienden (acc. = temporeel/volgorde)",
                 "gen. 'met', acc. 'na'",
             ],
             "feedback": "μετὰ τῶν φίλων (gen.) = 'met/samen met de vrienden'. μετὰ τοὺς φίλους (acc.) = 'na de vrienden' (later dan zij, of achter hen aan).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-PREP-MRV-006",
-            "knoop_ids": ["GRC-G-SYNT-PREP-MRV"],
+            "node_ids": ["GRC-G-SYNT-PREP-MRV"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 30,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 30,
             "stimulus": "Welke naamval bij μετά voor 'na de slag' (ἡ μάχη)?",
-            "antwoord": [
+            "answer": [
                 "accusativus — μετὰ τὴν μάχην",
                 "acc.; μετὰ τὴν μάχην",
             ],
             "feedback": "'Na de slag' = temporeel → μετά + acc. → μετὰ τὴν μάχην. Zou de vertaling 'met de slag' zijn geweest, dan μετὰ τῆς μάχης (gen.) — maar dat slaat hier nergens op.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -366,35 +366,35 @@ def wrdvlg_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-SYNT-WRDVLG-001",
-            "knoop_ids": ["GRC-G-SYNT-WRDVLG"],
+            "node_ids": ["GRC-G-SYNT-WRDVLG"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.2,
-            "discriminatie_initieel": 1.0,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.2,
+            "discrimination_initial": 1.0,
+            "expected_time_sec": 15,
             "stimulus": "Waarom kan het Grieks vrijer dan het Nederlands met woordvolgorde omgaan?",
-            "antwoord": [
+            "answer": [
                 "de naamvallen geven de zinsfunctie aan, niet de positie",
                 "naamvalsysteem neemt de taak van de woordvolgorde over",
             ],
             "feedback": "Door naamvalsuitgangen is onderwerp (nom.) vs. lijdend voorwerp (acc.) altijd duidelijk, ook bij afwijkende volgorde. Positie geeft dus nadruk, niet grammaticale functie.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-WRDVLG-002",
-            "knoop_ids": ["GRC-G-SYNT-WRDVLG"],
+            "node_ids": ["GRC-G-SYNT-WRDVLG"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.4,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.4,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Wat doet de schrijver met de positie van 'τὸν παῖδα' in 'τὸν παῖδα ὁ πατὴρ φιλεῖ'?",
-            "antwoord": [
+            "answer": [
                 "hij zet het lijdend voorwerp vooraan voor nadruk ('de jongen is het die de vader liefheeft')",
                 "nadruk op τὸν παῖδα door plaats aan het begin",
             ],
             "feedback": "Neutrale volgorde zou ὁ πατὴρ φιλεῖ τὸν παῖδα zijn. Door τὸν παῖδα vóóraan te plaatsen benadrukt de schrijver juist dit element (topic/focus).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -415,48 +415,48 @@ def _ontk_ou_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-SYNT-ONTK-001",
-            "knoop_ids": ["GRC-G-SYNT-ONTK"],
+            "node_ids": ["GRC-G-SYNT-ONTK"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.2,
-            "discriminatie_initieel": 1.1,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.2,
+            "discrimination_initial": 1.1,
+            "expected_time_sec": 15,
             "stimulus": "Welke ontkenning gebruik je in een feitelijke bewering in de indicativus?",
-            "antwoord": ["οὐ", "οὐ (οὐκ / οὐχ)"],
+            "answer": ["οὐ", "οὐ (οὐκ / οὐχ)"],
             "feedback": "οὐ bij indicativus = factuele ontkenning: ontkent dát iets het geval is. Varianten: οὐ vóór medeklinker, οὐκ vóór zachte klinker, οὐχ vóór ruwe klinker.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ONTK-002",
-            "knoop_ids": ["GRC-G-SYNT-ONTK"],
+            "node_ids": ["GRC-G-SYNT-ONTK"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.2,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "productief",
+            "difficulty_initial": 0.2,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Vul de juiste vorm van 'niet' in: ὁ διδάσκαλος ___ ἀκούει τοὺς παῖδας.",
-            "antwoord": [
+            "answer": [
                 "οὐκ",
                 "οὐκ (vóór klinker)",
             ],
             "feedback": "οὐκ vóór een klinker met zachte ademing (ἀκούει). Indicativus feitelijk ontkennen → οὐ-reeks (οὐ / οὐκ / οὐχ afhankelijk van volgklank).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ONTK-003",
-            "knoop_ids": ["GRC-G-SYNT-ONTK"],
+            "node_ids": ["GRC-G-SYNT-ONTK"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Vertaal en geef de ontkenning aan: οὐχ ὁρᾶτε τὸν στρατηγόν;",
-            "antwoord": [
+            "answer": [
                 "'Zien jullie de generaal niet?' — οὐχ (vóór ruwe klinker ὁρ-)",
                 "οὐχ (vóór ὁ met spiritus asper)",
             ],
             "feedback": "Vragende zin met indicatieve werkwoordsvorm ὁρᾶτε → οὐ-reeks. De ὁ in ὁρᾶτε heeft spiritus asper, dus οὐχ. Indicativus blijft ook in een vraag feitelijk ontkennen met οὐ.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -465,45 +465,45 @@ def _ontk_me_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-SYNT-ONTK-004",
-            "knoop_ids": ["GRC-G-SYNT-ONTK"],
+            "node_ids": ["GRC-G-SYNT-ONTK"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.1,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": 0.1,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 15,
             "stimulus": "Welke ontkenning hoort bij een verbod (imperatief of conjunctief met prohibitieve functie)?",
-            "antwoord": ["μή", "μή (prohibitief)"],
+            "answer": ["μή", "μή (prohibitief)"],
             "feedback": "μή bij imperatief of conj. aor. ontkent een wens/verbod: 'doe dat niet!'. Niet feitelijk, maar modaal/prohibitief — daarom niet οὐ.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ONTK-005",
-            "knoop_ids": ["GRC-G-SYNT-ONTK"],
+            "node_ids": ["GRC-G-SYNT-ONTK"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Kies οὐ of μή: '___ λέγε ταῦτα!' (Zeg dat niet!)",
-            "antwoord": ["μή", "μὴ λέγε"],
+            "answer": ["μή", "μὴ λέγε"],
             "feedback": "Imperatief (λέγε) met verbod → μή. Feitelijk zou 'hij zegt dat niet' oὐ λέγει zijn; hier is het een appèl, dus μή.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ONTK-006",
-            "knoop_ids": ["GRC-G-SYNT-ONTK"],
+            "node_ids": ["GRC-G-SYNT-ONTK"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 30,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 30,
             "stimulus": "In een finale bijzin ('opdat niet...') met conjunctief, welke ontkenning gebruik je? Geef de combinatie met ἵνα.",
-            "antwoord": [
+            "answer": [
                 "μή — ἵνα μή (+ conj.)",
                 "μή; ἵνα μή",
             ],
             "feedback": "Finale bijzinnen met ἵνα + conj. drukken doel uit; ontkennend doel = ἵνα μή ('opdat niet'). Conjunctief is modaal → altijd μή, nooit οὐ.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -517,64 +517,64 @@ def zinsbouw_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-SYNT-ZINSBOUW-001",
-            "knoop_ids": ["GRC-G-SYNT-ZINSBOUW"],
+            "node_ids": ["GRC-G-SYNT-ZINSBOUW"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.3,
-            "discriminatie_initieel": 1.0,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.3,
+            "discrimination_initial": 1.0,
+            "expected_time_sec": 15,
             "stimulus": "Welke naamval dragen onderwerp, lijdend voorwerp en meewerkend voorwerp in het Grieks?",
-            "antwoord": [
+            "answer": [
                 "onderwerp nom., lijdend voorwerp acc., meewerkend voorwerp dat.",
                 "nom. / acc. / dat.",
             ],
             "feedback": "Onderwerp = nominativus, lijdend voorwerp = accusativus, meewerkend voorwerp = dativus. De persoonsvorm congrueert met het onderwerp.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ZINSBOUW-002",
-            "knoop_ids": ["GRC-G-SYNT-ZINSBOUW"],
+            "node_ids": ["GRC-G-SYNT-ZINSBOUW"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Ontleed de zin 'ὁ πατὴρ δίδωσιν τῷ παιδὶ τὸ βιβλίον': wie is onderwerp, lv, mv?",
-            "antwoord": [
+            "answer": [
                 "onderwerp: ὁ πατήρ; mv (dat.): τῷ παιδί; lv (acc.): τὸ βιβλίον",
                 "ow ὁ πατήρ, mv τῷ παιδί, lv τὸ βιβλίον",
             ],
             "feedback": "ὁ πατήρ (nom.) = onderwerp van δίδωσιν. τὸ βιβλίον (acc.) = lijdend voorwerp. τῷ παιδί (dat.) = meewerkend voorwerp. 'De vader geeft het kind het boek.'",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ZINSBOUW-003",
-            "knoop_ids": ["GRC-G-SYNT-ZINSBOUW"],
+            "node_ids": ["GRC-G-SYNT-ZINSBOUW"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.2,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "receptief",
+            "difficulty_initial": 0.2,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Welk partikel markeert een neutrale ja/nee-vraag aan het begin van een Griekse zin?",
-            "antwoord": ["ἆρα", "ἆρα (of niets, met stijgende intonatie)"],
+            "answer": ["ἆρα", "ἆρα (of niets, met stijgende intonatie)"],
             "feedback": "ἆρα aan het zinsbegin = neutrale vraagmarkering, zoals Engels 'Is it the case that...?' Antwoord kan positief of negatief zijn — het partikel zelf stuurt niet.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ZINSBOUW-004",
-            "knoop_ids": ["GRC-G-SYNT-ZINSBOUW"],
+            "node_ids": ["GRC-G-SYNT-ZINSBOUW"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 25,
             "stimulus": "Wat is het verschil tussen een vraag met ἆρα en een vraag met μῶν?",
-            "antwoord": [
+            "answer": [
                 "ἆρα is neutraal; μῶν verwacht een ontkennend antwoord ('toch niet?')",
                 "ἆρα neutraal, μῶν = 'toch niet?' (negatief verwachtingspatroon)",
             ],
             "feedback": "ἆρα stelt een open vraag zonder vooroordeel. μῶν (= μὴ οὖν) verwacht 'nee' als antwoord: 'μῶν ὁ ἀνὴρ ἀπέθανεν; = 'Hij is toch niet dood?' (verwacht: nee).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -597,10 +597,10 @@ def collect_all() -> dict[str, list[dict]]:
 
     primary_map: dict[str, list[dict]] = {}
     for item in all_items:
-        for key in ("stimulus", "antwoord", "feedback", "verwacht_resultaat"):
+        for key in ("stimulus", "antwoord", "feedback", "expected_result"):
             if key in item and item[key] is not None:
                 item[key] = nfc(item[key])
-        primary_map.setdefault(item["knoop_ids"][0], []).append(item)
+        primary_map.setdefault(item["node_ids"][0], []).append(item)
     return primary_map
 
 
@@ -617,7 +617,7 @@ def add_items_to_json(json_path: Path, items_by_node: dict[str, list[dict]]) -> 
         data = json.load(f)
 
     added = 0
-    for node in data["knopen"]:
+    for node in data["nodes"]:
         if node["id"] in items_by_node:
             existing_ids = {item["id"] for item in node.get("items", [])}
             new_items = [

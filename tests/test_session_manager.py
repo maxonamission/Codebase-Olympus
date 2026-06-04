@@ -39,35 +39,35 @@ def _make_graph_and_learner():
     Root nodes are selectable as new material without prerequisite gates.
     """
     data = {
-        "knopen": [
+        "nodes": [
             {
                 "id": "LAT-G-MORF-NAAMVAL-INTRO",
                 "type": "G",
-                "taal": "lat",
-                "titel_nl": "Wat is een naamval?",
-                "beschrijving": "Introductie van het concept naamval.",
-                "bloom_niveau": "kennis",
-                "fase": "onderbouw_1",
+                "language": "lat",
+                "title_nl": "Wat is een naamval?",
+                "description": "Introductie van het concept naamval.",
+                "bloom_level": "kennis",
+                "phase": "onderbouw_1",
                 "items": [],
             },
             {
                 "id": "LAT-G-MORF-DECL-INTRO",
                 "type": "G",
-                "taal": "lat",
-                "titel_nl": "Wat is een declinatie?",
-                "beschrijving": "Introductie van het concept declinatie.",
-                "bloom_niveau": "kennis",
-                "fase": "onderbouw_1",
+                "language": "lat",
+                "title_nl": "Wat is een declinatie?",
+                "description": "Introductie van het concept declinatie.",
+                "bloom_level": "kennis",
+                "phase": "onderbouw_1",
                 "items": [],
             },
             {
                 "id": "LAT-G-MORF-DECL1-INTRO",
                 "type": "G",
-                "taal": "lat",
-                "titel_nl": "De eerste declinatie",
-                "beschrijving": "Overzicht van de 1e declinatie.",
-                "bloom_niveau": "kennis",
-                "fase": "onderbouw_1",
+                "language": "lat",
+                "title_nl": "De eerste declinatie",
+                "description": "Overzicht van de 1e declinatie.",
+                "bloom_level": "kennis",
+                "phase": "onderbouw_1",
                 "items": [],
             },
         ],
@@ -111,7 +111,7 @@ class TestStartSession:
             )
 
     def test_empty_graph_returns_none_question(self):
-        data = {"knopen": [], "edges": []}
+        data = {"nodes": [], "edges": []}
         graph = load_graph_from_dict(data)
         learner = LearnerModel(user_id=uuid4())
         mgr = SessionManager()
@@ -213,7 +213,7 @@ class TestGetSummary:
 
 
 # ---------------------------------------------------------------------------
-# Breder testharness voor fase-transitities, context-first, offline en budget.
+# Breder testharness voor phase-transitities, context-first, offline en budget.
 # ---------------------------------------------------------------------------
 
 
@@ -228,55 +228,55 @@ def _broad_graph_and_learner(now: datetime):
       (COOLDOWN kandidaat).
     """
     data = {
-        "knopen": [
+        "nodes": [
             {
                 "id": "LAT-G-MORF-NAAMVAL-INTRO",
                 "type": "G",
-                "taal": "lat",
-                "titel_nl": "Naamval intro",
-                "beschrijving": "Introductie naamval.",
-                "bloom_niveau": "kennis",
-                "fase": "onderbouw_1",
+                "language": "lat",
+                "title_nl": "Naamval intro",
+                "description": "Introductie naamval.",
+                "bloom_level": "kennis",
+                "phase": "onderbouw_1",
                 "items": [],
             },
             {
                 "id": "LAT-G-MORF-DECL-INTRO",
                 "type": "G",
-                "taal": "lat",
-                "titel_nl": "Declinatie intro",
-                "beschrijving": "Introductie declinatie.",
-                "bloom_niveau": "kennis",
-                "fase": "onderbouw_1",
+                "language": "lat",
+                "title_nl": "Declinatie intro",
+                "description": "Introductie declinatie.",
+                "bloom_level": "kennis",
+                "phase": "onderbouw_1",
                 "items": [],
             },
             {
                 "id": "LAT-G-MORF-DECL1-INTRO",
                 "type": "G",
-                "taal": "lat",
-                "titel_nl": "Eerste declinatie",
-                "beschrijving": "Overzicht eerste declinatie.",
-                "bloom_niveau": "kennis",
-                "fase": "onderbouw_1",
+                "language": "lat",
+                "title_nl": "Eerste declinatie",
+                "description": "Overzicht eerste declinatie.",
+                "bloom_level": "kennis",
+                "phase": "onderbouw_1",
                 "items": [],
             },
             {
                 "id": "LAT-G-MORF-NOM-D1",
                 "type": "G",
-                "taal": "lat",
-                "titel_nl": "Nominativus 1e declinatie",
-                "beschrijving": "Nom. sg/pl van de 1e declinatie.",
-                "bloom_niveau": "kennis",
-                "fase": "onderbouw_1",
+                "language": "lat",
+                "title_nl": "Nominativus 1e declinatie",
+                "description": "Nom. sg/pl van de 1e declinatie.",
+                "bloom_level": "kennis",
+                "phase": "onderbouw_1",
                 "items": [],
             },
             {
                 "id": "LAT-V-F01-ESSE",
                 "type": "V",
-                "taal": "lat",
-                "titel_nl": "esse — zijn",
-                "beschrijving": "Werkwoord esse (zijn).",
-                "bloom_niveau": "kennis",
-                "fase": "onderbouw_1",
+                "language": "lat",
+                "title_nl": "esse — zijn",
+                "description": "Werkwoord esse (zijn).",
+                "bloom_level": "kennis",
+                "phase": "onderbouw_1",
                 "items": [],
             },
         ],
@@ -338,29 +338,29 @@ def _broad_graph_and_learner(now: datetime):
 def _graph_with_offline_item():
     """Graph met één node die een OFFLINE_SCHRIJVEN-item bevat."""
     data = {
-        "knopen": [
+        "nodes": [
             {
                 "id": "LAT-G-MORF-DECL1-INTRO",
                 "type": "G",
-                "taal": "lat",
-                "titel_nl": "Eerste declinatie",
-                "beschrijving": "Overzicht eerste declinatie.",
-                "bloom_niveau": "kennis",
-                "fase": "onderbouw_1",
+                "language": "lat",
+                "title_nl": "Eerste declinatie",
+                "description": "Overzicht eerste declinatie.",
+                "bloom_level": "kennis",
+                "phase": "onderbouw_1",
                 "items": [
                     {
                         "id": "ITEM-OFFLINE-D1-001",
-                        "knoop_ids": ["LAT-G-MORF-DECL1-INTRO"],
+                        "node_ids": ["LAT-G-MORF-DECL1-INTRO"],
                         "type": "offline_schrijven",
-                        "richting": "productief",
-                        "moeilijkheid_initieel": 0.5,
-                        "discriminatie_initieel": 1.0,
-                        "verwachte_tijd_sec": 300,
+                        "direction": "productief",
+                        "difficulty_initial": 0.5,
+                        "discrimination_initial": 1.0,
+                        "expected_time_sec": 300,
                         "stimulus": "Schrijf paradigma puella op.",
-                        "antwoord": "puella, puellae, ...",
+                        "answer": "puella, puellae, ...",
                         "feedback": "Vergelijk met paradigma.",
-                        "bron": "handmatig",
-                        "verificatie_methode": "self_report",
+                        "source": "handmatig",
+                        "verification_method": "self_report",
                     }
                 ],
             }
@@ -413,7 +413,7 @@ class TestPhaseTransitions:
             SessionPhase.COOLDOWN.value,
         ]
         assert summary.phases_completed == expected_order
-        # Elke fase kwam aan bod in de aangeboden vragen.
+        # Elke phase kwam aan bod in de aangeboden vragen.
         phases_seen = {q.phase for q in asked}
         assert SessionPhase.WARMUP.value in phases_seen
         assert SessionPhase.NEW_MATERIAL.value in phases_seen
@@ -434,21 +434,21 @@ class TestPhaseTransitions:
 
 
 class TestMaxNewNodes:
-    """NEW_MATERIAL fase mag maximaal MAX_NEW_NODES nieuwe knopen introduceren."""
+    """NEW_MATERIAL phase mag maximaal MAX_NEW_NODES nieuwe nodes introduceren."""
 
     def test_new_material_cap_enforced(self):
         now = datetime(2026, 4, 16, 10, 0, 0)
         # Graph met 5 ready new-material kandidaten, allemaal roots.
         data = {
-            "knopen": [
+            "nodes": [
                 {
                     "id": f"LAT-G-MORF-ROOT{i}-INTRO",
                     "type": "G",
-                    "taal": "lat",
-                    "titel_nl": f"Root {i}",
-                    "beschrijving": f"Root node {i}.",
-                    "bloom_niveau": "kennis",
-                    "fase": "onderbouw_1",
+                    "language": "lat",
+                    "title_nl": f"Root {i}",
+                    "description": f"Root node {i}.",
+                    "bloom_level": "kennis",
+                    "phase": "onderbouw_1",
                     "items": [],
                 }
                 for i in range(1, 6)
@@ -475,7 +475,7 @@ class TestBudgetExhaustion:
         session_id, q = mgr.start_session("user1", learner, graph, now=now)
         asked = _drive_session_to_completion(mgr, session_id, q, now)
 
-        # Totaal geconsumeerde tijd ligt binnen de som van de fase-budgetten.
+        # Totaal geconsumeerde tijd ligt binnen de som van de phase-budgetten.
         # Elk item kost DEFAULT_ITEM_TIME_SEC; de MAX_NEW_NODES cap kan
         # new_material vroeg afronden, maar de totale budgetlimiet is hard.
         max_total_budget = sum(PHASE_BUDGETS.values())
@@ -489,25 +489,25 @@ class TestContextFirstRoute:
     def _make_passage_setup(self, tmp_path):
         """Graph + passage die op elkaar aansluiten + scaffolding-md in tmp."""
         data = {
-            "knopen": [
+            "nodes": [
                 {
                     "id": "LAT-G-MORF-NAAMVAL-INTRO",
                     "type": "G",
-                    "taal": "lat",
-                    "titel_nl": "Naamval intro",
-                    "beschrijving": "Introductie naamval.",
-                    "bloom_niveau": "kennis",
-                    "fase": "onderbouw_1",
+                    "language": "lat",
+                    "title_nl": "Naamval intro",
+                    "description": "Introductie naamval.",
+                    "bloom_level": "kennis",
+                    "phase": "onderbouw_1",
                     "items": [],
                 },
                 {
                     "id": "LAT-G-MORF-DECL1-INTRO",
                     "type": "G",
-                    "taal": "lat",
-                    "titel_nl": "Eerste declinatie",
-                    "beschrijving": "Overzicht eerste declinatie.",
-                    "bloom_niveau": "kennis",
-                    "fase": "onderbouw_1",
+                    "language": "lat",
+                    "title_nl": "Eerste declinatie",
+                    "description": "Overzicht eerste declinatie.",
+                    "bloom_level": "kennis",
+                    "phase": "onderbouw_1",
                     "items": [],
                 },
             ],
@@ -523,22 +523,22 @@ class TestContextFirstRoute:
         graph = load_graph_from_dict(data)
         passage = Passage(
             id="LAT-P-001",
-            taal="lat",
-            titel="Puella parva",
-            tekst="Puella parva in villa est.",
-            annotaties=[
+            language="lat",
+            title="Puella parva",
+            text="Puella parva in villa est.",
+            annotations=[
                 WordAnnotation(
-                    woord="Puella",
+                    word="Puella",
                     lemma="puella",
-                    naamval="nom.sg",
-                    vertaling="Het meisje",
+                    case="nom.sg",
+                    translation="Het meisje",
                 ),
             ],
-            knoop_ids=[
+            node_ids=[
                 "LAT-G-MORF-NAAMVAL-INTRO",
                 "LAT-G-MORF-DECL1-INTRO",
             ],
-            moeilijkheid=1,
+            difficulty=1,
         )
         # Schrijf scaffolding-md in de default content dir (rel. CWD).
         # We gebruiken absolute paths via content_ref om CWD-afhankelijkheid
@@ -567,7 +567,7 @@ class TestContextFirstRoute:
         assert isinstance(q.stimulus, dict)
         assert q.stimulus.get("type") == "passage"
         assert q.stimulus["passage_id"] == "LAT-P-001"
-        assert q.stimulus["tekst"] == "Puella parva in villa est."
+        assert q.stimulus["text"] == "Puella parva in villa est."
 
     def test_passage_read_yields_grammar_scaffolding(self, tmp_path):
         graph, passage, _ = self._make_passage_setup(tmp_path)
@@ -591,14 +591,14 @@ class TestContextFirstRoute:
         assert result.feedback.mastery_after == 0.0
         # De vervolgvraag is een grammar-node uit de passage.
         assert result.next_question is not None
-        assert result.next_question.node_id in passage.knoop_ids
+        assert result.next_question.node_id in passage.node_ids
 
 
 class TestOfflineAssignmentCollection:
     """OFFLINE_SCHRIJVEN-items komen na de sessie in pending_offline_assignments.
 
     Contract: bij ``_finalize_session`` worden alle offline-items van de
-    aangeraakte knopen toegevoegd aan ``learner.pending_offline_assignments``,
+    aangeraakte nodes toegevoegd aan ``learner.pending_offline_assignments``,
     met deduplicatie op ``item_id``. Analoog aan ``run_session`` in
     ``scheduling/session.py``.
     """

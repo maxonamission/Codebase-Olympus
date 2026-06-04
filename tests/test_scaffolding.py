@@ -29,11 +29,11 @@ def _make_node(node_id: str, content_ref: str | None = None) -> Node:
     return Node(
         id=node_id,
         type=NodeType.G,
-        taal=Language.LAT,
-        titel_nl=f"Knoop {node_id}",
-        beschrijving=f"Test node {node_id}",
-        bloom_niveau=BloomLevel.KENNIS,
-        fase=Phase.ONDERBOUW_1,
+        language=Language.LAT,
+        title_nl=f"Knoop {node_id}",
+        description=f"Test node {node_id}",
+        bloom_level=BloomLevel.KENNIS,
+        phase=Phase.ONDERBOUW_1,
         content_ref=content_ref,
     )
 
@@ -55,19 +55,17 @@ def _build_graph() -> nx.DiGraph:
 def _make_passage() -> Passage:
     return Passage(
         id="LAT-P-T01",
-        taal="lat",
-        titel="Test passage",
-        tekst="Puella cantat.",
-        annotaties=[
+        language="lat",
+        title="Test passage",
+        text="Puella cantat.",
+        annotations=[
+            WordAnnotation(word="Puella", lemma="puella", case="nom.sg", translation="het meisje"),
             WordAnnotation(
-                woord="Puella", lemma="puella", naamval="nom.sg", vertaling="het meisje"
-            ),
-            WordAnnotation(
-                woord="cantat", lemma="cantare", naamval="praes.ind.act.3sg", vertaling="zingt"
+                word="cantat", lemma="cantare", case="praes.ind.act.3sg", translation="zingt"
             ),
         ],
-        knoop_ids=["LAT-G-MORF-CHILDA"],
-        moeilijkheid=1,
+        node_ids=["LAT-G-MORF-CHILDA"],
+        difficulty=1,
     )
 
 

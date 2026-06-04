@@ -51,7 +51,7 @@ class TestStartSession:
         if data["question"] is not None:
             q = data["question"]
             assert "node_id" in q
-            assert "titel" in q
+            assert "title" in q
             assert "phase" in q
 
     def test_start_requires_auth(self, client):
@@ -200,8 +200,8 @@ class TestSubmitAnswer:
         }
         q = Question(
             node_id="LAT-V-F01-SUM",
-            titel="sum — zijn",
-            beschrijving="",
+            title="sum — zijn",
+            description="",
             stimulus="Wat betekent sum?",
             phase="warmup",
         )
@@ -219,8 +219,8 @@ class TestSubmitAnswer:
 
         q = Question(
             node_id="LAT-G-MORF-NOM-D1",
-            titel="Nominativus D1",
-            beschrijving="",
+            title="Nominativus D1",
+            description="",
             stimulus="",
             phase="warmup",
         )
@@ -355,9 +355,9 @@ class TestContextFirstSessionAPI:
             stimulus = q["stimulus"]
             # If a passage was selected, stimulus is a dict with type=passage
             if isinstance(stimulus, dict) and stimulus.get("type") == "passage":
-                assert "tekst" in stimulus
-                assert "annotaties" in stimulus
-                assert "knoop_ids" in stimulus
+                assert "text" in stimulus
+                assert "annotations" in stimulus
+                assert "node_ids" in stimulus
 
                 # Answer the passage
                 session_id = data["session_id"]

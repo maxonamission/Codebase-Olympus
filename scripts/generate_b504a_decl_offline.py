@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """B5-04a: Generate offline_schrijven items for declination paradigm nodes.
 
-Adds ~15 paradigma-schrijfoefeningen to declinatie-knopen in
+Adds ~15 paradigma-schrijfoefeningen to declinatie-nodes in
 lat_grammatica_leerjaar1.json.
 """
 
@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from gymnasium_classica.models.graph import Item
 
 # --- Item specifications (compact) ---
-# (node_id, stimulus, verwacht_resultaat, feedback, moeilijkheid)
+# (node_id, stimulus, expected_result, feedback, difficulty)
 
 ITEMS = [
     # === 1e declinatie ===
@@ -127,23 +127,23 @@ def next_item_nr(node: dict) -> int:
 
 
 def build_item(
-    node_id: str, nr: int, stimulus: str, verwacht: str, feedback: str, moeilijkheid: float
+    node_id: str, nr: int, stimulus: str, verwacht: str, feedback: str, difficulty: float
 ) -> dict:
     """Build an offline_schrijven item dict."""
     return {
         "id": f"ITEM-{node_id}-{nr:03d}",
-        "knoop_ids": [node_id],
+        "node_ids": [node_id],
         "type": "offline_schrijven",
-        "richting": "productief",
-        "moeilijkheid_initieel": moeilijkheid,
-        "discriminatie_initieel": 1.0,
-        "verwachte_tijd_sec": 120,
+        "direction": "productief",
+        "difficulty_initial": difficulty,
+        "discrimination_initial": 1.0,
+        "expected_time_sec": 120,
         "stimulus": stimulus,
-        "antwoord": "Controleer je werk met het paradigma in je lesboek of de app.",
+        "answer": "Controleer je werk met het paradigma in je lesboek of de app.",
         "feedback": feedback,
-        "bron": "handmatig",
-        "verificatie_methode": "self_report",
-        "verwacht_resultaat": verwacht,
+        "source": "handmatig",
+        "verification_method": "self_report",
+        "expected_result": verwacht,
     }
 
 
@@ -157,14 +157,14 @@ def main():
         graph = json.load(f)
 
     # Index nodes by ID
-    node_index = {k["id"]: k for k in graph["knopen"]}
+    node_index = {k["id"]: k for k in graph["nodes"]}
 
     # Track counters per node
     counters: dict[str, int] = {}
     added = 0
     per_node: dict[str, int] = {}
 
-    for node_id, stimulus, verwacht, feedback, moeilijkheid in ITEMS:
+    for node_id, stimulus, verwacht, feedback, difficulty in ITEMS:
         if node_id not in node_index:
             print(f"  SKIP: {node_id} not in {target_file}")
             continue
@@ -174,7 +174,7 @@ def main():
             counters[node_id] = next_item_nr(node)
 
         nr = counters[node_id]
-        item_data = build_item(node_id, nr, stimulus, verwacht, feedback, moeilijkheid)
+        item_data = build_item(node_id, nr, stimulus, verwacht, feedback, difficulty)
 
         # Validate via Pydantic
         Item(**item_data)

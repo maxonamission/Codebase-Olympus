@@ -82,25 +82,25 @@ class Item(BaseModel):
     """A single exercise item linked to one or more knowledge nodes."""
 
     id: str
-    knoop_ids: list[str]
+    node_ids: list[str]
     type: ItemType
-    richting: Direction
-    moeilijkheid_initieel: float = Field(description="IRT b-parameter")
-    discriminatie_initieel: float = Field(gt=0, description="IRT a-parameter, must be > 0")
-    verwachte_tijd_sec: int = Field(gt=0)
+    direction: Direction
+    difficulty_initial: float = Field(description="IRT b-parameter")
+    discrimination_initial: float = Field(gt=0, description="IRT a-parameter, must be > 0")
+    expected_time_sec: int = Field(gt=0)
     stimulus: str | dict[str, Any]
-    antwoord: str | list[str]
+    answer: str | list[str]
     feedback: str
-    bron: Source
+    source: Source
     audio_ref: str | None = Field(
         default=None,
         description="Path to audio file in data/audio/, e.g. LAT-V-F01-ESSE.mp3",
     )
-    verificatie_methode: VerificationMethod | None = Field(
+    verification_method: VerificationMethod | None = Field(
         default=None,
         description="For offline_schrijven items: how the result is verified.",
     )
-    verwacht_resultaat: str | None = Field(
+    expected_result: str | None = Field(
         default=None,
         description="For offline_schrijven items: the expected written result (paradigm, translation, etc.).",
     )
@@ -111,15 +111,15 @@ class Node(BaseModel):
 
     id: str
     type: NodeType
-    taal: Language
-    titel_nl: str
-    titel_terminologie: str | None = None
-    beschrijving: str = Field(description="Short (1-2 sentences) identifying description")
-    bloom_niveau: BloomLevel
-    fase: Phase
-    toetsbaar: bool = True
-    pensum_jaren: list[int] = Field(default_factory=list)
-    cevte_referentie: str | None = None
+    language: Language
+    title_nl: str
+    title_terminology: str | None = None
+    description: str = Field(description="Short (1-2 sentences) identifying description")
+    bloom_level: BloomLevel
+    phase: Phase
+    testable: bool = True
+    pensum_years: list[int] = Field(default_factory=list)
+    cevte_reference: str | None = None
     content_ref: str | None = Field(
         default=None,
         description="Path to markdown content file in data/content/, e.g. LAT-G-MORF-NOM-D1.md",
@@ -128,7 +128,7 @@ class Node(BaseModel):
         default=None,
         description="IPA phonetic transcription of the lemma/title, e.g. /pu.ˈel.la/",
     )
-    semantisch_cluster: str | None = Field(
+    semantic_cluster: str | None = Field(
         default=None,
         description=(
             "Semantic cluster label for vocabulary nodes (type V). "
@@ -138,14 +138,14 @@ class Node(BaseModel):
     )
     items: list[Item] = Field(default_factory=list)
 
-    @field_validator("semantisch_cluster")
+    @field_validator("semantic_cluster")
     @classmethod
     def check_cluster_format(cls, v: str | None) -> str | None:
         if v is None:
             return v
         if not re.fullmatch(r"[a-z0-9_]{1,20}", v):
             raise ValueError(
-                f"Invalid semantisch_cluster {v!r}. "
+                f"Invalid semantic_cluster {v!r}. "
                 "Must be lowercase alphanumeric/underscore, 1-20 chars."
             )
         return v
@@ -174,5 +174,5 @@ class PrerequisiteEdge(BaseModel):
 class GraphData(BaseModel):
     """Top-level wrapper for serializing/deserializing a knowledge graph JSON file."""
 
-    knopen: list[Node]
+    nodes: list[Node]
     edges: list[PrerequisiteEdge]

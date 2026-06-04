@@ -46,24 +46,24 @@ def _node() -> Node:
     return Node(
         id=KNOOP_ID,
         type=NodeType.G,
-        taal=Language.LAT,
-        titel_nl="De eerste declinatie",
-        beschrijving="Overzicht van de 1e declinatie (a-stammen).",
-        bloom_niveau=BloomLevel.KENNIS,
-        fase=Phase.ONDERBOUW_1,
+        language=Language.LAT,
+        title_nl="De eerste declinatie",
+        description="Overzicht van de 1e declinatie (a-stammen).",
+        bloom_level=BloomLevel.KENNIS,
+        phase=Phase.ONDERBOUW_1,
         items=[
             Item(
                 id=f"ITEM-{KNOOP_ID}-001",
-                knoop_ids=[KNOOP_ID],
+                node_ids=[KNOOP_ID],
                 type=ItemType.HERKENNING,
-                richting=Direction.RECEPTIEF,
-                moeilijkheid_initieel=0.0,
-                discriminatie_initieel=1.0,
-                verwachte_tijd_sec=10,
+                direction=Direction.RECEPTIEF,
+                difficulty_initial=0.0,
+                discrimination_initial=1.0,
+                expected_time_sec=10,
                 stimulus="Wat is de nominativus van 'puella'?",
-                antwoord="puella",
+                answer="puella",
                 feedback="Correct: puella.",
-                bron=Source.HANDMATIG,
+                source=Source.HANDMATIG,
             )
         ],
     )
@@ -137,7 +137,7 @@ class TestShouldScaffoldPure:
             correct=True,
             response_time_ms=2000,
             node_id=KNOOP_ID,
-            richting="receptief",
+            direction="receptief",
             mastery_before=0.0,
         )
         state = self._make_state(
@@ -236,7 +236,7 @@ class TestGrammarFirstSessionIntegration:
                     correct=True,
                     response_time_ms=2000,
                     node_id=KNOOP_ID,
-                    richting="receptief",
+                    direction="receptief",
                     mastery_before=0.0,
                 )
             ],

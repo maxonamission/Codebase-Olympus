@@ -11,7 +11,7 @@ volledige sessie doorheen kan draaien.
 Deze tests falen als:
 - Een JSON-bestand een typo of ongeldig ID bevat.
 - Cross-file edges (met name ``transfer_edges_leerjaar1.json``) naar
-  niet-bestaande knopen verwijzen.
+  niet-bestaande nodes verwijzen.
 - Een nieuwe grammar node wordt toegevoegd zonder prerequisite op de
   alfabet-subgraph (schending van de invariant uit CLAUDE.md).
 - De scheduler deadlockt of crasht op de volledige graph.
@@ -42,7 +42,7 @@ def real_graph() -> nx.DiGraph:
 
 class TestStructuralIntegrity:
     def test_all_expected_files_contribute(self, real_graph):
-        """De 8 productie-bestanden samen leveren ≥500 knopen op."""
+        """De 8 productie-bestanden samen leveren ≥500 nodes op."""
         expected_files = {
             "grc_alfabet.json",
             "grc_grammatica_leerjaar1.json",
@@ -57,7 +57,7 @@ class TestStructuralIntegrity:
         missing = expected_files - present
         assert not missing, f"Ontbrekende productie-graph-bestanden: {missing}"
         assert real_graph.number_of_nodes() >= 500, (
-            f"Verwacht ≥500 knopen in volledige graph, kreeg {real_graph.number_of_nodes()}"
+            f"Verwacht ≥500 nodes in volledige graph, kreeg {real_graph.number_of_nodes()}"
         )
 
     def test_validate_graph_has_no_errors(self, real_graph):
@@ -81,7 +81,7 @@ class TestStructuralIntegrity:
 
 class TestCrossFileEdges:
     """Transfer-edges definiëren cross-file verbindingen (LAT↔GRC); alle
-    bron- en doelknopen moeten bestaan in de samengevoegde graph."""
+    source- en doelknopen moeten bestaan in de samengevoegde graph."""
 
     def test_all_transfer_edges_resolve(self, real_graph):
         unresolved = []
@@ -93,11 +93,11 @@ class TestCrossFileEdges:
                 if target not in real_graph.nodes:
                     unresolved.append(("target missing", source, target))
         assert not unresolved, (
-            f"Transfer-edges verwijzen naar niet-bestaande knopen: {unresolved[:5]}"
+            f"Transfer-edges verwijzen naar niet-bestaande nodes: {unresolved[:5]}"
         )
 
     def test_transfer_edges_bridge_languages(self, real_graph):
-        """Transfer-edges horen LAT-knopen met GRC-knopen te koppelen."""
+        """Transfer-edges horen LAT-nodes met GRC-nodes te koppelen."""
         transfer_count = 0
         for source, target, data in real_graph.edges(data=True):
             edge = data.get("edge")
@@ -106,7 +106,7 @@ class TestCrossFileEdges:
                 source_lang = source.split("-", 1)[0]
                 target_lang = target.split("-", 1)[0]
                 assert source_lang != target_lang, (
-                    f"Transfer-edge binnen één taal gevonden: {source} → {target}"
+                    f"Transfer-edge binnen één language gevonden: {source} → {target}"
                 )
         assert transfer_count > 0, "Geen transfer-edges aangetroffen"
 
@@ -138,10 +138,10 @@ class TestGrcAlfabetInvariant:
 
         (De alfabet-subgraph kan cultuurknopen als bovenliggende context
         hebben — bijv. ``SHA-C-LIT-GRALF`` als introductie — dus we eisen
-        niet dat alfabet-knopen globale roots zijn.)
+        niet dat alfabet-nodes globale roots zijn.)
         """
         alfa_nodes = [n for n in real_graph.nodes if "FONL-ALFA" in n]
-        assert alfa_nodes, "Geen alfabet-knopen gevonden"
+        assert alfa_nodes, "Geen alfabet-nodes gevonden"
         entry_points = [
             n for n in alfa_nodes if not any("FONL-ALFA" in p for p in real_graph.predecessors(n))
         ]
@@ -174,8 +174,8 @@ class TestSchedulerOnRealGraph:
             assert after >= before - 1e-9, (
                 f"CORRECT verlaagde mastery voor {node_id}: {before} → {after}"
             )
-        # Minstens één van de geïntroduceerde knopen kreeg z'n mastery verhoogd.
-        assert result.nodes_introduced, "Geen nieuwe knopen geïntroduceerd"
+        # Minstens één van de geïntroduceerde nodes kreeg z'n mastery verhoogd.
+        assert result.nodes_introduced, "Geen nieuwe nodes geïntroduceerd"
 
     def test_learner_serialisation_after_real_session(self, real_graph):
         """Het LearnerModel blijft JSON-serializable na een echte sessie-loop."""

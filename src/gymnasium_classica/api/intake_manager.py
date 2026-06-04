@@ -50,8 +50,8 @@ class IntakeQuestion:
     """A question to present during the diagnostic intake."""
 
     node_id: str
-    titel: str
-    beschrijving: str
+    title: str
+    description: str
     questions_asked: int
     max_questions: int
 
@@ -250,8 +250,8 @@ class IntakeManager:
 
         return IntakeQuestion(
             node_id=node_id,
-            titel=node.titel_nl,
-            beschrijving=node.beschrijving,
+            title=node.title_nl,
+            description=node.description,
             questions_asked=state.questions_asked,
             max_questions=MAX_QUESTIONS,
         )

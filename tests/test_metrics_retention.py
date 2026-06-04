@@ -14,14 +14,14 @@ from gymnasium_classica.models.learner import (
 NOW = datetime(2026, 6, 4, 12, 0, 0)
 
 
-def _response(node_id: str, *, richting: str | None, mastery_before: float) -> ItemResponse:
+def _response(node_id: str, *, direction: str | None, mastery_before: float) -> ItemResponse:
     return ItemResponse(
         timestamp=NOW,
         item_id=f"{node_id}:i",
         correct=True,
         response_time_ms=2000,
         node_id=node_id,
-        richting=richting,
+        direction=direction,
         mastery_before=mastery_before,
     )
 
@@ -69,17 +69,17 @@ class TestBuildLearnerReport:
             interval_days=5.0,
             last_review=NOW - timedelta(days=5),
             item_history=[
-                _response("B", richting="receptief", mastery_before=0.2),
-                _response("B", richting="productief", mastery_before=0.4),
+                _response("B", direction="receptief", mastery_before=0.2),
+                _response("B", direction="productief", mastery_before=0.4),
             ],
         )
-        # mastered, reviewed today, one self-assess response (richting None)
+        # mastered, reviewed today, one self-assess response (direction None)
         learner.node_states["C"] = NodeState(
             node_id="C",
             posterior_mastery=0.9,
             interval_days=10.0,
             last_review=NOW,
-            item_history=[_response("C", richting=None, mastery_before=0.85)],
+            item_history=[_response("C", direction=None, mastery_before=0.85)],
         )
         learner.session_history.append(
             SessionRecord(

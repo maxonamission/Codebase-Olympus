@@ -302,7 +302,7 @@ def _build_greek_writing_lines(node: Node, styles: dict[str, ParagraphStyle]) ->
         return elements
 
     # Extract the letter info from the description
-    beschrijving = node.beschrijving
+    beschrijving = node.description
     # Try to extract majuskel/minuskel from description
     # Pattern: "Α (majuskel), α (minuskel)" or similar
     letter_match = re.search(
@@ -387,7 +387,7 @@ def generate_worksheet(
     has_tables = content_text and "|" in content_text
     has_items = bool(node.items)
     is_greek_letter = node.id.startswith("GRC-G-FONL-ALFA-") and re.search(
-        r"\(majuskel\)", node.beschrijving or ""
+        r"\(majuskel\)", node.description or ""
     )
 
     if not has_tables and not has_items and not is_greek_letter:
@@ -402,19 +402,19 @@ def generate_worksheet(
         rightMargin=MARGIN,
         topMargin=MARGIN,
         bottomMargin=MARGIN,
-        title=f"Werkblad — {node.titel_nl}",
+        title=f"Werkblad — {node.title_nl}",
         author="Gymnasium Classica",
     )
 
     elements: list = []
 
     # Title block
-    elements.append(Paragraph(node.titel_nl, styles["title"]))
+    elements.append(Paragraph(node.title_nl, styles["title"]))
     elements.append(Paragraph(f"Knoop: {node.id}", styles["subtitle"]))
 
     # Description
-    if node.beschrijving:
-        elements.append(Paragraph(node.beschrijving, styles["body"]))
+    if node.description:
+        elements.append(Paragraph(node.description, styles["body"]))
         elements.append(Spacer(1, 4 * mm))
 
     # Paradigm tables (empty for filling in)

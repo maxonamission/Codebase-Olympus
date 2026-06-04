@@ -45,7 +45,7 @@ def parse_node_id(node_id: str) -> dict[str, str | list[str]]:
     """Parse a knowledge node ID into its component parts.
 
     Returns:
-        {"taal": str, "type": str, "segments": list[str]}
+        {"language": str, "type": str, "segments": list[str]}
 
     Raises:
         ValueError: if the ID does not match the expected pattern.
@@ -55,7 +55,7 @@ def parse_node_id(node_id: str) -> dict[str, str | list[str]]:
 
     parts = node_id.split("-")
     return {
-        "taal": parts[0],
+        "language": parts[0],
         "type": parts[1],
         "segments": parts[2:],
     }

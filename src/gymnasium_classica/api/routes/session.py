@@ -58,8 +58,8 @@ def _question_to_response(
             metadata = _vocab_entry_to_metadata(entry)
     return QuestionResponse(
         node_id=q.node_id,
-        titel=q.titel,
-        beschrijving=q.beschrijving,
+        title=q.title,
+        description=q.description,
         stimulus=q.stimulus,
         phase=q.phase,
         items=[
@@ -68,7 +68,7 @@ def _question_to_response(
                 type=item["type"],
                 stimulus=item["stimulus"],
                 feedback=item["feedback"],
-                verwachte_tijd_sec=item["verwachte_tijd_sec"],
+                expected_time_sec=item["expected_time_sec"],
             )
             for item in q.items
         ],

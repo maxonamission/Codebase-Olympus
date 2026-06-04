@@ -14,12 +14,12 @@ def _vocab_node(id_suffix: str, cluster: str | None = None) -> Node:
     return Node(
         id=f"LAT-V-F01-{id_suffix.upper()}",
         type="V",
-        taal="lat",
-        titel_nl=f"Woord {id_suffix}",
-        beschrijving=f"Vocabulary node {id_suffix}.",
-        bloom_niveau="kennis",
-        fase="onderbouw_1",
-        semantisch_cluster=cluster,
+        language="lat",
+        title_nl=f"Woord {id_suffix}",
+        description=f"Vocabulary node {id_suffix}.",
+        bloom_level="kennis",
+        phase="onderbouw_1",
+        semantic_cluster=cluster,
     )
 
 
@@ -28,11 +28,11 @@ def _grammar_node(id_suffix: str) -> Node:
     return Node(
         id=f"LAT-G-MORF-{id_suffix.upper()}",
         type="G",
-        taal="lat",
-        titel_nl=f"Grammatica {id_suffix}",
-        beschrijving=f"Grammar node {id_suffix}.",
-        bloom_niveau="kennis",
-        fase="onderbouw_1",
+        language="lat",
+        title_nl=f"Grammatica {id_suffix}",
+        description=f"Grammar node {id_suffix}.",
+        bloom_level="kennis",
+        phase="onderbouw_1",
     )
 
 
@@ -190,7 +190,7 @@ class TestSelectNext:
             selected.append(result)
 
         # The overall constraint: max 2 of the same cluster in the full 10
-        clusters_selected = [k.semantisch_cluster for k in selected]
+        clusters_selected = [k.semantic_cluster for k in selected]
         from collections import Counter
 
         counts = Counter(clusters_selected)

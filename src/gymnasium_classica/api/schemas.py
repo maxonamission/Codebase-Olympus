@@ -30,11 +30,11 @@ class ItemInfo(BaseModel):
     type: str
     stimulus: str | dict[str, Any]
     feedback: str
-    verwachte_tijd_sec: int
+    expected_time_sec: int
 
 
 class VocabMetadata(BaseModel):
-    """Structured lemma-metadata for V-knopen (F1-05).
+    """Structured lemma-metadata for V-nodes (F1-05).
 
     Mirrors :class:`VocabEntry` in ``vocab/loader.py`` but uses full-word
     field names so the frontend doesn't need to understand the compact
@@ -60,8 +60,8 @@ class VocabMetadata(BaseModel):
 
 class QuestionResponse(BaseModel):
     node_id: str
-    titel: str
-    beschrijving: str
+    title: str
+    description: str
     stimulus: str | dict[str, Any]
     phase: str
     items: list[ItemInfo] = Field(default_factory=list)
@@ -71,7 +71,7 @@ class QuestionResponse(BaseModel):
     )
     vocab_metadata: VocabMetadata | None = Field(
         default=None,
-        description="Structured metadata for V-knopen (F1-05 — woordkaart).",
+        description="Structured metadata for V-nodes (F1-05 — woordkaart).",
     )
     # Promoted from the first item so the frontend can read a flat shape
     # (question.item_type / question.options / ...) instead of digging into
@@ -181,7 +181,7 @@ class ClusterProgress(BaseModel):
     """Progress in a single semantic vocabulary cluster."""
 
     label: str
-    beschrijving: str
+    description: str
     total: int
     mastered: int
     in_progress: int
@@ -204,7 +204,7 @@ class ItemHistoryEntry(BaseModel):
 
 class KnoopProgressResponse(BaseModel):
     node_id: str
-    titel: str
+    title: str
     type: str
     posterior_mastery: float
     easiness_factor: float
@@ -220,9 +220,9 @@ class KnoopProgressResponse(BaseModel):
 
 class GraphNode(BaseModel):
     id: str
-    titel: str
+    title: str
     type: str
-    taal: str
+    language: str
     mastery: float
     status: str  # "mastered", "in_progress", "unseen"
 
@@ -254,8 +254,8 @@ class IntakeStartRequest(BaseModel):
 
 class IntakeQuestionResponse(BaseModel):
     node_id: str
-    titel: str
-    beschrijving: str
+    title: str
+    description: str
     questions_asked: int
     max_questions: int
 

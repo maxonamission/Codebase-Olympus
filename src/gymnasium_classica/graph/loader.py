@@ -12,7 +12,7 @@ from gymnasium_classica.models.graph import GraphData, Node, PrerequisiteEdge
 def load_graph(path: Path) -> nx.DiGraph:
     """Load a knowledge graph from a JSON file or a directory of JSON files.
 
-    When *path* is a file, it must contain keys "knopen" and "edges".
+    When *path* is a file, it must contain keys "nodes" and "edges".
     When *path* is a directory, all ``*.json`` files in it are loaded and
     merged into a single graph.  Nodes are collected first from all files,
     then edges — so cross-file edges (e.g. transfer edges in a separate
@@ -48,10 +48,10 @@ def _load_graph_directory(directory: Path) -> nx.DiGraph:
     for file_path in json_files:
         with open(file_path, encoding="utf-8") as f:
             data = json.load(f)
-        all_knopen.extend(data.get("knopen", []))
+        all_knopen.extend(data.get("nodes", []))
         all_edges.extend(data.get("edges", []))
 
-    return load_graph_from_dict({"knopen": all_knopen, "edges": all_edges})
+    return load_graph_from_dict({"nodes": all_knopen, "edges": all_edges})
 
 
 def load_graph_from_dict(data: dict[str, Any]) -> nx.DiGraph:
@@ -65,7 +65,7 @@ def load_graph_from_dict(data: dict[str, Any]) -> nx.DiGraph:
 
     # Add nodes — check for duplicates
     seen_ids: set[str] = set()
-    for node in graph_data.knopen:
+    for node in graph_data.nodes:
         if node.id in seen_ids:
             raise ValueError(f"Duplicate node ID: {node.id!r}")
         seen_ids.add(node.id)
@@ -96,14 +96,14 @@ def graph_to_dict(graph: nx.DiGraph) -> dict[str, Any]:
     Performs a round-trip: ``load_graph_from_dict(graph_to_dict(g))``
     produces an equivalent graph.
     """
-    knopen = []
+    nodes = []
     for node_id in graph.nodes:
         node: Node = graph.nodes[node_id]["node"]
-        knopen.append(node.model_dump())
+        nodes.append(node.model_dump())
 
     edges = []
     for u, v in graph.edges:
         edge: PrerequisiteEdge = graph.edges[u, v]["edge"]
         edges.append(edge.model_dump())
 
-    return {"knopen": knopen, "edges": edges}
+    return {"nodes": nodes, "edges": edges}

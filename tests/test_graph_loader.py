@@ -25,7 +25,7 @@ class TestLoadGraphFromDict:
         g = load_graph_from_dict(sample_graph_data)
         node = g.nodes["LAT-G-MORF-NOM-D1"]["node"]
         assert isinstance(node, Node)
-        assert node.titel_nl == "Nominativus 1e declinatie"
+        assert node.title_nl == "Nominativus 1e declinatie"
 
     def test_edge_attributes(self, sample_graph_data):
         g = load_graph_from_dict(sample_graph_data)
@@ -34,13 +34,13 @@ class TestLoadGraphFromDict:
         assert edge.encompassing_weight == 0.3
 
     def test_empty_graph(self):
-        g = load_graph_from_dict({"knopen": [], "edges": []})
+        g = load_graph_from_dict({"nodes": [], "edges": []})
         assert g.number_of_nodes() == 0
         assert g.number_of_edges() == 0
 
     def test_duplicate_node_ids_rejected(self, sample_graph_data):
         # Add a duplicate node
-        sample_graph_data["knopen"].append(sample_graph_data["knopen"][0])
+        sample_graph_data["nodes"].append(sample_graph_data["nodes"][0])
         with pytest.raises(ValueError, match="Duplicate node ID"):
             load_graph_from_dict(sample_graph_data)
 
@@ -70,7 +70,7 @@ class TestLoadGraphFromDict:
 
     def test_schema_violation_rejected(self, sample_graph_data):
         # Remove required field
-        del sample_graph_data["knopen"][0]["titel_nl"]
+        del sample_graph_data["nodes"][0]["title_nl"]
         with pytest.raises(ValidationError):
             load_graph_from_dict(sample_graph_data)
 
@@ -112,32 +112,32 @@ class TestLoadGraphFromDirectory:
         graph_dir.mkdir()
 
         file_a = {
-            "knopen": [
+            "nodes": [
                 {
                     "id": "LAT-G-MORF-NOM-D1",
                     "type": "G",
-                    "taal": "lat",
-                    "titel_nl": "Knoop A",
-                    "beschrijving": "Test A.",
-                    "bloom_niveau": "kennis",
-                    "fase": "onderbouw_1",
-                    "toetsbaar": True,
+                    "language": "lat",
+                    "title_nl": "Knoop A",
+                    "description": "Test A.",
+                    "bloom_level": "kennis",
+                    "phase": "onderbouw_1",
+                    "testable": True,
                     "items": [],
                 },
             ],
             "edges": [],
         }
         file_b = {
-            "knopen": [
+            "nodes": [
                 {
                     "id": "GRC-G-MORF-NOM-D1",
                     "type": "G",
-                    "taal": "grc",
-                    "titel_nl": "Knoop B",
-                    "beschrijving": "Test B.",
-                    "bloom_niveau": "kennis",
-                    "fase": "onderbouw_1",
-                    "toetsbaar": True,
+                    "language": "grc",
+                    "title_nl": "Knoop B",
+                    "description": "Test B.",
+                    "bloom_level": "kennis",
+                    "phase": "onderbouw_1",
+                    "testable": True,
                     "items": [],
                 },
             ],
@@ -171,16 +171,16 @@ class TestLoadGraphFromDirectory:
         graph_dir.mkdir()
 
         node = {
-            "knopen": [
+            "nodes": [
                 {
                     "id": "LAT-G-MORF-NOM-D1",
                     "type": "G",
-                    "taal": "lat",
-                    "titel_nl": "Same ID",
-                    "beschrijving": "Test.",
-                    "bloom_niveau": "kennis",
-                    "fase": "onderbouw_1",
-                    "toetsbaar": True,
+                    "language": "lat",
+                    "title_nl": "Same ID",
+                    "description": "Test.",
+                    "bloom_level": "kennis",
+                    "phase": "onderbouw_1",
+                    "testable": True,
                     "items": [],
                 }
             ],

@@ -24,8 +24,8 @@ def main():
     validation_errors = []
 
     for src in [poc, lj1]:
-        for k in src["knopen"]:
-            if k["taal"] != "lat" or k["type"] != "G":
+        for k in src["nodes"]:
+            if k["language"] != "lat" or k["type"] != "G":
                 continue
             items = k.get("items", [])
             if items:
@@ -46,10 +46,10 @@ def main():
 
     total = len(all_items)
     types = Counter(i["type"] for i in all_items)
-    richt = Counter(i["richting"] for i in all_items)
-    moeil = [i["moeilijkheid_initieel"] for i in all_items]
-    discr = [i["discriminatie_initieel"] for i in all_items]
-    tijden = [i["verwachte_tijd_sec"] for i in all_items]
+    richt = Counter(i["direction"] for i in all_items)
+    moeil = [i["difficulty_initial"] for i in all_items]
+    discr = [i["discrimination_initial"] for i in all_items]
+    tijden = [i["expected_time_sec"] for i in all_items]
 
     ok = True
     print("=" * 60)
@@ -57,8 +57,8 @@ def main():
     print("=" * 60)
 
     print("\n1. DEKKING")
-    print(f"   LAT-G knopen met items:    {len(knopen_met)}")
-    print(f"   LAT-G knopen zonder items: {len(knopen_zonder)}")
+    print(f"   LAT-G nodes met items:    {len(knopen_met)}")
+    print(f"   LAT-G nodes zonder items: {len(knopen_zonder)}")
     print(f"   Totaal items:              {total}")
     print(f"   Gem. items/node:          {total / len(knopen_met):.1f}")
 
@@ -67,7 +67,7 @@ def main():
         print(f"   ❌ Minimumeis (2 items/node) NIET gehaald: min = {min_items}")
         ok = False
     else:
-        print(f"   ✓ Alle knopen met items >= 2 (min = {min_items})")
+        print(f"   ✓ Alle nodes met items >= 2 (min = {min_items})")
 
     print("\n2. OEFENTYPE-MIX")
     for t, c in types.most_common():
@@ -85,7 +85,7 @@ def main():
         print("   ❌ Productie < 30%")
         ok = False
     if cpct < 10:
-        print(f"   ⚠ Contextueel+analyse = {cpct:.0f}% (doel: 10%+) — acceptabel voor fase 1")
+        print(f"   ⚠ Contextueel+analyse = {cpct:.0f}% (doel: 10%+) — acceptabel voor phase 1")
 
     print("\n3. RICHTING-MIX")
     for r, c in richt.most_common():

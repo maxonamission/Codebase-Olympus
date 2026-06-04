@@ -35,7 +35,7 @@ class NonInterferenceState:
 
     def record_selection(self, node: Node) -> None:
         """Record that *node* was just selected."""
-        cluster = node.semantisch_cluster if node.type == NodeType.V else None
+        cluster = node.semantic_cluster if node.type == NodeType.V else None
         self._recent_clusters.append(cluster)
         if len(self._recent_clusters) > self.window_size:
             self._recent_clusters = self._recent_clusters[-self.window_size :]
@@ -54,10 +54,10 @@ class NonInterferenceState:
         *strongest* match counts (not cumulative), since the goal is to
         spread items apart, not to permanently suppress a cluster.
         """
-        if node.type != NodeType.V or node.semantisch_cluster is None:
+        if node.type != NodeType.V or node.semantic_cluster is None:
             return 0.0
 
-        cluster = node.semantisch_cluster
+        cluster = node.semantic_cluster
         max_penalty = 0.0
 
         # Walk backwards through recent selections
@@ -111,7 +111,7 @@ def select_next(
     for base_priority, node in candidates:
         adjusted = state.apply_penalty(base_priority, node)
         # Tiebreaker: prefer clusters selected fewer times (negative count → higher)
-        cluster = node.semantisch_cluster
+        cluster = node.semantic_cluster
         count = state._cluster_counts.get(cluster, 0) if cluster else 0
         score = (adjusted, -count)
         if score > best_score:

@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from gymnasium_classica.models.graph import Item
 
 # --- Compact item specs ---
-# (node_id, file, stimulus, verwacht_resultaat, feedback, moeilijkheid)
+# (node_id, file, stimulus, expected_result, feedback, difficulty)
 
 ITEMS = [
     # === POC: naamvalfuncties & basissyntaxis ===
@@ -71,8 +71,8 @@ ITEMS = [
         "LAT-G-SYNT-PREP-ACC",
         "lat_grammatica_poc.json",
         "Vertaal op papier: 'Servi ad templum ambulant.'",
-        "De slaven lopen naar de tempel. Ad + acc. = richting.",
-        "Ad + accusativus drukt richting uit ('naar'). Templum = acc.sg. 2e decl. neutrum.",
+        "De slaven lopen naar de tempel. Ad + acc. = direction.",
+        "Ad + accusativus drukt direction uit ('naar'). Templum = acc.sg. 2e decl. neutrum.",
         0.1,
     ),
     (
@@ -160,8 +160,8 @@ ITEMS = [
         "LAT-G-SYNT-PREP-IN",
         "lat_grammatica_leerjaar1.json",
         "Vertaal beide zinnen op papier: 'Miles in urbem currit.' / 'Miles in urbe stat.'",
-        "De soldaat rent de stad in. / De soldaat staat in de stad. In+acc=richting, in+abl=plaats.",
-        "In + accusativus = richting ('waarheen'). In + ablativus = plaats ('waar').",
+        "De soldaat rent de stad in. / De soldaat staat in de stad. In+acc=direction, in+abl=plaats.",
+        "In + accusativus = direction ('waarheen'). In + ablativus = plaats ('waar').",
         0.4,
     ),
     (
@@ -169,7 +169,7 @@ ITEMS = [
         "lat_grammatica_leerjaar1.json",
         "Vertaal op papier: 'Nautae per mare ad insulam navigant.'",
         "De zeelieden varen over zee naar het eiland. Per+acc, ad+acc.",
-        "Per = door/over, ad = naar. Beide met accusativus (richting/beweging).",
+        "Per = door/over, ad = naar. Beide met accusativus (direction/beweging).",
         0.3,
     ),
     (
@@ -177,7 +177,7 @@ ITEMS = [
         "lat_grammatica_leerjaar1.json",
         "Vertaal op papier: 'Post proelium milites in castra redeunt.'",
         "Na de slag keren de soldaten terug naar het kamp. Post + acc = na.",
-        "Post + accusativus drukt 'na' uit (tijd). In castra = richting (acc.pl.n.).",
+        "Post + accusativus drukt 'na' uit (tijd). In castra = direction (acc.pl.n.).",
         0.3,
     ),
     (
@@ -275,23 +275,23 @@ def next_item_nr(node: dict) -> int:
 
 
 def build_item(
-    node_id: str, nr: int, stimulus: str, verwacht: str, feedback: str, moeilijkheid: float
+    node_id: str, nr: int, stimulus: str, verwacht: str, feedback: str, difficulty: float
 ) -> dict:
     """Build an offline_schrijven vertaal-op-papier item dict."""
     return {
         "id": f"ITEM-{node_id}-{nr:03d}",
-        "knoop_ids": [node_id],
+        "node_ids": [node_id],
         "type": "offline_schrijven",
-        "richting": "productief",
-        "moeilijkheid_initieel": moeilijkheid,
-        "discriminatie_initieel": 1.0,
-        "verwachte_tijd_sec": 180,
+        "direction": "productief",
+        "difficulty_initial": difficulty,
+        "discrimination_initial": 1.0,
+        "expected_time_sec": 180,
         "stimulus": stimulus,
-        "antwoord": "Controleer je vertaling met de modelvertaling in de app.",
+        "answer": "Controleer je vertaling met de modelvertaling in de app.",
         "feedback": feedback,
-        "bron": "handmatig",
-        "verificatie_methode": "self_report",
-        "verwacht_resultaat": verwacht,
+        "source": "handmatig",
+        "verification_method": "self_report",
+        "expected_result": verwacht,
     }
 
 
@@ -300,8 +300,8 @@ def main():
 
     # Group items by file
     by_file: dict[str, list] = {}
-    for node_id, fname, stimulus, verwacht, feedback, moeilijkheid in ITEMS:
-        by_file.setdefault(fname, []).append((node_id, stimulus, verwacht, feedback, moeilijkheid))
+    for node_id, fname, stimulus, verwacht, feedback, difficulty in ITEMS:
+        by_file.setdefault(fname, []).append((node_id, stimulus, verwacht, feedback, difficulty))
 
     total_added = 0
 
@@ -310,12 +310,12 @@ def main():
         with open(fpath) as f:
             graph = json.load(f)
 
-        node_index = {k["id"]: k for k in graph["knopen"]}
+        node_index = {k["id"]: k for k in graph["nodes"]}
         counters: dict[str, int] = {}
         added = 0
         per_node: dict[str, int] = {}
 
-        for node_id, stimulus, verwacht, feedback, moeilijkheid in item_specs:
+        for node_id, stimulus, verwacht, feedback, difficulty in item_specs:
             if node_id not in node_index:
                 print(f"  SKIP: {node_id} not in {fname}")
                 continue
@@ -325,7 +325,7 @@ def main():
                 counters[node_id] = next_item_nr(node)
 
             nr = counters[node_id]
-            item_data = build_item(node_id, nr, stimulus, verwacht, feedback, moeilijkheid)
+            item_data = build_item(node_id, nr, stimulus, verwacht, feedback, difficulty)
 
             # Validate via Pydantic
             Item(**item_data)
@@ -343,7 +343,7 @@ def main():
             f.write("\n")
 
         print(f"\n--- {fname} ---")
-        print(f"Toegevoegd: {added} items over {len(per_node)} knopen")
+        print(f"Toegevoegd: {added} items over {len(per_node)} nodes")
         for kid, count in sorted(per_node.items()):
             print(f"  {kid}: +{count}")
         total_added += added
