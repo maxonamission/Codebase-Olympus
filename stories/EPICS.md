@@ -854,3 +854,46 @@ Beide routes leiden tot mastery op dezelfde knopen — het verschil is de volgor
 - Template-repo `my-templates/` opzetten
 - `mypy --strict` op de hele bestaande codebase (baseline-aanpak volstaat)
 - Coverage-thresholds optrekken (wel rapporteren, niet blokkeren)
+
+---
+
+## Spoor N — Naamgeving & consistentie (Engelse code-identifiers)
+
+CLAUDE.md schrijft voor: documentatie in het Nederlands, **code in het
+Engels**. De codebase bevat nog vernederlandste identifiers. Dit spoor
+brengt code-identifiers naar Engels, gefaseerd op risico (afgeleid uit een
+inventarisatie, juni 2026).
+
+**Tiers:**
+- **Tier 1 (veilig, niet-breaking):** klasse-/enum-*namen*. Pydantic
+  serialiseert veldnamen, niet klassenamen → geen data-impact. = N1-01..03.
+- **Tier 2 (breaking, geen data-bestand-migratie):** learner-model
+  *veldnamen* (`knoop_id` → `node_id`, …). Breekt opgeslagen learner-data,
+  maar staat in 0 graph-databestanden → re-seed lost het op (zoals L1-01).
+- **Tier 3 (breaking + data-migratie):** graph-JSON *schema-keys*
+  (`titel_nl`, `beschrijving`, `antwoord`, `moeilijkheid_initieel`,
+  `verwachte_tijd_sec`, `bloom_niveau`, `toetsbaar`, `pensum_jaren`) en
+  enum-*waarden* (`receptief`/`productief`, bloom-/fase-waarden). Vereist
+  migratie van ~7-9 graph-databestanden + loader + veel tests. Beslissing
+  per ja/nee nog te nemen; stories volgen pas na akkoord.
+
+**Uitvoervolgorde:** N1-01 → N1-02 → N1-03 (elk eigen, kleine PR; per
+rename de volledige suite groen). Tier 2/3 daarna, alleen na expliciet
+akkoord over de scope.
+
+**Afhankelijkheden:** raakt `models/graph.py` en `models/learner.py` —
+plannen ná merge van lopend werk dat diezelfde bestanden aanpast
+(Sprint 2 / L1), om merge-conflicten te vermijden.
+
+**Status:** backlog
+
+## Epic N1: Vernederlandste code-identifiers naar Engels
+
+| Story | Titel | Tier | Status |
+|-------|-------|------|--------|
+| N1-01 | KnoopState → NodeState | 1 | backlog |
+| N1-02 | KennisKnoop → KnowledgeNode | 1 | backlog |
+| N1-03 | Enum-klassen naar Engels | 1 | backlog |
+
+**Tier 2/3** (veldnamen + JSON-keys + enum-waarden) worden als aparte
+stories toegevoegd zodra de scope is afgestemd.
