@@ -77,9 +77,9 @@
 
 | Story | Titel | Status | Volgorde |
 |-------|-------|--------|----------|
-| L1-03 | A/B-experiment- en variant-framework | backlog | 1 |
-| L2-01 | Receptieve en productieve mastery apart tracken | backlog | 2 |
-| L2-02 | Learner-model-strategie-interface + graph-aware tracing | backlog | 3 (na L2-01) |
+| L1-03 | A/B-experiment- en variant-framework | done | 1 |
+| L2-01 | Receptieve en productieve mastery apart tracken | done | 2 |
+| L2-02 | Learner-model-strategie-interface + graph-aware tracing | done | 3 (na L2-01) |
 
 **Afhankelijkheden:** L1-03 → L1-01/02; L2-02 → L2-01.
 **Definition of done:** leerstrategie-parameters zijn controleerbaar te variëren en per variant te meten; het model onderscheidt receptieve van productieve beheersing en kan de graph-structuur benutten; BKT zit achter een migreerbare interface.

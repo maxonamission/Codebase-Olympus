@@ -608,7 +608,7 @@ met graph-aware tracing, en learner-niveau parameters.
 | Story | Titel | Afhankelijk | Status |
 |-------|-------|-------------|--------|
 | L2-01 | Receptieve en productieve mastery apart tracken | — | done |
-| L2-02 | Learner-model-strategie-interface + graph-aware tracing | L2-01 | backlog |
+| L2-02 | Learner-model-strategie-interface + graph-aware tracing | L2-01 | done |
 | L2-03 | Learner-niveau parameters (individuele leersnelheid) | L2-02 | backlog |
 
 ---
