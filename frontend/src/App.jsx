@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard'
 import Session from './pages/Session'
 import GraphView from './pages/GraphView'
 import RouteSelect from './pages/RouteSelect'
+import MentorView from './pages/MentorView'
 
 function ProtectedRoute({ children }) {
   const token = localStorage.getItem('token')
@@ -46,6 +47,14 @@ export default function App() {
         element={
           <ProtectedRoute>
             <RouteSelect />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/mentor"
+        element={
+          <ProtectedRoute>
+            <MentorView />
           </ProtectedRoute>
         }
       />
