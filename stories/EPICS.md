@@ -892,7 +892,7 @@ plannen ná merge van lopend werk dat diezelfde bestanden aanpast
 
 | Story | Titel | Tier | Status |
 |-------|-------|------|--------|
-| N1-01 | KnoopState → NodeState | 1 | backlog |
+| N1-01 | KnoopState → NodeState | 1 | doing |
 | N1-02 | KennisKnoop → Node | 1 | backlog |
 | N1-03 | Enum-klassen naar Engels | 1 | backlog |
 
