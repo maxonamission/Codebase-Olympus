@@ -13,7 +13,7 @@ from datetime import datetime
 
 import networkx as nx
 
-from gymnasium_classica.models.graph import KennisKnoop, PrerequisiteEdge
+from gymnasium_classica.models.graph import Node, PrerequisiteEdge
 from gymnasium_classica.models.learner import LearnerModel, NodeState
 
 # Component weights
@@ -140,7 +140,7 @@ def encompassing_bonus(
 
 
 def domain_balance_penalty(
-    knoop: KennisKnoop,
+    knoop: Node,
     session_type_counts: dict[str, int],
 ) -> float:
     """Penalty/bonus for domain balance within a session.
@@ -165,10 +165,10 @@ def compute_urgency_scores(
     graph: nx.DiGraph,
     session_type_counts: dict[str, int] | None = None,
     now: datetime | None = None,
-) -> list[tuple[float, KennisKnoop]]:
+) -> list[tuple[float, Node]]:
     """Compute urgency scores for all nodes in the graph.
 
-    Returns a list of ``(urgency, KennisKnoop)`` tuples, sorted by
+    Returns a list of ``(urgency, Node)`` tuples, sorted by
     urgency descending.  Nodes with unmet prerequisites are excluded
     unless they are mastered and due for review.
     """
@@ -180,10 +180,10 @@ def compute_urgency_scores(
     if max_out_deg == 0:
         max_out_deg = 1
 
-    results: list[tuple[float, KennisKnoop]] = []
+    results: list[tuple[float, Node]] = []
 
     for node_id in graph.nodes:
-        knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+        knoop: Node = graph.nodes[node_id]["knoop"]
         state = learner.knoop_states.get(node_id)
 
         if state is None:

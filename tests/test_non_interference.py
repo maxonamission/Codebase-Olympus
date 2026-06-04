@@ -2,16 +2,16 @@
 
 import pytest
 
-from gymnasium_classica.models.graph import KennisKnoop
+from gymnasium_classica.models.graph import Node
 from gymnasium_classica.scheduling.non_interference import (
     NonInterferenceState,
     select_next,
 )
 
 
-def _vocab_knoop(id_suffix: str, cluster: str | None = None) -> KennisKnoop:
-    """Helper: create a minimal vocabulary KennisKnoop."""
-    return KennisKnoop(
+def _vocab_knoop(id_suffix: str, cluster: str | None = None) -> Node:
+    """Helper: create a minimal vocabulary Node."""
+    return Node(
         id=f"LAT-V-F01-{id_suffix.upper()}",
         type="V",
         taal="lat",
@@ -23,9 +23,9 @@ def _vocab_knoop(id_suffix: str, cluster: str | None = None) -> KennisKnoop:
     )
 
 
-def _grammar_knoop(id_suffix: str) -> KennisKnoop:
-    """Helper: create a minimal grammar KennisKnoop (no cluster)."""
-    return KennisKnoop(
+def _grammar_knoop(id_suffix: str) -> Node:
+    """Helper: create a minimal grammar Node (no cluster)."""
+    return Node(
         id=f"LAT-G-MORF-{id_suffix.upper()}",
         type="G",
         taal="lat",
@@ -176,14 +176,14 @@ class TestSelectNext:
 
         # Build a candidate pool: 5 clusters, 4 words each, equal base priority
         clusters = ["familie", "oorlog", "natuur", "emotie", "politiek"]
-        pool: list[tuple[float, KennisKnoop]] = []
+        pool: list[tuple[float, Node]] = []
         for cl in clusters:
             for i in range(4):
                 suffix = f"{cl[:3].upper()}{i}"
                 pool.append((1.0, _vocab_knoop(suffix, cl)))
 
         # Select 10 items
-        selected: list[KennisKnoop] = []
+        selected: list[Node] = []
         for _ in range(10):
             result = select_next(pool, state)
             assert result is not None

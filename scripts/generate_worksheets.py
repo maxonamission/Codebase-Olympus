@@ -31,7 +31,7 @@ from reportlab.platypus import (
 )
 
 from gymnasium_classica.graph.loader import load_graph
-from gymnasium_classica.models.graph import KennisKnoop, KnoopType
+from gymnasium_classica.models.graph import KnoopType, Node
 
 # --- Constants ---
 
@@ -253,7 +253,7 @@ def _make_empty_paradigm_table(table_data: dict, styles: dict[str, ParagraphStyl
     return table
 
 
-def _build_exercise_elements(knoop: KennisKnoop, styles: dict[str, ParagraphStyle]) -> list:
+def _build_exercise_elements(knoop: Node, styles: dict[str, ParagraphStyle]) -> list:
     """Build exercise elements from the knoop's items."""
     elements = []
     # Filter for suitable exercise items (production, analyse, synthese, offline)
@@ -293,7 +293,7 @@ def _build_exercise_elements(knoop: KennisKnoop, styles: dict[str, ParagraphStyl
     return elements
 
 
-def _build_greek_writing_lines(knoop: KennisKnoop, styles: dict[str, ParagraphStyle]) -> list:
+def _build_greek_writing_lines(knoop: Node, styles: dict[str, ParagraphStyle]) -> list:
     """Build Greek letter writing practice lines for GRC alphabet nodes."""
     elements = []
 
@@ -359,7 +359,7 @@ def _build_greek_writing_lines(knoop: KennisKnoop, styles: dict[str, ParagraphSt
 
 
 def generate_worksheet(
-    knoop: KennisKnoop,
+    knoop: Node,
     content_dir: Path,
     output_path: Path,
 ) -> bool:
@@ -488,7 +488,7 @@ def main() -> None:
     skipped = 0
 
     for node_id in sorted(graph.nodes):
-        knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+        knoop: Node = graph.nodes[node_id]["knoop"]
 
         # Filter: only grammar nodes
         if knoop.type != KnoopType.G:

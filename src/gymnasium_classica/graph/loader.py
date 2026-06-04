@@ -6,7 +6,7 @@ from typing import Any
 
 import networkx as nx
 
-from gymnasium_classica.models.graph import GraphData, KennisKnoop, PrerequisiteEdge
+from gymnasium_classica.models.graph import GraphData, Node, PrerequisiteEdge
 
 
 def load_graph(path: Path) -> nx.DiGraph:
@@ -19,7 +19,7 @@ def load_graph(path: Path) -> nx.DiGraph:
     file referencing nodes defined elsewhere) are resolved correctly.
 
     Returns:
-        A NetworkX DiGraph where each node stores a KennisKnoop instance
+        A NetworkX DiGraph where each node stores a Node instance
         under the ``"knoop"`` attribute and each edge stores a
         PrerequisiteEdge instance under the ``"edge"`` attribute.
 
@@ -98,7 +98,7 @@ def graph_to_dict(graph: nx.DiGraph) -> dict[str, Any]:
     """
     knopen = []
     for node_id in graph.nodes:
-        knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+        knoop: Node = graph.nodes[node_id]["knoop"]
         knopen.append(knoop.model_dump())
 
     edges = []

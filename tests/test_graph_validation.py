@@ -69,9 +69,9 @@ class TestFindRootNodes:
     def test_multiple_roots(self, sample_graph_data):
         g = load_graph_from_dict(sample_graph_data)
         # Add a second root
-        from gymnasium_classica.models.graph import KennisKnoop
+        from gymnasium_classica.models.graph import Node
 
-        knoop = KennisKnoop(
+        knoop = Node(
             id="LAT-G-MORF-GENUS-INTRO",
             type="G",
             taal="lat",
@@ -106,9 +106,9 @@ class TestCheckConnectivity:
     def test_multiple_components(self, sample_graph_data):
         g = load_graph_from_dict(sample_graph_data)
         # Add a disconnected subgraph
-        from gymnasium_classica.models.graph import KennisKnoop, PrerequisiteEdge
+        from gymnasium_classica.models.graph import Node, PrerequisiteEdge
 
-        k1 = KennisKnoop(
+        k1 = Node(
             id="GRC-G-FONL-ALFABET",
             type="G",
             taal="grc",
@@ -117,7 +117,7 @@ class TestCheckConnectivity:
             bloom_niveau="kennis",
             fase="onderbouw_1",
         )
-        k2 = KennisKnoop(
+        k2 = Node(
             id="GRC-G-FONL-ALFA",
             type="G",
             taal="grc",

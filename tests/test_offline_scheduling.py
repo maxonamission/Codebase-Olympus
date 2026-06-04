@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from uuid import uuid4
 
 from gymnasium_classica.graph.loader import load_graph_from_dict
-from gymnasium_classica.models.graph import KennisKnoop
+from gymnasium_classica.models.graph import Node
 from gymnasium_classica.models.learner import (
     LearnerModel,
     OfflineAssignment,
@@ -84,7 +84,7 @@ def _graph_with_offline_items() -> dict:
     }
 
 
-def _always_correct(knoop_id: str, knoop: KennisKnoop) -> tuple[ResponseType, int]:
+def _always_correct(knoop_id: str, knoop: Node) -> tuple[ResponseType, int]:
     return (ResponseType.CORRECT, 2000)
 
 

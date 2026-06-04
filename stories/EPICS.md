@@ -893,7 +893,7 @@ plannen ná merge van lopend werk dat diezelfde bestanden aanpast
 | Story | Titel | Tier | Status |
 |-------|-------|------|--------|
 | N1-01 | KnoopState → NodeState | 1 | done |
-| N1-02 | KennisKnoop → Node | 1 | doing |
+| N1-02 | KennisKnoop → Node | 1 | done |
 | N1-03 | Enum-klassen naar Engels | 1 | backlog |
 
 **Scope besloten: t/m Tier 3** (volledig). Tier 2- en Tier 3-stories

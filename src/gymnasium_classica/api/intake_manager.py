@@ -25,7 +25,7 @@ from gymnasium_classica.diagnostic.placement import (
     _propagate_incorrect,
 )
 from gymnasium_classica.metrics import capture_baseline
-from gymnasium_classica.models.graph import EdgeType, KennisKnoop, PrerequisiteEdge
+from gymnasium_classica.models.graph import EdgeType, Node, PrerequisiteEdge
 from gymnasium_classica.models.learner import LearnerModel, MasterySource
 
 
@@ -245,7 +245,7 @@ class IntakeManager:
             cursor = next_pos
 
         knoop_id = topo[cursor]
-        knoop: KennisKnoop = state.graph.nodes[knoop_id]["knoop"]
+        knoop: Node = state.graph.nodes[knoop_id]["knoop"]
         state.current_knoop_id = knoop_id
 
         return IntakeQuestion(

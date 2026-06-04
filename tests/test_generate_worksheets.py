@@ -12,8 +12,8 @@ from gymnasium_classica.models.graph import (
     Fase,
     Item,
     ItemType,
-    KennisKnoop,
     KnoopType,
+    Node,
     Richting,
     Taal,
 )
@@ -39,9 +39,9 @@ _register_fonts = _mod._register_fonts
 
 
 @pytest.fixture
-def sample_knoop() -> KennisKnoop:
+def sample_knoop() -> Node:
     """A minimal grammar knoop for testing."""
-    return KennisKnoop(
+    return Node(
         id="LAT-G-MORF-DECL1-PARAD",
         type=KnoopType.G,
         taal=Taal.LAT,
@@ -68,9 +68,9 @@ def sample_knoop() -> KennisKnoop:
 
 
 @pytest.fixture
-def greek_letter_knoop() -> KennisKnoop:
+def greek_letter_knoop() -> Node:
     """A Greek alphabet knoop for testing writing lines."""
-    return KennisKnoop(
+    return Node(
         id="GRC-G-FONL-ALFA-ALFA",
         type=KnoopType.G,
         taal=Taal.GRC,
@@ -82,9 +82,9 @@ def greek_letter_knoop() -> KennisKnoop:
 
 
 @pytest.fixture
-def knoop_no_content() -> KennisKnoop:
+def knoop_no_content() -> Node:
     """A knoop with no content and no items."""
-    return KennisKnoop(
+    return Node(
         id="LAT-G-MORF-GENUS-INTRO",
         type=KnoopType.G,
         taal=Taal.LAT,
@@ -209,7 +209,7 @@ class TestGenerateWorksheet:
 
     def test_generates_pdf_with_items_only(self, tmp_path):
         """Knoop with items but no content file still produces a PDF."""
-        knoop = KennisKnoop(
+        knoop = Node(
             id="LAT-G-SYNT-WRDVLG",
             type=KnoopType.G,
             taal=Taal.LAT,
@@ -278,7 +278,7 @@ class TestGenerateWorksheet:
 
     def test_content_ref_used(self, tmp_path):
         """When knoop has content_ref, that file is loaded."""
-        knoop = KennisKnoop(
+        knoop = Node(
             id="LAT-G-MORF-DECL1-PARAD",
             type=KnoopType.G,
             taal=Taal.LAT,
@@ -338,7 +338,7 @@ class TestBuildGreekWritingLines:
         """Greek group nodes (not individual letters) should not get writing lines."""
         _register_fonts()
         styles = _build_styles()
-        knoop = KennisKnoop(
+        knoop = Node(
             id="GRC-G-FONL-ALFA-GRP1",
             type=KnoopType.G,
             taal=Taal.GRC,

@@ -32,7 +32,7 @@ from pathlib import Path
 import networkx as nx
 
 from gymnasium_classica.graph.loader import load_graph
-from gymnasium_classica.models.graph import KennisKnoop, KnoopType, Taal
+from gymnasium_classica.models.graph import KnoopType, Node, Taal
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_GRAPH_DIR = REPO_ROOT / "data" / "graph"
@@ -95,7 +95,7 @@ def _collect_passage_knoop_ids(passages_dir: Path) -> set[str]:
     return ids
 
 
-def _content_exists(knoop: KennisKnoop, content_dir: Path) -> bool:
+def _content_exists(knoop: Node, content_dir: Path) -> bool:
     """Resolve either `{id}.md` or `content_ref` against the content directory."""
     if (content_dir / f"{knoop.id}.md").exists():
         return True
@@ -110,7 +110,7 @@ def _content_exists(knoop: KennisKnoop, content_dir: Path) -> bool:
     return False
 
 
-def _audio_ok(knoop: KennisKnoop, audio_dir: Path) -> bool:
+def _audio_ok(knoop: Node, audio_dir: Path) -> bool:
     """V-nodes only: the audio file must exist AND be > 1 KB."""
     if knoop.type != KnoopType.V:
         return False
@@ -137,7 +137,7 @@ def compute_coverage(
     buckets: dict[tuple[str, str], dict[str, int]] = {}
 
     for node_id in graph.nodes:
-        knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+        knoop: Node = graph.nodes[node_id]["knoop"]
         has_items = len(knoop.items) > 0
         has_content = _content_exists(knoop, content_dir)
         has_audio = _audio_ok(knoop, audio_dir)

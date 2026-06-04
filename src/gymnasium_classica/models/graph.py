@@ -1,4 +1,4 @@
-"""Pydantic models for the knowledge graph: KennisKnoop, PrerequisiteEdge, Item."""
+"""Pydantic models for the knowledge graph: Node, PrerequisiteEdge, Item."""
 
 import re
 from enum import StrEnum
@@ -106,7 +106,7 @@ class Item(BaseModel):
     )
 
 
-class KennisKnoop(BaseModel):
+class Node(BaseModel):
     """A single knowledge node (kennisatoom) in the graph."""
 
     id: str
@@ -174,5 +174,5 @@ class PrerequisiteEdge(BaseModel):
 class GraphData(BaseModel):
     """Top-level wrapper for serializing/deserializing a knowledge graph JSON file."""
 
-    knopen: list[KennisKnoop]
+    knopen: list[Node]
     edges: list[PrerequisiteEdge]

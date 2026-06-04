@@ -16,7 +16,7 @@ from uuid import uuid4
 
 import networkx as nx
 
-from gymnasium_classica.models.graph import Item, KennisKnoop
+from gymnasium_classica.models.graph import Item, Node
 from gymnasium_classica.models.learner import (
     ItemResponse,
     LearnerModel,
@@ -126,13 +126,13 @@ class _SessionState:
     started_at: datetime
     phase_index: int = 0
     budget_remaining: int = 0
-    candidates: list[tuple[float, KennisKnoop]] = field(default_factory=list)
+    candidates: list[tuple[float, Node]] = field(default_factory=list)
     ni_state: NonInterferenceState = field(default_factory=NonInterferenceState)
     session_node_ids: set[str] = field(default_factory=set)
     nodes_introduced: list[str] = field(default_factory=list)
     nodes_reviewed: list[str] = field(default_factory=list)
     mastery_changes: dict[str, tuple[float, float]] = field(default_factory=dict)
-    current_knoop: KennisKnoop | None = None
+    current_knoop: Node | None = None
     current_before: float = 0.0
     items_presented: int = 0
     phases_completed: list[str] = field(default_factory=list)
@@ -145,7 +145,7 @@ class _SessionState:
     passage_presented: bool = False
 
 
-def _generate_self_assess_prompt(knoop: KennisKnoop) -> str:
+def _generate_self_assess_prompt(knoop: Node) -> str:
     """Generate a self-assessment prompt based on the node type."""
     t = knoop.type.value
     titel = knoop.titel_nl
@@ -167,7 +167,7 @@ def _generate_self_assess_prompt(knoop: KennisKnoop) -> str:
 def _build_item_response(
     *,
     item: Item | None,
-    knoop: KennisKnoop,
+    knoop: Node,
     answer_text: str | None,
     correct: bool,
     response_time_ms: int,
@@ -192,7 +192,7 @@ def _build_item_response(
 def _grade_and_record(
     *,
     item: Item,
-    knoop: KennisKnoop,
+    knoop: Node,
     answer_text: str,
     response_time_ms: int,
     mastery_before: float,
@@ -227,7 +227,7 @@ def _grade_and_record(
 
 def _should_scaffold(
     state: "_SessionState",
-    knoop: KennisKnoop,
+    knoop: Node,
     phase: SessionPhase,
 ) -> bool:
     """Decide whether to attach markdown-scaffolding to the next question.
@@ -287,7 +287,7 @@ def _passage_to_question(passage: Passage, phase: SessionPhase) -> Question:
 
 
 def _load_scaffolding_content(
-    knoop: KennisKnoop,
+    knoop: Node,
     content_dir: Path = CONTENT_DIR,
 ) -> str | None:
     """Load markdown scaffolding content for a knowledge node.
@@ -309,12 +309,12 @@ def _load_scaffolding_content(
 
 
 def _knoop_to_question(
-    knoop: KennisKnoop,
+    knoop: Node,
     phase: SessionPhase,
     include_scaffolding: bool = False,
     content_dir: Path = CONTENT_DIR,
 ) -> Question:
-    """Convert a KennisKnoop to a Question for the API.
+    """Convert a Node to a Question for the API.
 
     When *include_scaffolding* is True (context-first scaffolding after
     a passage), the markdown content from ``data/content/`` is attached
@@ -363,7 +363,7 @@ def _knoop_to_question(
 
 
 def _promote_first_item(
-    knoop: KennisKnoop,
+    knoop: Node,
 ) -> tuple[str | None, str | None, list[str] | None, str | None, str | None]:
     """Extract structured stimulus fields from the first item, if present.
 
@@ -713,7 +713,7 @@ class SessionManager:
 
     def _get_candidates(
         self, state: _SessionState, phase: SessionPhase, now: datetime
-    ) -> list[tuple[float, KennisKnoop]]:
+    ) -> list[tuple[float, Node]]:
         """Compute candidate items for the given phase."""
         if phase == SessionPhase.WARMUP:
             return _candidates_for_warmup(state.learner, state.graph, now)

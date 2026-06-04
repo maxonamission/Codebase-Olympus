@@ -7,7 +7,7 @@ import pytest
 
 @pytest.fixture
 def sample_knoop_data() -> dict:
-    """A minimal valid KennisKnoop as a dict."""
+    """A minimal valid Node as a dict."""
     return {
         "id": "LAT-G-MORF-NOM-D1",
         "type": "G",

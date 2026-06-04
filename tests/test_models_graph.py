@@ -1,4 +1,4 @@
-"""Tests for Pydantic models: KennisKnoop, PrerequisiteEdge, Item."""
+"""Tests for Pydantic models: Node, PrerequisiteEdge, Item."""
 
 import pytest
 from pydantic import ValidationError
@@ -8,16 +8,16 @@ from gymnasium_classica.models.graph import (
     GraphData,
     Item,
     ItemType,
-    KennisKnoop,
+    Node,
     PrerequisiteEdge,
 )
 
 
-class TestKennisKnoop:
-    """Tests for the KennisKnoop model."""
+class TestNode:
+    """Tests for the Node model."""
 
     def test_valid_construction(self, sample_knoop_data):
-        knoop = KennisKnoop(**sample_knoop_data)
+        knoop = Node(**sample_knoop_data)
         assert knoop.id == "LAT-G-MORF-NOM-D1"
         assert knoop.titel_nl == "Nominativus 1e declinatie"
         assert knoop.toetsbaar is True
@@ -26,30 +26,30 @@ class TestKennisKnoop:
     def test_invalid_id_rejected(self, sample_knoop_data):
         sample_knoop_data["id"] = "invalid-id"
         with pytest.raises(ValidationError, match="Invalid knoop ID"):
-            KennisKnoop(**sample_knoop_data)
+            Node(**sample_knoop_data)
 
     def test_invalid_type_rejected(self, sample_knoop_data):
         sample_knoop_data["type"] = "X"
         with pytest.raises(ValidationError):
-            KennisKnoop(**sample_knoop_data)
+            Node(**sample_knoop_data)
 
     def test_invalid_taal_rejected(self, sample_knoop_data):
         sample_knoop_data["taal"] = "english"
         with pytest.raises(ValidationError):
-            KennisKnoop(**sample_knoop_data)
+            Node(**sample_knoop_data)
 
     def test_invalid_bloom_rejected(self, sample_knoop_data):
         sample_knoop_data["bloom_niveau"] = "mastery"
         with pytest.raises(ValidationError):
-            KennisKnoop(**sample_knoop_data)
+            Node(**sample_knoop_data)
 
     def test_invalid_fase_rejected(self, sample_knoop_data):
         sample_knoop_data["fase"] = "fase_99"
         with pytest.raises(ValidationError):
-            KennisKnoop(**sample_knoop_data)
+            Node(**sample_knoop_data)
 
     def test_optional_fields_default_none(self, sample_knoop_data):
-        knoop = KennisKnoop(**sample_knoop_data)
+        knoop = Node(**sample_knoop_data)
         assert knoop.titel_terminologie is None
         assert knoop.cevte_referentie is None
         assert knoop.content_ref is None
@@ -57,45 +57,45 @@ class TestKennisKnoop:
 
     def test_semantisch_cluster_valid(self, sample_knoop_data):
         sample_knoop_data["semantisch_cluster"] = "familie"
-        knoop = KennisKnoop(**sample_knoop_data)
+        knoop = Node(**sample_knoop_data)
         assert knoop.semantisch_cluster == "familie"
 
     def test_semantisch_cluster_with_underscore(self, sample_knoop_data):
         sample_knoop_data["semantisch_cluster"] = "dagelijks_leven"
-        knoop = KennisKnoop(**sample_knoop_data)
+        knoop = Node(**sample_knoop_data)
         assert knoop.semantisch_cluster == "dagelijks_leven"
 
     def test_semantisch_cluster_uppercase_rejected(self, sample_knoop_data):
         sample_knoop_data["semantisch_cluster"] = "Familie"
         with pytest.raises(ValidationError, match="semantisch_cluster"):
-            KennisKnoop(**sample_knoop_data)
+            Node(**sample_knoop_data)
 
     def test_semantisch_cluster_too_long_rejected(self, sample_knoop_data):
         sample_knoop_data["semantisch_cluster"] = "a" * 21
         with pytest.raises(ValidationError, match="semantisch_cluster"):
-            KennisKnoop(**sample_knoop_data)
+            Node(**sample_knoop_data)
 
     def test_semantisch_cluster_spaces_rejected(self, sample_knoop_data):
         sample_knoop_data["semantisch_cluster"] = "daily life"
         with pytest.raises(ValidationError, match="semantisch_cluster"):
-            KennisKnoop(**sample_knoop_data)
+            Node(**sample_knoop_data)
 
     def test_optional_fields_can_be_set(self, sample_knoop_data):
         sample_knoop_data["titel_terminologie"] = "nominativus"
         sample_knoop_data["cevte_referentie"] = "A1.1"
         sample_knoop_data["content_ref"] = "LAT-G-MORF-NOM-D1.md"
-        knoop = KennisKnoop(**sample_knoop_data)
+        knoop = Node(**sample_knoop_data)
         assert knoop.titel_terminologie == "nominativus"
         assert knoop.content_ref == "LAT-G-MORF-NOM-D1.md"
 
     def test_empty_items_list_valid(self, sample_knoop_data):
-        knoop = KennisKnoop(**sample_knoop_data)
+        knoop = Node(**sample_knoop_data)
         assert knoop.items == []
 
     def test_serialization_roundtrip(self, sample_knoop_data):
-        knoop = KennisKnoop(**sample_knoop_data)
+        knoop = Node(**sample_knoop_data)
         dumped = knoop.model_dump()
-        knoop2 = KennisKnoop(**dumped)
+        knoop2 = Node(**dumped)
         assert knoop == knoop2
 
 
