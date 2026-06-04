@@ -478,7 +478,7 @@ Bestaand materiaal (markdowns, audio, MC-opties, vocab-metadata) daadwerkelijk n
 | Story | Titel | Afhankelijk | Status |
 |-------|-------|-------------|--------|
 | F2-01 | Mentor-rol + leerling-koppeling in user-model | — | done |
-| F2-02 | Laatste foute antwoorden per leerling per knoop | F2-01, F1-12 | doing |
+| F2-02 | Laatste foute antwoorden per leerling per knoop | F2-01, F1-12 | done |
 | F2-03 | Struikelpunten-overzicht per leerling | F2-01 | doing |
 | F2-04 | Fout-classificatie (spelling / naamval / synoniem / macron) — track C kern | F1-12 | done |
 

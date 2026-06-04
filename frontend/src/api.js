@@ -91,6 +91,16 @@ export function getUserProfile() {
   return apiFetch('/user/profile');
 }
 
+export function getMentees() {
+  return apiFetch('/mentor/mentees');
+}
+
+export function getMentorAttempts(userId, knoopId, limit = 10) {
+  return apiFetch(
+    `/mentor/${encodeURIComponent(userId)}/knoop/${encodeURIComponent(knoopId)}/attempts?limit=${limit}`,
+  );
+}
+
 export function updateLearningRoute(learningRoute) {
   return apiFetch('/user/learning-route', {
     method: 'PUT',
