@@ -17,6 +17,7 @@ import networkx as nx
 
 from gymnasium_classica.diagnostic.conditional_completion import apply_fallback
 from gymnasium_classica.experiments import strategy_params_for
+from gymnasium_classica.learner_strategy import get_strategy
 from gymnasium_classica.models.graph import Direction, ItemType, Node
 from gymnasium_classica.models.learner import (
     ItemResponse,
@@ -31,7 +32,6 @@ from gymnasium_classica.models.passage import Passage
 from gymnasium_classica.models.user import LearningRoute
 from gymnasium_classica.scheduling.bkt import (
     SELF_REPORT_BKT_PARAMS,
-    propagate_practice_correct,
     update_node_state,
 )
 from gymnasium_classica.scheduling.non_interference import (
@@ -333,9 +333,9 @@ def _process_response(
         if item_response is not None and item_response.direction is not None
         else None
     )
-    update_node_state(learner, node_id, response, direction=direction)
-    if response in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT):
-        propagate_practice_correct(learner, graph, node_id)
+    # Via de actieve learner-model-strategie (default BKT = ongewijzigd gedrag;
+    # configureerbaar naar graph-aware zonder deze callsite te raken). L2-02.
+    get_strategy().update(learner, graph, node_id, response, direction=direction)
 
     # SM-2 (spacing kan per experiment-variant variëren; default = ongewijzigd)
     state = learner.node_states[node_id]
