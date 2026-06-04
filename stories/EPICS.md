@@ -872,7 +872,8 @@ inventarisatie, juni 2026).
   maar staat in 0 graph-databestanden → re-seed lost het op (zoals L1-01).
 - **Tier 3 (breaking + data-migratie):** graph-JSON *schema-keys*
   (`titel_nl`, `beschrijving`, `antwoord`, `moeilijkheid_initieel`,
-  `verwachte_tijd_sec`, `bloom_niveau`, `toetsbaar`, `pensum_jaren`) en
+  `verwachte_tijd_sec`, `bloom_niveau`, `toetsbaar`, `pensum_jaren`,
+  `knoop_ids`) en
   enum-*waarden* (`receptief`/`productief`, bloom-/fase-waarden). Vereist
   migratie van ~7-9 graph-databestanden + loader + veel tests. **Besloten (juni 2026): volledige Tier 3 wordt uitgevoerd** — "pijnlijk
   maar anders blijven we ermee zitten". Stories worden uitgewerkt zodra N1
@@ -895,7 +896,7 @@ plannen ná merge van lopend werk dat diezelfde bestanden aanpast
 | N1-01 | KnoopState → NodeState | 1 | done |
 | N1-02 | KennisKnoop → Node | 1 | done |
 | N1-03 | Enum-klassen naar Engels | 1 | done |
-| N1-04 | knoop-veldnamen + attribuutkey → node | 2 | doing |
+| N1-04 | knoop-veldnamen + attribuutkey → node | 2 | done |
 
 **Scope besloten: t/m Tier 3** (volledig). Tier 2- en Tier 3-stories
 (veldnamen, JSON-keys, enum-waarden + datamigratie) worden uitgewerkt zodra

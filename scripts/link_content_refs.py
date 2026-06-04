@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Link knowledge-graph knopen to their markdown content files.
 
-For every knoop that has a matching ``data/content/{ID}.md`` file this
-script ensures the knoop's ``content_ref`` points at that file.  The
+For every node that has a matching ``data/content/{ID}.md`` file this
+script ensures the node's ``content_ref`` points at that file.  The
 reference is stored as a POSIX-style repo-relative path so the JSON
 blijft platform-onafhankelijk:
 
@@ -31,7 +31,7 @@ DEFAULT_GRAPH_DIR = REPO_ROOT / "data" / "graph"
 DEFAULT_CONTENT_DIR = REPO_ROOT / "data" / "content"
 
 
-# Canonical key order for a knoop. Existing JSON files omit content_ref, so we
+# Canonical key order for a node. Existing JSON files omit content_ref, so we
 # insert it in the position dictated by the Pydantic model (after
 # cevte_referentie, before pronunciation). Keys not listed here keep their
 # original order.
@@ -67,19 +67,19 @@ class LinkResult:
     files_written: list[str] = field(default_factory=list)
 
 
-def expected_content_ref(knoop_id: str) -> str:
-    """Canonical repo-relative path for the markdown content of a knoop."""
-    return f"data/content/{knoop_id}.md"
+def expected_content_ref(node_id: str) -> str:
+    """Canonical repo-relative path for the markdown content of a node."""
+    return f"data/content/{node_id}.md"
 
 
-def _reorder_knoop_keys(knoop: dict) -> dict:
-    """Return *knoop* with keys in the canonical order defined above."""
+def _reorder_node_keys(node: dict) -> dict:
+    """Return *node* with keys in the canonical order defined above."""
     ordered: dict = {}
     for key in _KNOOP_KEY_ORDER:
-        if key in knoop:
-            ordered[key] = knoop[key]
+        if key in node:
+            ordered[key] = node[key]
     # Preserve any keys we didn't anticipate, at the end.
-    for key, value in knoop.items():
+    for key, value in node.items():
         if key not in ordered:
             ordered[key] = value
     return ordered
@@ -91,9 +91,9 @@ def link_content_refs(
     *,
     dry_run: bool = False,
 ) -> LinkResult:
-    """Set ``content_ref`` on every knoop with a matching markdown file.
+    """Set ``content_ref`` on every node with a matching markdown file.
 
-    Only updates knopen where ``{content_dir}/{knoop_id}.md`` exists.  The
+    Only updates knopen where ``{content_dir}/{node_id}.md`` exists.  The
     JSON is re-written with ``indent=2`` and ``ensure_ascii=False`` to match
     the existing style.
     """
@@ -108,25 +108,25 @@ def link_content_refs(
 
         file_changed = False
         knopen = data.get("knopen", [])
-        for idx, knoop in enumerate(knopen):
+        for idx, node in enumerate(knopen):
             result.scanned_knopen += 1
-            knoop_id = knoop.get("id")
-            if not knoop_id or knoop_id not in content_ids:
+            node_id = node.get("id")
+            if not node_id or node_id not in content_ids:
                 continue
 
-            expected = expected_content_ref(knoop_id)
-            current = knoop.get("content_ref")
+            expected = expected_content_ref(node_id)
+            current = node.get("content_ref")
             if current == expected:
                 result.refs_unchanged += 1
                 continue
 
             if current is None:
-                result.refs_added.append((json_path.name, knoop_id))
+                result.refs_added.append((json_path.name, node_id))
             else:
-                result.refs_updated.append((json_path.name, knoop_id, current))
+                result.refs_updated.append((json_path.name, node_id, current))
 
-            knoop["content_ref"] = expected
-            knopen[idx] = _reorder_knoop_keys(knoop)
+            node["content_ref"] = expected
+            knopen[idx] = _reorder_node_keys(node)
             file_changed = True
 
         if file_changed and not dry_run:
@@ -153,17 +153,17 @@ def _print_summary(result: LinkResult, *, dry_run: bool) -> None:
 
     if result.refs_added:
         print("\nNieuwe koppelingen:")
-        for filename, knoop_id in result.refs_added:
-            print(f"  + {knoop_id}  ({filename})")
+        for filename, node_id in result.refs_added:
+            print(f"  + {node_id}  ({filename})")
     if result.refs_updated:
         print("\nBijgewerkte koppelingen:")
-        for filename, knoop_id, old in result.refs_updated:
-            print(f"  ~ {knoop_id}: {old!r} -> {expected_content_ref(knoop_id)!r}  ({filename})")
+        for filename, node_id, old in result.refs_updated:
+            print(f"  ~ {node_id}: {old!r} -> {expected_content_ref(node_id)!r}  ({filename})")
 
 
 def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Zet content_ref op elke knoop waarvoor een matching markdown-bestand bestaat.",
+        description="Zet content_ref op elke node waarvoor een matching markdown-bestand bestaat.",
     )
     parser.add_argument(
         "--graph-dir",

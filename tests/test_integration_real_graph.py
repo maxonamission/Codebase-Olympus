@@ -29,7 +29,7 @@ from gymnasium_classica.graph.validation import detect_cycles, validate_graph
 from gymnasium_classica.models.graph import EdgeType, PrerequisiteEdge
 from gymnasium_classica.models.learner import LearnerModel, ResponseType
 from gymnasium_classica.scheduling.session import run_session
-from gymnasium_classica.schemas.id_schema import validate_knoop_id
+from gymnasium_classica.schemas.id_schema import validate_node_id
 
 GRAPH_DIR = Path(__file__).parent.parent / "data" / "graph"
 
@@ -72,10 +72,10 @@ class TestStructuralIntegrity:
         assert cycles == [], f"Onverwachte cykels: {cycles[:3]}"
 
     def test_all_ids_conform_to_schema(self, real_graph):
-        """Alle knoop-IDs passeren ``validate_knoop_id``."""
-        invalid = [n for n in real_graph.nodes if not validate_knoop_id(n)]
+        """Alle node-IDs passeren ``validate_node_id``."""
+        invalid = [n for n in real_graph.nodes if not validate_node_id(n)]
         assert not invalid, (
-            f"{len(invalid)} knoop-ID(s) voldoen niet aan het ID-schema: {invalid[:5]}"
+            f"{len(invalid)} node-ID(s) voldoen niet aan het ID-schema: {invalid[:5]}"
         )
 
 
@@ -114,8 +114,8 @@ class TestCrossFileEdges:
 class TestGrcAlfabetInvariant:
     """CLAUDE.md: de Grieks-alfabet-subgraph blokkeert alle Griekse grammatica.
 
-    Elke niet-alfabet ``GRC-G-*``-knoop moet transitief afhankelijk zijn van
-    minstens één ``GRC-G-FONL-ALFA-*``-knoop.
+    Elke niet-alfabet ``GRC-G-*``-node moet transitief afhankelijk zijn van
+    minstens één ``GRC-G-FONL-ALFA-*``-node.
     """
 
     def test_every_grc_grammar_node_depends_on_alfabet(self, real_graph):
@@ -133,8 +133,8 @@ class TestGrcAlfabetInvariant:
         )
 
     def test_alfabet_subgraph_has_entry_point(self, real_graph):
-        """De alfabet-subgraph moet minstens één entry-knoop hebben: een
-        alfabet-knoop zonder andere alfabet-knoop als prerequisite.
+        """De alfabet-subgraph moet minstens één entry-node hebben: een
+        alfabet-node zonder andere alfabet-node als prerequisite.
 
         (De alfabet-subgraph kan cultuurknopen als bovenliggende context
         hebben — bijv. ``SHA-C-LIT-GRALF`` als introductie — dus we eisen
@@ -146,8 +146,8 @@ class TestGrcAlfabetInvariant:
             n for n in alfa_nodes if not any("FONL-ALFA" in p for p in real_graph.predecessors(n))
         ]
         assert entry_points, (
-            "Alfabet-subgraph heeft geen entry-knoop (elke alfabet-knoop "
-            "heeft een andere alfabet-knoop als prerequisite — circulaire "
+            "Alfabet-subgraph heeft geen entry-node (elke alfabet-node "
+            "heeft een andere alfabet-node als prerequisite — circulaire "
             "definitie?)"
         )
 
@@ -159,7 +159,7 @@ class TestSchedulerOnRealGraph:
         learner = LearnerModel(user_id=uuid4())
         now = datetime(2026, 4, 16, 10, 0, 0)
 
-        def always_correct(knoop_id, knoop):
+        def always_correct(node_id, node):
             return ResponseType.CORRECT, 1500
 
         result = run_session(learner, real_graph, always_correct, now=now)
@@ -167,12 +167,12 @@ class TestSchedulerOnRealGraph:
         assert result.ended_at is not None, "Sessie niet afgerond"
         assert len(result.items) >= 1, "Geen items aangeboden op productie-graph"
         # Elke mastery_change bevat een voor/na-paar binnen [0,1].
-        for knoop_id, (before, after) in result.mastery_changes.items():
-            assert 0.0 <= before <= 1.0, f"{knoop_id}: before={before}"
-            assert 0.0 <= after <= 1.0, f"{knoop_id}: after={after}"
+        for node_id, (before, after) in result.mastery_changes.items():
+            assert 0.0 <= before <= 1.0, f"{node_id}: before={before}"
+            assert 0.0 <= after <= 1.0, f"{node_id}: after={after}"
             # CORRECT-antwoord mag mastery niet verlagen.
             assert after >= before - 1e-9, (
-                f"CORRECT verlaagde mastery voor {knoop_id}: {before} → {after}"
+                f"CORRECT verlaagde mastery voor {node_id}: {before} → {after}"
             )
         # Minstens één van de geïntroduceerde knopen kreeg z'n mastery verhoogd.
         assert result.nodes_introduced, "Geen nieuwe knopen geïntroduceerd"
@@ -185,11 +185,11 @@ class TestSchedulerOnRealGraph:
         run_session(
             learner,
             real_graph,
-            lambda knoop_id, knoop: (ResponseType.CORRECT, 1500),
+            lambda node_id, node: (ResponseType.CORRECT, 1500),
             now=now,
         )
 
         serialized = learner.model_dump_json()
         restored = LearnerModel.model_validate_json(serialized)
-        assert set(restored.knoop_states.keys()) == set(learner.knoop_states.keys())
+        assert set(restored.node_states.keys()) == set(learner.node_states.keys())
         assert len(restored.session_history) == 1

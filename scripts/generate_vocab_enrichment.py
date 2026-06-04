@@ -52,16 +52,16 @@ HERKENNING_TIME_SEC = 10
 PRODUCTIE_TIME_SEC = 20
 
 
-def _taal_labels(knoop_id: str) -> tuple[str, str]:
+def _taal_labels(node_id: str) -> tuple[str, str]:
     """Return ('Latijnse', 'Latijn') or ('Griekse', 'Grieks')."""
-    if knoop_id.startswith("LAT"):
+    if node_id.startswith("LAT"):
         return "Latijnse", "Latijn"
     return "Griekse", "Grieks"
 
 
 def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: int) -> dict:
     """Text-based herkenning: read lemma, pick the Dutch translation."""
-    knoop_id = node["id"]
+    node_id = node["id"]
     lemma, translation = parse_titel(node["titel_nl"])
     first_word = extract_first_word(lemma)
     correct = extract_short_translation(translation)
@@ -70,11 +70,11 @@ def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: i
     options = [correct, *distractors]
     random.shuffle(options)
 
-    taal_adj, _ = _taal_labels(knoop_id)
+    taal_adj, _ = _taal_labels(node_id)
 
     return {
-        "id": f"ITEM-{knoop_id}-{item_nr:03d}",
-        "knoop_ids": [knoop_id],
+        "id": f"ITEM-{node_id}-{item_nr:03d}",
+        "knoop_ids": [node_id],
         "type": "herkenning",
         "richting": "receptief",
         "moeilijkheid_initieel": round(random.uniform(*HERKENNING_B_RANGE), 2),
@@ -93,16 +93,16 @@ def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: i
 
 def generate_productie_item(node: dict, item_nr: int) -> dict:
     """Text-based productie: given NL translation, type the lemma."""
-    knoop_id = node["id"]
+    node_id = node["id"]
     lemma, translation = parse_titel(node["titel_nl"])
     first_word = extract_first_word(lemma)
     correct = extract_short_translation(translation)
 
-    taal_adj, _ = _taal_labels(knoop_id)
+    taal_adj, _ = _taal_labels(node_id)
 
     return {
-        "id": f"ITEM-{knoop_id}-{item_nr:03d}",
-        "knoop_ids": [knoop_id],
+        "id": f"ITEM-{node_id}-{item_nr:03d}",
+        "knoop_ids": [node_id],
         "type": "productie",
         "richting": "productief",
         "moeilijkheid_initieel": round(random.uniform(*PRODUCTIE_B_RANGE), 2),

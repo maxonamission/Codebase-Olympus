@@ -6,7 +6,7 @@ from typing import Any
 
 from pydantic import BaseModel, Field, field_validator
 
-from gymnasium_classica.schemas.id_schema import validate_knoop_id
+from gymnasium_classica.schemas.id_schema import validate_node_id
 
 # --- Enums ---
 
@@ -153,9 +153,9 @@ class Node(BaseModel):
     @field_validator("id")
     @classmethod
     def check_id_format(cls, v: str) -> str:
-        if not validate_knoop_id(v):
+        if not validate_node_id(v):
             raise ValueError(
-                f"Invalid knoop ID {v!r}. "
+                f"Invalid node ID {v!r}. "
                 "Expected format: {{TAAL}}-{{TYPE}}-{{SEGMENT}}[-{{SEGMENT}}]... "
                 "e.g. LAT-G-MORF-NOM-D1"
             )

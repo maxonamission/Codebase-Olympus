@@ -7,9 +7,9 @@ Produces:
 - Greek writing practice lines (for GRC nodes)
 
 Usage:
-    python scripts/generate_worksheets.py [--knoop-id KNOOP_ID] [--output-dir DIR]
+    python scripts/generate_worksheets.py [--node-id KNOOP_ID] [--output-dir DIR]
 
-Without --knoop-id, generates worksheets for all grammar nodes that have content.
+Without --node-id, generates worksheets for all grammar nodes that have content.
 """
 
 import argparse
@@ -253,13 +253,13 @@ def _make_empty_paradigm_table(table_data: dict, styles: dict[str, ParagraphStyl
     return table
 
 
-def _build_exercise_elements(knoop: Node, styles: dict[str, ParagraphStyle]) -> list:
-    """Build exercise elements from the knoop's items."""
+def _build_exercise_elements(node: Node, styles: dict[str, ParagraphStyle]) -> list:
+    """Build exercise elements from the node's items."""
     elements = []
     # Filter for suitable exercise items (production, analyse, synthese, offline)
     exercise_items = [
         item
-        for item in knoop.items
+        for item in node.items
         if item.type.value
         in ("productie", "analyse", "synthese", "offline_schrijven", "herkenning")
     ]
@@ -293,16 +293,16 @@ def _build_exercise_elements(knoop: Node, styles: dict[str, ParagraphStyle]) -> 
     return elements
 
 
-def _build_greek_writing_lines(knoop: Node, styles: dict[str, ParagraphStyle]) -> list:
+def _build_greek_writing_lines(node: Node, styles: dict[str, ParagraphStyle]) -> list:
     """Build Greek letter writing practice lines for GRC alphabet nodes."""
     elements = []
 
     # Only for Greek alphabet nodes (GRC-G-FONL-ALFA-*)
-    if not knoop.id.startswith("GRC-G-FONL-ALFA-"):
+    if not node.id.startswith("GRC-G-FONL-ALFA-"):
         return elements
 
     # Extract the letter info from the description
-    beschrijving = knoop.beschrijving
+    beschrijving = node.beschrijving
     # Try to extract majuskel/minuskel from description
     # Pattern: "Α (majuskel), α (minuskel)" or similar
     letter_match = re.search(
@@ -359,7 +359,7 @@ def _build_greek_writing_lines(knoop: Node, styles: dict[str, ParagraphStyle]) -
 
 
 def generate_worksheet(
-    knoop: Node,
+    node: Node,
     content_dir: Path,
     output_path: Path,
 ) -> bool:
@@ -372,22 +372,22 @@ def generate_worksheet(
 
     # Load content markdown if available
     content_text = None
-    if knoop.content_ref:
-        content_path = content_dir / knoop.content_ref
+    if node.content_ref:
+        content_path = content_dir / node.content_ref
         if content_path.exists():
             content_text = content_path.read_text(encoding="utf-8")
     else:
         # Try conventional path
-        content_path = content_dir / f"{knoop.id}.md"
+        content_path = content_dir / f"{node.id}.md"
         if content_path.exists():
             content_text = content_path.read_text(encoding="utf-8")
 
     # Need either content (for tables) or items (for exercises)
     # or be a Greek alphabet node (for writing lines)
     has_tables = content_text and "|" in content_text
-    has_items = bool(knoop.items)
-    is_greek_letter = knoop.id.startswith("GRC-G-FONL-ALFA-") and re.search(
-        r"\(majuskel\)", knoop.beschrijving or ""
+    has_items = bool(node.items)
+    is_greek_letter = node.id.startswith("GRC-G-FONL-ALFA-") and re.search(
+        r"\(majuskel\)", node.beschrijving or ""
     )
 
     if not has_tables and not has_items and not is_greek_letter:
@@ -402,19 +402,19 @@ def generate_worksheet(
         rightMargin=MARGIN,
         topMargin=MARGIN,
         bottomMargin=MARGIN,
-        title=f"Werkblad — {knoop.titel_nl}",
+        title=f"Werkblad — {node.titel_nl}",
         author="Gymnasium Classica",
     )
 
     elements: list = []
 
     # Title block
-    elements.append(Paragraph(knoop.titel_nl, styles["title"]))
-    elements.append(Paragraph(f"Knoop: {knoop.id}", styles["subtitle"]))
+    elements.append(Paragraph(node.titel_nl, styles["title"]))
+    elements.append(Paragraph(f"Knoop: {node.id}", styles["subtitle"]))
 
     # Description
-    if knoop.beschrijving:
-        elements.append(Paragraph(knoop.beschrijving, styles["body"]))
+    if node.beschrijving:
+        elements.append(Paragraph(node.beschrijving, styles["body"]))
         elements.append(Spacer(1, 4 * mm))
 
     # Paradigm tables (empty for filling in)
@@ -436,10 +436,10 @@ def generate_worksheet(
                 elements.append(Spacer(1, 4 * mm))
 
     # Exercises from items
-    elements.extend(_build_exercise_elements(knoop, styles))
+    elements.extend(_build_exercise_elements(node, styles))
 
     # Greek writing practice
-    elements.extend(_build_greek_writing_lines(knoop, styles))
+    elements.extend(_build_greek_writing_lines(node, styles))
 
     # Footer
     elements.append(Spacer(1, 6 * mm))
@@ -472,10 +472,10 @@ def main() -> None:
         help="Output directory for PDF files (default: data/worksheets)",
     )
     parser.add_argument(
-        "--knoop-id",
+        "--node-id",
         type=str,
         default=None,
-        help="Generate worksheet for a single knoop ID only",
+        help="Generate worksheet for a single node ID only",
     )
     args = parser.parse_args()
 
@@ -488,21 +488,21 @@ def main() -> None:
     skipped = 0
 
     for node_id in sorted(graph.nodes):
-        knoop: Node = graph.nodes[node_id]["knoop"]
+        node: Node = graph.nodes[node_id]["node"]
 
         # Filter: only grammar nodes
-        if knoop.type != NodeType.G:
+        if node.type != NodeType.G:
             continue
 
-        # Filter: specific knoop if requested
-        if args.knoop_id and knoop.id != args.knoop_id:
+        # Filter: specific node if requested
+        if args.node_id and node.id != args.node_id:
             continue
 
-        output_path = args.output_dir / f"{knoop.id}.pdf"
+        output_path = args.output_dir / f"{node.id}.pdf"
 
-        if generate_worksheet(knoop, args.content_dir, output_path):
+        if generate_worksheet(node, args.content_dir, output_path):
             generated += 1
-            print(f"  [OK] {knoop.id}")
+            print(f"  [OK] {node.id}")
         else:
             skipped += 1
 

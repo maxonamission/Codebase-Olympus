@@ -1,4 +1,4 @@
-"""Tests for D1-07: Progress endpoints (overview + per knoop)."""
+"""Tests for D1-07: Progress endpoints (overview + per node)."""
 
 import tempfile
 from pathlib import Path
@@ -47,14 +47,14 @@ class TestProgressOverview:
         db = client.app.state.db
         graph = client.app.state.graph
 
-        # Pick a real knoop_id from the graph
+        # Pick a real node_id from the graph
         knoop_ids = list(graph.nodes)[:3]
         learner = LearnerModel(user_id=UUID(user_id))
-        learner.knoop_states[knoop_ids[0]] = NodeState(
-            knoop_id=knoop_ids[0], posterior_mastery=0.85, source=MasterySource.PRACTICE
+        learner.node_states[knoop_ids[0]] = NodeState(
+            node_id=knoop_ids[0], posterior_mastery=0.85, source=MasterySource.PRACTICE
         )
-        learner.knoop_states[knoop_ids[1]] = NodeState(
-            knoop_id=knoop_ids[1], posterior_mastery=0.40, source=MasterySource.PRACTICE
+        learner.node_states[knoop_ids[1]] = NodeState(
+            node_id=knoop_ids[1], posterior_mastery=0.40, source=MasterySource.PRACTICE
         )
         save_learner_model(db, learner)
 
@@ -120,17 +120,17 @@ class TestClusterProgress:
         graph = client.app.state.graph
         expected: dict[str, int] = {}
         for node_id in graph.nodes:
-            knoop = graph.nodes[node_id]["knoop"]
-            if knoop.type.value != "V" or not knoop.semantisch_cluster:
+            node = graph.nodes[node_id]["node"]
+            if node.type.value != "V" or not node.semantisch_cluster:
                 continue
-            expected[knoop.semantisch_cluster] = expected.get(knoop.semantisch_cluster, 0) + 1
+            expected[node.semantisch_cluster] = expected.get(node.semantisch_cluster, 0) + 1
 
         data = client.get("/progress/clusters", headers=headers).json()
         for c in data["clusters"]:
             assert c["total"] == expected.get(c["label"], 0), c["label"]
 
     def test_clusters_reflect_mastery(self, client):
-        """Mastering one V-knoop in a cluster bumps that cluster's counters."""
+        """Mastering one V-node in a cluster bumps that cluster's counters."""
         user_id, headers = _auth_header(client, "clusters_mastery@example.nl")
         db = client.app.state.db
         graph = client.app.state.graph
@@ -138,16 +138,16 @@ class TestClusterProgress:
         target_label = None
         target_node = None
         for node_id in graph.nodes:
-            knoop = graph.nodes[node_id]["knoop"]
-            if knoop.type.value == "V" and knoop.semantisch_cluster:
-                target_label = knoop.semantisch_cluster
+            node = graph.nodes[node_id]["node"]
+            if node.type.value == "V" and node.semantisch_cluster:
+                target_label = node.semantisch_cluster
                 target_node = node_id
                 break
-        assert target_node is not None, "Seed data must contain a clustered V-knoop"
+        assert target_node is not None, "Seed data must contain a clustered V-node"
 
         learner = LearnerModel(user_id=UUID(user_id))
-        learner.knoop_states[target_node] = NodeState(
-            knoop_id=target_node,
+        learner.node_states[target_node] = NodeState(
+            node_id=target_node,
             posterior_mastery=0.9,
             source=MasterySource.PRACTICE,
         )
@@ -166,33 +166,33 @@ class TestClusterProgress:
 
 
 class TestKnoopProgress:
-    def test_knoop_not_found(self, client):
-        _, headers = _auth_header(client, "knoop404@example.nl")
-        resp = client.get("/progress/knoop/NONEXISTENT-ID", headers=headers)
+    def test_node_not_found(self, client):
+        _, headers = _auth_header(client, "node404@example.nl")
+        resp = client.get("/progress/node/NONEXISTENT-ID", headers=headers)
         assert resp.status_code == 404
 
-    def test_knoop_no_learner_state(self, client):
+    def test_node_no_learner_state(self, client):
         """Knoop exists in graph but user hasn't interacted with it."""
-        _, headers = _auth_header(client, "knoop_unseen@example.nl")
+        _, headers = _auth_header(client, "node_unseen@example.nl")
         graph = client.app.state.graph
-        knoop_id = next(iter(graph.nodes))
-        resp = client.get(f"/progress/knoop/{knoop_id}", headers=headers)
+        node_id = next(iter(graph.nodes))
+        resp = client.get(f"/progress/node/{node_id}", headers=headers)
         assert resp.status_code == 200
         data = resp.json()
-        assert data["knoop_id"] == knoop_id
+        assert data["node_id"] == node_id
         assert data["posterior_mastery"] == 0.0
         assert data["repetitions"] == 0
         assert data["item_history"] == []
 
-    def test_knoop_with_state(self, client):
-        user_id, headers = _auth_header(client, "knoop_state@example.nl")
+    def test_node_with_state(self, client):
+        user_id, headers = _auth_header(client, "node_state@example.nl")
         db = client.app.state.db
         graph = client.app.state.graph
-        knoop_id = next(iter(graph.nodes))
+        node_id = next(iter(graph.nodes))
 
         learner = LearnerModel(user_id=UUID(user_id))
-        learner.knoop_states[knoop_id] = NodeState(
-            knoop_id=knoop_id,
+        learner.node_states[node_id] = NodeState(
+            node_id=node_id,
             posterior_mastery=0.6,
             easiness_factor=2.2,
             interval_days=3.0,
@@ -201,13 +201,13 @@ class TestKnoopProgress:
         )
         save_learner_model(db, learner)
 
-        resp = client.get(f"/progress/knoop/{knoop_id}", headers=headers)
+        resp = client.get(f"/progress/node/{node_id}", headers=headers)
         assert resp.status_code == 200
         data = resp.json()
         assert data["posterior_mastery"] == pytest.approx(0.6)
         assert data["repetitions"] == 5
         assert data["source"] == "practice"
 
-    def test_knoop_requires_auth(self, client):
-        resp = client.get("/progress/knoop/LAT-G-MORF-NOM-D1")
+    def test_node_requires_auth(self, client):
+        resp = client.get("/progress/node/LAT-G-MORF-NOM-D1")
         assert resp.status_code == 422

@@ -97,7 +97,7 @@ def make_beschrijving(w: dict, band: str) -> str:
     return f"{w['lemma']}: {w['mean']}. Frequentieband {band}."
 
 
-def make_knoop(w: dict, band: str) -> dict:
+def make_node(w: dict, band: str) -> dict:
     return {
         "id": f"LAT-V-{band}-{w['id']}",
         "type": "V",
@@ -131,7 +131,7 @@ def make_edge(w: dict, band: str) -> dict | None:
 
 def main() -> None:
     words = json.loads(WORDS.read_text("utf-8"))
-    knopen = [make_knoop(w, BAND) for w in words]
+    knopen = [make_node(w, BAND) for w in words]
     edges = [e for w in words if (e := make_edge(w, BAND)) is not None]
 
     # Validate via Pydantic

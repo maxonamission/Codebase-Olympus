@@ -137,7 +137,7 @@ class TestItemHistoryRecording:
             answer_text="est",
         )
 
-        state = learner.knoop_states["LAT-V-F01-TEST"]
+        state = learner.node_states["LAT-V-F01-TEST"]
         assert len(state.item_history) == 1
         entry = state.item_history[0]
         assert entry.answer_text == "est"
@@ -156,7 +156,7 @@ class TestItemHistoryRecording:
             now=now,
         )
 
-        state = learner.knoop_states["LAT-V-F01-TEST"]
+        state = learner.node_states["LAT-V-F01-TEST"]
         assert len(state.item_history) == 1
         entry = state.item_history[0]
         assert entry.answer_text is None

@@ -6,7 +6,7 @@ from pathlib import Path
 import networkx as nx
 
 from gymnasium_classica.models.graph import Node, PrerequisiteEdge
-from gymnasium_classica.schemas.id_schema import validate_knoop_id
+from gymnasium_classica.schemas.id_schema import validate_node_id
 
 
 @dataclass
@@ -141,13 +141,13 @@ def validate_node_ids(graph: nx.DiGraph) -> list[str]:
     """
     errors = []
     for node_id in graph.nodes:
-        if not validate_knoop_id(node_id):
+        if not validate_node_id(node_id):
             errors.append(f"Invalid node ID: {node_id!r}")
     return errors
 
 
 def validate_content_refs(graph: nx.DiGraph, repo_root: Path) -> list[str]:
-    """Check that every knoop's ``content_ref`` points at an existing file.
+    """Check that every node's ``content_ref`` points at an existing file.
 
     Relative paths are resolved against *repo_root*.  Absolute paths are
     used as-is.  Knopen without a ``content_ref`` are ignored — the
@@ -160,14 +160,14 @@ def validate_content_refs(graph: nx.DiGraph, repo_root: Path) -> list[str]:
     """
     errors: list[str] = []
     for node_id in graph.nodes:
-        knoop: Node | None = graph.nodes[node_id].get("knoop")
-        if knoop is None or knoop.content_ref is None:
+        node: Node | None = graph.nodes[node_id].get("node")
+        if node is None or node.content_ref is None:
             continue
-        ref_path = Path(knoop.content_ref)
+        ref_path = Path(node.content_ref)
         resolved = ref_path if ref_path.is_absolute() else repo_root / ref_path
         if not resolved.is_file():
             errors.append(
-                f"Knoop {node_id}: content_ref {knoop.content_ref!r} "
+                f"Knoop {node_id}: content_ref {node.content_ref!r} "
                 f"verwijst naar niet-bestaand bestand ({resolved})."
             )
     return errors
@@ -250,8 +250,8 @@ def validate_graph(
 
     # 8. Nodes without items (non-fatal)
     for node_id in graph.nodes:
-        knoop = graph.nodes[node_id].get("knoop")
-        if knoop and not knoop.items:
+        node = graph.nodes[node_id].get("node")
+        if node and not node.items:
             report.warnings.append(f"Node {node_id} has no items")
 
     # 9. content_ref existence (opt-in)

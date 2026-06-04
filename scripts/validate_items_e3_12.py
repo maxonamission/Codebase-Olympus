@@ -2,7 +2,7 @@
 """E3-12 validation: coverage, IRT parameters, exercise type mix for GRC items.
 
 Covers two graph files — grc_alfabet.json (FONL) and
-grc_grammatica_leerjaar1.json (MORF + SYNT). Reports per knoop-type.
+grc_grammatica_leerjaar1.json (MORF + SYNT). Reports per node-type.
 Analoog aan scripts/validate_items_c1_11.py voor Latijn.
 """
 
@@ -19,9 +19,9 @@ from gymnasium_classica.models.graph import Item
 BASE = Path(__file__).parent.parent / "data" / "graph"
 
 
-def _subcategory(knoop_id: str) -> str:
-    """Return MORF, SYNT or FONL based on knoop-id segments."""
-    parts = knoop_id.split("-")
+def _subcategory(node_id: str) -> str:
+    """Return MORF, SYNT or FONL based on node-id segments."""
+    parts = node_id.split("-")
     if len(parts) >= 3:
         return parts[2]
     return "OTHER"
@@ -79,7 +79,7 @@ def main() -> None:
     print(f"   GRC-G knopen zonder items: {len(knopen_zonder)}")
     print(f"   Totaal items:              {total}")
     if knopen_met:
-        print(f"   Gem. items/knoop:          {total / len(knopen_met):.1f}")
+        print(f"   Gem. items/node:          {total / len(knopen_met):.1f}")
 
         # Alfabet-letter-knopen hebben bij ontwerp 1 offline-schrijven item.
         def _is_letter_drill(kid: str) -> bool:

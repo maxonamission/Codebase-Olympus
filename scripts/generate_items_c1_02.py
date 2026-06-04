@@ -34,7 +34,7 @@ LJ1_KNOOP_IDS = {
 
 
 def define_items() -> dict[str, list[dict]]:
-    """Return knoop_id -> list of item dicts."""
+    """Return node_id -> list of item dicts."""
     items: dict[str, list[dict]] = {}
 
     # ── DECL1-INTRO (kennis, 2 herkenning) ───────────────────────────
@@ -480,27 +480,27 @@ def define_items() -> dict[str, list[dict]]:
     return items
 
 
-def validate_items(items_by_knoop: dict[str, list[dict]]) -> None:
+def validate_items(items_by_node: dict[str, list[dict]]) -> None:
     """Validate all items via Pydantic model."""
-    for _knoop_id, item_list in items_by_knoop.items():
+    for _node_id, item_list in items_by_node.items():
         for item_dict in item_list:
             Item(**item_dict)
     print("All items validated successfully.")
 
 
-def add_items_to_json(json_path: Path, items_by_knoop: dict[str, list[dict]]) -> int:
+def add_items_to_json(json_path: Path, items_by_node: dict[str, list[dict]]) -> int:
     """Load JSON, add items to matching knopen, write back. Returns count added."""
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
 
     added = 0
-    for knoop in data["knopen"]:
-        if knoop["id"] in items_by_knoop:
-            existing_ids = {item["id"] for item in knoop.get("items", [])}
+    for node in data["knopen"]:
+        if node["id"] in items_by_node:
+            existing_ids = {item["id"] for item in node.get("items", [])}
             new_items = [
-                item for item in items_by_knoop[knoop["id"]] if item["id"] not in existing_ids
+                item for item in items_by_node[node["id"]] if item["id"] not in existing_ids
             ]
-            knoop.setdefault("items", []).extend(new_items)
+            node.setdefault("items", []).extend(new_items)
             added += len(new_items)
 
     with open(json_path, "w", encoding="utf-8") as f:
@@ -510,21 +510,21 @@ def add_items_to_json(json_path: Path, items_by_knoop: dict[str, list[dict]]) ->
     return added
 
 
-def print_summary(items_by_knoop: dict[str, list[dict]]) -> None:
+def print_summary(items_by_node: dict[str, list[dict]]) -> None:
     """Print summary statistics."""
-    total = sum(len(v) for v in items_by_knoop.values())
+    total = sum(len(v) for v in items_by_node.values())
     type_counter: Counter[str] = Counter()
     richting_counter: Counter[str] = Counter()
-    for item_list in items_by_knoop.values():
+    for item_list in items_by_node.values():
         for item in item_list:
             type_counter[item["type"]] += 1
             richting_counter[item["richting"]] += 1
 
     print("\n=== C1-02 Summary ===")
-    print(f"Knopen: {len(items_by_knoop)}")
+    print(f"Knopen: {len(items_by_node)}")
     print(f"Total items: {total}")
-    print("\nItems per knoop:")
-    for kid, item_list in sorted(items_by_knoop.items()):
+    print("\nItems per node:")
+    for kid, item_list in sorted(items_by_node.items()):
         print(f"  {kid}: {len(item_list)}")
     print("\nOefentype-verdeling:")
     for t, c in type_counter.most_common():
@@ -535,15 +535,15 @@ def print_summary(items_by_knoop: dict[str, list[dict]]) -> None:
 
 
 def main() -> None:
-    items_by_knoop = define_items()
-    validate_items(items_by_knoop)
+    items_by_node = define_items()
+    validate_items(items_by_node)
 
     base = Path(__file__).parent.parent / "data" / "graph"
     poc_path = base / "lat_grammatica_poc.json"
     lj1_path = base / "lat_grammatica_leerjaar1.json"
 
-    poc_items = {k: v for k, v in items_by_knoop.items() if k in POC_KNOOP_IDS}
-    lj1_items = {k: v for k, v in items_by_knoop.items() if k in LJ1_KNOOP_IDS}
+    poc_items = {k: v for k, v in items_by_node.items() if k in POC_KNOOP_IDS}
+    lj1_items = {k: v for k, v in items_by_node.items() if k in LJ1_KNOOP_IDS}
 
     added_poc = add_items_to_json(poc_path, poc_items)
     added_lj1 = add_items_to_json(lj1_path, lj1_items)
@@ -551,7 +551,7 @@ def main() -> None:
     print(f"Added {added_poc} items to {poc_path.name}")
     print(f"Added {added_lj1} items to {lj1_path.name}")
 
-    print_summary(items_by_knoop)
+    print_summary(items_by_node)
 
 
 if __name__ == "__main__":

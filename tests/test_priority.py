@@ -18,17 +18,17 @@ from gymnasium_classica.scheduling.priority import (
 
 class TestEstimateRetention:
     def test_never_reviewed_unmastered(self):
-        state = NodeState(knoop_id="X", posterior_mastery=0.10)
+        state = NodeState(node_id="X", posterior_mastery=0.10)
         assert estimate_retention(state) == 0.0
 
     def test_never_reviewed_mastered_diagnostic(self):
-        state = NodeState(knoop_id="X", posterior_mastery=0.80, source=MasterySource.DIAGNOSTIC)
+        state = NodeState(node_id="X", posterior_mastery=0.80, source=MasterySource.DIAGNOSTIC)
         assert estimate_retention(state) == pytest.approx(0.5)
 
     def test_just_reviewed(self):
         now = datetime(2026, 4, 12, 10, 0)
         state = NodeState(
-            knoop_id="X",
+            node_id="X",
             posterior_mastery=0.90,
             interval_days=6.0,
             easiness_factor=2.5,
@@ -40,7 +40,7 @@ class TestEstimateRetention:
     def test_decay_over_time(self):
         base = datetime(2026, 4, 1)
         state = NodeState(
-            knoop_id="X",
+            node_id="X",
             posterior_mastery=0.90,
             interval_days=6.0,
             easiness_factor=2.5,
@@ -55,14 +55,14 @@ class TestEstimateRetention:
         now = base + timedelta(days=5)
 
         low_ef = NodeState(
-            knoop_id="X",
+            node_id="X",
             posterior_mastery=0.90,
             interval_days=6.0,
             easiness_factor=1.5,
             last_review=base,
         )
         high_ef = NodeState(
-            knoop_id="X",
+            node_id="X",
             posterior_mastery=0.90,
             interval_days=6.0,
             easiness_factor=3.0,
@@ -73,13 +73,13 @@ class TestEstimateRetention:
 
 class TestForgetUrgency:
     def test_unreviewed_unmastered_max_urgency(self):
-        state = NodeState(knoop_id="X", posterior_mastery=0.10)
+        state = NodeState(node_id="X", posterior_mastery=0.10)
         assert forget_urgency(state) == pytest.approx(1.0)
 
     def test_just_reviewed_low_urgency(self):
         now = datetime(2026, 4, 12)
         state = NodeState(
-            knoop_id="X",
+            node_id="X",
             posterior_mastery=0.90,
             interval_days=6.0,
             easiness_factor=2.5,
@@ -108,15 +108,15 @@ class TestReadinessScore:
         learner = LearnerModel(user_id=uuid4())
         # Set all prerequisites of NOM-D1 to mastered
         for pred in graph.predecessors("LAT-G-MORF-NOM-D1"):
-            learner.knoop_states[pred] = NodeState(knoop_id=pred, posterior_mastery=0.85)
+            learner.node_states[pred] = NodeState(node_id=pred, posterior_mastery=0.85)
         score = readiness_score("LAT-G-MORF-NOM-D1", learner, graph)
         assert score > 0.0
 
     def test_mastered_node_returns_zero(self, sample_graph_data):
         graph = load_graph_from_dict(sample_graph_data)
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-NOM-D1"] = NodeState(
-            knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.90
+        learner.node_states["LAT-G-MORF-NOM-D1"] = NodeState(
+            node_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.90
         )
         score = readiness_score("LAT-G-MORF-NOM-D1", learner, graph)
         assert score == 0.0
@@ -149,7 +149,7 @@ class TestComputeUrgencyScores:
         # Should produce results for root nodes (no prereqs needed)
         assert len(scores) > 0
         # All urgencies should be non-negative
-        for urgency, _knoop in scores:
+        for urgency, _node in scores:
             assert urgency >= 0.0
 
     def test_unmet_prerequisites_excluded(self, sample_graph_data):
@@ -157,23 +157,23 @@ class TestComputeUrgencyScores:
         learner = LearnerModel(user_id=uuid4())
         # No states → only root nodes should appear
         scores = compute_urgency_scores(learner, graph)
-        node_ids = {knoop.id for _, knoop in scores}
-        assert "LAT-G-MORF-NAAMVAL-INTRO" in node_ids  # root
-        assert "LAT-G-MORF-NOM-D1" not in node_ids  # prereqs not met
+        knoop_ids = {node.id for _, node in scores}
+        assert "LAT-G-MORF-NAAMVAL-INTRO" in knoop_ids  # root
+        assert "LAT-G-MORF-NOM-D1" not in knoop_ids  # prereqs not met
 
     def test_mastered_review_due_included(self, sample_graph_data):
         graph = load_graph_from_dict(sample_graph_data)
         learner = LearnerModel(user_id=uuid4())
         # Master a node with old review
-        learner.knoop_states["LAT-G-MORF-NOM-D1"] = NodeState(
-            knoop_id="LAT-G-MORF-NOM-D1",
+        learner.node_states["LAT-G-MORF-NOM-D1"] = NodeState(
+            node_id="LAT-G-MORF-NOM-D1",
             posterior_mastery=0.90,
             interval_days=6.0,
             last_review=datetime(2026, 3, 1),
         )
         scores = compute_urgency_scores(learner, graph, now=datetime(2026, 4, 12))
-        node_ids = {knoop.id for _, knoop in scores}
-        assert "LAT-G-MORF-NOM-D1" in node_ids  # review due
+        knoop_ids = {node.id for _, node in scores}
+        assert "LAT-G-MORF-NOM-D1" in knoop_ids  # review due
 
     def test_sorted_descending(self, sample_graph_data):
         graph = load_graph_from_dict(sample_graph_data)

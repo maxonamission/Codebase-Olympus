@@ -20,10 +20,10 @@ from gymnasium_classica.models.learner import BaselineSnapshot, LearnerModel
 
 
 def capture_baseline(learner: LearnerModel, captured_at: datetime) -> BaselineSnapshot:
-    """Snapshot de huidige posterior mastery per knoop als baseline-nulpunt."""
+    """Snapshot de huidige posterior mastery per node als baseline-nulpunt."""
     return BaselineSnapshot(
         captured_at=captured_at,
-        mastery={kid: state.posterior_mastery for kid, state in learner.knoop_states.items()},
+        mastery={kid: state.posterior_mastery for kid, state in learner.node_states.items()},
     )
 
 
@@ -48,8 +48,8 @@ def learner_progress(learner: LearnerModel) -> LearnerProgress | None:
 
     baseline_values: list[float] = []
     current_values: list[float] = []
-    for knoop_id, baseline_mastery in learner.baseline.mastery.items():
-        state = learner.knoop_states.get(knoop_id)
+    for node_id, baseline_mastery in learner.baseline.mastery.items():
+        state = learner.node_states.get(node_id)
         if state is None:
             continue
         baseline_values.append(baseline_mastery)

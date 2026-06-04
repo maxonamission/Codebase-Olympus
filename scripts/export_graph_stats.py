@@ -37,13 +37,13 @@ def main() -> None:
     nodes_with_items_per_type: dict[str, int] = {}
     zero_item_nodes: list[str] = []
     for node_id in graph.nodes:
-        knoop = graph.nodes[node_id].get("knoop")
-        if knoop is None:
+        node = graph.nodes[node_id].get("node")
+        if node is None:
             continue
-        t = knoop.type
+        t = node.type
         type_counts[t] = type_counts.get(t, 0) + 1
-        bloom_counts[knoop.bloom_niveau] = bloom_counts.get(knoop.bloom_niveau, 0) + 1
-        n_items = len(knoop.items)
+        bloom_counts[node.bloom_niveau] = bloom_counts.get(node.bloom_niveau, 0) + 1
+        n_items = len(node.items)
         items_per_type[t] = items_per_type.get(t, 0) + n_items
         if n_items > 0:
             nodes_with_items_per_type[t] = nodes_with_items_per_type.get(t, 0) + 1

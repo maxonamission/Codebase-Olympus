@@ -25,7 +25,7 @@ def _question_to_response(q: IntakeQuestion | None) -> IntakeQuestionResponse | 
     if q is None:
         return None
     return IntakeQuestionResponse(
-        knoop_id=q.knoop_id,
+        node_id=q.node_id,
         titel=q.titel,
         beschrijving=q.beschrijving,
         questions_asked=q.questions_asked,

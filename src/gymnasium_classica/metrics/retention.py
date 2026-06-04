@@ -35,7 +35,7 @@ def estimated_retention(state: NodeState, now: datetime) -> float:
     Exponentiële vergeetcurve ``R = exp(-Δdagen / stabiliteit)`` met het
     SM-2-interval als stabiliteit: op het reviewmoment is ``R = 1.0`` en het
     daalt met een halfwaardetijd van ongeveer ``stabiliteit · ln2`` dagen.
-    Een knoop die nog nooit gereviewd is, valt terug op de huidige
+    Een node die nog nooit gereviewd is, valt terug op de huidige
     posterior mastery (er is nog geen vergeetinformatie).
 
     De uitkomst ligt in [0.0, 1.0].
@@ -80,7 +80,7 @@ def build_learner_report(learner: LearnerModel, now: datetime) -> LearnerReport:
     mastery_distribution = {"new": 0, "learning": 0, "mastered": 0}
     reviews_by_richting = {"receptief": 0, "productief": 0, _RICHTING_UNKNOWN: 0}
 
-    for state in learner.knoop_states.values():
+    for state in learner.node_states.values():
         mastery_distribution[_mastery_bucket(state.posterior_mastery)] += 1
         if state.last_review is not None:
             retentions.append(estimated_retention(state, now))

@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from gymnasium_classica.models.graph import Item
 
 # --- Compact item specs ---
-# (knoop_id, file, stimulus, verwacht_resultaat, feedback, moeilijkheid)
+# (node_id, file, stimulus, verwacht_resultaat, feedback, moeilijkheid)
 
 ITEMS = [
     # === PRAESENS (poc) ===
@@ -275,9 +275,9 @@ ITEMS = [
 ]
 
 
-def next_item_nr(knoop: dict) -> int:
+def next_item_nr(node: dict) -> int:
     """Return the next available item number for a node."""
-    existing = knoop.get("items", [])
+    existing = node.get("items", [])
     max_nr = 0
     for item in existing:
         parts = item["id"].rsplit("-", 1)
@@ -287,12 +287,12 @@ def next_item_nr(knoop: dict) -> int:
 
 
 def build_item(
-    knoop_id: str, nr: int, stimulus: str, verwacht: str, feedback: str, moeilijkheid: float
+    node_id: str, nr: int, stimulus: str, verwacht: str, feedback: str, moeilijkheid: float
 ) -> dict:
     """Build an offline_schrijven item dict."""
     return {
-        "id": f"ITEM-{knoop_id}-{nr:03d}",
-        "knoop_ids": [knoop_id],
+        "id": f"ITEM-{node_id}-{nr:03d}",
+        "knoop_ids": [node_id],
         "type": "offline_schrijven",
         "richting": "productief",
         "moeilijkheid_initieel": moeilijkheid,
@@ -312,10 +312,8 @@ def main():
 
     # Group items by file
     by_file: dict[str, list] = {}
-    for knoop_id, fname, stimulus, verwacht, feedback, moeilijkheid in ITEMS:
-        by_file.setdefault(fname, []).append(
-            (knoop_id, stimulus, verwacht, feedback, moeilijkheid)
-        )
+    for node_id, fname, stimulus, verwacht, feedback, moeilijkheid in ITEMS:
+        by_file.setdefault(fname, []).append((node_id, stimulus, verwacht, feedback, moeilijkheid))
 
     total_added = 0
 
@@ -329,17 +327,17 @@ def main():
         added = 0
         per_node: dict[str, int] = {}
 
-        for knoop_id, stimulus, verwacht, feedback, moeilijkheid in item_specs:
-            if knoop_id not in node_index:
-                print(f"  SKIP: {knoop_id} not in {fname}")
+        for node_id, stimulus, verwacht, feedback, moeilijkheid in item_specs:
+            if node_id not in node_index:
+                print(f"  SKIP: {node_id} not in {fname}")
                 continue
 
-            node = node_index[knoop_id]
-            if knoop_id not in counters:
-                counters[knoop_id] = next_item_nr(node)
+            node = node_index[node_id]
+            if node_id not in counters:
+                counters[node_id] = next_item_nr(node)
 
-            nr = counters[knoop_id]
-            item_data = build_item(knoop_id, nr, stimulus, verwacht, feedback, moeilijkheid)
+            nr = counters[node_id]
+            item_data = build_item(node_id, nr, stimulus, verwacht, feedback, moeilijkheid)
 
             # Validate via Pydantic
             Item(**item_data)
@@ -347,9 +345,9 @@ def main():
             if "items" not in node:
                 node["items"] = []
             node["items"].append(item_data)
-            counters[knoop_id] = nr + 1
+            counters[node_id] = nr + 1
             added += 1
-            per_node[knoop_id] = per_node.get(knoop_id, 0) + 1
+            per_node[node_id] = per_node.get(node_id, 0) + 1
 
         # Write back
         with open(fpath, "w") as f:

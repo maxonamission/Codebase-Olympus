@@ -16,7 +16,7 @@ NOW = datetime(2026, 6, 4, 12, 0, 0)
 def _learner(current: dict[str, float], baseline: dict[str, float] | None) -> LearnerModel:
     learner = LearnerModel(user_id=uuid4())
     for kid, mastery in current.items():
-        learner.knoop_states[kid] = NodeState(knoop_id=kid, posterior_mastery=mastery)
+        learner.node_states[kid] = NodeState(node_id=kid, posterior_mastery=mastery)
     if baseline is not None:
         learner.baseline = BaselineSnapshot(captured_at=NOW, mastery=dict(baseline))
     return learner
@@ -32,7 +32,7 @@ class TestCaptureBaseline:
     def test_snapshot_is_independent_copy(self):
         learner = _learner({"A": 0.3}, baseline=None)
         snap = capture_baseline(learner, NOW)
-        learner.knoop_states["A"].posterior_mastery = 0.9
+        learner.node_states["A"].posterior_mastery = 0.9
         assert snap.mastery["A"] == 0.3  # niet meebewogen
 
 

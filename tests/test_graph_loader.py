@@ -23,9 +23,9 @@ class TestLoadGraphFromDict:
 
     def test_node_attributes(self, sample_graph_data):
         g = load_graph_from_dict(sample_graph_data)
-        knoop = g.nodes["LAT-G-MORF-NOM-D1"]["knoop"]
-        assert isinstance(knoop, Node)
-        assert knoop.titel_nl == "Nominativus 1e declinatie"
+        node = g.nodes["LAT-G-MORF-NOM-D1"]["node"]
+        assert isinstance(node, Node)
+        assert node.titel_nl == "Nominativus 1e declinatie"
 
     def test_edge_attributes(self, sample_graph_data):
         g = load_graph_from_dict(sample_graph_data)
@@ -41,7 +41,7 @@ class TestLoadGraphFromDict:
     def test_duplicate_node_ids_rejected(self, sample_graph_data):
         # Add a duplicate node
         sample_graph_data["knopen"].append(sample_graph_data["knopen"][0])
-        with pytest.raises(ValueError, match="Duplicate knoop ID"):
+        with pytest.raises(ValueError, match="Duplicate node ID"):
             load_graph_from_dict(sample_graph_data)
 
     def test_dangling_edge_source_rejected(self, sample_graph_data):
@@ -190,7 +190,7 @@ class TestLoadGraphFromDirectory:
         (graph_dir / "a.json").write_text(json.dumps(node), encoding="utf-8")
         (graph_dir / "b.json").write_text(json.dumps(node), encoding="utf-8")
 
-        with pytest.raises(ValueError, match="Duplicate knoop ID"):
+        with pytest.raises(ValueError, match="Duplicate node ID"):
             load_graph(graph_dir)
 
 
@@ -205,4 +205,4 @@ class TestRoundTrip:
         assert g2.number_of_edges() == g.number_of_edges()
         # Verify node data survives round-trip
         for node_id in g.nodes:
-            assert g.nodes[node_id]["knoop"] == g2.nodes[node_id]["knoop"]
+            assert g.nodes[node_id]["node"] == g2.nodes[node_id]["node"]

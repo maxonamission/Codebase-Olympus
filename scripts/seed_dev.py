@@ -90,13 +90,13 @@ def main() -> None:
     apply_methode_profile(learner, graph, "fortuna", "3")
     learner.intake_completed = True
 
-    treated = sum(1 for s in learner.knoop_states.values() if s.posterior_mastery >= 0.50)
+    treated = sum(1 for s in learner.node_states.values() if s.posterior_mastery >= 0.50)
     print(f"  Intake: Fortuna hfst. 3 → {treated} treated nodes (prior 0.70)")
 
     # Promote 20 nodes to full mastery
     promoted = 0
     now = datetime.now()
-    for _knoop_id, state in learner.knoop_states.items():
+    for _node_id, state in learner.node_states.items():
         if promoted >= 20:
             break
         if state.posterior_mastery >= 0.50:

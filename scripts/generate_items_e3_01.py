@@ -773,25 +773,25 @@ def collect_all() -> dict[str, list[dict]]:
     return out
 
 
-def validate_all(items_by_knoop: dict[str, list[dict]]) -> None:
-    for _knoop_id, item_list in items_by_knoop.items():
+def validate_all(items_by_node: dict[str, list[dict]]) -> None:
+    for _node_id, item_list in items_by_node.items():
         for item_dict in item_list:
             Item(**item_dict)
-    print(f"All {sum(len(v) for v in items_by_knoop.values())} items validated.")
+    print(f"All {sum(len(v) for v in items_by_node.values())} items validated.")
 
 
-def add_items_to_json(json_path: Path, items_by_knoop: dict[str, list[dict]]) -> int:
+def add_items_to_json(json_path: Path, items_by_node: dict[str, list[dict]]) -> int:
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
 
     added = 0
-    for knoop in data["knopen"]:
-        if knoop["id"] in items_by_knoop:
-            existing_ids = {item["id"] for item in knoop.get("items", [])}
+    for node in data["knopen"]:
+        if node["id"] in items_by_node:
+            existing_ids = {item["id"] for item in node.get("items", [])}
             new_items = [
-                item for item in items_by_knoop[knoop["id"]] if item["id"] not in existing_ids
+                item for item in items_by_node[node["id"]] if item["id"] not in existing_ids
             ]
-            knoop.setdefault("items", []).extend(new_items)
+            node.setdefault("items", []).extend(new_items)
             added += len(new_items)
 
     with open(json_path, "w", encoding="utf-8") as f:
@@ -801,17 +801,17 @@ def add_items_to_json(json_path: Path, items_by_knoop: dict[str, list[dict]]) ->
     return added
 
 
-def print_summary(items_by_knoop: dict[str, list[dict]]) -> None:
-    total = sum(len(v) for v in items_by_knoop.values())
+def print_summary(items_by_node: dict[str, list[dict]]) -> None:
+    total = sum(len(v) for v in items_by_node.values())
     type_counter: Counter[str] = Counter()
     richting_counter: Counter[str] = Counter()
-    for item_list in items_by_knoop.values():
+    for item_list in items_by_node.values():
         for item in item_list:
             type_counter[item["type"]] += 1
             richting_counter[item["richting"]] += 1
 
     print("\n=== E3-01 Summary ===")
-    print(f"Knopen: {len(items_by_knoop)}")
+    print(f"Knopen: {len(items_by_node)}")
     print(f"Total items: {total}")
     print("\nOefentype-verdeling:")
     for t, c in type_counter.most_common():
@@ -826,16 +826,16 @@ def main() -> None:
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
-    items_by_knoop = collect_all()
-    validate_all(items_by_knoop)
-    print_summary(items_by_knoop)
+    items_by_node = collect_all()
+    validate_all(items_by_node)
+    print_summary(items_by_node)
 
     if args.dry_run:
         print("\nDry-run: geen wijzigingen geschreven.")
         return
 
     path = Path(__file__).parent.parent / "data" / "graph" / "grc_alfabet.json"
-    added = add_items_to_json(path, items_by_knoop)
+    added = add_items_to_json(path, items_by_node)
     print(f"\nAdded {added} items to {path.name}")
 
 

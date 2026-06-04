@@ -31,7 +31,7 @@ from gymnasium_classica.models.user import LearningRoute
 from gymnasium_classica.scheduling.bkt import (
     SELF_REPORT_BKT_PARAMS,
     propagate_practice_correct,
-    update_knoop_state,
+    update_node_state,
 )
 from gymnasium_classica.scheduling.non_interference import (
     NonInterferenceState,
@@ -82,7 +82,7 @@ AnswerFn = Callable[[str, Node], tuple[ResponseType, int]]
 class SessionItem:
     """A single item presented during a session."""
 
-    knoop_id: str
+    node_id: str
     phase: SessionPhase
     response: ResponseType | None = None
     response_time_ms: int | None = None
@@ -103,8 +103,8 @@ class SessionResult:
     follow_ups: list[OfflineAssignment] = field(default_factory=list)
 
 
-def _get_state_posterior(learner: LearnerModel, knoop_id: str) -> float:
-    state = learner.knoop_states.get(knoop_id)
+def _get_state_posterior(learner: LearnerModel, node_id: str) -> float:
+    state = learner.node_states.get(node_id)
     return state.posterior_mastery if state else 0.10
 
 
@@ -116,14 +116,14 @@ def _candidates_for_warmup(
     """Mastered nodes approaching forgetting threshold."""
     candidates = []
     for node_id in graph.nodes:
-        state = learner.knoop_states.get(node_id)
+        state = learner.node_states.get(node_id)
         if state is None or state.posterior_mastery < MASTERY_THRESHOLD:
             continue
         retention = estimate_retention(state, now)
         if retention < REVIEW_RETENTION_THRESHOLD:
             urgency = forget_urgency(state, now)
-            knoop: Node = graph.nodes[node_id]["knoop"]
-            candidates.append((urgency, knoop))
+            node: Node = graph.nodes[node_id]["node"]
+            candidates.append((urgency, node))
     candidates.sort(key=lambda x: x[0], reverse=True)
     return candidates
 
@@ -146,8 +146,8 @@ def _candidates_for_new_material(
         out_deg = graph.out_degree(node_id) / max_out_deg
         # Combine readiness and pedagogical value
         score = 0.6 * ready + 0.4 * out_deg
-        knoop: Node = graph.nodes[node_id]["knoop"]
-        candidates.append((score, knoop))
+        node: Node = graph.nodes[node_id]["node"]
+        candidates.append((score, node))
 
     candidates.sort(key=lambda x: x[0], reverse=True)
     return candidates
@@ -176,13 +176,13 @@ def select_passage(
     for passage in passages:
         reachable_unmastered = 0
         total_relevant = 0
-        passage_knoop_set = set(passage.knoop_ids)
+        passage_node_set = set(passage.knoop_ids)
 
-        for knoop_id in passage.knoop_ids:
-            if knoop_id not in graph.nodes:
+        for node_id in passage.knoop_ids:
+            if node_id not in graph.nodes:
                 continue
             total_relevant += 1
-            posterior = _get_state_posterior(learner, knoop_id)
+            posterior = _get_state_posterior(learner, node_id)
             if posterior >= MASTERY_THRESHOLD:
                 continue  # already mastered, doesn't count
 
@@ -191,12 +191,12 @@ def select_passage(
             # 2. Its prerequisites pass the relaxed threshold, OR
             # 3. All its prerequisites are also in this passage
             #    (the passage introduces them together)
-            preds = list(graph.predecessors(knoop_id))
-            if not preds or all(p in passage_knoop_set for p in preds):
+            preds = list(graph.predecessors(node_id))
+            if not preds or all(p in passage_node_set for p in preds):
                 reachable_unmastered += 1
             else:
                 ready = readiness_score(
-                    knoop_id,
+                    node_id,
                     learner,
                     graph,
                     prereq_threshold=CONTEXT_FIRST_PREREQ_THRESHOLD,
@@ -238,24 +238,24 @@ def _candidates_for_new_material_context_first(
     candidates = []
     max_out_deg = max((graph.out_degree(n) for n in graph.nodes), default=1) or 1
 
-    for knoop_id in passage.knoop_ids:
-        if knoop_id not in graph.nodes:
+    for node_id in passage.knoop_ids:
+        if node_id not in graph.nodes:
             continue
-        posterior = _get_state_posterior(learner, knoop_id)
+        posterior = _get_state_posterior(learner, node_id)
         if posterior >= MASTERY_THRESHOLD:
             continue
         ready = readiness_score(
-            knoop_id,
+            node_id,
             learner,
             graph,
             prereq_threshold=CONTEXT_FIRST_PREREQ_THRESHOLD,
         )
         if ready == 0.0:
             continue
-        out_deg = graph.out_degree(knoop_id) / max_out_deg
+        out_deg = graph.out_degree(node_id) / max_out_deg
         score = 0.6 * ready + 0.4 * out_deg
-        knoop: Node = graph.nodes[knoop_id]["knoop"]
-        candidates.append((score, knoop))
+        node: Node = graph.nodes[node_id]["node"]
+        candidates.append((score, node))
 
     candidates.sort(key=lambda x: x[0], reverse=True)
     return candidates
@@ -272,18 +272,18 @@ def _candidates_for_deepening(
     # Post-requisites of new nodes
     for new_id in new_node_ids:
         for succ in graph.successors(new_id):
-            knoop: Node = graph.nodes[succ]["knoop"]
+            node: Node = graph.nodes[succ]["node"]
             posterior = _get_state_posterior(learner, succ)
             if posterior < MASTERY_THRESHOLD:
                 ready = readiness_score(succ, learner, graph)
                 if ready > 0:
-                    candidates.append((0.8, knoop))
+                    candidates.append((0.8, node))
 
     # Also include general high-urgency items
     all_scores = compute_urgency_scores(learner, graph, now=now)
-    for score, knoop in all_scores[:10]:
-        if knoop.id not in new_node_ids:
-            candidates.append((score * 0.7, knoop))
+    for score, node in all_scores[:10]:
+        if node.id not in new_node_ids:
+            candidates.append((score * 0.7, node))
 
     candidates.sort(key=lambda x: x[0], reverse=True)
     return candidates
@@ -300,12 +300,12 @@ def _candidates_for_cooldown(
     for node_id in graph.nodes:
         if node_id in session_node_ids:
             continue
-        state = learner.knoop_states.get(node_id)
+        state = learner.node_states.get(node_id)
         if state is None or state.posterior_mastery < MASTERY_THRESHOLD:
             continue
         urgency = forget_urgency(state, now)
-        knoop: Node = graph.nodes[node_id]["knoop"]
-        candidates.append((urgency, knoop))
+        node: Node = graph.nodes[node_id]["node"]
+        candidates.append((urgency, node))
     candidates.sort(key=lambda x: x[0], reverse=True)
     return candidates
 
@@ -313,7 +313,7 @@ def _candidates_for_cooldown(
 def _process_response(
     learner: LearnerModel,
     graph: nx.DiGraph,
-    knoop_id: str,
+    node_id: str,
     response: ResponseType,
     now: datetime,
     *,
@@ -326,17 +326,17 @@ def _process_response(
     analysis can inspect what the learner actually typed/selected.
     """
     # BKT
-    update_knoop_state(learner, knoop_id, response)
+    update_node_state(learner, node_id, response)
     if response in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT):
-        propagate_practice_correct(learner, graph, knoop_id)
+        propagate_practice_correct(learner, graph, node_id)
 
     # SM-2
-    state = learner.knoop_states[knoop_id]
+    state = learner.node_states[node_id]
     sm2_update(state, response, review_time=now)
 
     # Conditional completion: fallback for diagnostic-sourced failures
     if response == ResponseType.INCORRECT and state.source == MasterySource.DIAGNOSTIC:
-        apply_fallback(learner, graph, knoop_id)
+        apply_fallback(learner, graph, node_id)
 
     # Record the raw attempt (optional; callers pass None when they
     # don't have a literal answer, e.g. self-assess paths in run_session)
@@ -354,12 +354,12 @@ def _collect_offline_items(
     for node_id in session_node_ids:
         if node_id not in graph.nodes:
             continue
-        knoop: Node = graph.nodes[node_id]["knoop"]
-        for item in knoop.items:
+        node: Node = graph.nodes[node_id]["node"]
+        for item in node.items:
             if item.type == ItemType.OFFLINE_SCHRIJVEN:
                 assignments.append(
                     OfflineAssignment(
-                        knoop_id=node_id,
+                        node_id=node_id,
                         item_id=item.id,
                         assigned_at=now,
                     )
@@ -393,15 +393,15 @@ def process_self_report(
     )
     bkt_response = ResponseType.CORRECT if correct_for_bkt else ResponseType.INCORRECT
 
-    update_knoop_state(
+    update_node_state(
         learner,
-        assignment.knoop_id,
+        assignment.node_id,
         bkt_response,
         params=SELF_REPORT_BKT_PARAMS,
     )
 
     # Mark mastery source as self-report
-    state = learner.knoop_states[assignment.knoop_id]
+    state = learner.node_states[assignment.node_id]
     state.source = MasterySource.SELF_REPORT
 
     # Mark assignment as completed
@@ -422,7 +422,7 @@ def run_session(
 ) -> SessionResult:
     """Orchestrate a complete 30-minute learning session.
 
-    *answer_fn(knoop_id, knoop)* returns ``(ResponseType, response_time_ms)``.
+    *answer_fn(node_id, node)* returns ``(ResponseType, response_time_ms)``.
 
     When *learning_route* is CONTEXT_FIRST the new-material phase selects
     a passage instead of picking grammar nodes topologically.  The
@@ -475,27 +475,27 @@ def run_session(
             if phase == SessionPhase.NEW_MATERIAL and new_count >= MAX_NEW_NODES:
                 break
 
-            knoop_id = selected.id
-            before = _get_state_posterior(learner, knoop_id)
+            node_id = selected.id
+            before = _get_state_posterior(learner, node_id)
 
             # Get response from learner
-            response, time_ms = answer_fn(knoop_id, selected)
+            response, time_ms = answer_fn(node_id, selected)
 
             # Process the response (BKT + SM-2 + fallback)
-            _process_response(learner, graph, knoop_id, response, now)
+            _process_response(learner, graph, node_id, response, now)
 
-            after = _get_state_posterior(learner, knoop_id)
+            after = _get_state_posterior(learner, node_id)
 
             # Record
             item = SessionItem(
-                knoop_id=knoop_id,
+                node_id=node_id,
                 phase=phase,
                 response=response,
                 response_time_ms=time_ms,
             )
             result.items.append(item)
-            result.mastery_changes[knoop_id] = (before, after)
-            session_node_ids.add(knoop_id)
+            result.mastery_changes[node_id] = (before, after)
+            session_node_ids.add(node_id)
 
             # Track domain balance
             domain = selected.type.value
@@ -503,10 +503,10 @@ def run_session(
 
             # Track new vs review
             if before < MASTERY_THRESHOLD and phase == SessionPhase.NEW_MATERIAL:
-                result.nodes_introduced.append(knoop_id)
+                result.nodes_introduced.append(node_id)
                 new_count += 1
             else:
-                result.nodes_reviewed.append(knoop_id)
+                result.nodes_reviewed.append(node_id)
 
             # Time accounting
             item_time = DEFAULT_ITEM_TIME_SEC
@@ -514,7 +514,7 @@ def run_session(
             items_in_phase += 1
 
             # Remove selected from current candidates to avoid re-selection
-            candidates = [(s, k) for s, k in candidates if k.id != knoop_id]
+            candidates = [(s, k) for s, k in candidates if k.id != node_id]
 
     # Schedule offline assignments at end of session
     new_offline = _collect_offline_items(graph, session_node_ids, now)
@@ -532,7 +532,7 @@ def run_session(
             session_id=session_id,
             started_at=now,
             ended_at=now,
-            items_reviewed=[item.knoop_id for item in result.items],
+            items_reviewed=[item.node_id for item in result.items],
             learning_route=learning_route.value,
         )
     )

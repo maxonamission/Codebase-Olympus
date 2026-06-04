@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from gymnasium_classica.models.graph import Item
 
 # --- Greek letter data ---
-# (knoop_id_suffix, upper, lower, name, tip)
+# (node_id_suffix, upper, lower, name, tip)
 LETTERS = [
     ("ALFA", "Α", "α", "alfa", "Lijkt op de Latijnse A, maar de kleine letter is rond."),
     (
@@ -158,9 +158,9 @@ LETTERS = [
 ]
 
 
-def next_item_nr(knoop: dict) -> int:
+def next_item_nr(node: dict) -> int:
     """Return the next available item number for a node."""
-    existing = knoop.get("items", [])
+    existing = node.get("items", [])
     max_nr = 0
     for item in existing:
         parts = item["id"].rsplit("-", 1)
@@ -180,17 +180,17 @@ def main():
     added = 0
 
     for suffix, upper, lower, name, tip in LETTERS:
-        knoop_id = f"GRC-G-FONL-ALFA-{suffix}"
-        if knoop_id not in node_index:
-            print(f"  SKIP: {knoop_id} not found")
+        node_id = f"GRC-G-FONL-ALFA-{suffix}"
+        if node_id not in node_index:
+            print(f"  SKIP: {node_id} not found")
             continue
 
-        node = node_index[knoop_id]
+        node = node_index[node_id]
         nr = next_item_nr(node)
 
         item_data = {
-            "id": f"ITEM-{knoop_id}-{nr:03d}",
-            "knoop_ids": [knoop_id],
+            "id": f"ITEM-{node_id}-{nr:03d}",
+            "knoop_ids": [node_id],
             "type": "offline_schrijven",
             "richting": "productief",
             "moeilijkheid_initieel": -0.5,

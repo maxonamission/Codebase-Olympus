@@ -13,9 +13,9 @@ Each file in that directory is a list of dicts with the shape::
     }
 
 The filename encodes ``{taal}_{frequentieband}_words.json`` (e.g.
-``lat_f01_words.json``).  The V-knoop ID in the graph is assembled as
+``lat_f01_words.json``).  The V-node ID in the graph is assembled as
 ``{TAAL}-V-{BAND}-{id}`` (e.g. ``LAT-V-F01-SUM``) so we can build a
-direct lookup table keyed on that knoop-ID.
+direct lookup table keyed on that node-ID.
 """
 
 from __future__ import annotations
@@ -50,8 +50,8 @@ class VocabEntry(BaseModel):
     )
 
 
-def knoop_id_from_file_and_entry(filename: str, entry_id: str) -> str:
-    """Compose the V-knoop ID from a vocab-source filename + entry id.
+def node_id_from_file_and_entry(filename: str, entry_id: str) -> str:
+    """Compose the V-node ID from a vocab-source filename + entry id.
 
     ``lat_f01_words.json`` + ``SUM`` → ``LAT-V-F01-SUM``.
     """
@@ -61,7 +61,7 @@ def knoop_id_from_file_and_entry(filename: str, entry_id: str) -> str:
 
 
 def load_vocab_metadata(path: Path) -> dict[str, VocabEntry]:
-    """Load every ``*_words.json`` in *path* into a knoop-ID-keyed dict.
+    """Load every ``*_words.json`` in *path* into a node-ID-keyed dict.
 
     Accepts a directory (loads all files) or a single file.
 
@@ -69,7 +69,7 @@ def load_vocab_metadata(path: Path) -> dict[str, VocabEntry]:
         FileNotFoundError: when *path* does not exist or the directory
             contains no ``*.json`` files.
         pydantic.ValidationError: when an entry fails schema validation.
-        ValueError: when two files produce the same knoop ID.
+        ValueError: when two files produce the same node ID.
     """
     if path.is_dir():
         return _load_directory(path)
@@ -84,10 +84,10 @@ def _load_file(file_path: Path) -> dict[str, VocabEntry]:
     entries: dict[str, VocabEntry] = {}
     for item in raw:
         entry = VocabEntry(**item)
-        knoop_id = knoop_id_from_file_and_entry(file_path.name, entry.id)
-        if knoop_id in entries:
-            raise ValueError(f"Duplicate vocab entry for {knoop_id!r} in {file_path}")
-        entries[knoop_id] = entry
+        node_id = node_id_from_file_and_entry(file_path.name, entry.id)
+        if node_id in entries:
+            raise ValueError(f"Duplicate vocab entry for {node_id!r} in {file_path}")
+        entries[node_id] = entry
     return entries
 
 
@@ -98,8 +98,8 @@ def _load_directory(directory: Path) -> dict[str, VocabEntry]:
 
     merged: dict[str, VocabEntry] = {}
     for f in files:
-        for knoop_id, entry in _load_file(f).items():
-            if knoop_id in merged:
-                raise ValueError(f"Duplicate knoop_id {knoop_id!r} across vocab_sources")
-            merged[knoop_id] = entry
+        for node_id, entry in _load_file(f).items():
+            if node_id in merged:
+                raise ValueError(f"Duplicate node_id {node_id!r} across vocab_sources")
+            merged[node_id] = entry
     return merged

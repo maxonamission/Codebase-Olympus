@@ -82,7 +82,7 @@ def _a(kid, nr, stim, antw, fb, moeil=1.0, tijd=30):
 
 
 def define_items() -> dict[str, list[dict]]:
-    I = {}  # knoop_id -> list[dict]  # noqa: E741 - script-lokale conventie
+    I = {}  # node_id -> list[dict]  # noqa: E741 - script-lokale conventie
     K = "LAT-G-MORF-DECL3-INTRO"
     I[K] = [
         _h(
@@ -466,22 +466,22 @@ def define_items() -> dict[str, list[dict]]:
     return I
 
 
-def validate_items(items_by_knoop):
-    for _kid, il in items_by_knoop.items():
+def validate_items(items_by_node):
+    for _kid, il in items_by_node.items():
         for d in il:
             Item(**d)
     print("All items validated successfully.")
 
 
-def add_items_to_json(json_path, items_by_knoop):
+def add_items_to_json(json_path, items_by_node):
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
     added = 0
-    for knoop in data["knopen"]:
-        if knoop["id"] in items_by_knoop:
-            existing = {i["id"] for i in knoop.get("items", [])}
-            new = [i for i in items_by_knoop[knoop["id"]] if i["id"] not in existing]
-            knoop.setdefault("items", []).extend(new)
+    for node in data["knopen"]:
+        if node["id"] in items_by_node:
+            existing = {i["id"] for i in node.get("items", [])}
+            new = [i for i in items_by_node[node["id"]] if i["id"] not in existing]
+            node.setdefault("items", []).extend(new)
             added += len(new)
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
@@ -489,17 +489,17 @@ def add_items_to_json(json_path, items_by_knoop):
     return added
 
 
-def print_summary(items_by_knoop):
-    total = sum(len(v) for v in items_by_knoop.values())
+def print_summary(items_by_node):
+    total = sum(len(v) for v in items_by_node.values())
     tc = Counter()
     rc = Counter()
-    for il in items_by_knoop.values():
+    for il in items_by_node.values():
         for i in il:
             tc[i["type"]] += 1
             rc[i["richting"]] += 1
-    print(f"\n=== C1-04 Summary ===\nKnopen: {len(items_by_knoop)}\nTotal items: {total}")
-    print("\nItems per knoop:")
-    for k, v in sorted(items_by_knoop.items()):
+    print(f"\n=== C1-04 Summary ===\nKnopen: {len(items_by_node)}\nTotal items: {total}")
+    print("\nItems per node:")
+    for k, v in sorted(items_by_node.items()):
         print(f"  {k}: {len(v)}")
     print("\nOefentype-verdeling:")
     for t, c in tc.most_common():

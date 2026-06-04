@@ -18,7 +18,7 @@ class TestNodeState:
     """Tests for the NodeState model."""
 
     def test_defaults(self):
-        state = NodeState(knoop_id="LAT-G-MORF-NOM-D1")
+        state = NodeState(node_id="LAT-G-MORF-NOM-D1")
         assert state.posterior_mastery == 0.0
         assert state.easiness_factor == 2.5
         assert state.interval_days == 0.0
@@ -28,37 +28,37 @@ class TestNodeState:
         assert state.item_history == []
 
     def test_mastery_boundary_zero(self):
-        state = NodeState(knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.0)
+        state = NodeState(node_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.0)
         assert state.posterior_mastery == 0.0
 
     def test_mastery_boundary_one(self):
-        state = NodeState(knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=1.0)
+        state = NodeState(node_id="LAT-G-MORF-NOM-D1", posterior_mastery=1.0)
         assert state.posterior_mastery == 1.0
 
     def test_mastery_below_zero_rejected(self):
         with pytest.raises(ValidationError):
-            NodeState(knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=-0.1)
+            NodeState(node_id="LAT-G-MORF-NOM-D1", posterior_mastery=-0.1)
 
     def test_mastery_above_one_rejected(self):
         with pytest.raises(ValidationError):
-            NodeState(knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=1.1)
+            NodeState(node_id="LAT-G-MORF-NOM-D1", posterior_mastery=1.1)
 
     def test_easiness_must_be_positive(self):
         with pytest.raises(ValidationError):
-            NodeState(knoop_id="LAT-G-MORF-NOM-D1", easiness_factor=0.0)
+            NodeState(node_id="LAT-G-MORF-NOM-D1", easiness_factor=0.0)
 
     def test_interval_cannot_be_negative(self):
         with pytest.raises(ValidationError):
-            NodeState(knoop_id="LAT-G-MORF-NOM-D1", interval_days=-1.0)
+            NodeState(node_id="LAT-G-MORF-NOM-D1", interval_days=-1.0)
 
     def test_all_response_types(self):
         for rt in ["correct", "incorrect", "slow_correct"]:
-            state = NodeState(knoop_id="LAT-G-MORF-NOM-D1", last_response=rt)
+            state = NodeState(node_id="LAT-G-MORF-NOM-D1", last_response=rt)
             assert state.last_response == rt
 
     def test_invalid_response_type_rejected(self):
         with pytest.raises(ValidationError):
-            NodeState(knoop_id="LAT-G-MORF-NOM-D1", last_response="timeout")
+            NodeState(node_id="LAT-G-MORF-NOM-D1", last_response="timeout")
 
 
 class TestItemResponse:
@@ -70,13 +70,13 @@ class TestItemResponse:
             item_id="ITEM-001",
             correct=True,
             response_time_ms=2500,
-            knoop_id="LAT-G-MORF-NOM-D1",
+            node_id="LAT-G-MORF-NOM-D1",
             richting="receptief",
             mastery_before=0.4,
         )
         assert resp.correct is True
         assert resp.response_time_ms == 2500
-        assert resp.knoop_id == "LAT-G-MORF-NOM-D1"
+        assert resp.node_id == "LAT-G-MORF-NOM-D1"
         assert resp.richting == "receptief"
         assert resp.mastery_before == 0.4
 
@@ -87,13 +87,13 @@ class TestItemResponse:
                 item_id="ITEM-001",
                 correct=False,
                 response_time_ms=-1,
-                knoop_id="LAT-G-MORF-NOM-D1",
+                node_id="LAT-G-MORF-NOM-D1",
                 richting="receptief",
                 mastery_before=0.4,
             )
 
     def test_meetlaag_fields_are_required(self):
-        # L1-01: knoop_id, richting en mastery_before zijn verplicht (geen default).
+        # L1-01: node_id, richting en mastery_before zijn verplicht (geen default).
         with pytest.raises(ValidationError):
             ItemResponse(
                 timestamp=datetime.now(),
@@ -131,28 +131,28 @@ class TestLearnerModel:
         uid = uuid4()
         model = LearnerModel(user_id=uid)
         assert model.user_id == uid
-        assert model.knoop_states == {}
+        assert model.node_states == {}
         assert model.session_history == []
 
-    def test_add_knoop_state(self):
+    def test_add_node_state(self):
         uid = uuid4()
         model = LearnerModel(user_id=uid)
-        state = NodeState(knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.7)
-        model.knoop_states["LAT-G-MORF-NOM-D1"] = state
-        assert "LAT-G-MORF-NOM-D1" in model.knoop_states
-        assert model.knoop_states["LAT-G-MORF-NOM-D1"].posterior_mastery == 0.7
+        state = NodeState(node_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.7)
+        model.node_states["LAT-G-MORF-NOM-D1"] = state
+        assert "LAT-G-MORF-NOM-D1" in model.node_states
+        assert model.node_states["LAT-G-MORF-NOM-D1"].posterior_mastery == 0.7
 
     def test_serialization_roundtrip(self):
         uid = uuid4()
         model = LearnerModel(
             user_id=uid,
-            knoop_states={
+            node_states={
                 "LAT-G-MORF-NOM-D1": NodeState(
-                    knoop_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.85
+                    node_id="LAT-G-MORF-NOM-D1", posterior_mastery=0.85
                 ),
             },
         )
         dumped = model.model_dump()
         model2 = LearnerModel(**dumped)
         assert model2.user_id == uid
-        assert model2.knoop_states["LAT-G-MORF-NOM-D1"].posterior_mastery == 0.85
+        assert model2.node_states["LAT-G-MORF-NOM-D1"].posterior_mastery == 0.85

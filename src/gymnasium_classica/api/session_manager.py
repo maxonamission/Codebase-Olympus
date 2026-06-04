@@ -60,7 +60,7 @@ SLOW_FACTOR: float = 1.5
 class Question:
     """A question to present to the learner."""
 
-    knoop_id: str
+    node_id: str
     titel: str
     beschrijving: str
     stimulus: str | dict[str, Any]
@@ -68,7 +68,7 @@ class Question:
     items: list[dict[str, Any]] = field(default_factory=list)
     scaffolding_content: str | None = None
     # Promoted from the first item for frontend convenience. Populated by
-    # `_knoop_to_question` so the React components can read a flat shape
+    # `_node_to_question` so the React components can read a flat shape
     # (question.item_type / question.options / ...) without having to dig
     # into `question.items[0].stimulus`.
     item_type: str | None = None
@@ -82,7 +82,7 @@ class Question:
 class Feedback:
     """Feedback after answering a question."""
 
-    knoop_id: str
+    node_id: str
     correct: bool
     response_type: str  # "correct", "slow_correct", or "incorrect"
     mastery_before: float
@@ -132,7 +132,7 @@ class _SessionState:
     nodes_introduced: list[str] = field(default_factory=list)
     nodes_reviewed: list[str] = field(default_factory=list)
     mastery_changes: dict[str, tuple[float, float]] = field(default_factory=dict)
-    current_knoop: Node | None = None
+    current_node: Node | None = None
     current_before: float = 0.0
     items_presented: int = 0
     phases_completed: list[str] = field(default_factory=list)
@@ -145,10 +145,10 @@ class _SessionState:
     passage_presented: bool = False
 
 
-def _generate_self_assess_prompt(knoop: Node) -> str:
+def _generate_self_assess_prompt(node: Node) -> str:
     """Generate a self-assessment prompt based on the node type."""
-    t = knoop.type.value
-    titel = knoop.titel_nl
+    t = node.type.value
+    titel = node.titel_nl
     if t == "G":
         return f"Kun je het volgende uitleggen of opschrijven: {titel}?"
     elif t == "V":
@@ -167,23 +167,23 @@ def _generate_self_assess_prompt(knoop: Node) -> str:
 def _build_item_response(
     *,
     item: Item | None,
-    knoop: Node,
+    node: Node,
     answer_text: str | None,
     correct: bool,
     response_time_ms: int,
     mastery_before: float,
     now: datetime,
 ) -> ItemResponse:
-    """Construct an ItemResponse snapshotting knoop/item state at attempt-time."""
+    """Construct an ItemResponse snapshotting node/item state at attempt-time."""
     return ItemResponse(
         timestamp=now,
-        item_id=item.id if item is not None else f"{knoop.id}:self-assess",
+        item_id=item.id if item is not None else f"{node.id}:self-assess",
         correct=correct,
         response_time_ms=response_time_ms,
         answer_text=answer_text,
         correct_answer=canonical_expected_answer(item) if item is not None else None,
         item_type=item.type.value if item is not None else None,
-        knoop_id=knoop.id,
+        node_id=node.id,
         richting=item.richting.value if item is not None else None,
         mastery_before=mastery_before,
     )
@@ -192,7 +192,7 @@ def _build_item_response(
 def _grade_and_record(
     *,
     item: Item,
-    knoop: Node,
+    node: Node,
     answer_text: str,
     response_time_ms: int,
     mastery_before: float,
@@ -204,7 +204,7 @@ def _grade_and_record(
     took longer than :data:`SLOW_FACTOR` × the item's expected duration)
     and the ItemResponse that should be appended to item_history.
     """
-    grading = grade_answer(answer_text, item, knoop.taal)
+    grading = grade_answer(answer_text, item, node.taal)
     if grading.correct:
         threshold_ms = int(SLOW_FACTOR * item.verwachte_tijd_sec * 1000)
         response = (
@@ -215,7 +215,7 @@ def _grade_and_record(
 
     item_response = _build_item_response(
         item=item,
-        knoop=knoop,
+        node=node,
         answer_text=answer_text,
         correct=grading.correct,
         response_time_ms=response_time_ms,
@@ -227,7 +227,7 @@ def _grade_and_record(
 
 def _should_scaffold(
     state: "_SessionState",
-    knoop: Node,
+    node: Node,
     phase: SessionPhase,
 ) -> bool:
     """Decide whether to attach markdown-scaffolding to the next question.
@@ -235,8 +235,8 @@ def _should_scaffold(
     Rules (both routes):
 
     * Only during :class:`SessionPhase.NEW_MATERIAL`.
-    * Only on the **first** introduction of the knoop for this learner —
-      i.e. the knoop has no :class:`ItemResponse` entries in
+    * Only on the **first** introduction of the node for this learner —
+      i.e. the node has no :class:`ItemResponse` entries in
       ``NodeState.item_history`` yet.  This prevents scaffolding from
       re-appearing on SM-2 reviews.
 
@@ -251,8 +251,8 @@ def _should_scaffold(
     if phase != SessionPhase.NEW_MATERIAL:
         return False
 
-    knoop_state = state.learner.knoop_states.get(knoop.id)
-    never_presented = knoop_state is None or len(knoop_state.item_history) == 0
+    node_state = state.learner.node_states.get(node.id)
+    never_presented = node_state is None or len(node_state.item_history) == 0
     if not never_presented:
         return False
 
@@ -266,11 +266,11 @@ def _passage_to_question(passage: Passage, phase: SessionPhase) -> Question:
     """Convert a Passage to a Question for the API.
 
     The stimulus is a dict with type="passage" so the frontend can
-    distinguish it from a regular knoop question and render the
+    distinguish it from a regular node question and render the
     PassageReader component.
     """
     return Question(
-        knoop_id=passage.id,
+        node_id=passage.id,
         titel=passage.titel,
         beschrijving="Lees de passage en probeer de tekst te begrijpen.",
         stimulus={
@@ -287,29 +287,29 @@ def _passage_to_question(passage: Passage, phase: SessionPhase) -> Question:
 
 
 def _load_scaffolding_content(
-    knoop: Node,
+    node: Node,
     content_dir: Path = CONTENT_DIR,
 ) -> str | None:
     """Load markdown scaffolding content for a knowledge node.
 
-    Looks for ``data/content/{knoop.id}.md`` (or the explicit
+    Looks for ``data/content/{node.id}.md`` (or the explicit
     ``content_ref`` path if set).  Returns the markdown string,
     or None when no content file exists.
     """
-    if knoop.content_ref:
-        path = Path(knoop.content_ref)
+    if node.content_ref:
+        path = Path(node.content_ref)
         if not path.is_absolute():
-            path = content_dir.parent.parent / knoop.content_ref
+            path = content_dir.parent.parent / node.content_ref
     else:
-        path = content_dir / f"{knoop.id}.md"
+        path = content_dir / f"{node.id}.md"
 
     if path.is_file():
         return path.read_text(encoding="utf-8")
     return None
 
 
-def _knoop_to_question(
-    knoop: Node,
+def _node_to_question(
+    node: Node,
     phase: SessionPhase,
     include_scaffolding: bool = False,
     content_dir: Path = CONTENT_DIR,
@@ -322,7 +322,7 @@ def _knoop_to_question(
     grammar explanation.
     """
     items = []
-    for item in knoop.items:
+    for item in node.items:
         items.append(
             {
                 "id": item.id,
@@ -333,23 +333,23 @@ def _knoop_to_question(
             }
         )
 
-    stimulus = knoop.items[0].stimulus if knoop.items else _generate_self_assess_prompt(knoop)
+    stimulus = node.items[0].stimulus if node.items else _generate_self_assess_prompt(node)
 
     # For V-nodes: show only the lemma in the title, hide the translation
-    titel = knoop.titel_nl
-    if knoop.type.value == "V" and " — " in titel and not knoop.items:
+    titel = node.titel_nl
+    if node.type.value == "V" and " — " in titel and not node.items:
         titel = titel.split(" — ")[0].strip()
 
     content = None
     if include_scaffolding:
-        content = _load_scaffolding_content(knoop, content_dir)
+        content = _load_scaffolding_content(node, content_dir)
 
-    item_type, instruction, options, hint, audio_ref = _promote_first_item(knoop)
+    item_type, instruction, options, hint, audio_ref = _promote_first_item(node)
 
     return Question(
-        knoop_id=knoop.id,
+        node_id=node.id,
         titel=titel,
-        beschrijving=knoop.beschrijving,
+        beschrijving=node.beschrijving,
         stimulus=stimulus,
         phase=phase.value,
         items=items,
@@ -363,7 +363,7 @@ def _knoop_to_question(
 
 
 def _promote_first_item(
-    knoop: Node,
+    node: Node,
 ) -> tuple[str | None, str | None, list[str] | None, str | None, str | None]:
     """Extract structured stimulus fields from the first item, if present.
 
@@ -374,13 +374,13 @@ def _promote_first_item(
     ``items[0].stimulus`` structure.
 
     Returns (item_type, instruction, options, hint, audio_ref).  Every
-    field is None when the knoop has no items or when the field is
+    field is None when the node has no items or when the field is
     absent on the first item.
     """
-    if not knoop.items:
+    if not node.items:
         return None, None, None, None, None
 
-    first = knoop.items[0]
+    first = node.items[0]
     item_type = first.type.value
     audio_ref = first.audio_ref
 
@@ -437,7 +437,7 @@ class SessionManager:
 
         *show_grammar_scaffolding* is the grammar-first-only opt-in
         (from ``User.show_grammar_scaffolding``): when True, the first
-        introduction of a G-knoop in grammar-first includes its markdown
+        introduction of a G-node in grammar-first includes its markdown
         scaffolding content.  Ignored on the context-first path, which
         always shows scaffolding after a passage.
         """
@@ -481,7 +481,7 @@ class SessionManager:
         Two paths:
 
         * *answer_text* is supplied → the server grades it against the
-          current knoop's first item via :func:`grade_answer` and derives
+          current node's first item via :func:`grade_answer` and derives
           the ``ResponseType`` itself.  ``response`` may be ``None``.
         * *answer_text* is ``None`` → this is a self-assessment outcome;
           the caller tells us whether the learner reports themselves as
@@ -504,7 +504,7 @@ class SessionManager:
             now = datetime.now()
 
         # --- Passage question handling (no BKT) ---
-        if state.current_knoop is None and state.current_passage is not None:
+        if state.current_node is None and state.current_passage is not None:
             passage = state.current_passage
             state.items_presented += 1
             # Don't consume time budget for the passage reading step;
@@ -512,7 +512,7 @@ class SessionManager:
             # scaffolding nodes that follow.
 
             feedback = Feedback(
-                knoop_id=passage.id,
+                node_id=passage.id,
                 correct=True,
                 response_type="passage_read",
                 mastery_before=0.0,
@@ -529,24 +529,24 @@ class SessionManager:
 
             return AnswerResult(feedback=feedback, next_question=next_q)
 
-        # --- Normal knoop question handling ---
-        if state.current_knoop is None:
+        # --- Normal node question handling ---
+        if state.current_node is None:
             raise ValueError(f"No pending question for session {session_id}")
 
-        knoop = state.current_knoop
-        knoop_id = knoop.id
+        node = state.current_node
+        node_id = node.id
         before = state.current_before
 
         # Derive the response from grading when a literal answer was
         # supplied; otherwise trust the self-assess value from the caller.
-        item = knoop.items[0] if knoop.items else None
+        item = node.items[0] if node.items else None
         if answer_text is not None:
             if item is None:
-                # No gradeable item on this knoop — fall back to incorrect.
+                # No gradeable item on this node — fall back to incorrect.
                 response = ResponseType.INCORRECT
                 item_response = _build_item_response(
                     item=None,
-                    knoop=knoop,
+                    node=node,
                     answer_text=answer_text,
                     correct=False,
                     response_time_ms=response_time_ms,
@@ -556,7 +556,7 @@ class SessionManager:
             else:
                 response, item_response = _grade_and_record(
                     item=item,
-                    knoop=knoop,
+                    node=node,
                     answer_text=answer_text,
                     response_time_ms=response_time_ms,
                     mastery_before=before,
@@ -567,7 +567,7 @@ class SessionManager:
                 raise ValueError("submit_answer requires either answer_text or response")
             item_response = _build_item_response(
                 item=item,
-                knoop=knoop,
+                node=node,
                 answer_text=None,
                 correct=response in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT),
                 response_time_ms=response_time_ms,
@@ -579,35 +579,35 @@ class SessionManager:
         _process_response(
             state.learner,
             state.graph,
-            knoop_id,
+            node_id,
             response,
             now,
             item_response=item_response,
         )
-        after = _get_state_posterior(state.learner, knoop_id)
+        after = _get_state_posterior(state.learner, node_id)
 
         # Record results
-        state.mastery_changes[knoop_id] = (before, after)
-        state.session_node_ids.add(knoop_id)
+        state.mastery_changes[node_id] = (before, after)
+        state.session_node_ids.add(node_id)
         state.items_presented += 1
 
         # Track new vs review
         current_phase = PHASE_ORDER[state.phase_index]
         if before < MASTERY_THRESHOLD and current_phase == SessionPhase.NEW_MATERIAL:
-            state.nodes_introduced.append(knoop_id)
+            state.nodes_introduced.append(node_id)
         else:
-            state.nodes_reviewed.append(knoop_id)
+            state.nodes_reviewed.append(node_id)
 
         # Consume time budget
         state.budget_remaining -= DEFAULT_ITEM_TIME_SEC
 
-        # Remove answered knoop from current candidates
-        state.candidates = [(s, k) for s, k in state.candidates if k.id != knoop_id]
+        # Remove answered node from current candidates
+        state.candidates = [(s, k) for s, k in state.candidates if k.id != node_id]
 
         # Build feedback
         is_correct = response in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT)
         feedback = Feedback(
-            knoop_id=knoop_id,
+            node_id=node_id,
             correct=is_correct,
             response_type=response.value,
             mastery_before=round(before, 3),
@@ -615,7 +615,7 @@ class SessionManager:
         )
 
         # Advance to next question
-        state.current_knoop = None
+        state.current_node = None
         next_q = self._advance(state, now)
 
         if next_q is None:
@@ -670,7 +670,7 @@ class SessionManager:
                 if passage is not None:
                     state.current_passage = passage
                     state.passage_presented = True
-                    state.current_knoop = None
+                    state.current_node = None
                     # Don't set budget_remaining here: the passage is a
                     # reading step, not a timed item.  When _advance is
                     # called again after the passage answer, the normal
@@ -697,11 +697,11 @@ class SessionManager:
                 if selected is None:
                     break
 
-                state.current_knoop = selected
+                state.current_node = selected
                 state.current_before = _get_state_posterior(state.learner, selected.id)
 
                 scaffolding = _should_scaffold(state, selected, phase)
-                return _knoop_to_question(selected, phase, include_scaffolding=scaffolding)
+                return _node_to_question(selected, phase, include_scaffolding=scaffolding)
 
             # Phase exhausted — record and move on
             state.phases_completed.append(phase.value)
@@ -727,15 +727,15 @@ class SessionManager:
             # Context-first: deepen on passage-related nodes, not random urgency
             if state.learning_route == LearningRoute.CONTEXT_FIRST and state.current_passage:
                 candidates = []
-                for knoop_id in state.current_passage.knoop_ids:
-                    if knoop_id not in state.graph.nodes:
+                for node_id in state.current_passage.knoop_ids:
+                    if node_id not in state.graph.nodes:
                         continue
-                    if knoop_id in state.session_node_ids:
+                    if node_id in state.session_node_ids:
                         continue  # already practiced this session
-                    knoop = state.graph.nodes[knoop_id]["knoop"]
-                    posterior = _get_state_posterior(state.learner, knoop_id)
+                    node = state.graph.nodes[node_id]["node"]
+                    posterior = _get_state_posterior(state.learner, node_id)
                     if posterior < MASTERY_THRESHOLD:
-                        candidates.append((0.8, knoop))
+                        candidates.append((0.8, node))
                 if candidates:
                     return candidates
             return _candidates_for_deepening(

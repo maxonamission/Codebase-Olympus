@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Report content coverage per knoop and aggregate per (taal, type).
+"""Report content coverage per node and aggregate per (taal, type).
 
 For every node in the knowledge graph this script checks four coverage
 dimensions:
@@ -45,7 +45,7 @@ AUDIO_MIN_BYTES = 1024
 
 @dataclass
 class KnoopCoverage:
-    """Coverage flags for a single knoop."""
+    """Coverage flags for a single node."""
 
     id: str
     taal: str
@@ -75,14 +75,14 @@ class CoverageSummary:
 
 @dataclass
 class CoverageReport:
-    """Full coverage report: per-knoop records + per-bucket summaries."""
+    """Full coverage report: per-node records + per-bucket summaries."""
 
     knopen: list[KnoopCoverage] = field(default_factory=list)
     summaries: list[CoverageSummary] = field(default_factory=list)
 
 
-def _collect_passage_knoop_ids(passages_dir: Path) -> set[str]:
-    """Gather every knoop_id referenced by any passage JSON."""
+def _collect_passage_node_ids(passages_dir: Path) -> set[str]:
+    """Gather every node_id referenced by any passage JSON."""
     ids: set[str] = set()
     if not passages_dir.exists():
         return ids
@@ -95,12 +95,12 @@ def _collect_passage_knoop_ids(passages_dir: Path) -> set[str]:
     return ids
 
 
-def _content_exists(knoop: Node, content_dir: Path) -> bool:
+def _content_exists(node: Node, content_dir: Path) -> bool:
     """Resolve either `{id}.md` or `content_ref` against the content directory."""
-    if (content_dir / f"{knoop.id}.md").exists():
+    if (content_dir / f"{node.id}.md").exists():
         return True
-    if knoop.content_ref:
-        ref = Path(knoop.content_ref)
+    if node.content_ref:
+        ref = Path(node.content_ref)
         # content_ref may be relative ('data/content/foo.md') or bare ('foo.md')
         candidates = [
             REPO_ROOT / ref,
@@ -110,11 +110,11 @@ def _content_exists(knoop: Node, content_dir: Path) -> bool:
     return False
 
 
-def _audio_ok(knoop: Node, audio_dir: Path) -> bool:
+def _audio_ok(node: Node, audio_dir: Path) -> bool:
     """V-nodes only: the audio file must exist AND be > 1 KB."""
-    if knoop.type != NodeType.V:
+    if node.type != NodeType.V:
         return False
-    path = audio_dir / f"{knoop.id}.wav"
+    path = audio_dir / f"{node.id}.wav"
     return path.exists() and path.stat().st_size > AUDIO_MIN_BYTES
 
 
@@ -129,25 +129,25 @@ def compute_coverage(
     audio_dir: Path = DEFAULT_AUDIO_DIR,
     passages_dir: Path = DEFAULT_PASSAGES_DIR,
 ) -> CoverageReport:
-    """Walk the graph and produce per-knoop and per-bucket coverage data."""
-    passage_ids = _collect_passage_knoop_ids(passages_dir)
+    """Walk the graph and produce per-node and per-bucket coverage data."""
+    passage_ids = _collect_passage_node_ids(passages_dir)
 
     report = CoverageReport()
     # (taal, type) -> counters
     buckets: dict[tuple[str, str], dict[str, int]] = {}
 
     for node_id in graph.nodes:
-        knoop: Node = graph.nodes[node_id]["knoop"]
-        has_items = len(knoop.items) > 0
-        has_content = _content_exists(knoop, content_dir)
-        has_audio = _audio_ok(knoop, audio_dir)
-        in_passage = knoop.id in passage_ids
+        node: Node = graph.nodes[node_id]["node"]
+        has_items = len(node.items) > 0
+        has_content = _content_exists(node, content_dir)
+        has_audio = _audio_ok(node, audio_dir)
+        in_passage = node.id in passage_ids
 
         report.knopen.append(
             KnoopCoverage(
-                id=knoop.id,
-                taal=knoop.taal.value,
-                type=knoop.type.value,
+                id=node.id,
+                taal=node.taal.value,
+                type=node.type.value,
                 has_items=has_items,
                 has_content=has_content,
                 has_audio=has_audio,
@@ -155,7 +155,7 @@ def compute_coverage(
             )
         )
 
-        key = (knoop.taal.value, knoop.type.value)
+        key = (node.taal.value, node.type.value)
         bucket = buckets.setdefault(
             key,
             {"total": 0, "items": 0, "content": 0, "audio": 0, "passage": 0},
@@ -232,7 +232,7 @@ def _format_summary_table(report: CoverageReport) -> str:
 
 def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Rapporteer content-dekking per knoop en per (taal, type).",
+        description="Rapporteer content-dekking per node en per (taal, type).",
     )
     parser.add_argument(
         "--graph-dir",

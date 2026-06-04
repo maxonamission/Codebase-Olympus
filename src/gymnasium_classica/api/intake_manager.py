@@ -49,7 +49,7 @@ def _topo_order_safe(graph: nx.DiGraph) -> list[str]:
 class IntakeQuestion:
     """A question to present during the diagnostic intake."""
 
-    knoop_id: str
+    node_id: str
     titel: str
     beschrijving: str
     questions_asked: int
@@ -77,8 +77,8 @@ class _IntakeState:
     topo: list[str]
     cursor: int = 0
     questions_asked: int = 0
-    knoop_ids_tested: list[str] = field(default_factory=list)
-    current_knoop_id: str | None = None
+    node_ids_tested: list[str] = field(default_factory=list)
+    current_node_id: str | None = None
     finished: bool = False
     converged: bool = False
 
@@ -147,21 +147,21 @@ class IntakeManager:
         state = self._intakes[intake_id]
         if state.finished:
             raise ValueError(f"Intake {intake_id} is already finished")
-        if state.current_knoop_id is None:
+        if state.current_node_id is None:
             raise ValueError(f"No pending question for intake {intake_id}")
 
-        knoop_id = state.current_knoop_id
-        knoop_state = _get_or_init_state(state.learner, knoop_id)
+        node_id = state.current_node_id
+        node_state = _get_or_init_state(state.learner, node_id)
 
         state.questions_asked += 1
-        state.knoop_ids_tested.append(knoop_id)
-        state.current_knoop_id = None
+        state.node_ids_tested.append(node_id)
+        state.current_node_id = None
 
         if correct:
             # Boost this node
-            knoop_state.posterior_mastery = min(1.0, knoop_state.posterior_mastery + 0.35)
-            knoop_state.source = MasterySource.DIAGNOSTIC
-            _propagate_correct(state.learner, state.graph, knoop_id)
+            node_state.posterior_mastery = min(1.0, node_state.posterior_mastery + 0.35)
+            node_state.source = MasterySource.DIAGNOSTIC
+            _propagate_correct(state.learner, state.graph, node_id)
 
             # Jump forward
             next_pos = _find_next_unresolved(
@@ -178,10 +178,10 @@ class IntakeManager:
                     return self._finish(state, converged=True)
                 state.cursor = next_pos
         else:
-            _propagate_incorrect(state.learner, state.graph, knoop_id)
+            _propagate_incorrect(state.learner, state.graph, node_id)
 
             # Step back to unresolved prerequisite
-            preds = list(state.graph.predecessors(knoop_id))
+            preds = list(state.graph.predecessors(node_id))
             unresolved_pred = None
             for pred in preds:
                 pred_state = _get_or_init_state(state.learner, pred)
@@ -233,8 +233,8 @@ class IntakeManager:
         cursor = state.cursor
 
         # Skip resolved nodes from cursor position
-        knoop_id = topo[cursor]
-        ks = _get_or_init_state(state.learner, knoop_id)
+        node_id = topo[cursor]
+        ks = _get_or_init_state(state.learner, node_id)
         if _is_resolved(ks):
             next_pos = _find_next_unresolved(state.learner, topo, cursor + 1, +1)
             if next_pos is None:
@@ -244,14 +244,14 @@ class IntakeManager:
             state.cursor = next_pos
             cursor = next_pos
 
-        knoop_id = topo[cursor]
-        knoop: Node = state.graph.nodes[knoop_id]["knoop"]
-        state.current_knoop_id = knoop_id
+        node_id = topo[cursor]
+        node: Node = state.graph.nodes[node_id]["node"]
+        state.current_node_id = node_id
 
         return IntakeQuestion(
-            knoop_id=knoop_id,
-            titel=knoop.titel_nl,
-            beschrijving=knoop.beschrijving,
+            node_id=node_id,
+            titel=node.titel_nl,
+            beschrijving=node.beschrijving,
             questions_asked=state.questions_asked,
             max_questions=MAX_QUESTIONS,
         )

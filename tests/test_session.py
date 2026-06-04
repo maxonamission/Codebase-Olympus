@@ -19,19 +19,19 @@ from gymnasium_classica.scheduling.session import (
 )
 
 
-def _always_correct(knoop_id: str, knoop: Node) -> tuple[ResponseType, int]:
+def _always_correct(node_id: str, node: Node) -> tuple[ResponseType, int]:
     return (ResponseType.CORRECT, 2000)
 
 
-def _always_incorrect(knoop_id: str, knoop: Node) -> tuple[ResponseType, int]:
+def _always_incorrect(node_id: str, node: Node) -> tuple[ResponseType, int]:
     return (ResponseType.INCORRECT, 5000)
 
 
 def _mastery_based_answer(learner: LearnerModel):
     """Return an answer_fn that simulates responses based on current mastery."""
 
-    def answer(knoop_id: str, knoop: Node) -> tuple[ResponseType, int]:
-        state = learner.knoop_states.get(knoop_id)
+    def answer(node_id: str, node: Node) -> tuple[ResponseType, int]:
+        state = learner.node_states.get(node_id)
         posterior = state.posterior_mastery if state else 0.10
         if posterior >= 0.75:
             return (ResponseType.CORRECT, 1500)
@@ -71,8 +71,8 @@ class TestSessionOrchestration:
         for i, node_id in enumerate(topo):
             if i < 15:
                 # Mastered, reviewed a week ago
-                learner.knoop_states[node_id] = NodeState(
-                    knoop_id=node_id,
+                learner.node_states[node_id] = NodeState(
+                    node_id=node_id,
                     posterior_mastery=0.85,
                     source=MasterySource.PRACTICE,
                     interval_days=6.0,
@@ -81,8 +81,8 @@ class TestSessionOrchestration:
                     last_review=now - timedelta(days=7),
                 )
             else:
-                learner.knoop_states[node_id] = NodeState(
-                    knoop_id=node_id,
+                learner.node_states[node_id] = NodeState(
+                    node_id=node_id,
                     posterior_mastery=0.10,
                 )
 
@@ -98,7 +98,7 @@ class TestSessionOrchestration:
 
         # After correct answers, posteriors should have increased from default
         updated_any = False
-        for state in learner.knoop_states.values():
+        for state in learner.node_states.values():
             if state.posterior_mastery > 0.10:
                 updated_any = True
                 break
@@ -111,7 +111,7 @@ class TestSessionOrchestration:
 
         # After the session, at least one node should have last_review set
         reviewed_any = False
-        for state in learner.knoop_states.values():
+        for state in learner.node_states.values():
             if state.last_review is not None:
                 reviewed_any = True
                 assert state.repetitions >= 1
@@ -142,7 +142,7 @@ class TestSessionOrchestration:
         learner = LearnerModel(user_id=uuid4())
         result = run_session(learner, poc_graph, _always_correct)
         assert len(result.mastery_changes) > 0
-        for _knoop_id, (before, after) in result.mastery_changes.items():
+        for _node_id, (before, after) in result.mastery_changes.items():
             # Correct answers should increase mastery
             assert after >= before
 
@@ -159,7 +159,7 @@ class TestMultiSessionProgression:
         for day in range(3):
             session_time = now + timedelta(days=day)
             run_session(learner, poc_graph, _always_correct, now=session_time)
-            mastered = sum(1 for s in learner.knoop_states.values() if s.posterior_mastery >= 0.75)
+            mastered = sum(1 for s in learner.node_states.values() if s.posterior_mastery >= 0.75)
             mastered_counts.append(mastered)
 
         # Each session should master at least as many nodes as the previous

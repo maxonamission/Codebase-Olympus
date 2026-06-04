@@ -93,19 +93,19 @@ def bkt_update_posterior(
     return max(POSTERIOR_MIN, min(POSTERIOR_MAX, p_l_new))
 
 
-def _get_or_create_state(learner: LearnerModel, knoop_id: str) -> NodeState:
+def _get_or_create_state(learner: LearnerModel, node_id: str) -> NodeState:
     """Get existing state or create one with default untreated prior."""
-    if knoop_id not in learner.knoop_states:
-        learner.knoop_states[knoop_id] = NodeState(
-            knoop_id=knoop_id,
+    if node_id not in learner.node_states:
+        learner.node_states[node_id] = NodeState(
+            node_id=node_id,
             posterior_mastery=0.10,
         )
-    return learner.knoop_states[knoop_id]
+    return learner.node_states[node_id]
 
 
-def update_knoop_state(
+def update_node_state(
     learner: LearnerModel,
-    knoop_id: str,
+    node_id: str,
     response: ResponseType,
     params: BKTParams | None = None,
 ) -> NodeState:
@@ -114,7 +114,7 @@ def update_knoop_state(
     ``slow_correct`` is treated as ``correct`` for BKT (BKT does not
     model response speed).  The speed distinction is used by SM-2 only.
     """
-    state = _get_or_create_state(learner, knoop_id)
+    state = _get_or_create_state(learner, node_id)
     correct = response in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT)
     state.posterior_mastery = bkt_update_posterior(state.posterior_mastery, correct, params)
     state.source = MasterySource.PRACTICE
@@ -124,7 +124,7 @@ def update_knoop_state(
 def propagate_practice_correct(
     learner: LearnerModel,
     graph: nx.DiGraph,
-    knoop_id: str,
+    node_id: str,
 ) -> list[str]:
     """After a correct practice response, boost prerequisite and sibling
     posteriors via encompassing weights.
@@ -136,11 +136,11 @@ def propagate_practice_correct(
     Returns list of affected node IDs.
     """
     affected: list[str] = []
-    parents = set(graph.predecessors(knoop_id))
+    parents = set(graph.predecessors(node_id))
 
     # Boost direct prerequisites
     for pred in parents:
-        edge_data = graph.edges[pred, knoop_id].get("edge")
+        edge_data = graph.edges[pred, node_id].get("edge")
         if not isinstance(edge_data, PrerequisiteEdge):
             continue
         weight = edge_data.encompassing_weight
@@ -156,7 +156,7 @@ def propagate_practice_correct(
     siblings_seen: set[str] = set()
     for parent in parents:
         for sibling in graph.successors(parent):
-            if sibling == knoop_id or sibling in siblings_seen:
+            if sibling == node_id or sibling in siblings_seen:
                 continue
             siblings_seen.add(sibling)
             edge_data = graph.edges[parent, sibling].get("edge")

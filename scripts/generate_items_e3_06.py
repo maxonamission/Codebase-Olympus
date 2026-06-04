@@ -456,7 +456,7 @@ def collect_all() -> dict[str, list[dict]]:
     out: dict[str, list[dict]] = {}
     out.update(morf_items())
     out.update(synt_items())
-    for _knoop_id, item_list in out.items():
+    for _node_id, item_list in out.items():
         for item in item_list:
             for key in ("stimulus", "antwoord", "feedback", "verwacht_resultaat"):
                 if key in item and item[key] is not None:
@@ -464,34 +464,34 @@ def collect_all() -> dict[str, list[dict]]:
     return out
 
 
-def validate_all(items_by_knoop: dict[str, list[dict]]) -> None:
-    for _knoop_id, item_list in items_by_knoop.items():
+def validate_all(items_by_node: dict[str, list[dict]]) -> None:
+    for _node_id, item_list in items_by_node.items():
         for item_dict in item_list:
             Item(**item_dict)
-    total = sum(len(v) for v in items_by_knoop.values())
+    total = sum(len(v) for v in items_by_node.values())
     print(f"All {total} items validated.")
 
 
-def add_items_to_json(json_path: Path, items_by_knoop: dict[str, list[dict]]) -> int:
-    """Attach items to their primary knoop (first element of knoop_ids)."""
+def add_items_to_json(json_path: Path, items_by_node: dict[str, list[dict]]) -> int:
+    """Attach items to their primary node (first element of knoop_ids)."""
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
 
-    # Flatten list of (primary_knoop_id, item) voor toevoegen
+    # Flatten list of (primary_node_id, item) voor toevoegen
     primary_map: dict[str, list[dict]] = {}
-    for _knoop_id, item_list in items_by_knoop.items():
+    for _node_id, item_list in items_by_node.items():
         for item in item_list:
             primary = item["knoop_ids"][0]
             primary_map.setdefault(primary, []).append(item)
 
     added = 0
-    for knoop in data["knopen"]:
-        if knoop["id"] in primary_map:
-            existing_ids = {item["id"] for item in knoop.get("items", [])}
+    for node in data["knopen"]:
+        if node["id"] in primary_map:
+            existing_ids = {item["id"] for item in node.get("items", [])}
             new_items = [
-                item for item in primary_map[knoop["id"]] if item["id"] not in existing_ids
+                item for item in primary_map[node["id"]] if item["id"] not in existing_ids
             ]
-            knoop.setdefault("items", []).extend(new_items)
+            node.setdefault("items", []).extend(new_items)
             added += len(new_items)
 
     with open(json_path, "w", encoding="utf-8") as f:
@@ -501,13 +501,13 @@ def add_items_to_json(json_path: Path, items_by_knoop: dict[str, list[dict]]) ->
     return added
 
 
-def print_summary(items_by_knoop: dict[str, list[dict]]) -> None:
-    total = sum(len(v) for v in items_by_knoop.values())
+def print_summary(items_by_node: dict[str, list[dict]]) -> None:
+    total = sum(len(v) for v in items_by_node.values())
     type_counter: Counter[str] = Counter()
     richting_counter: Counter[str] = Counter()
     congr_count = 0
     attrib_count = 0
-    for item_list in items_by_knoop.values():
+    for item_list in items_by_node.values():
         for item in item_list:
             type_counter[item["type"]] += 1
             richting_counter[item["richting"]] += 1
@@ -517,7 +517,7 @@ def print_summary(items_by_knoop: dict[str, list[dict]]) -> None:
                 attrib_count += 1
 
     print("\n=== E3-06 Summary ===")
-    print(f"Knopen: {len(items_by_knoop)}")
+    print(f"Knopen: {len(items_by_node)}")
     print(f"Total items: {total}")
     print(f"Congruentie-items (incl. multi-tag): {congr_count}")
     print(f"Attributief/praedicatief-items: {attrib_count}")
@@ -534,16 +534,16 @@ def main() -> None:
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
-    items_by_knoop = collect_all()
-    validate_all(items_by_knoop)
-    print_summary(items_by_knoop)
+    items_by_node = collect_all()
+    validate_all(items_by_node)
+    print_summary(items_by_node)
 
     if args.dry_run:
         print("\nDry-run: geen wijzigingen geschreven.")
         return
 
     path = Path(__file__).parent.parent / "data" / "graph" / "grc_grammatica_leerjaar1.json"
-    added = add_items_to_json(path, items_by_knoop)
+    added = add_items_to_json(path, items_by_node)
     print(f"\nAdded {added} items to {path.name}")
 
 

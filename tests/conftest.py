@@ -6,7 +6,7 @@ import pytest
 
 
 @pytest.fixture
-def sample_knoop_data() -> dict:
+def sample_node_data() -> dict:
     """A minimal valid Node as a dict."""
     return {
         "id": "LAT-G-MORF-NOM-D1",

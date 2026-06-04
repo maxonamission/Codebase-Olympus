@@ -14,15 +14,15 @@ ITEMS_FILE = Path(__file__).parent / "items_c1_10.json"
 POC_IDS = {"LAT-G-SYNT-PREP-ACC", "LAT-G-SYNT-PREP-ABL", "LAT-G-SYNT-ONTK", "LAT-G-SYNT-VRAAGZIN"}
 
 
-def add_items_to_json(json_path, items_by_knoop):
+def add_items_to_json(json_path, items_by_node):
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
     added = 0
-    for knoop in data["knopen"]:
-        if knoop["id"] in items_by_knoop:
-            existing = {i["id"] for i in knoop.get("items", [])}
-            new = [i for i in items_by_knoop[knoop["id"]] if i["id"] not in existing]
-            knoop.setdefault("items", []).extend(new)
+    for node in data["knopen"]:
+        if node["id"] in items_by_node:
+            existing = {i["id"] for i in node.get("items", [])}
+            new = [i for i in items_by_node[node["id"]] if i["id"] not in existing]
+            node.setdefault("items", []).extend(new)
             added += len(new)
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)

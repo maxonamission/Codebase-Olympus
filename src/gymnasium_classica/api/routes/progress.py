@@ -1,4 +1,4 @@
-"""Progress routes: overview and per-knoop detail."""
+"""Progress routes: overview and per-node detail."""
 
 from datetime import datetime, timedelta
 from typing import Any
@@ -75,7 +75,7 @@ def _compute_session_progression(
 
     for rec in learner.session_history:
         for node_id in rec.items_reviewed:
-            state = learner.knoop_states.get(node_id)
+            state = learner.node_states.get(node_id)
             if state and state.posterior_mastery >= MASTERY_THRESHOLD:
                 seen_mastered.add(node_id)
 
@@ -107,8 +107,8 @@ async def progress_overview(
         total = graph.number_of_nodes()
         domains: dict[str, DomainProgress] = {}
         for node_id in graph.nodes:
-            knoop: Node = graph.nodes[node_id]["knoop"]
-            d = knoop.type.value
+            node: Node = graph.nodes[node_id]["node"]
+            d = node.type.value
             if d not in domains:
                 domains[d] = DomainProgress(total=0, mastered=0, in_progress=0, unseen=0)
             domains[d].total += 1
@@ -129,13 +129,13 @@ async def progress_overview(
     domains = {}
 
     for node_id in graph.nodes:
-        knoop = graph.nodes[node_id]["knoop"]
-        d = knoop.type.value
+        node = graph.nodes[node_id]["node"]
+        d = node.type.value
         if d not in domains:
             domains[d] = DomainProgress(total=0, mastered=0, in_progress=0, unseen=0)
         domains[d].total += 1
 
-        state = learner.knoop_states.get(node_id)
+        state = learner.node_states.get(node_id)
         if state is None or state.posterior_mastery < _IN_PROGRESS_FLOOR:
             unseen += 1
             domains[d].unseen += 1
@@ -161,32 +161,32 @@ async def progress_overview(
     )
 
 
-@router.get("/knoop/{knoop_id}", response_model=KnoopProgressResponse)
-async def knoop_progress(
-    knoop_id: str,
+@router.get("/node/{node_id}", response_model=KnoopProgressResponse)
+async def node_progress(
+    node_id: str,
     request: Request,
     user_id: str = Depends(get_current_user_id),
 ) -> KnoopProgressResponse:
     """Return detailed progress for a single knowledge node."""
     graph: nx.DiGraph = request.app.state.graph
 
-    if knoop_id not in graph.nodes:
-        raise HTTPException(status_code=404, detail=f"Knoop {knoop_id!r} not found")
+    if node_id not in graph.nodes:
+        raise HTTPException(status_code=404, detail=f"Knoop {node_id!r} not found")
 
-    knoop: Node = graph.nodes[knoop_id]["knoop"]
+    node: Node = graph.nodes[node_id]["node"]
 
     db = request.app.state.db
     learner = load_learner_model(db, user_id)
 
     state = None
     if learner is not None:
-        state = learner.knoop_states.get(knoop_id)
+        state = learner.node_states.get(node_id)
 
     if state is None:
         return KnoopProgressResponse(
-            knoop_id=knoop_id,
-            titel=knoop.titel_nl,
-            type=knoop.type.value,
+            node_id=node_id,
+            titel=node.titel_nl,
+            type=node.type.value,
             posterior_mastery=0.0,
             easiness_factor=2.5,
             interval_days=0.0,
@@ -197,9 +197,9 @@ async def knoop_progress(
         )
 
     return KnoopProgressResponse(
-        knoop_id=knoop_id,
-        titel=knoop.titel_nl,
-        type=knoop.type.value,
+        node_id=node_id,
+        titel=node.titel_nl,
+        type=node.type.value,
         posterior_mastery=state.posterior_mastery,
         easiness_factor=state.easiness_factor,
         interval_days=state.interval_days,
@@ -238,10 +238,10 @@ async def progress_clusters(
 
     nodes_per_cluster: dict[str, list[str]] = {c["label"]: [] for c in cluster_defs}
     for node_id in graph.nodes:
-        knoop: Node = graph.nodes[node_id]["knoop"]
-        if knoop.type != NodeType.V:
+        node: Node = graph.nodes[node_id]["node"]
+        if node.type != NodeType.V:
             continue
-        label = knoop.semantisch_cluster
+        label = node.semantisch_cluster
         if not label or label not in nodes_per_cluster:
             continue
         nodes_per_cluster[label].append(node_id)
@@ -249,14 +249,14 @@ async def progress_clusters(
     results: list[ClusterProgress] = []
     for c in cluster_defs:
         label = c["label"]
-        node_ids = nodes_per_cluster.get(label, [])
-        total = len(node_ids)
+        knoop_ids = nodes_per_cluster.get(label, [])
+        total = len(knoop_ids)
         mastered = 0
         in_progress = 0
-        for node_id in node_ids:
+        for node_id in knoop_ids:
             state = None
             if learner is not None:
-                state = learner.knoop_states.get(node_id)
+                state = learner.node_states.get(node_id)
             if state is None or state.posterior_mastery < _IN_PROGRESS_FLOOR:
                 continue
             if state.posterior_mastery >= MASTERY_THRESHOLD:
@@ -292,11 +292,11 @@ async def graph_data(
 
     nodes = []
     for node_id in graph.nodes:
-        knoop: Node = graph.nodes[node_id]["knoop"]
+        node: Node = graph.nodes[node_id]["node"]
         mastery = 0.0
         status = "unseen"
         if learner:
-            state = learner.knoop_states.get(node_id)
+            state = learner.node_states.get(node_id)
             if state:
                 mastery = state.posterior_mastery
                 if mastery >= MASTERY_THRESHOLD:
@@ -306,9 +306,9 @@ async def graph_data(
         nodes.append(
             GraphNode(
                 id=node_id,
-                titel=knoop.titel_nl,
-                type=knoop.type.value,
-                taal=knoop.taal.value if hasattr(knoop.taal, "value") else str(knoop.taal),
+                titel=node.titel_nl,
+                type=node.type.value,
+                taal=node.taal.value if hasattr(node.taal, "value") else str(node.taal),
                 mastery=round(mastery, 3),
                 status=status,
             )

@@ -11,8 +11,8 @@ from gymnasium_classica.graph.loader import load_graph
 from gymnasium_classica.models.graph import NodeType
 from gymnasium_classica.vocab.loader import (
     VocabEntry,
-    knoop_id_from_file_and_entry,
     load_vocab_metadata,
+    node_id_from_file_and_entry,
 )
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -22,10 +22,10 @@ GRAPH_DIR = REPO_ROOT / "data" / "graph"
 
 class TestKnoopIdComposition:
     def test_lat_f01(self):
-        assert knoop_id_from_file_and_entry("lat_f01_words.json", "SUM") == ("LAT-V-F01-SUM")
+        assert node_id_from_file_and_entry("lat_f01_words.json", "SUM") == ("LAT-V-F01-SUM")
 
     def test_grc_f02(self):
-        assert knoop_id_from_file_and_entry("grc_f02_words.json", "LOGOS") == ("GRC-V-F02-LOGOS")
+        assert node_id_from_file_and_entry("grc_f02_words.json", "LOGOS") == ("GRC-V-F02-LOGOS")
 
 
 class TestLoadFromFile:
@@ -92,10 +92,10 @@ class TestRealVocabSources:
     def test_lookup_has_450_entries(self, lookup):
         assert len(lookup) == 450
 
-    def test_every_v_knoop_has_metadata(self, lookup):
+    def test_every_v_node_has_metadata(self, lookup):
         """Alle V-knopen in de productie-graph moeten matchen."""
         graph = load_graph(GRAPH_DIR)
-        v_ids = [n for n in graph.nodes if graph.nodes[n]["knoop"].type == NodeType.V]
+        v_ids = [n for n in graph.nodes if graph.nodes[n]["node"].type == NodeType.V]
         missing = [kid for kid in v_ids if kid not in lookup]
         assert missing == [], f"V-knopen zonder vocab_source-entry: {missing[:5]}"
 

@@ -117,10 +117,10 @@ BATCH: list[tuple[str, str, list[str], int, str]] = [
 def make_item(
     suffix: str, vraag: str, options: list[str], correct_idx: int, feedback: str
 ) -> dict:
-    knoop_id = f"SHA-C-{suffix}"
+    node_id = f"SHA-C-{suffix}"
     return {
-        "id": f"ITEM-{knoop_id}-001",
-        "knoop_ids": [knoop_id],
+        "id": f"ITEM-{node_id}-001",
+        "knoop_ids": [node_id],
         "type": "herkenning",
         "richting": "receptief",
         "moeilijkheid_initieel": -0.5,
@@ -142,21 +142,21 @@ def build_items() -> dict[str, list[dict]]:
     return items
 
 
-def inject(json_path: Path, items_by_knoop: dict[str, list[dict]]) -> int:
+def inject(json_path: Path, items_by_node: dict[str, list[dict]]) -> int:
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
     added = 0
-    missing = set(items_by_knoop.keys())
-    for knoop in data["knopen"]:
-        kid = knoop["id"]
-        if kid in items_by_knoop:
-            existing = {it["id"] for it in knoop.get("items", [])}
-            new_items = [it for it in items_by_knoop[kid] if it["id"] not in existing]
-            knoop.setdefault("items", []).extend(new_items)
+    missing = set(items_by_node.keys())
+    for node in data["knopen"]:
+        kid = node["id"]
+        if kid in items_by_node:
+            existing = {it["id"] for it in node.get("items", [])}
+            new_items = [it for it in items_by_node[kid] if it["id"] not in existing]
+            node.setdefault("items", []).extend(new_items)
             added += len(new_items)
             missing.discard(kid)
     if missing:
-        raise SystemExit(f"Unknown knoop IDs: {sorted(missing)}")
+        raise SystemExit(f"Unknown node IDs: {sorted(missing)}")
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
         f.write("\n")

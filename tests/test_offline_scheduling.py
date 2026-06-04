@@ -84,7 +84,7 @@ def _graph_with_offline_items() -> dict:
     }
 
 
-def _always_correct(knoop_id: str, knoop: Node) -> tuple[ResponseType, int]:
+def _always_correct(node_id: str, node: Node) -> tuple[ResponseType, int]:
     return (ResponseType.CORRECT, 2000)
 
 
@@ -96,7 +96,7 @@ class TestCollectOfflineItems:
         now = datetime(2026, 4, 13)
         assignments = _collect_offline_items(graph, {"LAT-G-MORF-DECL1-INTRO"}, now)
         assert len(assignments) == 1
-        assert assignments[0].knoop_id == "LAT-G-MORF-DECL1-INTRO"
+        assert assignments[0].node_id == "LAT-G-MORF-DECL1-INTRO"
         assert assignments[0].item_id == "ITEM-OFFLINE-D1-001"
         assert assignments[0].assigned_at == now
         assert assignments[0].completed is False
@@ -129,7 +129,7 @@ class TestPendingFollowUps:
         now = datetime(2026, 4, 13)
         learner.pending_offline_assignments = [
             OfflineAssignment(
-                knoop_id="LAT-G-MORF-DECL1-INTRO",
+                node_id="LAT-G-MORF-DECL1-INTRO",
                 item_id="ITEM-OFFLINE-D1-001",
                 assigned_at=now,
                 completed=False,
@@ -143,7 +143,7 @@ class TestPendingFollowUps:
         now = datetime(2026, 4, 13)
         learner.pending_offline_assignments = [
             OfflineAssignment(
-                knoop_id="LAT-G-MORF-DECL1-INTRO",
+                node_id="LAT-G-MORF-DECL1-INTRO",
                 item_id="ITEM-OFFLINE-D1-001",
                 assigned_at=now,
                 completed=True,
@@ -169,7 +169,7 @@ class TestOfflineInSession:
         result = run_session(learner, graph, _always_correct, now=now)
 
         # The session should have practiced DECL1-INTRO (only root + child)
-        practiced_ids = {item.knoop_id for item in result.items}
+        practiced_ids = {item.node_id for item in result.items}
         if "LAT-G-MORF-DECL1-INTRO" in practiced_ids:
             assert len(result.offline_assignments) == 1
             assert result.offline_assignments[0].item_id == "ITEM-OFFLINE-D1-001"
@@ -184,7 +184,7 @@ class TestOfflineInSession:
         # Pre-seed a pending assignment for the offline item
         learner.pending_offline_assignments.append(
             OfflineAssignment(
-                knoop_id="LAT-G-MORF-DECL1-INTRO",
+                node_id="LAT-G-MORF-DECL1-INTRO",
                 item_id="ITEM-OFFLINE-D1-001",
                 assigned_at=now - timedelta(days=1),
             )
@@ -218,7 +218,7 @@ class TestOfflineInSession:
         # Manually add a completed assignment
         learner.pending_offline_assignments.append(
             OfflineAssignment(
-                knoop_id="LAT-G-MORF-DECL1-INTRO",
+                node_id="LAT-G-MORF-DECL1-INTRO",
                 item_id="ITEM-OFFLINE-D1-001",
                 assigned_at=now,
                 completed=True,
@@ -236,7 +236,7 @@ class TestOfflineAssignmentModel:
     def test_defaults(self):
         now = datetime(2026, 4, 13)
         a = OfflineAssignment(
-            knoop_id="LAT-G-MORF-DECL1-INTRO",
+            node_id="LAT-G-MORF-DECL1-INTRO",
             item_id="ITEM-001",
             assigned_at=now,
         )
@@ -245,7 +245,7 @@ class TestOfflineAssignmentModel:
     def test_serialization_roundtrip(self):
         now = datetime(2026, 4, 13)
         a = OfflineAssignment(
-            knoop_id="LAT-G-MORF-DECL1-INTRO",
+            node_id="LAT-G-MORF-DECL1-INTRO",
             item_id="ITEM-001",
             assigned_at=now,
             completed=True,

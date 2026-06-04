@@ -34,7 +34,7 @@ ROOT = Path(__file__).parent.parent
 VOCAB_SOURCES = ROOT / "data" / "vocab_sources"
 GRAPH_DIR = ROOT / "data" / "graph"
 
-# vocab_sources filename → (graph file, knoop-id-prefix)
+# vocab_sources filename → (graph file, node-id-prefix)
 SOURCES = [
     ("lat_f01_words.json", "lat_vocabulaire_leerjaar1.json", "LAT-V-F01"),
     ("lat_f02_words.json", "lat_vocabulaire_leerjaar1.json", "LAT-V-F02"),
@@ -55,7 +55,7 @@ def _short_label(taal: str) -> str:
 
 
 def make_stamtijd_item(
-    knoop_id: str, lemma: str, mean: str, gen: str, taal: str
+    node_id: str, lemma: str, mean: str, gen: str, taal: str
 ) -> dict[str, Any] | None:
     """Build one stamtijd productie-item, or return None if not applicable."""
     parts = [p.strip() for p in (gen or "").split(",") if p.strip()]
@@ -63,8 +63,8 @@ def make_stamtijd_item(
         return None
     second = parts[1]
     return {
-        "id": f"ITEM-{knoop_id}-005",
-        "knoop_ids": [knoop_id],
+        "id": f"ITEM-{node_id}-005",
+        "knoop_ids": [node_id],
         "type": "productie",
         "richting": "productief",
         # Stamtijden zijn moeilijker dan basis NL↔lemma
@@ -96,14 +96,14 @@ def collect_items() -> dict[str, list[dict]]:
         for entry in entries:
             if entry["pos"] != "verb":
                 continue
-            knoop_id = f"{prefix}-{entry['id']}"
+            node_id = f"{prefix}-{entry['id']}"
             item = make_stamtijd_item(
-                knoop_id, entry["lemma"], entry["mean"], entry.get("gen") or "", taal
+                node_id, entry["lemma"], entry["mean"], entry.get("gen") or "", taal
             )
             if item is None:
-                skipped.append((knoop_id, entry.get("gen") or ""))
+                skipped.append((node_id, entry.get("gen") or ""))
                 continue
-            by_file.setdefault(graph_name, []).append((knoop_id, item))
+            by_file.setdefault(graph_name, []).append((node_id, item))
 
     print(f"Geskipt (gen heeft < 2 stamtijden): {len(skipped)}")
     for kid, gen in skipped:
@@ -132,15 +132,15 @@ def add_items(by_file: dict[str, list[tuple[str, dict]]]) -> int:
             data = json.load(f)
         # index nodes by id
         node_index = {k["id"]: k for k in data["knopen"]}
-        for knoop_id, item in items:
-            knoop = node_index.get(knoop_id)
-            if knoop is None:
-                print(f"  ⚠ knoop niet gevonden: {knoop_id}")
+        for node_id, item in items:
+            node = node_index.get(node_id)
+            if node is None:
+                print(f"  ⚠ node niet gevonden: {node_id}")
                 continue
-            existing_ids = {it["id"] for it in knoop.get("items", [])}
+            existing_ids = {it["id"] for it in node.get("items", [])}
             if item["id"] in existing_ids:
                 continue
-            knoop.setdefault("items", []).append(item)
+            node.setdefault("items", []).append(item)
             added += 1
         with open(path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)

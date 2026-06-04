@@ -14,13 +14,13 @@ from gymnasium_classica.models.learner import (
 NOW = datetime(2026, 6, 4, 12, 0, 0)
 
 
-def _response(knoop_id: str, *, richting: str | None, mastery_before: float) -> ItemResponse:
+def _response(node_id: str, *, richting: str | None, mastery_before: float) -> ItemResponse:
     return ItemResponse(
         timestamp=NOW,
-        item_id=f"{knoop_id}:i",
+        item_id=f"{node_id}:i",
         correct=True,
         response_time_ms=2000,
-        knoop_id=knoop_id,
+        node_id=node_id,
         richting=richting,
         mastery_before=mastery_before,
     )
@@ -28,30 +28,30 @@ def _response(knoop_id: str, *, richting: str | None, mastery_before: float) -> 
 
 class TestEstimatedRetention:
     def test_never_reviewed_falls_back_to_posterior(self):
-        state = NodeState(knoop_id="LAT-G-X", posterior_mastery=0.6, last_review=None)
+        state = NodeState(node_id="LAT-G-X", posterior_mastery=0.6, last_review=None)
         assert estimated_retention(state, NOW) == 0.6
 
     def test_full_retention_at_review_moment(self):
-        state = NodeState(knoop_id="LAT-G-X", interval_days=5.0, last_review=NOW)
+        state = NodeState(node_id="LAT-G-X", interval_days=5.0, last_review=NOW)
         assert estimated_retention(state, NOW) == 1.0
 
     def test_decays_over_time(self):
         state = NodeState(
-            knoop_id="LAT-G-X", interval_days=5.0, last_review=NOW - timedelta(days=5)
+            node_id="LAT-G-X", interval_days=5.0, last_review=NOW - timedelta(days=5)
         )
         r = estimated_retention(state, NOW)
         # Δt == stability -> exp(-1) ≈ 0.368
         assert 0.36 < r < 0.37
 
     def test_monotonic_decreasing(self):
-        base = dict(knoop_id="LAT-G-X", interval_days=3.0)
+        base = dict(node_id="LAT-G-X", interval_days=3.0)
         early = NodeState(**base, last_review=NOW - timedelta(days=1))
         late = NodeState(**base, last_review=NOW - timedelta(days=10))
         assert estimated_retention(early, NOW) > estimated_retention(late, NOW)
 
     def test_result_within_bounds(self):
         state = NodeState(
-            knoop_id="LAT-G-X", interval_days=1.0, last_review=NOW - timedelta(days=365)
+            node_id="LAT-G-X", interval_days=1.0, last_review=NOW - timedelta(days=365)
         )
         r = estimated_retention(state, NOW)
         assert 0.0 <= r <= 1.0
@@ -61,10 +61,10 @@ class TestBuildLearnerReport:
     def _learner(self) -> LearnerModel:
         learner = LearnerModel(user_id=uuid4())
         # new (posterior < 0.3), never reviewed
-        learner.knoop_states["A"] = NodeState(knoop_id="A", posterior_mastery=0.1)
+        learner.node_states["A"] = NodeState(node_id="A", posterior_mastery=0.1)
         # learning, reviewed 5 days ago, two responses (receptief + productief)
-        learner.knoop_states["B"] = NodeState(
-            knoop_id="B",
+        learner.node_states["B"] = NodeState(
+            node_id="B",
             posterior_mastery=0.5,
             interval_days=5.0,
             last_review=NOW - timedelta(days=5),
@@ -74,8 +74,8 @@ class TestBuildLearnerReport:
             ],
         )
         # mastered, reviewed today, one self-assess response (richting None)
-        learner.knoop_states["C"] = NodeState(
-            knoop_id="C",
+        learner.node_states["C"] = NodeState(
+            node_id="C",
             posterior_mastery=0.9,
             interval_days=10.0,
             last_review=NOW,

@@ -20,7 +20,7 @@ def load_graph(path: Path) -> nx.DiGraph:
 
     Returns:
         A NetworkX DiGraph where each node stores a Node instance
-        under the ``"knoop"`` attribute and each edge stores a
+        under the ``"node"`` attribute and each edge stores a
         PrerequisiteEdge instance under the ``"edge"`` attribute.
 
     Raises:
@@ -65,11 +65,11 @@ def load_graph_from_dict(data: dict[str, Any]) -> nx.DiGraph:
 
     # Add nodes — check for duplicates
     seen_ids: set[str] = set()
-    for knoop in graph_data.knopen:
-        if knoop.id in seen_ids:
-            raise ValueError(f"Duplicate knoop ID: {knoop.id!r}")
-        seen_ids.add(knoop.id)
-        graph.add_node(knoop.id, knoop=knoop)
+    for node in graph_data.knopen:
+        if node.id in seen_ids:
+            raise ValueError(f"Duplicate node ID: {node.id!r}")
+        seen_ids.add(node.id)
+        graph.add_node(node.id, node=node)
 
     # Add edges — validate that both endpoints exist
     dangling: list[str] = []
@@ -98,8 +98,8 @@ def graph_to_dict(graph: nx.DiGraph) -> dict[str, Any]:
     """
     knopen = []
     for node_id in graph.nodes:
-        knoop: Node = graph.nodes[node_id]["knoop"]
-        knopen.append(knoop.model_dump())
+        node: Node = graph.nodes[node_id]["node"]
+        knopen.append(node.model_dump())
 
     edges = []
     for u, v in graph.edges:

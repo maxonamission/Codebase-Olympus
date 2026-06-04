@@ -44,20 +44,20 @@ def _question_to_response(
 ) -> QuestionResponse | None:
     """Convert internal Question to API QuestionResponse.
 
-    *vocab_metadata* is the knoop-ID-keyed lookup from
+    *vocab_metadata* is the node-ID-keyed lookup from
     :func:`gymnasium_classica.vocab.loader.load_vocab_metadata`.  When
-    the question is about a V-knoop and a matching entry exists, the
+    the question is about a V-node and a matching entry exists, the
     structured metadata is attached on ``vocab_metadata``.
     """
     if q is None:
         return None
     metadata: VocabMetadata | None = None
     if vocab_metadata:
-        entry = vocab_metadata.get(q.knoop_id)
+        entry = vocab_metadata.get(q.node_id)
         if entry is not None:
             metadata = _vocab_entry_to_metadata(entry)
     return QuestionResponse(
-        knoop_id=q.knoop_id,
+        node_id=q.node_id,
         titel=q.titel,
         beschrijving=q.beschrijving,
         stimulus=q.stimulus,
@@ -181,7 +181,7 @@ async def submit_answer(
     vocab_metadata = getattr(request.app.state, "vocab_metadata", {})
     return AnswerResponse(
         feedback=FeedbackResponse(
-            knoop_id=result.feedback.knoop_id,
+            node_id=result.feedback.node_id,
             correct=result.feedback.correct,
             response_type=result.feedback.response_type,
             mastery_before=result.feedback.mastery_before,

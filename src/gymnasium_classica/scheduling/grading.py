@@ -80,7 +80,7 @@ def grade_answer(raw_answer: str, item: Item, taal: Language) -> GradingResult:
             they selected).  Leading/trailing whitespace is tolerated.
         item: The Item being graded.  ``item.antwoord`` may be a single
             string or a list of acceptable strings.
-        taal: The language of the knoop, used to pick normalization
+        taal: The language of the node, used to pick normalization
             rules (macron-tolerant for Latin).
 
     Returns:

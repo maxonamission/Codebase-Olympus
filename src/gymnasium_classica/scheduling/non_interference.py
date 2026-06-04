@@ -33,9 +33,9 @@ class NonInterferenceState:
     _cluster_counts: dict[str, int] = field(default_factory=dict)
     _total_selections: int = 0
 
-    def record_selection(self, knoop: Node) -> None:
-        """Record that *knoop* was just selected."""
-        cluster = knoop.semantisch_cluster if knoop.type == NodeType.V else None
+    def record_selection(self, node: Node) -> None:
+        """Record that *node* was just selected."""
+        cluster = node.semantisch_cluster if node.type == NodeType.V else None
         self._recent_clusters.append(cluster)
         if len(self._recent_clusters) > self.window_size:
             self._recent_clusters = self._recent_clusters[-self.window_size :]
@@ -43,8 +43,8 @@ class NonInterferenceState:
         if cluster is not None:
             self._cluster_counts[cluster] = self._cluster_counts.get(cluster, 0) + 1
 
-    def cluster_penalty(self, knoop: Node) -> float:
-        """Return a penalty in [0.0, 1.0] for selecting *knoop* next.
+    def cluster_penalty(self, node: Node) -> float:
+        """Return a penalty in [0.0, 1.0] for selecting *node* next.
 
         Returns 0.0 (no penalty) when the node is not a vocabulary node,
         has no cluster, or its cluster was not recently seen.
@@ -54,10 +54,10 @@ class NonInterferenceState:
         *strongest* match counts (not cumulative), since the goal is to
         spread items apart, not to permanently suppress a cluster.
         """
-        if knoop.type != NodeType.V or knoop.semantisch_cluster is None:
+        if node.type != NodeType.V or node.semantisch_cluster is None:
             return 0.0
 
-        cluster = knoop.semantisch_cluster
+        cluster = node.semantisch_cluster
         max_penalty = 0.0
 
         # Walk backwards through recent selections
@@ -69,7 +69,7 @@ class NonInterferenceState:
 
         return max_penalty
 
-    def apply_penalty(self, base_priority: float, knoop: Node) -> float:
+    def apply_penalty(self, base_priority: float, node: Node) -> float:
         """Return the adjusted priority after applying the cluster penalty.
 
         ``adjusted = base_priority * (1 - penalty)``
@@ -77,7 +77,7 @@ class NonInterferenceState:
         A penalty of 0.8 reduces priority to 20% of its base value.
         A penalty of 0.0 leaves it unchanged.
         """
-        penalty = self.cluster_penalty(knoop)
+        penalty = self.cluster_penalty(node)
         return base_priority * (1.0 - penalty)
 
     @property
@@ -92,7 +92,7 @@ def select_next(
 ) -> Node | None:
     """Select the best candidate after applying non-interference penalties.
 
-    *candidates* is a list of ``(base_priority, knoop)`` pairs, where
+    *candidates* is a list of ``(base_priority, node)`` pairs, where
     higher priority = more desirable.
 
     When adjusted priorities are tied, the candidate whose cluster has been
@@ -105,20 +105,20 @@ def select_next(
     if not candidates:
         return None
 
-    best_knoop = None
+    best_node = None
     best_score: tuple[float, float] = (-float("inf"), -float("inf"))
 
-    for base_priority, knoop in candidates:
-        adjusted = state.apply_penalty(base_priority, knoop)
+    for base_priority, node in candidates:
+        adjusted = state.apply_penalty(base_priority, node)
         # Tiebreaker: prefer clusters selected fewer times (negative count → higher)
-        cluster = knoop.semantisch_cluster
+        cluster = node.semantisch_cluster
         count = state._cluster_counts.get(cluster, 0) if cluster else 0
         score = (adjusted, -count)
         if score > best_score:
             best_score = score
-            best_knoop = knoop
+            best_node = node
 
-    if best_knoop is None:
+    if best_node is None:
         return None
-    state.record_selection(best_knoop)
-    return best_knoop
+    state.record_selection(best_node)
+    return best_node

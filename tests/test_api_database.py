@@ -82,7 +82,7 @@ class TestLearnerModel:
         loaded = load_learner_model(db, str(uid))
         assert loaded is not None
         assert loaded.user_id == uid
-        assert loaded.knoop_states == {}
+        assert loaded.node_states == {}
 
     def test_load_nonexistent_returns_none(self, db):
         assert load_learner_model(db, "nonexistent") is None
@@ -100,13 +100,13 @@ class TestLearnerModel:
         assert loaded is not None
         assert loaded.intake_completed is True
 
-    def test_roundtrip_with_knoop_states(self, db):
+    def test_roundtrip_with_node_states(self, db):
         from gymnasium_classica.models.learner import NodeState
 
         uid = uuid4()
         model = LearnerModel(user_id=uid)
-        model.knoop_states["LAT-G-MORF-NOM-D1"] = NodeState(
-            knoop_id="LAT-G-MORF-NOM-D1",
+        model.node_states["LAT-G-MORF-NOM-D1"] = NodeState(
+            node_id="LAT-G-MORF-NOM-D1",
             posterior_mastery=0.75,
             easiness_factor=2.3,
             interval_days=5.0,
@@ -116,6 +116,6 @@ class TestLearnerModel:
 
         loaded = load_learner_model(db, str(uid))
         assert loaded is not None
-        ks = loaded.knoop_states["LAT-G-MORF-NOM-D1"]
+        ks = loaded.node_states["LAT-G-MORF-NOM-D1"]
         assert ks.posterior_mastery == pytest.approx(0.75)
         assert ks.repetitions == 3

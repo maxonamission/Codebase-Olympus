@@ -17,8 +17,8 @@ GRAPH_DIR = DATA_DIR / "graph"
 OUTPUT_DIR = DATA_DIR / "passages"
 
 
-def load_all_knoop_ids() -> set[str]:
-    """Load all knoop IDs from graph JSON files for validation."""
+def load_all_node_ids() -> set[str]:
+    """Load all node IDs from graph JSON files for validation."""
     ids: set[str] = set()
     for p in GRAPH_DIR.glob("*.json"):
         with open(p, encoding="utf-8") as f:
@@ -1036,12 +1036,12 @@ def validate(passages: list[dict], known_ids: set[str]) -> list[str]:
     for p in passages:
         for kid in p["knoop_ids"]:
             if kid not in known_ids:
-                warnings.append(f"  {p['id']}: onbekend knoop_id {kid}")
+                warnings.append(f"  {p['id']}: onbekend node_id {kid}")
     return warnings
 
 
 def main() -> None:
-    known = load_all_knoop_ids()
+    known = load_all_node_ids()
     passages = [p for p in ALL_PASSAGES if p]
 
     if not passages:
