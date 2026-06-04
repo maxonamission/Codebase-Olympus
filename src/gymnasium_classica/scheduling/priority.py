@@ -13,7 +13,7 @@ from datetime import datetime
 
 import networkx as nx
 
-from gymnasium_classica.models.graph import Node, PrerequisiteEdge
+from gymnasium_classica.models.graph import Direction, Node, PrerequisiteEdge
 from gymnasium_classica.models.learner import LearnerModel, NodeState
 
 # Component weights
@@ -76,6 +76,7 @@ def readiness_score(
     learner: LearnerModel,
     graph: nx.DiGraph,
     prereq_threshold: float | None = None,
+    direction: Direction | None = None,
 ) -> float:
     """Readiness for an unmastered node: minimum posterior of all prerequisites.
 
@@ -85,12 +86,16 @@ def readiness_score(
 
     The *prereq_threshold* parameter allows context-first scheduling to
     relax the gate (e.g. 0.25 instead of the default 0.75).
+
+    *direction* (default ``None`` → overall posterior) lets the gate optionally
+    use direction-specific mastery (L2-01); ``None`` reproduces the original
+    behaviour exactly.
     """
     if prereq_threshold is None:
         prereq_threshold = PREREQ_READY_THRESHOLD
 
     state = learner.node_states.get(node_id)
-    if state and state.posterior_mastery >= MASTERY_THRESHOLD:
+    if state and state.mastery_for(direction) >= MASTERY_THRESHOLD:
         return 0.0  # Already mastered — not a "new material" candidate
 
     predecessors = list(graph.predecessors(node_id))
@@ -100,7 +105,7 @@ def readiness_score(
     min_posterior = 1.0
     for pred_id in predecessors:
         pred_state = learner.node_states.get(pred_id)
-        posterior = pred_state.posterior_mastery if pred_state else 0.0
+        posterior = pred_state.mastery_for(direction) if pred_state else 0.0
         if posterior < prereq_threshold:
             return 0.0  # Hard gate: prerequisite not met
         min_posterior = min(min_posterior, posterior)

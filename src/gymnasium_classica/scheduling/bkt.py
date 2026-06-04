@@ -12,7 +12,7 @@ from dataclasses import dataclass
 
 import networkx as nx
 
-from gymnasium_classica.models.graph import PrerequisiteEdge
+from gymnasium_classica.models.graph import Direction, PrerequisiteEdge
 from gymnasium_classica.models.learner import (
     LearnerModel,
     MasterySource,
@@ -108,15 +108,25 @@ def update_node_state(
     node_id: str,
     response: ResponseType,
     params: BKTParams | None = None,
+    direction: Direction | None = None,
 ) -> NodeState:
     """Update a single node's BKT posterior given a response.
 
     ``slow_correct`` is treated as ``correct`` for BKT (BKT does not
     model response speed).  The speed distinction is used by SM-2 only.
+
+    The overall ``posterior_mastery`` is always updated. When *direction* is
+    given, the matching per-direction posterior (receptive/productive) is
+    updated too, so the system can see the recognise-vs-produce asymmetry
+    (L2-01). ``direction=None`` reproduces the original behaviour exactly.
     """
     state = _get_or_create_state(learner, node_id)
     correct = response in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT)
     state.posterior_mastery = bkt_update_posterior(state.posterior_mastery, correct, params)
+    if direction == Direction.RECEPTIVE:
+        state.receptive_mastery = bkt_update_posterior(state.receptive_mastery, correct, params)
+    elif direction == Direction.PRODUCTIVE:
+        state.productive_mastery = bkt_update_posterior(state.productive_mastery, correct, params)
     state.source = MasterySource.PRACTICE
     return state
 
