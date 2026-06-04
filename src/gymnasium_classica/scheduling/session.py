@@ -35,6 +35,7 @@ from gymnasium_classica.scheduling.bkt import (
     estimate_learning_rate,
     update_node_state,
 )
+from gymnasium_classica.scheduling.equity import equity_prereq_threshold
 from gymnasium_classica.scheduling.non_interference import (
     NonInterferenceState,
     select_next,
@@ -146,12 +147,15 @@ def _candidates_for_new_material(
     """Unmastered nodes with all prerequisites green, sorted by pedagogical value."""
     candidates = []
     max_out_deg = max((graph.out_degree(n) for n in graph.nodes), default=1) or 1
+    # Equity-waarborg (L3-03): zwakkere leerlingen krijgen een hogere
+    # prerequisite-drempel → minder nieuw materiaal, meer consolidatie.
+    prereq_threshold = equity_prereq_threshold(learner)
 
     for node_id in graph.nodes:
         posterior = _get_state_posterior(learner, node_id)
         if posterior >= MASTERY_THRESHOLD:
             continue
-        ready = readiness_score(node_id, learner, graph)
+        ready = readiness_score(node_id, learner, graph, prereq_threshold=prereq_threshold)
         if ready == 0.0:
             continue
         out_deg = graph.out_degree(node_id) / max_out_deg

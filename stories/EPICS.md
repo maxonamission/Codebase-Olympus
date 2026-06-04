@@ -626,7 +626,7 @@ metacognitieve illusie, en equity-waarborgen voor zwakkere leerlingen.
 |-------|-------|-------------|--------|
 | L3-01 | Worked-example oefentype met faded scaffolding | — | done |
 | L3-02 | Motivatielaag tegen de metacognitieve illusie | L1-01 | done |
-| L3-03 | Equity-waarborgen voor zwakkere leerlingen | L1-01, L1-02 | doing |
+| L3-03 | Equity-waarborgen voor zwakkere leerlingen | L1-01, L1-02 | done |
 
 ---
 ---
