@@ -16,7 +16,7 @@ def _vocab_node(id_suffix: str, cluster: str | None = None) -> Node:
         type="V",
         taal="lat",
         titel_nl=f"Woord {id_suffix}",
-        beschrijving=f"Vocabulaireknoop {id_suffix}.",
+        beschrijving=f"Vocabulary node {id_suffix}.",
         bloom_niveau="kennis",
         fase="onderbouw_1",
         semantisch_cluster=cluster,
@@ -30,7 +30,7 @@ def _grammar_node(id_suffix: str) -> Node:
         type="G",
         taal="lat",
         titel_nl=f"Grammatica {id_suffix}",
-        beschrijving=f"Grammaticaknoop {id_suffix}.",
+        beschrijving=f"Grammar node {id_suffix}.",
         bloom_niveau="kennis",
         fase="onderbouw_1",
     )
