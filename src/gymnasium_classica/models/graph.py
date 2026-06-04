@@ -25,11 +25,11 @@ class NodeType(StrEnum):
 
 
 class BloomLevel(StrEnum):
-    KENNIS = "kennis"
-    BEGRIP = "begrip"
-    TOEPASSING = "toepassing"
-    ANALYSE = "analyse"
-    SYNTHESE = "synthese"
+    KNOWLEDGE = "knowledge"
+    COMPREHENSION = "comprehension"
+    APPLICATION = "application"
+    ANALYSIS = "analysis"
+    SYNTHESIS = "synthesis"
 
 
 class Phase(StrEnum):
@@ -48,14 +48,14 @@ class EdgeType(StrEnum):
 
 
 class ItemType(StrEnum):
-    HERKENNING = "herkenning"
-    PRODUCTIE = "productie"
-    ANALYSE = "analyse"
-    SYNTHESE = "synthese"
-    CONTEXTUEEL = "contextueel"
-    OFFLINE_SCHRIJVEN = "offline_schrijven"
-    LUISTER_HERKENNING = "luister_herkenning"
-    LUISTER_PRODUCTIE = "luister_productie"
+    RECOGNITION = "recognition"
+    PRODUCTION = "production"
+    ANALYSIS = "analysis"
+    SYNTHESIS = "synthesis"
+    CONTEXTUAL = "contextual"
+    OFFLINE_WRITING = "offline_writing"
+    LISTENING_RECOGNITION = "listening_recognition"
+    LISTENING_PRODUCTION = "listening_production"
 
 
 class VerificationMethod(StrEnum):
@@ -65,14 +65,14 @@ class VerificationMethod(StrEnum):
 
 
 class Direction(StrEnum):
-    RECEPTIEF = "receptief"
-    PRODUCTIEF = "productief"
+    RECEPTIVE = "receptive"
+    PRODUCTIVE = "productive"
 
 
 class Source(StrEnum):
-    HANDMATIG = "handmatig"
-    LLM_GEGENEREERD = "llm_gegenereerd"
-    AUTHENTIEK = "authentiek"
+    MANUAL = "manual"
+    LLM_GENERATED = "llm_generated"
+    AUTHENTIC = "authentic"
 
 
 # --- Models ---

@@ -532,7 +532,7 @@ de hand)
 - F1-12 done (telemetrie-basis voor M1-02)
 - E1 in uitvoering (methode-mapping voor M1-03)
 
-**Status:** backlog
+**Status:** done — alle drie de tiers afgerond (juni 2026).
 
 | Story | Titel | Afhankelijk | Status |
 |-------|-------|-------------|--------|
@@ -586,7 +586,7 @@ zelf vullen. Retentie-/tijd-/masterymetriek, een baseline, en een licht
 A/B-framework.
 **Geschat:** 3 stories
 **Afhankelijkheden:** Bestaand learner-model + telemetrie (F1-12 done)
-**Status:** backlog
+**Status:** done — alle drie de tiers afgerond (juni 2026).
 
 | Story | Titel | Afhankelijk | Status |
 |-------|-------|-------------|--------|
@@ -603,7 +603,7 @@ en productieve beheersing apart, BKT achter een migreerbare interface
 met graph-aware tracing, en learner-niveau parameters.
 **Geschat:** 3 stories
 **Afhankelijkheden:** Bestaand BKT/SM-2 learner-model
-**Status:** backlog
+**Status:** done — alle drie de tiers afgerond (juni 2026).
 
 | Story | Titel | Afhankelijk | Status |
 |-------|-------|-------------|--------|
@@ -620,7 +620,7 @@ worked examples met faded scaffolding, een motivatielaag tegen de
 metacognitieve illusie, en equity-waarborgen voor zwakkere leerlingen.
 **Geschat:** 3 stories
 **Afhankelijkheden:** L1 (metriek voor triggers en equity-detectie)
-**Status:** backlog
+**Status:** done — alle drie de tiers afgerond (juni 2026).
 
 | Story | Titel | Afhankelijk | Status |
 |-------|-------|-------------|--------|
@@ -887,7 +887,7 @@ akkoord over de scope.
 plannen ná merge van lopend werk dat diezelfde bestanden aanpast
 (Sprint 2 / L1), om merge-conflicten te vermijden.
 
-**Status:** backlog
+**Status:** done — alle drie de tiers afgerond (juni 2026).
 
 ## Epic N1: Vernederlandste code-identifiers naar Engels
 
@@ -898,7 +898,7 @@ plannen ná merge van lopend werk dat diezelfde bestanden aanpast
 | N1-03 | Enum-klassen naar Engels | 1 | done |
 | N1-04 | knoop-veldnamen + attribuutkey → node | 2 | done |
 | N1-05 | JSON-schema-keys → Engels | 3 | done |
-| N1-06 | Enum-waarden → Engels | 3 | doing |
+| N1-06 | Enum-waarden → Engels | 3 | done |
 
 **Scope besloten: t/m Tier 3** (volledig). Tier 2- en Tier 3-stories
 (veldnamen, JSON-keys, enum-waarden + datamigratie) worden uitgewerkt zodra

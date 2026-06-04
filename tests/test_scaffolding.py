@@ -32,7 +32,7 @@ def _make_node(node_id: str, content_ref: str | None = None) -> Node:
         language=Language.LAT,
         title_nl=f"Knoop {node_id}",
         description=f"Test node {node_id}",
-        bloom_level=BloomLevel.KENNIS,
+        bloom_level=BloomLevel.KNOWLEDGE,
         phase=Phase.ONDERBOUW_1,
         content_ref=content_ref,
     )

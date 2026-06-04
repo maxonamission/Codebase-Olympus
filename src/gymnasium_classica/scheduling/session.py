@@ -356,7 +356,7 @@ def _collect_offline_items(
             continue
         node: Node = graph.nodes[node_id]["node"]
         for item in node.items:
-            if item.type == ItemType.OFFLINE_SCHRIJVEN:
+            if item.type == ItemType.OFFLINE_WRITING:
                 assignments.append(
                     OfflineAssignment(
                         node_id=node_id,

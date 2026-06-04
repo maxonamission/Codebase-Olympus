@@ -32,8 +32,8 @@ def _mc_item(item_id: str = "ITEM-LAT-V-F01-SUM-001") -> Item:
     return Item(
         id=item_id,
         node_ids=["LAT-V-F01-SUM"],
-        type=ItemType.LUISTER_HERKENNING,
-        direction=Direction.RECEPTIEF,
+        type=ItemType.LISTENING_RECOGNITION,
+        direction=Direction.RECEPTIVE,
         difficulty_initial=0.0,
         discrimination_initial=1.0,
         expected_time_sec=15,
@@ -44,7 +44,7 @@ def _mc_item(item_id: str = "ITEM-LAT-V-F01-SUM-001") -> Item:
         },
         answer="zijn",
         feedback="Correct: sum betekent 'zijn'.",
-        source=Source.HANDMATIG,
+        source=Source.MANUAL,
     )
 
 
@@ -53,8 +53,8 @@ def _text_item(item_id: str = "ITEM-LAT-V-F01-SUM-002") -> Item:
     return Item(
         id=item_id,
         node_ids=["LAT-V-F01-SUM"],
-        type=ItemType.LUISTER_PRODUCTIE,
-        direction=Direction.PRODUCTIEF,
+        type=ItemType.LISTENING_PRODUCTION,
+        direction=Direction.PRODUCTIVE,
         difficulty_initial=0.2,
         discrimination_initial=1.0,
         expected_time_sec=20,
@@ -65,7 +65,7 @@ def _text_item(item_id: str = "ITEM-LAT-V-F01-SUM-002") -> Item:
         },
         answer="sum",
         feedback="Correct.",
-        source=Source.HANDMATIG,
+        source=Source.MANUAL,
     )
 
 
@@ -74,15 +74,15 @@ def _plain_item(item_id: str = "ITEM-LAT-G-DEMO-001") -> Item:
     return Item(
         id=item_id,
         node_ids=["LAT-G-MORF-NAAMVAL-INTRO"],
-        type=ItemType.HERKENNING,
-        direction=Direction.RECEPTIEF,
+        type=ItemType.RECOGNITION,
+        direction=Direction.RECEPTIVE,
         difficulty_initial=-0.5,
         discrimination_initial=1.0,
         expected_time_sec=12,
         stimulus="Hoeveel naamvallen kent het Latijn?",
         answer="6",
         feedback="Zes.",
-        source=Source.HANDMATIG,
+        source=Source.MANUAL,
     )
 
 
@@ -93,7 +93,7 @@ def _vocab_node(items: list[Item]) -> Node:
         language=Language.LAT,
         title_nl="sum, esse — zijn",
         description="Het werkwoord 'zijn'.",
-        bloom_level=BloomLevel.KENNIS,
+        bloom_level=BloomLevel.KNOWLEDGE,
         phase=Phase.ONDERBOUW_1,
         items=items,
     )
@@ -106,7 +106,7 @@ def _grammar_node(items: list[Item]) -> Node:
         language=Language.LAT,
         title_nl="Wat is een naamval?",
         description="Introductie van het concept naamval.",
-        bloom_level=BloomLevel.KENNIS,
+        bloom_level=BloomLevel.KNOWLEDGE,
         phase=Phase.ONDERBOUW_1,
         items=items,
     )
@@ -117,7 +117,7 @@ class TestPromoteFirstItem:
         node = _vocab_node([_mc_item()])
         item_type, instruction, options, hint, audio_ref = _promote_first_item(node)
 
-        assert item_type == "luister_herkenning"
+        assert item_type == "listening_recognition"
         assert instruction == ("Luister naar het Latijnse woord en kies de juiste vertaling.")
         assert options == ["zijn", "vaderland", "doden", "vragen, streven naar"]
         assert hint is None
@@ -127,7 +127,7 @@ class TestPromoteFirstItem:
         node = _vocab_node([_text_item()])
         item_type, _instruction, options, hint, audio_ref = _promote_first_item(node)
 
-        assert item_type == "luister_productie"
+        assert item_type == "listening_production"
         assert hint == "zijn"
         assert options is None
         assert audio_ref == "LAT-V-F01-SUM.wav"
@@ -136,7 +136,7 @@ class TestPromoteFirstItem:
         node = _grammar_node([_plain_item()])
         item_type, instruction, options, hint, audio_ref = _promote_first_item(node)
 
-        assert item_type == "herkenning"
+        assert item_type == "recognition"
         assert instruction is None
         assert options is None
         assert hint is None
@@ -151,7 +151,7 @@ class TestPromoteFirstItem:
         node = _vocab_node([_mc_item(), _text_item()])
         item_type, _instruction, options, hint, _audio_ref = _promote_first_item(node)
 
-        assert item_type == "luister_herkenning"
+        assert item_type == "listening_recognition"
         assert options is not None
         # hint hoort bij item[1] en mag niet lekken
         assert hint is None
@@ -167,14 +167,14 @@ class TestKnoopToQuestionFlatShape:
             content_dir=tmp_path,
         )
 
-        assert q.item_type == "luister_herkenning"
+        assert q.item_type == "listening_recognition"
         assert q.options == ["zijn", "vaderland", "doden", "vragen, streven naar"]
         assert q.instruction is not None
         assert q.audio_ref == "LAT-V-F01-SUM.wav"
         assert q.hint is None
         # items-lijst blijft intact voor achterwaartse compatibiliteit
         assert len(q.items) == 1
-        assert q.items[0]["type"] == "luister_herkenning"
+        assert q.items[0]["type"] == "listening_recognition"
 
     def test_text_vocab_node_exposes_hint(self, tmp_path):
         q = _node_to_question(
@@ -183,7 +183,7 @@ class TestKnoopToQuestionFlatShape:
             content_dir=tmp_path,
         )
 
-        assert q.item_type == "luister_productie"
+        assert q.item_type == "listening_production"
         assert q.hint == "zijn"
         assert q.options is None
 
@@ -207,7 +207,7 @@ class TestKnoopToQuestionFlatShape:
             content_dir=tmp_path,
         )
 
-        assert q.item_type == "herkenning"
+        assert q.item_type == "recognition"
         assert q.options is None
         assert q.instruction is None
         assert q.hint is None
@@ -228,7 +228,7 @@ class TestQuestionResponseSerialization:
         assert resp is not None
         payload = resp.model_dump()
 
-        assert payload["item_type"] == "luister_herkenning"
+        assert payload["item_type"] == "listening_recognition"
         assert payload["options"] == ["zijn", "vaderland", "doden", "vragen, streven naar"]
         assert payload["instruction"].startswith("Luister")
         assert payload["audio_ref"] == "LAT-V-F01-SUM.wav"

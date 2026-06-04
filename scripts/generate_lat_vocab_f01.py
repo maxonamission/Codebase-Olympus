@@ -105,7 +105,7 @@ def make_node(w: dict, band: str) -> dict:
         "title_nl": make_titel(w),
         "title_terminology": None,
         "description": make_beschrijving(w, band),
-        "bloom_level": "kennis",
+        "bloom_level": "knowledge",
         "phase": "onderbouw_1",
         "testable": True,
         "pensum_years": [],

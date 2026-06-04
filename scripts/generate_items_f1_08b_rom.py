@@ -288,15 +288,15 @@ def make_item(
     return {
         "id": f"ITEM-{node_id}-001",
         "node_ids": [node_id],
-        "type": "herkenning",
-        "direction": "receptief",
+        "type": "recognition",
+        "direction": "receptive",
         "difficulty_initial": -0.5,
         "discrimination_initial": 1.0,
         "expected_time_sec": 20,
         "stimulus": {"instruction": vraag, "options": options},
         "answer": options[correct_idx],
         "feedback": feedback,
-        "source": "handmatig",
+        "source": "manual",
     }
 
 

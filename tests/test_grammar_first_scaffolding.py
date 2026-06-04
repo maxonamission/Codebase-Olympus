@@ -49,21 +49,21 @@ def _node() -> Node:
         language=Language.LAT,
         title_nl="De eerste declinatie",
         description="Overzicht van de 1e declinatie (a-stammen).",
-        bloom_level=BloomLevel.KENNIS,
+        bloom_level=BloomLevel.KNOWLEDGE,
         phase=Phase.ONDERBOUW_1,
         items=[
             Item(
                 id=f"ITEM-{KNOOP_ID}-001",
                 node_ids=[KNOOP_ID],
-                type=ItemType.HERKENNING,
-                direction=Direction.RECEPTIEF,
+                type=ItemType.RECOGNITION,
+                direction=Direction.RECEPTIVE,
                 difficulty_initial=0.0,
                 discrimination_initial=1.0,
                 expected_time_sec=10,
                 stimulus="Wat is de nominativus van 'puella'?",
                 answer="puella",
                 feedback="Correct: puella.",
-                source=Source.HANDMATIG,
+                source=Source.MANUAL,
             )
         ],
     )
@@ -137,7 +137,7 @@ class TestShouldScaffoldPure:
             correct=True,
             response_time_ms=2000,
             node_id=KNOOP_ID,
-            direction="receptief",
+            direction="receptive",
             mastery_before=0.0,
         )
         state = self._make_state(
@@ -236,7 +236,7 @@ class TestGrammarFirstSessionIntegration:
                     correct=True,
                     response_time_ms=2000,
                     node_id=KNOOP_ID,
-                    direction="receptief",
+                    direction="receptive",
                     mastery_before=0.0,
                 )
             ],

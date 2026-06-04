@@ -46,7 +46,7 @@ def _make_graph_and_learner():
                 "language": "lat",
                 "title_nl": "Wat is een naamval?",
                 "description": "Introductie van het concept naamval.",
-                "bloom_level": "kennis",
+                "bloom_level": "knowledge",
                 "phase": "onderbouw_1",
                 "items": [],
             },
@@ -56,7 +56,7 @@ def _make_graph_and_learner():
                 "language": "lat",
                 "title_nl": "Wat is een declinatie?",
                 "description": "Introductie van het concept declinatie.",
-                "bloom_level": "kennis",
+                "bloom_level": "knowledge",
                 "phase": "onderbouw_1",
                 "items": [],
             },
@@ -66,7 +66,7 @@ def _make_graph_and_learner():
                 "language": "lat",
                 "title_nl": "De eerste declinatie",
                 "description": "Overzicht van de 1e declinatie.",
-                "bloom_level": "kennis",
+                "bloom_level": "knowledge",
                 "phase": "onderbouw_1",
                 "items": [],
             },
@@ -235,7 +235,7 @@ def _broad_graph_and_learner(now: datetime):
                 "language": "lat",
                 "title_nl": "Naamval intro",
                 "description": "Introductie naamval.",
-                "bloom_level": "kennis",
+                "bloom_level": "knowledge",
                 "phase": "onderbouw_1",
                 "items": [],
             },
@@ -245,7 +245,7 @@ def _broad_graph_and_learner(now: datetime):
                 "language": "lat",
                 "title_nl": "Declinatie intro",
                 "description": "Introductie declinatie.",
-                "bloom_level": "kennis",
+                "bloom_level": "knowledge",
                 "phase": "onderbouw_1",
                 "items": [],
             },
@@ -255,7 +255,7 @@ def _broad_graph_and_learner(now: datetime):
                 "language": "lat",
                 "title_nl": "Eerste declinatie",
                 "description": "Overzicht eerste declinatie.",
-                "bloom_level": "kennis",
+                "bloom_level": "knowledge",
                 "phase": "onderbouw_1",
                 "items": [],
             },
@@ -265,7 +265,7 @@ def _broad_graph_and_learner(now: datetime):
                 "language": "lat",
                 "title_nl": "Nominativus 1e declinatie",
                 "description": "Nom. sg/pl van de 1e declinatie.",
-                "bloom_level": "kennis",
+                "bloom_level": "knowledge",
                 "phase": "onderbouw_1",
                 "items": [],
             },
@@ -275,7 +275,7 @@ def _broad_graph_and_learner(now: datetime):
                 "language": "lat",
                 "title_nl": "esse — zijn",
                 "description": "Werkwoord esse (zijn).",
-                "bloom_level": "kennis",
+                "bloom_level": "knowledge",
                 "phase": "onderbouw_1",
                 "items": [],
             },
@@ -336,7 +336,7 @@ def _broad_graph_and_learner(now: datetime):
 
 
 def _graph_with_offline_item():
-    """Graph met één node die een OFFLINE_SCHRIJVEN-item bevat."""
+    """Graph met één node die een OFFLINE_WRITING-item bevat."""
     data = {
         "nodes": [
             {
@@ -345,21 +345,21 @@ def _graph_with_offline_item():
                 "language": "lat",
                 "title_nl": "Eerste declinatie",
                 "description": "Overzicht eerste declinatie.",
-                "bloom_level": "kennis",
+                "bloom_level": "knowledge",
                 "phase": "onderbouw_1",
                 "items": [
                     {
                         "id": "ITEM-OFFLINE-D1-001",
                         "node_ids": ["LAT-G-MORF-DECL1-INTRO"],
-                        "type": "offline_schrijven",
-                        "direction": "productief",
+                        "type": "offline_writing",
+                        "direction": "productive",
                         "difficulty_initial": 0.5,
                         "discrimination_initial": 1.0,
                         "expected_time_sec": 300,
                         "stimulus": "Schrijf paradigma puella op.",
                         "answer": "puella, puellae, ...",
                         "feedback": "Vergelijk met paradigma.",
-                        "source": "handmatig",
+                        "source": "manual",
                         "verification_method": "self_report",
                     }
                 ],
@@ -447,7 +447,7 @@ class TestMaxNewNodes:
                     "language": "lat",
                     "title_nl": f"Root {i}",
                     "description": f"Root node {i}.",
-                    "bloom_level": "kennis",
+                    "bloom_level": "knowledge",
                     "phase": "onderbouw_1",
                     "items": [],
                 }
@@ -496,7 +496,7 @@ class TestContextFirstRoute:
                     "language": "lat",
                     "title_nl": "Naamval intro",
                     "description": "Introductie naamval.",
-                    "bloom_level": "kennis",
+                    "bloom_level": "knowledge",
                     "phase": "onderbouw_1",
                     "items": [],
                 },
@@ -506,7 +506,7 @@ class TestContextFirstRoute:
                     "language": "lat",
                     "title_nl": "Eerste declinatie",
                     "description": "Overzicht eerste declinatie.",
-                    "bloom_level": "kennis",
+                    "bloom_level": "knowledge",
                     "phase": "onderbouw_1",
                     "items": [],
                 },
@@ -595,7 +595,7 @@ class TestContextFirstRoute:
 
 
 class TestOfflineAssignmentCollection:
-    """OFFLINE_SCHRIJVEN-items komen na de sessie in pending_offline_assignments.
+    """OFFLINE_WRITING-items komen na de sessie in pending_offline_assignments.
 
     Contract: bij ``_finalize_session`` worden alle offline-items van de
     aangeraakte nodes toegevoegd aan ``learner.pending_offline_assignments``,

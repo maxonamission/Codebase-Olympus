@@ -71,13 +71,13 @@ class TestItemResponse:
             correct=True,
             response_time_ms=2500,
             node_id="LAT-G-MORF-NOM-D1",
-            direction="receptief",
+            direction="receptive",
             mastery_before=0.4,
         )
         assert resp.correct is True
         assert resp.response_time_ms == 2500
         assert resp.node_id == "LAT-G-MORF-NOM-D1"
-        assert resp.direction == "receptief"
+        assert resp.direction == "receptive"
         assert resp.mastery_before == 0.4
 
     def test_response_time_cannot_be_negative(self):
@@ -88,7 +88,7 @@ class TestItemResponse:
                 correct=False,
                 response_time_ms=-1,
                 node_id="LAT-G-MORF-NOM-D1",
-                direction="receptief",
+                direction="receptive",
                 mastery_before=0.4,
             )
 

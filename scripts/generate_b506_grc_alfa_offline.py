@@ -191,8 +191,8 @@ def main():
         item_data = {
             "id": f"ITEM-{node_id}-{nr:03d}",
             "node_ids": [node_id],
-            "type": "offline_schrijven",
-            "direction": "productief",
+            "type": "offline_writing",
+            "direction": "productive",
             "difficulty_initial": -0.5,
             "discrimination_initial": 1.0,
             "expected_time_sec": 60,
@@ -203,7 +203,7 @@ def main():
             ),
             "answer": f"Controleer je lettervormen met het voorbeeld: {upper} {lower}.",
             "feedback": tip,
-            "source": "handmatig",
+            "source": "manual",
             "verification_method": "self_report",
             "expected_result": f"5× {upper} en 5× {lower} — herkenbare lettervorm",
         }

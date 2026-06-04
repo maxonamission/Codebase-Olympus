@@ -67,8 +67,8 @@ def make_stamtijd_item(
     return {
         "id": f"ITEM-{node_id}-005",
         "node_ids": [node_id],
-        "type": "productie",
-        "direction": "productief",
+        "type": "production",
+        "direction": "productive",
         # Stamtijden zijn moeilijker dan basis NL↔lemma
         "difficulty_initial": 1.0,
         "discrimination_initial": 1.2,
@@ -85,7 +85,7 @@ def make_stamtijd_item(
         "feedback": (
             f"Stamtijden van {lemma}: {gen}. De {_short_label(language)} (1sg) is {second}."
         ),
-        "source": "handmatig",
+        "source": "manual",
     }
 
 

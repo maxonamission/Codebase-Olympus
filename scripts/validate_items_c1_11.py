@@ -75,9 +75,9 @@ def main():
         # Placeholder: altijd "✓" zolang we geen striktere drempel handhaven.
         flag = "✓"
         print(f"   {flag} {t:15s}: {c:4d} ({pct:.0f}%)")
-    hpct = 100 * types.get("herkenning", 0) / total
-    ppct = 100 * types.get("productie", 0) / total
-    cpct = 100 * (types.get("contextueel", 0) + types.get("analyse", 0)) / total
+    hpct = 100 * types.get("recognition", 0) / total
+    ppct = 100 * types.get("production", 0) / total
+    cpct = 100 * (types.get("contextual", 0) + types.get("analysis", 0)) / total
     if hpct < 30:
         print("   ❌ Herkenning < 30%")
         ok = False

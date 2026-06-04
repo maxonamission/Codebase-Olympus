@@ -161,8 +161,8 @@ def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: i
     return {
         "id": f"ITEM-{node_id}-{item_nr:03d}",
         "node_ids": [node_id],
-        "type": "luister_herkenning",
-        "direction": "receptief",
+        "type": "listening_recognition",
+        "direction": "receptive",
         "difficulty_initial": round(random.uniform(-1.0, 0.0), 2),
         "discrimination_initial": 1.0,
         "expected_time_sec": 15,
@@ -173,7 +173,7 @@ def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: i
         },
         "answer": correct,
         "feedback": f"{first_word} = {correct}.",
-        "source": "llm_gegenereerd",
+        "source": "llm_generated",
         "audio_ref": node["audio_ref"],
     }
 
@@ -199,8 +199,8 @@ def generate_productie_item(node: dict, item_nr: int) -> dict:
     return {
         "id": f"ITEM-{node_id}-{item_nr:03d}",
         "node_ids": [node_id],
-        "type": "luister_productie",
-        "direction": "productief",
+        "type": "listening_production",
+        "direction": "productive",
         "difficulty_initial": round(random.uniform(0.0, 1.5), 2),
         "discrimination_initial": 1.0,
         "expected_time_sec": 25,
@@ -211,7 +211,7 @@ def generate_productie_item(node: dict, item_nr: int) -> dict:
         },
         "answer": first_word,
         "feedback": f"Het woord is '{first_word}' ({correct}).",
-        "source": "llm_gegenereerd",
+        "source": "llm_generated",
         "audio_ref": node["audio_ref"],
     }
 
@@ -226,7 +226,7 @@ def generate_items_for_file(json_path: Path, item_type: str) -> tuple[int, int]:
 
     Args:
         json_path: Path to graph JSON file.
-        item_type: "herkenning", "productie", or "both".
+        item_type: "recognition", "production", or "both".
 
     Returns:
         (nodes_updated, items_added)
@@ -255,13 +255,13 @@ def generate_items_for_file(json_path: Path, item_type: str) -> tuple[int, int]:
         existing_types = {i["type"] for i in target["items"]}
         added_here = 0
 
-        if item_type in ("herkenning", "both") and "luister_herkenning" not in existing_types:
+        if item_type in ("recognition", "both") and "listening_recognition" not in existing_types:
             nr = next_item_nr(target)
             item = generate_herkenning_item(node, translation_pool, nr)
             target["items"].append(item)
             added_here += 1
 
-        if item_type in ("productie", "both") and "luister_productie" not in existing_types:
+        if item_type in ("production", "both") and "listening_production" not in existing_types:
             nr = next_item_nr(target)
             item = generate_productie_item(node, nr)
             target["items"].append(item)
@@ -286,7 +286,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument(
         "--type",
-        choices=["herkenning", "productie", "both"],
+        choices=["recognition", "production", "both"],
         required=True,
         help="Which item type(s) to generate",
     )

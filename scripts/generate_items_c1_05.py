@@ -31,15 +31,15 @@ def _h(kid, nr, stim, antw, fb, moeil=-0.3, tijd=12):
     return {
         "id": f"ITEM-{kid}-{nr:03d}",
         "node_ids": [kid],
-        "type": "herkenning",
-        "direction": "receptief",
+        "type": "recognition",
+        "direction": "receptive",
         "difficulty_initial": moeil,
         "discrimination_initial": 1.0,
         "expected_time_sec": tijd,
         "stimulus": stim,
         "answer": antw,
         "feedback": fb,
-        "source": "handmatig",
+        "source": "manual",
     }
 
 
@@ -47,15 +47,15 @@ def _p(kid, nr, stim, antw, fb, moeil=0.6, tijd=20):
     return {
         "id": f"ITEM-{kid}-{nr:03d}",
         "node_ids": [kid],
-        "type": "productie",
-        "direction": "productief",
+        "type": "production",
+        "direction": "productive",
         "difficulty_initial": moeil,
         "discrimination_initial": 1.0,
         "expected_time_sec": tijd,
         "stimulus": stim,
         "answer": antw,
         "feedback": fb,
-        "source": "handmatig",
+        "source": "manual",
     }
 
 
@@ -63,15 +63,15 @@ def _c(kid, nr, stim, antw, fb, moeil=0.3, tijd=35):
     return {
         "id": f"ITEM-{kid}-{nr:03d}",
         "node_ids": [kid],
-        "type": "contextueel",
-        "direction": "receptief",
+        "type": "contextual",
+        "direction": "receptive",
         "difficulty_initial": moeil,
         "discrimination_initial": 1.0,
         "expected_time_sec": tijd,
         "stimulus": stim,
         "answer": antw,
         "feedback": fb,
-        "source": "handmatig",
+        "source": "manual",
     }
 
 

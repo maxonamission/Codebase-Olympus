@@ -6,7 +6,7 @@
       "language": "lat",
       "title_nl": "Wat is een naamval?",
       "description": "Introductie van het concept naamval: woordvorm verandert naar functie in de zin.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -17,30 +17,30 @@
           "node_ids": [
             "LAT-G-MORF-NAAMVAL-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.8,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Hoeveel naamvallen kent het Latijn?",
           "answer": "6",
           "feedback": "Het Latijn kent zes naamvallen: nominativus, genitivus, dativus, accusativus, ablativus en vocativus.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-NAAMVAL-INTRO-002",
           "node_ids": [
             "LAT-G-MORF-NAAMVAL-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Wat verandert er aan een Latijns woord als het een andere functie in de zin krijgt?",
           "answer": "de uitgang (het woord krijgt een andere naamvalsuitgang)",
           "feedback": "In het Latijn verandert de uitgang van een woord afhankelijk van de functie in de zin. Dit heet verbuiging (declinatie).",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -50,7 +50,7 @@
       "language": "lat",
       "title_nl": "Wat is een declinatie?",
       "description": "Introductie van het concept declinatie: groepen zelfstandige naamwoorden met dezelfde uitgangen.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -61,30 +61,30 @@
           "node_ids": [
             "LAT-G-MORF-DECL-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.7,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Hoeveel declinaties kent het Latijn?",
           "answer": "5",
           "feedback": "Het Latijn kent vijf declinaties. Elke declinatie is een groep zelfstandige naamwoorden met dezelfde uitgangen.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-DECL-INTRO-002",
           "node_ids": [
             "LAT-G-MORF-DECL-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Wat is een declinatie?",
           "answer": "een groep zelfstandige naamwoorden met dezelfde verbuigingsuitgangen",
           "feedback": "Een declinatie is een groep zelfstandige naamwoorden die dezelfde set naamvalsuitgangen delen.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -94,7 +94,7 @@
       "language": "lat",
       "title_nl": "Wat is een conjugatie?",
       "description": "Introductie van het concept conjugatie: groepen werkwoorden met dezelfde vervoegingspatronen.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -105,30 +105,30 @@
           "node_ids": [
             "LAT-G-MORF-CONJ-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Hoeveel conjugaties kent het Latijn (inclusief de gemengde)?",
           "answer": "5 (4 reguliere + de gemengde conjugatie)",
           "feedback": "Het Latijn kent vier reguliere conjugaties plus de gemengde conjugatie (soms '3b' genoemd).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-CONJ-INTRO-002",
           "node_ids": [
             "LAT-G-MORF-CONJ-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Wat is een conjugatie?",
           "answer": "een groep werkwoorden met hetzelfde vervoegingspatroon",
           "feedback": "Een conjugatie is een groep werkwoorden die dezelfde persoonsuitgangen en stamklinkers delen.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -138,7 +138,7 @@
       "language": "lat",
       "title_nl": "Werkwoordstijden",
       "description": "Overzicht van de Latijnse werkwoordstijden: presens, imperfectum, perfectum, etc.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -149,8 +149,8 @@
           "node_ids": [
             "LAT-G-MORF-TEMPUS-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -159,22 +159,22 @@
             "praesens, imperfectum, perfectum"
           ],
           "feedback": "De drie belangrijkste tempora in leerjaar 1 zijn praesens (tegenwoordige tijd), imperfectum (onvoltooid verleden) en perfectum (voltooid verleden).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-TEMPUS-INTRO-002",
           "node_ids": [
             "LAT-G-MORF-TEMPUS-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Hoe heet de tegenwoordige tijd in het Latijn?",
           "answer": "praesens",
           "feedback": "De tegenwoordige tijd heet praesens. Het imperfectum is de onvoltooid verleden tijd, het perfectum de voltooid verleden tijd.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -184,7 +184,7 @@
       "language": "lat",
       "title_nl": "Zinsdelen",
       "description": "Introductie van zinsdelen: onderwerp, gezegde, lijdend voorwerp, meewerkend voorwerp, etc.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -195,8 +195,8 @@
           "node_ids": [
             "LAT-G-SYNT-ZINSDEEL-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -205,37 +205,37 @@
             "onderwerp, gezegde, lijdend voorwerp, meewerkend voorwerp"
           ],
           "feedback": "De belangrijkste zinsdelen zijn: onderwerp (nominativus), gezegde (werkwoord), lijdend voorwerp (accusativus) en meewerkend voorwerp (dativus).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-ZINSDEEL-INTRO-002",
           "node_ids": [
             "LAT-G-SYNT-ZINSDEEL-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Waardoor weet je in het Latijn welk woord het onderwerp is — woordvolgorde of uitgang?",
           "answer": "de uitgang (naamvalsuitgang)",
           "feedback": "In het Latijn bepaalt de naamvalsuitgang de zinsfunctie, niet de woordvolgorde. Het onderwerp staat in de nominativus.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-ZINSDEEL-INTRO-003",
           "node_ids": [
             "LAT-G-SYNT-ZINSDEEL-INTRO"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 180,
           "stimulus": "Vertaal op papier en ontleed in zinsdelen: 'Dominus servo pecuniam dat.'",
           "answer": "Controleer je vertaling met de modelvertaling in de app.",
           "feedback": "Bepaal eerst het gezegde (pv), dan het onderwerp (nom.), lijdend vw (acc.), meewerkend vw (dat.).",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "De heer geeft de slaaf geld. Dominus=ow, servo=mwv, pecuniam=lv, dat=gezegde."
         }
@@ -247,7 +247,7 @@
       "language": "lat",
       "title_nl": "Woordgeslacht",
       "description": "De drie genera in het Latijn: masculinum, femininum, neutrum.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -258,8 +258,8 @@
           "node_ids": [
             "LAT-G-MORF-GENUS-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.8,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
@@ -269,22 +269,22 @@
             "mannelijk, vrouwelijk, onzijdig"
           ],
           "feedback": "Het Latijn kent drie genera: masculinum (mannelijk), femininum (vrouwelijk) en neutrum (onzijdig).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-GENUS-INTRO-002",
           "node_ids": [
             "LAT-G-MORF-GENUS-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Hoe kun je het woordgeslacht van een Latijns zelfstandig naamwoord achterhalen?",
           "answer": "in het woordenboek staat het genus vermeld (m., f., n.)",
           "feedback": "Het woordenboek vermeldt het genus met de afkortingen m. (masculinum), f. (femininum) en n. (neutrum).",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -294,7 +294,7 @@
       "language": "lat",
       "title_nl": "Enkelvoud en meervoud",
       "description": "Het onderscheid tussen singularis (enkelvoud) en pluralis (meervoud).",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -305,8 +305,8 @@
           "node_ids": [
             "LAT-G-MORF-NUMERUS-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -1.0,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
@@ -316,22 +316,22 @@
             "enkelvoud en meervoud"
           ],
           "feedback": "Het Latijn kent twee numeri: singularis (enkelvoud) en pluralis (meervoud).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-NUMERUS-INTRO-002",
           "node_ids": [
             "LAT-G-MORF-NUMERUS-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Hoe heet het enkelvoud met de Latijnse term?",
           "answer": "singularis",
           "feedback": "Enkelvoud heet in het Latijn singularis. Meervoud heet pluralis.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -341,7 +341,7 @@
       "language": "lat",
       "title_nl": "Personen van het werkwoord",
       "description": "De zes persoonsvormen: 1e, 2e en 3e persoon enkelvoud en meervoud.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -352,30 +352,30 @@
           "node_ids": [
             "LAT-G-MORF-PERSOON-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.7,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Hoeveel persoonsvormen heeft een Latijns werkwoord in totaal?",
           "answer": "6",
           "feedback": "Een Latijns werkwoord heeft zes persoonsvormen: 1e, 2e en 3e persoon, elk in enkelvoud en meervoud.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PERSOON-INTRO-002",
           "node_ids": [
             "LAT-G-MORF-PERSOON-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Welke persoon gebruik je als je over jezelf en anderen samen spreekt?",
           "answer": "1e persoon meervoud",
           "feedback": "De 1e persoon meervoud ('wij') gebruik je als je over jezelf en anderen samen spreekt.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -385,7 +385,7 @@
       "language": "lat",
       "title_nl": "De eerste declinatie",
       "description": "Overzicht van de 1e declinatie (a-stammen). Modelwoord: puella, -ae (v.).",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -396,45 +396,45 @@
           "node_ids": [
             "LAT-G-MORF-DECL1-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Op welke letter eindigen de meeste woorden van de 1e declinatie in de nominativus singularis?",
           "answer": "-a",
           "feedback": "Woorden van de 1e declinatie (a-stammen) eindigen in de nominativus singularis op -a. Bijv. puella, terra, aqua.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-DECL1-INTRO-002",
           "node_ids": [
             "LAT-G-MORF-DECL1-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Welk woordgeslacht hebben de meeste woorden van de 1e declinatie?",
           "answer": "femininum (vrouwelijk)",
           "feedback": "De 1e declinatie bevat voornamelijk feminina. Uitzonderingen zijn beroepsnamen als nauta (zeeman) en poeta (dichter), die masculinum zijn.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-DECL1-INTRO-003",
           "node_ids": [
             "LAT-G-MORF-DECL1-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Hoe herken je in het woordenboek dat een woord bij de 1e declinatie hoort?",
           "answer": "de genitivus singularis eindigt op -ae",
           "feedback": "Een woord hoort bij de 1e declinatie als de genitivus singularis op -ae eindigt. Bijv. puella, -ae.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -444,7 +444,7 @@
       "language": "lat",
       "title_nl": "Nominativus 1e declinatie",
       "description": "De nominativus sg. (-a) en pl. (-ae) van de 1e declinatie.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -455,8 +455,8 @@
           "node_ids": [
             "LAT-G-MORF-NOM-D1"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
@@ -466,37 +466,37 @@
             "ablativus singularis"
           ],
           "feedback": "'Puella' kan nominativus sg. of ablativus sg. zijn (de uitgang -a is gelijk). Context bepaalt de functie.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-NOM-D1-002",
           "node_ids": [
             "LAT-G-MORF-NOM-D1"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de nominativus meervoud van 'puella'.",
           "answer": "puellae",
           "feedback": "De nominativus meervoud van de 1e declinatie eindigt op -ae: puella → puellae.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-NOM-D1-003",
           "node_ids": [
             "LAT-G-MORF-NOM-D1"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Wat is de nominativus-uitgang van de 1e declinatie in het enkelvoud?",
           "answer": "-a",
           "feedback": "De nominativus singularis van de 1e declinatie eindigt op -a. Let op: dit is gelijk aan de ablativus sg.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -506,7 +506,7 @@
       "language": "lat",
       "title_nl": "Genitivus 1e declinatie",
       "description": "De genitivus sg. (-ae) en pl. (-arum) van de 1e declinatie.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -517,8 +517,8 @@
           "node_ids": [
             "LAT-G-MORF-GEN-D1"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
@@ -527,37 +527,37 @@
             "genitivus singularis, dativus singularis, of nominativus pluralis"
           ],
           "feedback": "'Puellae' kan genitivus sg., dativus sg. of nominativus pl. zijn. De uitgang -ae komt in drie naamvallen voor.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-GEN-D1-002",
           "node_ids": [
             "LAT-G-MORF-GEN-D1"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de genitivus meervoud van 'terra'.",
           "answer": "terrarum",
           "feedback": "De genitivus meervoud van de 1e declinatie eindigt op -ārum: terra → terrārum.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-GEN-D1-003",
           "node_ids": [
             "LAT-G-MORF-GEN-D1"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de genitivus enkelvoud van 'aqua'.",
           "answer": "aquae",
           "feedback": "De genitivus singularis van de 1e declinatie eindigt op -ae: aqua → aquae.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -567,7 +567,7 @@
       "language": "lat",
       "title_nl": "Dativus 1e declinatie",
       "description": "De dativus sg. (-ae) en pl. (-is) van de 1e declinatie.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -578,45 +578,45 @@
           "node_ids": [
             "LAT-G-MORF-DAT-D1"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Wat is de dativus-uitgang van de 1e declinatie in het enkelvoud?",
           "answer": "-ae",
           "feedback": "De dativus singularis van de 1e declinatie eindigt op -ae. Let op: dit is gelijk aan de genitivus sg. en nominativus pl.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-DAT-D1-002",
           "node_ids": [
             "LAT-G-MORF-DAT-D1"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de dativus meervoud van 'puella'.",
           "answer": "puellis",
           "feedback": "De dativus meervoud van de 1e declinatie eindigt op -īs: puella → puellīs. Let op: dit is gelijk aan de ablativus pl.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-DAT-D1-003",
           "node_ids": [
             "LAT-G-MORF-DAT-D1"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de dativus enkelvoud van 'terra'.",
           "answer": "terrae",
           "feedback": "De dativus singularis van de 1e declinatie eindigt op -ae: terra → terrae.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -626,7 +626,7 @@
       "language": "lat",
       "title_nl": "Accusativus 1e declinatie",
       "description": "De accusativus sg. (-am) en pl. (-as) van de 1e declinatie.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -637,45 +637,45 @@
           "node_ids": [
             "LAT-G-MORF-ACC-D1"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
           "stimulus": "Welke naamval is 'puellam'?",
           "answer": "accusativus singularis",
           "feedback": "De uitgang -am is uniek voor de accusativus singularis van de 1e declinatie.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-ACC-D1-002",
           "node_ids": [
             "LAT-G-MORF-ACC-D1"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de accusativus meervoud van 'puella'.",
           "answer": "puellas",
           "feedback": "De accusativus meervoud van de 1e declinatie eindigt op -ās: puella → puellās.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-ACC-D1-003",
           "node_ids": [
             "LAT-G-MORF-ACC-D1"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de accusativus enkelvoud van 'aqua'.",
           "answer": "aquam",
           "feedback": "De accusativus singularis van de 1e declinatie eindigt op -am: aqua → aquam.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -685,7 +685,7 @@
       "language": "lat",
       "title_nl": "Ablativus 1e declinatie",
       "description": "De ablativus sg. (-a) en pl. (-is) van de 1e declinatie.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -696,38 +696,38 @@
           "node_ids": [
             "LAT-G-MORF-ABL-D1"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Wat is de ablativus-uitgang van de 1e declinatie in het enkelvoud?",
           "answer": "-ā (lang a)",
           "feedback": "De ablativus singularis van de 1e declinatie eindigt op -ā (lange a). Geschreven zonder macron lijkt het op de nominativus sg. -a.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-ABL-D1-002",
           "node_ids": [
             "LAT-G-MORF-ABL-D1"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de ablativus meervoud van 'terra'.",
           "answer": "terris",
           "feedback": "De ablativus meervoud van de 1e declinatie eindigt op -īs: terra → terrīs. Dit is gelijk aan de dativus pl.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-ABL-D1-003",
           "node_ids": [
             "LAT-G-MORF-ABL-D1"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
@@ -737,7 +737,7 @@
             "puella"
           ],
           "feedback": "De ablativus singularis van de 1e declinatie eindigt op -ā: puella → puellā. Zonder macron geschreven als 'puella'.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -747,7 +747,7 @@
       "language": "lat",
       "title_nl": "De tweede declinatie",
       "description": "Overzicht van de 2e declinatie (o-stammen). Modelwoorden: dominus, -i (m.) en bellum, -i (n.).",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -758,45 +758,45 @@
           "node_ids": [
             "LAT-G-MORF-DECL2-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Op welke uitgang eindigen de meeste masculina van de 2e declinatie in de nominativus singularis?",
           "answer": "-us",
           "feedback": "Het hoofdpatroon van de 2e declinatie masculinum is nominativus sg. op -us. Bijv. dominus, servus, amicus.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-DECL2-INTRO-002",
           "node_ids": [
             "LAT-G-MORF-DECL2-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Hoe herken je in het woordenboek dat een woord bij de 2e declinatie hoort?",
           "answer": "de genitivus singularis eindigt op -i",
           "feedback": "Een woord hoort bij de 2e declinatie als de genitivus singularis op -i eindigt. Bijv. dominus, -i (m.).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-DECL2-INTRO-003",
           "node_ids": [
             "LAT-G-MORF-DECL2-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Welke drie nominativus-uitgangen komen voor bij de 2e declinatie?",
           "answer": "-us, -er, -um",
           "feedback": "De 2e declinatie kent drie subtypen: -us (dominus), -er (puer/ager) en -um (bellum, neutrum).",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -806,7 +806,7 @@
       "language": "lat",
       "title_nl": "Nominativus 2e declinatie",
       "description": "De nominativus sg. (-us/-er/-um) en pl. (-i/-a) van de 2e declinatie.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -817,8 +817,8 @@
           "node_ids": [
             "LAT-G-MORF-NOM-D2"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
@@ -827,37 +827,37 @@
             "genitivus singularis of nominativus pluralis"
           ],
           "feedback": "'Domini' kan genitivus sg. (-i) of nominativus pl. (-i) zijn. Context bepaalt de functie.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-NOM-D2-002",
           "node_ids": [
             "LAT-G-MORF-NOM-D2"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de nominativus meervoud van 'dominus'.",
           "answer": "domini",
           "feedback": "De nominativus meervoud van de 2e declinatie masc. eindigt op -i: dominus → domini.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-NOM-D2-003",
           "node_ids": [
             "LAT-G-MORF-NOM-D2"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.7,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de nominativus meervoud van 'bellum'.",
           "answer": "bella",
           "feedback": "Bij neutra eindigt de nominativus meervoud op -a: bellum → bella (neutrumregel).",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -867,7 +867,7 @@
       "language": "lat",
       "title_nl": "Genitivus 2e declinatie",
       "description": "De genitivus sg. (-i) en pl. (-orum) van de 2e declinatie.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -878,45 +878,45 @@
           "node_ids": [
             "LAT-G-MORF-GEN-D2"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
           "stimulus": "Wat is de genitivus-uitgang van de 2e declinatie in het enkelvoud?",
           "answer": "-i",
           "feedback": "De genitivus singularis van de 2e declinatie eindigt op -i. Dit geldt voor alle subtypen (-us, -er, -um).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-GEN-D2-002",
           "node_ids": [
             "LAT-G-MORF-GEN-D2"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de genitivus meervoud van 'servus'.",
           "answer": "servorum",
           "feedback": "De genitivus meervoud van de 2e declinatie eindigt op -ōrum: servus → servōrum.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-GEN-D2-003",
           "node_ids": [
             "LAT-G-MORF-GEN-D2"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de genitivus enkelvoud van 'bellum'.",
           "answer": "belli",
           "feedback": "De genitivus singularis van neutra van de 2e declinatie eindigt op -i: bellum → belli.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -926,7 +926,7 @@
       "language": "lat",
       "title_nl": "Dativus 2e declinatie",
       "description": "De dativus sg. (-o) en pl. (-is) van de 2e declinatie.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -937,45 +937,45 @@
           "node_ids": [
             "LAT-G-MORF-DAT-D2"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
           "stimulus": "Wat is de dativus-uitgang van de 2e declinatie in het enkelvoud?",
           "answer": "-o",
           "feedback": "De dativus singularis van de 2e declinatie eindigt op -ō. Dit geldt voor alle subtypen.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-DAT-D2-002",
           "node_ids": [
             "LAT-G-MORF-DAT-D2"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de dativus enkelvoud van 'dominus'.",
           "answer": "domino",
           "feedback": "De dativus singularis van de 2e declinatie eindigt op -ō: dominus → dominō.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-DAT-D2-003",
           "node_ids": [
             "LAT-G-MORF-DAT-D2"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de dativus meervoud van 'servus'.",
           "answer": "servis",
           "feedback": "De dativus meervoud van de 2e declinatie eindigt op -īs: servus → servīs. Dit is gelijk aan de ablativus pl.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -985,7 +985,7 @@
       "language": "lat",
       "title_nl": "Accusativus 2e declinatie",
       "description": "De accusativus sg. (-um) en pl. (-os/-a) van de 2e declinatie.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -996,45 +996,45 @@
           "node_ids": [
             "LAT-G-MORF-ACC-D2"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
           "stimulus": "Welke naamval is 'dominum'?",
           "answer": "accusativus singularis",
           "feedback": "De uitgang -um is bij masculina van de 2e declinatie de accusativus singularis.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-ACC-D2-002",
           "node_ids": [
             "LAT-G-MORF-ACC-D2"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de accusativus meervoud van 'dominus'.",
           "answer": "dominos",
           "feedback": "De accusativus meervoud van de 2e declinatie masc. eindigt op -ōs: dominus → dominōs.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-ACC-D2-003",
           "node_ids": [
             "LAT-G-MORF-ACC-D2"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Wat is de accusativus enkelvoud van een neutrum van de 2e declinatie (bijv. 'bellum')?",
           "answer": "bellum (gelijk aan de nominativus)",
           "feedback": "Bij neutra zijn nominativus en accusativus altijd gelijk (neutrumregel): bellum blijft bellum.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1044,7 +1044,7 @@
       "language": "lat",
       "title_nl": "Ablativus 2e declinatie",
       "description": "De ablativus sg. (-o) en pl. (-is) van de 2e declinatie.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1055,45 +1055,45 @@
           "node_ids": [
             "LAT-G-MORF-ABL-D2"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
           "stimulus": "Wat is de ablativus-uitgang van de 2e declinatie in het enkelvoud?",
           "answer": "-o",
           "feedback": "De ablativus singularis van de 2e declinatie eindigt op -ō. Dit is gelijk aan de dativus sg.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-ABL-D2-002",
           "node_ids": [
             "LAT-G-MORF-ABL-D2"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de ablativus meervoud van 'bellum'.",
           "answer": "bellis",
           "feedback": "De ablativus meervoud van de 2e declinatie eindigt op -īs: bellum → bellīs. Dit geldt voor alle subtypen.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-ABL-D2-003",
           "node_ids": [
             "LAT-G-MORF-ABL-D2"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de ablativus enkelvoud van 'amicus'.",
           "answer": "amico",
           "feedback": "De ablativus singularis van de 2e declinatie eindigt op -ō: amicus → amicō.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1103,7 +1103,7 @@
       "language": "lat",
       "title_nl": "Vocativus 2e declinatie",
       "description": "De vocativus sg. (-e bij -us stammen) en pl. (= nom.) van de 2e declinatie.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1114,45 +1114,45 @@
           "node_ids": [
             "LAT-G-MORF-VOC-D2"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.0,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Wat is de vocativus singularis van woorden op -us in de 2e declinatie?",
           "answer": "-e (bijv. domine!)",
           "feedback": "Bij -us woorden eindigt de vocativus sg. op -e: dominus → domine! Dit is de enige naamval die afwijkt van de nominativus.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-VOC-D2-002",
           "node_ids": [
             "LAT-G-MORF-VOC-D2"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.7,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Hoe spreek je een heer (dominus) direct aan in het Latijn?",
           "answer": "domine!",
           "feedback": "De vocativus singularis van dominus is domine! (uitgang -e in plaats van -us).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-VOC-D2-003",
           "node_ids": [
             "LAT-G-MORF-VOC-D2"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.2,
           "expected_time_sec": 15,
           "stimulus": "Wat is de vocativus singularis van 'filius'?",
           "answer": "fili",
           "feedback": "Woorden op -ius hebben een bijzondere vocativus sg. op -i (niet -ie): filius → fili!",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -1162,7 +1162,7 @@
       "language": "lat",
       "title_nl": "Functie van de nominativus",
       "description": "De nominativus als naamval van het onderwerp en het naamwoordelijk deel van het gezegde.",
-      "bloom_level": "begrip",
+      "bloom_level": "comprehension",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1173,45 +1173,45 @@
           "node_ids": [
             "LAT-G-SYNT-NOM-FUNCTIE"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Welke naamval gebruik je voor het onderwerp van een zin?",
           "answer": "nominativus",
           "feedback": "De nominativus is de naamval van het onderwerp en van het naamwoordelijk deel van het gezegde.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-NOM-FUNCTIE-002",
           "node_ids": [
             "LAT-G-SYNT-NOM-FUNCTIE"
           ],
-          "type": "contextueel",
-          "direction": "receptief",
+          "type": "contextual",
+          "direction": "receptive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 30,
           "stimulus": "Welke functie heeft 'puella' in de zin: 'Puella cantat.'?",
           "answer": "onderwerp",
           "feedback": "'Puella' staat in de nominativus en is het onderwerp van 'cantat' (zingt).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-NOM-FUNCTIE-003",
           "node_ids": [
             "LAT-G-SYNT-NOM-FUNCTIE"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 180,
           "stimulus": "Vertaal op papier: 'Puella cantat.' Onderstreep het onderwerp.",
           "answer": "Controleer je vertaling met de modelvertaling in de app.",
           "feedback": "De nominativus geeft het onderwerp aan. Puella is nom.sg. 1e declinatie.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "Het meisje zingt. Onderwerp: puella (nominativus)."
         }
@@ -1223,7 +1223,7 @@
       "language": "lat",
       "title_nl": "Functie van de accusativus",
       "description": "De accusativus als naamval van het lijdend voorwerp en de richting.",
-      "bloom_level": "begrip",
+      "bloom_level": "comprehension",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1234,45 +1234,45 @@
           "node_ids": [
             "LAT-G-SYNT-ACC-FUNCTIE"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Welke naamval gebruik je voor het lijdend voorwerp?",
           "answer": "accusativus",
           "feedback": "De accusativus is de naamval van het lijdend voorwerp en van de richting ('waarheen').",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-ACC-FUNCTIE-002",
           "node_ids": [
             "LAT-G-SYNT-ACC-FUNCTIE"
           ],
-          "type": "contextueel",
-          "direction": "receptief",
+          "type": "contextual",
+          "direction": "receptive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 30,
           "stimulus": "Welke functie heeft 'puellam' in de zin: 'Dominus puellam videt.'?",
           "answer": "lijdend voorwerp",
           "feedback": "'Puellam' is accusativus singularis en lijdend voorwerp: 'De heer ziet het meisje.'",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-ACC-FUNCTIE-003",
           "node_ids": [
             "LAT-G-SYNT-ACC-FUNCTIE"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 180,
           "stimulus": "Vertaal op papier: 'Dominus servum vocat.' Markeer het lijdend voorwerp.",
           "answer": "Controleer je vertaling met de modelvertaling in de app.",
           "feedback": "De accusativus markeert het lijdend voorwerp. Servum = acc.sg. 2e declinatie.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "De heer roept de slaaf. Lijdend voorwerp: servum (accusativus)."
         }
@@ -1284,7 +1284,7 @@
       "language": "lat",
       "title_nl": "Functie van de genitivus",
       "description": "De genitivus als naamval van bezit, deel (partitief) en eigenschap.",
-      "bloom_level": "begrip",
+      "bloom_level": "comprehension",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1295,45 +1295,45 @@
           "node_ids": [
             "LAT-G-SYNT-GEN-FUNCTIE"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Welke naamval drukt bezit uit in het Latijn?",
           "answer": "genitivus",
           "feedback": "De genitivus is de naamval van bezit ('van'), maar ook van het deel (partitief) en de eigenschap.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-GEN-FUNCTIE-002",
           "node_ids": [
             "LAT-G-SYNT-GEN-FUNCTIE"
           ],
-          "type": "contextueel",
-          "direction": "receptief",
+          "type": "contextual",
+          "direction": "receptive",
           "difficulty_initial": 0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 35,
           "stimulus": "Welke functie heeft 'puellae' in de zin: 'Liber puellae est.'?",
           "answer": "bezit (genitivus van bezit)",
           "feedback": "'Puellae' is hier genitivus singularis en drukt bezit uit: 'Het boek is van het meisje.'",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-GEN-FUNCTIE-003",
           "node_ids": [
             "LAT-G-SYNT-GEN-FUNCTIE"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.0,
           "discrimination_initial": 1.0,
           "expected_time_sec": 180,
           "stimulus": "Vertaal op papier: 'Liber puellae est bonus.' Markeer de genitivus.",
           "answer": "Controleer je vertaling met de modelvertaling in de app.",
           "feedback": "De genitivus drukt bezit uit ('van'). Puellae = gen.sg. 1e declinatie.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "Het boek van het meisje is goed. Genitivus: puellae."
         }
@@ -1345,7 +1345,7 @@
       "language": "lat",
       "title_nl": "Functie van de dativus",
       "description": "De dativus als naamval van het meewerkend voorwerp en het belang.",
-      "bloom_level": "begrip",
+      "bloom_level": "comprehension",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1356,45 +1356,45 @@
           "node_ids": [
             "LAT-G-SYNT-DAT-FUNCTIE"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Welke naamval gebruik je voor het meewerkend voorwerp?",
           "answer": "dativus",
           "feedback": "De dativus is de naamval van het meewerkend voorwerp ('aan/voor wie').",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-DAT-FUNCTIE-002",
           "node_ids": [
             "LAT-G-SYNT-DAT-FUNCTIE"
           ],
-          "type": "contextueel",
-          "direction": "receptief",
+          "type": "contextual",
+          "direction": "receptive",
           "difficulty_initial": 0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 35,
           "stimulus": "Welke functie heeft 'puellae' in de zin: 'Dominus puellae librum dat.'?",
           "answer": "meewerkend voorwerp",
           "feedback": "'Puellae' is hier dativus singularis en meewerkend voorwerp: 'De heer geeft het boek aan het meisje.'",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-DAT-FUNCTIE-003",
           "node_ids": [
             "LAT-G-SYNT-DAT-FUNCTIE"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 180,
           "stimulus": "Vertaal op papier: 'Magister puero librum dat.' Markeer het meewerkend voorwerp.",
           "answer": "Controleer je vertaling met de modelvertaling in de app.",
           "feedback": "De dativus markeert het meewerkend voorwerp ('aan/voor'). Puero = dat.sg. 2e decl.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "De leraar geeft de jongen een boek. Meewerkend voorwerp: puero (dativus)."
         }
@@ -1406,7 +1406,7 @@
       "language": "lat",
       "title_nl": "Functie van de ablativus",
       "description": "De ablativus als naamval van middel, oorzaak, plaats en tijd.",
-      "bloom_level": "begrip",
+      "bloom_level": "comprehension",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1417,45 +1417,45 @@
           "node_ids": [
             "LAT-G-SYNT-ABL-FUNCTIE"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Welke naamval drukt middel, oorzaak of plaats uit?",
           "answer": "ablativus",
           "feedback": "De ablativus is de naamval van middel ('waarmee'), oorzaak ('waardoor'), plaats ('waar') en tijd ('wanneer').",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-ABL-FUNCTIE-002",
           "node_ids": [
             "LAT-G-SYNT-ABL-FUNCTIE"
           ],
-          "type": "contextueel",
-          "direction": "receptief",
+          "type": "contextual",
+          "direction": "receptive",
           "difficulty_initial": 0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 35,
           "stimulus": "Welke functie heeft 'gladio' in de zin: 'Miles gladio pugnat.'?",
           "answer": "middel (ablativus van middel)",
           "feedback": "'Gladio' is ablativus singularis en drukt het middel uit: 'De soldaat vecht met het zwaard.'",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-ABL-FUNCTIE-003",
           "node_ids": [
             "LAT-G-SYNT-ABL-FUNCTIE"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 180,
           "stimulus": "Vertaal op papier: 'Miles gladio pugnat.' Markeer de ablativus.",
           "answer": "Controleer je vertaling met de modelvertaling in de app.",
           "feedback": "De ablativus kan 'met' (instrumentalis) uitdrukken. Gladio = abl.sg. 2e declinatie.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "De soldaat vecht met een zwaard. Ablativus: gladio (instrumentalis)."
         }
@@ -1467,7 +1467,7 @@
       "language": "lat",
       "title_nl": "De eerste conjugatie",
       "description": "Overzicht van de 1e conjugatie (a-stammen). Modelwoord: amare.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1480,7 +1480,7 @@
       "language": "lat",
       "title_nl": "De tweede conjugatie",
       "description": "Overzicht van de 2e conjugatie (e-stammen). Modelwoord: monere.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1493,7 +1493,7 @@
       "language": "lat",
       "title_nl": "De derde conjugatie",
       "description": "Overzicht van de 3e conjugatie (consonantstammen). Modelwoord: regere.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1506,7 +1506,7 @@
       "language": "lat",
       "title_nl": "De vierde conjugatie",
       "description": "Overzicht van de 4e conjugatie (i-stammen). Modelwoord: audire.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1519,7 +1519,7 @@
       "language": "lat",
       "title_nl": "Presens indicativus actief 1e conjugatie",
       "description": "Alle zes persoonsvormen van het presens ind. act. van de 1e conjugatie: amo, amas, amat, etc.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1530,75 +1530,75 @@
           "node_ids": [
             "LAT-G-MORF-PRAES-C1-ACT"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
           "stimulus": "Welke persoon en getal is 'amat'?",
           "answer": "3e persoon enkelvoud praesens",
           "feedback": "Am-a-t: stam am- + stamklinker -a- + uitgang -t = 3e persoon singularis.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C1-ACT-002",
           "node_ids": [
             "LAT-G-MORF-PRAES-C1-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg 'amare' in de 1e persoon enkelvoud praesens.",
           "answer": "amo",
           "feedback": "1e conjugatie: stam am- + -o = amo. De stamklinker -a- valt weg voor -o.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C1-ACT-003",
           "node_ids": [
             "LAT-G-MORF-PRAES-C1-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg 'amare' in de 3e persoon meervoud praesens.",
           "answer": "amant",
           "feedback": "1e conjugatie: stam am- + -a- + -nt = amant.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C1-ACT-004",
           "node_ids": [
             "LAT-G-MORF-PRAES-C1-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg 'laudare' in de 2e persoon enkelvoud praesens.",
           "answer": "laudas",
           "feedback": "1e conjugatie: stam laud- + -a- + -s = laudas.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C1-ACT-005",
           "node_ids": [
             "LAT-G-MORF-PRAES-C1-ACT"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 120,
           "stimulus": "Schrijf de volledige vervoeging van 'amare' in de presens indicativus actief op papier.",
           "answer": "Controleer je werk met het paradigma in je lesboek of de app.",
           "feedback": "Stam ama- + persoonsuitgangen. Let op: 1e pers.sg. amo (niet amao).",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "amo, amas, amat, amamus, amatis, amant"
         }
@@ -1610,7 +1610,7 @@
       "language": "lat",
       "title_nl": "Presens indicativus actief 2e conjugatie",
       "description": "Alle zes persoonsvormen van het presens ind. act. van de 2e conjugatie: moneo, mones, monet, etc.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1621,75 +1621,75 @@
           "node_ids": [
             "LAT-G-MORF-PRAES-C2-ACT"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
           "stimulus": "Welke persoon en getal is 'monet'?",
           "answer": "3e persoon enkelvoud praesens",
           "feedback": "Mon-e-t: stam mon- + stamklinker -e- + uitgang -t = 3e persoon singularis.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C2-ACT-002",
           "node_ids": [
             "LAT-G-MORF-PRAES-C2-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg 'monere' in de 1e persoon enkelvoud praesens.",
           "answer": "moneo",
           "feedback": "2e conjugatie: stam mon- + -e- + -o = moneo. De stamklinker blijft (anders dan bij 1e conj.).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C2-ACT-003",
           "node_ids": [
             "LAT-G-MORF-PRAES-C2-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg 'monere' in de 1e persoon meervoud praesens.",
           "answer": "monemus",
           "feedback": "2e conjugatie: stam mon- + -e- + -mus = monemus.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C2-ACT-004",
           "node_ids": [
             "LAT-G-MORF-PRAES-C2-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg 'habere' in de 3e persoon meervoud praesens.",
           "answer": "habent",
           "feedback": "2e conjugatie: stam hab- + -e- + -nt = habent.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C2-ACT-005",
           "node_ids": [
             "LAT-G-MORF-PRAES-C2-ACT"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 120,
           "stimulus": "Schrijf de volledige vervoeging van 'monēre' in de presens indicativus actief op papier.",
           "answer": "Controleer je werk met het paradigma in je lesboek of de app.",
           "feedback": "Stam mone- + persoonsuitgangen. De stamklinker -e- is lang (ē) en blijft in alle vormen.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "moneo, mones, monet, monemus, monetis, monent"
         }
@@ -1701,7 +1701,7 @@
       "language": "lat",
       "title_nl": "Presens indicativus actief 3e conjugatie",
       "description": "Alle zes persoonsvormen van het presens ind. act. van de 3e conjugatie: rego, regis, regit, etc.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1712,75 +1712,75 @@
           "node_ids": [
             "LAT-G-MORF-PRAES-C3-ACT"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
           "stimulus": "Welke persoon en getal is 'regit'?",
           "answer": "3e persoon enkelvoud praesens",
           "feedback": "Reg-i-t: stam reg- + bindklinker -i- + uitgang -t. Bij de 3e conj. varieert de bindklinker.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C3-ACT-002",
           "node_ids": [
             "LAT-G-MORF-PRAES-C3-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg 'regere' in de 1e persoon enkelvoud praesens.",
           "answer": "rego",
           "feedback": "3e conjugatie: stam reg- + -o = rego (geen bindklinker voor -o).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C3-ACT-003",
           "node_ids": [
             "LAT-G-MORF-PRAES-C3-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.7,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg 'regere' in de 3e persoon meervoud praesens.",
           "answer": "regunt",
           "feedback": "3e conjugatie: stam reg- + -u- + -nt = regunt. Let op: -u- als bindklinker voor -nt.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C3-ACT-004",
           "node_ids": [
             "LAT-G-MORF-PRAES-C3-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg 'ducere' in de 2e persoon meervoud praesens.",
           "answer": "ducitis",
           "feedback": "3e conjugatie: stam duc- + -i- + -tis = ducitis.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C3-ACT-005",
           "node_ids": [
             "LAT-G-MORF-PRAES-C3-ACT"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 120,
           "stimulus": "Schrijf de volledige vervoeging van 'legere' in de presens indicativus actief op papier.",
           "answer": "Controleer je werk met het paradigma in je lesboek of de app.",
           "feedback": "3e conjugatie: stamklinker wisselt (e/i/u). Let op: 3e pl. -unt (niet -ent).",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "lego, legis, legit, legimus, legitis, legunt"
         }
@@ -1792,7 +1792,7 @@
       "language": "lat",
       "title_nl": "Presens indicativus actief 4e conjugatie",
       "description": "Alle zes persoonsvormen van het presens ind. act. van de 4e conjugatie: audio, audis, audit, etc.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1803,60 +1803,60 @@
           "node_ids": [
             "LAT-G-MORF-PRAES-C4-ACT"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
           "stimulus": "Welke persoon en getal is 'audit'?",
           "answer": "3e persoon enkelvoud praesens",
           "feedback": "Aud-i-t: stam aud- + stamklinker -i- + uitgang -t = 3e persoon singularis.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C4-ACT-002",
           "node_ids": [
             "LAT-G-MORF-PRAES-C4-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg 'audire' in de 1e persoon enkelvoud praesens.",
           "answer": "audio",
           "feedback": "4e conjugatie: stam aud- + -i- + -o = audio.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C4-ACT-003",
           "node_ids": [
             "LAT-G-MORF-PRAES-C4-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.7,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg 'audire' in de 3e persoon meervoud praesens.",
           "answer": "audiunt",
           "feedback": "4e conjugatie: stam aud- + -iu- + -nt = audiunt. Let op: -iu- voor -nt (net als 3e conj.).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-C4-ACT-004",
           "node_ids": [
             "LAT-G-MORF-PRAES-C4-ACT"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 120,
           "stimulus": "Schrijf de volledige vervoeging van 'audīre' in de presens indicativus actief op papier.",
           "answer": "Controleer je werk met het paradigma in je lesboek of de app.",
           "feedback": "4e conjugatie: stamklinker -i- lang. Let op: 3e pl. audiunt (met -i-).",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "audio, audis, audit, audimus, auditis, audiunt"
         }
@@ -1868,7 +1868,7 @@
       "language": "lat",
       "title_nl": "Presens van esse",
       "description": "Het onregelmatige werkwoord esse (zijn): sum, es, est, sumus, estis, sunt.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1879,75 +1879,75 @@
           "node_ids": [
             "LAT-G-MORF-PRAES-ESSE"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg 'esse' volledig in het praesens.",
           "answer": "sum, es, est, sumus, estis, sunt",
           "feedback": "Esse is onregelmatig: sum, es, est, sumus, estis, sunt. De stam wisselt tussen s- en es-.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-ESSE-002",
           "node_ids": [
             "LAT-G-MORF-PRAES-ESSE"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
           "stimulus": "Welke persoon en getal is 'sunt'?",
           "answer": "3e persoon meervoud praesens",
           "feedback": "Sunt = 3e persoon pluralis van esse (zij zijn).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-ESSE-003",
           "node_ids": [
             "LAT-G-MORF-PRAES-ESSE"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Geef de 1e persoon meervoud van 'esse'.",
           "answer": "sumus",
           "feedback": "Esse praesens: sumus (wij zijn). Let op: stam su- + -mus.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-ESSE-004",
           "node_ids": [
             "LAT-G-MORF-PRAES-ESSE"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
           "stimulus": "Geef de 2e persoon enkelvoud van 'esse'.",
           "answer": "es",
           "feedback": "Esse praesens: es (jij bent). De kortste vorm van het paradigma.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-PRAES-ESSE-005",
           "node_ids": [
             "LAT-G-MORF-PRAES-ESSE"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 120,
           "stimulus": "Schrijf de volledige vervoeging van 'esse' in de presens indicativus op papier.",
           "answer": "Controleer je werk met het paradigma in je lesboek of de app.",
           "feedback": "Onregelmatig werkwoord. Let op de stamwisseling su-/es-.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "sum, es, est, sumus, estis, sunt"
         }
@@ -1959,7 +1959,7 @@
       "language": "lat",
       "title_nl": "Infinitivus presens actief",
       "description": "De infinitivus presens actief van alle conjugaties: -are, -ere, -ere, -ire.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -1970,60 +1970,60 @@
           "node_ids": [
             "LAT-G-MORF-INF-PRAES-ACT"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Hoe herken je de infinitivus praesens actief?",
           "answer": "uitgang -re (amāre, monēre, regĕre, audīre)",
           "feedback": "De infinitivus praesens actief eindigt op -re na de stamklinker: -āre (1e), -ēre (2e), -ĕre (3e), -īre (4e).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-INF-PRAES-ACT-002",
           "node_ids": [
             "LAT-G-MORF-INF-PRAES-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
           "stimulus": "Geef de infinitivus praesens actief van \"esse\".",
           "answer": "esse",
           "feedback": "De infinitivus van \"zijn\" is esse. Dit is onregelmatig (geen -re uitgang).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-INF-PRAES-ACT-003",
           "node_ids": [
             "LAT-G-MORF-INF-PRAES-ACT"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Waarvoor gebruik je de infinitivus in het Latijn?",
           "answer": "als onderwerp, na bepaalde werkwoorden, in de AcI",
           "feedback": "De infinitivus kan onderwerp zijn (errare humanum est), object (volo dicere) of deel van een AcI.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-INF-PRAES-ACT-004",
           "node_ids": [
             "LAT-G-MORF-INF-PRAES-ACT"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 120,
           "stimulus": "Schrijf de infinitivus presens actief van alle vier conjugaties + esse op papier.",
           "answer": "Controleer je werk met het paradigma in je lesboek of de app.",
           "feedback": "Let op het verschil tussen 2e conj. -ēre (lang) en 3e conj. -ere (kort).",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "1e: -āre (amare), 2e: -ēre (monere), 3e: -ere (legere), 4e: -īre (audire), esse"
         }
@@ -2035,7 +2035,7 @@
       "language": "lat",
       "title_nl": "Het imperfectum",
       "description": "Introductie van het imperfectum: vorming (stam + ba + persoonsuitgang) en gebruik (duurhandeling in het verleden).",
-      "bloom_level": "begrip",
+      "bloom_level": "comprehension",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -2046,30 +2046,30 @@
           "node_ids": [
             "LAT-G-MORF-IMPF-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Hoe wordt het imperfectum gevormd?",
           "answer": "praesensstam + -ba- + persoonsuitgang",
           "feedback": "Het imperfectum wordt gevormd met het tussenvoegsel -ba-: ama-ba-m, mone-ba-m.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-IMPF-INTRO-002",
           "node_ids": [
             "LAT-G-MORF-IMPF-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Welke handeling drukt het imperfectum uit?",
           "answer": "een onvoltooide of voortdurende handeling in het verleden",
           "feedback": "Het imperfectum beschrijft iets dat gaande was of herhaald werd: \"hij liep\" (niet \"hij heeft gelopen\").",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -2079,7 +2079,7 @@
       "language": "lat",
       "title_nl": "Imperfectum 1e en 2e conjugatie",
       "description": "Het imperfectum ind. act. van de 1e en 2e conjugatie: amabam, monebam, etc.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -2090,60 +2090,60 @@
           "node_ids": [
             "LAT-G-MORF-IMPF-C1C2-ACT"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
           "stimulus": "Welke persoon en getal is \"amabat\"?",
           "answer": "3e persoon enkelvoud imperfectum",
           "feedback": "Ama-ba-t: stam ama- + -ba- + -t = 3e pers. sg. imperfectum.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-IMPF-C1C2-ACT-002",
           "node_ids": [
             "LAT-G-MORF-IMPF-C1C2-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg \"amare\" in de 1e persoon enkelvoud imperfectum.",
           "answer": "amabam",
           "feedback": "1e conj.: stam ama- + -ba- + -m = amabam.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-IMPF-C1C2-ACT-003",
           "node_ids": [
             "LAT-G-MORF-IMPF-C1C2-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg \"monere\" in de 3e persoon meervoud imperfectum.",
           "answer": "monebant",
           "feedback": "2e conj.: stam mone- + -ba- + -nt = monebant.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-IMPF-C1C2-ACT-004",
           "node_ids": [
             "LAT-G-MORF-IMPF-C1C2-ACT"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 120,
           "stimulus": "Schrijf de volledige vervoeging van 'amare' in het imperfectum indicativus actief op papier.",
           "answer": "Controleer je werk met het paradigma in je lesboek of de app.",
           "feedback": "Kenmerk: -ba- tussen stam en persoonsuitgang. 1e pers.sg. -bam.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "amabam, amabas, amabat, amabamus, amabatis, amabant"
         }
@@ -2155,7 +2155,7 @@
       "language": "lat",
       "title_nl": "Imperfectum 3e en 4e conjugatie",
       "description": "Het imperfectum ind. act. van de 3e en 4e conjugatie: regebam, audiebam, etc.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -2166,45 +2166,45 @@
           "node_ids": [
             "LAT-G-MORF-IMPF-C3C4-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg \"regere\" in de 1e persoon enkelvoud imperfectum.",
           "answer": "regebam",
           "feedback": "3e conj.: stam rege- + -ba- + -m = regebam. Let op: bindklinker -e- voor -ba-.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-IMPF-C3C4-ACT-002",
           "node_ids": [
             "LAT-G-MORF-IMPF-C3C4-ACT"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.7,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vervoeg \"audire\" in de 2e persoon enkelvoud imperfectum.",
           "answer": "audiebas",
           "feedback": "4e conj.: stam audi- + -eba- + -s = audiebas.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-IMPF-C3C4-ACT-003",
           "node_ids": [
             "LAT-G-MORF-IMPF-C3C4-ACT"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.6,
           "discrimination_initial": 1.0,
           "expected_time_sec": 120,
           "stimulus": "Schrijf de volledige vervoeging van 'audīre' in het imperfectum indicativus actief op papier.",
           "answer": "Controleer je werk met het paradigma in je lesboek of de app.",
           "feedback": "3e/4e conjugatie: -eba- (met extra -e-). Vergelijk met 1e/2e: -ba-.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "audiebam, audiebas, audiebat, audiebamus, audiebatis, audiebant"
         }
@@ -2216,7 +2216,7 @@
       "language": "lat",
       "title_nl": "Bijvoeglijke naamwoorden 1e/2e declinatie",
       "description": "Overzicht van adjectieven die de 1e/2e declinatie volgen: bonus, -a, -um.",
-      "bloom_level": "begrip",
+      "bloom_level": "comprehension",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -2227,30 +2227,30 @@
           "node_ids": [
             "LAT-G-MORF-ADJ-D12-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Hoe staat een adjectief als 'bonus' in het woordenboek?",
           "answer": "bonus, -a, -um (drie uitgangen: m., f., n.)",
           "feedback": "Adjectieven van de 1e/2e declinatie worden opgegeven met drie nominativusvormen: bonus (m.), bona (f.), bonum (n.).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-ADJ-D12-INTRO-002",
           "node_ids": [
             "LAT-G-MORF-ADJ-D12-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Welke declinatie volgt het femininum van 'bonus'?",
           "answer": "de 1e declinatie",
           "feedback": "Het femininum (bona) volgt de 1e declinatie (a-stam). Het masculinum en neutrum volgen de 2e declinatie.",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -2260,7 +2260,7 @@
       "language": "lat",
       "title_nl": "Verbuiging adjectieven 1e/2e declinatie",
       "description": "De volledige verbuiging van adjectieven als bonus, -a, -um in alle naamvallen.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -2271,45 +2271,45 @@
           "node_ids": [
             "LAT-G-MORF-ADJ-D12-VERBG"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.7,
           "discrimination_initial": 1.0,
           "expected_time_sec": 25,
           "stimulus": "Verbuig 'bonus' in de accusativus enkelvoud voor alle drie genera.",
           "answer": "bonum (m.), bonam (f.), bonum (n.)",
           "feedback": "Masc. en neutr. volgen 2e decl. (-um), fem. volgt 1e decl. (-am). Acc. sg. masc. = neutr. bij dit type.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-ADJ-D12-VERBG-002",
           "node_ids": [
             "LAT-G-MORF-ADJ-D12-VERBG"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.8,
           "discrimination_initial": 1.0,
           "expected_time_sec": 25,
           "stimulus": "Geef de genitivus meervoud van 'bonus' (alle genera).",
           "answer": "bonorum (m./n.), bonarum (f.)",
           "feedback": "Masc./neutr. gen. pl. -orum (2e decl.), fem. gen. pl. -arum (1e decl.).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-ADJ-D12-VERBG-003",
           "node_ids": [
             "LAT-G-MORF-ADJ-D12-VERBG"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Wat is de ablativus enkelvoud femininum van 'magnus, -a, -um'?",
           "answer": "magna",
           "feedback": "Het femininum volgt de 1e declinatie: abl. sg. op -ā. Magna (met lange a).",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -2319,7 +2319,7 @@
       "language": "lat",
       "title_nl": "Congruentie: bijvoeglijk naamwoord + zelfstandig naamwoord",
       "description": "Een adjectief neemt genus, numerus en casus over van het zelfstandig naamwoord dat het bepaalt.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -2330,60 +2330,60 @@
           "node_ids": [
             "LAT-G-SYNT-ADJ-CONGR"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Wat is congruentie bij adjectieven?",
           "answer": "het adjectief neemt genus, numerus en casus over van het zelfstandig naamwoord",
           "feedback": "Congruentie betekent dat het adjectief zich aanpast aan het zelfstandig naamwoord in genus, numerus en casus.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-ADJ-CONGR-002",
           "node_ids": [
             "LAT-G-SYNT-ADJ-CONGR"
           ],
-          "type": "contextueel",
-          "direction": "receptief",
+          "type": "contextual",
+          "direction": "receptive",
           "difficulty_initial": 0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 35,
           "stimulus": "'Puella bona cantat.' — waarom staat 'bona' in deze vorm?",
           "answer": "puella is femininum sg. nominativus, dus het adjectief wordt bona (fem. sg. nom.)",
           "feedback": "Het adjectief congrueert: puella = fem. sg. nom., dus bonus → bona.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-ADJ-CONGR-003",
           "node_ids": [
             "LAT-G-SYNT-ADJ-CONGR"
           ],
-          "type": "contextueel",
-          "direction": "receptief",
+          "type": "contextual",
+          "direction": "receptive",
           "difficulty_initial": 0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 30,
           "stimulus": "Welke vorm van 'bonus' past bij 'bellum' (acc. sg.)?",
           "answer": "bonum",
           "feedback": "Bellum is neutrum: acc. sg. neutrum van bonus = bonum. Neutrumregel: nom.=acc.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-ADJ-CONGR-004",
           "node_ids": [
             "LAT-G-SYNT-ADJ-CONGR"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 180,
           "stimulus": "Vertaal op papier: 'Puella bona librum magnum legit.' Let op de congruentie.",
           "answer": "Controleer je vertaling met de modelvertaling in de app.",
           "feedback": "Bijvoeglijk naamwoord stemt overeen in naamval, getal en geslacht met het zelfstandig naamwoord.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "Het goede meisje leest een groot boek. Bona hoort bij puella, magnum bij librum."
         }
@@ -2395,7 +2395,7 @@
       "language": "lat",
       "title_nl": "Voorzetsels met accusativus",
       "description": "Veelvoorkomende voorzetsels die de accusativus vereisen: in (+acc), ad, per, ante, post, etc.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -2406,45 +2406,45 @@
           "node_ids": [
             "LAT-G-SYNT-PREP-ACC"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Noem drie voorzetsels die de accusativus vereisen.",
           "answer": "ad (naar), per (door), post (na)",
           "feedback": "Veel voorzetsels met accusativus drukken richting of beweging uit: ad, in (+acc), per, post, ante.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-PREP-ACC-002",
           "node_ids": [
             "LAT-G-SYNT-PREP-ACC"
           ],
-          "type": "contextueel",
-          "direction": "receptief",
+          "type": "contextual",
+          "direction": "receptive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 30,
           "stimulus": "Welke naamval staat na \"ad\" in \"Ad templum ambulat\"?",
           "answer": "accusativus",
           "feedback": "Ad + accusativus = richting: \"Hij loopt naar de tempel.\" Ad vereist altijd accusativus.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-PREP-ACC-003",
           "node_ids": [
             "LAT-G-SYNT-PREP-ACC"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 180,
           "stimulus": "Vertaal op papier: 'Servi ad templum ambulant.'",
           "answer": "Controleer je vertaling met de modelvertaling in de app.",
           "feedback": "Ad + accusativus drukt richting uit ('naar'). Templum = acc.sg. 2e decl. neutrum.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "De slaven lopen naar de tempel. Ad + acc. = richting."
         }
@@ -2456,7 +2456,7 @@
       "language": "lat",
       "title_nl": "Voorzetsels met ablativus",
       "description": "Veelvoorkomende voorzetsels die de ablativus vereisen: in (+abl), cum, ex/e, de, ab/a, etc.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -2467,45 +2467,45 @@
           "node_ids": [
             "LAT-G-SYNT-PREP-ABL"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Noem drie voorzetsels die de ablativus vereisen.",
           "answer": "cum (met), sine (zonder), ex/e (uit)",
           "feedback": "Veel voorzetsels met ablativus drukken herkomst, middel of omstandigheid uit: cum, sine, ex, de, ab.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-PREP-ABL-002",
           "node_ids": [
             "LAT-G-SYNT-PREP-ABL"
           ],
-          "type": "contextueel",
-          "direction": "receptief",
+          "type": "contextual",
+          "direction": "receptive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 30,
           "stimulus": "Welke naamval staat na \"cum\" in \"Cum amico ambulat\"?",
           "answer": "ablativus",
           "feedback": "Cum + ablativus = samen met: \"Hij loopt met een vriend.\" Cum vereist altijd ablativus.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-PREP-ABL-003",
           "node_ids": [
             "LAT-G-SYNT-PREP-ABL"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 180,
           "stimulus": "Vertaal op papier: 'Rex cum militibus venit.'",
           "answer": "Controleer je vertaling met de modelvertaling in de app.",
           "feedback": "Cum + ablativus drukt vergezelling uit ('met'). Militibus = abl.pl. 3e declinatie.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "De koning komt met de soldaten. Cum + abl. = samen met."
         }
@@ -2517,7 +2517,7 @@
       "language": "lat",
       "title_nl": "Congruentie: onderwerp en persoonsvorm",
       "description": "Het onderwerp en de persoonsvorm komen overeen in persoon en getal.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -2528,15 +2528,15 @@
           "node_ids": [
             "LAT-G-SYNT-OVEREENK"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 180,
           "stimulus": "Vertaal op papier: 'Puellae in horto ludunt.' Let op congruentie onderwerp-persoonsvorm.",
           "answer": "Controleer je vertaling met de modelvertaling in de app.",
           "feedback": "Onderwerp en persoonsvorm moeten overeenstemmen in getal. Meervoud → -nt uitgang.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "De meisjes spelen in de tuin. Puellae (pl.) → ludunt (3e pers. pl.)."
         }
@@ -2548,7 +2548,7 @@
       "language": "lat",
       "title_nl": "Latijnse woordvolgorde",
       "description": "De Latijnse basale woordvolgorde (SOV) en de vrije woordvolgorde door naamvalssysteem.",
-      "bloom_level": "begrip",
+      "bloom_level": "comprehension",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -2559,15 +2559,15 @@
           "node_ids": [
             "LAT-G-SYNT-WRDVLG"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 180,
           "stimulus": "Vertaal op papier: 'Magnum periculum nautae timent.' Let op de Latijnse woordvolgorde.",
           "answer": "Controleer je vertaling met de modelvertaling in de app.",
           "feedback": "Latijn heeft vrije woordvolgorde maar vaak SOV. Hier staat het object vooraan voor nadruk.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "De zeelieden vrezen het grote gevaar. SOV-volgorde: object vooraan, werkwoord achteraan."
         }
@@ -2579,7 +2579,7 @@
       "language": "lat",
       "title_nl": "Ontkenning met non en ne",
       "description": "Ontkenning in het Latijn: non bij indicativus, ne bij conjunctivus en imperativus.",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -2590,45 +2590,45 @@
           "node_ids": [
             "LAT-G-SYNT-ONTK"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 10,
           "stimulus": "Hoe ontken je een zin met indicativus in het Latijn?",
           "answer": "met non",
           "feedback": "Non is het standaard ontkenningswoord bij de indicativus: non amat (hij houdt niet van).",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-ONTK-002",
           "node_ids": [
             "LAT-G-SYNT-ONTK"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.4,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Vertaal: \"De soldaat vecht niet.\".",
           "answer": "Miles non pugnat.",
           "feedback": "Ontkenning met non vóór het werkwoord: non pugnat.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-ONTK-003",
           "node_ids": [
             "LAT-G-SYNT-ONTK"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.0,
           "discrimination_initial": 1.0,
           "expected_time_sec": 180,
           "stimulus": "Vertaal op papier: 'Servus dominum non timet.'",
           "answer": "Controleer je vertaling met de modelvertaling in de app.",
           "feedback": "Non ontkent het werkwoord en staat er direct voor. Non timet = vreest niet.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "De slaaf vreest de heer niet. Non staat direct voor het werkwoord."
         }
@@ -2640,7 +2640,7 @@
       "language": "lat",
       "title_nl": "Vraagzinnen",
       "description": "Vraagzinnen in het Latijn: num (nee-verwachtend), nonne (ja-verwachtend), -ne (open).",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -2651,45 +2651,45 @@
           "node_ids": [
             "LAT-G-SYNT-VRAAGZIN"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": 0.0,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Noem twee vraagpartikels in het Latijn.",
           "answer": "num (nee-verwachtend) en nonne (ja-verwachtend)",
           "feedback": "Num verwacht \"nee\" als antwoord, nonne verwacht \"ja\". -ne is neutraal.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-VRAAGZIN-002",
           "node_ids": [
             "LAT-G-SYNT-VRAAGZIN"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Hoe maak je een neutrale ja/nee-vraag in het Latijn?",
           "answer": "voeg -ne toe aan het eerste woord: Amatne?",
           "feedback": "-Ne is enclitisch (achter het woord geplakt): Venitne? = Komt hij?",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-SYNT-VRAAGZIN-003",
           "node_ids": [
             "LAT-G-SYNT-VRAAGZIN"
           ],
-          "type": "offline_schrijven",
-          "direction": "productief",
+          "type": "offline_writing",
+          "direction": "productive",
           "difficulty_initial": 0.0,
           "discrimination_initial": 1.0,
           "expected_time_sec": 180,
           "stimulus": "Vertaal op papier: 'Cur puella lacrimat?'",
           "answer": "Controleer je vertaling met de modelvertaling in de app.",
           "feedback": "Latijnse vraagzinnen beginnen met een vraagwoord. Cur = waarom, quis = wie, ubi = waar.",
-          "source": "handmatig",
+          "source": "manual",
           "verification_method": "self_report",
           "expected_result": "Waarom huilt het meisje? Cur = waarom (vragend bijwoord)."
         }
@@ -2701,7 +2701,7 @@
       "language": "lat",
       "title_nl": "De derde declinatie",
       "description": "Overzicht van de 3e declinatie (consonantstammen). Grote variatie in nominativus-uitgangen.",
-      "bloom_level": "kennis",
+      "bloom_level": "knowledge",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -2712,45 +2712,45 @@
           "node_ids": [
             "LAT-G-MORF-DECL3-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Waarom is de 3e declinatie lastiger dan de 1e en 2e?",
           "answer": "de nominativus heeft geen vaste uitgang — er is grote variatie",
           "feedback": "De 3e declinatie kent diverse nominativus-uitgangen (rex, corpus, nomen). De genitivus sg. op -is is het herkenningsteken.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-DECL3-INTRO-002",
           "node_ids": [
             "LAT-G-MORF-DECL3-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.3,
           "discrimination_initial": 1.0,
           "expected_time_sec": 12,
           "stimulus": "Hoe herken je in het woordenboek dat een woord bij de 3e declinatie hoort?",
           "answer": "de genitivus singularis eindigt op -is",
           "feedback": "Een woord hoort bij de 3e declinatie als de genitivus singularis op -is eindigt. Bijv. rex, reg-is.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-DECL3-INTRO-003",
           "node_ids": [
             "LAT-G-MORF-DECL3-INTRO"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.1,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
           "stimulus": "Welke twee subtypes onderscheidt de 3e declinatie?",
           "answer": "consonantstammen en i-stammen",
           "feedback": "De 3e declinatie kent consonantstammen (stam op medeklinker, bijv. rex) en i-stammen (stam op -i, bijv. mare).",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     },
@@ -2760,7 +2760,7 @@
       "language": "lat",
       "title_nl": "Nominativus 3e declinatie",
       "description": "De nominativus van de 3e declinatie: diverse uitgangen (rex, corpus, nomen, etc.).",
-      "bloom_level": "toepassing",
+      "bloom_level": "application",
       "phase": "onderbouw_1",
       "testable": true,
       "pensum_years": [],
@@ -2771,8 +2771,8 @@
           "node_ids": [
             "LAT-G-MORF-NOM-D3"
           ],
-          "type": "herkenning",
-          "direction": "receptief",
+          "type": "recognition",
+          "direction": "receptive",
           "difficulty_initial": -0.2,
           "discrimination_initial": 1.0,
           "expected_time_sec": 15,
@@ -2782,37 +2782,37 @@
             "miles, lex, caput"
           ],
           "feedback": "De nominativus sg. van de 3e declinatie varieert sterk: rex, miles, corpus, nomen, mare, etc.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-NOM-D3-002",
           "node_ids": [
             "LAT-G-MORF-NOM-D3"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.5,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de nominativus meervoud van 'rex, regis'.",
           "answer": "reges",
           "feedback": "De nominativus pl. van consonantstammen van de 3e declinatie eindigt op -es: rex → reges.",
-          "source": "handmatig"
+          "source": "manual"
         },
         {
           "id": "ITEM-LAT-G-MORF-NOM-D3-003",
           "node_ids": [
             "LAT-G-MORF-NOM-D3"
           ],
-          "type": "productie",
-          "direction": "productief",
+          "type": "production",
+          "direction": "productive",
           "difficulty_initial": 0.8,
           "discrimination_initial": 1.0,
           "expected_time_sec": 20,
           "stimulus": "Geef de nominativus meervoud van 'mare, maris (n.)'.",
           "answer": "maria",
           "feedback": "Bij neutra i-stammen eindigt de nom. pl. op -ia: mare → maria (neutrumregel + i-stam).",
-          "source": "handmatig"
+          "source": "manual"
         }
       ]
     }

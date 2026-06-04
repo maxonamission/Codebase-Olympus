@@ -147,21 +147,21 @@ class TestItem:
         return {
             "id": "ITEM-001",
             "node_ids": ["LAT-G-MORF-NOM-D1"],
-            "type": "herkenning",
-            "direction": "receptief",
+            "type": "recognition",
+            "direction": "receptive",
             "difficulty_initial": -0.5,
             "discrimination_initial": 1.2,
             "expected_time_sec": 30,
             "stimulus": "Welke naamval is 'puella'?",
             "answer": "nominativus",
             "feedback": "Puella eindigt op -a, de uitgang van de nominativus sg. 1e declinatie.",
-            "source": "handmatig",
+            "source": "manual",
         }
 
     def test_valid_construction(self, sample_item_data):
         item = Item(**sample_item_data)
         assert item.id == "ITEM-001"
-        assert item.direction == "receptief"
+        assert item.direction == "receptive"
 
     def test_discriminatie_must_be_positive(self, sample_item_data):
         sample_item_data["discrimination_initial"] = 0
@@ -189,7 +189,7 @@ class TestItem:
         assert isinstance(item.answer, list)
 
     def test_all_bron_values(self, sample_item_data):
-        for source in ["handmatig", "llm_gegenereerd", "authentiek"]:
+        for source in ["manual", "llm_generated", "authentic"]:
             sample_item_data["source"] = source
             item = Item(**sample_item_data)
             assert item.source == source
@@ -203,64 +203,64 @@ class TestLuisterItemTypes:
         return {
             "id": "ITEM-LUISTER-001",
             "node_ids": ["LAT-V-F01-SUM"],
-            "direction": "receptief",
+            "direction": "receptive",
             "difficulty_initial": -0.3,
             "discrimination_initial": 1.0,
             "expected_time_sec": 20,
             "stimulus": "Luister en kies de juiste vertaling.",
             "answer": "zijn",
             "feedback": "sum = zijn",
-            "source": "handmatig",
+            "source": "manual",
             "audio_ref": "LAT-V-F01-SUM.wav",
         }
 
     def test_luister_herkenning_valid(self, base_item_data):
-        base_item_data["type"] = "luister_herkenning"
+        base_item_data["type"] = "listening_recognition"
         item = Item(**base_item_data)
-        assert item.type == ItemType.LUISTER_HERKENNING
+        assert item.type == ItemType.LISTENING_RECOGNITION
 
     def test_luister_productie_valid(self, base_item_data):
-        base_item_data["type"] = "luister_productie"
-        base_item_data["direction"] = "productief"
+        base_item_data["type"] = "listening_production"
+        base_item_data["direction"] = "productive"
         item = Item(**base_item_data)
-        assert item.type == ItemType.LUISTER_PRODUCTIE
+        assert item.type == ItemType.LISTENING_PRODUCTION
 
     def test_luister_herkenning_enum_value(self):
-        assert ItemType.LUISTER_HERKENNING == "luister_herkenning"
-        assert ItemType.LUISTER_HERKENNING.value == "luister_herkenning"
+        assert ItemType.LISTENING_RECOGNITION == "listening_recognition"
+        assert ItemType.LISTENING_RECOGNITION.value == "listening_recognition"
 
     def test_luister_productie_enum_value(self):
-        assert ItemType.LUISTER_PRODUCTIE == "luister_productie"
-        assert ItemType.LUISTER_PRODUCTIE.value == "luister_productie"
+        assert ItemType.LISTENING_PRODUCTION == "listening_production"
+        assert ItemType.LISTENING_PRODUCTION.value == "listening_production"
 
     def test_all_item_types_present(self):
         expected = {
-            "herkenning",
-            "productie",
-            "analyse",
-            "synthese",
-            "contextueel",
-            "offline_schrijven",
-            "luister_herkenning",
-            "luister_productie",
+            "recognition",
+            "production",
+            "analysis",
+            "synthesis",
+            "contextual",
+            "offline_writing",
+            "listening_recognition",
+            "listening_production",
         }
         actual = {t.value for t in ItemType}
         assert actual == expected
 
     def test_luister_item_with_audio_ref(self, base_item_data):
-        base_item_data["type"] = "luister_herkenning"
+        base_item_data["type"] = "listening_recognition"
         item = Item(**base_item_data)
         assert item.audio_ref == "LAT-V-F01-SUM.wav"
 
     def test_existing_item_types_unchanged(self, base_item_data):
         """Ensure existing item types still work — no breaking change."""
         for existing_type in [
-            "herkenning",
-            "productie",
-            "analyse",
-            "synthese",
-            "contextueel",
-            "offline_schrijven",
+            "recognition",
+            "production",
+            "analysis",
+            "synthesis",
+            "contextual",
+            "offline_writing",
         ]:
             base_item_data["type"] = existing_type
             item = Item(**base_item_data)
