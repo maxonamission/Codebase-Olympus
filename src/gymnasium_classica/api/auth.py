@@ -5,7 +5,10 @@ import os
 import sqlite3
 from uuid import uuid4
 
-from fastapi import Header, HTTPException, Request
+from fastapi import Depends, Header, HTTPException, Request
+
+from gymnasium_classica.api.database import get_user, is_mentor_of
+from gymnasium_classica.models.user import Role
 
 
 def hash_password(plain: str) -> str:
@@ -42,3 +45,25 @@ def get_current_user_id(
         raise HTTPException(status_code=401, detail="Invalid or expired token")
     user_id: str = row["user_id"]
     return user_id
+
+
+def require_mentor_of(
+    user_id: str,
+    request: Request,
+    mentor_id: str = Depends(get_current_user_id),
+) -> str:
+    """FastAPI dependency: authorise the caller as a mentor of *user_id*.
+
+    The path parameter ``user_id`` identifies the learner being viewed.
+    Returns the authenticated mentor's ID on success. Raises 403 when the
+    caller lacks the MENTOR role or has no assignment to that learner —
+    the two failure modes are deliberately indistinguishable to avoid
+    leaking which learners exist.
+    """
+    db: sqlite3.Connection = request.app.state.db
+    mentor = get_user(db, mentor_id)
+    if mentor is None or mentor.role != Role.MENTOR:
+        raise HTTPException(status_code=403, detail="Mentor role required")
+    if not is_mentor_of(db, mentor_id, user_id):
+        raise HTTPException(status_code=403, detail="Not assigned to this learner")
+    return mentor_id

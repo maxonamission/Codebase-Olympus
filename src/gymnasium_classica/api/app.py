@@ -18,6 +18,7 @@ from fastapi.responses import FileResponse
 from gymnasium_classica.api.database import init_db
 from gymnasium_classica.api.routes.auth import router as auth_router
 from gymnasium_classica.api.routes.intake import router as intake_router
+from gymnasium_classica.api.routes.mentor import router as mentor_router
 from gymnasium_classica.api.routes.progress import router as progress_router
 from gymnasium_classica.api.routes.session import router as session_router
 from gymnasium_classica.api.routes.user import router as user_router
@@ -114,6 +115,7 @@ def create_app(
     application.include_router(progress_router)
     application.include_router(intake_router)
     application.include_router(user_router)
+    application.include_router(mentor_router)
 
     @application.get("/health")
     async def health() -> dict[str, Any]:

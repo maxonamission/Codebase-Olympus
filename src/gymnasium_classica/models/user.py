@@ -7,6 +7,17 @@ from uuid import UUID, uuid4
 from pydantic import BaseModel, Field
 
 
+class Role(StrEnum):
+    """Account role. Determines which endpoints a user may access.
+
+    Existing accounts default to ``LEARNER`` via the Pydantic default,
+    so the field is backward-compatible with users stored before F2-01.
+    """
+
+    LEARNER = "learner"
+    MENTOR = "mentor"
+
+
 class Plan(StrEnum):
     FREE = "free"
     BASIC = "basic"
@@ -48,6 +59,7 @@ class User(BaseModel):
 
     id: UUID = Field(default_factory=uuid4)
     email: str
+    role: Role = Role.LEARNER
     auth_provider: str = "local"
     subscription: Subscription = Field(default_factory=Subscription)
     examenjaar_ltc: int | None = None
