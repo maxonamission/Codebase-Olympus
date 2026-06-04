@@ -34,7 +34,7 @@ _PROJECT_ROOT = _SCRIPT_DIR.parent
 sys.path.insert(0, str(_PROJECT_ROOT / "src"))
 
 from gymnasium_classica.graph.loader import load_graph
-from gymnasium_classica.models.graph import KnoopType
+from gymnasium_classica.models.graph import NodeType
 
 # ---------------------------------------------------------------------------
 # Data structures
@@ -94,7 +94,7 @@ def collect_vocab_nodes(graph_dir: Path, lang: str | None = None) -> list[VocabE
 
     for node_id in graph.nodes:
         knoop = graph.nodes[node_id]["knoop"]
-        if knoop.type != KnoopType.V:
+        if knoop.type != NodeType.V:
             continue
         node_lang = str(knoop.taal)
         if lang and node_lang != lang:

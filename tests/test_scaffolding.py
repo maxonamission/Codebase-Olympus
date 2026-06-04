@@ -12,12 +12,12 @@ from gymnasium_classica.api.session_manager import (
     _load_scaffolding_content,
 )
 from gymnasium_classica.models.graph import (
-    BloomNiveau,
-    Fase,
-    KnoopType,
+    BloomLevel,
+    Language,
     Node,
+    NodeType,
+    Phase,
     PrerequisiteEdge,
-    Taal,
 )
 from gymnasium_classica.models.learner import LearnerModel, NodeState, ResponseType
 from gymnasium_classica.models.passage import Passage, WordAnnotation
@@ -28,12 +28,12 @@ from gymnasium_classica.scheduling.session import SessionPhase
 def _make_knoop(knoop_id: str, content_ref: str | None = None) -> Node:
     return Node(
         id=knoop_id,
-        type=KnoopType.G,
-        taal=Taal.LAT,
+        type=NodeType.G,
+        taal=Language.LAT,
         titel_nl=f"Knoop {knoop_id}",
         beschrijving=f"Test node {knoop_id}",
-        bloom_niveau=BloomNiveau.KENNIS,
-        fase=Fase.ONDERBOUW_1,
+        bloom_niveau=BloomLevel.KENNIS,
+        fase=Phase.ONDERBOUW_1,
         content_ref=content_ref,
     )
 

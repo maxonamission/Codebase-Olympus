@@ -12,7 +12,7 @@ from __future__ import annotations
 import unicodedata
 from dataclasses import dataclass
 
-from gymnasium_classica.models.graph import Item, Taal
+from gymnasium_classica.models.graph import Item, Language
 
 # --- Public types ---
 
@@ -46,7 +46,7 @@ def _strip_macrons(text: str) -> str:
     return unicodedata.normalize("NFC", stripped)
 
 
-def _normalize(raw: str, taal: Taal) -> str:
+def _normalize(raw: str, taal: Language) -> str:
     """Normalize a piece of text for comparison.
 
     * trim + collapse internal whitespace
@@ -57,7 +57,7 @@ def _normalize(raw: str, taal: Taal) -> str:
     text = unicodedata.normalize("NFC", raw).strip()
     text = " ".join(text.split())
     text = text.casefold()
-    if taal == Taal.LAT:
+    if taal == Language.LAT:
         text = _strip_macrons(text)
     return text
 
@@ -72,7 +72,7 @@ def _expected_variants(antwoord: str | list[str]) -> list[str]:
 # --- Public API ---
 
 
-def grade_answer(raw_answer: str, item: Item, taal: Taal) -> GradingResult:
+def grade_answer(raw_answer: str, item: Item, taal: Language) -> GradingResult:
     """Compare a learner's answer against the item's expected answer.
 
     Args:

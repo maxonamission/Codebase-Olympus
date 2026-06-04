@@ -14,7 +14,7 @@ when it is genuinely urgent (e.g. about to be forgotten).
 
 from dataclasses import dataclass, field
 
-from gymnasium_classica.models.graph import KnoopType, Node
+from gymnasium_classica.models.graph import Node, NodeType
 
 
 @dataclass
@@ -35,7 +35,7 @@ class NonInterferenceState:
 
     def record_selection(self, knoop: Node) -> None:
         """Record that *knoop* was just selected."""
-        cluster = knoop.semantisch_cluster if knoop.type == KnoopType.V else None
+        cluster = knoop.semantisch_cluster if knoop.type == NodeType.V else None
         self._recent_clusters.append(cluster)
         if len(self._recent_clusters) > self.window_size:
             self._recent_clusters = self._recent_clusters[-self.window_size :]
@@ -54,7 +54,7 @@ class NonInterferenceState:
         *strongest* match counts (not cumulative), since the goal is to
         spread items apart, not to permanently suppress a cluster.
         """
-        if knoop.type != KnoopType.V or knoop.semantisch_cluster is None:
+        if knoop.type != NodeType.V or knoop.semantisch_cluster is None:
             return 0.0
 
         cluster = knoop.semantisch_cluster

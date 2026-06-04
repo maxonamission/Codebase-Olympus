@@ -15,10 +15,10 @@ import networkx as nx
 
 from gymnasium_classica.api.session_manager import SessionManager
 from gymnasium_classica.models.graph import (
-    BloomNiveau,
-    Fase,
-    KnoopType,
+    BloomLevel,
     Node,
+    NodeType,
+    Phase,
     PrerequisiteEdge,
 )
 from gymnasium_classica.models.learner import (
@@ -45,12 +45,12 @@ def _make_knoop(knoop_id: str, taal: str = "lat") -> Node:
     """Helper to create a minimal Node."""
     return Node(
         id=knoop_id,
-        type=KnoopType.G,
+        type=NodeType.G,
         taal=taal,
         titel_nl=f"Knoop {knoop_id}",
         beschrijving=f"Test node {knoop_id}",
-        bloom_niveau=BloomNiveau.KENNIS,
-        fase=Fase.ONDERBOUW_1,
+        bloom_niveau=BloomLevel.KENNIS,
+        fase=Phase.ONDERBOUW_1,
     )
 
 

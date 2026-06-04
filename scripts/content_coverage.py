@@ -32,7 +32,7 @@ from pathlib import Path
 import networkx as nx
 
 from gymnasium_classica.graph.loader import load_graph
-from gymnasium_classica.models.graph import KnoopType, Node, Taal
+from gymnasium_classica.models.graph import Language, Node, NodeType
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_GRAPH_DIR = REPO_ROOT / "data" / "graph"
@@ -112,7 +112,7 @@ def _content_exists(knoop: Node, content_dir: Path) -> bool:
 
 def _audio_ok(knoop: Node, audio_dir: Path) -> bool:
     """V-nodes only: the audio file must exist AND be > 1 KB."""
-    if knoop.type != KnoopType.V:
+    if knoop.type != NodeType.V:
         return False
     path = audio_dir / f"{knoop.id}.wav"
     return path.exists() and path.stat().st_size > AUDIO_MIN_BYTES
@@ -193,11 +193,11 @@ def compute_coverage(
 
 
 def find_summary(
-    report: CoverageReport, taal: Taal | str, ktype: KnoopType | str
+    report: CoverageReport, taal: Language | str, ktype: NodeType | str
 ) -> CoverageSummary | None:
     """Look up the summary for a (taal, type) bucket; None if absent."""
-    taal_v = taal.value if isinstance(taal, Taal) else taal
-    type_v = ktype.value if isinstance(ktype, KnoopType) else ktype
+    taal_v = taal.value if isinstance(taal, Language) else taal
+    type_v = ktype.value if isinstance(ktype, NodeType) else ktype
     for s in report.summaries:
         if s.taal == taal_v and s.type == type_v:
             return s
