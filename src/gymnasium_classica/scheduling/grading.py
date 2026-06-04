@@ -46,7 +46,7 @@ def _strip_macrons(text: str) -> str:
     return unicodedata.normalize("NFC", stripped)
 
 
-def _normalize(raw: str, taal: Language) -> str:
+def _normalize(raw: str, language: Language) -> str:
     """Normalize a piece of text for comparison.
 
     * trim + collapse internal whitespace
@@ -57,30 +57,30 @@ def _normalize(raw: str, taal: Language) -> str:
     text = unicodedata.normalize("NFC", raw).strip()
     text = " ".join(text.split())
     text = text.casefold()
-    if taal == Language.LAT:
+    if language == Language.LAT:
         text = _strip_macrons(text)
     return text
 
 
-def _expected_variants(antwoord: str | list[str]) -> list[str]:
+def _expected_variants(answer: str | list[str]) -> list[str]:
     """Return the list of acceptable raw answers from an item."""
-    if isinstance(antwoord, list):
-        return [a for a in antwoord if isinstance(a, str)]
-    return [antwoord]
+    if isinstance(answer, list):
+        return [a for a in answer if isinstance(a, str)]
+    return [answer]
 
 
 # --- Public API ---
 
 
-def grade_answer(raw_answer: str, item: Item, taal: Language) -> GradingResult:
+def grade_answer(raw_answer: str, item: Item, language: Language) -> GradingResult:
     """Compare a learner's answer against the item's expected answer.
 
     Args:
         raw_answer: Exactly what the learner typed (or the MC-option
             they selected).  Leading/trailing whitespace is tolerated.
-        item: The Item being graded.  ``item.antwoord`` may be a single
+        item: The Item being graded.  ``item.answer`` may be a single
             string or a list of acceptable strings.
-        taal: The language of the node, used to pick normalization
+        language: The language of the node, used to pick normalization
             rules (macron-tolerant for Latin).
 
     Returns:
@@ -88,9 +88,9 @@ def grade_answer(raw_answer: str, item: Item, taal: Language) -> GradingResult:
         strings that were compared.  The raw answer is intentionally
         not echoed back — callers store it separately.
     """
-    normalized_answer = _normalize(raw_answer, taal)
-    variants = _expected_variants(item.antwoord)
-    normalized_variants = [_normalize(v, taal) for v in variants]
+    normalized_answer = _normalize(raw_answer, language)
+    variants = _expected_variants(item.answer)
+    normalized_variants = [_normalize(v, language) for v in variants]
 
     correct = any(normalized_answer == v for v in normalized_variants) and bool(normalized_answer)
 
@@ -109,9 +109,9 @@ def grade_answer(raw_answer: str, item: Item, taal: Language) -> GradingResult:
 def canonical_expected_answer(item: Item) -> str:
     """Return the first acceptable answer string, unnormalized.
 
-    Handy for snapshotting ``item.antwoord`` onto an ItemResponse so
+    Handy for snapshotting ``item.answer`` onto an ItemResponse so
     later analysis doesn't depend on the item still existing in its
     current form.
     """
-    variants = _expected_variants(item.antwoord)
+    variants = _expected_variants(item.answer)
     return variants[0] if variants else ""

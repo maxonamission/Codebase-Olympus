@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate audio files for vocabulary nodes in the knowledge graph.
 
-Reads V-type nodes from data/graph/, extracts the lemma from titel_nl,
+Reads V-type nodes from data/graph/, extracts the lemma from title_nl,
 and generates an audio file per node using eSpeak NG (if available) or
 a silent placeholder WAV.
 
@@ -47,7 +47,7 @@ class VocabEntry:
 
     node_id: str
     lemma: str
-    taal: str  # "lat" or "grc"
+    language: str  # "lat" or "grc"
 
 
 # ---------------------------------------------------------------------------
@@ -55,8 +55,8 @@ class VocabEntry:
 # ---------------------------------------------------------------------------
 
 
-def extract_lemma(titel_nl: str) -> str:
-    """Extract the lemma (headword) from a titel_nl string.
+def extract_lemma(title_nl: str) -> str:
+    """Extract the lemma (headword) from a title_nl string.
 
     The convention is ``"lemma — translation"``.  We take everything
     before the em-dash separator.
@@ -68,10 +68,10 @@ def extract_lemma(titel_nl: str) -> str:
     >>> extract_lemma("in (+acc/abl) — in, naar; in, op")
     'in (+acc/abl)'
     """
-    if " — " in titel_nl:
-        return titel_nl.split(" — ", maxsplit=1)[0].strip()
+    if " — " in title_nl:
+        return title_nl.split(" — ", maxsplit=1)[0].strip()
     # Fallback: return the full string stripped
-    return titel_nl.strip()
+    return title_nl.strip()
 
 
 # ---------------------------------------------------------------------------
@@ -96,11 +96,11 @@ def collect_vocab_nodes(graph_dir: Path, lang: str | None = None) -> list[VocabE
         node = graph.nodes[node_id]["node"]
         if node.type != NodeType.V:
             continue
-        node_lang = str(node.taal)
+        node_lang = str(node.language)
         if lang and node_lang != lang:
             continue
-        lemma = extract_lemma(node.titel_nl)
-        entries.append(VocabEntry(node_id=node.id, lemma=lemma, taal=node_lang))
+        lemma = extract_lemma(node.title_nl)
+        entries.append(VocabEntry(node_id=node.id, lemma=lemma, language=node_lang))
 
     return sorted(entries, key=lambda e: e.node_id)
 
@@ -122,7 +122,7 @@ def _espeak_available() -> bool:
 
 def generate_espeak(entry: VocabEntry, output_path: Path) -> None:
     """Generate a WAV file using espeak-ng."""
-    voice = _ESPEAK_LANG_MAP[entry.taal]
+    voice = _ESPEAK_LANG_MAP[entry.language]
     cmd = [
         "espeak-ng",
         "-v",

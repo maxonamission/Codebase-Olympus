@@ -71,13 +71,13 @@ class TestItemResponse:
             correct=True,
             response_time_ms=2500,
             node_id="LAT-G-MORF-NOM-D1",
-            richting="receptief",
+            direction="receptief",
             mastery_before=0.4,
         )
         assert resp.correct is True
         assert resp.response_time_ms == 2500
         assert resp.node_id == "LAT-G-MORF-NOM-D1"
-        assert resp.richting == "receptief"
+        assert resp.direction == "receptief"
         assert resp.mastery_before == 0.4
 
     def test_response_time_cannot_be_negative(self):
@@ -88,12 +88,12 @@ class TestItemResponse:
                 correct=False,
                 response_time_ms=-1,
                 node_id="LAT-G-MORF-NOM-D1",
-                richting="receptief",
+                direction="receptief",
                 mastery_before=0.4,
             )
 
     def test_meetlaag_fields_are_required(self):
-        # L1-01: node_id, richting en mastery_before zijn verplicht (geen default).
+        # L1-01: node_id, direction en mastery_before zijn verplicht (geen default).
         with pytest.raises(ValidationError):
             ItemResponse(
                 timestamp=datetime.now(),

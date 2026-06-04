@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""F1-08c — herkenningsitems voor het Griekse dagelijks leven (10 knopen).
+"""F1-08c — herkenningsitems voor het Griekse dagelijks leven (10 nodes).
 
 De Griekse helft van SHA-C-POL-*: GRIEK, POLIS, AGORA, ACROP, DEMOC,
 GYMNA, SYMPO, THEAT, OLYMP (Olympische Spelen), OIKOS.
@@ -120,16 +120,16 @@ def make_item(
     node_id = f"SHA-C-{suffix}"
     return {
         "id": f"ITEM-{node_id}-001",
-        "knoop_ids": [node_id],
+        "node_ids": [node_id],
         "type": "herkenning",
-        "richting": "receptief",
-        "moeilijkheid_initieel": -0.5,
-        "discriminatie_initieel": 1.0,
-        "verwachte_tijd_sec": 20,
+        "direction": "receptief",
+        "difficulty_initial": -0.5,
+        "discrimination_initial": 1.0,
+        "expected_time_sec": 20,
         "stimulus": {"instruction": vraag, "options": options},
-        "antwoord": options[correct_idx],
+        "answer": options[correct_idx],
         "feedback": feedback,
-        "bron": "handmatig",
+        "source": "handmatig",
     }
 
 
@@ -147,7 +147,7 @@ def inject(json_path: Path, items_by_node: dict[str, list[dict]]) -> int:
         data = json.load(f)
     added = 0
     missing = set(items_by_node.keys())
-    for node in data["knopen"]:
+    for node in data["nodes"]:
         kid = node["id"]
         if kid in items_by_node:
             existing = {it["id"] for it in node.get("items", [])}
@@ -166,7 +166,7 @@ def inject(json_path: Path, items_by_node: dict[str, list[dict]]) -> int:
 def main() -> None:
     items = build_items()
     added = inject(OUTPUT, items)
-    print(f"F1-08c grieks: {len(items)} knopen, {added} nieuwe items toegevoegd.")
+    print(f"F1-08c grieks: {len(items)} nodes, {added} nieuwe items toegevoegd.")
     print(f"Output: {OUTPUT}")
 
 

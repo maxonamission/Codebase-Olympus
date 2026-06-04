@@ -157,9 +157,9 @@ class TestComputeUrgencyScores:
         learner = LearnerModel(user_id=uuid4())
         # No states → only root nodes should appear
         scores = compute_urgency_scores(learner, graph)
-        knoop_ids = {node.id for _, node in scores}
-        assert "LAT-G-MORF-NAAMVAL-INTRO" in knoop_ids  # root
-        assert "LAT-G-MORF-NOM-D1" not in knoop_ids  # prereqs not met
+        node_ids = {node.id for _, node in scores}
+        assert "LAT-G-MORF-NAAMVAL-INTRO" in node_ids  # root
+        assert "LAT-G-MORF-NOM-D1" not in node_ids  # prereqs not met
 
     def test_mastered_review_due_included(self, sample_graph_data):
         graph = load_graph_from_dict(sample_graph_data)
@@ -172,8 +172,8 @@ class TestComputeUrgencyScores:
             last_review=datetime(2026, 3, 1),
         )
         scores = compute_urgency_scores(learner, graph, now=datetime(2026, 4, 12))
-        knoop_ids = {node.id for _, node in scores}
-        assert "LAT-G-MORF-NOM-D1" in knoop_ids  # review due
+        node_ids = {node.id for _, node in scores}
+        assert "LAT-G-MORF-NOM-D1" in node_ids  # review due
 
     def test_sorted_descending(self, sample_graph_data):
         graph = load_graph_from_dict(sample_graph_data)

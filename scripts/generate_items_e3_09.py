@@ -2,7 +2,7 @@
 """Generate exercise items for E3-09: GRC aoristus indicativus actief.
 
 Target: data/graph/grc_grammatica_leerjaar1.json
-Scope:  9 knopen: AOR-INTRO, AOR-SIGMA, AOR-UIT, AOR-THEM, AOR-ROOT,
+Scope:  9 nodes: AOR-INTRO, AOR-SIGMA, AOR-UIT, AOR-THEM, AOR-ROOT,
         AOR-LIJST, INF-AOR, AOR-PARAD en SYNT-AOR-ASPECT.
 
 Drie componenten:
@@ -47,51 +47,51 @@ def aor_intro_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-AOR-INTRO-001",
-            "knoop_ids": ["GRC-G-MORF-AOR-INTRO"],
+            "node_ids": ["GRC-G-MORF-AOR-INTRO"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.4,
-            "discriminatie_initieel": 1.1,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.4,
+            "discrimination_initial": 1.1,
+            "expected_time_sec": 15,
             "stimulus": "Welk aspect drukt de aoristus uit?",
-            "antwoord": [
+            "answer": [
                 "eenmalige of afgeronde handeling",
                 "punctueel / perfectief",
             ],
             "feedback": "De aoristus is punctueel: de handeling wordt als één afgeronde gebeurtenis gezien. Tegenhanger: imperfectum (duur/herhaling).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-AOR-INTRO-002",
-            "knoop_ids": ["GRC-G-MORF-AOR-INTRO"],
+            "node_ids": ["GRC-G-MORF-AOR-INTRO"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.2,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.2,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 15,
             "stimulus": "Welke twee hoofdtypen aoristus onderscheiden we in leerjaar 1?",
-            "antwoord": [
+            "answer": [
                 "sigmatisch (zwak) en thematisch (sterk)",
                 "sigmatisch en thematisch",
             ],
             "feedback": "Sigmatisch/zwak: stam + σ + α-uitgangen (ἔλυσα). Thematisch/sterk: eigen aoriststam + thematische klinker + secundaire uitgangen (ἔλαβον).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-AOR-INTRO-003",
-            "knoop_ids": ["GRC-G-MORF-AOR-INTRO"],
+            "node_ids": ["GRC-G-MORF-AOR-INTRO"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.1,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": 0.1,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 15,
             "stimulus": "Uit welke drie ingrediënten bestaat elke aoristusvorm?",
-            "antwoord": [
+            "answer": [
                 "augment + aoriststam + persoonsuitgang",
                 "augment, aoriststam, uitgang",
             ],
             "feedback": "Aoristus = augment (ἐ-/klinkerverlenging) + aoriststam (σ-stam of eigen stam) + uitgang (α-uitgangen bij sigm., secundair bij them.).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -113,31 +113,31 @@ def aor_sigma_items() -> list[dict]:
         items.append(
             {
                 "id": f"ITEM-GRC-G-MORF-AOR-SIGMA-{idx:03d}",
-                "knoop_ids": ["GRC-G-MORF-AOR-SIGMA"],
+                "node_ids": ["GRC-G-MORF-AOR-SIGMA"],
                 "type": "productie",
-                "richting": "productief",
-                "moeilijkheid_initieel": diff,
-                "discriminatie_initieel": 1.2,
-                "verwachte_tijd_sec": 25,
+                "direction": "productief",
+                "difficulty_initial": diff,
+                "discrimination_initial": 1.2,
+                "expected_time_sec": 25,
                 "stimulus": f"Geef de {label} aoristus ind. act. van λύω.",
-                "antwoord": [form, form.replace("(ν)", "")] if "(ν)" in form else form,
+                "answer": [form, form.replace("(ν)", "")] if "(ν)" in form else form,
                 "feedback": f"{label} = {form} ({nl}). Augment ἐ- + stam λυ- + σ + α-uitgang.",
-                "bron": "handmatig",
+                "source": "handmatig",
             }
         )
     items.append(
         {
             "id": "ITEM-GRC-G-MORF-AOR-SIGMA-005",
-            "knoop_ids": ["GRC-G-MORF-AOR-SIGMA"],
+            "node_ids": ["GRC-G-MORF-AOR-SIGMA"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "productief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Geef de 1 sg. sigmatische aoristus van γράφω.",
-            "antwoord": "ἔγραψα",
+            "answer": "ἔγραψα",
             "feedback": "γράφω → ἔγραψα: φ + σ → ψ. Bij labiaalstammen (π/β/φ) smelt de σ-aorist de stamconsonant tot ψ.",
-            "bron": "handmatig",
+            "source": "handmatig",
         }
     )
     return items
@@ -152,35 +152,35 @@ def aor_uit_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-AOR-UIT-001",
-            "knoop_ids": ["GRC-G-MORF-AOR-UIT"],
+            "node_ids": ["GRC-G-MORF-AOR-UIT"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.0,
-            "discriminatie_initieel": 1.1,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": 0.0,
+            "discrimination_initial": 1.1,
+            "expected_time_sec": 15,
             "stimulus": "Noem de zes uitgangen van de sigmatische aoristus actief.",
-            "antwoord": [
+            "answer": [
                 "-α, -ας, -ε(ν), -αμεν, -ατε, -αν",
                 "-α -ας -ε -αμεν -ατε -αν",
             ],
             "feedback": "Sigmatische uitgangen: -α, -ας, -ε(ν), -αμεν, -ατε, -αν. Let op: 1 sg. op -α (niet -ον); 3 sg. op -ε (niet -ε van impf.).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-AOR-UIT-002",
-            "knoop_ids": ["GRC-G-MORF-AOR-UIT"],
+            "node_ids": ["GRC-G-MORF-AOR-UIT"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 20,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 20,
             "stimulus": "Welke uitgangen heeft een thematische (sterke) aoristus — sigmatisch of secundair?",
-            "antwoord": [
+            "answer": [
                 "secundaire uitgangen (-ον, -ες, -ε(ν), -ομεν, -ετε, -ον)",
                 "secundair, zoals imperfectum",
             ],
             "feedback": "Thematische aoristus gebruikt de secundaire uitgangen (impf.-stijl) op een ándere stam: ἔλαβον lijkt op ἔγραφον qua uitgang.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -201,34 +201,34 @@ def aor_them_items() -> list[dict]:
         items.append(
             {
                 "id": f"ITEM-GRC-G-MORF-AOR-THEM-{idx:03d}",
-                "knoop_ids": ["GRC-G-MORF-AOR-THEM"],
+                "node_ids": ["GRC-G-MORF-AOR-THEM"],
                 "type": "productie",
-                "richting": "productief",
-                "moeilijkheid_initieel": diff,
-                "discriminatie_initieel": 1.2,
-                "verwachte_tijd_sec": 25,
+                "direction": "productief",
+                "difficulty_initial": diff,
+                "discrimination_initial": 1.2,
+                "expected_time_sec": 25,
                 "stimulus": f"Geef de {label} thematische aoristus ind. act. van λαμβάνω.",
-                "antwoord": form,
+                "answer": form,
                 "feedback": f"{label} = {form} ({nl}). Aoriststam λαβ- (niet λαμβαν-!) + augment + secundaire uitgangen.",
-                "bron": "handmatig",
+                "source": "handmatig",
             }
         )
     items.append(
         {
             "id": "ITEM-GRC-G-MORF-AOR-THEM-004",
-            "knoop_ids": ["GRC-G-MORF-AOR-THEM"],
+            "node_ids": ["GRC-G-MORF-AOR-THEM"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 20,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 20,
             "stimulus": "Wat onderscheidt ἔλαβον van een imperfectum van hetzelfde werkwoord?",
-            "antwoord": [
+            "answer": [
                 "ἔλαβον heeft de aoriststam λαβ-; imperf. gebruikt de praesensstam λαμβαν-",
                 "de stam: λαβ- (aorist) vs. λαμβαν- (praesens/impf.)",
             ],
             "feedback": "ἐλάμβανον (impf.) < λαμβαν- + secundair. ἔλαβον (aorist) < λαβ- + secundair. Zelfde uitgang, andere stam → ander aspect.",
-            "bron": "handmatig",
+            "source": "handmatig",
         }
     )
     return items
@@ -243,35 +243,35 @@ def aor_root_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-AOR-ROOT-001",
-            "knoop_ids": ["GRC-G-MORF-AOR-ROOT"],
+            "node_ids": ["GRC-G-MORF-AOR-ROOT"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 15,
             "stimulus": "Wat kenmerkt een stamaoristus zoals ἔβην of ἔστην?",
-            "antwoord": [
+            "answer": [
                 "geen thematische klinker; uitgangen direct aan de kale stam",
                 "athematisch: stam + uitgang zonder ε/ο",
             ],
             "feedback": "Stamaoristi (ἔβην van βαίνω, ἔστην van ἵστημι, ἔγνων van γιγνώσκω) hebben geen thematische klinker: uitgang plakt direct aan de stam.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-AOR-ROOT-002",
-            "knoop_ids": ["GRC-G-MORF-AOR-ROOT"],
+            "node_ids": ["GRC-G-MORF-AOR-ROOT"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.6,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "productief",
+            "difficulty_initial": 0.6,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Welk lemma hoort bij ἔγνων (1 sg. stamaorist, 'ik leerde kennen')?",
-            "antwoord": [
+            "answer": [
                 "γιγνώσκω",
                 "γιγνώσκω, -γνώσομαι, -ἔγνων",
             ],
             "feedback": "ἔγνων is 1 sg. stamaorist van γιγνώσκω. Aoriststam γνω- (zonder thematische klinker, met lange ω).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -293,19 +293,19 @@ def aor_lijst_items() -> list[dict]:
         items.append(
             {
                 "id": f"ITEM-GRC-G-MORF-AOR-LIJST-{idx:03d}",
-                "knoop_ids": ["GRC-G-MORF-AOR-LIJST", "GRC-G-MORF-STAMTIJD"],
+                "node_ids": ["GRC-G-MORF-AOR-LIJST", "GRC-G-MORF-STAMTIJD"],
                 "type": "herkenning",
-                "richting": "receptief",
-                "moeilijkheid_initieel": diff,
-                "discriminatie_initieel": 1.3,
-                "verwachte_tijd_sec": 20,
+                "direction": "receptief",
+                "difficulty_initial": diff,
+                "discrimination_initial": 1.3,
+                "expected_time_sec": 20,
                 "stimulus": f"Van welk lemma is {form} de 1 sg. aoristus, en welk aoristype is het?",
-                "antwoord": [
+                "answer": [
                     f"{lemma}, {typ}",
                     f"lemma: {lemma}; type: {typ}",
                 ],
                 "feedback": f"{form} = 1 sg. aorist ({typ}) van {lemma} ('{nl}'). De aoriststam staat los van de praesensstam.",
-                "bron": "handmatig",
+                "source": "handmatig",
             }
         )
     return items
@@ -320,29 +320,29 @@ def inf_aor_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-INF-AOR-001",
-            "knoop_ids": ["GRC-G-MORF-INF-AOR"],
+            "node_ids": ["GRC-G-MORF-INF-AOR"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "productief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Geef de infinitief aoristus actief van λύω.",
-            "antwoord": "λῦσαι",
+            "answer": "λῦσαι",
             "feedback": "Sigmatische inf. aor. = λῦσαι (stam λυ- + σ + -αι). Geen augment in infinitief (augment blijft bij de indicatief).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-INF-AOR-002",
-            "knoop_ids": ["GRC-G-MORF-INF-AOR"],
+            "node_ids": ["GRC-G-MORF-INF-AOR"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "productief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Geef de infinitief aoristus actief van λαμβάνω.",
-            "antwoord": "λαβεῖν",
+            "answer": "λαβεῖν",
             "feedback": "Thematische inf. aor. = λαβεῖν (aoriststam λαβ- + -εῖν). Kenmerkende circumflex op de ultima.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -356,50 +356,50 @@ def aor_parad_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-AOR-PARAD-001",
-            "knoop_ids": ["GRC-G-MORF-AOR-PARAD"],
+            "node_ids": ["GRC-G-MORF-AOR-PARAD"],
             "type": "offline_schrijven",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.7,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 100,
+            "direction": "productief",
+            "difficulty_initial": 0.7,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 100,
             "stimulus": "Schrijf het volledige paradigma van ἔλυσα op (6 personen) en vergelijk met je grammaticaboek.",
-            "antwoord": "ἔλυσα, ἔλυσας, ἔλυσε(ν), ἐλύσαμεν, ἐλύσατε, ἔλυσαν",
+            "answer": "ἔλυσα, ἔλυσας, ἔλυσε(ν), ἐλύσαμεν, ἐλύσατε, ἔλυσαν",
             "feedback": "Kern: augment ἐ- + stam λυ- + σ + α-uitgangen. Zes vormen: ἔλυσα / ἔλυσας / ἔλυσε(ν) / ἐλύσαμεν / ἐλύσατε / ἔλυσαν.",
-            "bron": "handmatig",
-            "verificatie_methode": "self_report",
-            "verwacht_resultaat": "6 vormen van ἔλυσα met correcte accenten en bewegelijke ν in de 3 sg.",
+            "source": "handmatig",
+            "verification_method": "self_report",
+            "expected_result": "6 vormen van ἔλυσα met correcte accenten en bewegelijke ν in de 3 sg.",
         },
         {
             "id": "ITEM-GRC-G-MORF-AOR-PARAD-002",
-            "knoop_ids": ["GRC-G-MORF-AOR-PARAD", "GRC-G-MORF-STAMTIJD"],
+            "node_ids": ["GRC-G-MORF-AOR-PARAD", "GRC-G-MORF-STAMTIJD"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.6,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.6,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Bij welk lemma hoort ἤνεγκον en welk aoristype is het?",
-            "antwoord": [
+            "answer": [
                 "φέρω, thematisch (onregelmatig)",
                 "lemma: φέρω; type: thematisch",
             ],
             "feedback": "ἤνεγκον is 1 sg. (suppletieve) thematische aorist van φέρω ('dragen/brengen'). Sterk onregelmatig, moet uit het hoofd geleerd.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-AOR-PARAD-003",
-            "knoop_ids": ["GRC-G-MORF-AOR-PARAD"],
+            "node_ids": ["GRC-G-MORF-AOR-PARAD"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "In 'ὁ διδάσκαλος ἔγραψε τὸν λόγον' — welke tijd, persoon en getal heeft ἔγραψε?",
-            "antwoord": [
+            "answer": [
                 "aoristus 3e persoon singularis",
                 "aor. 3 sg.",
             ],
             "feedback": "ἔγραψε = 3 sg. sigm. aorist van γράφω (augment ἐ- + stam γραφ- + σ → γραψ- + -ε). Punctueel: 'schreef één keer' — tegenover impf. 'was aan het schrijven'.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -413,77 +413,77 @@ def aspect_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-SYNT-AOR-ASPECT-001",
-            "knoop_ids": ["GRC-G-SYNT-AOR-ASPECT"],
+            "node_ids": ["GRC-G-SYNT-AOR-ASPECT"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.1,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.1,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 15,
             "stimulus": "Wat is het aspectueel verschil tussen aoristus en imperfectum?",
-            "antwoord": [
+            "answer": [
                 "aoristus = punctueel/afgerond; imperfectum = duratief/herhaald",
                 "aorist punctueel, imperfectum duratief",
             ],
             "feedback": "Beide zijn verleden tijd, maar verschillen in aspect: aoristus noemt één afgeronde gebeurtenis, imperfectum beschrijft een lopende of herhaalde handeling.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-AOR-ASPECT-002",
-            "knoop_ids": ["GRC-G-SYNT-AOR-ASPECT"],
+            "node_ids": ["GRC-G-SYNT-AOR-ASPECT"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Welke tijd zou je kiezen voor 'hij schreef (één keer) een brief': aoristus of imperfectum?",
-            "antwoord": ["aoristus", "aorist"],
+            "answer": ["aoristus", "aorist"],
             "feedback": "Eenmalige, afgeronde actie → aoristus: ἔγραψε ἐπιστολήν. Het imperfectum (ἔγραφε) zou suggereren 'hij was aan het schrijven'.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-AOR-ASPECT-003",
-            "knoop_ids": ["GRC-G-SYNT-AOR-ASPECT"],
+            "node_ids": ["GRC-G-SYNT-AOR-ASPECT"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Welke tijd past bij 'iedere dag offerde zij aan de goden': aoristus of imperfectum?",
-            "antwoord": ["imperfectum", "impf."],
+            "answer": ["imperfectum", "impf."],
             "feedback": "Herhaalde handeling in het verleden → imperfectum: ἔθυεν τοῖς θεοῖς. Aoristus zou één specifieke offermoment noemen.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-AOR-ASPECT-004",
-            "knoop_ids": ["GRC-G-SYNT-AOR-ASPECT"],
+            "node_ids": ["GRC-G-SYNT-AOR-ASPECT"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.4,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.4,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Vertaal het aspectueel verschil: 'ὁ ἄνθρωπος ἔλεγε' vs. 'ὁ ἄνθρωπος εἶπε'.",
-            "antwoord": [
+            "answer": [
                 "ἔλεγε = hij was aan het spreken / sprak (telkens); εἶπε = hij zei (één keer)",
                 "impf. durend, aorist eenmalig",
             ],
             "feedback": "ἔλεγε (impf.) = duratief 'hij sprak / was aan het spreken'. εἶπε (aor.) = punctueel 'hij zei/sprak (één keer)'. Zelfde werkwoord, verschillend aspect.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-AOR-ASPECT-005",
-            "knoop_ids": ["GRC-G-SYNT-AOR-ASPECT"],
+            "node_ids": ["GRC-G-SYNT-AOR-ASPECT"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Waarom is de keuze tussen aoristus en imperfectum niet alleen een kwestie van 'wanneer', maar vooral van 'hoe'?",
-            "antwoord": [
+            "answer": [
                 "beide zijn verleden tijd; het verschil zit in het aspect (perfectief vs. imperfectief)",
                 "de aspectkeuze betreft de manier waarop de spreker de handeling ziet",
             ],
             "feedback": "Tempus (verleden) is bij beide gelijk. De spreker kiest het aspect: wil hij de handeling als één punt zien (aor.) of als proces/herhaling (impf.)?",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -507,10 +507,10 @@ def collect_all() -> dict[str, list[dict]]:
 
     primary_map: dict[str, list[dict]] = {}
     for item in all_items:
-        for key in ("stimulus", "antwoord", "feedback", "verwacht_resultaat"):
+        for key in ("stimulus", "antwoord", "feedback", "expected_result"):
             if key in item and item[key] is not None:
                 item[key] = nfc(item[key])
-        primary_map.setdefault(item["knoop_ids"][0], []).append(item)
+        primary_map.setdefault(item["node_ids"][0], []).append(item)
     return primary_map
 
 
@@ -527,7 +527,7 @@ def add_items_to_json(json_path: Path, items_by_node: dict[str, list[dict]]) -> 
         data = json.load(f)
 
     added = 0
-    for node in data["knopen"]:
+    for node in data["nodes"]:
         if node["id"] in items_by_node:
             existing_ids = {item["id"] for item in node.get("items", [])}
             new_items = [

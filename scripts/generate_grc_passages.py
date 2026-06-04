@@ -2,7 +2,7 @@
 """Generate Greek reading passages for leerjaar 1 and write to data/passages/.
 
 Each passage has per-word annotations (lemma, morphology, Dutch translation)
-and a list of knoop_ids that the passage exercises. All Greek uses polytonic.
+and a list of node_ids that the passage exercises. All Greek uses polytonic.
 
 Run: python scripts/generate_grc_passages.py
 """
@@ -23,7 +23,7 @@ def load_all_node_ids() -> set[str]:
     for p in GRAPH_DIR.glob("*.json"):
         with open(p, encoding="utf-8") as f:
             data = json.load(f)
-        for k in data.get("knopen", []):
+        for k in data.get("nodes", []):
             ids.add(k["id"])
     return ids
 
@@ -43,19 +43,19 @@ def zin(grieks: str, vertaling_nl: str, woorden: list[dict]) -> dict:
 
 def passage(
     nr: int,
-    titel_nl: str,
+    title_nl: str,
     niveau: int,
     label: str,
     zinnen: list[dict],
-    knoop_ids: list[str],
+    node_ids: list[str],
 ) -> dict:
     return {
         "id": f"GRC-PASS-LJ1-{nr:03d}",
-        "titel_nl": titel_nl,
+        "title_nl": title_nl,
         "niveau": niveau,
         "complexiteit_label": label,
         "zinnen": zinnen,
-        "knoop_ids": knoop_ids,
+        "node_ids": node_ids,
     }
 
 
@@ -91,7 +91,7 @@ BATCH_1 = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "GRC-G-MORF-NOM-D2",
             "GRC-G-MORF-DECL2-INTRO",
             "GRC-G-MORF-PRAES-EIMI",
@@ -143,7 +143,7 @@ BATCH_1 = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "GRC-G-MORF-NOM-D2",
             "GRC-G-MORF-DECL2-INTRO",
             "GRC-G-MORF-PRAES-EIMI",
@@ -198,7 +198,7 @@ BATCH_1 = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "GRC-G-MORF-NOM-D2",
             "GRC-G-MORF-ACC-D2",
             "GRC-G-MORF-DECL2-INTRO",
@@ -254,7 +254,7 @@ BATCH_1 = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "GRC-G-MORF-NOM-D2",
             "GRC-G-MORF-ACC-D2",
             "GRC-G-MORF-DECL2-INTRO",
@@ -313,7 +313,7 @@ BATCH_1 = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "GRC-G-MORF-NOM-D2",
             "GRC-G-MORF-ACC-D2",
             "GRC-G-MORF-DECL2-INTRO",
@@ -382,7 +382,7 @@ BATCH_2: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "GRC-G-MORF-NOM-D1",
             "GRC-G-MORF-DECL1-INTRO",
             "GRC-G-MORF-DECL1-ETA",
@@ -439,7 +439,7 @@ BATCH_2: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "GRC-G-MORF-NOM-D1",
             "GRC-G-MORF-ACC-D1",
             "GRC-G-MORF-DECL1-INTRO",
@@ -504,7 +504,7 @@ BATCH_2: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "GRC-G-MORF-GEN-D1",
             "GRC-G-MORF-GEN-D2",
             "GRC-G-MORF-NOM-D1",
@@ -573,7 +573,7 @@ BATCH_2: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "GRC-G-MORF-DAT-D2",
             "GRC-G-MORF-NOM-D2",
             "GRC-G-MORF-ACC-D2",
@@ -645,7 +645,7 @@ BATCH_2: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "GRC-G-MORF-NOM-D2",
             "GRC-G-MORF-ACC-D2",
             "GRC-G-MORF-GEN-D2",
@@ -715,7 +715,7 @@ BATCH_3: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "GRC-G-MORF-IMPF-INTRO",
             "GRC-G-MORF-IMPF-THEM",
             "GRC-G-MORF-AUGMENT",
@@ -779,7 +779,7 @@ BATCH_3: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "GRC-G-MORF-IMPF-INTRO",
             "GRC-G-MORF-IMPF-THEM",
             "GRC-G-MORF-IMPF-EIMI",
@@ -845,7 +845,7 @@ BATCH_3: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "GRC-G-MORF-NOM-D3",
             "GRC-G-MORF-ACC-D3",
             "GRC-G-MORF-DECL3-INTRO",
@@ -905,7 +905,7 @@ BATCH_3: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "GRC-G-MORF-AOR-INTRO",
             "GRC-G-MORF-AOR-SIGMA",
             "GRC-G-MORF-AOR-UIT",
@@ -982,7 +982,7 @@ BATCH_3: list[dict] = [
                 ],
             ),
         ],
-        knoop_ids=[
+        node_ids=[
             "GRC-G-MORF-NOM-D1",
             "GRC-G-MORF-NOM-D2",
             "GRC-G-MORF-NOM-D3",
@@ -1034,7 +1034,7 @@ ALL_PASSAGES = BATCH_1 + BATCH_2 + BATCH_3
 def validate(passages: list[dict], known_ids: set[str]) -> list[str]:
     warnings = []
     for p in passages:
-        for kid in p["knoop_ids"]:
+        for kid in p["node_ids"]:
             if kid not in known_ids:
                 warnings.append(f"  {p['id']}: onbekend node_id {kid}")
     return warnings
@@ -1061,12 +1061,12 @@ def main() -> None:
     total_w = sum(len(z["woorden"]) for p in passages for z in p["zinnen"])
     print(f"Totaal woorden: {total_w}")
     if warnings:
-        print(f"\n⚠ {len(warnings)} onbekende knoop_ids:")
+        print(f"\n⚠ {len(warnings)} onbekende node_ids:")
         for ww in warnings:
             print(ww)
         sys.exit(1)
     else:
-        print("\n✓ Alle knoop_ids gevalideerd.")
+        print("\n✓ Alle node_ids gevalideerd.")
 
 
 if __name__ == "__main__":

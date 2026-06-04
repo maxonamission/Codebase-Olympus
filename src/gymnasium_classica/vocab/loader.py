@@ -12,7 +12,7 @@ Each file in that directory is a list of dicts with the shape::
       "cl": null
     }
 
-The filename encodes ``{taal}_{frequentieband}_words.json`` (e.g.
+The filename encodes ``{language}_{frequentieband}_words.json`` (e.g.
 ``lat_f01_words.json``).  The V-node ID in the graph is assembled as
 ``{TAAL}-V-{BAND}-{id}`` (e.g. ``LAT-V-F01-SUM``) so we can build a
 direct lookup table keyed on that node-ID.
@@ -56,8 +56,8 @@ def node_id_from_file_and_entry(filename: str, entry_id: str) -> str:
     ``lat_f01_words.json`` + ``SUM`` → ``LAT-V-F01-SUM``.
     """
     stem = filename.rsplit("_words", 1)[0]  # "lat_f01"
-    taal, band = stem.split("_", 1)
-    return f"{taal.upper()}-V-{band.upper()}-{entry_id}"
+    language, band = stem.split("_", 1)
+    return f"{language.upper()}-V-{band.upper()}-{entry_id}"
 
 
 def load_vocab_metadata(path: Path) -> dict[str, VocabEntry]:

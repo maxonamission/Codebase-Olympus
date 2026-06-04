@@ -15,20 +15,20 @@ from gymnasium_classica.passages.loader import load_passages
 class TestWordAnnotation:
     def test_basic_construction(self):
         wa = WordAnnotation(
-            woord="puellam", lemma="puella", naamval="acc.sg", vertaling="het meisje"
+            word="puellam", lemma="puella", case="acc.sg", translation="het meisje"
         )
-        assert wa.woord == "puellam"
+        assert wa.word == "puellam"
         assert wa.lemma == "puella"
-        assert wa.naamval == "acc.sg"
-        assert wa.vertaling == "het meisje"
+        assert wa.case == "acc.sg"
+        assert wa.translation == "het meisje"
 
     def test_naamval_optional(self):
-        wa = WordAnnotation(woord="in", lemma="in", vertaling="in")
-        assert wa.naamval is None
+        wa = WordAnnotation(word="in", lemma="in", translation="in")
+        assert wa.case is None
 
     def test_naamval_explicit_none(self):
-        wa = WordAnnotation(woord="et", lemma="et", naamval=None, vertaling="en")
-        assert wa.naamval is None
+        wa = WordAnnotation(word="et", lemma="et", case=None, translation="en")
+        assert wa.case is None
 
 
 # --- Passage model tests ---
@@ -38,98 +38,98 @@ class TestPassage:
     def test_basic_construction(self):
         p = Passage(
             id="LAT-P-001",
-            taal="lat",
-            titel="Testpassage",
-            tekst="Puella aquam portat.",
-            annotaties=[
+            language="lat",
+            title="Testpassage",
+            text="Puella aquam portat.",
+            annotations=[
                 WordAnnotation(
-                    woord="Puella", lemma="puella", naamval="nom.sg", vertaling="het meisje"
+                    word="Puella", lemma="puella", case="nom.sg", translation="het meisje"
                 ),
-                WordAnnotation(woord="aquam", lemma="aqua", naamval="acc.sg", vertaling="water"),
+                WordAnnotation(word="aquam", lemma="aqua", case="acc.sg", translation="water"),
                 WordAnnotation(
-                    woord="portat",
+                    word="portat",
                     lemma="portare",
-                    naamval="praes.ind.act.3sg",
-                    vertaling="draagt",
+                    case="praes.ind.act.3sg",
+                    translation="draagt",
                 ),
             ],
-            knoop_ids=["LAT-G-MORF-NOM-D1", "LAT-G-MORF-ACC-D1"],
-            moeilijkheid=1,
+            node_ids=["LAT-G-MORF-NOM-D1", "LAT-G-MORF-ACC-D1"],
+            difficulty=1,
         )
         assert p.id == "LAT-P-001"
-        assert p.taal == "lat"
-        assert len(p.annotaties) == 3
-        assert len(p.knoop_ids) == 2
-        assert p.moeilijkheid == 1
+        assert p.language == "lat"
+        assert len(p.annotations) == 3
+        assert len(p.node_ids) == 2
+        assert p.difficulty == 1
 
     def test_moeilijkheid_range(self):
         """Difficulty must be 1-5."""
         base = dict(
             id="LAT-P-001",
-            taal="lat",
-            titel="Test",
-            tekst="Puella.",
-            annotaties=[],
-            knoop_ids=[],
+            language="lat",
+            title="Test",
+            text="Puella.",
+            annotations=[],
+            node_ids=[],
         )
         for level in [1, 2, 3, 4, 5]:
-            p = Passage(**base, moeilijkheid=level)
-            assert p.moeilijkheid == level
+            p = Passage(**base, difficulty=level)
+            assert p.difficulty == level
 
     def test_moeilijkheid_too_low(self):
         with pytest.raises(ValidationError):
             Passage(
                 id="LAT-P-001",
-                taal="lat",
-                titel="Test",
-                tekst="Puella.",
-                annotaties=[],
-                knoop_ids=[],
-                moeilijkheid=0,
+                language="lat",
+                title="Test",
+                text="Puella.",
+                annotations=[],
+                node_ids=[],
+                difficulty=0,
             )
 
     def test_moeilijkheid_too_high(self):
         with pytest.raises(ValidationError):
             Passage(
                 id="LAT-P-001",
-                taal="lat",
-                titel="Test",
-                tekst="Puella.",
-                annotaties=[],
-                knoop_ids=[],
-                moeilijkheid=6,
+                language="lat",
+                title="Test",
+                text="Puella.",
+                annotations=[],
+                node_ids=[],
+                difficulty=6,
             )
 
     def test_taal_validation(self):
         with pytest.raises(ValidationError):
             Passage(
                 id="LAT-P-001",
-                taal="frc",  # invalid
-                titel="Test",
-                tekst="Puella.",
-                annotaties=[],
-                knoop_ids=[],
-                moeilijkheid=1,
+                language="frc",  # invalid
+                title="Test",
+                text="Puella.",
+                annotations=[],
+                node_ids=[],
+                difficulty=1,
             )
 
     def test_serialization_roundtrip(self):
         p = Passage(
             id="LAT-P-001",
-            taal="lat",
-            titel="Test",
-            tekst="Puella aquam portat.",
-            annotaties=[
+            language="lat",
+            title="Test",
+            text="Puella aquam portat.",
+            annotations=[
                 WordAnnotation(
-                    woord="Puella", lemma="puella", naamval="nom.sg", vertaling="het meisje"
+                    word="Puella", lemma="puella", case="nom.sg", translation="het meisje"
                 ),
             ],
-            knoop_ids=["LAT-G-MORF-NOM-D1"],
-            moeilijkheid=2,
+            node_ids=["LAT-G-MORF-NOM-D1"],
+            difficulty=2,
         )
         dumped = p.model_dump()
         p2 = Passage(**dumped)
         assert p2.id == p.id
-        assert p2.annotaties[0].lemma == "puella"
+        assert p2.annotations[0].lemma == "puella"
 
 
 # --- PassageData tests ---
@@ -141,12 +141,12 @@ class TestPassageData:
             passages=[
                 Passage(
                     id="LAT-P-001",
-                    taal="lat",
-                    titel="Test",
-                    tekst="Puella.",
-                    annotaties=[],
-                    knoop_ids=[],
-                    moeilijkheid=1,
+                    language="lat",
+                    title="Test",
+                    text="Puella.",
+                    annotations=[],
+                    node_ids=[],
+                    difficulty=1,
                 )
             ]
         )
@@ -167,25 +167,25 @@ def passages_dir(tmp_path: Path) -> Path:
         "passages": [
             {
                 "id": "LAT-P-T01",
-                "taal": "lat",
-                "titel": "Test 1",
-                "tekst": "Puella cantat.",
-                "annotaties": [
+                "language": "lat",
+                "title": "Test 1",
+                "text": "Puella cantat.",
+                "annotations": [
                     {
-                        "woord": "Puella",
+                        "word": "Puella",
                         "lemma": "puella",
-                        "naamval": "nom.sg",
-                        "vertaling": "het meisje",
+                        "case": "nom.sg",
+                        "translation": "het meisje",
                     },
                     {
-                        "woord": "cantat",
+                        "word": "cantat",
                         "lemma": "cantare",
-                        "naamval": "praes.ind.act.3sg",
-                        "vertaling": "zingt",
+                        "case": "praes.ind.act.3sg",
+                        "translation": "zingt",
                     },
                 ],
-                "knoop_ids": ["LAT-G-MORF-NOM-D1"],
-                "moeilijkheid": 1,
+                "node_ids": ["LAT-G-MORF-NOM-D1"],
+                "difficulty": 1,
             }
         ]
     }
@@ -196,25 +196,25 @@ def passages_dir(tmp_path: Path) -> Path:
         "passages": [
             {
                 "id": "LAT-P-T02",
-                "taal": "lat",
-                "titel": "Test 2",
-                "tekst": "Miles pugnat.",
-                "annotaties": [
+                "language": "lat",
+                "title": "Test 2",
+                "text": "Miles pugnat.",
+                "annotations": [
                     {
-                        "woord": "Miles",
+                        "word": "Miles",
                         "lemma": "miles",
-                        "naamval": "nom.sg",
-                        "vertaling": "de soldaat",
+                        "case": "nom.sg",
+                        "translation": "de soldaat",
                     },
                     {
-                        "woord": "pugnat",
+                        "word": "pugnat",
                         "lemma": "pugnare",
-                        "naamval": "praes.ind.act.3sg",
-                        "vertaling": "vecht",
+                        "case": "praes.ind.act.3sg",
+                        "translation": "vecht",
                     },
                 ],
-                "knoop_ids": ["LAT-G-MORF-NOM-D3"],
-                "moeilijkheid": 2,
+                "node_ids": ["LAT-G-MORF-NOM-D3"],
+                "difficulty": 2,
             }
         ]
     }
@@ -229,7 +229,7 @@ class TestPassageLoader:
         passages = load_passages(passages_dir / "file1.json")
         assert len(passages) == 1
         assert passages[0].id == "LAT-P-T01"
-        assert passages[0].taal == "lat"
+        assert passages[0].language == "lat"
 
     def test_load_directory(self, passages_dir: Path):
         passages = load_passages(passages_dir)
@@ -247,12 +247,12 @@ class TestPassageLoader:
             "passages": [
                 {
                     "id": "LAT-P-T01",  # duplicate
-                    "taal": "lat",
-                    "titel": "Dup",
-                    "tekst": "Dup.",
-                    "annotaties": [],
-                    "knoop_ids": [],
-                    "moeilijkheid": 1,
+                    "language": "lat",
+                    "title": "Dup",
+                    "text": "Dup.",
+                    "annotations": [],
+                    "node_ids": [],
+                    "difficulty": 1,
                 }
             ]
         }
@@ -268,14 +268,14 @@ class TestPassageLoader:
         passages = load_passages(data_dir)
         assert len(passages) >= 1
         for p in passages:
-            assert p.moeilijkheid >= 1
-            assert p.moeilijkheid <= 5
-            assert len(p.tekst) > 0
+            assert p.difficulty >= 1
+            assert p.difficulty <= 5
+            assert len(p.text) > 0
 
     def test_annotaties_preserved(self, passages_dir: Path):
         passages = load_passages(passages_dir / "file1.json")
         p = passages[0]
-        assert len(p.annotaties) == 2
-        assert p.annotaties[0].woord == "Puella"
-        assert p.annotaties[0].lemma == "puella"
-        assert p.annotaties[1].vertaling == "zingt"
+        assert len(p.annotations) == 2
+        assert p.annotations[0].word == "Puella"
+        assert p.annotations[0].lemma == "puella"
+        assert p.annotations[1].translation == "zingt"

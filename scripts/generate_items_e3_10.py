@@ -2,14 +2,14 @@
 """Generate exercise items for E3-10: GRC pronomina.
 
 Target: data/graph/grc_grammatica_leerjaar1.json
-Scope:  10 knopen (GRC-G-MORF-PRON-*, GRC-G-SYNT-PRON-*).
+Scope:  10 nodes (GRC-G-MORF-PRON-*, GRC-G-SYNT-PRON-*).
 
 Drie componenten:
 1. Paradigma-drill voor αὐτός (~8 van de lastigste vormen uit m/f/n × 6 nv).
 2. Gebruik-items voor αὐτός in de drie betekenissen (zelf / dezelfde /
    hem-haar-het), 3 contextuele items per betekenis.
 3. Aanwijzend-trio οὗτος / ἐκεῖνος / ὅδε met semantische keuze-items,
-   plus verbuigings- en syntaxis-items voor de pronomen-knopen.
+   plus verbuigings- en syntaxis-items voor de pronomen-nodes.
 
 Run:
     python scripts/generate_items_e3_10.py            # writes items to graph
@@ -47,35 +47,35 @@ def pron_intro_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-PRON-INTRO-001",
-            "knoop_ids": ["GRC-G-MORF-PRON-INTRO"],
+            "node_ids": ["GRC-G-MORF-PRON-INTRO"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.6,
-            "discriminatie_initieel": 1.0,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.6,
+            "discrimination_initial": 1.0,
+            "expected_time_sec": 15,
             "stimulus": "Welke vier hoofdcategorieën voornaamwoorden kent het Grieks in leerjaar 1?",
-            "antwoord": [
+            "answer": [
                 "persoonlijk, bezittelijk, aanwijzend, αὐτός",
                 "persoonlijk / bezittelijk / aanwijzend / αὐτός",
             ],
             "feedback": "Vier categorieën: persoonlijk (ἐγώ, σύ), bezittelijk (ἐμός, σός), aanwijzend (οὗτος, ἐκεῖνος, ὅδε) en het veelzijdige αὐτός (zelf / dezelfde / hem).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRON-INTRO-002",
-            "knoop_ids": ["GRC-G-MORF-PRON-INTRO"],
+            "node_ids": ["GRC-G-MORF-PRON-INTRO"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.3,
-            "discriminatie_initieel": 1.1,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.3,
+            "discrimination_initial": 1.1,
+            "expected_time_sec": 15,
             "stimulus": "Waarom neemt αὐτός een aparte plaats in tussen de Griekse voornaamwoorden?",
-            "antwoord": [
+            "answer": [
                 "het heeft drie functies: zelf, dezelfde, en hij/zij/het",
                 "drie betekenissen afhankelijk van positie en lidwoord",
             ],
             "feedback": "αὐτός is intensivum (zelf, predicatief), identiteit (dezelfde, attributief met lidwoord) én 3e-persoons-pronomen in de oblique naamvallen.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -89,48 +89,48 @@ def pron_pers_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-PRON-PERS-001",
-            "knoop_ids": ["GRC-G-MORF-PRON-PERS"],
+            "node_ids": ["GRC-G-MORF-PRON-PERS"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.2,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "productief",
+            "difficulty_initial": 0.2,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Geef de genitivus enkelvoud van het persoonlijk voornaamwoord 'ik' (nadrukkelijke vorm).",
-            "antwoord": ["ἐμοῦ", "ἐμοῦ (μου)"],
+            "answer": ["ἐμοῦ", "ἐμοῦ (μου)"],
             "feedback": "Nadrukkelijk: ἐμοῦ ('van mij'). Enclitisch/zonder nadruk: μου. Dezelfde betekenis, verschillend gewicht in de zin.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRON-PERS-002",
-            "knoop_ids": ["GRC-G-MORF-PRON-PERS"],
+            "node_ids": ["GRC-G-MORF-PRON-PERS"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.0,
-            "discriminatie_initieel": 1.1,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": 0.0,
+            "discrimination_initial": 1.1,
+            "expected_time_sec": 15,
             "stimulus": "Welke naamval en persoon is ἡμῖν?",
-            "antwoord": [
+            "answer": [
                 "dativus 1e persoon meervoud (aan ons)",
                 "dat. pl. 1e pers.",
             ],
             "feedback": "ἡμῖν = dat. pl. van ἡμεῖς ('wij'). Paradigma: ἡμεῖς / ἡμῶν / ἡμῖν / ἡμᾶς.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRON-PERS-003",
-            "knoop_ids": ["GRC-G-MORF-PRON-PERS"],
+            "node_ids": ["GRC-G-MORF-PRON-PERS"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Waarom schrijft men 'ἐγὼ λέγω' i.p.v. alleen 'λέγω'? Wat voegt ἐγώ toe?",
-            "antwoord": [
+            "answer": [
                 "nadruk/contrast (IK zeg, in tegenstelling tot iemand anders)",
                 "expliciet onderwerp voor nadruk",
             ],
             "feedback": "De persoonsuitgang -ω zegt al 'ik'. ἐγώ toevoegen = nadruk of contrast: 'IK zeg (maar jij niet)'. Zonder contrast blijft het vnw. meestal weg.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -144,32 +144,32 @@ def pron_bez_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-PRON-BEZ-001",
-            "knoop_ids": ["GRC-G-MORF-PRON-BEZ"],
+            "node_ids": ["GRC-G-MORF-PRON-BEZ"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.1,
-            "discriminatie_initieel": 1.1,
-            "verwachte_tijd_sec": 20,
+            "direction": "productief",
+            "difficulty_initial": 0.1,
+            "discrimination_initial": 1.1,
+            "expected_time_sec": 20,
             "stimulus": "Geef de nom. sg. vrouwelijk van het bezittelijk voornaamwoord 'mijn'.",
-            "antwoord": ["ἐμή", "ἡ ἐμή"],
+            "answer": ["ἐμή", "ἡ ἐμή"],
             "feedback": "ἐμός / ἐμή / ἐμόν — verbuigt als α/ο-stam adjectief. Vrouwelijk enkelvoud: ἐμή, ἐμῆς, ἐμῇ, ἐμήν.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRON-BEZ-002",
-            "knoop_ids": ["GRC-G-MORF-PRON-BEZ"],
+            "node_ids": ["GRC-G-MORF-PRON-BEZ"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.4,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.4,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Vertaal: ὁ ἐμὸς φίλος καὶ ὁ σὸς ἀδελφός. Welke twee bezittelijke vnw. staan hier, en hoe vertaal je ze?",
-            "antwoord": [
+            "answer": [
                 "ἐμός = mijn, σός = jouw; 'mijn vriend en jouw broer'",
                 "ἐμός (mijn) en σός (jouw)",
             ],
             "feedback": "Bezittelijke vnw. staan attributief bij het lidwoord: ὁ ἐμὸς φίλος = 'mijn vriend', ὁ σὸς ἀδελφός = 'jouw broer'. Ze verbuigen met het substantief mee.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -183,42 +183,42 @@ def pron_aanw_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-PRON-AANW-001",
-            "knoop_ids": ["GRC-G-MORF-PRON-AANW"],
+            "node_ids": ["GRC-G-MORF-PRON-AANW"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.2,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 20,
+            "direction": "receptief",
+            "difficulty_initial": 0.2,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 20,
             "stimulus": "Welk aanwijzend voornaamwoord gebruik je voor 'deze hier, die ik nú ga noemen' (vooruitwijzend)?",
-            "antwoord": ["ὅδε", "ὅδε / ἥδε / τόδε"],
+            "answer": ["ὅδε", "ὅδε / ἥδε / τόδε"],
             "feedback": "ὅδε verwijst naar wat vólgt (cataforisch): 'deze (die ik nu ga noemen)'. οὗτος verwijst terug naar het net genoemde; ἐκεῖνος naar iets ver weg of eerder.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRON-AANW-002",
-            "knoop_ids": ["GRC-G-MORF-PRON-AANW"],
+            "node_ids": ["GRC-G-MORF-PRON-AANW"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.1,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "receptief",
+            "difficulty_initial": 0.1,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Welk aanwijzend voornaamwoord past bij 'die (veraf) / die gene' — bijv. over een persoon uit lang vervlogen tijden?",
-            "antwoord": ["ἐκεῖνος", "ἐκεῖνος / ἐκείνη / ἐκεῖνο"],
+            "answer": ["ἐκεῖνος", "ἐκεῖνος / ἐκείνη / ἐκεῖνο"],
             "feedback": "ἐκεῖνος = 'die, gene' — verwijst naar wat ver weg is in ruimte, tijd of gedachte. Tegenhanger van οὗτος (dichtbij, zojuist genoemd).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRON-AANW-003",
-            "knoop_ids": ["GRC-G-MORF-PRON-AANW"],
+            "node_ids": ["GRC-G-MORF-PRON-AANW"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.4,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 30,
+            "direction": "receptief",
+            "difficulty_initial": 0.4,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 30,
             "stimulus": "Kies het juiste demonstratief: 'Ik heb zojuist een verhaal verteld. ___ verhaal is waar.' (οὗτος / ἐκεῖνος / ὅδε?)",
-            "antwoord": ["οὗτος", "οὗτος (ὁ λόγος)"],
+            "answer": ["οὗτος", "οὗτος (ὁ λόγος)"],
             "feedback": "οὗτος verwijst terug naar wat net gezegd is (anaforisch): 'dit/dat verhaal (dat ik zojuist vertelde)'. ὅδε zou vooruitwijzen, ἐκεῖνος naar iets ver weg.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -232,32 +232,32 @@ def pron_houtos_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-PRON-HOUTOS-001",
-            "knoop_ids": ["GRC-G-MORF-PRON-HOUTOS"],
+            "node_ids": ["GRC-G-MORF-PRON-HOUTOS"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "productief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Geef de nom. sg. vrouwelijk van οὗτος.",
-            "antwoord": "αὕτη",
+            "answer": "αὕτη",
             "feedback": "Vrouwelijk nom. sg. = αὕτη (stam ταυτ- met α-klinker, spiritus asper). Niet verwarren met dat. sg. vr. ταύτῃ.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRON-HOUTOS-002",
-            "knoop_ids": ["GRC-G-MORF-PRON-HOUTOS"],
+            "node_ids": ["GRC-G-MORF-PRON-HOUTOS"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.6,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.6,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 25,
             "stimulus": "Welke naamval, geslacht en getal is τούτων?",
-            "antwoord": [
+            "answer": [
                 "genitivus pluralis (alle geslachten)",
                 "gen. pl. m/f/n",
             ],
             "feedback": "τούτων = gen. pl. — één vorm voor alle drie de geslachten, net als bij het lidwoord τῶν. Stamwisseling: sg. heeft ου-/αυ-, pl. heeft ου-/αυ- alternerend per vorm.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -271,32 +271,32 @@ def pron_ekein_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-PRON-EKEIN-001",
-            "knoop_ids": ["GRC-G-MORF-PRON-EKEIN"],
+            "node_ids": ["GRC-G-MORF-PRON-EKEIN"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 20,
+            "direction": "productief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 20,
             "stimulus": "Geef de acc. sg. mannelijk van ἐκεῖνος.",
-            "antwoord": "ἐκεῖνον",
+            "answer": "ἐκεῖνον",
             "feedback": "ἐκεῖνος verbuigt als een α/ο-stam adjectief: ἐκεῖνος, ἐκείνου, ἐκείνῳ, ἐκεῖνον. Let op: nom. en acc. sg. n. = ἐκεῖνο (zónder -ν).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRON-EKEIN-002",
-            "knoop_ids": ["GRC-G-MORF-PRON-EKEIN"],
+            "node_ids": ["GRC-G-MORF-PRON-EKEIN"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.4,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 20,
+            "direction": "receptief",
+            "difficulty_initial": 0.4,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 20,
             "stimulus": "Welke naamval, geslacht en getal is ἐκείναις?",
-            "antwoord": [
+            "answer": [
                 "dativus pluralis vrouwelijk",
                 "dat. pl. vr.",
             ],
             "feedback": "ἐκείναις = dat. pl. vr. (α-stam uitgang -αις). Verschilt van ἐκείνοις (dat. pl. m./n.).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -318,51 +318,51 @@ def _autos_zelf_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-PRON-AUTOS-001",
-            "knoop_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
+            "node_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 30,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 30,
             "stimulus": "Vertaal: ὁ βασιλεὺς αὐτὸς ἔρχεται. Waarom staat αὐτός zó (predicatief, zonder lidwoord vóór)?",
-            "antwoord": [
+            "answer": [
                 "de koning zelf komt; predicatieve positie → intensivum 'zelf'",
                 "'de koning zelf komt' — αὐτός predicatief = zelf",
             ],
             "feedback": "Predicatieve positie (ὁ βασιλεὺς αὐτὸς of αὐτὸς ὁ βασιλεύς) geeft de betekenis 'zelf'. Attributief (ὁ αὐτὸς βασιλεύς) zou 'dezelfde' betekenen.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRON-AUTOS-002",
-            "knoop_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
+            "node_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 30,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 30,
             "stimulus": "Vertaal: αὐτὴ ἡ θεὰ τὸν νεὼν οἰκοδομεῖ. Wat betekent αὐτή hier?",
-            "antwoord": [
+            "answer": [
                 "de godin zelf bouwt de tempel",
                 "zelf — 'de godin zelf bouwt de tempel'",
             ],
             "feedback": "αὐτὴ ἡ θεά = predicatieve positie → 'de godin zélf'. Nadruk: niemand anders dan zij persoonlijk.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRON-AUTOS-003",
-            "knoop_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
+            "node_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.6,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 30,
+            "direction": "receptief",
+            "difficulty_initial": 0.6,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 30,
             "stimulus": "Vertaal: ὁ διδάσκαλος αὐτὸς γράφει τὴν ἐπιστολήν. Welke drie woorden dragen de nadruk van αὐτός?",
-            "antwoord": [
+            "answer": [
                 "'de leraar zelf schrijft de brief' — nadruk op 'de leraar zelf'",
                 "de leraar zelf — niet een slaaf of leerling",
             ],
             "feedback": "αὐτός predicatief = intensivum 'zelf'. Context: hij delegeert het niet, dóét het eigenhandig. Vergelijk Latijn ipse.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -371,51 +371,51 @@ def _autos_dezelfde_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-PRON-AUTOS-004",
-            "knoop_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
+            "node_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 30,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 30,
             "stimulus": "Vertaal: ὁ αὐτὸς ἀνὴρ πάλιν λέγει. Waarom betekent αὐτός hier 'dezelfde' en niet 'zelf'?",
-            "antwoord": [
+            "answer": [
                 "dezelfde man spreekt opnieuw; attributieve positie (lidwoord + αὐτός) → 'dezelfde'",
                 "attributief tussen lidwoord en substantief = 'dezelfde'",
             ],
             "feedback": "ὁ αὐτὸς ἀνήρ (lidwoord + αὐτός + substantief) = attributieve positie → 'dezelfde man'. Zonder lidwoord vóór αὐτός zou het 'zelf' betekenen.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRON-AUTOS-005",
-            "knoop_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
+            "node_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.6,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 30,
+            "direction": "receptief",
+            "difficulty_initial": 0.6,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 30,
             "stimulus": "Vertaal: ἡ αὐτὴ γνώμη ἐστὶν καὶ ἐμοὶ καὶ σοί.",
-            "antwoord": [
+            "answer": [
                 "Dezelfde mening heb ik en jij / wij hebben dezelfde mening",
                 "ik en jij hebben dezelfde mening",
             ],
             "feedback": "ἡ αὐτὴ γνώμη (attributief) = 'dezelfde mening'. Dativus van bezit: ἐμοί καὶ σοί = 'voor mij en voor jou'. Αὐτός met lidwoord = identiteit.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRON-AUTOS-006",
-            "knoop_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
+            "node_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.7,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 30,
+            "direction": "receptief",
+            "difficulty_initial": 0.7,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 30,
             "stimulus": "Welk verschil in betekenis geven deze twee zinnen? (a) ὁ στρατηγὸς αὐτὸς ἔρχεται. (b) ὁ αὐτὸς στρατηγὸς ἔρχεται.",
-            "antwoord": [
+            "answer": [
                 "(a) de generaal zelf komt; (b) dezelfde generaal komt",
                 "(a) zelf (predicatief); (b) dezelfde (attributief)",
             ],
             "feedback": "Positie t.o.v. het lidwoord beslist alles. Predicatief (αὐτός buiten lidwoord+subst.) = 'zelf'. Attributief (lidwoord + αὐτός + subst.) = 'dezelfde'.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -424,51 +424,51 @@ def _autos_hem_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-MORF-PRON-AUTOS-007",
-            "knoop_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
+            "node_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.4,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.4,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Vertaal: ὁ δοῦλος ὁρᾷ αὐτόν. Welke functie heeft αὐτόν hier?",
-            "antwoord": [
+            "answer": [
                 "de slaaf ziet hem; αὐτόν = 3e pers. pronomen (hem) in acc.",
                 "αὐτόν = 'hem' (lijdend voorwerp)",
             ],
             "feedback": "In de oblique naamvallen (gen./dat./acc.) vervangt αὐτός het ontbrekende 3e-persoons pronomen: 'hem/haar/het'. Nom. wordt alleen als intensivum gebruikt.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRON-AUTOS-008",
-            "knoop_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
+            "node_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 30,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 30,
             "stimulus": "Vertaal: ὁ πατὴρ δίδωσιν αὐτῷ τὸ βιβλίον. Welke vormen en welke betekenis heeft αὐτῷ?",
-            "antwoord": [
+            "answer": [
                 "dat. sg. m. — 'aan hem'; 'de vader geeft hem het boek'",
                 "αὐτῷ = 'aan hem' (dat. sg.)",
             ],
             "feedback": "αὐτῷ = dativus sg. m./n. — meewerkend voorwerp 'aan hem'. In de oblique naamvallen fungeert αὐτός als 3e-persoons pronomen.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-PRON-AUTOS-009",
-            "knoop_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
+            "node_ids": ["GRC-G-MORF-PRON-AUTOS", "GRC-G-SYNT-PRON-GEBR"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.6,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 30,
+            "direction": "receptief",
+            "difficulty_initial": 0.6,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 30,
             "stimulus": "Vertaal: ἡ μήτηρ φιλεῖ αὐτήν. Wat betekent αὐτήν hier, en waarom niet 'zelf'?",
-            "antwoord": [
+            "answer": [
                 "de moeder houdt van haar; αὐτήν in acc. = 'haar' (geen lidwoord in context → pronomen, geen intensivum)",
                 "αὐτήν = 'haar' (3e pers. pron., acc. sg. vr.)",
             ],
             "feedback": "αὐτός in oblique naamvallen zonder koppeling aan een gezamenlijk substantief = 3e-pers. pronomen. 'Zelf'-lezing vereist dat αὐτός predicatief bij een substantief staat.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -497,16 +497,16 @@ def _autos_parad_part1() -> list[dict]:
         items.append(
             {
                 "id": f"ITEM-GRC-G-MORF-PRON-PARAD-{idx:03d}",
-                "knoop_ids": ["GRC-G-MORF-PRON-PARAD", "GRC-G-MORF-PRON-AUTOS"],
+                "node_ids": ["GRC-G-MORF-PRON-PARAD", "GRC-G-MORF-PRON-AUTOS"],
                 "type": "productie",
-                "richting": "productief",
-                "moeilijkheid_initieel": 0.4,
-                "discriminatie_initieel": 1.3,
-                "verwachte_tijd_sec": 20,
+                "direction": "productief",
+                "difficulty_initial": 0.4,
+                "discrimination_initial": 1.3,
+                "expected_time_sec": 20,
                 "stimulus": f"Geef de {label} van αὐτός.",
-                "antwoord": form,
+                "answer": form,
                 "feedback": f"{label} = {form} ('{nl}'). Uitgangen α/ο-stam, maar let op: gen./dat. sg. vr. eindigt op -ῆς / -ῇ (met iota subscript).",
-                "bron": "handmatig",
+                "source": "handmatig",
             }
         )
     return items
@@ -524,16 +524,16 @@ def _autos_parad_part2() -> list[dict]:
         items.append(
             {
                 "id": f"ITEM-GRC-G-MORF-PRON-PARAD-{idx:03d}",
-                "knoop_ids": ["GRC-G-MORF-PRON-PARAD", "GRC-G-MORF-PRON-AUTOS"],
+                "node_ids": ["GRC-G-MORF-PRON-PARAD", "GRC-G-MORF-PRON-AUTOS"],
                 "type": "productie",
-                "richting": "productief",
-                "moeilijkheid_initieel": diff,
-                "discriminatie_initieel": 1.3,
-                "verwachte_tijd_sec": 20,
+                "direction": "productief",
+                "difficulty_initial": diff,
+                "discrimination_initial": 1.3,
+                "expected_time_sec": 20,
                 "stimulus": f"Geef de {label} van αὐτός.",
-                "antwoord": form,
+                "answer": form,
                 "feedback": f"{label} = {form} ('{nl}'). Let op: nom./acc. pl. onz. is αὐτά (kort -α, geen -ος/-α verwarring met 1e decl.).",
-                "bron": "handmatig",
+                "source": "handmatig",
             }
         )
     return items
@@ -548,35 +548,35 @@ def synt_pron_aanw_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-SYNT-PRON-AANW-001",
-            "knoop_ids": ["GRC-G-SYNT-PRON-AANW"],
+            "node_ids": ["GRC-G-SYNT-PRON-AANW"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 20,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 20,
             "stimulus": "Welke van deze woordvolgordes is correct voor 'deze mens' met οὗτος?",
-            "antwoord": [
+            "answer": [
                 "οὗτος ὁ ἄνθρωπος of ὁ ἄνθρωπος οὗτος",
                 "predicatieve positie: οὗτος staat buiten de lidwoord-substantief-groep",
             ],
             "feedback": "Demonstrativa staan in predicatieve positie: óf vóór het lidwoord (οὗτος ὁ ἄνθρωπος) óf na het substantief (ὁ ἄνθρωπος οὗτος). Nooit *ὁ οὗτος ἄνθρωπος.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-PRON-AANW-002",
-            "knoop_ids": ["GRC-G-SYNT-PRON-AANW"],
+            "node_ids": ["GRC-G-SYNT-PRON-AANW"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.4,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.4,
+            "expected_time_sec": 25,
             "stimulus": "Wat is er fout aan *ἡ ἐκείνη πόλις en hoe verbeter je het?",
-            "antwoord": [
+            "answer": [
                 "demonstrativa moeten predicatief staan: ἐκείνη ἡ πόλις of ἡ πόλις ἐκείνη",
                 "verkeerde positie; correct: ἐκείνη ἡ πόλις",
             ],
             "feedback": "*ἡ ἐκείνη πόλις plaatst het demonstratief attributief — fout. Demonstrativa staan altijd predicatief: ἐκείνη ἡ πόλις ('die stad').",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -590,35 +590,35 @@ def synt_pron_gebr_items() -> list[dict]:
     return [
         {
             "id": "ITEM-GRC-G-SYNT-PRON-GEBR-001",
-            "knoop_ids": ["GRC-G-SYNT-PRON-GEBR"],
+            "node_ids": ["GRC-G-SYNT-PRON-GEBR"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.2,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": 0.2,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 15,
             "stimulus": "Waarom is een persoonlijk voornaamwoord als onderwerp meestal overbodig in het Grieks?",
-            "antwoord": [
+            "answer": [
                 "de persoonsuitgang van het werkwoord drukt de persoon al uit",
                 "uitgangen zijn expliciet; vnw. alleen bij nadruk",
             ],
             "feedback": "De werkwoordsuitgangen -ω, -εις, -ει, -ομεν, -ετε, -ουσι(ν) wijzen de persoon al ondubbelzinnig aan. Het vnw. voegt je alleen toe bij nadruk of contrast.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-PRON-GEBR-002",
-            "knoop_ids": ["GRC-G-SYNT-PRON-GEBR"],
+            "node_ids": ["GRC-G-SYNT-PRON-GEBR"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.4,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.4,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Wat is het verschil in gebruik tussen ἐμοῦ en μου?",
-            "antwoord": [
+            "answer": [
                 "ἐμοῦ = nadrukkelijk/aan begin van zin; μου = enclitisch, zonder nadruk",
                 "ἐμοῦ met klemtoon, μου als enclisis",
             ],
             "feedback": "Nadrukkelijk ἐμοῦ (eigen accent) gebruik je bij contrast of na een voorzetsel. Enclitisch μου leunt op het voorgaande woord: 'ὁ πατήρ μου' (mijn vader).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -643,10 +643,10 @@ def collect_all() -> dict[str, list[dict]]:
 
     primary_map: dict[str, list[dict]] = {}
     for item in all_items:
-        for key in ("stimulus", "antwoord", "feedback", "verwacht_resultaat"):
+        for key in ("stimulus", "antwoord", "feedback", "expected_result"):
             if key in item and item[key] is not None:
                 item[key] = nfc(item[key])
-        primary_map.setdefault(item["knoop_ids"][0], []).append(item)
+        primary_map.setdefault(item["node_ids"][0], []).append(item)
     return primary_map
 
 
@@ -663,7 +663,7 @@ def add_items_to_json(json_path: Path, items_by_node: dict[str, list[dict]]) -> 
         data = json.load(f)
 
     added = 0
-    for node in data["knopen"]:
+    for node in data["nodes"]:
         if node["id"] in items_by_node:
             existing_ids = {item["id"] for item in node.get("items", [])}
             new_items = [

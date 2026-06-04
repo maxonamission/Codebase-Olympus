@@ -41,8 +41,8 @@ def main() -> None:
     per_subcat_knopen: dict[str, int] = Counter()
 
     for src in (alfa, gram):
-        for k in src["knopen"]:
-            if k["taal"] != "grc" or k["type"] != "G":
+        for k in src["nodes"]:
+            if k["language"] != "grc" or k["type"] != "G":
                 continue
             subcat = _subcategory(k["id"])
             per_subcat_knopen[subcat] += 1
@@ -64,10 +64,10 @@ def main() -> None:
 
     total = len(all_items)
     types = Counter(i["type"] for i in all_items)
-    richt = Counter(i["richting"] for i in all_items)
-    moeil = [i["moeilijkheid_initieel"] for i in all_items]
-    discr = [i["discriminatie_initieel"] for i in all_items]
-    tijden = [i["verwachte_tijd_sec"] for i in all_items]
+    richt = Counter(i["direction"] for i in all_items)
+    moeil = [i["difficulty_initial"] for i in all_items]
+    discr = [i["discrimination_initial"] for i in all_items]
+    tijden = [i["expected_time_sec"] for i in all_items]
 
     ok = True
     print("=" * 60)
@@ -75,13 +75,13 @@ def main() -> None:
     print("=" * 60)
 
     print("\n1. DEKKING")
-    print(f"   GRC-G knopen met items:    {len(knopen_met)}")
-    print(f"   GRC-G knopen zonder items: {len(knopen_zonder)}")
+    print(f"   GRC-G nodes met items:    {len(knopen_met)}")
+    print(f"   GRC-G nodes zonder items: {len(knopen_zonder)}")
     print(f"   Totaal items:              {total}")
     if knopen_met:
         print(f"   Gem. items/node:          {total / len(knopen_met):.1f}")
 
-        # Alfabet-letter-knopen hebben bij ontwerp 1 offline-schrijven item.
+        # Alfabet-letter-nodes hebben bij ontwerp 1 offline-schrijven item.
         def _is_letter_drill(kid: str) -> bool:
             return kid.startswith("GRC-G-FONL-ALFA-") and kid.split("-")[-1] not in {
                 "INTRO",
@@ -93,12 +93,12 @@ def main() -> None:
 
         under_two = [(kid, n) for kid, n in knopen_met if n < 2 and not _is_letter_drill(kid)]
         if under_two:
-            print(f"   ⚠ {len(under_two)} niet-letter-knopen met < 2 items:")
+            print(f"   ⚠ {len(under_two)} niet-letter-nodes met < 2 items:")
             for kid, n in under_two[:5]:
                 print(f"      {kid} ({n})")
         else:
             print(
-                "   ✓ Alle niet-letter-knopen >= 2 items "
+                "   ✓ Alle niet-letter-nodes >= 2 items "
                 "(alfabet-letters hebben bij ontwerp 1 schrijf-drill item)"
             )
 
@@ -108,7 +108,7 @@ def main() -> None:
             print(f"      {kid}")
         ok = False
     else:
-        print("   ✓ Alle GRC-G-knopen hebben items")
+        print("   ✓ Alle GRC-G-nodes hebben items")
 
     print("\n2. DEKKING PER SUBCATEGORIE (MORF / SYNT / FONL)")
     for sub in sorted(per_subcat_knopen):
@@ -116,7 +116,7 @@ def main() -> None:
         k_with = sum(1 for kid, _ in knopen_met if _subcategory(kid) == sub)
         i_total = per_subcat_items[sub]
         pct = 100 * k_with / k_total if k_total else 0
-        print(f"   {sub:6s}: {k_with:3d}/{k_total:3d} knopen ({pct:5.1f}%) · {i_total} items")
+        print(f"   {sub:6s}: {k_with:3d}/{k_total:3d} nodes ({pct:5.1f}%) · {i_total} items")
 
     print("\n3. OEFENTYPE-MIX")
     for t, c in types.most_common():

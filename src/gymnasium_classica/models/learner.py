@@ -59,7 +59,7 @@ class ItemResponse(BaseModel):
     node_id: str = Field(
         description="Knoop waartoe dit antwoord hoort; maakt de respons zelf-beschrijvend voor platte analyse en export.",
     )
-    richting: str | None = Field(
+    direction: str | None = Field(
         description=(
             "Direction (Direction-value: 'receptief'/'productief') van het item, "
             "gesnapshot op moment van antwoorden. None bij self-assessment zonder item."

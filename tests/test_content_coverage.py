@@ -1,11 +1,11 @@
 """Tests voor scripts/content_coverage.py — dekkingsrapportage per node.
 
 Doel: regressiecheck op de content-pipeline. Als LAT-G onder de drempel
-zakt (bijv. doordat nieuwe knopen worden toegevoegd zonder items), faalt
+zakt (bijv. doordat nieuwe nodes worden toegevoegd zonder items), faalt
 deze test en blokkeert de CI.
 
 Drempels zijn conservatief gekozen op basis van de huidige staat van de
-graph (april 2026, ~800 knopen). Ze zijn bewust láger dan de feitelijke
+graph (april 2026, ~800 nodes). Ze zijn bewust láger dan de feitelijke
 dekking, zodat kleine schommelingen geen vals alarm geven maar echte
 regressies wél zichtbaar worden.
 """
@@ -52,16 +52,16 @@ def coverage_report():
 class TestPerKnoopFields:
     def test_every_node_has_four_flags(self, coverage_report):
         """Elke node krijgt has_items / has_content / has_audio / in_passage."""
-        assert len(coverage_report.knopen) > 0
-        for k in coverage_report.knopen:
+        assert len(coverage_report.nodes) > 0
+        for k in coverage_report.nodes:
             assert isinstance(k.has_items, bool)
             assert isinstance(k.has_content, bool)
             assert isinstance(k.has_audio, bool)
             assert isinstance(k.in_passage, bool)
 
     def test_audio_only_true_for_vocabulaire(self, coverage_report):
-        """has_audio mag alleen True zijn voor V-knopen."""
-        for k in coverage_report.knopen:
+        """has_audio mag alleen True zijn voor V-nodes."""
+        for k in coverage_report.nodes:
             if k.has_audio:
                 assert k.type == "V", f"Niet-V node {k.id} heeft has_audio=True"
 
@@ -70,13 +70,13 @@ class TestSummaryBuckets:
     def test_summary_has_bucket_per_taal_type(self, coverage_report):
         """Er moet minimaal een LAT-G, LAT-V, GRC-G en GRC-V bucket zijn."""
         expected = {("lat", "G"), ("lat", "V"), ("grc", "G"), ("grc", "V")}
-        actual = {(s.taal, s.type) for s in coverage_report.summaries}
+        actual = {(s.language, s.type) for s in coverage_report.summaries}
         assert expected.issubset(actual)
 
     def test_totals_match_node_count(self, coverage_report):
-        """Som van alle bucket-totalen gelijk aan aantal knopen."""
+        """Som van alle bucket-totalen gelijk aan aantal nodes."""
         total = sum(s.total for s in coverage_report.summaries)
-        assert total == len(coverage_report.knopen)
+        assert total == len(coverage_report.nodes)
 
 
 class TestConservativeThresholds:
@@ -121,10 +121,10 @@ class TestConservativeThresholds:
 class TestJsonOutput:
     def test_report_to_dict_is_json_serialisable(self, coverage_report):
         d = report_to_dict(coverage_report)
-        assert "knopen" in d and "summaries" in d
+        assert "nodes" in d and "summaries" in d
         dumped = json.dumps(d, ensure_ascii=False)
         loaded = json.loads(dumped)
-        assert len(loaded["knopen"]) == len(coverage_report.knopen)
+        assert len(loaded["nodes"]) == len(coverage_report.nodes)
         assert len(loaded["summaries"]) == len(coverage_report.summaries)
 
     def test_cli_output_flag_writes_file(self, tmp_path):
@@ -134,5 +134,5 @@ class TestJsonOutput:
         assert exit_code == 0
         assert output.exists()
         payload = json.loads(output.read_text(encoding="utf-8"))
-        assert payload["knopen"], "knopen-lijst is leeg"
+        assert payload["nodes"], "nodes-lijst is leeg"
         assert payload["summaries"], "summaries-lijst is leeg"

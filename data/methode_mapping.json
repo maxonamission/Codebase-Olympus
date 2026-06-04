@@ -3,11 +3,11 @@
   "methoden": {
     "fortuna": {
       "naam": "Fortuna",
-      "taal": "lat",
+      "language": "lat",
       "hoofdstukken": {
         "1": {
-          "beschrijving": "Introductie naamvallen, 1e declinatie nominativus/accusativus",
-          "knoop_ids": [
+          "description": "Introductie naamvallen, 1e declinatie nominativus/accusativus",
+          "node_ids": [
             "LAT-G-MORF-NAAMVAL-INTRO",
             "LAT-G-MORF-NUMERUS-INTRO",
             "LAT-G-MORF-GENUS-INTRO",
@@ -21,8 +21,8 @@
           ]
         },
         "2": {
-          "beschrijving": "1e declinatie compleet, presens 1e conjugatie",
-          "knoop_ids": [
+          "description": "1e declinatie compleet, presens 1e conjugatie",
+          "node_ids": [
             "LAT-G-MORF-GEN-D1",
             "LAT-G-MORF-DAT-D1",
             "LAT-G-MORF-ABL-D1",
@@ -37,8 +37,8 @@
           ]
         },
         "3": {
-          "beschrijving": "2e declinatie, presens 2e conjugatie, esse",
-          "knoop_ids": [
+          "description": "2e declinatie, presens 2e conjugatie, esse",
+          "node_ids": [
             "LAT-G-MORF-DECL2-INTRO",
             "LAT-G-MORF-NOM-D2",
             "LAT-G-MORF-GEN-D2",
@@ -52,8 +52,8 @@
           ]
         },
         "4": {
-          "beschrijving": "3e/4e conjugatie presens, bijvoeglijke naamwoorden, voorzetsels",
-          "knoop_ids": [
+          "description": "3e/4e conjugatie presens, bijvoeglijke naamwoorden, voorzetsels",
+          "node_ids": [
             "LAT-G-MORF-CONJ3-INTRO",
             "LAT-G-MORF-CONJ4-INTRO",
             "LAT-G-MORF-PRAES-C3-ACT",
@@ -67,8 +67,8 @@
           ]
         },
         "5": {
-          "beschrijving": "Imperfectum, woordvolgorde, vraagzinnen, 3e declinatie intro",
-          "knoop_ids": [
+          "description": "Imperfectum, woordvolgorde, vraagzinnen, 3e declinatie intro",
+          "node_ids": [
             "LAT-G-MORF-IMPF-INTRO",
             "LAT-G-MORF-IMPF-C1C2-ACT",
             "LAT-G-MORF-IMPF-C3C4-ACT",
@@ -84,11 +84,11 @@
     },
     "spqr": {
       "naam": "SPQR",
-      "taal": "lat",
+      "language": "lat",
       "hoofdstukken": {
         "1": {
-          "beschrijving": "Naamvallen intro, 1e en 2e declinatie nominativus",
-          "knoop_ids": [
+          "description": "Naamvallen intro, 1e en 2e declinatie nominativus",
+          "node_ids": [
             "LAT-G-MORF-NAAMVAL-INTRO",
             "LAT-G-MORF-NUMERUS-INTRO",
             "LAT-G-MORF-GENUS-INTRO",
@@ -105,7 +105,7 @@
     },
     "pallas": {
       "naam": "Pallas",
-      "taal": "grc",
+      "language": "grc",
       "hoofdstukken": {
         "_comment": "Wordt gevuld wanneer de Griekse grammaticaknopen beschikbaar zijn (fase 1b/1c)."
       }

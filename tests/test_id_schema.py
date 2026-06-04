@@ -49,19 +49,19 @@ class TestParseKnoopId:
 
     def test_parse_grammar_id(self):
         result = parse_node_id("LAT-G-MORF-NOM-D1")
-        assert result["taal"] == "LAT"
+        assert result["language"] == "LAT"
         assert result["type"] == "G"
         assert result["segments"] == ["MORF", "NOM", "D1"]
 
     def test_parse_vocab_id(self):
         result = parse_node_id("LAT-V-F01-ESSE")
-        assert result["taal"] == "LAT"
+        assert result["language"] == "LAT"
         assert result["type"] == "V"
         assert result["segments"] == ["F01", "ESSE"]
 
     def test_parse_culture_id(self):
         result = parse_node_id("SHA-C-FIL-STOA")
-        assert result["taal"] == "SHA"
+        assert result["language"] == "SHA"
         assert result["type"] == "C"
         assert result["segments"] == ["FIL", "STOA"]
 

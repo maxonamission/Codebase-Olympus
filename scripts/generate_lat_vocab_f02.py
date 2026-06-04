@@ -102,15 +102,15 @@ def make_node(w: dict, band: str) -> dict:
     return {
         "id": f"LAT-V-{band}-{w['id']}",
         "type": "V",
-        "taal": TAAL,
-        "titel_nl": make_titel(w),
-        "titel_terminologie": None,
-        "beschrijving": make_beschrijving(w, band),
-        "bloom_niveau": "kennis",
-        "fase": "onderbouw_1",
-        "toetsbaar": True,
-        "pensum_jaren": [],
-        "semantisch_cluster": w["cl"],
+        "language": TAAL,
+        "title_nl": make_titel(w),
+        "title_terminology": None,
+        "description": make_beschrijving(w, band),
+        "bloom_level": "kennis",
+        "phase": "onderbouw_1",
+        "testable": True,
+        "pensum_years": [],
+        "semantic_cluster": w["cl"],
         "items": [],
     }
 
@@ -133,7 +133,7 @@ def make_edge(w: dict, band: str) -> dict | None:
 def main() -> None:
     # Load existing data
     existing = json.loads(OUTPUT.read_text("utf-8"))
-    existing_ids = {k["id"] for k in existing["knopen"]}
+    existing_ids = {k["id"] for k in existing["nodes"]}
 
     # Generate new nodes
     words = json.loads(WORDS.read_text("utf-8"))
@@ -145,7 +145,7 @@ def main() -> None:
         assert k["id"] not in existing_ids, f"Duplicate ID: {k['id']}"
 
     # Merge
-    existing["knopen"].extend(new_knopen)
+    existing["nodes"].extend(new_knopen)
     existing["edges"].extend(new_edges)
 
     # Validate via Pydantic
@@ -158,13 +158,13 @@ def main() -> None:
     # Summary
     clusters = {}
     for k in new_knopen:
-        c = k.get("semantisch_cluster") or "(geen)"
+        c = k.get("semantic_cluster") or "(geen)"
         clusters[c] = clusters.get(c, 0) + 1
 
-    total_k = len(existing["knopen"])
+    total_k = len(existing["nodes"])
     total_e = len(existing["edges"])
-    print(f"Band {BAND}: {len(new_knopen)} nieuwe knopen, {len(new_edges)} nieuwe edges")
-    print(f"Totaal in bestand: {total_k} knopen, {total_e} edges")
+    print(f"Band {BAND}: {len(new_knopen)} nieuwe nodes, {len(new_edges)} nieuwe edges")
+    print(f"Totaal in bestand: {total_k} nodes, {total_e} edges")
     print(f"Output: {OUTPUT}")
     print("Nieuwe clusters:")
     for c, n in sorted(clusters.items()):

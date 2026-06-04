@@ -21,28 +21,28 @@ from gymnasium_classica.models.learner import LearnerModel, ResponseType
 def _build_graph_with_gradeable_item() -> dict:
     """A tiny graph with one root V-node that has a single productie-item."""
     return {
-        "knopen": [
+        "nodes": [
             {
                 "id": "LAT-V-F01-TEST",
                 "type": "V",
-                "taal": "lat",
-                "titel_nl": "sum, esse — zijn",
-                "beschrijving": "Het werkwoord 'zijn'.",
-                "bloom_niveau": "kennis",
-                "fase": "onderbouw_1",
+                "language": "lat",
+                "title_nl": "sum, esse — zijn",
+                "description": "Het werkwoord 'zijn'.",
+                "bloom_level": "kennis",
+                "phase": "onderbouw_1",
                 "items": [
                     {
                         "id": "ITEM-LAT-V-F01-TEST-001",
-                        "knoop_ids": ["LAT-V-F01-TEST"],
+                        "node_ids": ["LAT-V-F01-TEST"],
                         "type": "productie",
-                        "richting": "productief",
-                        "moeilijkheid_initieel": 0.0,
-                        "discriminatie_initieel": 1.0,
-                        "verwachte_tijd_sec": 10,
+                        "direction": "productief",
+                        "difficulty_initial": 0.0,
+                        "discrimination_initial": 1.0,
+                        "expected_time_sec": 10,
                         "stimulus": "Vertaal 'zijn' naar het Latijn.",
-                        "antwoord": "sum",
+                        "answer": "sum",
                         "feedback": "sum betekent 'zijn'.",
-                        "bron": "handmatig",
+                        "source": "handmatig",
                     }
                 ],
             }
@@ -85,7 +85,7 @@ class TestAnswerTextGrading:
     def test_slow_correct_detected_from_response_time(self, session_and_manager):
         manager, session_id, _learner, now = session_and_manager
 
-        # Item.verwachte_tijd_sec = 10 → threshold = 15_000 ms.
+        # Item.expected_time_sec = 10 → threshold = 15_000 ms.
         result = manager.submit_answer(
             session_id,
             response=None,

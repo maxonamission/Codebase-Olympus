@@ -26,8 +26,8 @@ def _question_to_response(q: IntakeQuestion | None) -> IntakeQuestionResponse | 
         return None
     return IntakeQuestionResponse(
         node_id=q.node_id,
-        titel=q.titel,
-        beschrijving=q.beschrijving,
+        title=q.title,
+        description=q.description,
         questions_asked=q.questions_asked,
         max_questions=q.max_questions,
     )

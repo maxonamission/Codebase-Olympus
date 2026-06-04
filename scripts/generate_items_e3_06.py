@@ -2,7 +2,7 @@
 """Generate exercise items for E3-06: GRC adjectieven.
 
 Target: data/graph/grc_grammatica_leerjaar1.json
-Scope:  8 knopen rondom adjectieven: ADJ-INTRO, ADJ-D12-3U, ADJ-D12-2U,
+Scope:  8 nodes rondom adjectieven: ADJ-INTRO, ADJ-D12-3U, ADJ-D12-2U,
         ADJ-D3, ADJ-MEGAS, ADJ-VERBG, SYNT-ADJ-CONGR, SYNT-ADJ-ATTRIB.
 
 Modelwoorden: ἀγαθός en καλός (α/ο-stam drie uitgangen), βάρβαρος (twee
@@ -38,7 +38,7 @@ def nfc(value):
 
 
 # ---------------------------------------------------------------------------
-# MORF-knopen
+# MORF-nodes
 # ---------------------------------------------------------------------------
 
 
@@ -49,223 +49,223 @@ def morf_items() -> dict[str, list[dict]]:
     items["GRC-G-MORF-ADJ-INTRO"] = [
         {
             "id": "ITEM-GRC-G-MORF-ADJ-INTRO-001",
-            "knoop_ids": ["GRC-G-MORF-ADJ-INTRO"],
+            "node_ids": ["GRC-G-MORF-ADJ-INTRO"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.5,
-            "discriminatie_initieel": 1.0,
-            "verwachte_tijd_sec": 12,
+            "direction": "receptief",
+            "difficulty_initial": -0.5,
+            "discrimination_initial": 1.0,
+            "expected_time_sec": 12,
             "stimulus": "Volgens welke drie categorieën moet een Grieks adjectief met zijn substantief overeenstemmen?",
-            "antwoord": [
+            "answer": [
                 "genus, numerus en naamval",
                 "geslacht, getal en naamval",
             ],
             "feedback": "Congruentie: adjectief en substantief delen genus, numerus én naamval. Zes vormen per adjectief (3 genera × 2 numeri) per naamval.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-ADJ-INTRO-002",
-            "knoop_ids": ["GRC-G-MORF-ADJ-INTRO"],
+            "node_ids": ["GRC-G-MORF-ADJ-INTRO"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.2,
-            "discriminatie_initieel": 1.1,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.2,
+            "discrimination_initial": 1.1,
+            "expected_time_sec": 15,
             "stimulus": "Welke twee grote adjectief-groepen kent het Grieks qua stamtype?",
-            "antwoord": [
+            "answer": [
                 "α/ο-stammen (1e/2e decl.) en medeklinkerstammen (3e decl.)",
                 "α/ο-stam en medeklinkerstam",
             ],
             "feedback": "α/ο-stammen volgen 1e/2e decl. (ἀγαθός, -ή, -όν). Medeklinkerstammen volgen de 3e decl. (σώφρων, ἀληθής).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
     items["GRC-G-MORF-ADJ-D12-3U"] = [
         {
             "id": "ITEM-GRC-G-MORF-ADJ-D12-3U-001",
-            "knoop_ids": ["GRC-G-MORF-ADJ-D12-3U"],
+            "node_ids": ["GRC-G-MORF-ADJ-D12-3U"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.1,
-            "discriminatie_initieel": 1.1,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.1,
+            "discrimination_initial": 1.1,
+            "expected_time_sec": 15,
             "stimulus": "Welke declinaties volgen de drie vormen van ἀγαθός, -ή, -όν?",
-            "antwoord": [
+            "answer": [
                 "m./n. volgen de 2e declinatie, f. volgt de 1e declinatie",
                 "m. 2e decl., f. 1e decl., n. 2e decl.",
             ],
             "feedback": "ἀγαθός (m.) en ἀγαθόν (n.) volgen de 2e decl. (ο-stam); ἀγαθή (f.) volgt de 1e decl. (η-stam).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-ADJ-D12-3U-002",
-            "knoop_ids": ["GRC-G-MORF-ADJ-D12-3U", "GRC-G-SYNT-ADJ-CONGR"],
+            "node_ids": ["GRC-G-MORF-ADJ-D12-3U", "GRC-G-SYNT-ADJ-CONGR"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "productief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Geef de vorm van ἀγαθός die congrueert met τὴν χώραν.",
-            "antwoord": "ἀγαθήν",
+            "answer": "ἀγαθήν",
             "feedback": "τὴν χώραν is acc. sg. f. → ἀγαθήν (acc. sg. f.). De f. van ἀγαθός volgt de 1e decl. (α/η-stam).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-ADJ-D12-3U-003",
-            "knoop_ids": ["GRC-G-MORF-ADJ-D12-3U", "GRC-G-SYNT-ADJ-CONGR"],
+            "node_ids": ["GRC-G-MORF-ADJ-D12-3U", "GRC-G-SYNT-ADJ-CONGR"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "productief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Geef de vorm van καλός die congrueert met τοῖς ἀνθρώποις.",
-            "antwoord": "καλοῖς",
+            "answer": "καλοῖς",
             "feedback": "τοῖς ἀνθρώποις is dat. pl. m. → καλοῖς (dat. pl. m., 2e decl.). α/ο-stam adj. volgt de 2e decl. voor m./n.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
     items["GRC-G-MORF-ADJ-D12-2U"] = [
         {
             "id": "ITEM-GRC-G-MORF-ADJ-D12-2U-001",
-            "knoop_ids": ["GRC-G-MORF-ADJ-D12-2U"],
+            "node_ids": ["GRC-G-MORF-ADJ-D12-2U"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.1,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": 0.1,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 15,
             "stimulus": "Wat kenmerkt een adjectief als βάρβαρος, -ον met 'twee uitgangen'?",
-            "antwoord": [
+            "answer": [
                 "m. en f. delen dezelfde vorm (2e decl.); n. heeft aparte vorm op -ον",
                 "m./f. identiek, n. apart",
             ],
             "feedback": "Bij βάρβαρος, -ον gebruikt het adjectief de 2e decl. voor m. én f.: ἡ βάρβαρος γυνή. De n. heeft wel een aparte vorm (βάρβαρον).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-ADJ-D12-2U-002",
-            "knoop_ids": ["GRC-G-MORF-ADJ-D12-2U", "GRC-G-SYNT-ADJ-CONGR"],
+            "node_ids": ["GRC-G-MORF-ADJ-D12-2U", "GRC-G-SYNT-ADJ-CONGR"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "productief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Geef de vorm van βάρβαρος die congrueert met ἡ γυνή.",
-            "antwoord": "βάρβαρος",
+            "answer": "βάρβαρος",
             "feedback": "ἡ γυνή is nom. sg. f. → βάρβαρος. Bij 'twee uitgangen' deelt het f. de m.-vorm van de 2e decl., ongeacht het genus van het substantief.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
     items["GRC-G-MORF-ADJ-D3"] = [
         {
             "id": "ITEM-GRC-G-MORF-ADJ-D3-001",
-            "knoop_ids": ["GRC-G-MORF-ADJ-D3"],
+            "node_ids": ["GRC-G-MORF-ADJ-D3"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 15,
             "stimulus": "Volgens welke declinatie worden σώφρων en ἀληθής verbogen?",
-            "antwoord": [
+            "answer": [
                 "de 3e declinatie (medeklinkerstam)",
                 "3e decl.",
             ],
             "feedback": "σώφρων (stam σωφρον-, ν-stam) en ἀληθής (stam ἀληθεσ-, σ-stam) volgen de 3e decl. m./f. identiek, n. apart.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-ADJ-D3-002",
-            "knoop_ids": ["GRC-G-MORF-ADJ-D3", "GRC-G-SYNT-ADJ-CONGR"],
+            "node_ids": ["GRC-G-MORF-ADJ-D3", "GRC-G-SYNT-ADJ-CONGR"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.7,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 30,
+            "direction": "productief",
+            "difficulty_initial": 0.7,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 30,
             "stimulus": "Geef de vorm van σώφρων die congrueert met τὸν ἄνθρωπον.",
-            "antwoord": "σώφρονα",
+            "answer": "σώφρονα",
             "feedback": "τὸν ἄνθρωπον is acc. sg. m. → σώφρονα (acc. sg. m., stam σωφρον- + -α). Let op: -α, niet -ον — de 3e decl. is anders dan de 2e.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-ADJ-D3-003",
-            "knoop_ids": ["GRC-G-MORF-ADJ-D3"],
+            "node_ids": ["GRC-G-MORF-ADJ-D3"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.6,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.6,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Wat is de nominativus sg. neutrum van σώφρων?",
-            "antwoord": "σῶφρον",
+            "answer": "σῶφρον",
             "feedback": "Nom. sg. n. = σῶφρον (kale stam σωφρον-, accent naar voren geschoven omdat neut. korter is dan de m.). De m. heeft klinkerverlenging: σώφρων.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
     items["GRC-G-MORF-ADJ-MEGAS"] = [
         {
             "id": "ITEM-GRC-G-MORF-ADJ-MEGAS-001",
-            "knoop_ids": ["GRC-G-MORF-ADJ-MEGAS"],
+            "node_ids": ["GRC-G-MORF-ADJ-MEGAS"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.4,
-            "discriminatie_initieel": 1.2,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": 0.4,
+            "discrimination_initial": 1.2,
+            "expected_time_sec": 15,
             "stimulus": "Wat maakt μέγας en πολύς onregelmatig in hun verbuiging?",
-            "antwoord": [
+            "answer": [
                 "nom./acc. sg. m./n. komen van een korte stam (μεγα-/πολυ-), de rest van een uitgebreide stam (μεγαλ-/πολλ-)",
                 "twee stammen door elkaar: korte én uitgebreide",
             ],
             "feedback": "μέγας en πολύς hebben twee stammen: μέγας/μέγα (m./n. nom./acc. sg.) maar μεγάλη, μεγάλου,... vanaf de rest. Πολύς/πολύ vs. πολλή, πολλοῦ.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-MORF-ADJ-MEGAS-002",
-            "knoop_ids": ["GRC-G-MORF-ADJ-MEGAS", "GRC-G-SYNT-ADJ-CONGR"],
+            "node_ids": ["GRC-G-MORF-ADJ-MEGAS", "GRC-G-SYNT-ADJ-CONGR"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.7,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 30,
+            "direction": "productief",
+            "difficulty_initial": 0.7,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 30,
             "stimulus": "Geef de vorm van μέγας die congrueert met τῆς χώρας.",
-            "antwoord": "μεγάλης",
+            "answer": "μεγάλης",
             "feedback": "τῆς χώρας is gen. sg. f. → μεγάλης. Buiten nom./acc. sg. m./n. wordt de uitgebreide stam μεγαλ- gebruikt, hier met 1e-decl.-uitgang.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
     items["GRC-G-MORF-ADJ-VERBG"] = [
         {
             "id": "ITEM-GRC-G-MORF-ADJ-VERBG-001",
-            "knoop_ids": ["GRC-G-MORF-ADJ-VERBG"],
+            "node_ids": ["GRC-G-MORF-ADJ-VERBG"],
             "type": "offline_schrijven",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.7,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 90,
+            "direction": "productief",
+            "difficulty_initial": 0.7,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 90,
             "stimulus": "Schrijf het volledige paradigma van ἀγαθός, -ή, -όν op (3 genera × 2 numeri × 5 naamvallen) en vergelijk met je grammaticaboek.",
-            "antwoord": "m. volgens 2e decl. (ἀγαθός, -οῦ, -ῷ, -όν, -έ | -οί, -ῶν, -οῖς, -ούς, -οί); f. volgens 1e decl. η-stam (ἀγαθή, -ῆς, -ῇ, -ήν, -ή | -αί, -ῶν, -αῖς, -άς, -αί); n. volgens 2e decl. (ἀγαθόν, -οῦ, -ῷ, -όν, -όν | -ά, -ῶν, -οῖς, -ά, -ά).",
+            "answer": "m. volgens 2e decl. (ἀγαθός, -οῦ, -ῷ, -όν, -έ | -οί, -ῶν, -οῖς, -ούς, -οί); f. volgens 1e decl. η-stam (ἀγαθή, -ῆς, -ῇ, -ήν, -ή | -αί, -ῶν, -αῖς, -άς, -αί); n. volgens 2e decl. (ἀγαθόν, -οῦ, -ῷ, -όν, -όν | -ά, -ῶν, -οῖς, -ά, -ά).",
             "feedback": "30 vormen. Kernregel: m./n. = 2e decl., f. = 1e decl. η-stam. Voc. sg. m. op -έ, n. identiek aan nom.",
-            "bron": "handmatig",
-            "verificatie_methode": "self_report",
-            "verwacht_resultaat": "Volledige paradigma-tabel van ἀγαθός met correcte accenten, inclusief voc. sg. m. ἀγαθέ.",
+            "source": "handmatig",
+            "verification_method": "self_report",
+            "expected_result": "Volledige paradigma-tabel van ἀγαθός met correcte accenten, inclusief voc. sg. m. ἀγαθέ.",
         },
         {
             "id": "ITEM-GRC-G-MORF-ADJ-VERBG-002",
-            "knoop_ids": ["GRC-G-MORF-ADJ-VERBG"],
+            "node_ids": ["GRC-G-MORF-ADJ-VERBG"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.6,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.6,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Welke naamval, getal en genus heeft καλῶν?",
-            "antwoord": [
+            "answer": [
                 "genitivus pluralis, alle drie genera",
                 "gen. pl. (m./f./n.)",
             ],
             "feedback": "καλῶν is gen. pl. voor alle drie genera. In gen. pl. vallen m., f. en n. samen op -ῶν; alleen context beslist welk substantief erbij hoort.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -273,7 +273,7 @@ def morf_items() -> dict[str, list[dict]]:
 
 
 # ---------------------------------------------------------------------------
-# SYNT-knopen — congruentie (6) + attributief/praedicatief (5)
+# SYNT-nodes — congruentie (6) + attributief/praedicatief (5)
 # ---------------------------------------------------------------------------
 
 
@@ -283,164 +283,164 @@ def synt_items() -> dict[str, list[dict]]:
     items["GRC-G-SYNT-ADJ-CONGR"] = [
         {
             "id": "ITEM-GRC-G-SYNT-ADJ-CONGR-001",
-            "knoop_ids": ["GRC-G-SYNT-ADJ-CONGR"],
+            "node_ids": ["GRC-G-SYNT-ADJ-CONGR"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.3,
-            "discriminatie_initieel": 1.1,
-            "verwachte_tijd_sec": 12,
+            "direction": "receptief",
+            "difficulty_initial": -0.3,
+            "discrimination_initial": 1.1,
+            "expected_time_sec": 12,
             "stimulus": "Een Grieks adjectief congrueert met zijn substantief in welke drie categorieën?",
-            "antwoord": [
+            "answer": [
                 "genus, numerus, naamval",
                 "geslacht, getal, casus",
             ],
             "feedback": "Congruentie gaat altijd over drie dimensies: genus (m./f./n.), numerus (sg./pl.) en naamval (nom./gen./dat./acc./voc.).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ADJ-CONGR-002",
-            "knoop_ids": ["GRC-G-SYNT-ADJ-CONGR"],
+            "node_ids": ["GRC-G-SYNT-ADJ-CONGR"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "productief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Geef de vorm van ἀγαθός die congrueert met τοῦ δώρου.",
-            "antwoord": "ἀγαθοῦ",
+            "answer": "ἀγαθοῦ",
             "feedback": "τοῦ δώρου is gen. sg. n. → ἀγαθοῦ (gen. sg. n. = m.-vorm in 2e decl.). 'Van het goede geschenk'.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ADJ-CONGR-003",
-            "knoop_ids": ["GRC-G-SYNT-ADJ-CONGR"],
+            "node_ids": ["GRC-G-SYNT-ADJ-CONGR"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "productief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Geef de vorm van καλός die congrueert met ταῖς χώραις.",
-            "antwoord": "καλαῖς",
+            "answer": "καλαῖς",
             "feedback": "ταῖς χώραις is dat. pl. f. → καλαῖς (dat. pl. f., 1e decl.). α/ο-stam adj. volgt voor f. de 1e decl.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ADJ-CONGR-004",
-            "knoop_ids": ["GRC-G-SYNT-ADJ-CONGR"],
+            "node_ids": ["GRC-G-SYNT-ADJ-CONGR"],
             "type": "productie",
-            "richting": "productief",
-            "moeilijkheid_initieel": 0.6,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "productief",
+            "difficulty_initial": 0.6,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Geef de vorm van καλός die congrueert met τὰ δῶρα.",
-            "antwoord": "καλά",
+            "answer": "καλά",
             "feedback": "τὰ δῶρα is nom./acc. pl. n. → καλά (nom./acc. pl. n., 2e decl.). Neutrum pl. op -α voor zowel adjectief als substantief.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ADJ-CONGR-005",
-            "knoop_ids": ["GRC-G-SYNT-ADJ-CONGR"],
+            "node_ids": ["GRC-G-SYNT-ADJ-CONGR"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.5,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.5,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "In 'ὁ ἀγαθὸς στρατιώτης' — welke naamval, getal en genus delen adjectief en substantief?",
-            "antwoord": [
+            "answer": [
                 "nominativus singularis masculinum",
                 "nom. sg. m.",
             ],
             "feedback": "ἀγαθός en στρατιώτης zijn beide nom. sg. m. Het lidwoord ὁ bevestigt dat: alle drie delen deze drie categorieën.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ADJ-CONGR-006",
-            "knoop_ids": ["GRC-G-SYNT-ADJ-CONGR"],
+            "node_ids": ["GRC-G-SYNT-ADJ-CONGR"],
             "type": "analyse",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.6,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.6,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Is 'ὁ σώφρων ἄνθρωπος καλά λέγει' grammaticaal correct qua congruentie tussen σώφρων en ἄνθρωπος?",
-            "antwoord": [
+            "answer": [
                 "ja, beide nom. sg. m.",
                 "ja",
             ],
             "feedback": "σώφρων (nom. sg. m.) en ἄνθρωπος (nom. sg. m.) delen genus, numerus én naamval. σώφρων in deze vorm is 3e-decl. nom. sg. m./f.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
     items["GRC-G-SYNT-ADJ-ATTRIB"] = [
         {
             "id": "ITEM-GRC-G-SYNT-ADJ-ATTRIB-001",
-            "knoop_ids": ["GRC-G-SYNT-ADJ-ATTRIB"],
+            "node_ids": ["GRC-G-SYNT-ADJ-ATTRIB"],
             "type": "herkenning",
-            "richting": "receptief",
-            "moeilijkheid_initieel": -0.1,
-            "discriminatie_initieel": 1.1,
-            "verwachte_tijd_sec": 15,
+            "direction": "receptief",
+            "difficulty_initial": -0.1,
+            "discrimination_initial": 1.1,
+            "expected_time_sec": 15,
             "stimulus": "Wat bepaalt of een adjectief attributief of praedicatief staat?",
-            "antwoord": [
+            "answer": [
                 "de positie t.o.v. het lidwoord",
                 "de plaats van het adjectief ten opzichte van het lidwoord",
             ],
             "feedback": "Attributief: adjectief staat binnen de lidwoord-substantief-groep (ὁ ἀγαθὸς ἄνθρωπος). Praedicatief: erbuiten (ἀγαθὸς ὁ ἄνθρωπος).",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ADJ-ATTRIB-002",
-            "knoop_ids": ["GRC-G-SYNT-ADJ-ATTRIB"],
+            "node_ids": ["GRC-G-SYNT-ADJ-ATTRIB"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 20,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 20,
             "stimulus": "Attributief of praedicatief: 'ὁ ἀγαθὸς ἄνθρωπος'?",
-            "antwoord": "attributief",
+            "answer": "attributief",
             "feedback": "Attributief: ἀγαθός staat tussen lidwoord en substantief (ὁ … ἄνθρωπος). Betekenis: 'de goede mens'.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ADJ-ATTRIB-003",
-            "knoop_ids": ["GRC-G-SYNT-ADJ-ATTRIB"],
+            "node_ids": ["GRC-G-SYNT-ADJ-ATTRIB"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.3,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 20,
+            "direction": "receptief",
+            "difficulty_initial": 0.3,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 20,
             "stimulus": "Attributief of praedicatief: 'ἀγαθὸς ὁ ἄνθρωπος'?",
-            "antwoord": "praedicatief",
+            "answer": "praedicatief",
             "feedback": "Praedicatief: ἀγαθός staat buiten de lidwoord-substantief-groep. Vertaal met koppelwerkwoord: 'de mens is goed'.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ADJ-ATTRIB-004",
-            "knoop_ids": ["GRC-G-SYNT-ADJ-ATTRIB"],
+            "node_ids": ["GRC-G-SYNT-ADJ-ATTRIB"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.4,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.4,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Attributief of praedicatief: 'ὁ ἄνθρωπος ὁ ἀγαθός'?",
-            "antwoord": "attributief",
+            "answer": "attributief",
             "feedback": "Tweede attributieve positie: lidwoord wordt herhaald vóór het adjectief (ὁ ἄνθρωπος ὁ ἀγαθός). Betekenis nog steeds 'de goede mens'.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
         {
             "id": "ITEM-GRC-G-SYNT-ADJ-ATTRIB-005",
-            "knoop_ids": ["GRC-G-SYNT-ADJ-ATTRIB"],
+            "node_ids": ["GRC-G-SYNT-ADJ-ATTRIB"],
             "type": "contextueel",
-            "richting": "receptief",
-            "moeilijkheid_initieel": 0.4,
-            "discriminatie_initieel": 1.3,
-            "verwachte_tijd_sec": 25,
+            "direction": "receptief",
+            "difficulty_initial": 0.4,
+            "discrimination_initial": 1.3,
+            "expected_time_sec": 25,
             "stimulus": "Vertaal gegeven de positie: 'ὁ ἄνθρωπος ἀγαθός'.",
-            "antwoord": [
+            "answer": [
                 "de mens is goed",
                 "de mens (is) goed",
             ],
             "feedback": "Praedicatief (adjectief erbuiten, zonder tweede lidwoord). Vertaal met koppelwerkwoord: 'de mens is goed'. Tegenover attributief 'ὁ ἀγαθὸς ἄνθρωπος' = 'de goede mens'.",
-            "bron": "handmatig",
+            "source": "handmatig",
         },
     ]
 
@@ -458,7 +458,7 @@ def collect_all() -> dict[str, list[dict]]:
     out.update(synt_items())
     for _node_id, item_list in out.items():
         for item in item_list:
-            for key in ("stimulus", "antwoord", "feedback", "verwacht_resultaat"):
+            for key in ("stimulus", "antwoord", "feedback", "expected_result"):
                 if key in item and item[key] is not None:
                     item[key] = nfc(item[key])
     return out
@@ -473,7 +473,7 @@ def validate_all(items_by_node: dict[str, list[dict]]) -> None:
 
 
 def add_items_to_json(json_path: Path, items_by_node: dict[str, list[dict]]) -> int:
-    """Attach items to their primary node (first element of knoop_ids)."""
+    """Attach items to their primary node (first element of node_ids)."""
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
 
@@ -481,11 +481,11 @@ def add_items_to_json(json_path: Path, items_by_node: dict[str, list[dict]]) -> 
     primary_map: dict[str, list[dict]] = {}
     for _node_id, item_list in items_by_node.items():
         for item in item_list:
-            primary = item["knoop_ids"][0]
+            primary = item["node_ids"][0]
             primary_map.setdefault(primary, []).append(item)
 
     added = 0
-    for node in data["knopen"]:
+    for node in data["nodes"]:
         if node["id"] in primary_map:
             existing_ids = {item["id"] for item in node.get("items", [])}
             new_items = [
@@ -510,10 +510,10 @@ def print_summary(items_by_node: dict[str, list[dict]]) -> None:
     for item_list in items_by_node.values():
         for item in item_list:
             type_counter[item["type"]] += 1
-            richting_counter[item["richting"]] += 1
-            if "GRC-G-SYNT-ADJ-CONGR" in item["knoop_ids"]:
+            richting_counter[item["direction"]] += 1
+            if "GRC-G-SYNT-ADJ-CONGR" in item["node_ids"]:
                 congr_count += 1
-            if "GRC-G-SYNT-ADJ-ATTRIB" in item["knoop_ids"]:
+            if "GRC-G-SYNT-ADJ-ATTRIB" in item["node_ids"]:
                 attrib_count += 1
 
     print("\n=== E3-06 Summary ===")

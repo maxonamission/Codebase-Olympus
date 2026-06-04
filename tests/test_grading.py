@@ -33,16 +33,16 @@ def _make_item(
 ) -> Item:
     return Item(
         id=item_id,
-        knoop_ids=["LAT-V-F01-TEST"],
+        node_ids=["LAT-V-F01-TEST"],
         type=item_type,
-        richting=Direction.PRODUCTIEF,
-        moeilijkheid_initieel=0.0,
-        discriminatie_initieel=1.0,
-        verwachte_tijd_sec=10,
+        direction=Direction.PRODUCTIEF,
+        difficulty_initial=0.0,
+        discrimination_initial=1.0,
+        expected_time_sec=10,
         stimulus="stim",
-        antwoord=antwoord,
+        answer=antwoord,
         feedback="ok",
-        bron=Source.HANDMATIG,
+        source=Source.HANDMATIG,
     )
 
 

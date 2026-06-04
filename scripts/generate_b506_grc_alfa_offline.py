@@ -176,7 +176,7 @@ def main():
     with open(fpath) as f:
         graph = json.load(f)
 
-    node_index = {k["id"]: k for k in graph["knopen"]}
+    node_index = {k["id"]: k for k in graph["nodes"]}
     added = 0
 
     for suffix, upper, lower, name, tip in LETTERS:
@@ -190,22 +190,22 @@ def main():
 
         item_data = {
             "id": f"ITEM-{node_id}-{nr:03d}",
-            "knoop_ids": [node_id],
+            "node_ids": [node_id],
             "type": "offline_schrijven",
-            "richting": "productief",
-            "moeilijkheid_initieel": -0.5,
-            "discriminatie_initieel": 1.0,
-            "verwachte_tijd_sec": 60,
+            "direction": "productief",
+            "difficulty_initial": -0.5,
+            "discrimination_initial": 1.0,
+            "expected_time_sec": 60,
             "stimulus": (
                 f"Schrijf de Griekse letter {name} vijf keer op papier: "
                 f"hoofdletter ({upper}) en kleine letter ({lower}). "
                 f"Let op de schrijfrichting en verhoudingen."
             ),
-            "antwoord": f"Controleer je lettervormen met het voorbeeld: {upper} {lower}.",
+            "answer": f"Controleer je lettervormen met het voorbeeld: {upper} {lower}.",
             "feedback": tip,
-            "bron": "handmatig",
-            "verificatie_methode": "self_report",
-            "verwacht_resultaat": f"5× {upper} en 5× {lower} — herkenbare lettervorm",
+            "source": "handmatig",
+            "verification_method": "self_report",
+            "expected_result": f"5× {upper} en 5× {lower} — herkenbare lettervorm",
         }
 
         # Validate via Pydantic

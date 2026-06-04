@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate exercise items for C1-05: adjectieven (A1-05 knopen).
+"""Generate exercise items for C1-05: adjectieven (A1-05 nodes).
 
 Targets:
   - data/graph/lat_grammatica_poc.json  (ADJ-D12-INTRO, ADJ-D12-VERBG, ADJ-CONGR)
@@ -30,48 +30,48 @@ LJ1_IDS = {
 def _h(kid, nr, stim, antw, fb, moeil=-0.3, tijd=12):
     return {
         "id": f"ITEM-{kid}-{nr:03d}",
-        "knoop_ids": [kid],
+        "node_ids": [kid],
         "type": "herkenning",
-        "richting": "receptief",
-        "moeilijkheid_initieel": moeil,
-        "discriminatie_initieel": 1.0,
-        "verwachte_tijd_sec": tijd,
+        "direction": "receptief",
+        "difficulty_initial": moeil,
+        "discrimination_initial": 1.0,
+        "expected_time_sec": tijd,
         "stimulus": stim,
-        "antwoord": antw,
+        "answer": antw,
         "feedback": fb,
-        "bron": "handmatig",
+        "source": "handmatig",
     }
 
 
 def _p(kid, nr, stim, antw, fb, moeil=0.6, tijd=20):
     return {
         "id": f"ITEM-{kid}-{nr:03d}",
-        "knoop_ids": [kid],
+        "node_ids": [kid],
         "type": "productie",
-        "richting": "productief",
-        "moeilijkheid_initieel": moeil,
-        "discriminatie_initieel": 1.0,
-        "verwachte_tijd_sec": tijd,
+        "direction": "productief",
+        "difficulty_initial": moeil,
+        "discrimination_initial": 1.0,
+        "expected_time_sec": tijd,
         "stimulus": stim,
-        "antwoord": antw,
+        "answer": antw,
         "feedback": fb,
-        "bron": "handmatig",
+        "source": "handmatig",
     }
 
 
 def _c(kid, nr, stim, antw, fb, moeil=0.3, tijd=35):
     return {
         "id": f"ITEM-{kid}-{nr:03d}",
-        "knoop_ids": [kid],
+        "node_ids": [kid],
         "type": "contextueel",
-        "richting": "receptief",
-        "moeilijkheid_initieel": moeil,
-        "discriminatie_initieel": 1.0,
-        "verwachte_tijd_sec": tijd,
+        "direction": "receptief",
+        "difficulty_initial": moeil,
+        "discrimination_initial": 1.0,
+        "expected_time_sec": tijd,
         "stimulus": stim,
-        "antwoord": antw,
+        "answer": antw,
         "feedback": fb,
-        "bron": "handmatig",
+        "source": "handmatig",
     }
 
 
@@ -357,7 +357,7 @@ def add_items_to_json(json_path, items_by_node):
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
     added = 0
-    for node in data["knopen"]:
+    for node in data["nodes"]:
         if node["id"] in items_by_node:
             existing = {i["id"] for i in node.get("items", [])}
             new = [i for i in items_by_node[node["id"]] if i["id"] not in existing]

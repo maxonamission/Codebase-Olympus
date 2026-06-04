@@ -121,12 +121,12 @@ class TestCollectVocabNodes:
     def test_filter_lat(self, graph_dir: Path):
         entries = collect_vocab_nodes(graph_dir, lang="lat")
         assert len(entries) == 300
-        assert all(e.taal == "lat" for e in entries)
+        assert all(e.language == "lat" for e in entries)
 
     def test_filter_grc(self, graph_dir: Path):
         entries = collect_vocab_nodes(graph_dir, lang="grc")
         assert len(entries) == 150
-        assert all(e.taal == "grc" for e in entries)
+        assert all(e.language == "grc" for e in entries)
 
     def test_entries_sorted_by_id(self, graph_dir: Path):
         entries = collect_vocab_nodes(graph_dir)
@@ -149,9 +149,9 @@ class TestGenerateAllDryRun:
 
     def _make_entries(self) -> list[VocabEntry]:
         return [
-            VocabEntry(node_id="LAT-V-F01-SUM", lemma="sum, esse", taal="lat"),
-            VocabEntry(node_id="LAT-V-F01-DO", lemma="do, dare", taal="lat"),
-            VocabEntry(node_id="GRC-V-F01-EIMI", lemma="εἰμί, εἶναι", taal="grc"),
+            VocabEntry(node_id="LAT-V-F01-SUM", lemma="sum, esse", language="lat"),
+            VocabEntry(node_id="LAT-V-F01-DO", lemma="do, dare", language="lat"),
+            VocabEntry(node_id="GRC-V-F01-EIMI", lemma="εἰμί, εἶναι", language="grc"),
         ]
 
     def test_dry_run_creates_no_files(self, tmp_path: Path):
@@ -183,8 +183,8 @@ class TestGenerateAllPlaceholder:
 
     def _make_entries(self) -> list[VocabEntry]:
         return [
-            VocabEntry(node_id="LAT-V-F01-SUM", lemma="sum, esse", taal="lat"),
-            VocabEntry(node_id="GRC-V-F01-EIMI", lemma="εἰμί, εἶναι", taal="grc"),
+            VocabEntry(node_id="LAT-V-F01-SUM", lemma="sum, esse", language="lat"),
+            VocabEntry(node_id="GRC-V-F01-EIMI", lemma="εἰμί, εἶναι", language="grc"),
         ]
 
     @patch("generate_audio._espeak_available", return_value=False)

@@ -48,13 +48,13 @@ class TestProgressOverview:
         graph = client.app.state.graph
 
         # Pick a real node_id from the graph
-        knoop_ids = list(graph.nodes)[:3]
+        node_ids = list(graph.nodes)[:3]
         learner = LearnerModel(user_id=UUID(user_id))
-        learner.node_states[knoop_ids[0]] = NodeState(
-            node_id=knoop_ids[0], posterior_mastery=0.85, source=MasterySource.PRACTICE
+        learner.node_states[node_ids[0]] = NodeState(
+            node_id=node_ids[0], posterior_mastery=0.85, source=MasterySource.PRACTICE
         )
-        learner.node_states[knoop_ids[1]] = NodeState(
-            node_id=knoop_ids[1], posterior_mastery=0.40, source=MasterySource.PRACTICE
+        learner.node_states[node_ids[1]] = NodeState(
+            node_id=node_ids[1], posterior_mastery=0.40, source=MasterySource.PRACTICE
         )
         save_learner_model(db, learner)
 
@@ -82,7 +82,7 @@ class TestProgressOverview:
 
 class TestClusterProgress:
     def test_clusters_no_learner_model(self, client):
-        """New user: every cluster has 0 mastered, totals reflect graph V-knopen."""
+        """New user: every cluster has 0 mastered, totals reflect graph V-nodes."""
         _, headers = _auth_header(client, "clusters_new@example.nl")
         resp = client.get("/progress/clusters", headers=headers)
         assert resp.status_code == 200
@@ -95,7 +95,7 @@ class TestClusterProgress:
         for c in data["clusters"]:
             assert {
                 "label",
-                "beschrijving",
+                "description",
                 "total",
                 "mastered",
                 "in_progress",
@@ -115,15 +115,15 @@ class TestClusterProgress:
         assert {"familie", "oorlog", "beweging", "communicatie"} <= labels
 
     def test_clusters_counts_match_graph(self, client):
-        """Per-cluster totals match the number of V-knopen carrying that label."""
+        """Per-cluster totals match the number of V-nodes carrying that label."""
         _, headers = _auth_header(client, "clusters_counts@example.nl")
         graph = client.app.state.graph
         expected: dict[str, int] = {}
         for node_id in graph.nodes:
             node = graph.nodes[node_id]["node"]
-            if node.type.value != "V" or not node.semantisch_cluster:
+            if node.type.value != "V" or not node.semantic_cluster:
                 continue
-            expected[node.semantisch_cluster] = expected.get(node.semantisch_cluster, 0) + 1
+            expected[node.semantic_cluster] = expected.get(node.semantic_cluster, 0) + 1
 
         data = client.get("/progress/clusters", headers=headers).json()
         for c in data["clusters"]:
@@ -139,8 +139,8 @@ class TestClusterProgress:
         target_node = None
         for node_id in graph.nodes:
             node = graph.nodes[node_id]["node"]
-            if node.type.value == "V" and node.semantisch_cluster:
-                target_label = node.semantisch_cluster
+            if node.type.value == "V" and node.semantic_cluster:
+                target_label = node.semantic_cluster
                 target_node = node_id
                 break
         assert target_node is not None, "Seed data must contain a clustered V-node"

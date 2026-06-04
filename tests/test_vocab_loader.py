@@ -93,11 +93,11 @@ class TestRealVocabSources:
         assert len(lookup) == 450
 
     def test_every_v_node_has_metadata(self, lookup):
-        """Alle V-knopen in de productie-graph moeten matchen."""
+        """Alle V-nodes in de productie-graph moeten matchen."""
         graph = load_graph(GRAPH_DIR)
         v_ids = [n for n in graph.nodes if graph.nodes[n]["node"].type == NodeType.V]
         missing = [kid for kid in v_ids if kid not in lookup]
-        assert missing == [], f"V-knopen zonder vocab_source-entry: {missing[:5]}"
+        assert missing == [], f"V-nodes zonder vocab_source-entry: {missing[:5]}"
 
     def test_sample_entries_have_expected_shape(self, lookup):
         sum_entry = lookup["LAT-V-F01-SUM"]

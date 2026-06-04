@@ -41,16 +41,16 @@ from gymnasium_classica.scheduling.session import (
 )
 
 
-def _make_node(node_id: str, taal: str = "lat") -> Node:
+def _make_node(node_id: str, language: str = "lat") -> Node:
     """Helper to create a minimal Node."""
     return Node(
         id=node_id,
         type=NodeType.G,
-        taal=taal,
-        titel_nl=f"Knoop {node_id}",
-        beschrijving=f"Test node {node_id}",
-        bloom_niveau=BloomLevel.KENNIS,
-        fase=Phase.ONDERBOUW_1,
+        language=language,
+        title_nl=f"Knoop {node_id}",
+        description=f"Test node {node_id}",
+        bloom_level=BloomLevel.KENNIS,
+        phase=Phase.ONDERBOUW_1,
     )
 
 
@@ -79,26 +79,24 @@ def _build_test_graph() -> nx.DiGraph:
 
 def _make_passage(
     passage_id: str = "LAT-P-T01",
-    knoop_ids: list[str] | None = None,
-    moeilijkheid: int = 1,
+    node_ids: list[str] | None = None,
+    difficulty: int = 1,
 ) -> Passage:
-    if knoop_ids is None:
-        knoop_ids = ["LAT-G-MORF-CHILDA", "LAT-G-MORF-CHILDC"]
+    if node_ids is None:
+        node_ids = ["LAT-G-MORF-CHILDA", "LAT-G-MORF-CHILDC"]
     return Passage(
         id=passage_id,
-        taal="lat",
-        titel="Test passage",
-        tekst="Puella cantat.",
-        annotaties=[
+        language="lat",
+        title="Test passage",
+        text="Puella cantat.",
+        annotations=[
+            WordAnnotation(word="Puella", lemma="puella", case="nom.sg", translation="het meisje"),
             WordAnnotation(
-                woord="Puella", lemma="puella", naamval="nom.sg", vertaling="het meisje"
-            ),
-            WordAnnotation(
-                woord="cantat", lemma="cantare", naamval="praes.ind.act.3sg", vertaling="zingt"
+                word="cantat", lemma="cantare", case="praes.ind.act.3sg", translation="zingt"
             ),
         ],
-        knoop_ids=knoop_ids,
-        moeilijkheid=moeilijkheid,
+        node_ids=node_ids,
+        difficulty=difficulty,
     )
 
 
@@ -203,8 +201,8 @@ class TestSelectPassage:
         learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
             node_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
-        p_easy = _make_passage("LAT-P-EASY", moeilijkheid=1)
-        p_hard = _make_passage("LAT-P-HARD", moeilijkheid=5)
+        p_easy = _make_passage("LAT-P-EASY", difficulty=1)
+        p_hard = _make_passage("LAT-P-HARD", difficulty=5)
         result = select_passage(learner, g, [p_hard, p_easy])
         assert result is not None
         assert result.id == "LAT-P-EASY"
@@ -212,7 +210,7 @@ class TestSelectPassage:
     def test_ignores_passage_with_unknown_nodes(self):
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        p = _make_passage(knoop_ids=["NONEXISTENT-NODE"])
+        p = _make_passage(node_ids=["NONEXISTENT-NODE"])
         result = select_passage(learner, g, [p])
         assert result is None
 
@@ -229,10 +227,10 @@ class TestCandidatesContextFirst:
         )
         passages = [_make_passage()]
         candidates = _candidates_for_new_material_context_first(learner, g, passages)
-        knoop_ids = [k.id for _, k in candidates]
+        node_ids = [k.id for _, k in candidates]
         # CHILDA and CHILDC are in the passage and reachable (ROOT at 0.50 > 0.25)
-        assert "LAT-G-MORF-CHILDA" in knoop_ids
-        assert "LAT-G-MORF-CHILDC" in knoop_ids
+        assert "LAT-G-MORF-CHILDA" in node_ids
+        assert "LAT-G-MORF-CHILDC" in node_ids
 
     def test_grammar_first_would_not_find_these(self):
         """With standard threshold, same nodes are NOT candidates."""
@@ -242,10 +240,10 @@ class TestCandidatesContextFirst:
             node_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
         candidates = _candidates_for_new_material(learner, g)
-        knoop_ids = [k.id for _, k in candidates]
+        node_ids = [k.id for _, k in candidates]
         # Standard threshold (0.75) blocks: ROOT at 0.50 < 0.75
-        assert "LAT-G-MORF-CHILDA" not in knoop_ids
-        assert "LAT-G-MORF-CHILDC" not in knoop_ids
+        assert "LAT-G-MORF-CHILDA" not in node_ids
+        assert "LAT-G-MORF-CHILDC" not in node_ids
 
     def test_empty_when_no_passage_matches(self):
         g = _build_test_graph()
@@ -333,7 +331,7 @@ class TestSessionManagerContextFirst:
         assert question.node_id == "LAT-P-T01"
         assert isinstance(question.stimulus, dict)
         assert question.stimulus["type"] == "passage"
-        assert question.stimulus["tekst"] == "Puella cantat."
+        assert question.stimulus["text"] == "Puella cantat."
 
     def test_start_grammar_first_default(self):
         """Default (grammar_first) SessionManager still works."""

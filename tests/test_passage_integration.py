@@ -28,12 +28,12 @@ class TestPassageIntegration:
         for p in passages:
             assert isinstance(p, Passage)
             assert p.id, "Passage missing id"
-            assert p.taal in ("lat", "grc", "shared"), f"{p.id}: invalid taal {p.taal}"
-            assert p.titel, f"{p.id}: missing titel"
-            assert p.tekst, f"{p.id}: missing tekst"
-            assert len(p.annotaties) > 0, f"{p.id}: no annotaties"
-            assert 1 <= p.moeilijkheid <= 5, f"{p.id}: moeilijkheid {p.moeilijkheid} out of range"
-            assert len(p.knoop_ids) > 0, f"{p.id}: no knoop_ids"
+            assert p.language in ("lat", "grc", "shared"), f"{p.id}: invalid language {p.language}"
+            assert p.title, f"{p.id}: missing titel"
+            assert p.text, f"{p.id}: missing tekst"
+            assert len(p.annotations) > 0, f"{p.id}: no annotations"
+            assert 1 <= p.difficulty <= 5, f"{p.id}: difficulty {p.difficulty} out of range"
+            assert len(p.node_ids) > 0, f"{p.id}: no node_ids"
 
     def test_no_duplicate_passage_ids(self):
         """All passage IDs must be unique across all files."""
@@ -49,7 +49,7 @@ class TestPassageIntegration:
             pytest.skip("data/passages/ not found")
         passages = load_passages(PASSAGES_DIR)
         for p in passages:
-            for a in p.annotaties:
-                assert a.woord, f"{p.id}: annotation missing woord"
+            for a in p.annotations:
+                assert a.word, f"{p.id}: annotation missing woord"
                 assert a.lemma, f"{p.id}: annotation missing lemma"
-                assert a.vertaling, f"{p.id}: annotation missing vertaling"
+                assert a.translation, f"{p.id}: annotation missing vertaling"

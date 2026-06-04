@@ -185,7 +185,7 @@ async def node_progress(
     if state is None:
         return KnoopProgressResponse(
             node_id=node_id,
-            titel=node.titel_nl,
+            title=node.title_nl,
             type=node.type.value,
             posterior_mastery=0.0,
             easiness_factor=2.5,
@@ -198,7 +198,7 @@ async def node_progress(
 
     return KnoopProgressResponse(
         node_id=node_id,
-        titel=node.titel_nl,
+        title=node.title_nl,
         type=node.type.value,
         posterior_mastery=state.posterior_mastery,
         easiness_factor=state.easiness_factor,
@@ -226,8 +226,8 @@ async def progress_clusters(
     """Return vocabulary progress grouped by semantic cluster.
 
     Each cluster from ``data/vocabulaire_clusters.json`` is returned
-    together with the count of V-knopen that carry the matching
-    ``semantisch_cluster`` label and the learner's mastery status
+    together with the count of V-nodes that carry the matching
+    ``semantic_cluster`` label and the learner's mastery status
     for those nodes.
     """
     graph: nx.DiGraph = request.app.state.graph
@@ -241,7 +241,7 @@ async def progress_clusters(
         node: Node = graph.nodes[node_id]["node"]
         if node.type != NodeType.V:
             continue
-        label = node.semantisch_cluster
+        label = node.semantic_cluster
         if not label or label not in nodes_per_cluster:
             continue
         nodes_per_cluster[label].append(node_id)
@@ -249,11 +249,11 @@ async def progress_clusters(
     results: list[ClusterProgress] = []
     for c in cluster_defs:
         label = c["label"]
-        knoop_ids = nodes_per_cluster.get(label, [])
-        total = len(knoop_ids)
+        node_ids = nodes_per_cluster.get(label, [])
+        total = len(node_ids)
         mastered = 0
         in_progress = 0
-        for node_id in knoop_ids:
+        for node_id in node_ids:
             state = None
             if learner is not None:
                 state = learner.node_states.get(node_id)
@@ -268,7 +268,7 @@ async def progress_clusters(
         results.append(
             ClusterProgress(
                 label=label,
-                beschrijving=c.get("beschrijving", ""),
+                description=c.get("description", ""),
                 total=total,
                 mastered=mastered,
                 in_progress=in_progress,
@@ -306,9 +306,11 @@ async def graph_data(
         nodes.append(
             GraphNode(
                 id=node_id,
-                titel=node.titel_nl,
+                title=node.title_nl,
                 type=node.type.value,
-                taal=node.taal.value if hasattr(node.taal, "value") else str(node.taal),
+                language=node.language.value
+                if hasattr(node.language, "value")
+                else str(node.language),
                 mastery=round(mastery, 3),
                 status=status,
             )

@@ -44,24 +44,24 @@ def sample_node() -> Node:
     return Node(
         id="LAT-G-MORF-DECL1-PARAD",
         type=NodeType.G,
-        taal=Language.LAT,
-        titel_nl="Paradigma 1e declinatie",
-        beschrijving="De 1e declinatie met modelwoord puella.",
-        bloom_niveau=BloomLevel.KENNIS,
-        fase=Phase.ONDERBOUW_1,
+        language=Language.LAT,
+        title_nl="Paradigma 1e declinatie",
+        description="De 1e declinatie met modelwoord puella.",
+        bloom_level=BloomLevel.KENNIS,
+        phase=Phase.ONDERBOUW_1,
         items=[
             Item(
                 id="ITEM-LAT-G-MORF-DECL1-PARAD-001",
-                knoop_ids=["LAT-G-MORF-DECL1-PARAD"],
+                node_ids=["LAT-G-MORF-DECL1-PARAD"],
                 type=ItemType.HERKENNING,
-                richting=Direction.RECEPTIEF,
-                moeilijkheid_initieel=-0.5,
-                discriminatie_initieel=1.0,
-                verwachte_tijd_sec=15,
+                direction=Direction.RECEPTIEF,
+                difficulty_initial=-0.5,
+                discrimination_initial=1.0,
+                expected_time_sec=15,
                 stimulus="Geef de genitivus singularis van puella.",
-                antwoord="puellae",
+                answer="puellae",
                 feedback="De genitivus singularis van de 1e declinatie eindigt op -ae.",
-                bron=Source.HANDMATIG,
+                source=Source.HANDMATIG,
             ),
         ],
     )
@@ -73,11 +73,11 @@ def greek_letter_node() -> Node:
     return Node(
         id="GRC-G-FONL-ALFA-ALFA",
         type=NodeType.G,
-        taal=Language.GRC,
-        titel_nl="Α α — alfa",
-        beschrijving="De letter alfa: Α (majuskel), α (minuskel). Klank: kort of lang /a/.",
-        bloom_niveau=BloomLevel.KENNIS,
-        fase=Phase.ONDERBOUW_1,
+        language=Language.GRC,
+        title_nl="Α α — alfa",
+        description="De letter alfa: Α (majuskel), α (minuskel). Klank: kort of lang /a/.",
+        bloom_level=BloomLevel.KENNIS,
+        phase=Phase.ONDERBOUW_1,
     )
 
 
@@ -87,11 +87,11 @@ def node_no_content() -> Node:
     return Node(
         id="LAT-G-MORF-GENUS-INTRO",
         type=NodeType.G,
-        taal=Language.LAT,
-        titel_nl="Grammaticaal geslacht",
-        beschrijving="Introductie van het concept genus.",
-        bloom_niveau=BloomLevel.KENNIS,
-        fase=Phase.ONDERBOUW_1,
+        language=Language.LAT,
+        title_nl="Grammaticaal geslacht",
+        description="Introductie van het concept genus.",
+        bloom_level=BloomLevel.KENNIS,
+        phase=Phase.ONDERBOUW_1,
     )
 
 
@@ -212,24 +212,24 @@ class TestGenerateWorksheet:
         node = Node(
             id="LAT-G-SYNT-WRDVLG",
             type=NodeType.G,
-            taal=Language.LAT,
-            titel_nl="Woordvolgorde",
-            beschrijving="Latijnse woordvolgorde is vrij.",
-            bloom_niveau=BloomLevel.BEGRIP,
-            fase=Phase.ONDERBOUW_1,
+            language=Language.LAT,
+            title_nl="Woordvolgorde",
+            description="Latijnse woordvolgorde is vrij.",
+            bloom_level=BloomLevel.BEGRIP,
+            phase=Phase.ONDERBOUW_1,
             items=[
                 Item(
                     id="ITEM-LAT-G-SYNT-WRDVLG-001",
-                    knoop_ids=["LAT-G-SYNT-WRDVLG"],
+                    node_ids=["LAT-G-SYNT-WRDVLG"],
                     type=ItemType.PRODUCTIE,
-                    richting=Direction.PRODUCTIEF,
-                    moeilijkheid_initieel=0.0,
-                    discriminatie_initieel=1.0,
-                    verwachte_tijd_sec=30,
+                    direction=Direction.PRODUCTIEF,
+                    difficulty_initial=0.0,
+                    discrimination_initial=1.0,
+                    expected_time_sec=30,
                     stimulus="Vertaal: Het meisje ziet de heer.",
-                    antwoord="Puella dominum videt.",
+                    answer="Puella dominum videt.",
                     feedback="SOV is de gangbare volgorde.",
-                    bron=Source.HANDMATIG,
+                    source=Source.HANDMATIG,
                 ),
             ],
         )
@@ -281,11 +281,11 @@ class TestGenerateWorksheet:
         node = Node(
             id="LAT-G-MORF-DECL1-PARAD",
             type=NodeType.G,
-            taal=Language.LAT,
-            titel_nl="1e declinatie paradigma",
-            beschrijving="Paradigma.",
-            bloom_niveau=BloomLevel.KENNIS,
-            fase=Phase.ONDERBOUW_1,
+            language=Language.LAT,
+            title_nl="1e declinatie paradigma",
+            description="Paradigma.",
+            bloom_level=BloomLevel.KENNIS,
+            phase=Phase.ONDERBOUW_1,
             content_ref="LAT-G-MORF-DECL1-PARAD.md",
         )
 
@@ -341,11 +341,11 @@ class TestBuildGreekWritingLines:
         node = Node(
             id="GRC-G-FONL-ALFA-GRP1",
             type=NodeType.G,
-            taal=Language.GRC,
-            titel_nl="Groep 1: identieke letters",
-            beschrijving="Letters die identiek zijn aan het Latijnse alfabet.",
-            bloom_niveau=BloomLevel.KENNIS,
-            fase=Phase.ONDERBOUW_1,
+            language=Language.GRC,
+            title_nl="Groep 1: identieke letters",
+            description="Letters die identiek zijn aan het Latijnse alfabet.",
+            bloom_level=BloomLevel.KENNIS,
+            phase=Phase.ONDERBOUW_1,
         )
         elements = _build_greek_writing_lines(node, styles)
         assert elements == []

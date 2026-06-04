@@ -56,7 +56,7 @@ class TestMethodeProfile:
         """The mapping file loads correctly and has the expected structure."""
         assert "fortuna" in methode_mapping["methoden"]
         fortuna = methode_mapping["methoden"]["fortuna"]
-        assert fortuna["taal"] == "lat"
+        assert fortuna["language"] == "lat"
         assert "1" in fortuna["hoofdstukken"]
 
     def test_treated_node_ids_cumulative(self, methode_mapping):

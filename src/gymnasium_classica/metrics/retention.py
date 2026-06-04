@@ -1,7 +1,7 @@
 """Retentie- en voortgangsmetriek afgeleid uit het learner-model.
 
 De functies hier reconstrueren retentie over tijd en aggregeren per
-leerling, zodat de centrale projectclaim (efficiënter leren) toetsbaar
+leerling, zodat de centrale projectclaim (efficiënter leren) testable
 wordt. Alles is een *pure* functie over ``LearnerModel`` / ``NodeState``;
 er wordt niets gemuteerd of opgeslagen.
 
@@ -25,7 +25,7 @@ NEW_MAX = 0.3  # posterior < NEW_MAX  -> nog niet begonnen / net gestart
 MASTERED_MIN = 0.85  # posterior >= MASTERED_MIN -> beheerst
 # Tussenin (NEW_MAX <= posterior < MASTERED_MIN) telt als "learning".
 
-# Labels voor reviews per richting; "onbekend" vangt self-assessment (geen item).
+# Labels voor reviews per direction; "onbekend" vangt self-assessment (geen item).
 _RICHTING_UNKNOWN = "onbekend"
 
 
@@ -54,15 +54,15 @@ class LearnerReport:
     """Samenvattende metriek voor één leerling op een tijdstip."""
 
     total_reviews: int
-    """Aantal vastgelegde antwoorden over alle knopen heen."""
+    """Aantal vastgelegde antwoorden over alle nodes heen."""
     total_study_seconds: float
     """Som van de duur van afgeronde sessies (ended_at - started_at)."""
     average_retention: float | None
-    """Gemiddelde geschatte retentie over gereviewde knopen; None als er geen zijn."""
+    """Gemiddelde geschatte retentie over gereviewde nodes; None als er geen zijn."""
     mastery_distribution: dict[str, int]
-    """Aantal knopen per bucket: 'new' / 'learning' / 'mastered'."""
+    """Aantal nodes per bucket: 'new' / 'learning' / 'mastered'."""
     reviews_by_richting: dict[str, int]
-    """Aantal antwoorden per richting: 'receptief' / 'productief' / 'onbekend'."""
+    """Aantal antwoorden per direction: 'receptief' / 'productief' / 'onbekend'."""
 
 
 def _mastery_bucket(posterior: float) -> str:
@@ -86,7 +86,7 @@ def build_learner_report(learner: LearnerModel, now: datetime) -> LearnerReport:
             retentions.append(estimated_retention(state, now))
         total_reviews += len(state.item_history)
         for response in state.item_history:
-            key = response.richting if response.richting in ("receptief", "productief") else None
+            key = response.direction if response.direction in ("receptief", "productief") else None
             reviews_by_richting[key or _RICHTING_UNKNOWN] += 1
 
     total_study_seconds = sum(

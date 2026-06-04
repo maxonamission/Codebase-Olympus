@@ -74,11 +74,11 @@ class TestFindRootNodes:
         node = Node(
             id="LAT-G-MORF-GENUS-INTRO",
             type="G",
-            taal="lat",
-            titel_nl="Woordgeslacht",
-            beschrijving="Introductie woordgeslacht.",
-            bloom_niveau="kennis",
-            fase="onderbouw_1",
+            language="lat",
+            title_nl="Woordgeslacht",
+            description="Introductie woordgeslacht.",
+            bloom_level="kennis",
+            phase="onderbouw_1",
         )
         g.add_node(node.id, node=node)
         roots = find_root_nodes(g)
@@ -111,20 +111,20 @@ class TestCheckConnectivity:
         k1 = Node(
             id="GRC-G-FONL-ALFABET",
             type="G",
-            taal="grc",
-            titel_nl="Grieks alfabet",
-            beschrijving="Introductie Grieks alfabet.",
-            bloom_niveau="kennis",
-            fase="onderbouw_1",
+            language="grc",
+            title_nl="Grieks alfabet",
+            description="Introductie Grieks alfabet.",
+            bloom_level="kennis",
+            phase="onderbouw_1",
         )
         k2 = Node(
             id="GRC-G-FONL-ALFA",
             type="G",
-            taal="grc",
-            titel_nl="De letter alfa",
-            beschrijving="De Griekse letter alfa.",
-            bloom_niveau="kennis",
-            fase="onderbouw_1",
+            language="grc",
+            title_nl="De letter alfa",
+            description="De Griekse letter alfa.",
+            bloom_level="kennis",
+            phase="onderbouw_1",
         )
         g.add_node(k1.id, node=k1)
         g.add_node(k2.id, node=k2)
@@ -141,7 +141,7 @@ class TestCheckConnectivity:
         assert len(disconnected) > 0
 
     def test_empty_graph(self):
-        g = load_graph_from_dict({"knopen": [], "edges": []})
+        g = load_graph_from_dict({"nodes": [], "edges": []})
         num_comp, disconnected = check_connectivity(g)
         assert num_comp == 0
         assert disconnected == []
@@ -252,20 +252,20 @@ class TestValidateContentRefs:
 
     def test_missing_content_file_is_reported(self, sample_graph_data, tmp_path):
         data = copy.deepcopy(sample_graph_data)
-        data["knopen"][0]["content_ref"] = "data/content/DOES-NOT-EXIST.md"
+        data["nodes"][0]["content_ref"] = "data/content/DOES-NOT-EXIST.md"
         g = load_graph_from_dict(data)
 
         errors = validate_content_refs(g, tmp_path)
         assert len(errors) == 1
         assert "DOES-NOT-EXIST.md" in errors[0]
-        assert data["knopen"][0]["id"] in errors[0]
+        assert data["nodes"][0]["id"] in errors[0]
 
     def test_existing_content_file_is_accepted(self, sample_graph_data, tmp_path):
         (tmp_path / "data" / "content").mkdir(parents=True)
         (tmp_path / "data" / "content" / "foo.md").write_text("# hi\n", encoding="utf-8")
 
         data = copy.deepcopy(sample_graph_data)
-        data["knopen"][0]["content_ref"] = "data/content/foo.md"
+        data["nodes"][0]["content_ref"] = "data/content/foo.md"
         g = load_graph_from_dict(data)
 
         errors = validate_content_refs(g, tmp_path)
@@ -279,7 +279,7 @@ class TestValidateContentRefs:
     def test_validate_graph_bubbles_up_content_errors(self, sample_graph_data, tmp_path):
         """`validate_graph` markeert ontbrekende content als fout."""
         data = copy.deepcopy(sample_graph_data)
-        data["knopen"][0]["content_ref"] = "data/content/DOES-NOT-EXIST.md"
+        data["nodes"][0]["content_ref"] = "data/content/DOES-NOT-EXIST.md"
         g = load_graph_from_dict(data)
 
         report = validate_graph(g, content_root=tmp_path)
@@ -289,7 +289,7 @@ class TestValidateContentRefs:
     def test_validate_graph_without_content_root_skips_check(self, sample_graph_data, tmp_path):
         """Zonder content_root blijft content_ref ongecontroleerd."""
         data = copy.deepcopy(sample_graph_data)
-        data["knopen"][0]["content_ref"] = "data/content/DOES-NOT-EXIST.md"
+        data["nodes"][0]["content_ref"] = "data/content/DOES-NOT-EXIST.md"
         g = load_graph_from_dict(data)
 
         report = validate_graph(g)
