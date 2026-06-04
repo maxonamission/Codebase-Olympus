@@ -75,6 +75,24 @@ class TestIntakeManager:
         assert steps < 40
         assert learner.intake_completed
 
+    def test_baseline_captured_on_completion(self, poc_graph):
+        """L1-02: intake-afronding legt een mastery-nulpunt vast."""
+        learner = LearnerModel(user_id=uuid4())
+        _apply_partial_mastery(learner, poc_graph, fraction=0.5)
+        mgr = IntakeManager()
+        intake_id, q = mgr.start_intake("user1", learner, poc_graph)
+        steps = 0
+        while q is not None and steps < 40:
+            result = mgr.submit_answer(intake_id, correct=True)
+            q = result.next_question
+            steps += 1
+            if result.finished:
+                break
+        assert learner.intake_completed
+        assert learner.baseline is not None
+        assert learner.baseline.mastery  # niet leeg
+        assert set(learner.baseline.mastery).issubset(set(learner.knoop_states))
+
     def test_incorrect_answers_handled(self, poc_graph):
         learner = LearnerModel(user_id=uuid4())
         _apply_partial_mastery(learner, poc_graph)

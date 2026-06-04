@@ -8,6 +8,7 @@ steps, analogous to SessionManager for regular sessions.
 """
 
 from dataclasses import dataclass, field
+from datetime import datetime
 from uuid import uuid4
 
 import networkx as nx
@@ -23,6 +24,7 @@ from gymnasium_classica.diagnostic.placement import (
     _propagate_correct,
     _propagate_incorrect,
 )
+from gymnasium_classica.metrics import capture_baseline
 from gymnasium_classica.models.graph import EdgeType, KennisKnoop, PrerequisiteEdge
 from gymnasium_classica.models.learner import LearnerModel, MasterySource
 
@@ -259,6 +261,10 @@ class IntakeManager:
         state.finished = True
         state.converged = converged
         state.learner.intake_completed = True
+        # Leg het mastery-nulpunt vast (L1-02). Niet overschrijven bij een
+        # eventuele her-intake, zodat het baseline-referentiepunt stabiel blijft.
+        if state.learner.baseline is None:
+            state.learner.baseline = capture_baseline(state.learner, datetime.now())
         return IntakeAnswerResult(
             questions_asked=state.questions_asked,
             finished=True,
