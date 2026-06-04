@@ -451,7 +451,7 @@ Bestaand materiaal (markdowns, audio, MC-opties, vocab-metadata) daadwerkelijk n
 | F1-10 | Opschonen passages — merge `lat_passages_leerjaar1.json` | done |
 | F1-11 | Content-dekkingsrapport — script + CI-check | done |
 | F1-12 | Telemetrie-uitbreiding — `answer_text` + `item_history` wiring | done |
-| F1-13 | Frontend mentor-view (placeholder) | backlog |
+| F1-13 | Frontend mentor-view (placeholder) | doing |
 | F1-19 | Diverse content-opschoning ronde 2 | done |
 
 **Verhouding tot andere epics:**
@@ -478,8 +478,8 @@ Bestaand materiaal (markdowns, audio, MC-opties, vocab-metadata) daadwerkelijk n
 | Story | Titel | Afhankelijk | Status |
 |-------|-------|-------------|--------|
 | F2-01 | Mentor-rol + leerling-koppeling in user-model | — | done |
-| F2-02 | Laatste foute antwoorden per leerling per knoop | F2-01, F1-12 | draft |
-| F2-03 | Struikelpunten-overzicht per leerling | F2-01 | draft |
+| F2-02 | Laatste foute antwoorden per leerling per knoop | F2-01, F1-12 | doing |
+| F2-03 | Struikelpunten-overzicht per leerling | F2-01 | doing |
 | F2-04 | Fout-classificatie (spelling / naamval / synoniem / macron) — track C kern | F1-12 | done |
 
 **Verhouding tot B8:**
