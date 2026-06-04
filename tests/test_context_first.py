@@ -17,8 +17,8 @@ from gymnasium_classica.api.session_manager import SessionManager
 from gymnasium_classica.models.graph import (
     BloomNiveau,
     Fase,
-    KennisKnoop,
     KnoopType,
+    Node,
     PrerequisiteEdge,
 )
 from gymnasium_classica.models.learner import (
@@ -41,9 +41,9 @@ from gymnasium_classica.scheduling.session import (
 )
 
 
-def _make_knoop(knoop_id: str, taal: str = "lat") -> KennisKnoop:
-    """Helper to create a minimal KennisKnoop."""
-    return KennisKnoop(
+def _make_knoop(knoop_id: str, taal: str = "lat") -> Node:
+    """Helper to create a minimal Node."""
+    return Node(
         id=knoop_id,
         type=KnoopType.G,
         taal=taal,
@@ -102,7 +102,7 @@ def _make_passage(
     )
 
 
-def _always_correct(knoop_id: str, knoop: KennisKnoop) -> tuple[ResponseType, int]:
+def _always_correct(knoop_id: str, knoop: Node) -> tuple[ResponseType, int]:
     return (ResponseType.CORRECT, 2000)
 
 

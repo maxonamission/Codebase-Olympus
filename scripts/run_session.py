@@ -13,7 +13,7 @@ from gymnasium_classica.diagnostic.methode_profile import (
 )
 from gymnasium_classica.diagnostic.placement import run_diagnostic
 from gymnasium_classica.graph.loader import load_graph
-from gymnasium_classica.models.graph import KennisKnoop
+from gymnasium_classica.models.graph import Node
 from gymnasium_classica.models.learner import LearnerModel, ResponseType
 from gymnasium_classica.scheduling.session import run_session
 
@@ -33,7 +33,7 @@ def save_learner(learner: LearnerModel, path: Path) -> None:
         json.dump(learner.model_dump(), f, indent=2, default=str, ensure_ascii=False)
 
 
-def interactive_answer_fn(knoop_id: str, knoop: KennisKnoop) -> tuple[ResponseType, int]:
+def interactive_answer_fn(knoop_id: str, knoop: Node) -> tuple[ResponseType, int]:
     """Prompt the user for an answer via stdin."""
     print(f"\n  [{knoop.type.value}] {knoop.titel_nl}")
     print(f"  {knoop.beschrijving}")
@@ -51,7 +51,7 @@ def interactive_answer_fn(knoop_id: str, knoop: KennisKnoop) -> tuple[ResponseTy
 def make_simulated_answer_fn(learner: LearnerModel):
     """Return an answer_fn that simulates responses based on mastery + noise."""
 
-    def answer(knoop_id: str, knoop: KennisKnoop) -> tuple[ResponseType, int]:
+    def answer(knoop_id: str, knoop: Node) -> tuple[ResponseType, int]:
         state = learner.knoop_states.get(knoop_id)
         posterior = state.posterior_mastery if state else 0.10
 

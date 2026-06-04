@@ -6,7 +6,7 @@ from uuid import uuid4
 import pytest
 
 from gymnasium_classica.graph.loader import load_graph
-from gymnasium_classica.models.graph import KennisKnoop
+from gymnasium_classica.models.graph import Node
 from gymnasium_classica.models.learner import (
     LearnerModel,
     MasterySource,
@@ -19,18 +19,18 @@ from gymnasium_classica.scheduling.session import (
 )
 
 
-def _always_correct(knoop_id: str, knoop: KennisKnoop) -> tuple[ResponseType, int]:
+def _always_correct(knoop_id: str, knoop: Node) -> tuple[ResponseType, int]:
     return (ResponseType.CORRECT, 2000)
 
 
-def _always_incorrect(knoop_id: str, knoop: KennisKnoop) -> tuple[ResponseType, int]:
+def _always_incorrect(knoop_id: str, knoop: Node) -> tuple[ResponseType, int]:
     return (ResponseType.INCORRECT, 5000)
 
 
 def _mastery_based_answer(learner: LearnerModel):
     """Return an answer_fn that simulates responses based on current mastery."""
 
-    def answer(knoop_id: str, knoop: KennisKnoop) -> tuple[ResponseType, int]:
+    def answer(knoop_id: str, knoop: Node) -> tuple[ResponseType, int]:
         state = learner.knoop_states.get(knoop_id)
         posterior = state.posterior_mastery if state else 0.10
         if posterior >= 0.75:

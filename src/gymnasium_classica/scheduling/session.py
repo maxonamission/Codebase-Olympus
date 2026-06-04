@@ -16,7 +16,7 @@ from uuid import uuid4
 import networkx as nx
 
 from gymnasium_classica.diagnostic.conditional_completion import apply_fallback
-from gymnasium_classica.models.graph import ItemType, KennisKnoop
+from gymnasium_classica.models.graph import ItemType, Node
 from gymnasium_classica.models.learner import (
     ItemResponse,
     LearnerModel,
@@ -75,7 +75,7 @@ REVIEW_RETENTION_THRESHOLD = 0.85
 CONTEXT_FIRST_PREREQ_THRESHOLD = 0.25
 
 # Type alias for the answer callback
-AnswerFn = Callable[[str, KennisKnoop], tuple[ResponseType, int]]
+AnswerFn = Callable[[str, Node], tuple[ResponseType, int]]
 
 
 @dataclass
@@ -112,7 +112,7 @@ def _candidates_for_warmup(
     learner: LearnerModel,
     graph: nx.DiGraph,
     now: datetime,
-) -> list[tuple[float, KennisKnoop]]:
+) -> list[tuple[float, Node]]:
     """Mastered nodes approaching forgetting threshold."""
     candidates = []
     for node_id in graph.nodes:
@@ -122,7 +122,7 @@ def _candidates_for_warmup(
         retention = estimate_retention(state, now)
         if retention < REVIEW_RETENTION_THRESHOLD:
             urgency = forget_urgency(state, now)
-            knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+            knoop: Node = graph.nodes[node_id]["knoop"]
             candidates.append((urgency, knoop))
     candidates.sort(key=lambda x: x[0], reverse=True)
     return candidates
@@ -131,7 +131,7 @@ def _candidates_for_warmup(
 def _candidates_for_new_material(
     learner: LearnerModel,
     graph: nx.DiGraph,
-) -> list[tuple[float, KennisKnoop]]:
+) -> list[tuple[float, Node]]:
     """Unmastered nodes with all prerequisites green, sorted by pedagogical value."""
     candidates = []
     max_out_deg = max((graph.out_degree(n) for n in graph.nodes), default=1) or 1
@@ -146,7 +146,7 @@ def _candidates_for_new_material(
         out_deg = graph.out_degree(node_id) / max_out_deg
         # Combine readiness and pedagogical value
         score = 0.6 * ready + 0.4 * out_deg
-        knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+        knoop: Node = graph.nodes[node_id]["knoop"]
         candidates.append((score, knoop))
 
     candidates.sort(key=lambda x: x[0], reverse=True)
@@ -224,7 +224,7 @@ def _candidates_for_new_material_context_first(
     learner: LearnerModel,
     graph: nx.DiGraph,
     passages: list[Passage],
-) -> list[tuple[float, KennisKnoop]]:
+) -> list[tuple[float, Node]]:
     """New-material candidates for context-first route.
 
     Selects a passage via select_passage(), then returns the passage's
@@ -254,7 +254,7 @@ def _candidates_for_new_material_context_first(
             continue
         out_deg = graph.out_degree(knoop_id) / max_out_deg
         score = 0.6 * ready + 0.4 * out_deg
-        knoop: KennisKnoop = graph.nodes[knoop_id]["knoop"]
+        knoop: Node = graph.nodes[knoop_id]["knoop"]
         candidates.append((score, knoop))
 
     candidates.sort(key=lambda x: x[0], reverse=True)
@@ -266,13 +266,13 @@ def _candidates_for_deepening(
     graph: nx.DiGraph,
     new_node_ids: list[str],
     now: datetime,
-) -> list[tuple[float, KennisKnoop]]:
+) -> list[tuple[float, Node]]:
     """Post-requisites of newly introduced nodes, plus general urgency candidates."""
     candidates = []
     # Post-requisites of new nodes
     for new_id in new_node_ids:
         for succ in graph.successors(new_id):
-            knoop: KennisKnoop = graph.nodes[succ]["knoop"]
+            knoop: Node = graph.nodes[succ]["knoop"]
             posterior = _get_state_posterior(learner, succ)
             if posterior < MASTERY_THRESHOLD:
                 ready = readiness_score(succ, learner, graph)
@@ -294,7 +294,7 @@ def _candidates_for_cooldown(
     graph: nx.DiGraph,
     session_node_ids: set[str],
     now: datetime,
-) -> list[tuple[float, KennisKnoop]]:
+) -> list[tuple[float, Node]]:
     """Mastered nodes not yet reviewed in this session."""
     candidates = []
     for node_id in graph.nodes:
@@ -304,7 +304,7 @@ def _candidates_for_cooldown(
         if state is None or state.posterior_mastery < MASTERY_THRESHOLD:
             continue
         urgency = forget_urgency(state, now)
-        knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+        knoop: Node = graph.nodes[node_id]["knoop"]
         candidates.append((urgency, knoop))
     candidates.sort(key=lambda x: x[0], reverse=True)
     return candidates
@@ -354,7 +354,7 @@ def _collect_offline_items(
     for node_id in session_node_ids:
         if node_id not in graph.nodes:
             continue
-        knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+        knoop: Node = graph.nodes[node_id]["knoop"]
         for item in knoop.items:
             if item.type == ItemType.OFFLINE_SCHRIJVEN:
                 assignments.append(

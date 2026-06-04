@@ -14,8 +14,8 @@ from gymnasium_classica.api.session_manager import (
 from gymnasium_classica.models.graph import (
     BloomNiveau,
     Fase,
-    KennisKnoop,
     KnoopType,
+    Node,
     PrerequisiteEdge,
     Taal,
 )
@@ -25,8 +25,8 @@ from gymnasium_classica.models.user import LearningRoute
 from gymnasium_classica.scheduling.session import SessionPhase
 
 
-def _make_knoop(knoop_id: str, content_ref: str | None = None) -> KennisKnoop:
-    return KennisKnoop(
+def _make_knoop(knoop_id: str, content_ref: str | None = None) -> Node:
+    return Node(
         id=knoop_id,
         type=KnoopType.G,
         taal=Taal.LAT,

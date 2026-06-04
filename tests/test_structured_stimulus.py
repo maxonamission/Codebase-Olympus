@@ -19,8 +19,8 @@ from gymnasium_classica.models.graph import (
     Fase,
     Item,
     ItemType,
-    KennisKnoop,
     KnoopType,
+    Node,
     Richting,
     Taal,
 )
@@ -86,8 +86,8 @@ def _plain_item(item_id: str = "ITEM-LAT-G-DEMO-001") -> Item:
     )
 
 
-def _vocab_knoop(items: list[Item]) -> KennisKnoop:
-    return KennisKnoop(
+def _vocab_knoop(items: list[Item]) -> Node:
+    return Node(
         id="LAT-V-F01-SUM",
         type=KnoopType.V,
         taal=Taal.LAT,
@@ -99,8 +99,8 @@ def _vocab_knoop(items: list[Item]) -> KennisKnoop:
     )
 
 
-def _grammar_knoop(items: list[Item]) -> KennisKnoop:
-    return KennisKnoop(
+def _grammar_knoop(items: list[Item]) -> Node:
+    return Node(
         id="LAT-G-MORF-NAAMVAL-INTRO",
         type=KnoopType.G,
         taal=Taal.LAT,

@@ -5,7 +5,7 @@ from pathlib import Path
 
 import networkx as nx
 
-from gymnasium_classica.models.graph import KennisKnoop, PrerequisiteEdge
+from gymnasium_classica.models.graph import Node, PrerequisiteEdge
 from gymnasium_classica.schemas.id_schema import validate_knoop_id
 
 
@@ -160,7 +160,7 @@ def validate_content_refs(graph: nx.DiGraph, repo_root: Path) -> list[str]:
     """
     errors: list[str] = []
     for node_id in graph.nodes:
-        knoop: KennisKnoop | None = graph.nodes[node_id].get("knoop")
+        knoop: Node | None = graph.nodes[node_id].get("knoop")
         if knoop is None or knoop.content_ref is None:
             continue
         ref_path = Path(knoop.content_ref)

@@ -14,7 +14,7 @@ when it is genuinely urgent (e.g. about to be forgotten).
 
 from dataclasses import dataclass, field
 
-from gymnasium_classica.models.graph import KennisKnoop, KnoopType
+from gymnasium_classica.models.graph import KnoopType, Node
 
 
 @dataclass
@@ -33,7 +33,7 @@ class NonInterferenceState:
     _cluster_counts: dict[str, int] = field(default_factory=dict)
     _total_selections: int = 0
 
-    def record_selection(self, knoop: KennisKnoop) -> None:
+    def record_selection(self, knoop: Node) -> None:
         """Record that *knoop* was just selected."""
         cluster = knoop.semantisch_cluster if knoop.type == KnoopType.V else None
         self._recent_clusters.append(cluster)
@@ -43,7 +43,7 @@ class NonInterferenceState:
         if cluster is not None:
             self._cluster_counts[cluster] = self._cluster_counts.get(cluster, 0) + 1
 
-    def cluster_penalty(self, knoop: KennisKnoop) -> float:
+    def cluster_penalty(self, knoop: Node) -> float:
         """Return a penalty in [0.0, 1.0] for selecting *knoop* next.
 
         Returns 0.0 (no penalty) when the node is not a vocabulary node,
@@ -69,7 +69,7 @@ class NonInterferenceState:
 
         return max_penalty
 
-    def apply_penalty(self, base_priority: float, knoop: KennisKnoop) -> float:
+    def apply_penalty(self, base_priority: float, knoop: Node) -> float:
         """Return the adjusted priority after applying the cluster penalty.
 
         ``adjusted = base_priority * (1 - penalty)``
@@ -87,9 +87,9 @@ class NonInterferenceState:
 
 
 def select_next(
-    candidates: list[tuple[float, KennisKnoop]],
+    candidates: list[tuple[float, Node]],
     state: NonInterferenceState,
-) -> KennisKnoop | None:
+) -> Node | None:
     """Select the best candidate after applying non-interference penalties.
 
     *candidates* is a list of ``(base_priority, knoop)`` pairs, where
@@ -99,7 +99,7 @@ def select_next(
     selected least often is preferred (fairness tiebreaker).  This ensures
     even distribution across clusters when base priorities are equal.
 
-    Returns the selected KennisKnoop (and updates *state*), or None if
+    Returns the selected Node (and updates *state*), or None if
     *candidates* is empty.
     """
     if not candidates:

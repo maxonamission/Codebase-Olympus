@@ -10,7 +10,7 @@ from gymnasium_classica.graph.loader import (
     load_graph,
     load_graph_from_dict,
 )
-from gymnasium_classica.models.graph import KennisKnoop, PrerequisiteEdge
+from gymnasium_classica.models.graph import Node, PrerequisiteEdge
 
 
 class TestLoadGraphFromDict:
@@ -24,7 +24,7 @@ class TestLoadGraphFromDict:
     def test_node_attributes(self, sample_graph_data):
         g = load_graph_from_dict(sample_graph_data)
         knoop = g.nodes["LAT-G-MORF-NOM-D1"]["knoop"]
-        assert isinstance(knoop, KennisKnoop)
+        assert isinstance(knoop, Node)
         assert knoop.titel_nl == "Nominativus 1e declinatie"
 
     def test_edge_attributes(self, sample_graph_data):

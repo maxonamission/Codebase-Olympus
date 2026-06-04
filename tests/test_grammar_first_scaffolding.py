@@ -26,8 +26,8 @@ from gymnasium_classica.models.graph import (
     Fase,
     Item,
     ItemType,
-    KennisKnoop,
     KnoopType,
+    Node,
     Richting,
     Taal,
 )
@@ -42,8 +42,8 @@ from gymnasium_classica.scheduling.session import SessionPhase
 KNOOP_ID = "LAT-G-MORF-DECL1-INTRO"
 
 
-def _knoop() -> KennisKnoop:
-    return KennisKnoop(
+def _knoop() -> Node:
+    return Node(
         id=KNOOP_ID,
         type=KnoopType.G,
         taal=Taal.LAT,

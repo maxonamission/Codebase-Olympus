@@ -20,7 +20,7 @@ from gymnasium_classica.api.schemas import (
     ProgressOverviewResponse,
     SessionMasteryEntry,
 )
-from gymnasium_classica.models.graph import KennisKnoop, KnoopType, PrerequisiteEdge
+from gymnasium_classica.models.graph import KnoopType, Node, PrerequisiteEdge
 from gymnasium_classica.models.learner import LearnerModel
 from gymnasium_classica.scheduling.priority import MASTERY_THRESHOLD
 
@@ -107,7 +107,7 @@ async def progress_overview(
         total = graph.number_of_nodes()
         domains: dict[str, DomainProgress] = {}
         for node_id in graph.nodes:
-            knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+            knoop: Node = graph.nodes[node_id]["knoop"]
             d = knoop.type.value
             if d not in domains:
                 domains[d] = DomainProgress(total=0, mastered=0, in_progress=0, unseen=0)
@@ -173,7 +173,7 @@ async def knoop_progress(
     if knoop_id not in graph.nodes:
         raise HTTPException(status_code=404, detail=f"Knoop {knoop_id!r} not found")
 
-    knoop: KennisKnoop = graph.nodes[knoop_id]["knoop"]
+    knoop: Node = graph.nodes[knoop_id]["knoop"]
 
     db = request.app.state.db
     learner = load_learner_model(db, user_id)
@@ -238,7 +238,7 @@ async def progress_clusters(
 
     nodes_per_cluster: dict[str, list[str]] = {c["label"]: [] for c in cluster_defs}
     for node_id in graph.nodes:
-        knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+        knoop: Node = graph.nodes[node_id]["knoop"]
         if knoop.type != KnoopType.V:
             continue
         label = knoop.semantisch_cluster
@@ -292,7 +292,7 @@ async def graph_data(
 
     nodes = []
     for node_id in graph.nodes:
-        knoop: KennisKnoop = graph.nodes[node_id]["knoop"]
+        knoop: Node = graph.nodes[node_id]["knoop"]
         mastery = 0.0
         status = "unseen"
         if learner:
