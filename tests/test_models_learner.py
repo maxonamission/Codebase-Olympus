@@ -70,9 +70,15 @@ class TestItemResponse:
             item_id="ITEM-001",
             correct=True,
             response_time_ms=2500,
+            knoop_id="LAT-G-MORF-NOM-D1",
+            richting="receptief",
+            mastery_before=0.4,
         )
         assert resp.correct is True
         assert resp.response_time_ms == 2500
+        assert resp.knoop_id == "LAT-G-MORF-NOM-D1"
+        assert resp.richting == "receptief"
+        assert resp.mastery_before == 0.4
 
     def test_response_time_cannot_be_negative(self):
         with pytest.raises(ValidationError):
@@ -81,6 +87,19 @@ class TestItemResponse:
                 item_id="ITEM-001",
                 correct=False,
                 response_time_ms=-1,
+                knoop_id="LAT-G-MORF-NOM-D1",
+                richting="receptief",
+                mastery_before=0.4,
+            )
+
+    def test_meetlaag_fields_are_required(self):
+        # L1-01: knoop_id, richting en mastery_before zijn verplicht (geen default).
+        with pytest.raises(ValidationError):
+            ItemResponse(
+                timestamp=datetime.now(),
+                item_id="ITEM-001",
+                correct=True,
+                response_time_ms=1000,
             )
 
 
