@@ -59,12 +59,17 @@ def bkt_update_posterior(
     prior: float,
     correct: bool,
     params: BKTParams | None = None,
+    learning_rate: float = 1.0,
 ) -> float:
     """Compute the updated posterior P(L_n) given an observation.
 
     Two-step update:
       1. Bayesian: P(L|obs) using guess/slip probabilities
       2. Transition: P(L_n) = P(L|obs) + (1 - P(L|obs)) * P(T)
+
+    *learning_rate* (default 1.0 = neutral) is a learner-level modifier on the
+    transition probability P(T): faster learners cross to mastery in fewer
+    opportunities (Yudelson, 2013). 1.0 reproduces the original behaviour.
 
     Returns the new posterior, clamped to [0.001, 0.999].
     """
@@ -74,7 +79,7 @@ def bkt_update_posterior(
     p_l = prior
     p_g = params.p_guess
     p_s = params.p_slip
-    p_t = params.p_transit
+    p_t = min(0.99, params.p_transit * learning_rate)
 
     if correct:
         # P(L | correct) = P(L)*(1-P(S)) / [P(L)*(1-P(S)) + (1-P(L))*P(G)]
@@ -122,13 +127,48 @@ def update_node_state(
     """
     state = _get_or_create_state(learner, node_id)
     correct = response in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT)
-    state.posterior_mastery = bkt_update_posterior(state.posterior_mastery, correct, params)
+    rate = learner.learning_rate
+    state.posterior_mastery = bkt_update_posterior(state.posterior_mastery, correct, params, rate)
     if direction == Direction.RECEPTIVE:
-        state.receptive_mastery = bkt_update_posterior(state.receptive_mastery, correct, params)
+        state.receptive_mastery = bkt_update_posterior(
+            state.receptive_mastery, correct, params, rate
+        )
     elif direction == Direction.PRODUCTIVE:
-        state.productive_mastery = bkt_update_posterior(state.productive_mastery, correct, params)
+        state.productive_mastery = bkt_update_posterior(
+            state.productive_mastery, correct, params, rate
+        )
     state.source = MasterySource.PRACTICE
     return state
+
+
+# Learner-niveau leersnelheid-schatting (L2-03)
+LEARNING_RATE_MIN = 0.5
+LEARNING_RATE_MAX = 2.0
+LEARNING_RATE_SENSITIVITY = 1.0
+
+
+def estimate_learning_rate(learner: LearnerModel) -> float:
+    """Schat de individuele leersnelheid uit de observatiegeschiedenis.
+
+    Vergelijkt per antwoord de uitkomst (correct=1/0) met de door het model
+    voorspelde mastery vlak vóór de poging (``ItemResponse.mastery_before``).
+    Een leerling die structureel beter presteert dan voorspeld krijgt een
+    leersnelheid > 1.0, wie achterblijft < 1.0. Interpreteerbaar en
+    monotoon; geclamped naar ``[LEARNING_RATE_MIN, LEARNING_RATE_MAX]``.
+
+    Zonder observaties is het resultaat 1.0 (neutraal = huidig gedrag).
+    """
+    residual_sum = 0.0
+    count = 0
+    for state in learner.node_states.values():
+        for response in state.item_history:
+            observed = 1.0 if response.correct else 0.0
+            residual_sum += observed - response.mastery_before
+            count += 1
+    if count == 0:
+        return 1.0
+    rate = 1.0 + LEARNING_RATE_SENSITIVITY * (residual_sum / count)
+    return max(LEARNING_RATE_MIN, min(LEARNING_RATE_MAX, rate))
 
 
 def propagate_practice_correct(
