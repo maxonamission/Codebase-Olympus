@@ -117,6 +117,20 @@ class SessionRecord(BaseModel):
     )
 
 
+class BaselineSnapshot(BaseModel):
+    """Mastery-nulpunt vastgelegd bij afronding van de intake.
+
+    Dient als referentie om voortgang en effectgrootte tegen af te zetten
+    (L1-02). Apart herkenbaar van latere metingen via ``captured_at``.
+    """
+
+    captured_at: datetime
+    mastery: dict[str, float] = Field(
+        default_factory=dict,
+        description="knoop_id -> posterior_mastery op het baseline-moment.",
+    )
+
+
 class LearnerModel(BaseModel):
     """Complete learner model for one user: mastery states and session history."""
 
@@ -131,4 +145,8 @@ class LearnerModel(BaseModel):
     intake_method: str | None = Field(
         default=None,
         description="School method used during intake, e.g. 'fortuna', 'pallas'.",
+    )
+    baseline: BaselineSnapshot | None = Field(
+        default=None,
+        description="Mastery-nulpunt vastgelegd bij intake-afronding (L1-02).",
     )
