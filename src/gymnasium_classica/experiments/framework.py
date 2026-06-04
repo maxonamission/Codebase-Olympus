@@ -33,6 +33,8 @@ class StrategyParams:
 
     spacing_multiplier: float = 1.0
     """Schaalt de SM-2-review-intervallen. 1.0 = ongewijzigd."""
+    motivation_enabled: bool = True
+    """Of de motivatie-uitlegmomenten actief zijn (L3-02). Variant-baar."""
 
 
 DEFAULT_PARAMS = StrategyParams()
