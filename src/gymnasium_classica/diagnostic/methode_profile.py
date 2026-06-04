@@ -31,12 +31,12 @@ def load_methode_mapping(path: Path | None = None) -> MethodeMapping:
     return data
 
 
-def get_treated_knoop_ids(
+def get_treated_node_ids(
     mapping: MethodeMapping,
     methode: str,
     up_to_chapter: str,
 ) -> set[str]:
-    """Return all knoop IDs that are treated up to (and including) *up_to_chapter*.
+    """Return all node IDs that are treated up to (and including) *up_to_chapter*.
 
     Chapters are accumulated: chapter 3 includes chapters 1, 2, and 3.
     """
@@ -76,12 +76,12 @@ def apply_methode_profile(
     if mapping is None:
         mapping = load_methode_mapping()
 
-    treated_ids = get_treated_knoop_ids(mapping, methode, up_to_chapter)
+    treated_ids = get_treated_node_ids(mapping, methode, up_to_chapter)
 
     for node_id in graph.nodes:
         prior = PRIOR_TREATED if node_id in treated_ids else PRIOR_UNTREATED
-        learner.knoop_states[node_id] = NodeState(
-            knoop_id=node_id,
+        learner.node_states[node_id] = NodeState(
+            node_id=node_id,
             posterior_mastery=prior,
             source=MasterySource.DIAGNOSTIC,
         )

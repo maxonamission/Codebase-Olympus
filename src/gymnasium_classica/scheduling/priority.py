@@ -72,7 +72,7 @@ def forget_urgency(state: NodeState, now: datetime | None = None) -> float:
 
 
 def readiness_score(
-    knoop_id: str,
+    node_id: str,
     learner: LearnerModel,
     graph: nx.DiGraph,
     prereq_threshold: float | None = None,
@@ -89,17 +89,17 @@ def readiness_score(
     if prereq_threshold is None:
         prereq_threshold = PREREQ_READY_THRESHOLD
 
-    state = learner.knoop_states.get(knoop_id)
+    state = learner.node_states.get(node_id)
     if state and state.posterior_mastery >= MASTERY_THRESHOLD:
         return 0.0  # Already mastered — not a "new material" candidate
 
-    predecessors = list(graph.predecessors(knoop_id))
+    predecessors = list(graph.predecessors(node_id))
     if not predecessors:
         return 1.0  # Root node — always ready
 
     min_posterior = 1.0
     for pred_id in predecessors:
-        pred_state = learner.knoop_states.get(pred_id)
+        pred_state = learner.node_states.get(pred_id)
         posterior = pred_state.posterior_mastery if pred_state else 0.0
         if posterior < prereq_threshold:
             return 0.0  # Hard gate: prerequisite not met
@@ -109,19 +109,19 @@ def readiness_score(
 
 
 def pedagogical_value(
-    knoop_id: str,
+    node_id: str,
     graph: nx.DiGraph,
     max_out_degree: int = 1,
 ) -> float:
     """Pedagogical value: normalized out-degree. High = unlocks many nodes."""
-    out_deg = int(graph.out_degree(knoop_id))
+    out_deg = int(graph.out_degree(node_id))
     if max_out_degree <= 0:
         return 0.0
     return min(1.0, out_deg / max_out_degree)
 
 
 def encompassing_bonus(
-    knoop_id: str,
+    node_id: str,
     graph: nx.DiGraph,
 ) -> float:
     """Bonus for nodes with high total incoming encompassing weight.
@@ -130,8 +130,8 @@ def encompassing_bonus(
     score higher.
     """
     total_weight = 0.0
-    for pred in graph.predecessors(knoop_id):
-        edge_data = graph.edges[pred, knoop_id].get("edge")
+    for pred in graph.predecessors(node_id):
+        edge_data = graph.edges[pred, node_id].get("edge")
         if isinstance(edge_data, PrerequisiteEdge):
             total_weight += edge_data.encompassing_weight
 
@@ -140,7 +140,7 @@ def encompassing_bonus(
 
 
 def domain_balance_penalty(
-    knoop: Node,
+    node: Node,
     session_type_counts: dict[str, int],
 ) -> float:
     """Penalty/bonus for domain balance within a session.
@@ -152,7 +152,7 @@ def domain_balance_penalty(
     if total == 0:
         return 0.0
 
-    domain = knoop.type.value
+    domain = node.type.value
     target = DOMAIN_BALANCE_TARGETS.get(domain, 0.25)
     actual = session_type_counts.get(domain, 0) / total
 
@@ -183,11 +183,11 @@ def compute_urgency_scores(
     results: list[tuple[float, Node]] = []
 
     for node_id in graph.nodes:
-        knoop: Node = graph.nodes[node_id]["knoop"]
-        state = learner.knoop_states.get(node_id)
+        node: Node = graph.nodes[node_id]["node"]
+        state = learner.node_states.get(node_id)
 
         if state is None:
-            state = NodeState(knoop_id=node_id, posterior_mastery=0.10)
+            state = NodeState(node_id=node_id, posterior_mastery=0.10)
 
         is_mastered = state.posterior_mastery >= MASTERY_THRESHOLD
         ready = readiness_score(node_id, learner, graph)
@@ -199,7 +199,7 @@ def compute_urgency_scores(
         f_urgency = forget_urgency(state, now)
         p_value = pedagogical_value(node_id, graph, max_out_deg)
         e_bonus = encompassing_bonus(node_id, graph)
-        d_balance = domain_balance_penalty(knoop, session_type_counts)
+        d_balance = domain_balance_penalty(node, session_type_counts)
 
         # For mastered nodes: readiness is 0 (they're review candidates, not new)
         # For new nodes: readiness contributes
@@ -211,7 +211,7 @@ def compute_urgency_scores(
             + W_DOMAIN_BALANCE * max(0.0, d_balance)
         )
 
-        results.append((urgency, knoop))
+        results.append((urgency, node))
 
     results.sort(key=lambda x: x[0], reverse=True)
     return results

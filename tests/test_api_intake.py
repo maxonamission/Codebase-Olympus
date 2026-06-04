@@ -34,8 +34,8 @@ def _apply_partial_mastery(learner: LearnerModel, graph, fraction: float = 0.3):
     topo = list(nx.topological_sort(graph))
     n_treated = max(1, int(len(topo) * fraction))
     for node_id in topo[:n_treated]:
-        learner.knoop_states[node_id] = NodeState(
-            knoop_id=node_id, posterior_mastery=0.70, source=MasterySource.DIAGNOSTIC
+        learner.node_states[node_id] = NodeState(
+            node_id=node_id, posterior_mastery=0.70, source=MasterySource.DIAGNOSTIC
         )
 
 
@@ -47,7 +47,7 @@ class TestIntakeManager:
         intake_id, q = mgr.start_intake("user1", learner, poc_graph)
         assert isinstance(intake_id, str)
         assert q is not None
-        assert q.knoop_id in poc_graph.nodes
+        assert q.node_id in poc_graph.nodes
 
     def test_start_all_unmastered_no_frontier(self, poc_graph):
         """Fresh learner: all at 0.10 ≤ 0.25 = resolved unmastered → no questions."""
@@ -91,7 +91,7 @@ class TestIntakeManager:
         assert learner.intake_completed
         assert learner.baseline is not None
         assert learner.baseline.mastery  # niet leeg
-        assert set(learner.baseline.mastery).issubset(set(learner.knoop_states))
+        assert set(learner.baseline.mastery).issubset(set(learner.node_states))
 
     def test_incorrect_answers_handled(self, poc_graph):
         learner = LearnerModel(user_id=uuid4())
@@ -152,7 +152,7 @@ class TestIntakeStartEndpoint:
         assert data["already_completed"] is False
         assert data["intake_id"] != ""
         if data["question"] is not None:
-            assert "knoop_id" in data["question"]
+            assert "node_id" in data["question"]
             assert "questions_asked" in data["question"]
             assert "max_questions" in data["question"]
 

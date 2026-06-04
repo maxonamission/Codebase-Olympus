@@ -18,7 +18,7 @@ FALLBACK_PENALTY_BASE = 0.15  # Multiplied by encompassing_weight
 
 def identify_suspect_prerequisites(
     graph: nx.DiGraph,
-    failed_knoop_id: str,
+    failed_node_id: str,
 ) -> list[tuple[str, float]]:
     """Given a failed post-requisite node, identify prerequisites that may
     be the cause, ranked by encompassing weight (highest = most likely cause).
@@ -28,8 +28,8 @@ def identify_suspect_prerequisites(
     """
     suspects: list[tuple[str, float]] = []
 
-    for pred in graph.predecessors(failed_knoop_id):
-        edge_data = graph.edges[pred, failed_knoop_id].get("edge")
+    for pred in graph.predecessors(failed_node_id):
+        edge_data = graph.edges[pred, failed_node_id].get("edge")
         if not isinstance(edge_data, PrerequisiteEdge):
             continue
         suspects.append((pred, edge_data.encompassing_weight))
@@ -41,9 +41,9 @@ def identify_suspect_prerequisites(
 def apply_fallback(
     learner: LearnerModel,
     graph: nx.DiGraph,
-    failed_knoop_id: str,
+    failed_node_id: str,
 ) -> list[str]:
-    """When a learner fails on *failed_knoop_id*, reduce the posterior of
+    """When a learner fails on *failed_node_id*, reduce the posterior of
     its prerequisites proportional to their encompassing weight.
 
     Only affects prerequisites that were established via diagnostic (source
@@ -53,11 +53,11 @@ def apply_fallback(
     Returns a list of prerequisite IDs whose posteriors were reduced
     (these should be added to the review queue with elevated priority).
     """
-    suspects = identify_suspect_prerequisites(graph, failed_knoop_id)
+    suspects = identify_suspect_prerequisites(graph, failed_node_id)
     affected: list[str] = []
 
     for pred_id, weight in suspects:
-        state = learner.knoop_states.get(pred_id)
+        state = learner.node_states.get(pred_id)
         if state is None:
             continue
 

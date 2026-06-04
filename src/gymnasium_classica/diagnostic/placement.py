@@ -29,7 +29,7 @@ class DiagnosticResult:
     """Result of a completed diagnostic session."""
 
     questions_asked: int = 0
-    knoop_ids_tested: list[str] = field(default_factory=list)
+    node_ids_tested: list[str] = field(default_factory=list)
     converged: bool = False
 
 
@@ -38,15 +38,15 @@ def _topo_order(graph: nx.DiGraph) -> list[str]:
     return list(nx.topological_sort(graph))
 
 
-def _get_or_init_state(learner: LearnerModel, knoop_id: str) -> NodeState:
+def _get_or_init_state(learner: LearnerModel, node_id: str) -> NodeState:
     """Get existing state or create a new one with default prior."""
-    if knoop_id not in learner.knoop_states:
-        learner.knoop_states[knoop_id] = NodeState(
-            knoop_id=knoop_id,
+    if node_id not in learner.node_states:
+        learner.node_states[node_id] = NodeState(
+            node_id=node_id,
             posterior_mastery=0.10,
             source=MasterySource.DIAGNOSTIC,
         )
-    return learner.knoop_states[knoop_id]
+    return learner.node_states[node_id]
 
 
 def _is_resolved(state: NodeState) -> bool:
@@ -72,8 +72,8 @@ def _find_start_position(learner: LearnerModel, topo: list[str]) -> int:
 
     Falls back to the midpoint if all are unresolved (no method profile).
     """
-    for i, knoop_id in enumerate(topo):
-        state = _get_or_init_state(learner, knoop_id)
+    for i, node_id in enumerate(topo):
+        state = _get_or_init_state(learner, node_id)
         if not _is_resolved(state):
             return i
 
@@ -87,7 +87,7 @@ SIBLING_BOOST_FACTOR = 0.6  # Siblings get 60% of the direct boost
 def _propagate_correct(
     learner: LearnerModel,
     graph: nx.DiGraph,
-    knoop_id: str,
+    node_id: str,
 ) -> None:
     """After a correct answer, boost prerequisites and siblings.
 
@@ -100,8 +100,8 @@ def _propagate_correct(
        the prerequisite DECL1-INTRO.
     """
     # 1. Boost direct prerequisites
-    for pred in graph.predecessors(knoop_id):
-        edge_data = graph.edges[pred, knoop_id].get("edge")
+    for pred in graph.predecessors(node_id):
+        edge_data = graph.edges[pred, node_id].get("edge")
         if not isinstance(edge_data, PrerequisiteEdge):
             continue
         weight = edge_data.encompassing_weight
@@ -112,11 +112,11 @@ def _propagate_correct(
         state.source = MasterySource.DIAGNOSTIC
 
     # 2. Boost siblings: nodes that share at least one prerequisite
-    parents = set(graph.predecessors(knoop_id))
+    parents = set(graph.predecessors(node_id))
     siblings_boosted: set[str] = set()
     for parent in parents:
         for sibling in graph.successors(parent):
-            if sibling == knoop_id or sibling in siblings_boosted:
+            if sibling == node_id or sibling in siblings_boosted:
                 continue
             siblings_boosted.add(sibling)
             # Get the edge weight from the shared parent
@@ -134,18 +134,18 @@ def _propagate_correct(
 def _propagate_incorrect(
     learner: LearnerModel,
     graph: nx.DiGraph,
-    knoop_id: str,
+    node_id: str,
 ) -> None:
     """After an incorrect answer, lower the posterior of the node and its
     successors (post-requisites) since they depend on this knowledge.
     """
     # Mark the tested node as likely unmastered
-    state = _get_or_init_state(learner, knoop_id)
+    state = _get_or_init_state(learner, node_id)
     state.posterior_mastery = max(0.0, state.posterior_mastery - 0.25)
     state.source = MasterySource.DIAGNOSTIC
 
     # Successors are now also suspect
-    for succ in graph.successors(knoop_id):
+    for succ in graph.successors(node_id):
         succ_state = _get_or_init_state(learner, succ)
         if succ_state.posterior_mastery > UNMASTERED_THRESHOLD:
             succ_state.posterior_mastery = max(0.0, succ_state.posterior_mastery - 0.10)
@@ -177,7 +177,7 @@ def run_diagnostic(
 ) -> DiagnosticResult:
     """Run the adaptive diagnostic placement test.
 
-    *answer_fn(knoop_id: str) -> bool* simulates or collects a learner's
+    *answer_fn(node_id: str) -> bool* simulates or collects a learner's
     answer for the given knowledge node.  Returns True for correct, False
     for incorrect.  In production this would be the frontend presenting an
     item and collecting the response.
@@ -206,8 +206,8 @@ def run_diagnostic(
             result.converged = True
             break
 
-        knoop_id = topo[cursor]
-        state = _get_or_init_state(learner, knoop_id)
+        node_id = topo[cursor]
+        state = _get_or_init_state(learner, node_id)
 
         # Skip already-resolved nodes
         if _is_resolved(state):
@@ -221,16 +221,16 @@ def run_diagnostic(
             continue
 
         # Ask the question
-        correct = answer_fn(knoop_id)
+        correct = answer_fn(node_id)
         result.questions_asked += 1
-        result.knoop_ids_tested.append(knoop_id)
+        result.node_ids_tested.append(node_id)
 
         if correct:
             # Boost this node
             state.posterior_mastery = min(1.0, state.posterior_mastery + 0.35)
             state.source = MasterySource.DIAGNOSTIC
             # Implicit diagnostics: boost prerequisites
-            _propagate_correct(learner, graph, knoop_id)
+            _propagate_correct(learner, graph, node_id)
             # Jump forward
             next_pos = _find_next_unresolved(
                 learner, topo, min(cursor + SKIP_ON_CORRECT, len(topo) - 1), +1
@@ -245,9 +245,9 @@ def run_diagnostic(
                     break
                 cursor = next_pos
         else:
-            _propagate_incorrect(learner, graph, knoop_id)
+            _propagate_incorrect(learner, graph, node_id)
             # Step back to prerequisites
-            preds = list(graph.predecessors(knoop_id))
+            preds = list(graph.predecessors(node_id))
             unresolved_pred = None
             for pred in preds:
                 pred_state = _get_or_init_state(learner, pred)

@@ -33,10 +33,10 @@ def save_learner(learner: LearnerModel, path: Path) -> None:
         json.dump(learner.model_dump(), f, indent=2, default=str, ensure_ascii=False)
 
 
-def interactive_answer_fn(knoop_id: str, knoop: Node) -> tuple[ResponseType, int]:
+def interactive_answer_fn(node_id: str, node: Node) -> tuple[ResponseType, int]:
     """Prompt the user for an answer via stdin."""
-    print(f"\n  [{knoop.type.value}] {knoop.titel_nl}")
-    print(f"  {knoop.beschrijving}")
+    print(f"\n  [{node.type.value}] {node.titel_nl}")
+    print(f"  {node.beschrijving}")
     while True:
         choice = input("  Antwoord — (c)orrect, (s)low, (i)ncorrect: ").strip().lower()
         if choice in ("c", "correct"):
@@ -51,8 +51,8 @@ def interactive_answer_fn(knoop_id: str, knoop: Node) -> tuple[ResponseType, int
 def make_simulated_answer_fn(learner: LearnerModel):
     """Return an answer_fn that simulates responses based on mastery + noise."""
 
-    def answer(knoop_id: str, knoop: Node) -> tuple[ResponseType, int]:
-        state = learner.knoop_states.get(knoop_id)
+    def answer(node_id: str, node: Node) -> tuple[ResponseType, int]:
+        state = learner.node_states.get(node_id)
         posterior = state.posterior_mastery if state else 0.10
 
         # Add 10% noise
@@ -80,9 +80,9 @@ def print_session_summary(result) -> None:
 
     if result.mastery_changes:
         print("\nMastery-veranderingen:")
-        for knoop_id, (before, after) in sorted(result.mastery_changes.items()):
+        for node_id, (before, after) in sorted(result.mastery_changes.items()):
             direction = "↑" if after > before else "↓" if after < before else "="
-            print(f"  {direction} {knoop_id}: {before:.2f} → {after:.2f}")
+            print(f"  {direction} {node_id}: {before:.2f} → {after:.2f}")
 
 
 def main() -> None:
@@ -122,12 +122,12 @@ def main() -> None:
             answer_fn = make_simulated_answer_fn(learner)
 
             def diag_answer(kid):
-                return answer_fn(kid, graph.nodes[kid]["knoop"])[0] == ResponseType.CORRECT
+                return answer_fn(kid, graph.nodes[kid]["node"])[0] == ResponseType.CORRECT
         else:
 
             def diag_answer(kid):
-                knoop = graph.nodes[kid]["knoop"]
-                resp, _ = interactive_answer_fn(kid, knoop)
+                node = graph.nodes[kid]["node"]
+                resp, _ = interactive_answer_fn(kid, node)
                 return resp in (ResponseType.CORRECT, ResponseType.SLOW_CORRECT)
 
         diag_result = run_diagnostic(learner, graph, diag_answer)

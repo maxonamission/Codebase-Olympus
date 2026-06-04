@@ -9,7 +9,7 @@ from gymnasium_classica.scheduling.non_interference import (
 )
 
 
-def _vocab_knoop(id_suffix: str, cluster: str | None = None) -> Node:
+def _vocab_node(id_suffix: str, cluster: str | None = None) -> Node:
     """Helper: create a minimal vocabulary Node."""
     return Node(
         id=f"LAT-V-F01-{id_suffix.upper()}",
@@ -23,7 +23,7 @@ def _vocab_knoop(id_suffix: str, cluster: str | None = None) -> Node:
     )
 
 
-def _grammar_knoop(id_suffix: str) -> Node:
+def _grammar_node(id_suffix: str) -> Node:
     """Helper: create a minimal grammar Node (no cluster)."""
     return Node(
         id=f"LAT-G-MORF-{id_suffix.upper()}",
@@ -41,13 +41,13 @@ class TestNonInterferenceState:
 
     def test_no_penalty_when_empty(self):
         state = NonInterferenceState()
-        knoop = _vocab_knoop("PATER", "familie")
-        assert state.cluster_penalty(knoop) == 0.0
+        node = _vocab_node("PATER", "familie")
+        assert state.cluster_penalty(node) == 0.0
 
     def test_penalty_after_same_cluster(self):
         state = NonInterferenceState()
-        pater = _vocab_knoop("PATER", "familie")
-        mater = _vocab_knoop("MATER", "familie")
+        pater = _vocab_node("PATER", "familie")
+        mater = _vocab_node("MATER", "familie")
 
         state.record_selection(pater)
         penalty = state.cluster_penalty(mater)
@@ -56,18 +56,18 @@ class TestNonInterferenceState:
 
     def test_no_penalty_different_cluster(self):
         state = NonInterferenceState()
-        pater = _vocab_knoop("PATER", "familie")
-        bellum = _vocab_knoop("BELLUM", "oorlog")
+        pater = _vocab_node("PATER", "familie")
+        bellum = _vocab_node("BELLUM", "oorlog")
 
         state.record_selection(pater)
         assert state.cluster_penalty(bellum) == 0.0
 
     def test_penalty_decays_with_distance(self):
         state = NonInterferenceState()
-        pater = _vocab_knoop("PATER", "familie")
-        bellum = _vocab_knoop("BELLUM", "oorlog")
-        terra = _vocab_knoop("TERRA", "natuur")
-        mater = _vocab_knoop("MATER", "familie")
+        pater = _vocab_node("PATER", "familie")
+        bellum = _vocab_node("BELLUM", "oorlog")
+        terra = _vocab_node("TERRA", "natuur")
+        mater = _vocab_node("MATER", "familie")
 
         state.record_selection(pater)  # 3 steps ago
         state.record_selection(bellum)  # 2 steps ago
@@ -79,37 +79,37 @@ class TestNonInterferenceState:
 
     def test_penalty_zero_beyond_window(self):
         state = NonInterferenceState()
-        pater = _vocab_knoop("PATER", "familie")
+        pater = _vocab_node("PATER", "familie")
         filler_clusters = ["oorlog", "natuur", "emotie"]
 
         state.record_selection(pater)
         for i, cl in enumerate(filler_clusters):
-            state.record_selection(_vocab_knoop(f"FILL{i}", cl))
+            state.record_selection(_vocab_node(f"FILL{i}", cl))
 
-        mater = _vocab_knoop("MATER", "familie")
+        mater = _vocab_node("MATER", "familie")
         # pater is now 4 steps ago, beyond window_size=3
         assert state.cluster_penalty(mater) == 0.0
 
-    def test_no_penalty_for_grammar_knoop(self):
+    def test_no_penalty_for_grammar_node(self):
         state = NonInterferenceState()
-        pater = _vocab_knoop("PATER", "familie")
-        nom = _grammar_knoop("NOM")
+        pater = _vocab_node("PATER", "familie")
+        nom = _grammar_node("NOM")
 
         state.record_selection(pater)
         assert state.cluster_penalty(nom) == 0.0
 
     def test_no_penalty_for_unclustered_vocab(self):
         state = NonInterferenceState()
-        word_a = _vocab_knoop("WORDA", None)
-        word_b = _vocab_knoop("WORDB", None)
+        word_a = _vocab_node("WORDA", None)
+        word_b = _vocab_node("WORDB", None)
 
         state.record_selection(word_a)
         assert state.cluster_penalty(word_b) == 0.0
 
     def test_apply_penalty_reduces_priority(self):
         state = NonInterferenceState()
-        pater = _vocab_knoop("PATER", "familie")
-        mater = _vocab_knoop("MATER", "familie")
+        pater = _vocab_node("PATER", "familie")
+        mater = _vocab_node("MATER", "familie")
 
         state.record_selection(pater)
         adjusted = state.apply_penalty(10.0, mater)
@@ -118,8 +118,8 @@ class TestNonInterferenceState:
 
     def test_apply_penalty_no_change_different_cluster(self):
         state = NonInterferenceState()
-        pater = _vocab_knoop("PATER", "familie")
-        bellum = _vocab_knoop("BELLUM", "oorlog")
+        pater = _vocab_node("PATER", "familie")
+        bellum = _vocab_node("BELLUM", "oorlog")
 
         state.record_selection(pater)
         adjusted = state.apply_penalty(10.0, bellum)
@@ -135,8 +135,8 @@ class TestSelectNext:
 
     def test_selects_highest_priority(self):
         state = NonInterferenceState()
-        low = _vocab_knoop("LOW", "oorlog")
-        high = _vocab_knoop("HIGH", "natuur")
+        low = _vocab_node("LOW", "oorlog")
+        high = _vocab_node("HIGH", "natuur")
         candidates = [(1.0, low), (5.0, high)]
 
         selected = select_next(candidates, state)
@@ -144,14 +144,14 @@ class TestSelectNext:
 
     def test_penalty_overrides_base_priority(self):
         state = NonInterferenceState()
-        pater = _vocab_knoop("PATER", "familie")
+        pater = _vocab_node("PATER", "familie")
 
         # Select pater first to set up the penalty
         state.record_selection(pater)
 
         # mater has higher base priority but same cluster
-        mater = _vocab_knoop("MATER", "familie")
-        bellum = _vocab_knoop("BELLUM", "oorlog")
+        mater = _vocab_node("MATER", "familie")
+        bellum = _vocab_node("BELLUM", "oorlog")
         candidates = [(5.0, mater), (4.0, bellum)]
 
         selected = select_next(candidates, state)
@@ -161,8 +161,8 @@ class TestSelectNext:
 
     def test_updates_state_after_selection(self):
         state = NonInterferenceState()
-        knoop = _vocab_knoop("PATER", "familie")
-        select_next([(1.0, knoop)], state)
+        node = _vocab_node("PATER", "familie")
+        select_next([(1.0, node)], state)
         assert state.recent_clusters == ["familie"]
 
     def test_10_items_max_2_same_cluster(self):
@@ -180,7 +180,7 @@ class TestSelectNext:
         for cl in clusters:
             for i in range(4):
                 suffix = f"{cl[:3].upper()}{i}"
-                pool.append((1.0, _vocab_knoop(suffix, cl)))
+                pool.append((1.0, _vocab_node(suffix, cl)))
 
         # Select 10 items
         selected: list[Node] = []

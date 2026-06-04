@@ -41,14 +41,14 @@ from gymnasium_classica.scheduling.session import (
 )
 
 
-def _make_knoop(knoop_id: str, taal: str = "lat") -> Node:
+def _make_node(node_id: str, taal: str = "lat") -> Node:
     """Helper to create a minimal Node."""
     return Node(
-        id=knoop_id,
+        id=node_id,
         type=NodeType.G,
         taal=taal,
-        titel_nl=f"Knoop {knoop_id}",
-        beschrijving=f"Test node {knoop_id}",
+        titel_nl=f"Knoop {node_id}",
+        beschrijving=f"Test node {node_id}",
         bloom_niveau=BloomLevel.KENNIS,
         fase=Phase.ONDERBOUW_1,
     )
@@ -61,7 +61,7 @@ def _build_test_graph() -> nx.DiGraph:
     """
     g = nx.DiGraph()
     for nid in ["LAT-G-MORF-ROOT", "LAT-G-MORF-CHILDA", "LAT-G-MORF-CHILDB", "LAT-G-MORF-CHILDC"]:
-        g.add_node(nid, knoop=_make_knoop(nid))
+        g.add_node(nid, node=_make_node(nid))
 
     edges = [
         ("LAT-G-MORF-ROOT", "LAT-G-MORF-CHILDA"),
@@ -102,7 +102,7 @@ def _make_passage(
     )
 
 
-def _always_correct(knoop_id: str, knoop: Node) -> tuple[ResponseType, int]:
+def _always_correct(node_id: str, node: Node) -> tuple[ResponseType, int]:
     return (ResponseType.CORRECT, 2000)
 
 
@@ -116,8 +116,8 @@ class TestReadinessScoreRelaxed:
         """With default threshold (0.75), a prereq at 0.50 blocks."""
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
         score = readiness_score("LAT-G-MORF-CHILDA", learner, g)
         assert score == 0.0
@@ -126,8 +126,8 @@ class TestReadinessScoreRelaxed:
         """With threshold 0.25, a prereq at 0.50 passes."""
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
         score = readiness_score(
             "LAT-G-MORF-CHILDA",
@@ -141,8 +141,8 @@ class TestReadinessScoreRelaxed:
         """Even with 0.25, a prereq at 0.10 still blocks."""
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.10
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.10
         )
         score = readiness_score(
             "LAT-G-MORF-CHILDA",
@@ -156,8 +156,8 @@ class TestReadinessScoreRelaxed:
         """Passing threshold=None should match the default behavior."""
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.80
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.80
         )
         score_default = readiness_score("LAT-G-MORF-CHILDA", learner, g)
         score_explicit = readiness_score(
@@ -174,8 +174,8 @@ class TestSelectPassage:
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
         # ROOT mastered so children are reachable with relaxed threshold
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
         passages = [_make_passage()]
         result = select_passage(learner, g, passages)
@@ -186,7 +186,7 @@ class TestSelectPassage:
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
         for nid in ["LAT-G-MORF-ROOT", "LAT-G-MORF-CHILDA", "LAT-G-MORF-CHILDC"]:
-            learner.knoop_states[nid] = NodeState(knoop_id=nid, posterior_mastery=0.90)
+            learner.node_states[nid] = NodeState(node_id=nid, posterior_mastery=0.90)
         passages = [_make_passage()]
         result = select_passage(learner, g, passages)
         assert result is None
@@ -200,8 +200,8 @@ class TestSelectPassage:
     def test_prefers_lower_difficulty(self):
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
         p_easy = _make_passage("LAT-P-EASY", moeilijkheid=1)
         p_hard = _make_passage("LAT-P-HARD", moeilijkheid=5)
@@ -224,8 +224,8 @@ class TestCandidatesContextFirst:
     def test_returns_candidates_from_passage(self):
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
         passages = [_make_passage()]
         candidates = _candidates_for_new_material_context_first(learner, g, passages)
@@ -238,8 +238,8 @@ class TestCandidatesContextFirst:
         """With standard threshold, same nodes are NOT candidates."""
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
         candidates = _candidates_for_new_material(learner, g)
         knoop_ids = [k.id for _, k in candidates]
@@ -252,7 +252,7 @@ class TestCandidatesContextFirst:
         learner = LearnerModel(user_id=uuid4())
         # All nodes mastered → no passage matches
         for nid in g.nodes:
-            learner.knoop_states[nid] = NodeState(knoop_id=nid, posterior_mastery=0.90)
+            learner.node_states[nid] = NodeState(node_id=nid, posterior_mastery=0.90)
         passages = [_make_passage()]
         candidates = _candidates_for_new_material_context_first(learner, g, passages)
         assert candidates == []
@@ -265,8 +265,8 @@ class TestRunSessionContextFirst:
     def test_context_first_produces_items(self):
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
         passages = [_make_passage()]
         result = run_session(
@@ -283,8 +283,8 @@ class TestRunSessionContextFirst:
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
         # ROOT fully mastered for grammar-first to find children
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.90
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.90
         )
         result = run_session(learner, g, _always_correct)
         # Should still work without passages
@@ -294,8 +294,8 @@ class TestRunSessionContextFirst:
         """Context-first without passages falls back to grammar-first behavior."""
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.90
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.90
         )
         result = run_session(
             learner,
@@ -315,8 +315,8 @@ class TestSessionManagerContextFirst:
         """Context-first session starts with a passage question."""
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
         passages = [_make_passage()]
         mgr = SessionManager()
@@ -330,7 +330,7 @@ class TestSessionManagerContextFirst:
         assert session_id is not None
         assert question is not None
         # First question should be the passage itself
-        assert question.knoop_id == "LAT-P-T01"
+        assert question.node_id == "LAT-P-T01"
         assert isinstance(question.stimulus, dict)
         assert question.stimulus["type"] == "passage"
         assert question.stimulus["tekst"] == "Puella cantat."
@@ -339,8 +339,8 @@ class TestSessionManagerContextFirst:
         """Default (grammar_first) SessionManager still works."""
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.90
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.90
         )
         mgr = SessionManager()
         session_id, _question = mgr.start_session(
@@ -354,8 +354,8 @@ class TestSessionManagerContextFirst:
         """After answering the passage, grammar nodes from it are presented."""
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
         passages = [_make_passage()]
         mgr = SessionManager()
@@ -367,7 +367,7 @@ class TestSessionManagerContextFirst:
             passages=passages,
         )
         assert q1 is not None
-        assert q1.knoop_id == "LAT-P-T01"  # passage first
+        assert q1.node_id == "LAT-P-T01"  # passage first
 
         # Answer the passage question
         result = mgr.submit_answer(session_id, ResponseType.CORRECT, 3000)
@@ -376,15 +376,15 @@ class TestSessionManagerContextFirst:
         # Next question should be a grammar node from the passage
         q2 = result.next_question
         if q2 is not None:
-            assert q2.knoop_id in ["LAT-G-MORF-CHILDA", "LAT-G-MORF-CHILDC"]
-            assert isinstance(q2.stimulus, str)  # not a dict (normal knoop question)
+            assert q2.node_id in ["LAT-G-MORF-CHILDA", "LAT-G-MORF-CHILDC"]
+            assert isinstance(q2.stimulus, str)  # not a dict (normal node question)
 
     def test_bkt_not_applied_to_passage(self):
         """BKT updates should NOT happen on the passage ID."""
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
         passages = [_make_passage()]
         mgr = SessionManager()
@@ -398,15 +398,15 @@ class TestSessionManagerContextFirst:
         # Answer the passage
         mgr.submit_answer(session_id, ResponseType.CORRECT, 2000)
 
-        # Passage ID should NOT appear in learner's knoop_states
-        assert "LAT-P-T01" not in learner.knoop_states
+        # Passage ID should NOT appear in learner's node_states
+        assert "LAT-P-T01" not in learner.node_states
 
     def test_bkt_applied_to_grammar_nodes(self):
         """BKT updates DO happen on the grammar nodes after passage."""
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
         passages = [_make_passage()]
         mgr = SessionManager()
@@ -420,13 +420,13 @@ class TestSessionManagerContextFirst:
         # Answer passage
         result1 = mgr.submit_answer(session_id, ResponseType.CORRECT, 2000)
         if result1.next_question is not None:
-            grammar_id = result1.next_question.knoop_id
-            before = learner.knoop_states.get(grammar_id)
+            grammar_id = result1.next_question.node_id
+            before = learner.node_states.get(grammar_id)
             before_val = before.posterior_mastery if before else 0.10
 
             # Answer the grammar node correctly
             mgr.submit_answer(session_id, ResponseType.CORRECT, 2000)
-            after_val = learner.knoop_states[grammar_id].posterior_mastery
+            after_val = learner.node_states[grammar_id].posterior_mastery
 
             # Mastery should have increased (BKT applied)
             assert after_val > before_val
@@ -435,8 +435,8 @@ class TestSessionManagerContextFirst:
         """Full flow: passage → grammar nodes → session completes."""
         g = _build_test_graph()
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-ROOT"] = NodeState(
-            knoop_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
+        learner.node_states["LAT-G-MORF-ROOT"] = NodeState(
+            node_id="LAT-G-MORF-ROOT", posterior_mastery=0.50
         )
         passages = [_make_passage()]
         mgr = SessionManager()

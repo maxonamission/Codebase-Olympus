@@ -12,7 +12,7 @@ from gymnasium_classica.diagnostic.methode_profile import (
     PRIOR_TREATED,
     PRIOR_UNTREATED,
     apply_methode_profile,
-    get_treated_knoop_ids,
+    get_treated_node_ids,
     load_methode_mapping,
 )
 from gymnasium_classica.diagnostic.placement import (
@@ -59,15 +59,15 @@ class TestMethodeProfile:
         assert fortuna["taal"] == "lat"
         assert "1" in fortuna["hoofdstukken"]
 
-    def test_treated_knoop_ids_cumulative(self, methode_mapping):
+    def test_treated_node_ids_cumulative(self, methode_mapping):
         """Chapters are cumulative: chapter 3 includes 1, 2, and 3."""
-        ch1_ids = get_treated_knoop_ids(methode_mapping, "fortuna", "1")
-        ch3_ids = get_treated_knoop_ids(methode_mapping, "fortuna", "3")
+        ch1_ids = get_treated_node_ids(methode_mapping, "fortuna", "1")
+        ch3_ids = get_treated_node_ids(methode_mapping, "fortuna", "3")
         assert ch1_ids < ch3_ids  # strict subset
 
     def test_fortuna_chapter_5_covers_all_50_poc_nodes(self, methode_mapping, poc_graph):
         """Fortuna up to chapter 5 should cover all 50 PoC nodes."""
-        treated = get_treated_knoop_ids(methode_mapping, "fortuna", "5")
+        treated = get_treated_node_ids(methode_mapping, "fortuna", "5")
         graph_ids = set(poc_graph.nodes)
         assert treated == graph_ids
 
@@ -77,10 +77,10 @@ class TestMethodeProfile:
         """
         apply_methode_profile(fresh_learner, poc_graph, "fortuna", "2", mapping=methode_mapping)
 
-        treated = get_treated_knoop_ids(methode_mapping, "fortuna", "2")
+        treated = get_treated_node_ids(methode_mapping, "fortuna", "2")
 
         for node_id in poc_graph.nodes:
-            state = fresh_learner.knoop_states[node_id]
+            state = fresh_learner.node_states[node_id]
             if node_id in treated:
                 assert state.posterior_mastery == pytest.approx(PRIOR_TREATED), (
                     f"Treated node {node_id} should have prior {PRIOR_TREATED}"
@@ -99,7 +99,7 @@ class TestMethodeProfile:
 
     def test_unknown_methode_raises(self, methode_mapping):
         with pytest.raises(ValueError, match="Unknown methode"):
-            get_treated_knoop_ids(methode_mapping, "nonexistent", "1")
+            get_treated_node_ids(methode_mapping, "nonexistent", "1")
 
 
 # ============================================================
@@ -113,7 +113,7 @@ class TestAdaptivePlacement:
     def test_converges_for_fully_mastered_learner(self, fresh_learner, poc_graph):
         """A learner who answers everything correctly converges quickly."""
 
-        def always_correct(knoop_id: str) -> bool:
+        def always_correct(node_id: str) -> bool:
             return True
 
         result = run_diagnostic(fresh_learner, poc_graph, always_correct)
@@ -123,7 +123,7 @@ class TestAdaptivePlacement:
     def test_converges_for_fully_unmastered_learner(self, fresh_learner, poc_graph):
         """A learner who answers everything incorrectly converges quickly."""
 
-        def always_incorrect(knoop_id: str) -> bool:
+        def always_incorrect(node_id: str) -> bool:
             return False
 
         result = run_diagnostic(fresh_learner, poc_graph, always_incorrect)
@@ -140,16 +140,16 @@ class TestAdaptivePlacement:
         # Set up priors: chapters 1-3 treated (decl 1+2 + presens 1-2 + esse)
         apply_methode_profile(fresh_learner, poc_graph, "fortuna", "3", mapping=methode_mapping)
 
-        treated = get_treated_knoop_ids(methode_mapping, "fortuna", "3")
+        treated = get_treated_node_ids(methode_mapping, "fortuna", "3")
 
-        def simulated_learner(knoop_id: str) -> bool:
-            return knoop_id in treated
+        def simulated_learner(node_id: str) -> bool:
+            return node_id in treated
 
         result = run_diagnostic(fresh_learner, poc_graph, simulated_learner)
 
         assert result.questions_asked <= 15, (
             f"Expected ≤ 15 questions, got {result.questions_asked}. "
-            f"Tested: {result.knoop_ids_tested}"
+            f"Tested: {result.node_ids_tested}"
         )
         assert fresh_learner.intake_completed is True
 
@@ -159,16 +159,16 @@ class TestAdaptivePlacement:
         """
         apply_methode_profile(fresh_learner, poc_graph, "fortuna", "2", mapping=methode_mapping)
 
-        treated = get_treated_knoop_ids(methode_mapping, "fortuna", "2")
+        treated = get_treated_node_ids(methode_mapping, "fortuna", "2")
 
-        def simulated_learner(knoop_id: str) -> bool:
-            return knoop_id in treated
+        def simulated_learner(node_id: str) -> bool:
+            return node_id in treated
 
         run_diagnostic(fresh_learner, poc_graph, simulated_learner)
 
         # Treated nodes should be at or above the mastered threshold
         for node_id in treated:
-            state = fresh_learner.knoop_states[node_id]
+            state = fresh_learner.node_states[node_id]
             assert state.posterior_mastery >= MASTERED_THRESHOLD * 0.8, (
                 f"Treated node {node_id} posterior {state.posterior_mastery:.2f} is too low"
             )
@@ -178,9 +178,9 @@ class TestAdaptivePlacement:
         everywhere and the diagnostic starts from the first unresolved node.
         """
 
-        def knows_basics(knoop_id: str) -> bool:
+        def knows_basics(node_id: str) -> bool:
             # Only knows the very first concept nodes
-            return knoop_id in {
+            return node_id in {
                 "LAT-G-MORF-NAAMVAL-INTRO",
                 "LAT-G-MORF-NUMERUS-INTRO",
                 "LAT-G-MORF-GENUS-INTRO",
@@ -212,7 +212,7 @@ class TestConditionalCompletion:
         pred_ids = list(poc_graph.predecessors("LAT-G-MORF-NOM-D1"))
         initial_posteriors = {}
         for pred_id in pred_ids:
-            initial_posteriors[pred_id] = fresh_learner.knoop_states[pred_id].posterior_mastery
+            initial_posteriors[pred_id] = fresh_learner.node_states[pred_id].posterior_mastery
 
         # Learner fails on NOM-D1 → prerequisites should be penalised
         affected = apply_fallback(fresh_learner, poc_graph, "LAT-G-MORF-NOM-D1")
@@ -222,7 +222,7 @@ class TestConditionalCompletion:
 
         # Affected prerequisites should have lower posteriors
         for pred_id in affected:
-            state = fresh_learner.knoop_states[pred_id]
+            state = fresh_learner.node_states[pred_id]
             assert state.posterior_mastery < initial_posteriors[pred_id], (
                 f"Prerequisite {pred_id} posterior should have decreased"
             )
@@ -238,14 +238,14 @@ class TestConditionalCompletion:
 
         # Manually mark one prerequisite as practice-verified
         pred_id = "LAT-G-MORF-DECL1-INTRO"
-        fresh_learner.knoop_states[pred_id].source = MasterySource.PRACTICE
-        original = fresh_learner.knoop_states[pred_id].posterior_mastery
+        fresh_learner.node_states[pred_id].source = MasterySource.PRACTICE
+        original = fresh_learner.node_states[pred_id].posterior_mastery
 
         apply_fallback(fresh_learner, poc_graph, "LAT-G-MORF-NOM-D1")
 
         # The practice-verified node should be unchanged
-        assert fresh_learner.knoop_states[pred_id].posterior_mastery == original
-        assert fresh_learner.knoop_states[pred_id].source == MasterySource.PRACTICE
+        assert fresh_learner.node_states[pred_id].posterior_mastery == original
+        assert fresh_learner.node_states[pred_id].source == MasterySource.PRACTICE
 
     def test_fallback_returns_affected_ids_for_review_queue(
         self, fresh_learner, poc_graph, methode_mapping
@@ -263,4 +263,4 @@ class TestConditionalCompletion:
 
         # All affected IDs should now have source=REVIEW
         for node_id in affected:
-            assert fresh_learner.knoop_states[node_id].source == MasterySource.REVIEW
+            assert fresh_learner.node_states[node_id].source == MasterySource.REVIEW

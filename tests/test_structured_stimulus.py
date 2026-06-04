@@ -1,16 +1,16 @@
-"""Tests voor F1-03: structured-stimulus-adapter in _knoop_to_question.
+"""Tests voor F1-03: structured-stimulus-adapter in _node_to_question.
 
 De frontend leest platte velden op de Question (``question.item_type``,
 ``question.options``, ``question.instruction``, ``question.hint``,
 ``question.audio_ref``). De adapter promoot deze uit het eerste item van
-een knoop zodat de frontend niet in ``question.items[0].stimulus`` hoeft
+een node zodat de frontend niet in ``question.items[0].stimulus`` hoeft
 te graven.
 """
 
 from __future__ import annotations
 
 from gymnasium_classica.api.session_manager import (
-    _knoop_to_question,
+    _node_to_question,
     _promote_first_item,
 )
 from gymnasium_classica.models.graph import (
@@ -86,7 +86,7 @@ def _plain_item(item_id: str = "ITEM-LAT-G-DEMO-001") -> Item:
     )
 
 
-def _vocab_knoop(items: list[Item]) -> Node:
+def _vocab_node(items: list[Item]) -> Node:
     return Node(
         id="LAT-V-F01-SUM",
         type=NodeType.V,
@@ -99,7 +99,7 @@ def _vocab_knoop(items: list[Item]) -> Node:
     )
 
 
-def _grammar_knoop(items: list[Item]) -> Node:
+def _grammar_node(items: list[Item]) -> Node:
     return Node(
         id="LAT-G-MORF-NAAMVAL-INTRO",
         type=NodeType.G,
@@ -114,8 +114,8 @@ def _grammar_knoop(items: list[Item]) -> Node:
 
 class TestPromoteFirstItem:
     def test_luister_herkenning_promotes_options_and_instruction(self):
-        knoop = _vocab_knoop([_mc_item()])
-        item_type, instruction, options, hint, audio_ref = _promote_first_item(knoop)
+        node = _vocab_node([_mc_item()])
+        item_type, instruction, options, hint, audio_ref = _promote_first_item(node)
 
         assert item_type == "luister_herkenning"
         assert instruction == ("Luister naar het Latijnse woord en kies de juiste vertaling.")
@@ -124,8 +124,8 @@ class TestPromoteFirstItem:
         assert audio_ref == "LAT-V-F01-SUM.wav"
 
     def test_luister_productie_promotes_hint(self):
-        knoop = _vocab_knoop([_text_item()])
-        item_type, _instruction, options, hint, audio_ref = _promote_first_item(knoop)
+        node = _vocab_node([_text_item()])
+        item_type, _instruction, options, hint, audio_ref = _promote_first_item(node)
 
         assert item_type == "luister_productie"
         assert hint == "zijn"
@@ -133,8 +133,8 @@ class TestPromoteFirstItem:
         assert audio_ref == "LAT-V-F01-SUM.wav"
 
     def test_plain_string_stimulus_leaves_optional_fields_none(self):
-        knoop = _grammar_knoop([_plain_item()])
-        item_type, instruction, options, hint, audio_ref = _promote_first_item(knoop)
+        node = _grammar_node([_plain_item()])
+        item_type, instruction, options, hint, audio_ref = _promote_first_item(node)
 
         assert item_type == "herkenning"
         assert instruction is None
@@ -142,14 +142,14 @@ class TestPromoteFirstItem:
         assert hint is None
         assert audio_ref is None
 
-    def test_knoop_without_items_returns_all_none(self):
-        knoop = _grammar_knoop([])
-        assert _promote_first_item(knoop) == (None, None, None, None, None)
+    def test_node_without_items_returns_all_none(self):
+        node = _grammar_node([])
+        assert _promote_first_item(node) == (None, None, None, None, None)
 
     def test_only_first_item_is_promoted(self):
-        """Een knoop met MC én text-item promoot alleen het eerste (MC)."""
-        knoop = _vocab_knoop([_mc_item(), _text_item()])
-        item_type, _instruction, options, hint, _audio_ref = _promote_first_item(knoop)
+        """Een node met MC én text-item promoot alleen het eerste (MC)."""
+        node = _vocab_node([_mc_item(), _text_item()])
+        item_type, _instruction, options, hint, _audio_ref = _promote_first_item(node)
 
         assert item_type == "luister_herkenning"
         assert options is not None
@@ -158,11 +158,11 @@ class TestPromoteFirstItem:
 
 
 class TestKnoopToQuestionFlatShape:
-    """De volledige _knoop_to_question-adapter — top-level Question-velden."""
+    """De volledige _node_to_question-adapter — top-level Question-velden."""
 
-    def test_mc_vocab_knoop_exposes_options_at_top_level(self, tmp_path):
-        q = _knoop_to_question(
-            _vocab_knoop([_mc_item()]),
+    def test_mc_vocab_node_exposes_options_at_top_level(self, tmp_path):
+        q = _node_to_question(
+            _vocab_node([_mc_item()]),
             SessionPhase.NEW_MATERIAL,
             content_dir=tmp_path,
         )
@@ -176,9 +176,9 @@ class TestKnoopToQuestionFlatShape:
         assert len(q.items) == 1
         assert q.items[0]["type"] == "luister_herkenning"
 
-    def test_text_vocab_knoop_exposes_hint(self, tmp_path):
-        q = _knoop_to_question(
-            _vocab_knoop([_text_item()]),
+    def test_text_vocab_node_exposes_hint(self, tmp_path):
+        q = _node_to_question(
+            _vocab_node([_text_item()]),
             SessionPhase.NEW_MATERIAL,
             content_dir=tmp_path,
         )
@@ -188,9 +188,9 @@ class TestKnoopToQuestionFlatShape:
         assert q.options is None
 
     def test_self_assess_fallback_leaves_flat_fields_none(self, tmp_path):
-        """Een knoop zonder items → zelfbeoordeling; geen MC-/hint-velden."""
-        knoop = _grammar_knoop([])
-        q = _knoop_to_question(knoop, SessionPhase.NEW_MATERIAL, content_dir=tmp_path)
+        """Een node zonder items → zelfbeoordeling; geen MC-/hint-velden."""
+        node = _grammar_node([])
+        q = _node_to_question(node, SessionPhase.NEW_MATERIAL, content_dir=tmp_path)
 
         assert q.item_type is None
         assert q.options is None
@@ -200,9 +200,9 @@ class TestKnoopToQuestionFlatShape:
         assert isinstance(q.stimulus, str)
 
     def test_plain_string_item_does_not_set_options(self, tmp_path):
-        """Grammatica-knoop met platte-string stimulus: wél item_type, geen opties."""
-        q = _knoop_to_question(
-            _grammar_knoop([_plain_item()]),
+        """Grammatica-node met platte-string stimulus: wél item_type, geen opties."""
+        q = _node_to_question(
+            _grammar_node([_plain_item()]),
             SessionPhase.NEW_MATERIAL,
             content_dir=tmp_path,
         )
@@ -219,8 +219,8 @@ class TestQuestionResponseSerialization:
     def test_promoted_fields_round_trip_through_response(self, tmp_path):
         from gymnasium_classica.api.routes.session import _question_to_response
 
-        q = _knoop_to_question(
-            _vocab_knoop([_mc_item()]),
+        q = _node_to_question(
+            _vocab_node([_mc_item()]),
             SessionPhase.NEW_MATERIAL,
             content_dir=tmp_path,
         )

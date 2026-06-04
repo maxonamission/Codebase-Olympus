@@ -21,7 +21,7 @@ from gymnasium_classica.scheduling.bkt import (
     SELF_REPORT_P_SLIP,
     BKTParams,
     bkt_update_posterior,
-    update_knoop_state,
+    update_node_state,
 )
 from gymnasium_classica.scheduling.session import process_self_report
 
@@ -75,64 +75,64 @@ class TestProcessSelfReport:
 
     def _make_assignment(self) -> OfflineAssignment:
         return OfflineAssignment(
-            knoop_id="LAT-G-MORF-DECL1-INTRO",
+            node_id="LAT-G-MORF-DECL1-INTRO",
             item_id="ITEM-OFFLINE-D1-001",
             assigned_at=datetime(2026, 4, 13),
         )
 
     def test_correct_increases_posterior(self):
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-DECL1-INTRO"] = NodeState(
-            knoop_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.30
+        learner.node_states["LAT-G-MORF-DECL1-INTRO"] = NodeState(
+            node_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.30
         )
         assignment = self._make_assignment()
 
         process_self_report(learner, assignment, SelfReportResponse.CORRECT)
 
-        state = learner.knoop_states["LAT-G-MORF-DECL1-INTRO"]
+        state = learner.node_states["LAT-G-MORF-DECL1-INTRO"]
         assert state.posterior_mastery > 0.30
 
     def test_partial_increases_posterior(self):
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-DECL1-INTRO"] = NodeState(
-            knoop_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.30
+        learner.node_states["LAT-G-MORF-DECL1-INTRO"] = NodeState(
+            node_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.30
         )
         assignment = self._make_assignment()
 
         process_self_report(learner, assignment, SelfReportResponse.PARTIAL)
 
-        state = learner.knoop_states["LAT-G-MORF-DECL1-INTRO"]
+        state = learner.node_states["LAT-G-MORF-DECL1-INTRO"]
         assert state.posterior_mastery > 0.30
 
     def test_incorrect_decreases_posterior(self):
         learner = LearnerModel(user_id=uuid4())
-        learner.knoop_states["LAT-G-MORF-DECL1-INTRO"] = NodeState(
-            knoop_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.70
+        learner.node_states["LAT-G-MORF-DECL1-INTRO"] = NodeState(
+            node_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.70
         )
         assignment = self._make_assignment()
 
         process_self_report(learner, assignment, SelfReportResponse.INCORRECT)
 
-        state = learner.knoop_states["LAT-G-MORF-DECL1-INTRO"]
+        state = learner.node_states["LAT-G-MORF-DECL1-INTRO"]
         assert state.posterior_mastery < 0.70
 
     def test_uses_self_report_params_not_default(self):
         """Verify that self-report uses the higher P(G)/P(S) params."""
         learner_sr = LearnerModel(user_id=uuid4())
-        learner_sr.knoop_states["LAT-G-MORF-DECL1-INTRO"] = NodeState(
-            knoop_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.30
+        learner_sr.node_states["LAT-G-MORF-DECL1-INTRO"] = NodeState(
+            node_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.30
         )
         assignment = self._make_assignment()
         process_self_report(learner_sr, assignment, SelfReportResponse.CORRECT)
-        sr_posterior = learner_sr.knoop_states["LAT-G-MORF-DECL1-INTRO"].posterior_mastery
+        sr_posterior = learner_sr.node_states["LAT-G-MORF-DECL1-INTRO"].posterior_mastery
 
         # Compare with normal BKT update
         learner_normal = LearnerModel(user_id=uuid4())
-        learner_normal.knoop_states["LAT-G-MORF-DECL1-INTRO"] = NodeState(
-            knoop_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.30
+        learner_normal.node_states["LAT-G-MORF-DECL1-INTRO"] = NodeState(
+            node_id="LAT-G-MORF-DECL1-INTRO", posterior_mastery=0.30
         )
-        update_knoop_state(learner_normal, "LAT-G-MORF-DECL1-INTRO", ResponseType.CORRECT)
-        normal_posterior = learner_normal.knoop_states["LAT-G-MORF-DECL1-INTRO"].posterior_mastery
+        update_node_state(learner_normal, "LAT-G-MORF-DECL1-INTRO", ResponseType.CORRECT)
+        normal_posterior = learner_normal.node_states["LAT-G-MORF-DECL1-INTRO"].posterior_mastery
 
         # Self-report should produce a lower posterior (less informative)
         assert sr_posterior < normal_posterior
@@ -151,7 +151,7 @@ class TestProcessSelfReport:
 
         process_self_report(learner, assignment, SelfReportResponse.CORRECT)
 
-        state = learner.knoop_states["LAT-G-MORF-DECL1-INTRO"]
+        state = learner.node_states["LAT-G-MORF-DECL1-INTRO"]
         assert state.source == MasterySource.SELF_REPORT
 
     def test_increments_self_report_count(self):
@@ -166,9 +166,9 @@ class TestProcessSelfReport:
         learner = LearnerModel(user_id=uuid4())
         assignment = self._make_assignment()
 
-        assert "LAT-G-MORF-DECL1-INTRO" not in learner.knoop_states
+        assert "LAT-G-MORF-DECL1-INTRO" not in learner.node_states
         process_self_report(learner, assignment, SelfReportResponse.CORRECT)
-        assert "LAT-G-MORF-DECL1-INTRO" in learner.knoop_states
+        assert "LAT-G-MORF-DECL1-INTRO" in learner.node_states
 
 
 class TestSelfReportRatioTracking:
@@ -185,7 +185,7 @@ class TestSelfReportRatioTracking:
 
         for i in range(3):
             assignment = OfflineAssignment(
-                knoop_id="LAT-G-MORF-DECL1-INTRO",
+                node_id="LAT-G-MORF-DECL1-INTRO",
                 item_id=f"ITEM-{i}",
                 assigned_at=now,
             )
@@ -202,7 +202,7 @@ class TestSelfReportRatioTracking:
         # 2 self-reports
         for i in range(2):
             assignment = OfflineAssignment(
-                knoop_id="LAT-G-MORF-DECL1-INTRO",
+                node_id="LAT-G-MORF-DECL1-INTRO",
                 item_id=f"ITEM-SR-{i}",
                 assigned_at=now,
             )

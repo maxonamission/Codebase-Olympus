@@ -105,7 +105,7 @@ class TestStartSession:
         # The two root nodes are NAAMVAL-INTRO and DECL-INTRO (no prerequisites)
         if question is not None:
             assert isinstance(question, Question)
-            assert question.knoop_id in (
+            assert question.node_id in (
                 "LAT-G-MORF-NAAMVAL-INTRO",
                 "LAT-G-MORF-DECL-INTRO",
             )
@@ -129,7 +129,7 @@ class TestSubmitAnswer:
 
         result = mgr.submit_answer(session_id, ResponseType.CORRECT, 2000, now=now)
         assert isinstance(result, AnswerResult)
-        assert result.feedback.knoop_id == q1.knoop_id
+        assert result.feedback.node_id == q1.node_id
         assert result.feedback.correct is True
         assert result.feedback.mastery_after >= result.feedback.mastery_before
 
@@ -306,16 +306,16 @@ def _broad_graph_and_learner(now: datetime):
 
     # Mastered ancestors met verouderde review → warmup-kandidaat.
     stale = now - timedelta(days=30)
-    learner.knoop_states["LAT-G-MORF-NAAMVAL-INTRO"] = NodeState(
-        knoop_id="LAT-G-MORF-NAAMVAL-INTRO",
+    learner.node_states["LAT-G-MORF-NAAMVAL-INTRO"] = NodeState(
+        node_id="LAT-G-MORF-NAAMVAL-INTRO",
         posterior_mastery=0.92,
         easiness_factor=2.5,
         interval_days=5.0,
         repetitions=3,
         last_review=stale,
     )
-    learner.knoop_states["LAT-G-MORF-DECL-INTRO"] = NodeState(
-        knoop_id="LAT-G-MORF-DECL-INTRO",
+    learner.node_states["LAT-G-MORF-DECL-INTRO"] = NodeState(
+        node_id="LAT-G-MORF-DECL-INTRO",
         posterior_mastery=0.88,
         easiness_factor=2.5,
         interval_days=5.0,
@@ -324,8 +324,8 @@ def _broad_graph_and_learner(now: datetime):
     )
     # Mastered losstaand vocab-item, niet aangeraakt in deze sessie
     # → cooldown-kandidaat.
-    learner.knoop_states["LAT-V-F01-ESSE"] = NodeState(
-        knoop_id="LAT-V-F01-ESSE",
+    learner.node_states["LAT-V-F01-ESSE"] = NodeState(
+        node_id="LAT-V-F01-ESSE",
         posterior_mastery=0.91,
         easiness_factor=2.5,
         interval_days=3.0,
@@ -336,7 +336,7 @@ def _broad_graph_and_learner(now: datetime):
 
 
 def _graph_with_offline_item():
-    """Graph met één knoop die een OFFLINE_SCHRIJVEN-item bevat."""
+    """Graph met één node die een OFFLINE_SCHRIJVEN-item bevat."""
     data = {
         "knopen": [
             {
@@ -446,7 +446,7 @@ class TestMaxNewNodes:
                     "type": "G",
                     "taal": "lat",
                     "titel_nl": f"Root {i}",
-                    "beschrijving": f"Root knoop {i}.",
+                    "beschrijving": f"Root node {i}.",
                     "bloom_niveau": "kennis",
                     "fase": "onderbouw_1",
                     "items": [],
@@ -589,9 +589,9 @@ class TestContextFirstRoute:
         # Mastery voor passage-step blijft 0.0 (geen BKT-update).
         assert result.feedback.mastery_before == 0.0
         assert result.feedback.mastery_after == 0.0
-        # De vervolgvraag is een grammar-knoop uit de passage.
+        # De vervolgvraag is een grammar-node uit de passage.
         assert result.next_question is not None
-        assert result.next_question.knoop_id in passage.knoop_ids
+        assert result.next_question.node_id in passage.knoop_ids
 
 
 class TestOfflineAssignmentCollection:
@@ -613,7 +613,7 @@ class TestOfflineAssignmentCollection:
         assert any(a.item_id == "ITEM-OFFLINE-D1-001" for a in learner.pending_offline_assignments)
 
     def test_offline_item_not_duplicated_across_sessions(self):
-        """Een tweede sessie op dezelfde knoop voegt niet nog een assignment toe."""
+        """Een tweede sessie op dezelfde node voegt niet nog een assignment toe."""
         now = datetime(2026, 4, 16, 10, 0, 0)
         graph, learner = _graph_with_offline_item()
         mgr = SessionManager()
@@ -649,7 +649,7 @@ class TestSessionHistoryRecorded:
 class TestLearnerModelRoundtrip:
     """De LearnerModel moet JSON-serializable zijn na een sessie (persist-ready)."""
 
-    def test_roundtrip_preserves_knoop_states_and_history(self):
+    def test_roundtrip_preserves_node_states_and_history(self):
         now = datetime(2026, 4, 16, 10, 0, 0)
         graph, learner = _broad_graph_and_learner(now)
         mgr = SessionManager()
@@ -660,9 +660,9 @@ class TestLearnerModelRoundtrip:
         restored = LearnerModel.model_validate_json(serialized)
 
         assert restored.user_id == learner.user_id
-        assert set(restored.knoop_states.keys()) == set(learner.knoop_states.keys())
-        for knoop_id, state in learner.knoop_states.items():
-            assert restored.knoop_states[knoop_id].posterior_mastery == state.posterior_mastery
-            assert restored.knoop_states[knoop_id].repetitions == state.repetitions
+        assert set(restored.node_states.keys()) == set(learner.node_states.keys())
+        for node_id, state in learner.node_states.items():
+            assert restored.node_states[node_id].posterior_mastery == state.posterior_mastery
+            assert restored.node_states[node_id].repetitions == state.repetitions
         assert len(restored.session_history) == len(learner.session_history)
         assert restored.session_history[0].session_id == session_id

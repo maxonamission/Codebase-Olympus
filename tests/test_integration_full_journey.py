@@ -163,7 +163,7 @@ class TestSessionPersistsAcrossLogins:
             resp = client2.get("/progress/overview", headers=headers2)
             assert resp.status_code == 200, resp.text
             overview = resp.json()
-            # After a session against a real graph, at least one knoop has
+            # After a session against a real graph, at least one node has
             # moved from unseen into mastered or in_progress.
             assert overview["mastered"] + overview["in_progress"] >= 1
 
@@ -217,13 +217,13 @@ class TestIntakeThenSession:
                     break
             assert answered < 50, "Intake did not terminate"
 
-            # Verify diagnostic source on at least some knoop_states.
+            # Verify diagnostic source on at least some node_states.
             conn = client.app.state.db
             learner = load_learner_model(conn, user_id)
             assert learner is not None
             assert learner.intake_completed is True
             diagnostic_nodes = [
-                ks for ks in learner.knoop_states.values() if ks.source.value == "diagnostic"
+                ks for ks in learner.node_states.values() if ks.source.value == "diagnostic"
             ]
             assert diagnostic_nodes, "Intake must mark nodes with source=diagnostic"
 
@@ -234,7 +234,7 @@ class TestIntakeThenSession:
 
 
 class TestIncorrectAnswerTriggersFallback:
-    """An INCORRECT on a diagnostic-sourced knoop triggers conditional-completion
+    """An INCORRECT on a diagnostic-sourced node triggers conditional-completion
     fallback: posterior drops and the source flag stays diagnostic (or is
     updated by the practice response — the contract here is that fallback
     runs, not that the source changes)."""
@@ -268,7 +268,7 @@ class TestIncorrectAnswerTriggersFallback:
             before_learner = load_learner_model(conn, user_id)
             assert before_learner is not None
             before_mastery = {
-                k: s.posterior_mastery for k, s in before_learner.knoop_states.items()
+                k: s.posterior_mastery for k, s in before_learner.node_states.items()
             }
 
             # Start a session and answer the first question INCORRECT.
@@ -277,7 +277,7 @@ class TestIncorrectAnswerTriggersFallback:
             if first_q is None:
                 pytest.skip("No question available after intake")
 
-            knoop_id = first_q["knoop_id"]
+            node_id = first_q["node_id"]
             stimulus = first_q.get("stimulus")
             if isinstance(stimulus, dict) and stimulus.get("type") == "passage":
                 pytest.skip("First question is a passage; fallback scenario N/A")
@@ -291,9 +291,9 @@ class TestIncorrectAnswerTriggersFallback:
                 },
                 headers=headers,
             ).json()
-            assert answer["feedback"]["knoop_id"] == knoop_id
+            assert answer["feedback"]["node_id"] == node_id
             assert answer["feedback"]["correct"] is False
-            assert answer["feedback"]["mastery_after"] < before_mastery.get(knoop_id, 1.0)
+            assert answer["feedback"]["mastery_after"] < before_mastery.get(node_id, 1.0)
 
 
 class TestMultipleSessionsAccumulate:

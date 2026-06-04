@@ -50,7 +50,7 @@ class TestStartSession:
         # With the full graph, there should be a question available
         if data["question"] is not None:
             q = data["question"]
-            assert "knoop_id" in q
+            assert "node_id" in q
             assert "titel" in q
             assert "phase" in q
 
@@ -181,8 +181,8 @@ class TestSubmitAnswer:
         )
         assert resp.status_code == 422
 
-    def test_v_knoop_response_includes_vocab_metadata(self, client):
-        """F1-05: een V-knoop in de response krijgt vocab_metadata."""
+    def test_v_node_response_includes_vocab_metadata(self, client):
+        """F1-05: een V-node in de response krijgt vocab_metadata."""
         from gymnasium_classica.api.routes.session import _question_to_response
         from gymnasium_classica.api.session_manager import Question
         from gymnasium_classica.vocab.loader import VocabEntry
@@ -199,7 +199,7 @@ class TestSubmitAnswer:
             ),
         }
         q = Question(
-            knoop_id="LAT-V-F01-SUM",
+            node_id="LAT-V-F01-SUM",
             titel="sum — zijn",
             beschrijving="",
             stimulus="Wat betekent sum?",
@@ -213,12 +213,12 @@ class TestSubmitAnswer:
         assert resp.vocab_metadata.forms == "esse"
         assert resp.vocab_metadata.meaning == "zijn"
 
-    def test_non_v_knoop_response_has_no_vocab_metadata(self, client):
+    def test_non_v_node_response_has_no_vocab_metadata(self, client):
         from gymnasium_classica.api.routes.session import _question_to_response
         from gymnasium_classica.api.session_manager import Question
 
         q = Question(
-            knoop_id="LAT-G-MORF-NOM-D1",
+            node_id="LAT-G-MORF-NOM-D1",
             titel="Nominativus D1",
             beschrijving="",
             stimulus="",
@@ -324,7 +324,7 @@ class TestSessionSummary:
         headers = _auth_header(client)
         session_id = self._run_session(client, headers)
         data = client.get(f"/session/{session_id}/summary", headers=headers).json()
-        for _knoop_id, change in data["mastery_changes"].items():
+        for _node_id, change in data["mastery_changes"].items():
             assert "before" in change
             assert "after" in change
             assert isinstance(change["before"], float)
@@ -386,6 +386,6 @@ class TestContextFirstSessionAPI:
         q = data["question"]
         if q is not None:
             stimulus = q["stimulus"]
-            # Should be a regular knoop question (string), not a passage dict
+            # Should be a regular node question (string), not a passage dict
             if isinstance(stimulus, dict):
                 assert stimulus.get("type") != "passage"

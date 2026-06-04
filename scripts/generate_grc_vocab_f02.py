@@ -84,7 +84,7 @@ def make_beschrijving(w: dict, band: str) -> str:
     return f"{w['lemma']}: {w['mean']}. Frequentieband {band}."
 
 
-def make_knoop(w: dict, band: str) -> dict:
+def make_node(w: dict, band: str) -> dict:
     return {
         "id": f"GRC-V-{band}-{w['id']}",
         "type": "V",
@@ -121,7 +121,7 @@ def main() -> None:
     existing_ids = {k["id"] for k in existing["knopen"]}
 
     words = json.loads(WORDS.read_text("utf-8"))
-    new_knopen = [make_knoop(w, BAND) for w in words]
+    new_knopen = [make_node(w, BAND) for w in words]
     new_edges = [e for w in words if (e := make_edge(w, BAND)) is not None]
 
     for k in new_knopen:

@@ -1,4 +1,4 @@
-"""Tests voor scripts/content_coverage.py — dekkingsrapportage per knoop.
+"""Tests voor scripts/content_coverage.py — dekkingsrapportage per node.
 
 Doel: regressiecheck op de content-pipeline. Als LAT-G onder de drempel
 zakt (bijv. doordat nieuwe knopen worden toegevoegd zonder items), faalt
@@ -50,8 +50,8 @@ def coverage_report():
 
 
 class TestPerKnoopFields:
-    def test_every_knoop_has_four_flags(self, coverage_report):
-        """Elke knoop krijgt has_items / has_content / has_audio / in_passage."""
+    def test_every_node_has_four_flags(self, coverage_report):
+        """Elke node krijgt has_items / has_content / has_audio / in_passage."""
         assert len(coverage_report.knopen) > 0
         for k in coverage_report.knopen:
             assert isinstance(k.has_items, bool)
@@ -63,7 +63,7 @@ class TestPerKnoopFields:
         """has_audio mag alleen True zijn voor V-knopen."""
         for k in coverage_report.knopen:
             if k.has_audio:
-                assert k.type == "V", f"Niet-V knoop {k.id} heeft has_audio=True"
+                assert k.type == "V", f"Niet-V node {k.id} heeft has_audio=True"
 
 
 class TestSummaryBuckets:
@@ -73,7 +73,7 @@ class TestSummaryBuckets:
         actual = {(s.taal, s.type) for s in coverage_report.summaries}
         assert expected.issubset(actual)
 
-    def test_totals_match_knoop_count(self, coverage_report):
+    def test_totals_match_node_count(self, coverage_report):
         """Som van alle bucket-totalen gelijk aan aantal knopen."""
         total = sum(s.total for s in coverage_report.summaries)
         assert total == len(coverage_report.knopen)

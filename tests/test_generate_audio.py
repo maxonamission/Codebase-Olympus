@@ -130,13 +130,13 @@ class TestCollectVocabNodes:
 
     def test_entries_sorted_by_id(self, graph_dir: Path):
         entries = collect_vocab_nodes(graph_dir)
-        ids = [e.knoop_id for e in entries]
+        ids = [e.node_id for e in entries]
         assert ids == sorted(ids)
 
     def test_all_entries_have_lemma(self, graph_dir: Path):
         entries = collect_vocab_nodes(graph_dir)
         for entry in entries:
-            assert entry.lemma, f"Empty lemma for {entry.knoop_id}"
+            assert entry.lemma, f"Empty lemma for {entry.node_id}"
 
 
 # ---------------------------------------------------------------------------
@@ -149,9 +149,9 @@ class TestGenerateAllDryRun:
 
     def _make_entries(self) -> list[VocabEntry]:
         return [
-            VocabEntry(knoop_id="LAT-V-F01-SUM", lemma="sum, esse", taal="lat"),
-            VocabEntry(knoop_id="LAT-V-F01-DO", lemma="do, dare", taal="lat"),
-            VocabEntry(knoop_id="GRC-V-F01-EIMI", lemma="εἰμί, εἶναι", taal="grc"),
+            VocabEntry(node_id="LAT-V-F01-SUM", lemma="sum, esse", taal="lat"),
+            VocabEntry(node_id="LAT-V-F01-DO", lemma="do, dare", taal="lat"),
+            VocabEntry(node_id="GRC-V-F01-EIMI", lemma="εἰμί, εἶναι", taal="grc"),
         ]
 
     def test_dry_run_creates_no_files(self, tmp_path: Path):
@@ -183,8 +183,8 @@ class TestGenerateAllPlaceholder:
 
     def _make_entries(self) -> list[VocabEntry]:
         return [
-            VocabEntry(knoop_id="LAT-V-F01-SUM", lemma="sum, esse", taal="lat"),
-            VocabEntry(knoop_id="GRC-V-F01-EIMI", lemma="εἰμί, εἶναι", taal="grc"),
+            VocabEntry(node_id="LAT-V-F01-SUM", lemma="sum, esse", taal="lat"),
+            VocabEntry(node_id="GRC-V-F01-EIMI", lemma="εἰμί, εἶναι", taal="grc"),
         ]
 
     @patch("generate_audio._espeak_available", return_value=False)

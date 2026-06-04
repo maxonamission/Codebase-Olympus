@@ -59,7 +59,7 @@ class User(BaseModel):
         default=True,
         description=(
             "Opt-in: grammar-first learners zien markdown-uitleg bij de "
-            "eerste introductie van een G-knoop.  Context-first leerlingen "
+            "eerste introductie van een G-node.  Context-first leerlingen "
             "krijgen altijd scaffolding na een passage — deze flag raakt "
             "alleen grammar-first.  Bestaande users krijgen True bij de "
             "eerste laad-actie dankzij de Pydantic-default."

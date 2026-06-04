@@ -147,7 +147,7 @@ def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: i
 
     Stimulus: listen to audio, choose the correct translation from 4 options.
     """
-    knoop_id = node["id"]
+    node_id = node["id"]
     lemma, translation = parse_titel(node["titel_nl"])
     first_word = extract_first_word(lemma)
     correct = extract_short_translation(translation)
@@ -156,11 +156,11 @@ def generate_herkenning_item(node: dict, translation_pool: list[str], item_nr: i
     options = [correct, *distractors]
     random.shuffle(options)
 
-    taal_label = "Latijnse" if knoop_id.startswith("LAT") else "Griekse"
+    taal_label = "Latijnse" if node_id.startswith("LAT") else "Griekse"
 
     return {
-        "id": f"ITEM-{knoop_id}-{item_nr:03d}",
-        "knoop_ids": [knoop_id],
+        "id": f"ITEM-{node_id}-{item_nr:03d}",
+        "knoop_ids": [node_id],
         "type": "luister_herkenning",
         "richting": "receptief",
         "moeilijkheid_initieel": round(random.uniform(-1.0, 0.0), 2),
@@ -188,17 +188,17 @@ def generate_productie_item(node: dict, item_nr: int) -> dict:
 
     Stimulus: listen to audio, type the word you hear in the original language.
     """
-    knoop_id = node["id"]
+    node_id = node["id"]
     lemma, translation = parse_titel(node["titel_nl"])
     first_word = extract_first_word(lemma)
     correct = extract_short_translation(translation)
 
-    taal_label = "Latijnse" if knoop_id.startswith("LAT") else "Griekse"
-    taal_naam = "Latijn" if knoop_id.startswith("LAT") else "Grieks"
+    taal_label = "Latijnse" if node_id.startswith("LAT") else "Griekse"
+    taal_naam = "Latijn" if node_id.startswith("LAT") else "Grieks"
 
     return {
-        "id": f"ITEM-{knoop_id}-{item_nr:03d}",
-        "knoop_ids": [knoop_id],
+        "id": f"ITEM-{node_id}-{item_nr:03d}",
+        "knoop_ids": [node_id],
         "type": "luister_productie",
         "richting": "productief",
         "moeilijkheid_initieel": round(random.uniform(0.0, 1.5), 2),
@@ -246,8 +246,8 @@ def generate_items_for_file(json_path: Path, item_type: str) -> tuple[int, int]:
     node_map = {k["id"]: k for k in data["knopen"]}
 
     for node in nodes:
-        knoop_id = node["id"]
-        target = node_map[knoop_id]
+        node_id = node["id"]
+        target = node_map[node_id]
         if "items" not in target:
             target["items"] = []
 

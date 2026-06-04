@@ -60,11 +60,11 @@ def main():
     print(f"   LAT-G knopen met items:    {len(knopen_met)}")
     print(f"   LAT-G knopen zonder items: {len(knopen_zonder)}")
     print(f"   Totaal items:              {total}")
-    print(f"   Gem. items/knoop:          {total / len(knopen_met):.1f}")
+    print(f"   Gem. items/node:          {total / len(knopen_met):.1f}")
 
     min_items = min(n for _, n in knopen_met)
     if min_items < 2:
-        print(f"   ❌ Minimumeis (2 items/knoop) NIET gehaald: min = {min_items}")
+        print(f"   ❌ Minimumeis (2 items/node) NIET gehaald: min = {min_items}")
         ok = False
     else:
         print(f"   ✓ Alle knopen met items >= 2 (min = {min_items})")

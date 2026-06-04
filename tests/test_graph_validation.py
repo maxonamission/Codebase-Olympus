@@ -71,7 +71,7 @@ class TestFindRootNodes:
         # Add a second root
         from gymnasium_classica.models.graph import Node
 
-        knoop = Node(
+        node = Node(
             id="LAT-G-MORF-GENUS-INTRO",
             type="G",
             taal="lat",
@@ -80,7 +80,7 @@ class TestFindRootNodes:
             bloom_niveau="kennis",
             fase="onderbouw_1",
         )
-        g.add_node(knoop.id, knoop=knoop)
+        g.add_node(node.id, node=node)
         roots = find_root_nodes(g)
         assert len(roots) == 2
 
@@ -126,8 +126,8 @@ class TestCheckConnectivity:
             bloom_niveau="kennis",
             fase="onderbouw_1",
         )
-        g.add_node(k1.id, knoop=k1)
-        g.add_node(k2.id, knoop=k2)
+        g.add_node(k1.id, node=k1)
+        g.add_node(k2.id, node=k2)
         e = PrerequisiteEdge(
             source_id=k1.id,
             target_id=k2.id,

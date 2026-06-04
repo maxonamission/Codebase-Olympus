@@ -56,7 +56,7 @@ class ItemResponse(BaseModel):
         description="ItemType value at attempt-time (herkenning, productie, ...).",
     )
     # --- L1-01 meetlaag: verplichte velden voor retentie- en effectgrootte-analyse ---
-    knoop_id: str = Field(
+    node_id: str = Field(
         description="Knoop waartoe dit antwoord hoort; maakt de respons zelf-beschrijvend voor platte analyse en export.",
     )
     richting: str | None = Field(
@@ -75,7 +75,7 @@ class ItemResponse(BaseModel):
 class NodeState(BaseModel):
     """Per-node mastery state for a learner, combining BKT posterior and SM-2 scheduling."""
 
-    knoop_id: str
+    node_id: str
     posterior_mastery: float = Field(ge=0.0, le=1.0, default=0.0)
     easiness_factor: float = Field(gt=0.0, default=2.5)
     interval_days: float = Field(ge=0.0, default=0.0)
@@ -89,7 +89,7 @@ class NodeState(BaseModel):
 class OfflineAssignment(BaseModel):
     """A pending offline writing assignment scheduled at the end of a session."""
 
-    knoop_id: str
+    node_id: str
     item_id: str
     assigned_at: datetime
     completed: bool = False
@@ -127,7 +127,7 @@ class BaselineSnapshot(BaseModel):
     captured_at: datetime
     mastery: dict[str, float] = Field(
         default_factory=dict,
-        description="knoop_id -> posterior_mastery op het baseline-moment.",
+        description="node_id -> posterior_mastery op het baseline-moment.",
     )
 
 
@@ -135,7 +135,7 @@ class LearnerModel(BaseModel):
     """Complete learner model for one user: mastery states and session history."""
 
     user_id: UUID
-    knoop_states: dict[str, NodeState] = Field(default_factory=dict)
+    node_states: dict[str, NodeState] = Field(default_factory=dict)
     session_history: list[SessionRecord] = Field(default_factory=list)
     pending_offline_assignments: list[OfflineAssignment] = Field(default_factory=list)
     route_history: list[RouteSwitch] = Field(default_factory=list)

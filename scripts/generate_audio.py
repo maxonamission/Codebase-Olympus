@@ -45,7 +45,7 @@ from gymnasium_classica.models.graph import NodeType
 class VocabEntry:
     """A vocabulary node ready for audio generation."""
 
-    knoop_id: str
+    node_id: str
     lemma: str
     taal: str  # "lat" or "grc"
 
@@ -87,22 +87,22 @@ def collect_vocab_nodes(graph_dir: Path, lang: str | None = None) -> list[VocabE
         lang: Optional filter — ``"lat"`` or ``"grc"``.  ``None`` means both.
 
     Returns:
-        Sorted list of VocabEntry (sorted by knoop_id for determinism).
+        Sorted list of VocabEntry (sorted by node_id for determinism).
     """
     graph = load_graph(graph_dir)
     entries: list[VocabEntry] = []
 
     for node_id in graph.nodes:
-        knoop = graph.nodes[node_id]["knoop"]
-        if knoop.type != NodeType.V:
+        node = graph.nodes[node_id]["node"]
+        if node.type != NodeType.V:
             continue
-        node_lang = str(knoop.taal)
+        node_lang = str(node.taal)
         if lang and node_lang != lang:
             continue
-        lemma = extract_lemma(knoop.titel_nl)
-        entries.append(VocabEntry(knoop_id=knoop.id, lemma=lemma, taal=node_lang))
+        lemma = extract_lemma(node.titel_nl)
+        entries.append(VocabEntry(node_id=node.id, lemma=lemma, taal=node_lang))
 
-    return sorted(entries, key=lambda e: e.knoop_id)
+    return sorted(entries, key=lambda e: e.node_id)
 
 
 # ---------------------------------------------------------------------------
@@ -232,7 +232,7 @@ def generate_all(
 
     for entry in entries:
         ext = ".wav"
-        filename = f"{entry.knoop_id}{ext}"
+        filename = f"{entry.node_id}{ext}"
         filepath = output_dir / filename
 
         if dry_run:

@@ -2,7 +2,7 @@
 
 Scaffolding verschijnt alleen:
 * tijdens NEW_MATERIAL
-* bij de eerste keer dat de knoop voor deze leerling wordt opgeroepen
+* bij de eerste keer dat de node voor deze leerling wordt opgeroepen
   (``NodeState.item_history`` is leeg of NodeState ontbreekt nog)
 * context-first: na een passage (bestaand gedrag)
 * grammar-first: alleen als ``User.show_grammar_scaffolding`` aan staat
@@ -42,7 +42,7 @@ from gymnasium_classica.scheduling.session import SessionPhase
 KNOOP_ID = "LAT-G-MORF-DECL1-INTRO"
 
 
-def _knoop() -> Node:
+def _node() -> Node:
     return Node(
         id=KNOOP_ID,
         type=NodeType.G,
@@ -71,8 +71,8 @@ def _knoop() -> Node:
 
 def _graph() -> nx.DiGraph:
     g = nx.DiGraph()
-    k = _knoop()
-    g.add_node(k.id, knoop=k)
+    k = _node()
+    g.add_node(k.id, node=k)
     return g
 
 
@@ -103,8 +103,8 @@ class TestShouldScaffoldPure:
 
         learner = LearnerModel(user_id=uuid4())
         if item_history is not None:
-            learner.knoop_states[KNOOP_ID] = NodeState(
-                knoop_id=KNOOP_ID,
+            learner.node_states[KNOOP_ID] = NodeState(
+                node_id=KNOOP_ID,
                 item_history=item_history,
             )
         return _SessionState(
@@ -120,14 +120,14 @@ class TestShouldScaffoldPure:
 
     def test_grammar_first_opt_in_first_introduction(self):
         state = self._make_state(route=LearningRoute.GRAMMAR_FIRST)
-        assert _should_scaffold(state, _knoop(), SessionPhase.NEW_MATERIAL) is True
+        assert _should_scaffold(state, _node(), SessionPhase.NEW_MATERIAL) is True
 
     def test_grammar_first_opt_out(self):
         state = self._make_state(
             route=LearningRoute.GRAMMAR_FIRST,
             show_grammar_scaffolding=False,
         )
-        assert _should_scaffold(state, _knoop(), SessionPhase.NEW_MATERIAL) is False
+        assert _should_scaffold(state, _node(), SessionPhase.NEW_MATERIAL) is False
 
     def test_grammar_first_second_time_no_scaffolding(self):
         """NodeState.item_history is niet leeg → al eens gezien."""
@@ -136,7 +136,7 @@ class TestShouldScaffoldPure:
             item_id=f"ITEM-{KNOOP_ID}-001",
             correct=True,
             response_time_ms=2000,
-            knoop_id=KNOOP_ID,
+            node_id=KNOOP_ID,
             richting="receptief",
             mastery_before=0.0,
         )
@@ -144,20 +144,20 @@ class TestShouldScaffoldPure:
             route=LearningRoute.GRAMMAR_FIRST,
             item_history=[prior],
         )
-        assert _should_scaffold(state, _knoop(), SessionPhase.NEW_MATERIAL) is False
+        assert _should_scaffold(state, _node(), SessionPhase.NEW_MATERIAL) is False
 
     def test_not_new_material_phase(self):
         state = self._make_state(route=LearningRoute.GRAMMAR_FIRST)
-        assert _should_scaffold(state, _knoop(), SessionPhase.WARMUP) is False
-        assert _should_scaffold(state, _knoop(), SessionPhase.DEEPENING) is False
-        assert _should_scaffold(state, _knoop(), SessionPhase.COOLDOWN) is False
+        assert _should_scaffold(state, _node(), SessionPhase.WARMUP) is False
+        assert _should_scaffold(state, _node(), SessionPhase.DEEPENING) is False
+        assert _should_scaffold(state, _node(), SessionPhase.COOLDOWN) is False
 
     def test_context_first_requires_passage_presented(self):
         not_yet = self._make_state(route=LearningRoute.CONTEXT_FIRST, passage_presented=False)
-        assert _should_scaffold(not_yet, _knoop(), SessionPhase.NEW_MATERIAL) is False
+        assert _should_scaffold(not_yet, _node(), SessionPhase.NEW_MATERIAL) is False
 
         after = self._make_state(route=LearningRoute.CONTEXT_FIRST, passage_presented=True)
-        assert _should_scaffold(after, _knoop(), SessionPhase.NEW_MATERIAL) is True
+        assert _should_scaffold(after, _node(), SessionPhase.NEW_MATERIAL) is True
 
     def test_context_first_ignores_opt_out_flag(self):
         """Grammar-first flag mag niet context-first beïnvloeden."""
@@ -166,7 +166,7 @@ class TestShouldScaffoldPure:
             show_grammar_scaffolding=False,
             passage_presented=True,
         )
-        assert _should_scaffold(state, _knoop(), SessionPhase.NEW_MATERIAL) is True
+        assert _should_scaffold(state, _node(), SessionPhase.NEW_MATERIAL) is True
 
 
 # --- Integratie-test via de echte SessionManager ---
@@ -192,7 +192,7 @@ class TestGrammarFirstSessionIntegration:
             sm_mod.CONTENT_DIR = original
 
         assert q is not None
-        assert q.knoop_id == KNOOP_ID
+        assert q.node_id == KNOOP_ID
         assert q.scaffolding_content is not None
         assert "Paradigma" in q.scaffolding_content
 
@@ -218,7 +218,7 @@ class TestGrammarFirstSessionIntegration:
         assert q.scaffolding_content is None
 
     def test_repeat_presentation_has_no_scaffolding(self, tmp_path):
-        """Leerling die de knoop al eerder heeft gezien: geen scaffolding meer."""
+        """Leerling die de node al eerder heeft gezien: geen scaffolding meer."""
         from gymnasium_classica.api import session_manager as sm_mod
 
         content_dir = _content_dir_with_scaffolding(tmp_path)
@@ -227,15 +227,15 @@ class TestGrammarFirstSessionIntegration:
 
         learner = LearnerModel(user_id=uuid4())
         # Seed een eerder item_history-entry om "tweede keer" te simuleren.
-        learner.knoop_states[KNOOP_ID] = NodeState(
-            knoop_id=KNOOP_ID,
+        learner.node_states[KNOOP_ID] = NodeState(
+            node_id=KNOOP_ID,
             item_history=[
                 ItemResponse(
                     timestamp=datetime(2026, 4, 10, 10),
                     item_id=f"ITEM-{KNOOP_ID}-001",
                     correct=True,
                     response_time_ms=2000,
-                    knoop_id=KNOOP_ID,
+                    node_id=KNOOP_ID,
                     richting="receptief",
                     mastery_before=0.0,
                 )

@@ -2,14 +2,14 @@
 
 import pytest
 
-from gymnasium_classica.schemas.id_schema import parse_knoop_id, validate_knoop_id
+from gymnasium_classica.schemas.id_schema import parse_node_id, validate_node_id
 
 
 class TestValidateKnoopId:
-    """Tests for validate_knoop_id()."""
+    """Tests for validate_node_id()."""
 
     @pytest.mark.parametrize(
-        "knoop_id",
+        "node_id",
         [
             "LAT-G-MORF-NOM-D1",
             "LAT-G-MORF-DECL1-INTRO",
@@ -23,11 +23,11 @@ class TestValidateKnoopId:
             "GRC-V-F15-EINAI",
         ],
     )
-    def test_valid_ids(self, knoop_id: str):
-        assert validate_knoop_id(knoop_id) is True
+    def test_valid_ids(self, node_id: str):
+        assert validate_node_id(node_id) is True
 
     @pytest.mark.parametrize(
-        "knoop_id",
+        "node_id",
         [
             "",
             "lat-g-morf-nom-d1",  # lowercase
@@ -40,35 +40,35 @@ class TestValidateKnoopId:
             "LAT-G-MORF-",  # trailing dash
         ],
     )
-    def test_invalid_ids(self, knoop_id: str):
-        assert validate_knoop_id(knoop_id) is False
+    def test_invalid_ids(self, node_id: str):
+        assert validate_node_id(node_id) is False
 
 
 class TestParseKnoopId:
-    """Tests for parse_knoop_id()."""
+    """Tests for parse_node_id()."""
 
     def test_parse_grammar_id(self):
-        result = parse_knoop_id("LAT-G-MORF-NOM-D1")
+        result = parse_node_id("LAT-G-MORF-NOM-D1")
         assert result["taal"] == "LAT"
         assert result["type"] == "G"
         assert result["segments"] == ["MORF", "NOM", "D1"]
 
     def test_parse_vocab_id(self):
-        result = parse_knoop_id("LAT-V-F01-ESSE")
+        result = parse_node_id("LAT-V-F01-ESSE")
         assert result["taal"] == "LAT"
         assert result["type"] == "V"
         assert result["segments"] == ["F01", "ESSE"]
 
     def test_parse_culture_id(self):
-        result = parse_knoop_id("SHA-C-FIL-STOA")
+        result = parse_node_id("SHA-C-FIL-STOA")
         assert result["taal"] == "SHA"
         assert result["type"] == "C"
         assert result["segments"] == ["FIL", "STOA"]
 
     def test_parse_minimal_id(self):
-        result = parse_knoop_id("LAT-G-MORF")
+        result = parse_node_id("LAT-G-MORF")
         assert result["segments"] == ["MORF"]
 
     def test_parse_invalid_raises(self):
-        with pytest.raises(ValueError, match="Invalid knoop ID"):
-            parse_knoop_id("invalid-id")
+        with pytest.raises(ValueError, match="Invalid node ID"):
+            parse_node_id("invalid-id")

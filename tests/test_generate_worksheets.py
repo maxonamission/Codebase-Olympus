@@ -39,8 +39,8 @@ _register_fonts = _mod._register_fonts
 
 
 @pytest.fixture
-def sample_knoop() -> Node:
-    """A minimal grammar knoop for testing."""
+def sample_node() -> Node:
+    """A minimal grammar node for testing."""
     return Node(
         id="LAT-G-MORF-DECL1-PARAD",
         type=NodeType.G,
@@ -68,8 +68,8 @@ def sample_knoop() -> Node:
 
 
 @pytest.fixture
-def greek_letter_knoop() -> Node:
-    """A Greek alphabet knoop for testing writing lines."""
+def greek_letter_node() -> Node:
+    """A Greek alphabet node for testing writing lines."""
     return Node(
         id="GRC-G-FONL-ALFA-ALFA",
         type=NodeType.G,
@@ -82,8 +82,8 @@ def greek_letter_knoop() -> Node:
 
 
 @pytest.fixture
-def knoop_no_content() -> Node:
-    """A knoop with no content and no items."""
+def node_no_content() -> Node:
+    """A node with no content and no items."""
     return Node(
         id="LAT-G-MORF-GENUS-INTRO",
         type=NodeType.G,
@@ -97,7 +97,7 @@ def knoop_no_content() -> Node:
 
 SAMPLE_MARKDOWN = """\
 ---
-knoop_id: LAT-G-MORF-DECL1-PARAD
+node_id: LAT-G-MORF-DECL1-PARAD
 ---
 
 # Paradigma 1e declinatie
@@ -192,14 +192,14 @@ class TestParseMarkdownTables:
 
 
 class TestGenerateWorksheet:
-    def test_generates_pdf_with_content(self, sample_knoop, tmp_path):
+    def test_generates_pdf_with_content(self, sample_node, tmp_path):
         """Worksheet with markdown content produces a valid PDF."""
         content_dir = tmp_path / "content"
         content_dir.mkdir()
         (content_dir / "LAT-G-MORF-DECL1-PARAD.md").write_text(SAMPLE_MARKDOWN, encoding="utf-8")
 
         output = tmp_path / "worksheets" / "LAT-G-MORF-DECL1-PARAD.pdf"
-        result = generate_worksheet(sample_knoop, content_dir, output)
+        result = generate_worksheet(sample_node, content_dir, output)
 
         assert result is True
         assert output.exists()
@@ -209,7 +209,7 @@ class TestGenerateWorksheet:
 
     def test_generates_pdf_with_items_only(self, tmp_path):
         """Knoop with items but no content file still produces a PDF."""
-        knoop = Node(
+        node = Node(
             id="LAT-G-SYNT-WRDVLG",
             type=NodeType.G,
             taal=Language.LAT,
@@ -236,27 +236,27 @@ class TestGenerateWorksheet:
         content_dir = tmp_path / "content"
         content_dir.mkdir()
         output = tmp_path / "out" / "LAT-G-SYNT-WRDVLG.pdf"
-        result = generate_worksheet(knoop, content_dir, output)
+        result = generate_worksheet(node, content_dir, output)
 
         assert result is True
         assert output.exists()
 
-    def test_skips_knoop_without_content_or_items(self, knoop_no_content, tmp_path):
+    def test_skips_node_without_content_or_items(self, node_no_content, tmp_path):
         """Knoop with no content and no items is skipped."""
         content_dir = tmp_path / "content"
         content_dir.mkdir()
         output = tmp_path / "out" / "test.pdf"
-        result = generate_worksheet(knoop_no_content, content_dir, output)
+        result = generate_worksheet(node_no_content, content_dir, output)
 
         assert result is False
         assert not output.exists()
 
-    def test_greek_writing_lines(self, greek_letter_knoop, tmp_path):
-        """Greek alphabet knoop produces a PDF with writing practice."""
+    def test_greek_writing_lines(self, greek_letter_node, tmp_path):
+        """Greek alphabet node produces a PDF with writing practice."""
         content_dir = tmp_path / "content"
         content_dir.mkdir()
         output = tmp_path / "worksheets" / "GRC-G-FONL-ALFA-ALFA.pdf"
-        result = generate_worksheet(greek_letter_knoop, content_dir, output)
+        result = generate_worksheet(greek_letter_node, content_dir, output)
 
         assert result is True
         assert output.exists()
@@ -264,21 +264,21 @@ class TestGenerateWorksheet:
         size = output.stat().st_size
         assert size > 1000  # non-trivial PDF
 
-    def test_output_dir_created(self, sample_knoop, tmp_path):
+    def test_output_dir_created(self, sample_node, tmp_path):
         """Output directory is created automatically if it doesn't exist."""
         content_dir = tmp_path / "content"
         content_dir.mkdir()
         (content_dir / "LAT-G-MORF-DECL1-PARAD.md").write_text(SAMPLE_MARKDOWN, encoding="utf-8")
 
         output = tmp_path / "deep" / "nested" / "dir" / "test.pdf"
-        result = generate_worksheet(sample_knoop, content_dir, output)
+        result = generate_worksheet(sample_node, content_dir, output)
 
         assert result is True
         assert output.exists()
 
     def test_content_ref_used(self, tmp_path):
-        """When knoop has content_ref, that file is loaded."""
-        knoop = Node(
+        """When node has content_ref, that file is loaded."""
+        node = Node(
             id="LAT-G-MORF-DECL1-PARAD",
             type=NodeType.G,
             taal=Language.LAT,
@@ -294,7 +294,7 @@ class TestGenerateWorksheet:
         (content_dir / "LAT-G-MORF-DECL1-PARAD.md").write_text(SAMPLE_MARKDOWN, encoding="utf-8")
 
         output = tmp_path / "out" / "test.pdf"
-        result = generate_worksheet(knoop, content_dir, output)
+        result = generate_worksheet(node, content_dir, output)
         assert result is True
         assert output.exists()
 
@@ -303,17 +303,17 @@ class TestGenerateWorksheet:
 
 
 class TestBuildExerciseElements:
-    def test_returns_elements_for_items(self, sample_knoop):
+    def test_returns_elements_for_items(self, sample_node):
         _register_fonts()
         styles = _build_styles()
-        elements = _build_exercise_elements(sample_knoop, styles)
+        elements = _build_exercise_elements(sample_node, styles)
         # Should contain heading + exercise + line table + spacer
         assert len(elements) >= 3
 
-    def test_empty_for_no_items(self, knoop_no_content):
+    def test_empty_for_no_items(self, node_no_content):
         _register_fonts()
         styles = _build_styles()
-        elements = _build_exercise_elements(knoop_no_content, styles)
+        elements = _build_exercise_elements(node_no_content, styles)
         assert elements == []
 
 
@@ -321,24 +321,24 @@ class TestBuildExerciseElements:
 
 
 class TestBuildGreekWritingLines:
-    def test_returns_elements_for_greek_letter(self, greek_letter_knoop):
+    def test_returns_elements_for_greek_letter(self, greek_letter_node):
         _register_fonts()
         styles = _build_styles()
-        elements = _build_greek_writing_lines(greek_letter_knoop, styles)
+        elements = _build_greek_writing_lines(greek_letter_node, styles)
         # Should have heading + instructions + spacer + label + table + spacer (x2 for maj/min)
         assert len(elements) >= 5
 
-    def test_empty_for_non_greek_knoop(self, sample_knoop):
+    def test_empty_for_non_greek_node(self, sample_node):
         _register_fonts()
         styles = _build_styles()
-        elements = _build_greek_writing_lines(sample_knoop, styles)
+        elements = _build_greek_writing_lines(sample_node, styles)
         assert elements == []
 
-    def test_empty_for_non_letter_greek_knoop(self):
+    def test_empty_for_non_letter_greek_node(self):
         """Greek group nodes (not individual letters) should not get writing lines."""
         _register_fonts()
         styles = _build_styles()
-        knoop = Node(
+        node = Node(
             id="GRC-G-FONL-ALFA-GRP1",
             type=NodeType.G,
             taal=Language.GRC,
@@ -347,7 +347,7 @@ class TestBuildGreekWritingLines:
             bloom_niveau=BloomLevel.KENNIS,
             fase=Phase.ONDERBOUW_1,
         )
-        elements = _build_greek_writing_lines(knoop, styles)
+        elements = _build_greek_writing_lines(node, styles)
         assert elements == []
 
 
