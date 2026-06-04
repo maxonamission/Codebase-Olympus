@@ -2,9 +2,10 @@
 
 import re
 from enum import StrEnum
+from itertools import pairwise
 from typing import Any
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 
 from gymnasium_classica.schemas.id_schema import validate_node_id
 
@@ -56,6 +57,7 @@ class ItemType(StrEnum):
     OFFLINE_WRITING = "offline_writing"
     LISTENING_RECOGNITION = "listening_recognition"
     LISTENING_PRODUCTION = "listening_production"
+    WORKED_EXAMPLE = "worked_example"
 
 
 class VerificationMethod(StrEnum):
@@ -76,6 +78,18 @@ class Source(StrEnum):
 
 
 # --- Models ---
+
+
+class WorkedStep(BaseModel):
+    """Eén stap in een uitgewerkt voorbeeld met faded scaffolding (L3-01)."""
+
+    order: int = Field(ge=0, description="Positie in de reeks (oplopend).")
+    support_level: float = Field(
+        ge=0.0,
+        le=1.0,
+        description="Steunniveau: 1.0 = volledig uitgewerkt, 0.0 = zelf invullen.",
+    )
+    content: str = Field(description="De (deels) uitgewerkte stap-inhoud of prompt.")
 
 
 class Item(BaseModel):
@@ -104,6 +118,35 @@ class Item(BaseModel):
         default=None,
         description="For offline_schrijven items: the expected written result (paradigm, translation, etc.).",
     )
+    worked_steps: list[WorkedStep] | None = Field(
+        default=None,
+        description="Geordende stappen met afnemend steunniveau; alleen voor "
+        "worked_example-items (L3-01).",
+    )
+
+    @property
+    def is_worked_example(self) -> bool:
+        """Markering: is dit een uitgewerkt-voorbeeld-item (introductie)?"""
+        return self.type == ItemType.WORKED_EXAMPLE
+
+    @model_validator(mode="after")
+    def _check_worked_example(self) -> "Item":
+        if self.type == ItemType.WORKED_EXAMPLE:
+            if not self.worked_steps:
+                raise ValueError("A worked_example item requires non-empty worked_steps.")
+            steps = sorted(self.worked_steps, key=lambda s: s.order)
+            orders = [s.order for s in steps]
+            if len(set(orders)) != len(orders):
+                raise ValueError("worked_steps must have unique order values.")
+            for prev, nxt in pairwise(steps):
+                if nxt.support_level > prev.support_level:
+                    raise ValueError(
+                        "worked_steps support_level must not increase "
+                        "(faded scaffolding requires monotonically non-increasing support)."
+                    )
+        elif self.worked_steps:
+            raise ValueError("worked_steps are only allowed on worked_example items.")
+        return self
 
 
 class Node(BaseModel):

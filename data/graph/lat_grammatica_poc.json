@@ -41,6 +41,38 @@
           "answer": "de uitgang (het woord krijgt een andere naamvalsuitgang)",
           "feedback": "In het Latijn verandert de uitgang van een woord afhankelijk van de functie in de zin. Dit heet verbuiging (declinatie).",
           "source": "manual"
+        },
+        {
+          "id": "ITEM-LAT-G-MORF-NAAMVAL-INTRO-WE01",
+          "node_ids": [
+            "LAT-G-MORF-NAAMVAL-INTRO"
+          ],
+          "type": "worked_example",
+          "direction": "receptive",
+          "difficulty_initial": -0.5,
+          "discrimination_initial": 1.0,
+          "expected_time_sec": 90,
+          "stimulus": "Uitgewerkt voorbeeld: bepaal naamval en functie in 'Puella rosam videt.'",
+          "answer": "Puella = nominativus (onderwerp); rosam = accusativus (lijdend voorwerp).",
+          "feedback": "Het onderwerp staat in de nominativus, het lijdend voorwerp in de accusativus.",
+          "source": "manual",
+          "worked_steps": [
+            {
+              "order": 1,
+              "support_level": 1.0,
+              "content": "Volledig uitgewerkt: 'Puella' = nominativus enkelvoud (1e decl.) -> onderwerp; 'rosam' = accusativus enkelvoud -> lijdend voorwerp; 'videt' = 3e pers. ev. presens."
+            },
+            {
+              "order": 2,
+              "support_level": 0.5,
+              "content": "Gedeeltelijk: 'Puella' is ______ (naamval? functie?); 'rosam' is accusativus -> ______."
+            },
+            {
+              "order": 3,
+              "support_level": 0.0,
+              "content": "Zelf invullen: benoem naamval en functie van 'Puella' en 'rosam' in 'Puella rosam videt.'"
+            }
+          ]
         }
       ]
     },
