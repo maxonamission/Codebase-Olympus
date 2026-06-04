@@ -480,7 +480,7 @@ Bestaand materiaal (markdowns, audio, MC-opties, vocab-metadata) daadwerkelijk n
 | F2-01 | Mentor-rol + leerling-koppeling in user-model | — | done |
 | F2-02 | Laatste foute antwoorden per leerling per knoop | F2-01, F1-12 | draft |
 | F2-03 | Struikelpunten-overzicht per leerling | F2-01 | draft |
-| F2-04 | Fout-classificatie (spelling / naamval / synoniem / macron) — track C kern | F1-12 | draft |
+| F2-04 | Fout-classificatie (spelling / naamval / synoniem / macron) — track C kern | F1-12 | done |
 
 **Verhouding tot B8:**
 `epic-b8-mentor-portfolio` richt zich op offline werk (portfolio-selectie, OCR-confidence). F2 is specifiek over **online** oefen-telemetrie en foutdiagnostiek — de twee zijn complementair en kunnen later dezelfde mentor-UI delen.
