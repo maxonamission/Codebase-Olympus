@@ -32,6 +32,7 @@ from gymnasium_classica.models.passage import Passage
 from gymnasium_classica.models.user import LearningRoute
 from gymnasium_classica.scheduling.bkt import (
     SELF_REPORT_BKT_PARAMS,
+    estimate_learning_rate,
     update_node_state,
 )
 from gymnasium_classica.scheduling.non_interference import (
@@ -350,6 +351,9 @@ def _process_response(
     # don't have a literal answer, e.g. self-assess paths in run_session)
     if item_response is not None:
         state.item_history.append(item_response)
+        # Herschat de individuele leersnelheid op de bijgewerkte geschiedenis
+        # (L2-03); benut de zojuist vastgelegde mastery_before-residuen.
+        learner.learning_rate = estimate_learning_rate(learner)
 
 
 def _collect_offline_items(

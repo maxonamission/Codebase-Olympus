@@ -190,3 +190,10 @@ class LearnerModel(BaseModel):
         description="Toegewezen experiment-varianten (experiment-naam -> arm-naam), "
         "zodat metriek per variant uitgesplitst kan worden (L1-03).",
     )
+    learning_rate: float = Field(
+        default=1.0,
+        gt=0.0,
+        description="Learner-niveau leersnelheid: modifier op de BKT-transitie "
+        "P(T). 1.0 = neutraal (huidig gedrag); geschat uit de "
+        "observatiegeschiedenis (L2-03).",
+    )
