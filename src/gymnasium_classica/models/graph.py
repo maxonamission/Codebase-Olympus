@@ -23,6 +23,7 @@ class NodeType(StrEnum):
     V = "V"  # Vocabulaire
     C = "C"  # Cultuur
     I = "I"  # Integratie  # noqa: E741 - enum uit ID-schema, niet te hernoemen
+    P = "P"  # Procedure/Strategie (bijv. vertaalstappenplan POLMO)
 
 
 class BloomLevel(StrEnum):
@@ -46,6 +47,11 @@ class EdgeType(StrEnum):
     PREREQUISITE = "prerequisite"
     ENRICHMENT = "enrichment"
     TRANSFER = "transfer"
+    # Volgordelijke stap binnen een procedure (type-P knopen): "deze stap
+    # volgt op die stap". Onderscheiden van PREREQUISITE, dat zegt "deze
+    # knoop moet beheerst zijn voordat je een andere kunt leren". Een
+    # procedure is een lineair pad van procedure_step-edges.
+    PROCEDURE_STEP = "procedure_step"
 
 
 class ItemType(StrEnum):

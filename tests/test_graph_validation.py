@@ -1,8 +1,10 @@
 """Tests for graph validation: cycles, orphans, connectivity, topological sort."""
 
 import copy
+from itertools import pairwise
+from pathlib import Path
 
-from gymnasium_classica.graph.loader import load_graph_from_dict
+from gymnasium_classica.graph.loader import load_graph, load_graph_from_dict
 from gymnasium_classica.graph.validation import (
     ACYCLIC_EDGE_TYPES,
     acyclic_subgraph,
@@ -14,6 +16,7 @@ from gymnasium_classica.graph.validation import (
     topological_sort,
     validate_content_refs,
     validate_graph,
+    validate_procedures,
 )
 
 
@@ -244,7 +247,7 @@ class TestAcyclicSubgraph:
         assert detect_cycles(g) == []
         # The policy constant deliberately excludes transfer.
         assert "transfer" not in ACYCLIC_EDGE_TYPES
-        assert frozenset({"prerequisite", "enrichment"}) == ACYCLIC_EDGE_TYPES
+        assert frozenset({"prerequisite", "enrichment", "procedure_step"}) == ACYCLIC_EDGE_TYPES
 
 
 class TestValidateContentRefs:
@@ -294,3 +297,108 @@ class TestValidateContentRefs:
 
         report = validate_graph(g)
         assert report.is_valid is True
+
+
+def _p_node(node_id: str, title: str = "Stap") -> dict:
+    """Minimal type-P (procedure) node dict for procedure-validation tests."""
+    return {
+        "id": node_id,
+        "type": "P",
+        "language": "shared",
+        "title_nl": title,
+        "description": "Een POLMO-stap voor de test.",
+        "bloom_level": "application",
+        "phase": "onderbouw_1",
+    }
+
+
+def _step_edge(source: str, target: str) -> dict:
+    return {
+        "source_id": source,
+        "target_id": target,
+        "type": "procedure_step",
+        "encompassing_weight": 0.5,
+    }
+
+
+# IDs of the canonical POLMO chain (shared procedure nodes).
+_POLMO = [
+    "SHA-P-VERTAAL-POLMO-PV",
+    "SHA-P-VERTAAL-POLMO-OND",
+    "SHA-P-VERTAAL-POLMO-LV",
+    "SHA-P-VERTAAL-POLMO-MV",
+    "SHA-P-VERTAAL-POLMO-OV",
+]
+
+
+class TestValidateProcedures:
+    """Tests for procedure (type-P) linearity validation."""
+
+    def test_procedure_step_is_acyclic_edge_type(self):
+        """procedure_step participates in cycle detection and topo sort."""
+        assert "procedure_step" in ACYCLIC_EDGE_TYPES
+
+    def test_linear_polmo_chain_is_valid(self):
+        data = {
+            "nodes": [_p_node(nid) for nid in _POLMO],
+            "edges": [_step_edge(a, b) for a, b in pairwise(_POLMO)],
+        }
+        g = load_graph_from_dict(data)
+        assert validate_procedures(g) == []
+        # A linear procedure_step chain must not register as a cycle.
+        assert detect_cycles(g) == []
+        assert validate_graph(g).is_valid is True
+
+    def test_no_procedure_step_edges_is_noop(self, sample_graph_data):
+        """Graphs without any procedure_step edge yield no procedure errors."""
+        g = load_graph_from_dict(sample_graph_data)
+        assert validate_procedures(g) == []
+
+    def test_branching_procedure_is_rejected(self):
+        """A node with two outgoing steps (a fork) is not a linear path."""
+        nodes = [_p_node(nid) for nid in _POLMO]
+        edges = [
+            _step_edge(_POLMO[0], _POLMO[1]),
+            _step_edge(_POLMO[0], _POLMO[2]),  # fork at PV
+        ]
+        g = load_graph_from_dict({"nodes": nodes, "edges": edges})
+        errors = validate_procedures(g)
+        assert errors
+        assert any("vertakt" in e for e in errors)
+        assert validate_graph(g).is_valid is False
+
+    def test_double_start_procedure_is_rejected(self):
+        """Two nodes feeding one (a merge) yields two starts and branching."""
+        nodes = [_p_node(nid) for nid in _POLMO[:3]]
+        edges = [
+            _step_edge(_POLMO[0], _POLMO[2]),
+            _step_edge(_POLMO[1], _POLMO[2]),  # merge into LV
+        ]
+        g = load_graph_from_dict({"nodes": nodes, "edges": edges})
+        errors = validate_procedures(g)
+        assert any("startknopen" in e for e in errors)
+        assert validate_graph(g).is_valid is False
+
+    def test_procedure_step_cycle_is_detected(self):
+        """A cyclic procedure_step chain is caught by global cycle detection."""
+        nodes = [_p_node(nid) for nid in _POLMO[:3]]
+        edges = [
+            _step_edge(_POLMO[0], _POLMO[1]),
+            _step_edge(_POLMO[1], _POLMO[2]),
+            _step_edge(_POLMO[2], _POLMO[0]),  # back-edge -> cycle
+        ]
+        g = load_graph_from_dict({"nodes": nodes, "edges": edges})
+        assert detect_cycles(g)
+
+
+class TestPolmoInRealGraph:
+    """Integration: the shipped POLMO graph loads and validates."""
+
+    def test_polmo_nodes_present_and_graph_valid(self):
+        repo_root = Path(__file__).resolve().parent.parent
+        g = load_graph(repo_root / "data" / "graph")
+        for nid in [*_POLMO, "SHA-P-VERTAAL-POLMO-INTRO"]:
+            assert nid in g.nodes, f"{nid} ontbreekt in de geladen graph"
+        report = validate_graph(g, content_root=repo_root)
+        assert report.is_valid, report.errors
+        assert validate_procedures(g) == []

@@ -3,7 +3,7 @@
 Format: {TAAL}-{TYPE}-{SEGMENT}[-{SEGMENT}]...
   - 3 to 5 dash-delimited uppercase ASCII segments
   - Segment 1 (TAAL): LAT, GRC, SHA
-  - Segment 2 (TYPE): G, V, C, I
+  - Segment 2 (TYPE): G, V, C, I, P
   - Segments 3+: type-specific, 1-8 uppercase alphanumeric chars each
 
 Concept/overview nodes end with -INTRO.
@@ -13,26 +13,29 @@ Examples:
   LAT-V-F01-ESSE           (Latin, Vocabulary, Frequency band 1, esse)
   SHA-C-FIL-STOA            (Shared, Culture, Philosophy, Stoicism)
   LAT-I-VERT-PROZA-OB      (Latin, Integration, Translation, Prose, Lower school)
+  SHA-P-VERTAAL-POLMO-PV   (Shared, Procedure, Translation, POLMO, Persoonsvorm step)
 """
 
 import re
 
-ID_PATTERN = re.compile(r"^(LAT|GRC|SHA)-(G|V|C|I)(-[A-Z0-9]{1,8}){1,4}$")
+ID_PATTERN = re.compile(r"^(LAT|GRC|SHA)-(G|V|C|I|P)(-[A-Z0-9]{1,8}){1,4}$")
 
 TAAL_VALUES = frozenset({"LAT", "GRC", "SHA"})
-TYPE_VALUES = frozenset({"G", "V", "C", "I"})
+TYPE_VALUES = frozenset({"G", "V", "C", "I", "P"})
 
 # Valid domain prefixes per node type (segment 3)
 GRAMMAR_DOMAINS = frozenset({"MORF", "SYNT", "FONL", "METR"})
 VOCAB_DOMAINS = frozenset({f"F{i:02d}" for i in range(1, 16)})  # F01..F15
 CULTURE_DOMAINS = frozenset({"FIL", "GES", "LIT", "MYT", "POL", "KUN", "REL"})
 INTEGRATION_DOMAINS = frozenset({"VERT", "SCAN", "INTERP", "ONTL"})
+PROCEDURE_DOMAINS = frozenset({"VERTAAL"})  # P-type: translation-strategy procedures
 
 DOMAIN_MAP = {
     "G": GRAMMAR_DOMAINS,
     "V": VOCAB_DOMAINS,
     "C": CULTURE_DOMAINS,
     "I": INTEGRATION_DOMAINS,
+    "P": PROCEDURE_DOMAINS,
 }
 
 
