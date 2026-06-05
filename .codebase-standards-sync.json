@@ -1,0 +1,5 @@
+{
+  "scripts/check_story_status.py": "scripts/check_story_status.py",
+  "scripts/sync_story_folders.py": "scripts/sync_story_folders.py",
+  "scripts/regenerate_status.py": "scripts/regenerate_status.py"
+}

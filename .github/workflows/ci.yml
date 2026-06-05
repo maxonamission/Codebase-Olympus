@@ -57,7 +57,16 @@ jobs:
         run: uv run mypy src/
 
       - name: Stories-consistentie (full)
-        run: uv run python scripts/check_story_status.py --mode=full
+        run: uv run python scripts/check_story_status.py --mode=full --ac-gate=warn
+
+      - name: Regenerate-status drift
+        run: uv run python scripts/regenerate_status.py --check
+
+      - name: Codebase-standards drift
+        run: |
+          uv run python scripts/check_standard_drift.py \
+            --manifest .codebase-standards-manifest.json \
+            --sync-map .codebase-standards-sync.json
 
       - name: Pytest met coverage
         run: uv run pytest --cov=src --cov-report=term-missing --cov-report=xml

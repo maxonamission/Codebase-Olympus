@@ -63,27 +63,36 @@ Kwaliteit wordt automatisch afgedwongen in zes lagen. Achtergrond: `docs/ontwikk
 
 ### Laag 6 — Story-workflow
 
-Zie `## Story-workflow` hieronder. Handhaving via `scripts/check_story_status.py`, integreerd in pre-commit en CI.
+Zie `## Story-workflow` hieronder. Handhaving via de gevendorde codebase-standards-scripts (`sync_story_folders.py` + `regenerate_status.py` + `check_story_status.py --ac-gate=warn`), geïntegreerd in pre-commit en CI.
 
 ## Story-workflow
 
-Stories staan onder `stories/` met subfolders `backlog/`, `doing/`, `done/` + centrale `EPICS.md`.
+Stories staan onder `stories/` met subfolders `backlog/`, `doing/`, `done/` + centrale `stories/EPICS.md`. Sinds de codebase-standards-adoptie (OS-11) is de **front-matter `status:`** van een story de bron van waarheid; de map wordt daar automatisch op gehouden. Elke story heeft een front-matter-blok:
 
-**Bij oppakken van een story:**
+```
+---
+type: story
+project: GC
+epic: A1
+story_id: A1-01
+status: backlog        # backlog | doing | done
+prioriteit: middel
+---
+```
 
-1. Verplaats het bestand met `git mv stories/backlog/XX-NN.md stories/doing/`.
-2. Werk de status-kolom in `EPICS.md` bij naar `doing`.
-3. Commit deze verplaatsing apart van inhoudelijke wijzigingen.
+> IDs blijven het vakinhoudelijke schema (`A1-01`, `B4-02`, sporen A–F/OS als epics); de gedeelde validator is ID-schema-agnostisch. Een eventuele hernummering naar het canonieke `E#_S#` is een aparte, nog niet ingeplande story.
 
-**Bij afronden van een story:**
+**Bij oppakken / afronden van een story:**
 
-1. Vink alle `- [ ]` in de `## Acceptatiecriteria`-sectie om naar `- [x]`. Voeg eventueel een kort resultaat-blok toe.
-2. Verplaats het bestand met `git mv stories/doing/XX-NN.md stories/done/`.
-3. Werk de status-kolom in `EPICS.md` bij naar `done`.
-4. Draai lokaal `uv run python scripts/check_story_status.py --mode=full` — moet groen zijn.
-5. Commit en push; de pre-commit-hook en CI valideren dezelfde regels.
+1. Pas het `status:`-veld in de front-matter aan (`backlog` → `doing` → `done`). De pre-commit-hook `sync-story-folders` verplaatst het bestand via `git mv` naar de juiste map.
+2. Bij afronden: vink alle `- [ ]` in `## Acceptatiecriteria` om naar `- [x]`. Een `done`-story met openstaande AC blokkeert (tijdens legacy-opruiming staat de AC-gate op `warn`). Voeg eventueel een resultaat-blok toe.
+3. De pre-commit-hook `regenerate-status` werkt de tellingen in `stories/EPICS.md` (Statustabel) en `PROJECTSTATUS.md` automatisch bij — counts hoef je nooit met de hand te tellen.
+4. Draai lokaal `uv run python scripts/check_story_status.py --mode=full --ac-gate=warn` — moet groen zijn.
+5. Commit en push; pre-commit en CI valideren dezelfde regels.
 
-**De check blokkeert als:** een story in `done/` nog openstaande AC heeft, locatie en EPICS-status niet matchen, of een story ontbreekt in EPICS.md (warning).
+**De check blokkeert (CI) als:** map ≠ front-matter `status:`, EPICS/PROJECTSTATUS-tellingen ≠ filesystem, of een `done`-epic nog open stories heeft. Orphans/dead-refs en (tijdens opruiming) open AC zijn waarschuwingen.
+
+**Herkomst:** deze werkwijze komt uit [`codebase-standards`](https://github.com/maxonamission/codebase-standards) (v0.1.0; gevendord in `scripts/`, versie-stempel `.codebase-standards-version`, drift bewaakt via `.codebase-standards-manifest.json`). Wijzigingen aan de gedeelde werkwijze lopen via die repo, niet hier.
 
 ## Output en sessie-management
 
