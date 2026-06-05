@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "id": "GRC-I-VERT-INTRO",
+      "type": "I",
+      "language": "grc",
+      "title_nl": "Van ontleden naar vertalen (Grieks)",
+      "description": "Ook in het Grieks vertaal je niet woord voor woord: je ontleedt de zin in zinsdelen aan de hand van lidwoord en uitgang, en geeft die weer in correct Nederlands.",
+      "bloom_level": "comprehension",
+      "phase": "onderbouw_1",
+      "testable": true,
+      "pensum_years": [],
+      "content_ref": "data/content/GRC-I-VERT-INTRO.md",
+      "items": [
+        {
+          "id": "ITEM-GRC-I-VERT-INTRO-001",
+          "node_ids": ["GRC-I-VERT-INTRO"],
+          "type": "recognition",
+          "direction": "receptive",
+          "difficulty_initial": -0.4,
+          "discrimination_initial": 1.0,
+          "expected_time_sec": 20,
+          "stimulus": {
+            "instruction": "Waaraan zie je in het Grieks of een woord onderwerp of lijdend voorwerp is?",
+            "options": [
+              "Aan het lidwoord en de naamvalsuitgang",
+              "Aan de plaats in de zin",
+              "Aan het accent",
+              "Aan de lengte van het woord"
+            ]
+          },
+          "answer": "Aan het lidwoord en de naamvalsuitgang",
+          "feedback": "Het Griekse lidwoord (ὁ, τόν, τῷ ...) en de uitgang geven de naamval aan, en daarmee de functie in de zin. De woordvolgorde is veel vrijer dan in het Nederlands.",
+          "source": "manual"
+        }
+      ]
+    },
+    {
+      "id": "GRC-I-VERT-NAAMVAL",
+      "type": "I",
+      "language": "grc",
+      "title_nl": "Naamval bepaalt de functie (Grieks)",
+      "description": "In het Grieks bepalen lidwoord en uitgang, niet de woordvolgorde, of een woord onderwerp (nominativus) of lijdend voorwerp (accusativus) is.",
+      "bloom_level": "analysis",
+      "phase": "onderbouw_1",
+      "testable": true,
+      "pensum_years": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-I-VERT-NAAMVAL-001",
+          "node_ids": ["GRC-I-VERT-NAAMVAL"],
+          "type": "analysis",
+          "direction": "receptive",
+          "difficulty_initial": 0.1,
+          "discrimination_initial": 1.2,
+          "expected_time_sec": 35,
+          "stimulus": {
+            "instruction": "Vertaal: 'ὁ ἄνθρωπος τὸν ἵππον ἄγει.' Wie leidt wat?",
+            "options": [
+              "De mens leidt het paard",
+              "Het paard leidt de mens",
+              "De mens en het paard lopen samen",
+              "Het paard wordt niet geleid"
+            ]
+          },
+          "answer": "De mens leidt het paard",
+          "feedback": "ὁ ἄνθρωπος heeft het lidwoord ὁ (nominativus = onderwerp); τὸν ἵππον heeft τόν (accusativus = lijdend voorwerp). Dus: de mens leidt het paard.",
+          "source": "manual"
+        },
+        {
+          "id": "ITEM-GRC-I-VERT-NAAMVAL-002",
+          "node_ids": ["GRC-I-VERT-NAAMVAL"],
+          "type": "analysis",
+          "direction": "receptive",
+          "difficulty_initial": 0.5,
+          "discrimination_initial": 1.3,
+          "expected_time_sec": 40,
+          "stimulus": {
+            "instruction": "Vertaal: 'τὸν ἵππον ὁ ἄνθρωπος ἄγει.' Wie leidt wat?",
+            "options": [
+              "De mens leidt het paard",
+              "Het paard leidt de mens",
+              "De mens ziet het paard",
+              "Het paard wordt verkocht"
+            ]
+          },
+          "answer": "De mens leidt het paard",
+          "feedback": "Ook al staat τὸν ἵππον vooraan, het lidwoord τόν (accusativus) maakt het lijdend voorwerp. ὁ ἄνθρωπος (nominativus) blijft het onderwerp. De betekenis verandert niet door de volgorde.",
+          "source": "manual"
+        },
+        {
+          "id": "ITEM-GRC-I-VERT-NAAMVAL-003",
+          "node_ids": ["GRC-I-VERT-NAAMVAL"],
+          "type": "analysis",
+          "direction": "receptive",
+          "difficulty_initial": 0.6,
+          "discrimination_initial": 1.2,
+          "expected_time_sec": 40,
+          "stimulus": {
+            "instruction": "Vertaal: 'ὁ διδάσκαλος τοὺς παῖδας διδάσκει.' Wie onderwijst wie?",
+            "options": [
+              "De leraar onderwijst de kinderen",
+              "De kinderen onderwijzen de leraar",
+              "De leraar leert van de kinderen",
+              "De kinderen worden niet onderwezen"
+            ]
+          },
+          "answer": "De leraar onderwijst de kinderen",
+          "feedback": "ὁ διδάσκαλος (nominativus enkelvoud) is het onderwerp; τοὺς παῖδας (accusativus meervoud, lidwoord τούς) is het lijdend voorwerp. Dus: de leraar onderwijst de kinderen.",
+          "source": "manual"
+        }
+      ]
+    },
+    {
+      "id": "GRC-I-VERT-POLMO",
+      "type": "I",
+      "language": "grc",
+      "title_nl": "Een Griekse zin vertalen met POLMO",
+      "description": "Het vertaalstappenplan POLMO toepassen op een Griekse zin: eerst de persoonsvorm, dan onderwerp, lijdend en meewerkend voorwerp, en ten slotte de overige bepalingen.",
+      "bloom_level": "synthesis",
+      "phase": "onderbouw_1",
+      "testable": true,
+      "pensum_years": [],
+      "items": [
+        {
+          "id": "ITEM-GRC-I-VERT-POLMO-001",
+          "node_ids": ["GRC-I-VERT-POLMO"],
+          "type": "analysis",
+          "direction": "receptive",
+          "difficulty_initial": 0.7,
+          "discrimination_initial": 1.2,
+          "expected_time_sec": 45,
+          "stimulus": {
+            "instruction": "Wat is de persoonsvorm in 'ὁ στρατηγὸς τοὺς πολεμίους νικᾷ.'?",
+            "options": [
+              "νικᾷ",
+              "στρατηγός",
+              "πολεμίους",
+              "ὁ"
+            ]
+          },
+          "answer": "νικᾷ",
+          "feedback": "Stap 1 van POLMO is de persoonsvorm: νικᾷ (hij overwint). Daarna vind je het onderwerp ὁ στρατηγός (nom.) en het lijdend voorwerp τοὺς πολεμίους (acc.): de generaal overwint de vijanden.",
+          "source": "manual"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {"source_id": "GRC-G-MORF-NAAMVAL-INTRO", "target_id": "GRC-I-VERT-INTRO", "type": "prerequisite", "encompassing_weight": 0.3},
+    {"source_id": "SHA-P-VERTAAL-POLMO-INTRO", "target_id": "GRC-I-VERT-INTRO", "type": "prerequisite", "encompassing_weight": 0.3},
+
+    {"source_id": "GRC-I-VERT-INTRO", "target_id": "GRC-I-VERT-NAAMVAL", "type": "prerequisite", "encompassing_weight": 0.4},
+    {"source_id": "GRC-G-MORF-NOM-D1", "target_id": "GRC-I-VERT-NAAMVAL", "type": "prerequisite", "encompassing_weight": 0.4},
+    {"source_id": "GRC-G-MORF-ACC-D1", "target_id": "GRC-I-VERT-NAAMVAL", "type": "prerequisite", "encompassing_weight": 0.4},
+
+    {"source_id": "GRC-I-VERT-NAAMVAL", "target_id": "GRC-I-VERT-POLMO", "type": "prerequisite", "encompassing_weight": 0.4},
+    {"source_id": "SHA-P-VERTAAL-POLMO-OV", "target_id": "GRC-I-VERT-POLMO", "type": "prerequisite", "encompassing_weight": 0.4}
+  ]
+}

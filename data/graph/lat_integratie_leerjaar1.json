@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "id": "LAT-I-VERT-INTRO",
+      "type": "I",
+      "language": "lat",
+      "title_nl": "Van ontleden naar vertalen",
+      "description": "Vertalen is geen woord-voor-woord-omzetting maar het ontleden van een zin in zinsdelen en die weergeven in correct Nederlands.",
+      "bloom_level": "comprehension",
+      "phase": "onderbouw_1",
+      "testable": true,
+      "pensum_years": [],
+      "content_ref": "data/content/LAT-I-VERT-INTRO.md",
+      "items": [
+        {
+          "id": "ITEM-LAT-I-VERT-INTRO-001",
+          "node_ids": ["LAT-I-VERT-INTRO"],
+          "type": "recognition",
+          "direction": "receptive",
+          "difficulty_initial": -0.5,
+          "discrimination_initial": 1.0,
+          "expected_time_sec": 20,
+          "stimulus": {
+            "instruction": "Wat is de eerste stap bij het vertalen van een Latijnse zin?",
+            "options": [
+              "De woorden van links naar rechts vertalen",
+              "De zin ontleden: bepalen welke functie elk woord heeft",
+              "De woorden alfabetisch opzoeken",
+              "Een Nederlandse zin verzinnen die ongeveer past"
+            ]
+          },
+          "answer": "De zin ontleden: bepalen welke functie elk woord heeft",
+          "feedback": "Vertalen begint met ontleden. Pas als je weet welk woord onderwerp, persoonsvorm en lijdend voorwerp is, kun je betrouwbaar naar het Nederlands omzetten.",
+          "source": "manual"
+        }
+      ]
+    },
+    {
+      "id": "LAT-I-VERT-NAAMVAL",
+      "type": "I",
+      "language": "lat",
+      "title_nl": "Naamval bepaalt de functie",
+      "description": "In het Latijn bepaalt de naamval (de uitgang), niet de woordvolgorde, of een woord onderwerp of lijdend voorwerp is.",
+      "bloom_level": "analysis",
+      "phase": "onderbouw_1",
+      "testable": true,
+      "pensum_years": [],
+      "items": [
+        {
+          "id": "ITEM-LAT-I-VERT-NAAMVAL-001",
+          "node_ids": ["LAT-I-VERT-NAAMVAL"],
+          "type": "analysis",
+          "direction": "receptive",
+          "difficulty_initial": 0.0,
+          "discrimination_initial": 1.2,
+          "expected_time_sec": 30,
+          "stimulus": {
+            "instruction": "Vertaal: 'Servus dominum videt.' Wie ziet wie?",
+            "options": [
+              "De slaaf ziet de meester",
+              "De meester ziet de slaaf",
+              "De slaaf en de meester zien elkaar",
+              "De meester wordt door niemand gezien"
+            ]
+          },
+          "answer": "De slaaf ziet de meester",
+          "feedback": "servus staat in de nominativus (onderwerp), dominum in de accusativus (-um, lijdend voorwerp). Dus: de slaaf ziet de meester. Let op de uitgang, niet op de volgorde.",
+          "source": "manual"
+        },
+        {
+          "id": "ITEM-LAT-I-VERT-NAAMVAL-002",
+          "node_ids": ["LAT-I-VERT-NAAMVAL"],
+          "type": "analysis",
+          "direction": "receptive",
+          "difficulty_initial": 0.4,
+          "discrimination_initial": 1.3,
+          "expected_time_sec": 35,
+          "stimulus": {
+            "instruction": "Vertaal: 'Dominum servus videt.' Wie ziet wie?",
+            "options": [
+              "De slaaf ziet de meester",
+              "De meester ziet de slaaf",
+              "De meester ziet zichzelf",
+              "De slaaf wordt gezien door de meester"
+            ]
+          },
+          "answer": "De slaaf ziet de meester",
+          "feedback": "Ook al staat dominum nu vooraan, de uitgang -um maakt het lijdend voorwerp. servus (-us, nominativus) blijft het onderwerp. De woordvolgorde verandert de betekenis niet: de slaaf ziet de meester.",
+          "source": "manual"
+        },
+        {
+          "id": "ITEM-LAT-I-VERT-NAAMVAL-003",
+          "node_ids": ["LAT-I-VERT-NAAMVAL"],
+          "type": "analysis",
+          "direction": "receptive",
+          "difficulty_initial": 0.3,
+          "discrimination_initial": 1.2,
+          "expected_time_sec": 35,
+          "stimulus": {
+            "instruction": "Vertaal: 'Puellam puer amat.' Wie houdt van wie?",
+            "options": [
+              "De jongen houdt van het meisje",
+              "Het meisje houdt van de jongen",
+              "Het meisje en de jongen houden van elkaar",
+              "De jongen wordt bemind"
+            ]
+          },
+          "answer": "De jongen houdt van het meisje",
+          "feedback": "puer (nominativus) is het onderwerp, puellam (-am, accusativus) het lijdend voorwerp. Dus: de jongen houdt van het meisje, ondanks dat puellam vooraan staat.",
+          "source": "manual"
+        }
+      ]
+    },
+    {
+      "id": "LAT-I-VERT-POLMO",
+      "type": "I",
+      "language": "lat",
+      "title_nl": "Een zin vertalen met POLMO",
+      "description": "Het volledige vertaalstappenplan toepassen op een zin: persoonsvorm, onderwerp, lijdend voorwerp, meewerkend voorwerp en overige bepalingen op volgorde bepalen.",
+      "bloom_level": "synthesis",
+      "phase": "onderbouw_1",
+      "testable": true,
+      "pensum_years": [],
+      "items": [
+        {
+          "id": "ITEM-LAT-I-VERT-POLMO-001",
+          "node_ids": ["LAT-I-VERT-POLMO"],
+          "type": "analysis",
+          "direction": "receptive",
+          "difficulty_initial": 0.6,
+          "discrimination_initial": 1.2,
+          "expected_time_sec": 45,
+          "stimulus": {
+            "instruction": "Wat is de persoonsvorm in 'Poeta puellae rosam dat.'?",
+            "options": [
+              "dat",
+              "poeta",
+              "puellae",
+              "rosam"
+            ]
+          },
+          "answer": "dat",
+          "feedback": "Stap 1 van POLMO is de persoonsvorm zoeken: 'dat' (hij/zij geeft). Daarna vind je het onderwerp poeta (nom.), het lijdend voorwerp rosam (acc.) en het meewerkend voorwerp puellae (dat.): de dichter geeft het meisje een roos.",
+          "source": "manual"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {"source_id": "LAT-G-MORF-NAAMVAL-INTRO", "target_id": "LAT-I-VERT-INTRO", "type": "prerequisite", "encompassing_weight": 0.3},
+    {"source_id": "SHA-P-VERTAAL-POLMO-INTRO", "target_id": "LAT-I-VERT-INTRO", "type": "prerequisite", "encompassing_weight": 0.3},
+
+    {"source_id": "LAT-I-VERT-INTRO", "target_id": "LAT-I-VERT-NAAMVAL", "type": "prerequisite", "encompassing_weight": 0.4},
+    {"source_id": "LAT-G-SYNT-NOM-FUNCTIE", "target_id": "LAT-I-VERT-NAAMVAL", "type": "prerequisite", "encompassing_weight": 0.4},
+    {"source_id": "LAT-G-SYNT-ACC-FUNCTIE", "target_id": "LAT-I-VERT-NAAMVAL", "type": "prerequisite", "encompassing_weight": 0.4},
+
+    {"source_id": "LAT-I-VERT-NAAMVAL", "target_id": "LAT-I-VERT-POLMO", "type": "prerequisite", "encompassing_weight": 0.4},
+    {"source_id": "SHA-P-VERTAAL-POLMO-OV", "target_id": "LAT-I-VERT-POLMO", "type": "prerequisite", "encompassing_weight": 0.4}
+  ]
+}
