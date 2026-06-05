@@ -36,6 +36,10 @@ from gymnasium_classica.scheduling.bkt import (
     update_node_state,
 )
 from gymnasium_classica.scheduling.equity import equity_prereq_threshold
+from gymnasium_classica.scheduling.misconceptie_detectie import (
+    evaluate_lego_translator,
+    lego_session_message,
+)
 from gymnasium_classica.scheduling.non_interference import (
     NonInterferenceState,
     select_next,
@@ -113,6 +117,7 @@ class SessionResult:
     mastery_changes: dict[str, tuple[float, float]] = field(default_factory=dict)
     offline_assignments: list[OfflineAssignment] = field(default_factory=list)
     follow_ups: list[OfflineAssignment] = field(default_factory=list)
+    misconception_messages: list[str] = field(default_factory=list)
 
 
 def _get_state_posterior(learner: LearnerModel, node_id: str) -> float:
@@ -465,6 +470,13 @@ def run_session(
 
     # Surface pending offline assignments as follow-ups for this session
     result.follow_ups = _pending_follow_ups(learner)
+
+    # Surface active misconception profiles (e.g. Lego-vertaler) in plain
+    # language so the learner understands the shift in focus (M1-02).
+    lego_flag = evaluate_lego_translator(learner)
+    lego_message = lego_session_message(lego_flag)
+    if lego_message is not None:
+        result.misconception_messages.append(lego_message)
 
     ni_state = NonInterferenceState()
     session_node_ids: set[str] = set()
