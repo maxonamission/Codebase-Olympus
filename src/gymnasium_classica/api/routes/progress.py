@@ -82,6 +82,10 @@ async def bijspijker_progress(
         diagnose_size=len(plan.diagnose),
         eta_dagen=plan.eta_dagen,
         suggest_chapter_bump=plan.suggest_chapter_bump,
+        methode_lat=user.huidige_methode_lat,
+        hoofdstuk_lat=user.huidige_hoofdstuk_lat,
+        methode_grc=user.huidige_methode_grc,
+        hoofdstuk_grc=user.huidige_hoofdstuk_grc,
         open_topics=open_topics,
     )
 

@@ -120,3 +120,28 @@ export function updateSettings(learningRoute) {
     body: JSON.stringify({ learning_route: learningRoute }),
   });
 }
+
+// -- Bijspijker mode (M1-03) --
+
+export function startBijspijker({
+  methodeLat,
+  hoofdstukLat,
+  methodeGrc,
+  hoofdstukGrc,
+  resetPriors = true,
+}) {
+  return apiFetch('/intake/bijspijker', {
+    method: 'POST',
+    body: JSON.stringify({
+      methode_lat: methodeLat || null,
+      hoofdstuk_lat: hoofdstukLat || null,
+      methode_grc: methodeGrc || null,
+      hoofdstuk_grc: hoofdstukGrc || null,
+      reset_priors: resetPriors,
+    }),
+  });
+}
+
+export function getBijspijkerProgress() {
+  return apiFetch('/progress/bijspijker');
+}

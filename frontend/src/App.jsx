@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard'
 import Session from './pages/Session'
 import GraphView from './pages/GraphView'
 import RouteSelect from './pages/RouteSelect'
+import BijspijkerSetup from './pages/BijspijkerSetup'
 import MentorView from './pages/MentorView'
 
 function ProtectedRoute({ children }) {
@@ -47,6 +48,14 @@ export default function App() {
         element={
           <ProtectedRoute>
             <RouteSelect />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/onboarding"
+        element={
+          <ProtectedRoute>
+            <BijspijkerSetup />
           </ProtectedRoute>
         }
       />

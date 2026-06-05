@@ -357,6 +357,62 @@ De literatuur geeft niet alleen aan *wat* werkt, maar ook waar je energie wél e
 
 ---
 
+### Keuze 18: Bijspijker- vs. staatsexamen-modus
+
+> Hoort bij **Spoor M1**. Numeriek volgt het op Keuze 17. (De story vroeg
+> om "Keuze 13", maar dat nummer is al bezet door receptief/productief.)
+
+**Vraag:** De briefing positioneerde als primaire doelgroep VWO-leerlingen
+die de klassieke talen *niet* op school kunnen volgen, met het
+staatsexamen als doel. Wijkunnenmeer's praktijk laat een grotere, urgentere
+doelgroep zien: gymnasiasten die de talen *wél* volgen maar dreigen te
+zakken. Hun doel is niet een examen over jaren, maar **bij blijven met de
+klas** — een fundamenteel andere optimalisatiefunctie. Hoe bedienen we beide?
+
+**Beslissing:** Twee gebruikersmodi met aparte planners.
+
+| Aspect | Staatsexamen | Bijspijker |
+|---|---|---|
+| Tijdshorizon | jaren | weken |
+| Doel | beheersing eindtermen | bij met de schoolmethode |
+| Sequencing | graph + examenjaar | methode + hoofdstuk |
+| "Klaar" | examen gehaald | doelset ≥ drempel |
+| Cool-down | lange-termijn SR | vertaling uit huidig hoofdstuk |
+
+`User.modus` (`STAATSEXAMEN | BIJSPIJKER`) plus per taal
+`huidige_methode_*` + `huidige_hoofdstuk_*`. De `BijspijkerPlanner`
+repliceert WKM's "overhoren": doelset = methode-hoofdstuk-knopen +
+prerequisite-closure; diagnose = wat nog niet beheerst/geverifieerd is;
+versneld tempo (3-5 nieuwe knopen/sessie) en elke sessie afgesloten met
+een vertaling uit het huidige hoofdstuk.
+
+**Onderbouwing:** Voor een leerling die dreigt te zakken is
+lange-termijnretentie secundair aan *nu* het cijfer omhoog krijgen. De
+optimalisatie maximaliseert de fractie van de doelset die snel groen
+wordt; retentie mag in deze modus iets lager zijn. Dit opent het systeem
+voor de doelgroep met de hoogste urgentie en betalingsbereidheid.
+
+**Architecturale implicaties:**
+- **A18.1** `Modus`-default is `STAATSEXAMEN` (technische backward-compat:
+  vóór M1-03 opgeslagen accounts deserialiseren ongewijzigd). De
+  product-intentie "nieuwe accounts zijn bijspijker" leeft in de
+  onboarding-flow, die modus + methode + hoofdstuk samen zet — zo is de
+  model-validator (BIJSPIJKER vereist methode+hoofdstuk voor ≥1 taal)
+  altijd vervulbaar. Geen apart migratiescript nodig.
+- **A18.2** De methode-mapping blijft in het bestaande
+  `data/methode_mapping.json` (niet de per-methode-directory uit de
+  story), zodat de werkende intake-route niet breekt.
+  `validate_methode_mapping` borgt knoop-bestaan, geen duplicaten en
+  opeenvolgende hoofdstukken.
+- **A18.3** Twee endpoints: `POST /intake/bijspijker` (zet modus + plan,
+  `reset_priors=False` voor een hoofdstuk-bump zonder voortgangsverlies)
+  en `GET /progress/bijspijker`. Sessie-endpoints blijven ongewijzigd; de
+  planner wordt op `User.modus` geselecteerd.
+- **A18.4** De `BijspijkerPlanner` is puur (geeft een plan terug); de
+  scheduler vertaalt intro-tempo en cool-down-knopen naar een sessie.
+
+---
+
 ## Edge-type-beleid
 
 De graph kent drie edge-types (`prerequisite`, `enrichment`, `transfer`). Voor de acycliciteitseis geldt één regel:

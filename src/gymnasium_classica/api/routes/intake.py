@@ -136,14 +136,17 @@ async def start_bijspijker(
     from uuid import UUID
 
     learner = load_learner_model(db, user_id) or LearnerModel(user_id=UUID(user_id))
-    for node_id in graph.nodes:
-        prior = 0.70 if node_id in treated else 0.10
-        learner.node_states[node_id] = NodeState(
-            node_id=node_id,
-            posterior_mastery=prior,
-            source=MasterySource.DIAGNOSTIC,
-        )
-    save_learner_model(db, learner)
+    # On first intake set diagnostic priors; on a chapter bump (reset_priors
+    # False) keep the learner's existing progress.
+    if body.reset_priors:
+        for node_id in graph.nodes:
+            prior = 0.70 if node_id in treated else 0.10
+            learner.node_states[node_id] = NodeState(
+                node_id=node_id,
+                posterior_mastery=prior,
+                source=MasterySource.DIAGNOSTIC,
+            )
+        save_learner_model(db, learner)
 
     plan = BijspijkerPlanner(graph, mapping).plan(learner, targets)
     return BijspijkerIntakeResponse(
