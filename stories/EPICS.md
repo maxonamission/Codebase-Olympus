@@ -540,7 +540,7 @@ de hand)
 | M1-01 | Knoop-type P (Procedure) + POLMO-stappen-DAG | — | done |
 | M1-02 | Misconceptie-attribuut + Lego-vertaler-detectie | M1-01, M1-04 | backlog |
 | M1-03 | Bijspijkerroute — methode-en-hoofdstuk-gestuurde catch-up | E1 | backlog |
-| M1-04 | Vertaal-integratielaag — eerste I-VERT-knopen (enabler M1-02) | M1-01 | doing |
+| M1-04 | Vertaal-integratielaag — eerste I-VERT-knopen (enabler M1-02) | M1-01 | done |
 
 **Verhouding tot andere epics:**
 - **E1** is begonnen aan methode-mapping (Fortuna, SPQR); M1-03
