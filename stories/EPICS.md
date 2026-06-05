@@ -537,7 +537,7 @@ de hand)
 
 | Story | Titel | Afhankelijk | Status |
 |-------|-------|-------------|--------|
-| M1-01 | Knoop-type P (Procedure) + POLMO-stappen-DAG | — | doing |
+| M1-01 | Knoop-type P (Procedure) + POLMO-stappen-DAG | — | done |
 | M1-02 | Misconceptie-attribuut + Lego-vertaler-detectie | M1-01 | backlog |
 | M1-03 | Bijspijkerroute — methode-en-hoofdstuk-gestuurde catch-up | E1 | backlog |
 

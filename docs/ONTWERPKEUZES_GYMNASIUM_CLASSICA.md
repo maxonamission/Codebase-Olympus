@@ -243,9 +243,25 @@ Het CE-pensum wisselt jaarlijks van auteur. De cyclus is voorspelbaar en wordt j
 
 ---
 
+### Keuze 11: Procedurele knopen (type P) en de POLMO-strategie
+
+**Vraag:** Wijkunnenmeer (Reijgwart) noemt vier oorzaken van slecht vertalen; drie ervan — woordenschat, grammaticakennis, kunnen ontleden — vallen onder de bestaande knoop-types V, G en I. De vierde, het ontbreken van een *systematische vertaalmethode*, heeft geen plek in het model. Hoe modelleren we de vertaalprocedure zélf als leerbare en diagnoseerbare eenheid?
+
+**Beslissing:** Een vijfde knoop-type **P (Procedure/Strategie)** naast G/V/C/I, plus een nieuw edge-type **`procedure_step`** dat een *volgordelijke* stap binnen een procedure uitdrukt — onderscheiden van `prerequisite`, dat "moet beheerst zijn vóór" betekent. De canonieke vertaalstrategie **POLMO** (Persoonsvorm → Onderwerp → Lijdend voorwerp → Meewerkend voorwerp → Overige) is de eerste procedure-DAG: zes `shared` knopen (één INTRO plus vijf stappen), met `procedure_step`-edges voor de volgorde en reguliere `prerequisite`-edges van de relevante grammatica-knopen naar elke stap.
+
+**Onderbouwing:** Een leerling kan alle naamvallen kennen en tóch structureel verkeerd vertalen door zonder strategie te werken ("Lego-vertalen"). Door de stappen als knopen te modelleren ontstaat (1) diagnostiek per stap, (2) scheduling per stap, en (3) een aangrijppunt voor misconceptie-detectie (M1-02), die kan terugslaan op een specifieke POLMO-stap.
+
+**Architecturale implicaties:**
+- **A11.1** `NodeType` krijgt waarde `P`; `procedure_step` wordt opgenomen in `ACYCLIC_EDGE_TYPES` (een procedure is per definitie acyclisch) en in de ID-schema-validatie (`SHA-P-VERTAAL-POLMO-PV`, etc.).
+- **A11.2** Een procedure-validator eist dat elke `procedure_step`-component een *lineair pad* is: geen vertakking, exact één start, exact één eind. Een malformed procedure (vertakking, dubbele start) is een harde validatiefout.
+- **A11.3** POLMO is `shared` (geldt voor Latijn én Grieks). De grammatica-ankers verwijzen voorlopig naar de Latijnse `SYNT-FUNCTIE`-knopen (Latijn = instaptaal). Per-taal verfijning — eigen `LAT-P-`/`GRC-P-`-ketens en Griekse ankers — is bewust uitgesteld naar een vervolgstory.
+- **A11.4** Stap-knopen krijgen vooralsnog geen eigen items; didactische content bestaat enkel voor de INTRO-knoop. Items per stap en automatische POLMO-stap-foutclassificatie (uitbreiding van F2-04) volgen in latere stories.
+
+---
+
 ## Evidence-based keuzes (uit het literatuuronderzoek, juni 2026)
 
-> Keuzes 12 t/m 16 vloeien voort uit `docs/LITERATUURONDERZOEK_LEERBENADERING.md`. Implementatie loopt via **Spoor L** in `stories/EPICS.md`. (Keuze 11 is gereserveerd voor "Procedurele knopen" uit epic M1.)
+> Keuzes 12 t/m 16 vloeien voort uit `docs/LITERATUURONDERZOEK_LEERBENADERING.md`. Implementatie loopt via **Spoor L** in `stories/EPICS.md`. (Keuze 11 — "Procedurele knopen" uit epic M1 — staat hierboven, los van deze evidence-based cluster.)
 
 ### Evidence-based uitgangspunten (prioritering)
 

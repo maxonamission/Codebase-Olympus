@@ -1,0 +1,93 @@
+{
+  "nodes": [
+    {
+      "id": "SHA-P-VERTAAL-POLMO-INTRO",
+      "type": "P",
+      "language": "shared",
+      "title_nl": "POLMO: het vertaalstappenplan",
+      "title_terminology": "POLMO",
+      "description": "Wat POLMO is en wanneer je het toepast: een vaste volgorde om een zin te ontleden voordat je vertaalt (persoonsvorm, onderwerp, lijdend voorwerp, meewerkend voorwerp, overige).",
+      "bloom_level": "comprehension",
+      "phase": "onderbouw_1",
+      "testable": true,
+      "pensum_years": [],
+      "content_ref": "data/content/SHA-P-VERTAAL-POLMO-INTRO.md"
+    },
+    {
+      "id": "SHA-P-VERTAAL-POLMO-PV",
+      "type": "P",
+      "language": "shared",
+      "title_nl": "Stap 1 — Zoek de persoonsvorm",
+      "title_terminology": "persoonsvorm",
+      "description": "De eerste POLMO-stap: vind de persoonsvorm (de vervoegde werkwoordsvorm) als ankerpunt van de zin.",
+      "bloom_level": "application",
+      "phase": "onderbouw_1",
+      "testable": true,
+      "pensum_years": []
+    },
+    {
+      "id": "SHA-P-VERTAAL-POLMO-OND",
+      "type": "P",
+      "language": "shared",
+      "title_nl": "Stap 2 — Zoek het onderwerp",
+      "title_terminology": "onderwerp (nominativus)",
+      "description": "De tweede POLMO-stap: bepaal het onderwerp via de nominativus en de congruentie met de persoonsvorm.",
+      "bloom_level": "application",
+      "phase": "onderbouw_1",
+      "testable": true,
+      "pensum_years": []
+    },
+    {
+      "id": "SHA-P-VERTAAL-POLMO-LV",
+      "type": "P",
+      "language": "shared",
+      "title_nl": "Stap 3 — Zoek het lijdend voorwerp",
+      "title_terminology": "lijdend voorwerp (accusativus)",
+      "description": "De derde POLMO-stap: bepaal het lijdend voorwerp, meestal herkenbaar aan de accusativus.",
+      "bloom_level": "application",
+      "phase": "onderbouw_1",
+      "testable": true,
+      "pensum_years": []
+    },
+    {
+      "id": "SHA-P-VERTAAL-POLMO-MV",
+      "type": "P",
+      "language": "shared",
+      "title_nl": "Stap 4 — Zoek het meewerkend voorwerp",
+      "title_terminology": "meewerkend voorwerp (dativus)",
+      "description": "De vierde POLMO-stap: bepaal het meewerkend voorwerp, meestal herkenbaar aan de dativus.",
+      "bloom_level": "application",
+      "phase": "onderbouw_1",
+      "testable": true,
+      "pensum_years": []
+    },
+    {
+      "id": "SHA-P-VERTAAL-POLMO-OV",
+      "type": "P",
+      "language": "shared",
+      "title_nl": "Stap 5 — Plaats de overige zinsdelen",
+      "title_terminology": "overige bepalingen",
+      "description": "De laatste POLMO-stap: pas de overige zinsdelen in — bijwoordelijke bepalingen (ablativus, voorzetselgroepen) en bijzinnen — en controleer de congruentie.",
+      "bloom_level": "application",
+      "phase": "onderbouw_1",
+      "testable": true,
+      "pensum_years": []
+    }
+  ],
+  "edges": [
+    {"source_id": "SHA-P-VERTAAL-POLMO-INTRO", "target_id": "SHA-P-VERTAAL-POLMO-PV", "type": "prerequisite", "encompassing_weight": 0.5},
+
+    {"source_id": "SHA-P-VERTAAL-POLMO-PV", "target_id": "SHA-P-VERTAAL-POLMO-OND", "type": "procedure_step", "encompassing_weight": 0.5},
+    {"source_id": "SHA-P-VERTAAL-POLMO-OND", "target_id": "SHA-P-VERTAAL-POLMO-LV", "type": "procedure_step", "encompassing_weight": 0.5},
+    {"source_id": "SHA-P-VERTAAL-POLMO-LV", "target_id": "SHA-P-VERTAAL-POLMO-MV", "type": "procedure_step", "encompassing_weight": 0.5},
+    {"source_id": "SHA-P-VERTAAL-POLMO-MV", "target_id": "SHA-P-VERTAAL-POLMO-OV", "type": "procedure_step", "encompassing_weight": 0.5},
+
+    {"source_id": "LAT-G-MORF-PERSOON-INTRO", "target_id": "SHA-P-VERTAAL-POLMO-PV", "type": "prerequisite", "encompassing_weight": 0.3},
+    {"source_id": "LAT-G-SYNT-NOM-FUNCTIE", "target_id": "SHA-P-VERTAAL-POLMO-OND", "type": "prerequisite", "encompassing_weight": 0.3},
+    {"source_id": "LAT-G-SYNT-ACC-FUNCTIE", "target_id": "SHA-P-VERTAAL-POLMO-LV", "type": "prerequisite", "encompassing_weight": 0.3},
+    {"source_id": "LAT-G-SYNT-DAT-FUNCTIE", "target_id": "SHA-P-VERTAAL-POLMO-MV", "type": "prerequisite", "encompassing_weight": 0.3},
+    {"source_id": "LAT-G-SYNT-ABL-FUNCTIE", "target_id": "SHA-P-VERTAAL-POLMO-OV", "type": "prerequisite", "encompassing_weight": 0.3},
+    {"source_id": "LAT-G-SYNT-PREP-INTRO", "target_id": "SHA-P-VERTAAL-POLMO-OV", "type": "prerequisite", "encompassing_weight": 0.2},
+    {"source_id": "LAT-G-SYNT-BIJW-BEP", "target_id": "SHA-P-VERTAAL-POLMO-OV", "type": "prerequisite", "encompassing_weight": 0.2}
+  ]
+}

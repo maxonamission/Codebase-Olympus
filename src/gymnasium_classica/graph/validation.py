@@ -5,7 +5,7 @@ from pathlib import Path
 
 import networkx as nx
 
-from gymnasium_classica.models.graph import Node, PrerequisiteEdge
+from gymnasium_classica.models.graph import EdgeType, Node, PrerequisiteEdge
 from gymnasium_classica.schemas.id_schema import validate_node_id
 
 
@@ -34,7 +34,7 @@ class ValidationReport:
 # bidirectionele, cross-linguïstische verbanden (LAT <-> GRC) die per
 # definitie cyclisch mogen zijn en geen leervolgorde opleggen. Een vierde
 # edge-type toevoegen kost één regel: opnemen in of weglaten uit deze set.
-ACYCLIC_EDGE_TYPES: frozenset[str] = frozenset({"prerequisite", "enrichment"})
+ACYCLIC_EDGE_TYPES: frozenset[str] = frozenset({"prerequisite", "enrichment", "procedure_step"})
 
 
 def acyclic_subgraph(
@@ -173,6 +173,60 @@ def validate_content_refs(graph: nx.DiGraph, repo_root: Path) -> list[str]:
     return errors
 
 
+def validate_procedures(graph: nx.DiGraph) -> list[str]:
+    """Validate that every procedure (type-P) is a well-formed linear path.
+
+    A procedure is a weakly-connected group of nodes joined by
+    ``procedure_step`` edges (e.g. the POLMO chain PV -> OND -> LV -> MV
+    -> OV). Each such group must be a single, non-branching chain:
+
+      - no node has more than one incoming or one outgoing
+        ``procedure_step`` edge (no branching/merging),
+      - exactly one node has no incoming ``procedure_step`` edge (start),
+      - exactly one node has no outgoing ``procedure_step`` edge (end).
+
+    Acyclicity of ``procedure_step`` is already enforced globally via
+    :data:`ACYCLIC_EDGE_TYPES`; here we additionally require linearity.
+
+    Returns a list of error messages (empty if all procedures are valid).
+    """
+    step_edges = [
+        (u, v)
+        for u, v in graph.edges
+        if (edge := graph.edges[u, v].get("edge")) is not None
+        and edge.type == EdgeType.PROCEDURE_STEP
+    ]
+    if not step_edges:
+        return []
+
+    proc = nx.DiGraph()
+    proc.add_edges_from(step_edges)
+
+    errors: list[str] = []
+    for component in nx.weakly_connected_components(proc):
+        sub = proc.subgraph(component)
+        label = min(component)  # stable, deterministic label for messages
+        branching = sorted(n for n in sub if sub.in_degree(n) > 1 or sub.out_degree(n) > 1)
+        starts = [n for n in sub if sub.in_degree(n) == 0]
+        ends = [n for n in sub if sub.out_degree(n) == 0]
+        if branching:
+            errors.append(
+                f"Procedure '{label}' vertakt (procedure_step is geen lineair pad) "
+                f"bij: {', '.join(branching)}"
+            )
+        if len(starts) != 1:
+            errors.append(
+                f"Procedure '{label}' heeft {len(starts)} startknopen "
+                f"(verwacht precies 1): {', '.join(sorted(starts))}"
+            )
+        if len(ends) != 1:
+            errors.append(
+                f"Procedure '{label}' heeft {len(ends)} eindknopen "
+                f"(verwacht precies 1): {', '.join(sorted(ends))}"
+            )
+    return errors
+
+
 def validate_graph(
     graph: nx.DiGraph,
     *,
@@ -190,6 +244,7 @@ def validate_graph(
       7. Node ID format validation
       8. Nodes without items (warning)
       9. content_ref existence (only when *content_root* is supplied)
+      10. Procedure linearity (type-P procedure_step chains)
 
     Args:
         graph: The NetworkX DiGraph to validate.
@@ -260,5 +315,11 @@ def validate_graph(
         if content_errors:
             report.is_valid = False
             report.errors.extend(content_errors)
+
+    # 10. Procedure linearity (type-P nodes joined by procedure_step)
+    procedure_errors = validate_procedures(graph)
+    if procedure_errors:
+        report.is_valid = False
+        report.errors.extend(procedure_errors)
 
     return report
