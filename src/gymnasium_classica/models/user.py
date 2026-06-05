@@ -4,7 +4,7 @@ from datetime import datetime
 from enum import StrEnum
 from uuid import UUID, uuid4
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 
 class Role(StrEnum):
@@ -33,6 +33,22 @@ class SubscriptionStatus(StrEnum):
 class LearningRoute(StrEnum):
     GRAMMAR_FIRST = "grammar_first"
     CONTEXT_FIRST = "context_first"
+
+
+class Modus(StrEnum):
+    """User mode: which optimisation goal the scheduler plans towards.
+
+    - ``STAATSEXAMEN``: long-horizon mastery of the exam end-terms.
+    - ``BIJSPIJKER``: short-horizon catch-up towards a school method/chapter.
+
+    The Pydantic default is ``STAATSEXAMEN`` so accounts stored before M1-03
+    deserialize unchanged (backward-compatible, no migration needed). New
+    accounts are steered to ``BIJSPIJKER`` by the onboarding flow, which sets
+    the mode together with method + chapter so the validator below is met.
+    """
+
+    STAATSEXAMEN = "staatsexamen"
+    BIJSPIJKER = "bijspijker"
 
 
 class PronunciationLat(StrEnum):
@@ -77,4 +93,34 @@ class User(BaseModel):
             "eerste laad-actie dankzij de Pydantic-default."
         ),
     )
+    modus: Modus = Modus.STAATSEXAMEN
+    huidige_methode_lat: str | None = Field(
+        default=None, description='Active Latin school method, e.g. "fortuna".'
+    )
+    huidige_hoofdstuk_lat: int | None = Field(default=None, ge=1)
+    huidige_methode_grc: str | None = Field(
+        default=None, description='Active Greek school method, e.g. "pallas".'
+    )
+    huidige_hoofdstuk_grc: int | None = Field(default=None, ge=1)
     created_at: datetime = Field(default_factory=datetime.now)
+
+    @model_validator(mode="after")
+    def _check_bijspijker_config(self) -> "User":
+        """In BIJSPIJKER mode at least one language needs method + chapter.
+
+        Only enforced for BIJSPIJKER, so STAATSEXAMEN users (including all
+        pre-M1-03 accounts deserialized with the default) are unaffected.
+        """
+        if self.modus == Modus.BIJSPIJKER:
+            lat_ok = (
+                self.huidige_methode_lat is not None and self.huidige_hoofdstuk_lat is not None
+            )
+            grc_ok = (
+                self.huidige_methode_grc is not None and self.huidige_hoofdstuk_grc is not None
+            )
+            if not (lat_ok or grc_ok):
+                raise ValueError(
+                    "BIJSPIJKER-modus vereist huidige_methode + huidige_hoofdstuk "
+                    "voor minstens één taal (Latijn of Grieks)."
+                )
+        return self
