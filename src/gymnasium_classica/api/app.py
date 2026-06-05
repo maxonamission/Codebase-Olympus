@@ -22,6 +22,7 @@ from gymnasium_classica.api.routes.mentor import router as mentor_router
 from gymnasium_classica.api.routes.progress import router as progress_router
 from gymnasium_classica.api.routes.session import router as session_router
 from gymnasium_classica.api.routes.user import router as user_router
+from gymnasium_classica.diagnostic.methode_profile import load_methode_mapping
 from gymnasium_classica.graph.loader import load_graph
 from gymnasium_classica.passages.loader import load_passages
 from gymnasium_classica.vocab.loader import load_vocab_metadata
@@ -72,6 +73,7 @@ def create_app(
     @asynccontextmanager
     async def lifespan(application: FastAPI) -> AsyncIterator[None]:
         application.state.graph = load_graph(graph_dir)
+        application.state.methode_mapping = load_methode_mapping()
         if passages_dir.is_dir():
             application.state.passages = load_passages(passages_dir)
         else:
