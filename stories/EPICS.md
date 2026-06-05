@@ -533,11 +533,11 @@ de hand)
 - F1-12 done (telemetrie-basis voor M1-02)
 - E1 in uitvoering (methode-mapping voor M1-03)
 
-**Status:** done — alle drie de tiers afgerond (juni 2026).
+**Status:** in uitvoering — M1-01 opgepakt (Sprint 6, juni 2026).
 
 | Story | Titel | Afhankelijk | Status |
 |-------|-------|-------------|--------|
-| M1-01 | Knoop-type P (Procedure) + POLMO-stappen-DAG | — | backlog |
+| M1-01 | Knoop-type P (Procedure) + POLMO-stappen-DAG | — | doing |
 | M1-02 | Misconceptie-attribuut + Lego-vertaler-detectie | M1-01 | backlog |
 | M1-03 | Bijspijkerroute — methode-en-hoofdstuk-gestuurde catch-up | E1 | backlog |
 
