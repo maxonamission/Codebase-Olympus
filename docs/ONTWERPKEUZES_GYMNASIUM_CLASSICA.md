@@ -335,6 +335,28 @@ De literatuur geeft niet alleen aan *wat* werkt, maar ook waar je energie wél e
 
 ---
 
+### Keuze 17: Misconcepties als first-class object (Bug Library)
+
+> Hoort bij **Spoor M1** (verlengstuk van Keuze 11 — POLMO), niet bij de evidence-based cluster 12–16. Numeriek volgt het op Keuze 16.
+
+**Vraag:** De graph kent alleen *positieve* kennis (wat een leerling moet weten). Maar twee leerlingen met identieke BKT-scores kunnen verschillen in of ze daadwerkelijk *ontleden* dan wel "Lego-vertalen" (woorden op elkaar stapelen zonder de zinsbouw te lezen). Op makkelijke stof levert dat dezelfde uitkomst; op moeilijke stof loopt de Lego-vertaler exponentieel sneller stuk. Hoe maken we zo'n systematisch *fout* patroon expliciet, diagnoseerbaar en aanpakbaar?
+
+**Beslissing:** Een **`Misconception`-model** als first-class attribuut op `Node` (`known_misconceptions: list[Misconception]`), volgens het **Bug Library**-patroon uit de intelligent-tutoring-literatuur: naast "wat moet de leerling kennen" ook "welke fouten maken leerlingen systematisch, en hoe diagnosticeer je ze". Elke misconceptie heeft een `code`, mensleesbare naam/beschrijving, `diagnostic_items` (item-IDs die de fout blootleggen) en `remediation_nodes` (knopen die geactiveerd worden bij detectie). De eerste misconceptie is **`LEGO_VERTALEN`**, gekoppeld aan de vertaal-integratieknopen (I-VERT, LAT+GRC), met de POLMO-DAG (Keuze 11) en de morfologie-conceptknopen als remediatie.
+
+**Onderbouwing:** Wijkunnenmeer's praktijk laat zien dat veel struikelgevallen niet door kennis-*tekort* komen maar door een fout patroon dat de leerling consequent toepast. Een misconceptie-laag scheidt deze twee oorzaken — en geeft de scheduler een gericht aangrijppunt (terugslaan op ontleden vóór vertalen) in plaats van generiek "meer oefenen".
+
+**Detectie (regelgebaseerd, uitlegbaar):** `detect_lego_translator()` vergelijkt mastery *over knoop-categorieën* heen, afgeleid uit node-ID-patronen: woordenschat F01–F02 sterk (`avg_V ≥ 0.70`), morfologie zwak (`avg_G_morf < 0.50`), vertalen zwak (`avg_I_vert < 0.40`). Alle drie waar → profiel actief. Drempels staan in één `LegoDetectorConfig` (frozen dataclass), zodat ze op pilot-data herkalibreerd worden zónder codewijziging. Bij onvoldoende waarnemingen per categorie vuurt de regel niet (geen vals-positief bij "nog nooit vertaald").
+
+**Architecturale implicaties:**
+- **A17.1** `Misconception` met `code`-validator (uppercase ASCII + underscore). Cross-references (`diagnostic_items`, `remediation_nodes`) worden in `validate_graph` (stap 11, `validate_misconceptions`) gecontroleerd op bestaan — cross-file via de loader-resolutie.
+- **A17.2** Detectie levert een `MisconceptionFlag` (drie scores + reden), niet enkel een `bool`, zodat een mentor-dashboard of sessie-summary het kan tonen.
+- **A17.3** Scheduler-integratie is een *vermenigvuldiging* op de bestaande urgentiescore (`apply_lego_boost`, factor 1.5–2.0, default 1.75), géén harde override — andere urgenties blijven gerespecteerd. Doelknopen: POLMO-stappen, morfologie-concepten en de diagnose-item-knopen.
+- **A17.4** Leerling-feedback is jargonvrij: de sessie-summary toont "Je vertalingen lopen vooruit op je grammatica…", nooit het technische label "Lego-vertaler".
+
+**Nieuwe misconcepties toevoegen (proces):** (1) definieer een `Misconception` met unieke `code` en koppel hem aan de knopen waar de fout zich manifesteert; (2) voeg `diagnostic_items` toe die de fout voorspelbaar blootleggen, en `remediation_nodes` die hem corrigeren; (3) `validate_graph` borgt dat alle verwijzingen resolven; (4) schrijf een detector-functie die op BKT-aggregaten werkt, met drempels in een eigen config-object; (5) kalibreer die drempels op pilot-data. Een volledige Bug Library (bijv. "alleen werkwoord uit de zin pikken", "tijd negeren") is bewust uitgesteld — `LEGO_VERTALEN` is het startpunt (M1-02).
+
+---
+
 ## Edge-type-beleid
 
 De graph kent drie edge-types (`prerequisite`, `enrichment`, `transfer`). Voor de acycliciteitseis geldt één regel:
