@@ -14,11 +14,22 @@ from __future__ import annotations
 
 from collections.abc import Callable
 from dataclasses import dataclass
+from typing import TYPE_CHECKING
 
 from gymnasium_classica.models.learner import LearnerModel
 from gymnasium_classica.models.misconception_flag import MisconceptionFlag
 
+if TYPE_CHECKING:
+    import networkx as nx
+
+    from gymnasium_classica.models.graph import Node
+
 LEGO_CODE = "LEGO_VERTALEN"
+
+LEGO_SESSION_MESSAGE = (
+    "Je vertalingen lopen vooruit op je grammatica. We oefenen daarom "
+    "even extra met ontleden voordat we verder gaan met vertalen."
+)
 
 
 @dataclass(frozen=True)
@@ -37,6 +48,8 @@ class LegoDetectorConfig:
     """Translation-integration mastery must be below this."""
     min_nodes_per_category: int = 1
     """Minimum observed nodes per category before the rule may fire."""
+    boost_factor: float = 1.75
+    """Urgency multiplier (1.5-2.0) applied to remediation/diagnostic nodes."""
 
 
 DEFAULT_LEGO_CONFIG = LegoDetectorConfig()
@@ -152,3 +165,70 @@ def detect_lego_translator(
 ) -> bool:
     """Boolean shorthand for :func:`evaluate_lego_translator`."""
     return evaluate_lego_translator(learner, config).active
+
+
+def lego_boost_targets(graph: nx.DiGraph) -> set[str]:
+    """Node IDs that the Lego-vertaler remediation should prioritise.
+
+    Collected from every ``LEGO_VERTALEN`` misconception in the graph: its
+    ``remediation_nodes`` (POLMO steps + morphology concepts) plus the nodes
+    that host its ``diagnostic_items`` (used as a peilstok/probe).
+    """
+    targets: set[str] = set()
+    diagnostic_items: set[str] = set()
+    for node_id in graph.nodes:
+        node = graph.nodes[node_id].get("node")
+        if node is None:
+            continue
+        for misc in node.known_misconceptions:
+            if misc.code == LEGO_CODE:
+                targets.update(misc.remediation_nodes)
+                diagnostic_items.update(misc.diagnostic_items)
+
+    if diagnostic_items:
+        for node_id in graph.nodes:
+            node = graph.nodes[node_id].get("node")
+            if node is None:
+                continue
+            if any(item.id in diagnostic_items for item in node.items):
+                targets.add(node_id)
+    return targets
+
+
+def apply_lego_boost(
+    scored_nodes: list[tuple[float, Node]],
+    learner: LearnerModel,
+    graph: nx.DiGraph,
+    config: LegoDetectorConfig = DEFAULT_LEGO_CONFIG,
+) -> tuple[list[tuple[float, Node]], MisconceptionFlag]:
+    """Re-rank urgency scores when the Lego-vertaler profile is active.
+
+    Multiplies (never overrides) the urgency of remediation and diagnostic
+    nodes by ``config.boost_factor``, so other urgencies stay respected. When
+    the profile is inactive the scores are returned unchanged.
+
+    Returns the (possibly re-ranked) scores and the :class:`MisconceptionFlag`
+    so the caller can surface the reason.
+    """
+    flag = evaluate_lego_translator(learner, config)
+    if not flag.active:
+        return scored_nodes, flag
+
+    targets = lego_boost_targets(graph)
+    boosted = [
+        (urgency * config.boost_factor if node.id in targets else urgency, node)
+        for urgency, node in scored_nodes
+    ]
+    boosted.sort(key=lambda pair: pair[0], reverse=True)
+    return boosted, flag
+
+
+def lego_session_message(flag: MisconceptionFlag) -> str | None:
+    """Learner-facing session message, or None when no profile is active.
+
+    Deliberately jargon-free: the learner never sees the technical label
+    "Lego-vertaler".
+    """
+    if flag.active and flag.code == LEGO_CODE:
+        return LEGO_SESSION_MESSAGE
+    return None
