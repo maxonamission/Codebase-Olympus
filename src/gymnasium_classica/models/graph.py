@@ -155,6 +155,40 @@ class Item(BaseModel):
         return self
 
 
+class Misconception(BaseModel):
+    """A systematic error pattern a learner may apply (Bug Library pattern).
+
+    Unlike a knowledge node, which models what a learner should know, a
+    misconception models a recurring *wrong* procedure. It is attached to the
+    nodes where the error manifests and points at the diagnostic items that
+    expose it and the remediation nodes that correct it (M1-02).
+    """
+
+    code: str = Field(description='Machine code, e.g. "LEGO_VERTALEN".')
+    name: str = Field(description="Human-readable name.")
+    description: str = Field(description="What the learner does wrong.")
+    diagnostic_items: list[str] = Field(
+        default_factory=list,
+        description="Item IDs that specifically expose this error.",
+    )
+    remediation_nodes: list[str] = Field(
+        default_factory=list,
+        description="Node IDs to prioritise when the misconception is detected "
+        "(e.g. POLMO procedure steps and morphology concept nodes).",
+    )
+
+    @field_validator("code")
+    @classmethod
+    def check_code_format(cls, v: str) -> str:
+        if not re.fullmatch(r"[A-Z][A-Z0-9_]*", v):
+            raise ValueError(
+                f"Invalid misconception code {v!r}. "
+                "Must be uppercase ASCII letters, digits and underscores, "
+                "starting with a letter (e.g. LEGO_VERTALEN)."
+            )
+        return v
+
+
 class Node(BaseModel):
     """A single knowledge node (kennisatoom) in the graph."""
 
@@ -186,6 +220,11 @@ class Node(BaseModel):
         ),
     )
     items: list[Item] = Field(default_factory=list)
+    known_misconceptions: list[Misconception] = Field(
+        default_factory=list,
+        description="Misconceptions (systematic error patterns) associated with "
+        "this node; the Bug Library counterpart to positive knowledge (M1-02).",
+    )
 
     @field_validator("semantic_cluster")
     @classmethod
