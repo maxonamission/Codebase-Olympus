@@ -39,9 +39,22 @@ repos:
         pass_filenames: false
         types: [python]
 
-      - id: story-status
-        name: stories/-consistentie (staged)
-        entry: uv run python scripts/check_story_status.py --mode=staged
+      # Codebase-standards story-administratie (gevendord, front-matter leidend).
+      - id: sync-story-folders
+        name: auto-sync story-mappen naar front-matter status
+        entry: uv run python scripts/sync_story_folders.py
         language: system
         pass_filenames: false
-        files: ^stories/
+        files: ^stories/.*\.md$
+      - id: regenerate-status
+        name: regenerate-status (tellingen → EPICS/PROJECTSTATUS)
+        entry: uv run python scripts/regenerate_status.py
+        language: system
+        pass_filenames: false
+        files: ^(stories/|PROJECTSTATUS\.md)
+      - id: story-status
+        name: stories/-consistentie (staged, soft)
+        entry: uv run python scripts/check_story_status.py --mode=staged --ac-gate=warn
+        language: system
+        pass_filenames: false
+        files: ^(stories/|PROJECTSTATUS\.md)

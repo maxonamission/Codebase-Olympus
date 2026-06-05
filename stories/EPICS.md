@@ -1,5 +1,48 @@
 # Epics overzicht
 
+## Statustabel
+
+> Canoniek register (codebase-standards). Bron van waarheid = de story-bestanden in
+> `stories/{backlog,doing,done}/` (front-matter `status:`). Tellingen worden
+> geregenereerd met `scripts/regenerate_status.py` en gevalideerd in CI.
+> Toekomstige epics zonder stories (E2/E4/E5/E6) staan onder hun sectie en
+> verschijnen hier zodra ze stories krijgen.
+
+| Epic | Naam | Status | Stories (done/total) |
+|---|---|---|---|
+| A1 | Grammatica Latijn | done | 15/15 |
+| A2 | Grammatica Grieks | done | 11/11 |
+| A3 | Grieks alfabet — onboarding-subgraph | done | 3/3 |
+| A4 | Vocabulaire | done | 8/8 |
+| A5 | Cultuur | done | 6/6 |
+| A6 | Transfer-edges | done | 5/5 |
+| B1 | TTS-pipeline en audio-generatie | done | 5/5 |
+| B2 | Audio-oefentypen | done | 4/4 |
+| B3 | STT-integratie | done | 4/4 |
+| B4 | Pronunciation assessment (stretch goal) | backlog | 0/3 |
+| B5 | Offline oefentypen en scheduling | done | 6/6 |
+| B6 | OCR-pipeline | backlog | 0/5 |
+| B7 | LLM-vertaalbeoordeling | backlog | 0/3 |
+| B8 | Mentor-portfolio | backlog | 0/3 |
+| C1 | Items genereren — Latijnse grammatica | done | 11/11 |
+| C2 | Content schrijven — Latijnse grammatica | done | 5/5 |
+| D1 | FastAPI backend | done | 8/8 |
+| D2 | React frontend | done | 7/7 |
+| D3 | Integratie en pilot-ready | done | 3/3 |
+| F1 | Content-ontsluiting en kwaliteitsverbetering | actief | 14/15 |
+| F2 | Mentor-dashboard | done | 4/4 |
+| M1 | WKM-spiegeling — vertaalstrategie, misconcepties, bijspijkerroute | done | 4/4 |
+| L1 | Meet- en experimenteer-infrastructuur | done | 3/3 |
+| L2 | Learner model — receptief/productief, migreerbaar, individueel | done | 3/3 |
+| L3 | Didactiek — worked examples, motivatie, equity | done | 3/3 |
+| E1 | Pilot-ready — de eerste echte leerling | actief | 0/1 |
+| E3 | Items en content voor Grieks + vocabulaire | done | 24/24 |
+| E7 | Didactische routes — grammatica-eerst vs. context-eerst | done | 10/10 |
+| OS | Ontwikkelstraat fase 1 — Python-baseline | actief | 11/12 |
+| N1 | Vernederlandste code-identifiers naar Engels | done | 6/6 |
+
+**Totaal:** 30 epics, 200 stories (183 done, 1 doing, 0 todo, 16 backlog).
+
 ## Spoor A — Knowledge graph content
 
 Leerjaar 1 gymnasium, beide talen. Doelomvang: ~850 knopen, ~1500-2000 edges.
@@ -848,6 +891,7 @@ Beide routes leiden tot mastery op dezelfde knopen — het verschil is de volgor
 | OS-08 | CLAUDE.md bijwerken met ontwikkelstraat-sectie | 6 | alle voorgaande | done |
 | OS-09 | validation.py generiek per edge-type maken | 5 | — | done |
 | OS-10 | Olympus-specifieke reviewer-agent | 5 | OS-07 | backlog |
+| OS-11 | Adopteer codebase-standards canoniek format + drift-validator | 6 | OS-06 | done |
 
 **Volgorde-advies:** OS-01 en OS-02 parallel (beide linter-achtig). OS-03 en OS-04 daarna; OS-06 bouwt op beide. OS-05 (Claude-hooks) kan vroeg, zodra OS-01 klaar is, omdat het de inner loop versnelt. OS-07 en OS-08 als laatste: eerst moet er iets zijn om te documenteren.
 
