@@ -116,6 +116,43 @@ Terug op het dashboard zou je de bijgewerkte voortgang moeten zien:
 - Bijgewerkt totaal
 - Streak-teller
 
+## Pilot-scenario: bijspijker-modus (M1-03)
+
+Dit scenario test de catch-up-route voor een gymnasiast die bij wil
+blijven met de klas.
+
+### Stap 1: Registreren en modus kiezen
+
+Maak een nieuw account. Na registratie kom je op de onboarding-pagina
+(`/onboarding`). Kies **"Ik wil bijblijven met mijn klas"**, selecteer
+bijvoorbeeld methode **Pallas** en hoofdstuk **4** (Grieks), en klik
+*Doorgaan*. Dit roept `POST /intake/bijspijker` aan.
+
+Verwacht: je belandt op het dashboard met een bijspijker-blok bovenaan:
+*"Nog X onderdelen tot je bij bent met hoofdstuk 4"* plus een
+percentage-groen en een ETA in dagen.
+
+### Stap 2: Voortgang ophalen
+
+Het dashboard haalt `GET /progress/bijspijker` op. Controleer:
+- `doelset_size` > 0 (knopen van hoofdstuk 1-4 + prerequisites),
+- `diagnose_size` (nog in te halen onderdelen),
+- `open_topics` (de eerstvolgende onderwerpen, met titel).
+
+### Stap 3: Sessies draaien tot je bij bent
+
+Draai sessies (zie de walkthrough hierboven). De catch-up plant een
+hoger introductietempo en sluit elke sessie af met een vertaling uit
+hoofdstuk 4. Naarmate je knopen beheerst, daalt `diagnose_size` en stijgt
+het percentage groen.
+
+### Stap 4: Hoofdstuk bumpen
+
+Als je bij bent (`is_bij = true`) verschijnt de knop **"Update mijn
+hoofdstuk (klas is verder)"**. Die roept `POST /intake/bijspijker` met
+`reset_priors=false` aan: je hoofdstuk schuift op zonder je voortgang te
+wissen, en er komt een nieuwe doelset bij.
+
 ## Architectuur overzicht
 
 ```

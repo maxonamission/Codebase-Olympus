@@ -19,7 +19,8 @@ export default function Login() {
       const action = isRegister ? register : login
       const data = await action(email, password)
       localStorage.setItem('token', data.token)
-      navigate('/dashboard')
+      // New accounts pick a mode (bijspijker/staatsexamen) before the dashboard.
+      navigate(isRegister ? '/onboarding' : '/dashboard')
     } catch (err) {
       setError(err.message)
     } finally {

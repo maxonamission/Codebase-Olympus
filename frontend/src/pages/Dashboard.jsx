@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { getClusterProgress, getProgressOverview, getUserProfile, updateSettings } from '../api'
+import {
+  getBijspijkerProgress,
+  getClusterProgress,
+  getProgressOverview,
+  getUserProfile,
+  startBijspijker,
+  updateSettings,
+} from '../api'
 
 const ROUTE_LABELS = {
   context_first: 'Beginnen met lezen',
@@ -49,18 +56,22 @@ export default function Dashboard() {
   const [error, setError] = useState('')
   const [learningRoute, setLearningRoute] = useState(null)
   const [switchingRoute, setSwitchingRoute] = useState(false)
+  const [bijspijker, setBijspijker] = useState(null)
+  const [bumping, setBumping] = useState(false)
 
   useEffect(() => {
     async function load() {
       try {
-        const [data, profile, clusterData] = await Promise.all([
+        const [data, profile, clusterData, bij] = await Promise.all([
           getProgressOverview(),
           getUserProfile(),
           getClusterProgress().catch(() => ({ clusters: [] })),
+          getBijspijkerProgress().catch(() => null),
         ])
         setOverview(data)
         setLearningRoute(profile.learning_route)
         setClusters(clusterData.clusters || [])
+        setBijspijker(bij)
       } catch (err) {
         setError(err.message)
       } finally {
@@ -69,6 +80,26 @@ export default function Dashboard() {
     }
     load()
   }, [])
+
+  async function handleBumpChapter() {
+    if (!bijspijker) return
+    setBumping(true)
+    setError('')
+    try {
+      await startBijspijker({
+        methodeLat: bijspijker.methode_lat,
+        hoofdstukLat: bijspijker.hoofdstuk_lat ? bijspijker.hoofdstuk_lat + 1 : null,
+        methodeGrc: bijspijker.methode_grc,
+        hoofdstukGrc: bijspijker.hoofdstuk_grc ? bijspijker.hoofdstuk_grc + 1 : null,
+        resetPriors: false,
+      })
+      setBijspijker(await getBijspijkerProgress())
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setBumping(false)
+    }
+  }
 
   async function handleToggleRoute() {
     const newRoute = learningRoute === 'grammar_first' ? 'context_first' : 'grammar_first'
@@ -114,6 +145,35 @@ export default function Dashboard() {
       </div>
 
       {error && <div className="error-message">{error}</div>}
+
+      {bijspijker && (
+        <div className="bijspijker-widget">
+          {bijspijker.is_bij ? (
+            <p className="bijspijker-headline">
+              Je bent bij! Je beheerst alles tot je huidige hoofdstuk. 🎉
+            </p>
+          ) : (
+            <p className="bijspijker-headline">
+              Nog <strong>{bijspijker.diagnose_size}</strong> onderdelen tot je bij bent
+              {bijspijker.hoofdstuk_grc ? ` met hoofdstuk ${bijspijker.hoofdstuk_grc}` : ''}
+              {bijspijker.hoofdstuk_lat ? ` (Latijn h${bijspijker.hoofdstuk_lat})` : ''}.
+            </p>
+          )}
+          <p className="bijspijker-eta">
+            {Math.round(bijspijker.fractie_bij * 100)}% groen
+            {!bijspijker.is_bij && ` · nog ± ${bijspijker.eta_dagen} dagen bij 30 min/dag`}
+          </p>
+          {bijspijker.suggest_chapter_bump && (
+            <button
+              className="btn btn-secondary"
+              disabled={bumping}
+              onClick={handleBumpChapter}
+            >
+              {bumping ? 'Bezig...' : 'Update mijn hoofdstuk (klas is verder)'}
+            </button>
+          )}
+        </div>
+      )}
 
       <div className="dashboard-stats">
         <div className="stat-card">

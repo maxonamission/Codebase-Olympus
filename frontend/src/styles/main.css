@@ -1565,3 +1565,46 @@ h2 {
   color: #fff;
   border-color: var(--accent, #2e5cff);
 }
+
+/* -- Bijspijker mode (M1-03) -- */
+.bijspijker-widget {
+  background: var(--surface, #f4f6fb);
+  border: 1px solid var(--border, #d7dceb);
+  border-left: 4px solid var(--accent, #2e5cff);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.bijspijker-headline {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+.bijspijker-eta {
+  margin: 0 0 0.5rem;
+  color: var(--text-muted, #5a6275);
+  font-size: 0.9rem;
+}
+.bijspijker-method-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+.method-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.method-picker-label {
+  width: 4.5rem;
+  font-weight: 600;
+}
+.method-picker select,
+.method-picker input {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--border, #d7dceb);
+  border-radius: 6px;
+}
+.method-picker input {
+  width: 6rem;
+}

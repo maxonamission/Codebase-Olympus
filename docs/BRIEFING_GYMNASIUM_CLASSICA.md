@@ -17,11 +17,13 @@ Gymnasium Classica is een adaptief leersysteem dat leerlingen in staat stelt om 
 
 ### 1.2 Doelgroepen
 
-**Primair:** VWO-leerlingen (atheneum) die Latijn en/of Grieks niet op school kunnen volgen maar zich op gymnasiumniveau willen ontwikkelen — bijvoorbeeld ter voorbereiding op een staatsexamen of als intellectuele verrijking.
+Er zijn twee **gelijkwaardige primaire doelgroepen**, met elk een eigen modus (zie Keuze 18):
 
-**Secundair:** Gymnasiumleerlingen die bijles of extra ondersteuning nodig hebben. Het systeem kan fungeren als diagnostisch instrument (waar zit de lacune?) en als gerichte remediërende tool.
+**Primair A — bijspijkers (schoolgaande gymnasiasten).** Kersverse gymnasiasten (brugklas, 2 of 3 gymnasium) die de klassieke talen *wél* op school volgen maar dreigen te zakken. Hun doel is niet een examen over jaren, maar **bij blijven met de klas**: het cijfer omhoog op de schoolmethode (Fortuna, SPQR, Pallas, …). Praktijkervaring (Wijkunnenmeer) wijst dit aan als de grootste en urgentste groep — met de hoogste betalingsbereidheid, omdat de inzet "op school blijven" is. Het systeem bedient hen in **bijspijker-modus**: methode-en-hoofdstuk-gestuurde catch-up (M1-03).
 
-**Tertiair:** Volwassen autodidacten met interesse in de klassieke talen en cultuur.
+**Primair B — staatsexamenkandidaten.** VWO-leerlingen die Latijn en/of Grieks *niet* op school kunnen volgen maar zich op gymnasiumniveau willen ontwikkelen, ter voorbereiding op een staatsexamen of als intellectuele verrijking. Voor hen werkt het systeem in **staatsexamen-modus**: lange-termijnopbouw richting de eindtermen.
+
+**Tertiair:** Volwassen autodidacten met interesse in de klassieke talen en cultuur (combineerbaar met beide modi).
 
 ### 1.3 Ambitie: efficiënter leren per bestede minuut
 

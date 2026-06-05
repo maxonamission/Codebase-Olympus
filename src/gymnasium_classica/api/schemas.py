@@ -286,6 +286,11 @@ class BijspijkerIntakeRequest(BaseModel):
     hoofdstuk_lat: int | None = Field(default=None, ge=1)
     methode_grc: str | None = Field(default=None, description="Griekse methode, bijv. 'pallas'.")
     hoofdstuk_grc: int | None = Field(default=None, ge=1)
+    reset_priors: bool = Field(
+        default=True,
+        description="True bij eerste intake (zet diagnose-priors). False bij een "
+        "hoofdstuk-bump: behoudt bestaande voortgang.",
+    )
 
 
 class BijspijkerIntakeResponse(BaseModel):
@@ -312,6 +317,10 @@ class BijspijkerProgressResponse(BaseModel):
     diagnose_size: int
     eta_dagen: int
     suggest_chapter_bump: bool
+    methode_lat: str | None = None
+    hoofdstuk_lat: int | None = None
+    methode_grc: str | None = None
+    hoofdstuk_grc: int | None = None
     open_topics: list[BijspijkerTopic] = Field(default_factory=list)
 
 
