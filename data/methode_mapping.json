@@ -107,8 +107,77 @@
       "naam": "Pallas",
       "language": "grc",
       "hoofdstukken": {
-        "_comment": "Wordt gevuld wanneer de Griekse grammaticaknopen beschikbaar zijn (fase 1b/1c)."
-      }
+        "1": {
+          "description": "Alfabet, lidwoord en het naamvalsysteem",
+          "node_ids": [
+            "GRC-G-FONL-ALFA-GRP1",
+            "GRC-G-FONL-ALFA-GRP2",
+            "GRC-G-FONL-ALFA-GRP3",
+            "GRC-G-FONL-ALFA-GRP4",
+            "GRC-G-MORF-NAAMVAL-INTRO",
+            "GRC-G-MORF-NUMERUS-INTRO",
+            "GRC-G-MORF-GENUS-INTRO",
+            "GRC-G-MORF-LIDW-INTRO",
+            "GRC-G-MORF-DECL-INTRO"
+          ]
+        },
+        "2": {
+          "description": "2e declinatie (ο-stammen)",
+          "node_ids": [
+            "GRC-G-MORF-NOM-D2",
+            "GRC-G-MORF-ACC-D2",
+            "GRC-G-MORF-GEN-D2",
+            "GRC-G-MORF-DAT-D2",
+            "GRC-G-MORF-VOC-D2",
+            "GRC-G-SYNT-NOM-FUNCTIE",
+            "GRC-G-SYNT-ACC-FUNCTIE"
+          ]
+        },
+        "3": {
+          "description": "1e declinatie (α/η-stammen)",
+          "node_ids": [
+            "GRC-G-MORF-NOM-D1",
+            "GRC-G-MORF-ACC-D1",
+            "GRC-G-MORF-GEN-D1",
+            "GRC-G-MORF-DAT-D1",
+            "GRC-G-MORF-VOC-D1",
+            "GRC-G-SYNT-GEN-FUNCTIE",
+            "GRC-G-SYNT-DAT-FUNCTIE"
+          ]
+        },
+        "4": {
+          "description": "Praesens indicativus actief",
+          "node_ids": [
+            "GRC-G-MORF-PERSOON-INTRO",
+            "GRC-G-MORF-TEMPUS-INTRO",
+            "GRC-G-MORF-CONJ-INTRO",
+            "GRC-G-MORF-PRAES-THEM",
+            "GRC-G-MORF-PRAES-PARAD",
+            "GRC-G-MORF-PRAES-EIMI"
+          ]
+        },
+        "5": {
+          "description": "Lidwoordverbuiging en adjectieven",
+          "node_ids": [
+            "GRC-G-MORF-LIDW-VERBG",
+            "GRC-G-MORF-ADJ-D12-2U",
+            "GRC-G-MORF-ADJ-D12-3U",
+            "GRC-G-SYNT-ADJ-ATTRIB",
+            "GRC-G-SYNT-ADJ-CONGR"
+          ]
+        },
+        "6": {
+          "description": "Voorzetsels en basissyntaxis",
+          "node_ids": [
+            "GRC-G-SYNT-PREP-INTRO",
+            "GRC-G-SYNT-PREP-ACC",
+            "GRC-G-SYNT-PREP-GEN",
+            "GRC-G-SYNT-PREP-DAT",
+            "GRC-G-SYNT-ONTK"
+          ]
+        }
+      },
+      "_comment": "Voorlopige PoC-mapping op basis van de leerjaar-1 GRC-knopen; pedagogische volgorde alfabet->declinaties->praesens->adjectieven->voorzetsels. Definitieve hoofdstukindeling wordt door de externe domeinpartner gevalideerd."
     }
   }
 }

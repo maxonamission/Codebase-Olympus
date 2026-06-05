@@ -58,6 +58,53 @@ def get_treated_node_ids(
     return treated
 
 
+def validate_methode_mapping(
+    mapping: MethodeMapping,
+    graph: nx.DiGraph,
+) -> list[str]:
+    """Validate a method mapping against the knowledge graph (M1-03).
+
+    Checks, per method:
+      - every referenced node ID exists in the graph,
+      - no node ID is listed in more than one chapter of the same method,
+      - chapter numbers are consecutive starting at 1 (no gaps).
+
+    Keys starting with ``_`` (e.g. ``_comment``) are ignored. Returns a list
+    of error messages (empty if the mapping is valid).
+    """
+    errors: list[str] = []
+    for methode, methode_data in mapping.get("methoden", {}).items():
+        chapters = methode_data.get("hoofdstukken", {})
+        chapter_keys = [k for k in chapters if not k.startswith("_")]
+
+        # Consecutive chapter numbering starting at 1.
+        try:
+            numbers = sorted(int(k) for k in chapter_keys)
+        except ValueError:
+            errors.append(
+                f"Methode '{methode}': niet-numerieke hoofdstuksleutel in {chapter_keys}"
+            )
+            numbers = []
+        if numbers and numbers != list(range(1, len(numbers) + 1)):
+            errors.append(
+                f"Methode '{methode}': hoofdstukken niet opeenvolgend vanaf 1: {numbers}"
+            )
+
+        seen: set[str] = set()
+        for key in chapter_keys:
+            for node_id in chapters[key].get("node_ids", []):
+                if node_id not in graph.nodes:
+                    errors.append(
+                        f"Methode '{methode}' hoofdstuk {key}: onbestaande knoop {node_id}"
+                    )
+                if node_id in seen:
+                    errors.append(
+                        f"Methode '{methode}': knoop {node_id} komt in meerdere hoofdstukken voor"
+                    )
+                seen.add(node_id)
+    return errors
+
+
 def apply_methode_profile(
     learner: LearnerModel,
     graph: nx.DiGraph,
