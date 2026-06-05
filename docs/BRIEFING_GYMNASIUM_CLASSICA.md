@@ -341,6 +341,10 @@ Per beheerste knoop wordt bijgehouden:
 - `repetitions`: aantal succesvolle reviews
 - `geschatte_retentie`: functie van tijd sinds laatste review en het individuele vergeettempo
 
+#### 4.3.4 Misconcepties (Bug Library)
+
+Naast *positieve* kennis modelleert het learner model ook systematische **fouten**, volgens het Bug Library-patroon uit de intelligent-tutoring-literatuur. Twee leerlingen met identieke BKT-scores kunnen verschillen in of ze daadwerkelijk ontleden of "Lego-vertalen" — woorden op elkaar stapelen zonder de zinsbouw te lezen. Een misconceptie (`Misconception`, gekoppeld aan de knopen waar de fout zich voordoet) wordt regelgebaseerd gedetecteerd op BKT-aggregaten over knoop-categorieën (woordenschat sterk, morfologie en vertalen zwak → profiel `LEGO_VERTALEN`), waarna de scheduling-engine tijdelijk extra prioriteit geeft aan ontleden (POLMO, Laag 3) vóór vertalen. Zie **Keuze 17** in `ONTWERPKEUZES_GYMNASIUM_CLASSICA.md` en story **M1-02**.
+
 ### 4.4 Laag 3: Scheduling Engine
 
 #### 4.4.1 Het optimalisatieprobleem
