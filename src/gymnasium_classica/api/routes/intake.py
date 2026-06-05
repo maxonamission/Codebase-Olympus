@@ -4,17 +4,30 @@ import networkx as nx
 from fastapi import APIRouter, Depends, HTTPException, Request
 
 from gymnasium_classica.api.auth import get_current_user_id
-from gymnasium_classica.api.database import load_learner_model, save_learner_model
+from gymnasium_classica.api.database import (
+    get_user,
+    load_learner_model,
+    save_learner_model,
+    update_user,
+)
 from gymnasium_classica.api.intake_manager import IntakeManager, IntakeQuestion
 from gymnasium_classica.api.schemas import (
+    BijspijkerIntakeRequest,
+    BijspijkerIntakeResponse,
     IntakeAnswerRequest,
     IntakeAnswerResponse,
     IntakeQuestionResponse,
     IntakeStartRequest,
     IntakeStartResponse,
 )
-from gymnasium_classica.diagnostic.methode_profile import apply_methode_profile
-from gymnasium_classica.models.learner import LearnerModel
+from gymnasium_classica.diagnostic.methode_profile import (
+    apply_methode_profile,
+    get_treated_node_ids,
+    load_methode_mapping,
+)
+from gymnasium_classica.models.learner import LearnerModel, MasterySource, NodeState
+from gymnasium_classica.models.user import Modus
+from gymnasium_classica.scheduling.bijspijker import BijspijkerPlanner, BijspijkerTarget
 
 router = APIRouter(prefix="/intake", tags=["intake"])
 
@@ -73,6 +86,72 @@ async def start_intake(
     return IntakeStartResponse(
         intake_id=intake_id,
         question=_question_to_response(question),
+    )
+
+
+@router.post("/bijspijker", response_model=BijspijkerIntakeResponse)
+async def start_bijspijker(
+    body: BijspijkerIntakeRequest,
+    request: Request,
+    user_id: str = Depends(get_current_user_id),
+) -> BijspijkerIntakeResponse:
+    """Switch a user to bijspijker mode and plan a catch-up route (M1-03)."""
+    db = request.app.state.db
+    graph: nx.DiGraph = request.app.state.graph
+
+    lat_ok = bool(body.methode_lat and body.hoofdstuk_lat)
+    grc_ok = bool(body.methode_grc and body.hoofdstuk_grc)
+    if not (lat_ok or grc_ok):
+        raise HTTPException(
+            status_code=400,
+            detail="Geef voor minstens één taal methode + hoofdstuk op.",
+        )
+
+    user = get_user(db, user_id)
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    mapping = load_methode_mapping()
+    treated: set[str] = set()
+    targets: list[BijspijkerTarget] = []
+    try:
+        if body.methode_lat and body.hoofdstuk_lat:
+            treated |= get_treated_node_ids(mapping, body.methode_lat, str(body.hoofdstuk_lat))
+            targets.append(BijspijkerTarget(body.methode_lat, body.hoofdstuk_lat))
+        if body.methode_grc and body.hoofdstuk_grc:
+            treated |= get_treated_node_ids(mapping, body.methode_grc, str(body.hoofdstuk_grc))
+            targets.append(BijspijkerTarget(body.methode_grc, body.hoofdstuk_grc))
+    except ValueError as err:
+        raise HTTPException(status_code=400, detail=str(err)) from err
+
+    # Persist mode + method/chapter on the user (validator enforces consistency).
+    user.modus = Modus.BIJSPIJKER
+    user.huidige_methode_lat = body.methode_lat if lat_ok else None
+    user.huidige_hoofdstuk_lat = body.hoofdstuk_lat if lat_ok else None
+    user.huidige_methode_grc = body.methode_grc if grc_ok else None
+    user.huidige_hoofdstuk_grc = body.hoofdstuk_grc if grc_ok else None
+    update_user(db, user)
+
+    # Set diagnostic priors over the union of treated nodes, then plan.
+    from uuid import UUID
+
+    learner = load_learner_model(db, user_id) or LearnerModel(user_id=UUID(user_id))
+    for node_id in graph.nodes:
+        prior = 0.70 if node_id in treated else 0.10
+        learner.node_states[node_id] = NodeState(
+            node_id=node_id,
+            posterior_mastery=prior,
+            source=MasterySource.DIAGNOSTIC,
+        )
+    save_learner_model(db, learner)
+
+    plan = BijspijkerPlanner(graph, mapping).plan(learner, targets)
+    return BijspijkerIntakeResponse(
+        doelset_size=len(plan.doelset),
+        diagnose_size=len(plan.diagnose),
+        eta_dagen=plan.eta_dagen,
+        fractie_bij=plan.fractie_bij,
+        eerste_diagnose_node_ids=plan.diagnose[: plan.intro_per_sessie],
     )
 
 

@@ -7,8 +7,10 @@ import networkx as nx
 from fastapi import APIRouter, Depends, HTTPException, Request
 
 from gymnasium_classica.api.auth import get_current_user_id
-from gymnasium_classica.api.database import load_learner_model
+from gymnasium_classica.api.database import get_user, load_learner_model
 from gymnasium_classica.api.schemas import (
+    BijspijkerProgressResponse,
+    BijspijkerTopic,
     ClusterProgress,
     ClustersResponse,
     DomainProgress,
@@ -22,12 +24,66 @@ from gymnasium_classica.api.schemas import (
 )
 from gymnasium_classica.models.graph import Node, NodeType, PrerequisiteEdge
 from gymnasium_classica.models.learner import LearnerModel
+from gymnasium_classica.models.user import Modus
+from gymnasium_classica.scheduling.bijspijker import BijspijkerPlanner, BijspijkerTarget
 from gymnasium_classica.scheduling.priority import MASTERY_THRESHOLD
 
 router = APIRouter(prefix="/progress", tags=["progress"])
 
 # A node is "in progress" when it has a state but is not yet mastered
 _IN_PROGRESS_FLOOR = 0.15  # Above default prior → learner has interacted
+
+
+@router.get("/bijspijker", response_model=BijspijkerProgressResponse)
+async def bijspijker_progress(
+    request: Request,
+    user_id: str = Depends(get_current_user_id),
+) -> BijspijkerProgressResponse:
+    """Catch-up progress: how much of the target set is green (M1-03)."""
+    db = request.app.state.db
+    graph: nx.DiGraph = request.app.state.graph
+
+    user = get_user(db, user_id)
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    if user.modus != Modus.BIJSPIJKER:
+        raise HTTPException(status_code=400, detail="Gebruiker staat niet in bijspijker-modus.")
+
+    targets: list[BijspijkerTarget] = []
+    if user.huidige_methode_lat and user.huidige_hoofdstuk_lat:
+        targets.append(BijspijkerTarget(user.huidige_methode_lat, user.huidige_hoofdstuk_lat))
+    if user.huidige_methode_grc and user.huidige_hoofdstuk_grc:
+        targets.append(BijspijkerTarget(user.huidige_methode_grc, user.huidige_hoofdstuk_grc))
+    if not targets:
+        raise HTTPException(status_code=400, detail="Geen bijspijker-doel ingesteld.")
+
+    from uuid import UUID
+
+    learner = load_learner_model(db, user_id) or LearnerModel(user_id=UUID(user_id))
+    plan = BijspijkerPlanner(graph, request.app.state.methode_mapping).plan(learner, targets)
+
+    open_topics: list[BijspijkerTopic] = []
+    for node_id in plan.diagnose[:20]:
+        node_attr = graph.nodes.get(node_id, {}).get("node")
+        state = learner.node_states.get(node_id)
+        open_topics.append(
+            BijspijkerTopic(
+                node_id=node_id,
+                title_nl=node_attr.title_nl if node_attr else node_id,
+                mastery=state.posterior_mastery if state else 0.0,
+            )
+        )
+
+    return BijspijkerProgressResponse(
+        modus=user.modus.value,
+        fractie_bij=plan.fractie_bij,
+        is_bij=plan.is_bij,
+        doelset_size=len(plan.doelset),
+        diagnose_size=len(plan.diagnose),
+        eta_dagen=plan.eta_dagen,
+        suggest_chapter_bump=plan.suggest_chapter_bump,
+        open_topics=open_topics,
+    )
 
 
 def _compute_streak(learner: LearnerModel) -> int:

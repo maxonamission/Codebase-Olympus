@@ -278,6 +278,43 @@ class IntakeAnswerResponse(BaseModel):
     converged: bool = False
 
 
+# -- Bijspijker mode (M1-03) --
+
+
+class BijspijkerIntakeRequest(BaseModel):
+    methode_lat: str | None = Field(default=None, description="Latijnse methode, bijv. 'fortuna'.")
+    hoofdstuk_lat: int | None = Field(default=None, ge=1)
+    methode_grc: str | None = Field(default=None, description="Griekse methode, bijv. 'pallas'.")
+    hoofdstuk_grc: int | None = Field(default=None, ge=1)
+
+
+class BijspijkerIntakeResponse(BaseModel):
+    doelset_size: int = Field(description="Aantal knopen in de catch-up-doelset.")
+    diagnose_size: int = Field(description="Aantal nog in te halen knopen.")
+    eta_dagen: int = Field(description="Schatting dagen tot 'bij' bij 30 min/dag.")
+    fractie_bij: float = Field(description="Fractie van de doelset die al groen is.")
+    eerste_diagnose_node_ids: list[str] = Field(
+        default_factory=list, description="Knopen voor de eerste diagnose-sessie."
+    )
+
+
+class BijspijkerTopic(BaseModel):
+    node_id: str
+    title_nl: str
+    mastery: float
+
+
+class BijspijkerProgressResponse(BaseModel):
+    modus: str
+    fractie_bij: float
+    is_bij: bool
+    doelset_size: int
+    diagnose_size: int
+    eta_dagen: int
+    suggest_chapter_bump: bool
+    open_topics: list[BijspijkerTopic] = Field(default_factory=list)
+
+
 # -- User settings --
 
 
