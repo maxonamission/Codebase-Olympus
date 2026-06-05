@@ -227,6 +227,46 @@ def validate_procedures(graph: nx.DiGraph) -> list[str]:
     return errors
 
 
+def validate_misconceptions(graph: nx.DiGraph) -> list[str]:
+    """Validate that misconception cross-references resolve (M1-02).
+
+    For every ``known_misconceptions`` entry on a node, each
+    ``diagnostic_items`` ID must reference an item that exists somewhere in
+    the graph, and each ``remediation_nodes`` ID must reference an existing
+    node. References resolve across files because validation runs on the
+    fully loaded graph.
+
+    Returns a list of error messages (empty if all references resolve).
+    """
+    all_item_ids: set[str] = set()
+    for node_id in graph.nodes:
+        node = graph.nodes[node_id].get("node")
+        if node is None:
+            continue
+        for item in node.items:
+            all_item_ids.add(item.id)
+
+    errors: list[str] = []
+    for node_id in graph.nodes:
+        node = graph.nodes[node_id].get("node")
+        if node is None:
+            continue
+        for misc in node.known_misconceptions:
+            for item_id in misc.diagnostic_items:
+                if item_id not in all_item_ids:
+                    errors.append(
+                        f"Misconception '{misc.code}' op {node_id} verwijst naar "
+                        f"onbestaand diagnose-item: {item_id}"
+                    )
+            for target in misc.remediation_nodes:
+                if target not in graph.nodes:
+                    errors.append(
+                        f"Misconception '{misc.code}' op {node_id} verwijst naar "
+                        f"onbestaande remediatieknoop: {target}"
+                    )
+    return errors
+
+
 def validate_graph(
     graph: nx.DiGraph,
     *,
@@ -321,5 +361,11 @@ def validate_graph(
     if procedure_errors:
         report.is_valid = False
         report.errors.extend(procedure_errors)
+
+    # 11. Misconception cross-references (diagnostic items + remediation nodes)
+    misconception_errors = validate_misconceptions(graph)
+    if misconception_errors:
+        report.is_valid = False
+        report.errors.extend(misconception_errors)
 
     return report

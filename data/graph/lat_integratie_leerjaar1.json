@@ -14,7 +14,9 @@
       "items": [
         {
           "id": "ITEM-LAT-I-VERT-INTRO-001",
-          "node_ids": ["LAT-I-VERT-INTRO"],
+          "node_ids": [
+            "LAT-I-VERT-INTRO"
+          ],
           "type": "recognition",
           "direction": "receptive",
           "difficulty_initial": -0.5,
@@ -33,6 +35,29 @@
           "feedback": "Vertalen begint met ontleden. Pas als je weet welk woord onderwerp, persoonsvorm en lijdend voorwerp is, kun je betrouwbaar naar het Nederlands omzetten.",
           "source": "manual"
         }
+      ],
+      "known_misconceptions": [
+        {
+          "code": "LEGO_VERTALEN",
+          "name": "Lego-vertalen",
+          "description": "De leerling zoekt losse woordbetekenissen op en stapelt die op elkaar zonder de zinsbouw te ontleden; de naamval-uitgang wordt genegeerd, waardoor onderwerp en lijdend voorwerp verwisseld raken.",
+          "diagnostic_items": [
+            "ITEM-LAT-I-VERT-NAAMVAL-001",
+            "ITEM-LAT-I-VERT-NAAMVAL-002",
+            "ITEM-LAT-I-VERT-NAAMVAL-003"
+          ],
+          "remediation_nodes": [
+            "SHA-P-VERTAAL-POLMO-INTRO",
+            "SHA-P-VERTAAL-POLMO-PV",
+            "SHA-P-VERTAAL-POLMO-OND",
+            "SHA-P-VERTAAL-POLMO-LV",
+            "SHA-P-VERTAAL-POLMO-MV",
+            "SHA-P-VERTAAL-POLMO-OV",
+            "LAT-G-MORF-NAAMVAL-INTRO",
+            "LAT-G-MORF-CONJ-INTRO",
+            "LAT-G-MORF-TEMPUS-INTRO"
+          ]
+        }
       ]
     },
     {
@@ -48,7 +73,9 @@
       "items": [
         {
           "id": "ITEM-LAT-I-VERT-NAAMVAL-001",
-          "node_ids": ["LAT-I-VERT-NAAMVAL"],
+          "node_ids": [
+            "LAT-I-VERT-NAAMVAL"
+          ],
           "type": "analysis",
           "direction": "receptive",
           "difficulty_initial": 0.0,
@@ -69,7 +96,9 @@
         },
         {
           "id": "ITEM-LAT-I-VERT-NAAMVAL-002",
-          "node_ids": ["LAT-I-VERT-NAAMVAL"],
+          "node_ids": [
+            "LAT-I-VERT-NAAMVAL"
+          ],
           "type": "analysis",
           "direction": "receptive",
           "difficulty_initial": 0.4,
@@ -90,7 +119,9 @@
         },
         {
           "id": "ITEM-LAT-I-VERT-NAAMVAL-003",
-          "node_ids": ["LAT-I-VERT-NAAMVAL"],
+          "node_ids": [
+            "LAT-I-VERT-NAAMVAL"
+          ],
           "type": "analysis",
           "direction": "receptive",
           "difficulty_initial": 0.3,
@@ -109,6 +140,29 @@
           "feedback": "puer (nominativus) is het onderwerp, puellam (-am, accusativus) het lijdend voorwerp. Dus: de jongen houdt van het meisje, ondanks dat puellam vooraan staat.",
           "source": "manual"
         }
+      ],
+      "known_misconceptions": [
+        {
+          "code": "LEGO_VERTALEN",
+          "name": "Lego-vertalen",
+          "description": "De leerling zoekt losse woordbetekenissen op en stapelt die op elkaar zonder de zinsbouw te ontleden; de naamval-uitgang wordt genegeerd, waardoor onderwerp en lijdend voorwerp verwisseld raken.",
+          "diagnostic_items": [
+            "ITEM-LAT-I-VERT-NAAMVAL-001",
+            "ITEM-LAT-I-VERT-NAAMVAL-002",
+            "ITEM-LAT-I-VERT-NAAMVAL-003"
+          ],
+          "remediation_nodes": [
+            "SHA-P-VERTAAL-POLMO-INTRO",
+            "SHA-P-VERTAAL-POLMO-PV",
+            "SHA-P-VERTAAL-POLMO-OND",
+            "SHA-P-VERTAAL-POLMO-LV",
+            "SHA-P-VERTAAL-POLMO-MV",
+            "SHA-P-VERTAAL-POLMO-OV",
+            "LAT-G-MORF-NAAMVAL-INTRO",
+            "LAT-G-MORF-CONJ-INTRO",
+            "LAT-G-MORF-TEMPUS-INTRO"
+          ]
+        }
       ]
     },
     {
@@ -124,7 +178,9 @@
       "items": [
         {
           "id": "ITEM-LAT-I-VERT-POLMO-001",
-          "node_ids": ["LAT-I-VERT-POLMO"],
+          "node_ids": [
+            "LAT-I-VERT-POLMO"
+          ],
           "type": "analysis",
           "direction": "receptive",
           "difficulty_initial": 0.6,
@@ -143,18 +199,74 @@
           "feedback": "Stap 1 van POLMO is de persoonsvorm zoeken: 'dat' (hij/zij geeft). Daarna vind je het onderwerp poeta (nom.), het lijdend voorwerp rosam (acc.) en het meewerkend voorwerp puellae (dat.): de dichter geeft het meisje een roos.",
           "source": "manual"
         }
+      ],
+      "known_misconceptions": [
+        {
+          "code": "LEGO_VERTALEN",
+          "name": "Lego-vertalen",
+          "description": "De leerling zoekt losse woordbetekenissen op en stapelt die op elkaar zonder de zinsbouw te ontleden; de naamval-uitgang wordt genegeerd, waardoor onderwerp en lijdend voorwerp verwisseld raken.",
+          "diagnostic_items": [
+            "ITEM-LAT-I-VERT-NAAMVAL-001",
+            "ITEM-LAT-I-VERT-NAAMVAL-002",
+            "ITEM-LAT-I-VERT-NAAMVAL-003"
+          ],
+          "remediation_nodes": [
+            "SHA-P-VERTAAL-POLMO-INTRO",
+            "SHA-P-VERTAAL-POLMO-PV",
+            "SHA-P-VERTAAL-POLMO-OND",
+            "SHA-P-VERTAAL-POLMO-LV",
+            "SHA-P-VERTAAL-POLMO-MV",
+            "SHA-P-VERTAAL-POLMO-OV",
+            "LAT-G-MORF-NAAMVAL-INTRO",
+            "LAT-G-MORF-CONJ-INTRO",
+            "LAT-G-MORF-TEMPUS-INTRO"
+          ]
+        }
       ]
     }
   ],
   "edges": [
-    {"source_id": "LAT-G-MORF-NAAMVAL-INTRO", "target_id": "LAT-I-VERT-INTRO", "type": "prerequisite", "encompassing_weight": 0.3},
-    {"source_id": "SHA-P-VERTAAL-POLMO-INTRO", "target_id": "LAT-I-VERT-INTRO", "type": "prerequisite", "encompassing_weight": 0.3},
-
-    {"source_id": "LAT-I-VERT-INTRO", "target_id": "LAT-I-VERT-NAAMVAL", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "LAT-G-SYNT-NOM-FUNCTIE", "target_id": "LAT-I-VERT-NAAMVAL", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "LAT-G-SYNT-ACC-FUNCTIE", "target_id": "LAT-I-VERT-NAAMVAL", "type": "prerequisite", "encompassing_weight": 0.4},
-
-    {"source_id": "LAT-I-VERT-NAAMVAL", "target_id": "LAT-I-VERT-POLMO", "type": "prerequisite", "encompassing_weight": 0.4},
-    {"source_id": "SHA-P-VERTAAL-POLMO-OV", "target_id": "LAT-I-VERT-POLMO", "type": "prerequisite", "encompassing_weight": 0.4}
+    {
+      "source_id": "LAT-G-MORF-NAAMVAL-INTRO",
+      "target_id": "LAT-I-VERT-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "SHA-P-VERTAAL-POLMO-INTRO",
+      "target_id": "LAT-I-VERT-INTRO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.3
+    },
+    {
+      "source_id": "LAT-I-VERT-INTRO",
+      "target_id": "LAT-I-VERT-NAAMVAL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-SYNT-NOM-FUNCTIE",
+      "target_id": "LAT-I-VERT-NAAMVAL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-G-SYNT-ACC-FUNCTIE",
+      "target_id": "LAT-I-VERT-NAAMVAL",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "LAT-I-VERT-NAAMVAL",
+      "target_id": "LAT-I-VERT-POLMO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    },
+    {
+      "source_id": "SHA-P-VERTAAL-POLMO-OV",
+      "target_id": "LAT-I-VERT-POLMO",
+      "type": "prerequisite",
+      "encompassing_weight": 0.4
+    }
   ]
 }
