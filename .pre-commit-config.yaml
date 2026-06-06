@@ -54,7 +54,7 @@ repos:
         files: ^(stories/|PROJECTSTATUS\.md)
       - id: story-status
         name: stories/-consistentie (staged, soft)
-        entry: uv run python scripts/check_story_status.py --mode=staged --ac-gate=warn
+        entry: uv run python scripts/check_story_status.py --mode=staged --ac-gate=warn --format-gate=warn
         language: system
         pass_filenames: false
         files: ^(stories/|PROJECTSTATUS\.md)
