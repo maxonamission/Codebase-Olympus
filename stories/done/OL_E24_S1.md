@@ -1,0 +1,71 @@
+---
+type: story
+project: GC
+epic: E24
+story_id: OL_E24_S1
+legacy_id: L2-01
+track: learner
+status: done
+prioriteit: middel
+---
+
+# Story OL_E24_S1: Receptieve en productieve mastery apart tracken
+
+## Doel
+Splits de mastery per knoop in een **receptieve** en een **productieve**
+component, zodat het systeem ziet dat een leerling een vorm wél kan
+herkennen maar nog niet actief kan produceren.
+
+## Achtergrond
+Ontwerpkeuze 13. De literatuur (Shintani, 2015) laat consistent zien
+dat spacing/retrieval receptieve kennis betrouwbaar opleveren, terwijl
+productieve beheersing meer en moeilijker oefening vereist. `Item` heeft
+al een `richting`-veld (`receptief`/`productief`), maar
+`KnoopState.posterior_mastery` is één float — die asymmetrie is nu
+onzichtbaar voor scheduler en diagnostiek.
+
+## Input
+- `src/gymnasium_classica/models/learner.py` — `KnoopState`
+  (`posterior_mastery`), BKT-update
+- `src/gymnasium_classica/models/graph.py` — `Item.richting`, `Richting`
+- `tests/test_sm2.py`, scheduling-/BKT-tests
+
+## Acceptatiecriteria
+- [x] `KnoopState` houdt receptieve en productieve mastery gescheiden bij
+      (backward-compatible: bestaande velden blijven werken of worden
+      net gemigreerd zonder dataverlies)
+- [x] De BKT-update routeert op `Item.richting`: een receptief item
+      werkt de receptieve mastery bij, een productief item de productieve
+- [x] Een afgeleide "overall"-mastery blijft beschikbaar voor code die
+      één getal verwacht (bijv. gewogen of min van beide)
+- [x] Scheduler/readiness kan optioneel per richting een drempel hanteren
+      (interface aanwezig; default reproduceert huidig gedrag)
+- [x] Unit-tests: receptieve items bewegen alleen de receptieve mastery
+      en vice versa; overall-afleiding klopt
+- [x] Geen breaking changes; bestaande tests blijven groen
+
+## Scope
+Het learner-model-onderscheid en de update-routing. Geen nieuwe
+oefentypen, geen frontend.
+
+## Afhankelijkheden
+Geen harde — raakt wel OL_E24_S2 (model-interface) en keuze 5 (productieve
+oefeningen).
+
+## Geschat
+Medium.
+
+## Resultaat
+- `NodeState` krijgt `receptive_mastery` + `productive_mastery` (additief,
+  default 0.0 → geen dataverlies). `posterior_mastery` blijft de overall.
+- `update_node_state(..., direction=None)`: overall altijd bijgewerkt; bij
+  een richting wordt de bijbehorende per-richting-posterior meegewerkt.
+  `_process_response` leidt de richting af uit `ItemResponse.direction`.
+- Afgeleide overall beschikbaar: `posterior_mastery` (reguliere trajectorie)
+  + `NodeState.combined_mastery` (min van beide, 'beheerst beide richtingen').
+- `NodeState.mastery_for(direction)` als interface; `readiness_score` krijgt
+  een optionele `direction`-parameter (default `None` = posterior = huidig
+  gedrag).
+- Tests: receptieve items bewegen alleen receptieve mastery (en v.v.),
+  default-pad ongewijzigd, readiness gate't optioneel per richting.
+  **622 tests groen**, geen regressie.
