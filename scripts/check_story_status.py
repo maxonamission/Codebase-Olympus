@@ -11,13 +11,23 @@ op gehouden. Deze validator toetst de consistentie:
   C4  EPICS-statustabel: per-epic `done/total` == filesystem; status-enum geldig;
       een `done`-epic heeft geen open (niet-done) stories; totaalregel klopt
   C5  PROJECTSTATUS epic-tabel: per-epic `done/total` == EPICS == filesystem
+  C6  (opt-in) canoniek format: `story_id` matcht `^<PREFIX>_E#_S#$`, één prefix
+      per repo, en `epic` matcht `^E#$`. `legacy_id` is uitgezonderd.
 
-**ID-schema-agnostisch.** De epic- en story-ids komen uit de front-matter
+**ID-schema-agnostisch (default).** De epic- en story-ids komen uit de front-matter
 (`epic:` / `story_id:`); tabelrijen in EPICS/PROJECTSTATUS worden daartegen
 geclassificeerd (lidmaatschap), niet via een vast `E#_S#`-patroon. Zo werkt de
 validator zowel voor het canonieke `E#_S#`-schema als voor repo-lokale schema's
 (bv. Olympus' `A1-01`, `B4-02`). Een tabel-eerste-cel die eruitziet als een
 story-id maar geen bestand heeft, wordt als dead-ref gemeld.
+
+**Canoniek format hard afdwingen (C6, opt-in).** Met `--format-gate=error|warn`
+wordt het `<PREFIX>_E#_S#`-patroon afgedwongen op `story_id` (en `^E#$` op `epic`).
+De prefix wordt automatisch afgeleid als de enige consistente prefix in de repo —
+robuuster dan een `project:`→prefix-map (project `DV` ↔ prefix `MH`). `legacy_id`
+blijft vrij (mag elk oud schema dragen). Default `off`, zodat de gedeelde script
+veilig gevendord blijft in repo's die nog niet geconvergeerd zijn; geconvergeerde
+repo's zetten 'm aan in CI (`error`) en pre-commit (`warn`).
 
 Modi:
   --mode=staged : soft — print issues, exit 0 (pre-commit).
@@ -42,6 +52,10 @@ COUNT = re.compile(r"(\d+)\s*/\s*(\d+)")
 # Een eerste-cel die eruitziet als een story-id: eindigt op scheidingsteken +
 # (optioneel S) + nummer — bv. "E1_S1", "E01-S01", "A1-01", "OS-06".
 STORY_SHAPE = re.compile(r"[-_]S?\d+$")
+# C6 (opt-in): canoniek format. story_id = <PREFIX>_E#_S# (prefix ≥2 hoofdletters),
+# epic = E#. De prefix-capture dient om één-prefix-per-repo te bewaken.
+CANON_ID = re.compile(r"^([A-Z]{2,})_E\d+_S\d+$")
+CANON_EPIC = re.compile(r"^E\d+$")
 SKIP_PARTS = {".git", "templates", "archief", "archive", "_archief", "node_modules"}
 
 
@@ -154,6 +168,9 @@ def main() -> int:
     ap.add_argument("--repo-root", default=".")
     ap.add_argument("--ac-gate", choices=("error", "warn"), default="error",
                     help="C2 (done⇒AC afgevinkt): hard (error) of zacht (warn) tijdens legacy-opruiming")
+    ap.add_argument("--format-gate", choices=("error", "warn", "off"), default="off",
+                    help="C6 canoniek format (<PREFIX>_E#_S#): hard (error, CI), zacht (warn, "
+                         "pre-commit) of uit (off, default — agnostisch)")
     args = ap.parse_args()
     repo_root = Path(args.repo_root).resolve()
     errors: list[str] = []
@@ -185,6 +202,10 @@ def main() -> int:
                 story_ids.add(sid)
                 if epic:
                     epic_ids.add(epic)
+                # C6: canoniek format (opt-in) — story_id; legacy_id blijft vrij
+                if args.format_gate != "off" and not CANON_ID.match(sid):
+                    sink = errors if args.format_gate == "error" else warnings
+                    sink.append(f"{rel}: niet-canoniek story_id '{sid}' (verwacht <PREFIX>_E#_S#)")
                 # C1: map == front-matter
                 if fm_status != status:
                     errors.append(f"{rel}: front-matter status '{fm_status or '—'}' ≠ map '{status}'")
@@ -201,6 +222,16 @@ def main() -> int:
                 eff = fm_status if fm_status in STATUSES else status
                 if epic:
                     fs_counts.setdefault(epic, {s: 0 for s in STATUSES})[eff] += 1
+
+    # C6 (vervolg): één story-prefix per repo + canonieke epic-ids
+    if args.format_gate != "off":
+        sink = errors if args.format_gate == "error" else warnings
+        prefixes = sorted({m.group(1) for sid in story_ids if (m := CANON_ID.match(sid))})
+        if len(prefixes) > 1:
+            sink.append(f"meerdere story-prefixen in één repo: {prefixes} (verwacht precies één)")
+        for eid in sorted(epic_ids):
+            if not CANON_EPIC.match(eid):
+                sink.append(f"niet-canoniek epic-id '{eid}' (verwacht E#)")
 
     epics, referenced, dead_refs = collect_epics(repo_root, epic_ids, story_ids)
     ps = collect_projectstatus(repo_root, epic_ids)
