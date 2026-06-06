@@ -73,14 +73,16 @@ Stories staan onder `stories/` met subfolders `backlog/`, `doing/`, `done/` + ce
 ---
 type: story
 project: GC
-epic: A1
-story_id: A1-01
+epic: E1
+story_id: OL_E1_S1
+legacy_id: A1-01
+track: graph
 status: backlog        # backlog | doing | done
 prioriteit: middel
 ---
 ```
 
-> IDs blijven het vakinhoudelijke schema (`A1-01`, `B4-02`, sporen A–F/OS als epics); de gedeelde validator is ID-schema-agnostisch. Een eventuele hernummering naar het canonieke `E#_S#` is een aparte, nog niet ingeplande story.
+> Sinds E2_S3 (codebase-standards) dragen story-ids het canonieke `OL_E#_S#`-format en epics een doorlopend `E#` (statustabel-volgorde; oude spoor-labels A–F/OS/E1/E3/E7 → `E1..E30`, story-loze roadmap-placeholders → `E31..E34`). Het oude vakinhoudelijke id (`A1-01`, `B4-02`) staat in front-matter `legacy_id:`; het `track:`-veld (`graph`/`pipelines`/`mentor`/`content`/`app`/`didactiek`/`learner`/`ontwikkelstraat`) vervangt de oude spoor-letter als werkstroom-as. De gedeelde validator blijft ID-schema-agnostisch.
 
 **Bij oppakken / afronden van een story:**
 

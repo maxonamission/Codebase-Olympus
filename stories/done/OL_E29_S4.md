@@ -1,0 +1,67 @@
+---
+type: story
+project: GC
+epic: E29
+story_id: OL_E29_S4
+legacy_id: OS-03
+track: ontwikkelstraat
+status: done
+prioriteit: middel
+---
+
+# Story OL_E29_S4: Pre-commit hooks
+
+## Doel
+Een `.pre-commit-config.yaml` opzetten zodat elke commit automatisch door linter, formatter, type-checker en een secret-scanner wordt gevalideerd voordat de commit doorgaat. Dit is laag 2 van de ontwikkelstraat (zie `docs/ontwikkelstraat-uitleg.md`): lokaal vangnet dat snel is, kort voordat code in git belandt.
+
+## Input
+- Ruff-configuratie uit OL_E29_S2 (pyproject.toml)
+- Mypy-configuratie uit OL_E29_S3 (pyproject.toml)
+- Bestaande repo structuur met `src/`, `tests/`, `scripts/`, `data/`
+
+## Acceptatiecriteria
+- [x] `pre-commit>=3.7` toegevoegd aan `[project.optional-dependencies].dev`
+- [x] `.pre-commit-config.yaml` op repo-root met deze hooks:
+  - [x] `ruff check --fix` (via `astral-sh/ruff-pre-commit`)
+  - [x] `ruff format` (zelfde repo)
+  - [x] `mypy` via local hook die `uv run mypy src/` aanroept (mypy vereist full-project-context; incremental cache houdt herhaalruns snel)
+  - [x] `trailing-whitespace` (met `*.md` exclude), `end-of-file-fixer`
+  - [x] `check-yaml`, `check-toml`, `check-json` (met `data/` exclude)
+  - [x] `detect-private-key` (`detect-secrets` overwogen, niet toegevoegd om false-positives op Griekse teksten te vermijden — `detect-private-key` dekt de harde gevallen)
+  - [x] `check-added-large-files` met drempel 2000 KB (vocabulaire-JSONs zijn ~1MB)
+  - [x] `check-merge-conflict` (bonus)
+- [x] `pre-commit install` gedraaid; hooks actief in `.git/hooks/pre-commit`
+- [x] `pre-commit run --all-files` groen op de hele repo (na één ronde auto-fixes voor end-of-file op 7 bestanden)
+- [x] Snelheid: cachehit-run op gewijzigde bestanden onder 5 seconden (mypy incremental cache werkt)
+- [x] CLAUDE.md-sectie toegevoegd met install- en run-commando's
+- [x] Break-test uitgevoerd: bewust falende commit (`def foo(  ):  ` — spaties + geen body) werd geblokkeerd door ruff-check + ruff-format + mypy
+- [x] Alle 558 tests blijven groen
+
+## Scope
+Alleen lokale pre-commit. Commit-msg hooks (conventional commits enforcement) zijn optioneel; niet verplicht voor deze story.
+
+## Niet in scope
+- CI integratie → OL_E29_S5 (wél dezelfde hooks als losse workflow daar draaien)
+- Story-status/AC-checks → OL_E29_S7 (wordt daar als hook toegevoegd)
+- Commit-msg enforcement (conventionele commits) — overwegen voor latere story
+- Jupyter-notebook cleanup hooks — nvt in deze repo
+
+## Aanpak
+1. `.pre-commit-config.yaml` schrijven met `pre-commit-hooks` (standaard) + `ruff-pre-commit` + `mypy` (via `mirrors-mypy` of lokaal commando)
+2. Per hook de `language_version`, `args`, `files`/`exclude` zetten
+3. `pre-commit install`, dan `pre-commit run --all-files`
+4. Resterende auto-fixes committen
+5. Eventuele secrets-baseline genereren (`detect-secrets scan > .secrets.baseline`)
+6. Break-test uitvoeren en resultaat in story noteren
+
+## Geschat
+Halve middag. Risico: `detect-secrets` vindt false positives in testdata (Griekse teksten). Mitigatie: baseline met toelichting per item.
+
+## Resultaat
+- `.pre-commit-config.yaml` met 3 repo's: `pre-commit-hooks@v5.0.0`, `ruff-pre-commit@v0.15.11`, en één `local`-repo voor mypy
+- Eerste `pre-commit run --all-files` fixte end-of-file in 7 bestanden (docs, data, frontend assets)
+- Tweede run: alle hooks groen
+- Break-test geverifieerd: een commit met `def foo(  ):  ` (trailing whitespace + syntax-error) wordt geblokkeerd
+- `detect-secrets` niet opgenomen: risico op false-positives op Griekse unicode-strings. `detect-private-key` dekt de harde gevallen (SSH-keys, PEM-blocks)
+- CLAUDE.md bevat nu install- en run-instructies
+- Tests: 558 groen, `mypy src/` groen, ruff groen

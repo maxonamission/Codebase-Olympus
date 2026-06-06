@@ -1,0 +1,85 @@
+---
+type: story
+project: GC
+epic: E21
+story_id: OL_E21_S4
+legacy_id: F2-04
+track: mentor
+status: done
+prioriteit: middel
+---
+
+# Story OL_E21_S4: Fout-classificatie — spelling / naamval / synoniem / macron
+
+## Doel
+Uitbreiden van `scheduling/grading.py` zodat een fout antwoord niet
+alleen `correct=False` retourneert, maar ook een `MismatchType`:
+spelling, naamval, synoniem, macron, overige.  Dit is de kern van
+track C en voedt OL_E21_S2/OL_E21_S3 met hints in plaats van rauwe diffs.
+
+## Input
+- `src/gymnasium_classica/scheduling/grading.py` (OL_E20_S12) — `GradingResult`
+- Item-metadata (`antwoord`, `naamval`-annotaties in passages, ...)
+- Eventuele semantic_cluster-labels op V-knopen
+
+## Acceptatiecriteria
+- [x] `GradingResult` krijgt velden `mismatch_type: MismatchType | None`
+      en `hint: str | None`
+- [x] Heuristieken (bestaande callers blijven werken):
+  - Identieke stam + andere uitgang → `NAAMVAL` (of `VERBUIGING` voor
+    werkwoorden)
+  - Macron-only verschil → `MACRON`
+  - Levenshtein ≤ 2 op niet-kritieke karakters → `SPELLING`
+  - Match op ander item in hetzelfde `semantisch_cluster` → `SYNONIEM`
+  - Overig → `ONBEKEND`
+- [x] Minimaal 20 unit-tests, inclusief edge cases (korte woorden,
+      Grieks met accent-variatie, list-antwoorden)
+- [x] Geen regressie op de bestaande grading-tests (exact-match blijft
+      boven alles staan)
+
+## Scope
+- Alleen Latin + Greek kern; cultuur/integratie out-of-scope
+- Geen LLM — puur regel-gebaseerd (snel, voorspelbaar, offline)
+
+## Geschat
+Large — track C kern, verwacht meerdere sub-iteraties
+
+## Resultaat
+
+**Wijzigingen in `scheduling/grading.py`:**
+- Enums `MismatchType` (MACRON/NAAMVAL/VERBUIGING/SPELLING/SYNONIEM/
+  ONBEKEND) en `InflectionKind` (NOMINAL/VERBAL).
+- `GradingResult` uitgebreid met `mismatch_type` en `hint` (beide default
+  `None` → frozen dataclass blijft backward-compatible).
+- Pure classifier `classify_mismatch(answer, expected, *, language,
+  inflection, synonym_pool)` met vaste prioriteitsvolgorde:
+  synoniem → diacrieten → stam+uitgang → spelling → onbekend.
+- `infer_inflection(item)`: leidt verbaal/nominaal af uit node-ID-
+  segmenten (PRAES/IMPF/PERF/AOR/CONJ/C1-4 vs DECL/NOM/.../D1-5).
+- `grade_answer` roept de classifier aan bij foute, niet-lege antwoorden
+  en diagnosticeert tegen de *dichtstbijzijnde* variant (list-antwoorden).
+  Nieuw keyword-only `synonym_pool` (default None → bestaande callers
+  ongewijzigd).
+
+**Ontwerpbesluiten / grenzen:**
+- `MACRON` dekt *alle* diacriet-only verschillen; voor Latijn worden
+  macrons al in de normalisatie weggestreept (dus exact-match blijft
+  groen en bereikt de classifier niet), waardoor deze categorie in de
+  praktijk vooral Griekse accent-/spiritus-variatie vangt.
+- `SYNONIEM` vereust externe context (`semantic_cluster` zit op de Node,
+  niet op het Item). De cluster-pool wordt als parameter doorgegeven; het
+  *vullen* ervan vanuit de graph is een vervolgstap (OL_E21_S2/03-wiring),
+  buiten deze kern-story.
+- Bekende beperking: op vocabulaire-/vertaalitems (inflectie onbekend)
+  kan een stam+uitgang-typefout als `NAAMVAL` worden gelabeld. AC-conform
+  (default NAAMVAL); verfijning mogelijk in een latere iteratie.
+
+**Tests:** `tests/test_grading_classification.py` — 31 tests (infer_
+inflection, elke `MismatchType`, korte vormen `es`/`amo`, Griekse accent-
+variatie, list-antwoorden, pool-precedentie). Bestaande `test_grading.py`
+ongewijzigd groen. Volledige suite: 711 groen, mypy strict + ruff schoon.
+
+**Terminologie-noot:** de AC-enumnaam `VERBUIGING` is letterlijk
+overgenomen voor werkwoordsuitgangen; vakinhoudelijk is dat eigenlijk
+*vervoeging* (verbuiging = naamvallen). Bewust niet hernoemd om de AC-
+contractnaam te respecteren — wijzigen kan als gewenst.

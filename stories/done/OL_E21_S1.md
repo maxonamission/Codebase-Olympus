@@ -1,0 +1,69 @@
+---
+type: story
+project: GC
+epic: E21
+story_id: OL_E21_S1
+legacy_id: F2-01
+track: mentor
+status: done
+prioriteit: middel
+---
+
+# Story OL_E21_S1: Mentor-rol + leerling-koppeling in user-model
+
+## Doel
+Een "mentor"/"docent" kan zich aanmelden en heeft via een expliciete
+relatie toegang tot telemetry van één of meer leerlingen.  Zonder deze
+story kan geen van de andere F2-stories veilig een endpoint
+blootleggen.
+
+## Input
+- `src/gymnasium_classica/models/user.py` — huidige user/role-structuur
+- `src/gymnasium_classica/api/auth.py` — auth middleware
+
+## Acceptatiecriteria
+- [x] Nieuwe rol `MENTOR` naast de bestaande learner-rol
+- [x] `User` krijgt een `mentees: list[UUID]` of een aparte
+      `MentorAssignment`-tabel (keuze in ontwerpdocument)
+- [x] Auth-guard `require_mentor_of(learner_id)` — 403 als geen relatie
+- [x] Minstens één pytest-test voor elk pad (mentor ziet eigen mentee,
+      mentor 403 op andere leerling, leerling 403 op mentor-endpoint)
+- [x] Admin-endpoint of CLI-script om een mentor-mentee-koppeling te
+      maken (hoeft geen UI te zijn in deze story)
+
+## Scope
+- Backend only
+- Geen frontend UI voor mentor-login in deze story; login-form mag
+  worden hergebruikt
+- Geen klas/groep-abstractie (1-op-1 relatie voldoet voor MVP)
+
+## Geschat
+Medium
+
+## Resultaat
+
+**Ontwerpkeuze: aparte `mentor_assignments`-tabel** (i.p.v. `mentees`-lijst
+op `User`). Rationale: bidirectioneel queryen (mentees van een mentor én
+mentoren van een leerling) zonder de JSON-`data`-kolom van `User` te
+herschrijven bij elke koppeling; volgt het bestaande relationele patroon
+van `auth_tokens`. 1-op-1-relaties worden ondersteund, klas/groep-
+abstractie bewust buiten scope.
+
+**Wijzigingen:**
+- `models/user.py`: `Role`-enum (`LEARNER`/`MENTOR`) + `role`-veld op
+  `User`, default `LEARNER` → backward-compatible met bestaande rows.
+- `api/database.py`: tabel `mentor_assignments` + CRUD
+  (`create_mentor_assignment` idempotent, `is_mentor_of`, `list_mentees`).
+- `api/auth.py`: dependency `require_mentor_of(user_id)` — 403 bij
+  ontbrekende rol óf koppeling (ononderscheidbaar, lekt geen bestaan).
+- `api/routes/mentor.py`: `GET /mentor/mentees` en
+  `GET /mentor/{user_id}/profile` (ankert de guard; OL_E21_S2/03 bouwen hierop).
+- `scripts/link_mentor.py`: CLI die een account naar MENTOR promoveert en
+  een mentor→leerling-koppeling vastlegt.
+
+**Tests:** `tests/test_api_mentor.py` — 16 tests (model-default + JSON-
+roundtrip + legacy-row, DB-CRUD incl. idempotentie, de drie guard-paden,
+mentee-lijst, CLI-script). Volledige suite: 680 groen, mypy + ruff schoon.
+
+**Vervolg:** frontend mentor-view is OL_E20_S13 (placeholder); telemetrie-
+endpoints OL_E21_S2/OL_E21_S3 leunen op `require_mentor_of`.
