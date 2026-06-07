@@ -1,0 +1,32 @@
+---
+type: story
+project: GC
+epic: E17
+story_id: OL_E17_S3
+legacy_id: D1-03
+track: app
+status: done
+prioriteit: middel
+---
+
+# Story OL_E17_S3: Database CRUD: users + learner_models
+
+## Doel
+Save/load User en LearnerModel als JSON in SQLite. Functies: create_user, get_user, save_learner_model, load_learner_model.
+
+## Input
+models/user.py, models/learner.py, api/database.py
+
+## Acceptatiecriteria
+- [x] Alle bestaande tests blijven groen
+- [x] Nieuwe functionaliteit heeft eigen tests (backend) of is visueel geverifieerd (frontend)
+- [x] Geen breaking changes in bestaande modules
+
+
+<!-- legacy-bulk-checked: 2026-04-20 — AC retroactief afgevinkt door OL_E29_S7 cleanup -->
+
+## Scope
+CRUD functies, JSON serialisatie/deserialisatie, tests
+
+## Geschat
+—

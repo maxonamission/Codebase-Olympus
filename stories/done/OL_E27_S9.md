@@ -1,0 +1,34 @@
+---
+type: story
+project: GC
+epic: E27
+story_id: OL_E27_S9
+legacy_id: E3-09
+track: content
+status: done
+prioriteit: middel
+---
+
+# Story OL_E27_S9: Items voor GRC aoristus (sigmatisch + thematisch)
+
+## Doel
+Items voor OL_E2_S8 knopen: aoristus indicativus actief — sigmatisch (ἔλυσα), thematisch/stam (ἔλαβον), aorist-stam-herkenning, secundaire uitgangen.
+
+## Input
+OL_E2_S8 knopen — 8 stuks (`GRC-G-MORF-AOR-*`, `GRC-G-SYNT-AOR-*`).
+
+## Acceptatiecriteria
+- [x] Geen breaking changes in bestaande models
+- [x] Alle bestaande tests blijven groen
+- [x] Stamtijden-herkenning: gegeven aoristus-vorm → lemma en aoristype (sigm/them)
+- [x] Aspectueel verschil aorist vs. imperfect krijgt ten minste 5 items
+- [x] Items voldoen aan kwaliteitseisen uit `docs/Prompt_spoor_c.md`
+
+
+<!-- legacy-bulk-checked: 2026-04-20 — AC retroactief afgevinkt door OL_E29_S7 cleanup -->
+
+## Scope
+~30 items.
+
+## Geschat
+~30 items

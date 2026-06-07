@@ -1,0 +1,72 @@
+---
+type: story
+project: GC
+epic: E23
+story_id: OL_E23_S2
+legacy_id: L1-02
+track: learner
+status: done
+prioriteit: middel
+---
+
+# Story OL_E23_S2: Baseline-intakemeting en effectgrootte-rapportage
+
+## Doel
+Geef het project een **nulpunt** om voortgang en effectgrootte tegen af
+te zetten: een baseline-meting bij intake plus een rapportage die de
+ontwikkeling van een leerling (en later een cohort) over tijd toont.
+
+## Achtergrond
+Ontwerpkeuze 12 (meetbaarheid) vereist een baseline. De intake legt al
+`intake_completed`/`intake_method` vast; deze story breidt dat uit tot
+een bruikbaar referentiepunt voor effectgrootte-berekening. Het
+staatsexamen is de uiteindelijke externe toets, maar tussentijds is een
+interne baseline nodig.
+
+## Input
+- `src/gymnasium_classica/models/learner.py` — intake-velden,
+  `LearnerModel`
+- OL_E23_S1 (retentie-/sessiemetriek) als databasis
+- bestaande adaptive-placement/intake-logica (zie tests rond intake)
+
+## Acceptatiecriteria
+- [x] Bij intake wordt een baseline-mastery-profiel vastgelegd
+      (`BaselineSnapshot` met `captured_at` — apart herkenbaar van latere
+      metingen; per knoop, fijner dan per domein/cluster). Vastgelegd in
+      `IntakeManager._finish`, alleen bij eerste afronding.
+- [x] Een effectgrootte-functie berekent de genormaliseerde voortgang
+      t.o.v. de baseline per leerling (`metrics.learner_progress` →
+      `LearnerProgress`: mean_delta + standardized_gain in SD-eenheden)
+- [x] Een cohort-rapportagefunctie aggregeert effectgrootte over
+      meerdere leerlingen (`metrics.cohort_report(list[LearnerModel])`)
+- [x] Functies hebben unit-tests met fixtures die een bekende
+      voortgang simuleren en de verwachte effectgrootte teruggeven
+      (`tests/test_metrics_effect_size.py` + intake-wiring-test)
+- [x] Geen breaking changes: `baseline` is een optioneel veld (default
+      None); alle bestaande tests blijven groen (599)
+
+## Scope
+Berekening en datavastlegging. Geen visualisatie/dashboard (frontend),
+geen koppeling aan echte staatsexamen-uitslagen.
+
+## Afhankelijkheden
+- OL_E23_S1 (metriek-basis)
+
+## Geschat
+Medium.
+
+## Resultaat
+- `BaselineSnapshot` (captured_at + mastery per knoop) toegevoegd aan
+  `models/learner.py`; `LearnerModel.baseline` als optioneel veld
+  (additief, niet-breaking).
+- `IntakeManager._finish` legt de baseline vast bij intake-afronding
+  (alleen als er nog geen is, zodat het nulpunt stabiel blijft).
+- `metrics/effect_size.py`: `capture_baseline`, `learner_progress`
+  (`LearnerProgress`: baseline/current mean, mean_delta, standardized_gain)
+  en `cohort_report` (`CohortReport`: n, mean_delta, sd_delta, cohen_d).
+- **Voorbehoud (gedocumenteerd in de module):** de cohort-`cohen_d` is een
+  *within-cohort* gestandaardiseerde winst (one-sample d t.o.v. nul), GEEN
+  gecontroleerde-trial-effectgrootte — er is geen controlegroep; het
+  staatsexamen is de externe toets. Sluit aan op het literatuuronderzoek.
+- Tests: `tests/test_metrics_effect_size.py` (12) + intake-baseline-wiring.
+  **599 passed**, mypy + ruff groen.

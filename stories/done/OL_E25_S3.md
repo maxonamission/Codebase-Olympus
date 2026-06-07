@@ -1,0 +1,74 @@
+---
+type: story
+project: GC
+epic: E25
+story_id: OL_E25_S3
+legacy_id: L3-03
+track: didactiek
+status: done
+prioriteit: middel
+---
+
+# Story OL_E25_S3: Equity-waarborgen voor zwakkere leerlingen
+
+## Doel
+Zorg dat het systeem zwakkere presteerders **niet benadeelt** maar juist
+extra ondersteunt, via aanpasbare scaffolding-drempels en langzamere
+readiness-gates.
+
+## Achtergrond
+Ontwerpkeuze 16b. Onderzoek waarschuwt dat ITS de gemiddelde leerling
+méér helpen dan zwakke presteerders (Steenbergen-Hu & Cooper, 2013),
+terwijl bijles/remediatie juist de secundaire doelgroep van het project
+is (briefing §1.2). Zonder expliciete waarborg kan het systeem versnellen
+waar het zou moeten consolideren.
+
+## Input
+- `src/gymnasium_classica/models/learner.py` — mastery-trajecten,
+  readiness/intro-logica
+- scheduling-/priority-logica (`tests/test_priority.py`,
+  `tests/test_offline_scheduling.py`)
+- OL_E23_S1/OL_E23_S2 (metriek) om "lage-mastery-trajecten" te detecteren
+
+## Acceptatiecriteria
+- [x] Detectie van een lage-mastery-traject (leerling die structureel
+      onder verwachte voortgang blijft) op basis van de metriek
+- [x] Voor zulke leerlingen: extra scaffolding-drempels en/of een hogere
+      mastery-drempel vóór een nieuwe knoop wordt geïntroduceerd
+      (meer consolidatie, minder nieuw materiaal)
+- [x] Het mechanisme is gradueel (geen harde "stempel") en herstelt
+      zich automatisch als de leerling weer op koers komt
+- [x] Default-gedrag voor leerlingen op koers is ongewijzigd (geen
+      regressie)
+- [x] Een meetbare check: voor een gesimuleerde zwakke leerling daalt het
+      aandeel nieuw materiaal en stijgt het aandeel herhaling
+- [x] Unit-tests met fixtures voor zowel een zwakke als een
+      op-koers-leerling
+- [x] Geen breaking changes; bestaande tests blijven groen
+
+## Scope
+Detectie + adaptieve drempels in de scheduler. Geen aparte
+remediatie-content (die loopt via OL_E22_S3 / bijspijkerroute).
+
+## Afhankelijkheden
+- OL_E23_S1/OL_E23_S2 (metriek) om trajecten te kunnen herkennen.
+- Raakvlak met OL_E22_S3 (bijspijkerroute) — complementair, niet overlappend.
+
+## Geschat
+Medium.
+
+## Resultaat
+- `scheduling/equity.py`: `equity_prereq_threshold(learner)` verhoogt de
+  prerequisite-drempel voor nieuw materiaal voor structureel-zwakke
+  leerlingen (hergebruikt `learning_rate` uit OL_E24_S3 als traject-signaal).
+- **Gradueel** (schaalt met rate onder 1.0), **gecapt** (+0.15 max),
+  **zelfherstellend** (boost verdwijnt als de rate weer richting 1.0 gaat).
+  `is_low_mastery_trajectory(learner)` als expliciete detectie.
+- Bedraad in `_candidates_for_new_material`: zwakke leerlingen krijgen
+  minder nieuw materiaal → meer consolidatie. Op-koers-leerlingen (rate >=
+  1.0) houden exact het base-gedrag (geen regressie).
+- Geen harde stempel: root-knopen blijven beschikbaar; alleen prereq-gated
+  nieuw materiaal valt weg bij worsteling.
+- Meetbare check + tests: zwakke leerling krijgt aantoonbaar minder nieuwe
+  knopen dan een leerling op koers; drempelwaarden gradueel/gecapt/herstellend.
+  **664 tests groen**, geen regressie.

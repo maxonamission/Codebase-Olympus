@@ -35,6 +35,15 @@ pythonpath = ["src"]
 [tool.ruff]
 target-version = "py311"
 line-length = 99
+# Gevendorde codebase-standards-scripts blijven byte-identiek aan upstream
+# (manifest-drift-check); lokaal lint/format eraf zou drift introduceren.
+extend-exclude = [
+    "scripts/check_story_status.py",
+    "scripts/sync_story_folders.py",
+    "scripts/regenerate_status.py",
+    "scripts/check_standard_drift.py",
+    "scripts/check_epic_collisions.py",
+]
 
 [tool.ruff.lint]
 # Expliciete regelkeuze zodat ruff-defaults niet stilletjes veranderen tussen versies.
