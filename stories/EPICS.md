@@ -23,7 +23,7 @@
 | E11 | Offline oefentypen en scheduling | done | 6/6 |
 | E12 | OCR-pipeline | backlog | 0/5 |
 | E13 | LLM-vertaalbeoordeling | backlog | 0/3 |
-| E14 | Mentor-portfolio | backlog | 0/3 |
+| E14 | Mentor-portfolio | backlog | 0/4 |
 | E15 | Items genereren — Latijnse grammatica | done | 11/11 |
 | E16 | Content schrijven — Latijnse grammatica | done | 5/5 |
 | E17 | FastAPI backend | done | 8/8 |
@@ -41,7 +41,7 @@
 | E29 | Ontwikkelstraat fase 1 — Python-baseline | actief | 11/12 |
 | E30 | Vernederlandste code-identifiers naar Engels | done | 6/6 |
 
-**Totaal:** 30 epics, 200 stories (183 done, 1 doing, 0 todo, 16 backlog).
+**Totaal:** 30 epics, 201 stories (183 done, 1 doing, 0 todo, 17 backlog).
 
 ## Spoor A — Knowledge graph content
 
@@ -336,6 +336,7 @@ Offline schrijven als volwaardige oefenvorm met OCR-verificatie en mentor-portfo
 | OL_E14_S1 | Portfolio-selectie-algoritme | — | todo |
 | OL_E14_S2 | Portfolio PDF-generatie | — | todo |
 | OL_E14_S3 | Mentor-dashboard en Addisco-integratie | — | todo |
+| OL_E14_S4 | Leerling-opt-in voor mentor-deling (consent + intrekken) | — | backlog |
 
 ---
 
