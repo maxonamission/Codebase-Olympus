@@ -1,5 +1,5 @@
 {
-  "VERSION": "a0ad50640139a524f86591157145bf1d4674ea9c065bfea21558f0f7b04430c8",
+  "VERSION": "97a5d6e540a6120d09c39ddb667e0e8e2bac7fcc2ffef813b82e08fd60365bce",
   "profiles/python/.pre-commit-config.yaml": "acb38e70a8c3209ce9e73811299789608696cf27d65431a0dbcbc41342860f8e",
   "profiles/python/ci.yml": "6ff299df1a9aa4fa0c55e2b952bcaf73787b90a53253bde6a16a577aad01480e",
   "profiles/python/pyproject.snippet.toml": "967be4f510befc7ba48f5d3789fc85282de814c848a9e7f1c1cf82bc08adfdf6",
@@ -19,9 +19,10 @@
   "security/CODEOWNERS.template": "25827e881c2cf0bb66b26b7e4e9398414a81b891e6724997e585360d0f73481b",
   "security/DPIA-template.md": "769200fe6259cc246cd2d2f390a9c1b921a78c136faeb61243b7b957c6cf18ad",
   "security/branch-protection.md": "39538f453686d5c498e9d4f4960cbecb7ad0c38ca2f489345e99f588880603ad",
-  "security/ci-security.yml": "da433a72b32fdf29d81b734d62aa23fefbc01ad72c40df0b9ea9e84887e0a053",
+  "security/ci-security.yml": "010c221e1d86464f6b18dcd9df4f5d42b7ff06d7822323b2ad0f3d8d94541bcd",
   "security/dependabot.yml": "1666d00642e23b10d80954050bdf872d2c8a6e04e3aaf3a0f0db1e88fded2018",
   "security/eu-ai-act-risico-template.md": "2338cb480f68758f47c59c90e89bdf689fd2e711e3bd8f0a7843e769b163ad57",
+  "security/sha-pinning.md": "cfdb829d6f913c53c80e0e183c24d338137c2afe0cd3832263db3fce57858ad9",
   "security/verwerkersovereenkomst-checklist.md": "cc52f8760176de12683a305f754b4fb1b73eeda69805fb40b44a855488cb069d",
   "templates/.claude/hooks/check_on_stop.sh": "31b88cdcd3757ce85574a2c1c949624997c55e1e1c47c34ad86fb991054d755f",
   "templates/.claude/hooks/lint_on_edit.sh": "9e238904af847d6cd3d68e4ca1b9a2cd3b688e2a4ce16ef28a81f4591a4c2d42",

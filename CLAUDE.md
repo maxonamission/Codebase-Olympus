@@ -94,7 +94,7 @@ prioriteit: middel
 
 **De check blokkeert (CI) als:** map ≠ front-matter `status:`, EPICS/PROJECTSTATUS-tellingen ≠ filesystem, of een `done`-epic nog open stories heeft. Orphans/dead-refs en (tijdens opruiming) open AC zijn waarschuwingen.
 
-**Herkomst:** deze werkwijze komt uit [`codebase-standards`](https://github.com/maxonamission/codebase-standards) (v0.5.0; gevendord in `scripts/`, versie-stempel `.codebase-standards-version`, drift bewaakt via `.codebase-standards-manifest.json`). Wijzigingen aan de gedeelde werkwijze lopen via die repo, niet hier.
+**Herkomst:** deze werkwijze komt uit [`codebase-standards`](https://github.com/maxonamission/codebase-standards) (v0.6.0; gevendord in `scripts/`, versie-stempel `.codebase-standards-version`, drift bewaakt via `.codebase-standards-manifest.json`). Wijzigingen aan de gedeelde werkwijze lopen via die repo, niet hier.
 
 ## Output en sessie-management
 
