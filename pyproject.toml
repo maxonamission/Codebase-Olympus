@@ -5,7 +5,7 @@ description = "Adaptief leersysteem voor Latijn en Grieks op VWO-gymnasiumniveau
 requires-python = ">=3.11,<3.13"
 dependencies = [
     "pydantic[email]>=2.6,<3",
-    "networkx>=3.2,<4",
+    "networkx>=3.6.1,<4",
     "reportlab>=4.0,<5",
     "fastapi>=0.110",
     "uvicorn[standard]>=0.29",
