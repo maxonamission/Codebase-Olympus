@@ -12,7 +12,7 @@ Fase 0/1: knowledge graph + sessie-engine + FastAPI-backend grotendeels af. Stor
 
 ## Dashboard
 
-`v0.1 · 183/200 done · → E11/E12 offline-spoor · ⚠ —`
+`v0.1 · 183/201 done · → E11/E12 offline-spoor · ⚠ —`
 
 ## Epic-status
 
@@ -31,7 +31,7 @@ Fase 0/1: knowledge graph + sessie-engine + FastAPI-backend grotendeels af. Stor
 | E11 | Offline oefentypen en scheduling | done | 6/6 | — |
 | E12 | OCR-pipeline | backlog | 0/5 | — |
 | E13 | LLM-vertaalbeoordeling | backlog | 0/3 | — |
-| E14 | Mentor-portfolio | backlog | 0/3 | — |
+| E14 | Mentor-portfolio | backlog | 0/4 | — |
 | E15 | Items genereren — Latijnse grammatica | done | 11/11 | — |
 | E16 | Content schrijven — Latijnse grammatica | done | 5/5 | — |
 | E17 | FastAPI backend | done | 8/8 | — |
