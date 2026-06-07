@@ -87,12 +87,12 @@ prioriteit: middel
 **Bij oppakken / afronden van een story:**
 
 1. Pas het `status:`-veld in de front-matter aan (`backlog` → `doing` → `done`). De pre-commit-hook `sync-story-folders` verplaatst het bestand via `git mv` naar de juiste map.
-2. Bij afronden: vink alle `- [ ]` in `## Acceptatiecriteria` om naar `- [x]`. Een `done`-story met openstaande AC blokkeert (tijdens legacy-opruiming staat de AC-gate op `warn`). Voeg eventueel een resultaat-blok toe.
+2. Bij afronden: vink alle `- [ ]` in `## Acceptatiecriteria` om naar `- [x]`. Een `done`-story met openstaande AC **blokkeert de CI** (de AC-gate staat sinds juni 2026 hard op `error`; legacy-opruiming is afgerond). Voeg eventueel een resultaat-blok toe.
 3. De pre-commit-hook `regenerate-status` werkt de tellingen in `stories/EPICS.md` (Statustabel) en `PROJECTSTATUS.md` automatisch bij — counts hoef je nooit met de hand te tellen.
-4. Draai lokaal `uv run python scripts/check_story_status.py --mode=full --ac-gate=warn` — moet groen zijn.
+4. Draai lokaal `uv run python scripts/check_story_status.py --mode=full --ac-gate=error --format-gate=error` — moet groen zijn (gelijk aan de CI-gate).
 5. Commit en push; pre-commit en CI valideren dezelfde regels.
 
-**De check blokkeert (CI) als:** map ≠ front-matter `status:`, EPICS/PROJECTSTATUS-tellingen ≠ filesystem, of een `done`-epic nog open stories heeft. Orphans/dead-refs en (tijdens opruiming) open AC zijn waarschuwingen.
+**De check blokkeert (CI) als:** map ≠ front-matter `status:`, EPICS/PROJECTSTATUS-tellingen ≠ filesystem, een `done`-epic nog open stories heeft, **of een `done`-story openstaande AC heeft** (`--ac-gate=error`). Orphans/dead-refs blijven waarschuwingen.
 
 **Herkomst:** deze werkwijze komt uit [`codebase-standards`](https://github.com/maxonamission/codebase-standards) (v0.6.0; gevendord in `scripts/`, versie-stempel `.codebase-standards-version`, drift bewaakt via `.codebase-standards-manifest.json`). Wijzigingen aan de gedeelde werkwijze lopen via die repo, niet hier.
 
