@@ -1,0 +1,39 @@
+name: Dependabot auto-merge
+
+# Automatiseert het mechanische, laag-risico deel van dependency-onderhoud:
+# minor/patch-updates van Dependabot worden auto-goedgekeurd en op auto-merge gezet.
+# GitHub houdt de branch dan zelf up-to-date en merget pas zodra de vereiste CI-checks
+# groen zijn — dus de CI blijft de poort. MAJOR-bumps worden bewust NIET geraakt en
+# blijven handmatige review (kunnen breken).
+#
+# Eenmalige repo-instellingen (handmatig in GitHub, kan ik niet via API zetten):
+#   1. Settings → General → "Allow auto-merge" AAN.
+#   2. Branch protection op `main`: de CI-checks als **required**, en bij voorkeur
+#      "Require branches to be up to date before merging" AAN — dan werkt GitHub de
+#      branch automatisch bij (lost het "update branch nodig"-gedoe op).
+# Zonder (1) faalt de auto-merge-stap; zonder required checks zou er ongetoetst kunnen mergen.
+
+on: pull_request
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  dependabot-auto-merge:
+    runs-on: ubuntu-latest
+    # Alleen reageren op Dependabot's eigen PR's.
+    if: github.actor == 'dependabot[bot]'
+    steps:
+      - name: Fetch Dependabot metadata
+        id: meta
+        uses: dependabot/fetch-metadata@21025c705c08248db411dc16f3619e6b5f9ea21a  # v2.5.0
+
+      - name: Auto-approve + enable auto-merge (alleen minor/patch)
+        if: steps.meta.outputs.update-type == 'version-update:semver-minor' || steps.meta.outputs.update-type == 'version-update:semver-patch'
+        run: |
+          gh pr review --approve "$PR_URL"
+          gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
