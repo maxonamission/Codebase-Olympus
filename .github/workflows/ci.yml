@@ -57,7 +57,7 @@ jobs:
         run: uv run mypy src/
 
       - name: Stories-consistentie (full)
-        run: uv run python scripts/check_story_status.py --mode=full --ac-gate=warn --format-gate=error
+        run: uv run python scripts/check_story_status.py --mode=full --ac-gate=error --format-gate=error
 
       - name: Regenerate-status drift
         run: uv run python scripts/regenerate_status.py --check
