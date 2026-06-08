@@ -18,7 +18,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-STATUSES = ("backlog", "todo", "doing", "done")
+STATUSES = ("backlog", "todo", "doing", "done", "cancelled")
 FM = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
 
 

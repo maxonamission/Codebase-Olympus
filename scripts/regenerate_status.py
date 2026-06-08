@@ -37,6 +37,8 @@ from pathlib import Path
 # "wat is een story-root" en "hoe lees ik front-matter".
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from check_story_status import (  # noqa: E402
+    ALL_STATUSES,
+    CANCELLED,
     STATUSES,
     _skip,
     clean_id,
@@ -58,9 +60,9 @@ def collect_fs_counts(repo_root: Path) -> tuple[dict[str, dict[str, int]], dict[
     totals[status] = n over alle stories.
     """
     per_epic: dict[str, dict[str, int]] = {}
-    totals: dict[str, int] = {s: 0 for s in STATUSES}
+    totals: dict[str, int] = {s: 0 for s in ALL_STATUSES}
     for root in find_story_roots(repo_root):
-        for status in STATUSES:
+        for status in ALL_STATUSES:
             d = root / status
             if not d.is_dir():
                 continue
@@ -69,10 +71,10 @@ def collect_fs_counts(repo_root: Path) -> tuple[dict[str, dict[str, int]], dict[
                     continue
                 fm = parse_frontmatter(story.read_text(encoding="utf-8", errors="replace"))
                 fm_status = fm.get("status", "").lower()
-                eff = fm_status if fm_status in STATUSES else status
+                eff = fm_status if fm_status in ALL_STATUSES else status
                 epic = fm.get("epic", "")
                 if epic:
-                    per_epic.setdefault(epic, {s: 0 for s in STATUSES})[eff] += 1
+                    per_epic.setdefault(epic, {s: 0 for s in ALL_STATUSES})[eff] += 1
                 totals[eff] += 1
     return per_epic, totals
 
@@ -96,13 +98,14 @@ def _replace_count_cell(line: str, new_cell: str) -> str:
 
 
 def _make_totaal(n_epics: int, totals: dict[str, int]) -> str:
-    total = sum(totals.values())
+    total = sum(totals[s] for s in STATUSES)  # cancelled telt niet mee in het totaal
     epic_w = "epic" if n_epics == 1 else "epics"
     story_w = "story" if total == 1 else "stories"
+    canc = f" + {totals[CANCELLED]} cancelled" if totals.get(CANCELLED) else ""
     return (
         f"**Totaal:** {n_epics} {epic_w}, {total} {story_w} "
         f"({totals['done']} done, {totals['doing']} doing, "
-        f"{totals['todo']} todo, {totals['backlog']} backlog)."
+        f"{totals['todo']} todo, {totals['backlog']} backlog){canc}."
     )
 
 
@@ -127,7 +130,7 @@ def regenerate_epics(text: str, per_epic: dict[str, dict[str, int]], totals: dic
         eid = _epic_id(body, epic_ids)
         if eid is not None and eid in per_epic:
             fs = per_epic[eid]
-            body = _replace_count_cell(body, f"{fs['done']}/{sum(fs.values())}")
+            body = _replace_count_cell(body, f"{fs['done']}/{sum(fs[s] for s in STATUSES)}")
         out.append(body + eol)
     new = "".join(out)
     if n_epics:
@@ -148,10 +151,10 @@ def regenerate_projectstatus(
         eid = _epic_id(body, epic_ids)
         if eid is not None and eid in per_epic:
             fs = per_epic[eid]
-            body = _replace_count_cell(body, f"{fs['done']}/{sum(fs.values())}")
+            body = _replace_count_cell(body, f"{fs['done']}/{sum(fs[s] for s in STATUSES)}")
         out.append(body + eol)
     new = "".join(out)
-    done, total = totals["done"], sum(totals.values())
+    done, total = totals["done"], sum(totals[s] for s in STATUSES)
     new = DASH_DONE.sub(f"{done}/{total} done", new, count=1)
     return new
 

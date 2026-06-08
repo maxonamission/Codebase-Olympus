@@ -43,7 +43,13 @@ import sys
 from pathlib import Path
 
 STATUSES = ("backlog", "todo", "doing", "done")
-EPIC_STATUSES = STATUSES + ("actief",)
+# `cancelled` is een terminale status: een story die gesloten wordt omdat hij
+# vervallen/achterhaald/overbodig is. Telt NIET mee in `done/total` en is
+# vrijgesteld van de AC-gate (C2) — de acceptatiecriteria worden immers niet
+# meer gehaald. Eigen (optionele) map `stories/cancelled/`, zoals `todo/`.
+CANCELLED = "cancelled"
+ALL_STATUSES = STATUSES + (CANCELLED,)
+EPIC_STATUSES = STATUSES + ("actief", CANCELLED)
 AC_HEADERS = ("acceptatiecriteria", "acceptance criteria")
 UNCHECKED = re.compile(r"^\s*[-*]\s*\[\s\]", re.MULTILINE)
 HEADER = re.compile(r"^#{1,6}\s*(.+?)\s*$", re.MULTILINE)
@@ -186,7 +192,7 @@ def main() -> int:
     story_ids: set[str] = set()
     epic_ids: set[str] = set()
     for root in roots:
-        for status in STATUSES:
+        for status in ALL_STATUSES:
             d = root / status
             if not d.is_dir():
                 continue
@@ -209,7 +215,8 @@ def main() -> int:
                 # C1: map == front-matter
                 if fm_status != status:
                     errors.append(f"{rel}: front-matter status '{fm_status or '—'}' ≠ map '{status}'")
-                # C2: done ⇒ alle AC afgevinkt
+                # C2: done ⇒ alle AC afgevinkt. `cancelled` is bewust vrijgesteld:
+                # een vervallen story wordt gesloten zónder dat de AC gehaald zijn.
                 if fm_status == "done" or status == "done":
                     sec = ac_section(text)
                     if sec is None:
@@ -219,9 +226,9 @@ def main() -> int:
                         msg = f"{rel}: done met {n} openstaande acceptatiecriteria"
                         (warnings if args.ac_gate == "warn" else errors).append(msg)
                 # tellingen op basis van de bron (front-matter status, anders map)
-                eff = fm_status if fm_status in STATUSES else status
+                eff = fm_status if fm_status in ALL_STATUSES else status
                 if epic:
-                    fs_counts.setdefault(epic, {s: 0 for s in STATUSES})[eff] += 1
+                    fs_counts.setdefault(epic, {s: 0 for s in ALL_STATUSES})[eff] += 1
 
     # C6 (vervolg): één story-prefix per repo + canonieke epic-ids
     if args.format_gate != "off":
@@ -248,7 +255,7 @@ def main() -> int:
         fs = fs_counts.get(eid)
         if fs is None:
             continue
-        fs_done, fs_total = fs["done"], sum(fs.values())
+        fs_done, fs_total = fs["done"], sum(fs[s] for s in STATUSES)
         if e["done"] is not None and (e["done"], e["total"]) != (fs_done, fs_total):
             errors.append(f"{eid}: EPICS zegt {e['done']}/{e['total']}, filesystem {fs_done}/{fs_total}")
         if e["status"] == "done" and (fs["backlog"] or fs["todo"] or fs["doing"]):
@@ -261,7 +268,7 @@ def main() -> int:
     for eid, (psd, pst) in ps.items():
         fs = fs_counts.get(eid)
         if fs is not None:
-            fs_done, fs_total = fs["done"], sum(fs.values())
+            fs_done, fs_total = fs["done"], sum(fs[s] for s in STATUSES)
             if (psd, pst) != (fs_done, fs_total):
                 errors.append(f"{eid}: PROJECTSTATUS zegt {psd}/{pst}, filesystem {fs_done}/{fs_total}")
 
