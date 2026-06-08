@@ -67,7 +67,7 @@ Zie `## Story-workflow` hieronder. Handhaving via de gevendorde codebase-standar
 
 ## Story-workflow
 
-Stories staan onder `stories/` met subfolders `backlog/`, `doing/`, `done/` + centrale `stories/EPICS.md`. Sinds de codebase-standards-adoptie (OS-11) is de **front-matter `status:`** van een story de bron van waarheid; de map wordt daar automatisch op gehouden. Elke story heeft een front-matter-blok:
+Stories staan onder `stories/` met subfolders `backlog/`, `doing/`, `done/`, `cancelled/` + centrale `stories/EPICS.md`. Sinds de codebase-standards-adoptie (OS-11) is de **front-matter `status:`** van een story de bron van waarheid; de map wordt daar automatisch op gehouden. Elke story heeft een front-matter-blok:
 
 ```
 ---
@@ -77,7 +77,7 @@ epic: E1
 story_id: OL_E1_S1
 legacy_id: A1-01
 track: graph
-status: backlog        # backlog | doing | done
+status: backlog        # backlog | doing | done | cancelled
 prioriteit: middel
 ---
 ```
@@ -87,7 +87,7 @@ prioriteit: middel
 **Bij oppakken / afronden van een story:**
 
 1. Pas het `status:`-veld in de front-matter aan (`backlog` → `doing` → `done`). De pre-commit-hook `sync-story-folders` verplaatst het bestand via `git mv` naar de juiste map.
-2. Bij afronden: vink alle `- [ ]` in `## Acceptatiecriteria` om naar `- [x]`. Een `done`-story met openstaande AC **blokkeert de CI** (de AC-gate staat sinds juni 2026 hard op `error`; legacy-opruiming is afgerond). Voeg eventueel een resultaat-blok toe.
+2. Bij afronden: vink alle `- [ ]` in `## Acceptatiecriteria` om naar `- [x]`. Een `done`-story met openstaande AC **blokkeert de CI** (de AC-gate staat sinds juni 2026 hard op `error`; legacy-opruiming is afgerond). Voeg eventueel een resultaat-blok toe. **Vervalt een story** (achterhaald/vervangen/buiten scope)? Zet dan `status: cancelled` in plaats van de AC te faken: een terminale status (sinds codebase-standards 0.8.0) die is vrijgesteld van de AC-gate en niet meetelt in `done/total` (apart getoond als `+N cancelled`).
 3. De pre-commit-hook `regenerate-status` werkt de tellingen in `stories/EPICS.md` (Statustabel) en `PROJECTSTATUS.md` automatisch bij — counts hoef je nooit met de hand te tellen.
 4. Draai lokaal `uv run python scripts/check_story_status.py --mode=full --ac-gate=error --format-gate=error` — moet groen zijn (gelijk aan de CI-gate).
 5. Commit en push; pre-commit en CI valideren dezelfde regels.
