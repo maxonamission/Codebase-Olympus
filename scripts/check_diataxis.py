@@ -59,7 +59,7 @@ FIELD_RE = re.compile(r"^diataxis:\s*(\S+)", re.MULTILINE)
 
 
 class Issue:
-    __slots__ = ("path", "level", "message")
+    __slots__ = ("level", "message", "path")
 
     def __init__(self, path: Path, level: str, message: str) -> None:
         self.path = path
@@ -93,7 +93,7 @@ def expected_for_path(name: str, rules: list[tuple[str, str]]) -> str | None:
 def check_doc(p: Path, rules: list[tuple[str, str]]) -> list[Issue]:
     try:
         text = p.read_text(encoding="utf-8")
-    except Exception as e:  # noqa: BLE001 — rapporteer leesfouten als issue
+    except (OSError, UnicodeDecodeError) as e:  # rapporteer leesfouten als issue
         return [Issue(p, "error", f"kan bestand niet lezen: {e}")]
 
     value = read_diataxis(text)
