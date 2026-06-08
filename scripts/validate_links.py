@@ -39,6 +39,8 @@ MDLINK_RE = re.compile(r"\[([^\]]*)\]\(([^)]+)\)")
 FENCE_RE = re.compile(r"```.*?```", re.DOTALL)
 INLINE_CODE_RE = re.compile(r"`[^`]*`")
 
+Index = dict[str, list[Path]]
+
 
 class Issue:
     __slots__ = ("kind", "message", "path")
@@ -109,9 +111,7 @@ def resolve_basename(name: str, idx: dict[str, list[Path]]) -> Path | None:
     return hits[0] if hits and len(hits) == 1 else None
 
 
-def process_file(
-    p: Path, idx: dict[str, list[Path]], root: Path, fix: bool
-) -> tuple[list[Issue], str | None]:
+def process_file(p: Path, idx: Index, fix: bool) -> tuple[list[Issue], str | None]:
     text = p.read_text(encoding="utf-8")
     masked = mask_code(text)
     issues: list[Issue] = []
@@ -180,7 +180,7 @@ def main() -> int:
     all_issues: list[Issue] = []
     n_fixed = 0
     for p in sorted(files):
-        issues, new_text = process_file(p, idx, root, args.fix)
+        issues, new_text = process_file(p, idx, args.fix)
         if new_text is not None:
             p.write_text(new_text, encoding="utf-8")
             n_fixed += 1
