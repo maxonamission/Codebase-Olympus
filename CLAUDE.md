@@ -27,6 +27,7 @@ Lees voor de volledige context:
 - Gebruik type hints overal. Pydantic models voor data validation.
 - Tests: pytest. Schrijf tests voor de knowledge graph (cycle detection, orphan detection, topologische sortering) en het learner model (BKT updates, SM-2 scheduling).
 - Git commits: conventionele commits, Nederlands in commit messages.
+- Review-acties & follow-ups (eigenaar-beslismomenten): een beslissing die de projecteigenaar nu moet maken → formulier in `review-acties/open/`; een geparkeerde aanbeveling met trigger → `follow-ups/open/`. Korte index in `PROJECTSTATUS.md`. Zie de werkmap-README's + codebase-standards `docs/ways-of-working.md` §8.
 
 ## Ontwikkelstraat
 
