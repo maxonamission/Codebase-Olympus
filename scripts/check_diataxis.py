@@ -176,9 +176,7 @@ def main() -> int:
             else:
                 n_warn += 1
 
-    print(
-        f"\ncheck_diataxis: {len(docs)} documenten — {n_err} fouten, {n_warn} waarschuwingen."
-    )
+    print(f"\ncheck_diataxis: {len(docs)} documenten — {n_err} fouten, {n_warn} waarschuwingen.")
     if args.gate == "error" and n_err:
         return 1
     return 0
