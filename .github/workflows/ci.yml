@@ -62,6 +62,9 @@ jobs:
       - name: Regenerate-status drift
         run: uv run python scripts/regenerate_status.py --check
 
+      - name: Diataxis doc-standaard (warn-only)
+        run: uv run python scripts/check_diataxis.py --glob 'docs/**/*.md' --glob 'PROJECTSTATUS.md' --glob 'EPICS.md'
+
       - name: Codebase-standards drift
         run: |
           uv run python scripts/check_standard_drift.py \
