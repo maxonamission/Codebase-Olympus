@@ -58,3 +58,9 @@ repos:
         language: system
         pass_filenames: false
         files: ^(stories/|PROJECTSTATUS\.md)
+      - id: validate-links
+        name: linkbeleid — wikilink→md + herpunt dode links (--fix)
+        entry: uv run python scripts/validate_links.py --fix
+        language: system
+        pass_filenames: false
+        files: \.md$

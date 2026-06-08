@@ -65,6 +65,9 @@ jobs:
       - name: Diataxis doc-standaard (warn-only)
         run: uv run python scripts/check_diataxis.py --glob 'docs/**/*.md' --glob 'PROJECTSTATUS.md' --glob 'EPICS.md'
 
+      - name: Linkbeleid (validate_links, report)
+        run: uv run python scripts/validate_links.py --mode=report
+
       - name: Codebase-standards drift
         run: |
           uv run python scripts/check_standard_drift.py \
