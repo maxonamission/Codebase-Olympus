@@ -1,7 +1,7 @@
 ---
 diataxis: state
 project: GC
-laatst-bijgewerkt: 2026-06-05
+laatst-bijgewerkt: 2026-06-11
 ---
 
 # PROJECTSTATUS — Gymnasium Classica
@@ -53,3 +53,10 @@ Fase 0/1: knowledge graph + sessie-engine + FastAPI-backend grotendeels af. Stor
 
 1. Offline-spoor (E11/E12) oppakken.
 2. Legacy-AC opschonen zodat `--ac-gate` van warn naar error kan.
+3. Vóór de pilot (E26): SAST + secret-scan in CI toevoegen — zie follow-up `OL__security-audit-ci-sast`.
+
+## Follow-ups uit reviews
+
+| Titel | Trigger | Link |
+|---|---|---|
+| Security-laag in CI: SAST + secret-scan (AVG + EU-AI-Act reeds gedekt) | Vóór pilot (E26) / externe API / LLM-mentor | [`OL__security-audit-ci-sast`](follow-ups/open/OL__security-audit-ci-sast.md) |
