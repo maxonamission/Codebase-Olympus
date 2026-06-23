@@ -43,6 +43,8 @@ extend-exclude = [
     "scripts/regenerate_status.py",
     "scripts/check_standard_drift.py",
     "scripts/check_epic_collisions.py",
+    "scripts/validate_links.py",
+    "scripts/check_diataxis.py",
 ]
 
 [tool.ruff.lint]
