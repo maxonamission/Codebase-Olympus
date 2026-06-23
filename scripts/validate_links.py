@@ -4,9 +4,23 @@
 Per Markdown-bestand (code-blocks gemaskeerd) controleert het script:
 
 1. **Geen bare `[[wikilink]]`.** Obsidian-`[[..]]` degradeert tot platte tekst op
-   GitHub (geen klik). Gebruik een relatieve Markdown-link.
+   GitHub (geen klik). Gebruik een relatieve Markdown-link. → **error** (harde ban).
 2. **Dode relatieve `.md`-links.** Elke `[tekst](pad.md)` met een relatief pad moet
-   naar een bestaand bestand wijzen.
+   naar een bestaand bestand wijzen. → **warning** (warn tot de baseline schoon is;
+   denk aan template-placeholders als `README_<PROJECT>.md`).
+
+**Twee-tier strictness (CS_E11_S3, backport van Atlas CA_E42_S1).** In
+`--mode=strict` faalt alleen een **error** (de wikilink-ban); dode links blijven
+warn. Zo kan de wikilink-ban hard worden afgedwongen zonder te blokkeren op een
+dode-link-baseline.
+
+**Scope-uitzonderingen:**
+
+- `archief/`-bestanden worden volledig overgeslagen — frozen historische staat;
+  hun oude `[[..]]` mogen niet worden aangeraakt.
+- `WIKILINK_BAN_EXEMPT`: basenames van bestanden die `[[..]]` als *voorbeeld-syntax*
+  documenteren, zijn vrijgesteld van de ban (hun dode-link-check loopt wél).
+  Default leeg — vul per repo aan waar nodig.
 
 `--fix` repareert beide, basename-gestuurd (story-/form-bestandsnamen zijn uniek):
 
@@ -19,7 +33,7 @@ Niet-resolvebare (dode/ambigue) verwijzingen worden gerapporteerd, niet geraden.
 
 Modi:
     --mode=report   Default. Print issues, exitcode 0 (warn-laag).
-    --mode=strict   Exitcode 1 als er issues zijn (CI-gate na opschoning).
+    --mode=strict   Exitcode 1 als er **error**-issues (wikilink-ban) zijn.
     --fix           Pas reparaties toe (met --mode bepaalt het de exitcode erna).
 """
 
@@ -34,6 +48,13 @@ from urllib.parse import quote, unquote
 
 EXCLUDE_DIRS = {".git", "node_modules", ".venv", "venv", "__pycache__", ".ruff_cache"}
 
+# Frozen historische staat: nooit processen/fixen.
+ARCHIVE_DIR = "archief"
+
+# Basenames vrijgesteld van de wikilink-ban (documenteren [[..]] als voorbeeld).
+# Default leeg; vul per repo aan.
+WIKILINK_BAN_EXEMPT: set[str] = set()
+
 WIKILINK_RE = re.compile(r"\[\[([^\[\]]+)\]\]")
 MDLINK_RE = re.compile(r"\[([^\]]*)\]\(([^)]+)\)")
 FENCE_RE = re.compile(r"```.*?```", re.DOTALL)
@@ -43,15 +64,20 @@ Index = dict[str, list[Path]]
 
 
 class Issue:
-    __slots__ = ("kind", "message", "path")
+    __slots__ = ("kind", "message", "path", "severity")
 
-    def __init__(self, path: Path, kind: str, message: str) -> None:
+    def __init__(self, path: Path, kind: str, message: str, severity: str) -> None:
         self.kind = kind  # "wikilink" | "dead-link"
         self.message = message
         self.path = path
+        self.severity = severity  # "error" | "warning"
 
     def __str__(self) -> str:
-        return f"  [{self.kind}] {self.path}: {self.message}"
+        return f"  [{self.severity}/{self.kind}] {self.path}: {self.message}"
+
+
+def is_archived(path: Path) -> bool:
+    return ARCHIVE_DIR in path.parts
 
 
 def mask_code(text: str) -> str:
@@ -116,23 +142,25 @@ def process_file(p: Path, idx: Index, fix: bool) -> tuple[list[Issue], str | Non
     masked = mask_code(text)
     issues: list[Issue] = []
     edits: list[tuple[int, int, str]] = []
+    wikilink_exempt = p.name in WIKILINK_BAN_EXEMPT
 
-    # 1. Wikilinks.
-    for m in WIKILINK_RE.finditer(masked):
-        target, anchor, display = _split_wikilink(m.group(1))
-        hit = resolve_basename(target, idx)
-        if hit is None:
-            msg = f"[[{m.group(1)}]] (onresolvbaar — handmatig)"
-            issues.append(Issue(p, "wikilink", msg))
-            continue
-        if fix:
-            rel = _rel(hit, p)
-            suffix = f"#{slugify_anchor(anchor)}" if anchor else ""
-            edits.append((m.start(), m.end(), f"[{display}]({rel}{suffix})"))
-        else:
-            issues.append(Issue(p, "wikilink", f"[[{m.group(1)}]] → Markdown-link"))
+    # 1. Wikilinks — harde ban (error), tenzij het bestand voorbeeld-syntax documenteert.
+    if not wikilink_exempt:
+        for m in WIKILINK_RE.finditer(masked):
+            target, anchor, display = _split_wikilink(m.group(1))
+            hit = resolve_basename(target, idx)
+            if hit is None:
+                msg = f"[[{m.group(1)}]] (onresolvbaar — handmatig)"
+                issues.append(Issue(p, "wikilink", msg, "error"))
+                continue
+            if fix:
+                rel = _rel(hit, p)
+                suffix = f"#{slugify_anchor(anchor)}" if anchor else ""
+                edits.append((m.start(), m.end(), f"[{display}]({rel}{suffix})"))
+            else:
+                issues.append(Issue(p, "wikilink", f"[[{m.group(1)}]] → Markdown-link", "error"))
 
-    # 2. Dode relatieve .md-links.
+    # 2. Dode relatieve .md-links — warn (baseline van template-placeholders).
     for m in MDLINK_RE.finditer(masked):
         url = m.group(2).strip()
         if "://" in url or url.startswith(("#", "mailto:")):
@@ -146,14 +174,14 @@ def process_file(p: Path, idx: Index, fix: bool) -> tuple[list[Issue], str | Non
             continue
         hit = resolve_basename(Path(decoded).name, idx)
         if hit is None:
-            issues.append(Issue(p, "dead-link", f"{url} (geen uniek doel)"))
+            issues.append(Issue(p, "dead-link", f"{url} (geen uniek doel)", "warning"))
             continue
         if fix:
             rel = _rel(hit, p)
             newurl = f"{rel}#{frag}" if frag else rel
             edits.append((m.start(2), m.end(2), newurl))
         else:
-            issues.append(Issue(p, "dead-link", f"{url} → {_rel(hit, p)}"))
+            issues.append(Issue(p, "dead-link", f"{url} → {_rel(hit, p)}", "warning"))
 
     if fix and edits:
         for start, end, repl in sorted(edits, reverse=True):
@@ -175,11 +203,13 @@ def main() -> int:
 
     root = Path(args.repo_root).resolve()
     files = find_md_files(root)
-    idx = basename_index(files)
+    idx = basename_index(files)  # index dekt álle .md (ook archief) zodat links resolven
 
     all_issues: list[Issue] = []
     n_fixed = 0
     for p in sorted(files):
+        if is_archived(p):  # frozen — niet processen of fixen
+            continue
         issues, new_text = process_file(p, idx, args.fix)
         if new_text is not None:
             p.write_text(new_text, encoding="utf-8")
@@ -190,11 +220,13 @@ def main() -> int:
         print(i)
     label = root.name
     n = len(all_issues)
+    n_err = sum(1 for i in all_issues if i.severity == "error")
+    n_warn = n - n_err
     if args.fix:
-        print(f"\nvalidate_links ({label}): {n_fixed} gefixt, {n} issues over.")
+        print(f"\nvalidate_links ({label}): {n_fixed} gefixt, {n} issues over ({n_err} error, {n_warn} warn).")
     else:
-        print(f"\nvalidate_links ({label}): {n} issues / {len(files)} bestanden.")
-    if args.mode == "strict" and all_issues:
+        print(f"\nvalidate_links ({label}): {n} issues / {len(files)} bestanden ({n_err} error, {n_warn} warn).")
+    if args.mode == "strict" and n_err:
         return 1
     return 0
 

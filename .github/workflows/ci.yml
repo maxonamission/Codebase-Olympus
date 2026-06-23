@@ -1,6 +1,13 @@
 # CI-workflow voor Codebase-Olympus.
 # Laag 4 van de ontwikkelstraat: dezelfde checks als pre-commit (OS-03),
 # maar draait op een schone server en is niet te omzeilen met --no-verify.
+#
+# Blocking/signalering-scheiding (codebase-standards v0.13.0, E11): de
+# blocking `checks`-job bevat alleen gates die echt kunnen falen; warn/report-
+# stappen (diataxis, validate_links --report, codebase-standards-drift) staan in
+# een aparte niet-blokkerende `signalering`-job (continue-on-error, zónder
+# `|| true` zodat het signaal zichtbaar blijft). Indelingsregel: kan-blokkeren →
+# checks; warn/report → signalering.
 
 name: CI
 
@@ -62,18 +69,6 @@ jobs:
       - name: Regenerate-status drift
         run: uv run python scripts/regenerate_status.py --check
 
-      - name: Diataxis doc-standaard (warn-only)
-        run: uv run python scripts/check_diataxis.py --glob 'docs/**/*.md' --glob 'PROJECTSTATUS.md' --glob 'EPICS.md'
-
-      - name: Linkbeleid (validate_links, report)
-        run: uv run python scripts/validate_links.py --mode=report
-
-      - name: Codebase-standards drift
-        run: |
-          uv run python scripts/check_standard_drift.py \
-            --manifest .codebase-standards-manifest.json \
-            --sync-map .codebase-standards-sync.json
-
       - name: Pytest met coverage
         run: uv run pytest --cov=src --cov-report=term-missing --cov-report=xml
 
@@ -85,3 +80,31 @@ jobs:
           path: coverage.xml
           retention-days: 14
           if-no-files-found: ignore
+
+  # Niet-blokkerende signaleringen: warn/report-stappen die een signaal geven maar
+  # de build niet horen te breken. stdlib-only scripts → geen project-deps nodig.
+  signalering:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    continue-on-error: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10  # v6.0.3
+
+      - name: Setup Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        with:
+          python-version: "3.11"
+
+      - name: Diataxis doc-standaard (warn-only)
+        run: python scripts/check_diataxis.py --glob 'docs/**/*.md' --glob 'PROJECTSTATUS.md' --glob 'EPICS.md'
+
+      - name: Linkbeleid (validate_links, report)
+        run: python scripts/validate_links.py --mode=report
+
+      - name: Codebase-standards drift
+        run: |
+          python scripts/check_standard_drift.py \
+            --manifest .codebase-standards-manifest.json \
+            --sync-map .codebase-standards-sync.json
